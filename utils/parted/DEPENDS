@@ -1,0 +1,3 @@
+depends e2fsprogs
+
+optional_depends "readline" "--with-readline" "--without-readline" "for fancy command line editing"

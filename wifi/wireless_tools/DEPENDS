@@ -1,0 +1,1 @@
+optional_depends "pcmciautils" ""  "" "PCMCIA/cardbus support, for 2.6 kernels."

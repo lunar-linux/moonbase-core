@@ -1,0 +1,5 @@
+if [ "$RElin_PAM_AWARE" == "y" ]; then
+  find_pam_aware | while read mod; do
+        lin -c $mod
+  done
+fi

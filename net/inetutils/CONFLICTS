@@ -1,0 +1,3 @@
+conflicts netkit-base
+conflicts iputils
+conflicts netkit-telnet
