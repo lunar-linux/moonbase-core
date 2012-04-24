@@ -13,9 +13,10 @@
   ./autogen.sh   &&
 
 
-  ./configure   --prefix=      \
-                --libdir=/lib  \
-                $OPTS         &&
+  ./configure  --prefix=      \
+               --libdir=/lib  \
+               --mandir=/usr/share/man \
+               $OPTS  &&
 
   sedit "s:\${prefix}/include:/usr/include:"  Makefile  &&
   default_make  &&
