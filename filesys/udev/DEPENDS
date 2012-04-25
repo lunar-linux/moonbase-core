@@ -1,4 +1,3 @@
-depends lunar-init
 depends sysfsutils
 depends gperf
 depends usbutils
