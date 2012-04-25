@@ -1,5 +1,4 @@
 depends lunar-tools
-depends lunar-init
 depends bash
 depends bzip2
 depends coreutils
