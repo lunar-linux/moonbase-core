@@ -11,7 +11,7 @@
         WEB_SITE=https://fedorahosted.org/linux-pam/
       MAINTAINER=ratler@lunar-linux.org
          ENTERED=20010922
-         UPDATED=20111106
+         UPDATED=20120425
            SHORT="Pluggable Authentication Modules"
 PSAFE=no
 
