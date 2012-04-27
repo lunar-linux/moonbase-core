@@ -20,6 +20,7 @@
          ENTERED=20010922
          UPDATED=20080303
            SHORT="net-tools contains essential tools for networking."
+PSAFE=no
 LUNAR_RESTART_SERVICES=off
 cat << EOF
 The Net-tools package contains the arp, hostname, ifconfig, netstat,
