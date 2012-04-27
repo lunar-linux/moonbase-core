@@ -15,6 +15,7 @@
   ./configure  --libdir=/lib                            \
                --docdir=/usr/share/doc/Linux-PAM        \
                --disable-prelude                        \
+               --disable-nis                            \
                --mandir=/usr/share/man                  \
                --enable-db=no                           \
                --disable-selinux                        \
