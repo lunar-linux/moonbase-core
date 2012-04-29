@@ -87,6 +87,6 @@ cat << EOF
 bash_static is the same as bash (Bourne Again SHell) -- just
 a static build of it so one can use it as a rescue shell
 without relying on any shared libraries.
-It will be located at /bin/bash_static. You can call it with
+It will be located at /usr/bin/bash_static. You can call it with
 $ bash_static
 EOF
