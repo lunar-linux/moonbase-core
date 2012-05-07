@@ -2,5 +2,4 @@
 if [ "$UID" == "0" ] ; then
   export CCACHE_NOLINK=no
   export CCACHE_DIR=/var/cache/ccache
-  export CCACHE_LOGFILE=/var/log/ccache
 fi

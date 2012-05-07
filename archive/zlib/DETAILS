@@ -1,12 +1,12 @@
           MODULE=zlib
-         VERSION=1.2.6
+         VERSION=1.2.7
           SOURCE=$MODULE-$VERSION.tar.bz2
    SOURCE_URL[0]=http://www.zlib.net
    SOURCE_URL[1]=$SFORGE_URL/libpng/zlib
-      SOURCE_VFY=sha1:3d445731e4bfea1cd00f36567d77d6e5f5a19be9
+      SOURCE_VFY=sha1:858818fe6d358ec682d54ac5e106a2dd62628e7f
         WEB_SITE=http://www.zlib.net
          ENTERED=20010922
-         UPDATED=20120130
+         UPDATED=20120506
            SHORT="lossless data compression library"
 
 cat << EOF
