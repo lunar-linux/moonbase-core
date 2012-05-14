@@ -1,14 +1,13 @@
           MODULE=libusb-compat
            MAJOR=0.1
-           MINOR=3
-         VERSION=$MAJOR.$MINOR
+         VERSION=$MAJOR.4
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$SFORGE_URL/libusb/$MODULE-$MAJOR/$MODULE-$VERSION
-      SOURCE_VFY=sha1:d5710d5bc4b67c5344e779475b76168c7ccc5e69
+      SOURCE_VFY=sha1:fdc1df6f5cf7b71de7a74292aeea1aa2a39552ae
         WEB_SITE=http://www.libusb.org/wiki/LibusbCompat0.1
          ENTERED=20090812
-         UPDATED=20090812
-           SHORT="a compatibility layer for the old libusb."
+         UPDATED=20120507
+           SHORT="A compatibility layer for the old libusb"
 
 cat << EOF
 libusb-compat-0.1 is a replacement for libusb-0.1. However, instead of being an
