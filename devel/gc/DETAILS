@@ -1,11 +1,11 @@
           MODULE=gc
-         VERSION=7.1
-          SOURCE=$MODULE-$VERSION.tar.gz
+         VERSION=7.2
+          SOURCE=$MODULE-${VERSION}b.tar.gz
       SOURCE_URL=http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source
-      SOURCE_VFY=sha1:e84cba5d18f4ea5ed4e5fd3f1dc6a46bc190ff6f
+      SOURCE_VFY=sha1:042b551d9e313557c8919375c669ae484237cf3e
         WEB_SITE=http://www.hpl.hp.com/personal/Hans_Boehm/gc
          ENTERED=20020314
-         UPDATED=20100420
+         UPDATED=20120526
            SHORT="A garbage collector"
 
 cat << EOF

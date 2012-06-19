@@ -319,6 +319,7 @@ EOF
                 "pentium4" "P4" $( [ "$CPU" == "pentium4" ] && echo "on" || echo "off" ) "Pentium 4 processors"
                 "pentium4m" "P4 mobile" $( [ "$CPU" == "pentium4m" ] && echo "on" || echo "off" ) "Pentium 4 mobile processors"
                 "core2" "Core 2" $( [ "$CPU" == "core2" ] && echo "on" || echo "off" ) "Intel Core 2 processors"
+                "atom" "Intel Atom" $( [ "$CPU" == "atom" ] && echo "on" || echo "off" ) "Intel Atom CPU with 64-bit extensions"
                 "prescott" "Xeon" $( [ "$CPU" == "prescott" ] && echo "on" || echo "off" ) "Newer Xeons with sse3"
                 "nocona" "nocona" $( [ "$CPU" == "nocona" ] && echo "on" || echo "off" ) "Newer Xeons with sse3 and em64t"
                 "k6" "k6" $( [ "$CPU" == "k6" ] && echo "on" || echo "off" ) "AMD K6 processors"

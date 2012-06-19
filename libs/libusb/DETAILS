@@ -1,13 +1,12 @@
           MODULE=libusb
            MAJOR=1.0
-           MINOR=8
-         VERSION=$MAJOR.$MINOR
+         VERSION=$MAJOR.9
           SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=$SFORGE_URL/$MODULE/$MODULE-$MAJOR/$MODULE-$VERSION
-      SOURCE_VFY=sha1:5484397860f709c9b51611d224819f8ed5994063
+      SOURCE_URL=$SFORGE_URL/$MODULE
+      SOURCE_VFY=sha1:025582ff2f6216e2dbc2610ae16b2e073e1b3346
         WEB_SITE=http://www.libusb.org
          ENTERED=20021008
-         UPDATED=20100508
+         UPDATED=20120506
            SHORT="A generic USB layer library"
 
 cat << EOF

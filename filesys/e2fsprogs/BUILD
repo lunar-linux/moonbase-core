@@ -1,4 +1,6 @@
 (
+  #the dvi documentation fails to build with current texlive
+  sedit 's/$(DVI)/#/' doc/Makefile.in &&
 
   ./configure  --build=$BUILD             \
                --prefix=/usr              \
