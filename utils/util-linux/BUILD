@@ -8,6 +8,11 @@
 
   default_build  &&
 
+  # for systems without /bin -> /usr/bin symlink
+  if [ "`cd /usr/bin; pwd -P`" != "`cd /bin; pwd -P`" ]; then
+    ln -sf /bin/arch /usr/bin/arch
+  fi &&
+
   install -g0 -o0 -m755 $SCRIPT_DIRECTORY/make-issue /sbin/make-issue
 
 ) > $C_FIFO 2>&1

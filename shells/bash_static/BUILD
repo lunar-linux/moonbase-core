@@ -30,8 +30,10 @@
    patch_it $SOURCE27 0  &&
    patch_it $SOURCE28 0  &&
    patch_it $SOURCE29 0  &&
+   patch_it $SOURCE30 0  &&
 
-   OPTS+=" --without-bash-malloc         \
+   OPTS+=" --bindir=/bin                 \
+           --without-bash-malloc         \
            --without-installed-readline  \
            --with-curses                 \
            --enable-static-link          \
@@ -42,6 +44,6 @@
    make             &&
    prepare_install  &&
 
-   cp -f bash /usr/bin/bash_static
+   cp -f bash /bin/bash_static
 
 ) > $C_FIFO 2>&1
