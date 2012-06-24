@@ -21,6 +21,6 @@
   if [ "`cd /usr/bin; pwd -P`" != "`cd /bin; pwd -P`" ]; then
     cp libz.a /usr/lib  &&
     rm /lib/libz.a
-  fi &&
+  fi
 
 ) > $C_FIFO 2>&1
