@@ -1,11 +1,11 @@
           MODULE=kmod
-         VERSION=8
+         VERSION=9
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=http://git.profusion.mobi/cgit.cgi/kmod.git/snapshot
-      SOURCE_VFY=sha1:3e105f04a59f3b36d73659a3927e5f023e999189
+      SOURCE_VFY=sha1:39588458edb44f2d2cf9a00e26d9c234cc5c34d9
         WEB_SITE=http://www.politreco.com/2011/12/announce-kmod-1
          ENTERED=20120115
-         UPDATED=20120423
+         UPDATED=20120624
            SHORT="A lib for kernel modules management"
 
 cat << EOF
