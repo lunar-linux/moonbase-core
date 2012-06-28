@@ -9,12 +9,6 @@
                --libdir=/lib  \
                --shared       &&
 
-  # This fixes a bug in zlib's configure script that fails to set
-  # CFLAGS properly when CFLAGS is passed to it and --shared is set
-  if [ "`arch`" = "alpha" ]; then
-      sedit 's/^CFLAGS *=/CFLAGS=-fPIC /' Makefile
-  fi  &&
-
   default_make  &&
 
   # for systems without /bin -> /usr/bin symlink
