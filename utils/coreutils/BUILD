@@ -18,6 +18,11 @@
   # This option resolves conflicts with shadow/heimdal, net-tools and procps
   OPTS+=" --enable-no-install-program=arch,hostname,su,groups,kill,uptime"  &&
 
-  DEFAULT_POSIX2_VERSION=199209 default_build
+  DEFAULT_POSIX2_VERSION=199209 default_build &&
+
+  # for systems without /bin -> /usr/bin symlink
+  if [ "`cd /usr/bin; pwd -P`" != "`cd /bin; pwd -P`" ]; then
+    ln -sf /usr/bin/pwd /bin/pwd
+  fi
 
 ) > $C_FIFO 2>&1
