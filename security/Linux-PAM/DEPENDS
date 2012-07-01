@@ -2,5 +2,5 @@ depends automake
 depends cracklib
 depends gettext
 depends libtool
-depends flex
 depends bison
+depends flex
