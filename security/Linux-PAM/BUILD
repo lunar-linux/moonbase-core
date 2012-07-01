@@ -66,7 +66,7 @@
   # More doc
   gather_docs AUTHORS Copyright &&
 
-  [ -f /etc/environment ] || touch /etc/environment &&
-  [ -f /etc/security/limits.conf ] || install -m 0644 modules/pam_limits/limits.conf /etc/security/
+  ( [ -f /etc/environment ] || touch /etc/environment ) &&
+  ( [ -f /etc/security/limits.conf ] || install -m 0644 modules/pam_limits/limits.conf /etc/security/ )
 
 ) > $C_FIFO 2>&1
