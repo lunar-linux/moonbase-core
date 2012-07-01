@@ -1,2 +1,5 @@
+depends  flex
+depends  bison
+
 optional_depends "db"       "" "--without-db" "to build arpd"
 optional_depends "iptables" "" ""             "to use IP tables"
