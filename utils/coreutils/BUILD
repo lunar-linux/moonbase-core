@@ -22,7 +22,8 @@
 
   # for systems without /bin -> /usr/bin symlink
   if [ "`cd /usr/bin; pwd -P`" != "`cd /bin; pwd -P`" ]; then
-    ln -sf /usr/bin/pwd /bin/pwd
+    ln -sf /usr/bin/pwd /bin/pwd  &&
+    ln -sf /usr/bin/ln /bin/ln
   fi
 
 ) > $C_FIFO 2>&1
