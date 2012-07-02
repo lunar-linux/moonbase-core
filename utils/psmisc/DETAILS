@@ -1,11 +1,11 @@
           MODULE=psmisc
-         VERSION=22.17
+         VERSION=22.19
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha1:5d400710cf030bf7396aec40f53e933942ec8b4a
+      SOURCE_VFY=sha1:4c8fb774449f966f78c4c6e1d77d1a24b4187410
         WEB_SITE=http://psmisc.sourceforge.net
          ENTERED=20010922
-         UPDATED=20120607
+         UPDATED=20120630
            SHORT="A set of useful utilities that use /proc"
 
 cat << EOF
