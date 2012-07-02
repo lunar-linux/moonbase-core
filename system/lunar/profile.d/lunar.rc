@@ -125,8 +125,12 @@ _lunar_lvu()
       COMPREPLY=( $(compgen -f -- "$cur") )
       return 0
       ;;
-    DETAILS|DEPENDS|CONFLICTS|BUILD|PRE_BUILD|POST_BUILD|CONFIGURE|POST_INSTALL|PRE_REMOVE|POST_REMOVE|what|where|cd|service|website|install|size|installed|compile|compiler|links|sources|maintainer|version|sum|md5sum|depends|tree|eert|stree|leert|urls|versions|short|info|edit)
+    DETAILS|DEPENDS|CONFLICTS|BUILD|PRE_BUILD|POST_BUILD|CONFIGURE|POST_INSTALL|PRE_REMOVE|POST_REMOVE|what|where|cd|service|website|compiler|links|sources|maintainer|version|sum|md5sum|depends|tree|eert|stree|leert|urls|versions|short|info|edit)
       _lunar_modules_list
+      return 0
+      ;;
+    compile|install|installed|size)
+      _lunar_modules_installed_list
       return 0
       ;;
     section)
