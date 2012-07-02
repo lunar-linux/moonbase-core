@@ -10,9 +10,9 @@
 # specifically so we could link ncurses to bash which is
 # needed at init time! If you move it you could break your
 # system!
-unset CC CXX
+  unset CC CXX &&
 
-set -x
+  set -x &&
   ./configure  --build=$BUILD                            \
                --prefix=/usr                             \
                --libdir=/lib                             \
@@ -27,14 +27,16 @@ set -x
 
   default_make &&
 
-set +x &&
+  devoke_installwatch &&
+
+  set +x &&
 
 # Now to make nucurses wide
   make clean &&
 
   unset CC CXX  &&
 
-set -x
+  set -x &&
   ./configure  --build=$BUILD                            \
                --prefix=/usr                             \
                --libdir=/lib                             \
@@ -49,7 +51,7 @@ set -x
                --enable-widec                            \
                $OPTS                                    &&
 
-set +x &&
+  set +x &&
   default_make &&
   gather_docs ANNOUNCE TODO
 

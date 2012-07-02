@@ -11,7 +11,6 @@ if  ! [  "$UID"  ==  0  ];  then
   exit
 fi
 
-
 echo
 echo -n "Login name for new user [$1]: "
 read LOGIN
