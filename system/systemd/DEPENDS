@@ -3,7 +3,8 @@ depends kmod
 depends Linux-PAM
 depends dbus
 depends libcap
-depends udev
+depends usbutils
+depends pciutils
 
 # broken currently
 #optional_depends "libnotify"  "--enable-gtk"           "--disable-gtk"           "for user interface tools and notify support"
