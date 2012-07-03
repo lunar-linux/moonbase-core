@@ -1,4 +1,5 @@
 depends ncurses
 depends gettext
+depends bison
 
 optional_depends "os-prober" "" "" "for OS auto-detection on other partitions"
