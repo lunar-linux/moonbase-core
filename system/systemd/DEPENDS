@@ -5,6 +5,8 @@ depends dbus
 depends libcap
 depends usbutils
 depends pciutils
+depends intltool
+depends gperf
 
 # broken currently
 #optional_depends "libnotify"  "--enable-gtk"           "--disable-gtk"           "for user interface tools and notify support"
