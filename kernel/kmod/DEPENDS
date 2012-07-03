@@ -1,4 +1,6 @@
 depends  glib-2
 depends  zlib
+depends  automake
+depends  libtool
 
 optional_depends  "xz"  "--with-xz"  ""  "support for xz compressed modules"
