@@ -9,8 +9,3 @@ optional_depends "pcre"                                 \
                  "--with-pcrelib=/ --with-pcreinc=/usr" \
                  "--without-pcre"                       \
                  "for pcre regex support"
-
-optional_depends "onig"                                 \
-                 "--with-onig=/usr"                     \
-                 "--without-onig"                       \
-                 "for onig regex support"
