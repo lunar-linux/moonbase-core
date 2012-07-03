@@ -1,7 +1,7 @@
 (
 
   if ! module_installed docbook-xml; then
-     sedit '/man\/Makefile/d' configure.ac
+     sedit '/man\/Makefile/d' configure.ac  &&
      sedit 's/man//' Makefile.am
   fi &&
 
@@ -22,7 +22,7 @@
   default_make  &&
 
 # add symlinks to kmod
-  ln -sf /bin/kmod "/bin/lsmod"
+  ln -sf /bin/kmod "/bin/lsmod"  &&
   for tool in {ins,rm,dep}mod mod{info,probe}; do
     ln -sf /bin/kmod "/sbin/$tool"
   done
