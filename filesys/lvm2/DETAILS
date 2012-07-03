@@ -8,8 +8,8 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/LVM2.$VERSION
         WEB_SITE=http://sources.redhat.com/lvm2
          ENTERED=20040511
          UPDATED=20120611
-           PSAFE=no
            SHORT="Logical volume manager"
+PSAFE=no
 
 cat << EOF
 The Logical Volume Manager (LVM) is a subsystem for online disk storage

@@ -1,0 +1,17 @@
+[Unit]
+Description=Linux Volume Manager Activation
+DefaultDependencies=no
+Requires=systemd-udev-settle.service
+After=systemd-udev-settle.service
+Before=basic.target shutdown.target
+Conflicts=shutdown.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+TimeoutSec=0
+ExecStart=/sbin/vgchange --sysinit --available y
+ExecStop=/sbin/vgchange --sysinit --available n
+
+[Install]
+WantedBy=basic.target
