@@ -34,7 +34,7 @@ plugin_systemd_configure()
       else
         # ignore output here - this is likely to hit "not found" errors
         systemctl disable $SERVICE > /dev/null 2>&1
-	systemctl stop $SERVICE > /dev/null 2>&1
+        systemctl stop $SERVICE > /dev/null 2>&1
       fi
     done
     cd $SCRIPT_DIRECTORY
@@ -83,5 +83,26 @@ plugin_systemd_post_build()
 }
 
 
+plugin_systemd_tmpfilesd_post_build() {
+  local FILE SYSTEMDTEMPFILES
+  debug_msg "plugin_systemd_tmpfilesd_post_build ($@)"
+
+  SYSTEMDTEMPFILES=$(pkg-config systemd --variable=prefix)/lib/tmpfiles.d
+
+  if [ -d $SCRIPT_DIRECTORY/tmpfiles.d ]; then
+    invoke_installwatch
+    verbose_msg "handling systemd tmpfiles.d files"
+
+    for FILE in $SCRIPT_DIRECTORY/tmpfiles.d/*; do
+      /usr/bin/install -g 0 -o 0 -m 0644 $FILE $SYSTEMDTEMPFILES/
+    done
+    devoke_installwatch
+  fi
+
+  return 2
+}
+
+
 plugin_register BUILD_CONFIGURE plugin_systemd_configure
 plugin_register BUILD_POST_BUILD plugin_systemd_post_build
+plugin_register BUILD_POST_BUILD plugin_systemd_tmpfilesd_post_build
