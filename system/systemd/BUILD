@@ -10,6 +10,10 @@
   # gtk is broken currently
   OPTS+=" --disable-gtk"
 
+  if module_installed Linux-PAM; then
+    OPTS+=" --with-pamlibdir=/lib/security"
+  fi
+
   # just adding some files which are useful to
   # systemd
   # todo: some info-message to the user, that
