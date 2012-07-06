@@ -16,6 +16,8 @@ plugin_lids_pre_remove()
   if [ -f /var/log/lunar/permissions/$MODULE-$VERSION ] ; then
     rm -f /var/log/lunar/permissions/$MODULE-$VERSION
   fi
+
+  return 2
 }
 
 
