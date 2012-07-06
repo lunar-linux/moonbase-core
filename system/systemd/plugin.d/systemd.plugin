@@ -6,6 +6,7 @@
 #############################################################
 #                                                           #
 # Copyright 2011 by Auke Kok under GPLv2                    #
+# Parts Copyrighted 2012 by Stefan Wold under GPLv2         #
 #                                                           #
 #############################################################
 
@@ -14,17 +15,16 @@ plugin_systemd_configure()
 {
   local SERVICES SERVICE SYSTEMD_SERVICES
   debug_msg "plugin_systemd_configure ($@)"
-  if ! grep -q SYSTEMD_SERVICES $DEPENDS_CONFIG/$MODULE && 
-      [ -d $SCRIPT_DIRECTORY/systemd.d ]; then
+  if [ -d $SCRIPT_DIRECTORY/systemd.d ]; then
     cd $SCRIPT_DIRECTORY/systemd.d
 
     SERVICES=$(ls -1)
 
-    SYSTEMD_SERVICES=
+    SYSTEMD_SERVICES=$(get_module_config SYSTEMD_SERVICES)
     for SERVICE in $SERVICES; do
       # don't ask for '@' services - these should always be installed but
-      # never linked directly.
-      if echo $SERVICE | grep -q @ ; then
+      # never linked directly. Also ask for new or renamed services.
+      if echo $SERVICE | grep -q @ || echo $SYSTEMD_SERVICES | grep -q $SERVICE; then
         continue
       fi
       message "${MESSAGE_COLOR}$SERVICE: $(grep Description= $SERVICE | cut -d= -f2-)${DEFAULT_COLOR}"
@@ -38,6 +38,17 @@ plugin_systemd_configure()
       fi
     done
     cd $SCRIPT_DIRECTORY
+
+    # Look for renamed or removed services and stop and disable them.
+    # If we don't do it here it will be too late and there will be rogue
+    # processes left behind after a successful install
+    for SERVICE in $SYSTEMD_SERVICES; do
+      if ! echo $SERVICES | grep -q $SERVICE; then
+        systemctl stop $SERVICE &> /dev/null
+        systemctl disable $SERVICE &> /dev/null
+        SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed "s;$SERVICE;;")
+      fi
+    done
 
     set_module_config "SYSTEMD_SERVICES" "$SYSTEMD_SERVICES"
   fi
@@ -102,7 +113,21 @@ plugin_systemd_tmpfilesd_post_build() {
   return 2
 }
 
+plugin_systemd_disable_services_pre_remove() {
+  local SYSTEMD_SERVICES
+  debug_msg "plugin_systemd_disable_services_pre_remove ($@)"
+
+  SYSTEMD_SERVICES=$(get_module_config SYSTEMD_SERVICES)
+  for SERVICE in $SYSTEMD_SERVICES; do
+    verbose_msg "Stopping and disabling systemd service ($SERVICE)"
+    systemctl stop $SERVICE &> /dev/null
+    systemctl disable $SERVICE &> /dev/null
+  done
+
+  return 2
+}
 
 plugin_register BUILD_CONFIGURE plugin_systemd_configure
 plugin_register BUILD_POST_BUILD plugin_systemd_post_build
 plugin_register BUILD_POST_BUILD plugin_systemd_tmpfilesd_post_build
+plugin_register BUILD_PRE_REMOVE plugin_systemd_disable_services_pre_remove
