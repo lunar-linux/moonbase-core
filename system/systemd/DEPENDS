@@ -8,6 +8,4 @@ depends pciutils
 depends intltool
 depends gperf
 
-# broken currently
-#optional_depends "libnotify"  "--enable-gtk"           "--disable-gtk"           "for user interface tools and notify support"
 optional_depends "cryptsetup" "--enable-libcryptsetup" "--disable-libcryptsetup" "for Device-mapper crypto encryption"
