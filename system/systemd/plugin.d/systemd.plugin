@@ -13,7 +13,7 @@
 
 plugin_systemd_configure()
 {
-  local SERVICES SERVICE SYSTEMD_SERVICES
+  local SERVICES SERVICE SYSTEMD_SERVICES SYSTEMD_SERVICE SYSTEMD_TEMP FOUND
   debug_msg "plugin_systemd_configure ($@)"
   if [ -d $SCRIPT_DIRECTORY/systemd.d ]; then
     cd $SCRIPT_DIRECTORY/systemd.d
@@ -24,9 +24,22 @@ plugin_systemd_configure()
     for SERVICE in $SERVICES; do
       # don't ask for '@' services - these should always be installed but
       # never linked directly. Also ask for new or renamed services.
-      if echo $SERVICE | grep -q @ || echo $SYSTEMD_SERVICES | grep -q $SERVICE; then
+      if echo $SERVICE | grep -q @ ; then
         continue
       fi
+
+      # Keep processing new or renamed services. This is a bit of a hack
+      # but the previous solution using grep was not possible even with
+      # word boundary flag due to possible chars in a servce like '-' and '.'.
+      FOUND=false
+      for SYSTEMD_SERVICE in $SYSTEMD_SERVICES; do
+        if [ "$SERVICE" == "$SYSTEMD_SERVICE" ]; then
+          FOUND=true
+          break
+        fi
+      done
+      [ "$FOUND" == "true" ] && continue
+
       message "${MESSAGE_COLOR}$SERVICE: $(grep Description= $SERVICE | cut -d= -f2-)${DEFAULT_COLOR}"
       if query "Invoke $SERVICE via systemd automatically at boot ?"  y
       then
@@ -42,14 +55,22 @@ plugin_systemd_configure()
     # Look for renamed or removed services and stop and disable them.
     # If we don't do it here it will be too late and there will be rogue
     # processes left behind after a successful install
-    for SERVICE in $SYSTEMD_SERVICES; do
-      if ! echo $SERVICES | grep -q $SERVICE; then
-        systemctl stop $SERVICE &> /dev/null
-        systemctl disable $SERVICE &> /dev/null
-        SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed "s;$SERVICE;;")
-      fi
-    done
+    for SYSTEMD_SERVICE in $SYSTEMD_SERVICES; do
+      FOUND=false
+      for SERVICE in $SERVICES; do
+        if [ "$SYSTEMD_SERVICE" == "$SERVICE" ]; then
+          FOUND=true
+          SYSTEMD_TEMP+=" $SERVICE"
+          break
+        fi
+      done
+      [ "$FOUND" == "true" ] && continue
 
+      verbose_msg "Stopping removed service ($SYSTEMD_SERVICE)"
+      systemctl stop $SYSTEMD_SERVICE &> /dev/null
+      systemctl disable $SYSTEMD_SERVICE &> /dev/null
+    done
+    SYSTEMD_SERVICES=$SYSTEMD_TEMP
     set_module_config "SYSTEMD_SERVICES" "$SYSTEMD_SERVICES"
   fi
   return 2
