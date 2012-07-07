@@ -1,1 +1,1 @@
-mquery SYSV_COMPAT "Enable SysV compatibility?" y "--with-sysvinit-path=/etc/init.d --with-sysvrcd-path=/etc" "--with-sysvinit-path= --with-sysvrcd-path="
+mquery IM_AN_IDIOT "Are you stupid and want a life of misery and disaster? (Enable SysV compatibility?)" n "--with-sysvinit-path=/etc/init.d --with-sysvrcd-path=/etc" "--with-sysvinit-path= --with-sysvrcd-path="
