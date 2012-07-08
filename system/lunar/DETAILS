@@ -8,6 +8,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
          ENTERED=20020218
          UPDATED=20120707
            SHORT="lunar contains the package management tools for Lunar-Linux."
+USE_WRAPPERS=off
 cat << EOF
 lunar - Tools package management by source.
 
