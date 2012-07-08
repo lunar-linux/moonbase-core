@@ -116,7 +116,7 @@ _lunar_lvu()
   case "$prev" in
     -d|--debug|-v|--verbose|-h|--help)
       ;;
-    leafs|orphans|conflicts|alien|held|exiled|export|moonbase|html|updatelog|activity|pam|expired|new|newer|older|search|service)
+    leafs|orphans|conflicts|moonalyze|alien|held|exiled|export|moonbase|html|updatelog|activity|pam|expired|new|newer|older|search|service)
       # Do nothing because either the options don't take an argument or we can't do completion
       return 0
       ;;
@@ -152,7 +152,7 @@ _lunar_lvu()
                                what where cd alien from leafs orphans conflicts search service website install size installed compile \
                                compiler links sources maintainer version sum md5sum export import section moonbase html updatelog \
                                activity newer older voyeur pam expired depends tree eert stree leert held exiled urls versions short \
-                               info edit unedit diff new submit' -- "$cur" ) )
+                               info edit unedit diff new submit moonalyze' -- "$cur" ) )
   fi
 
   return 0
