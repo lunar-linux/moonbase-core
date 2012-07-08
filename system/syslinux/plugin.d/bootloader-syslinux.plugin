@@ -49,6 +49,7 @@ plugin_kernel_updatebootloader_syslinux() {
   fi
 
   TMP=$(temp_create)
+  IFS=$'\n'
   while read LINE ; do
     if [ -z "$DONE" ]; then
       if echo "$LINE" | grep -q "^\s*label" ; then
@@ -59,6 +60,7 @@ plugin_kernel_updatebootloader_syslinux() {
     fi
     echo "$LINE" >> $TMP
   done < /boot/extlinux/extlinux.conf
+  IFS=$' \t\n'
   cp $TMP /boot/extlinux/extlinux.conf
   temp_destroy $TMP
 
