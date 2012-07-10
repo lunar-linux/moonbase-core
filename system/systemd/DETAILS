@@ -1,20 +1,11 @@
           MODULE=systemd
-         VERSION=185
+         VERSION=186
           SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=0001-Reinstate-TIMEOUT-handling.patch
-         SOURCE3=0001-udev-systemd-udev-settle.service-fix-After.patch
-         SOURCE4=0001-vconsole-setup-enable-utf-8-mode-explicitly.patch
       SOURCE_URL=http://www.freedesktop.org/software/systemd
-     SOURCE2_URL=$PATCH_URL
-     SOURCE3_URL=$PATCH_URL
-     SOURCE4_URL=$PATCH_URL
-      SOURCE_VFY=sha1:1038b5c7c6be99e59af94c74c8b6476e19c89166
-     SOURCE2_VFY=sha1:a6539821cc493ce282013d79de8b5db3ec1003ac
-     SOURCE3_VFY=sha1:8b5cdb6e37b6ff47cb08eed9446e3c6c36297369
-     SOURCE4_VFY=sha1:bc3af38048845fa929bb2cec8d9518af6d23bf2e
+      SOURCE_VFY=sha1:abf25fac986a2fc34a4bcc93fd5481f74e822cc7
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20120701
+         UPDATED=20120710
            SHORT="A system and program management daemon"
 
 cat << EOF
