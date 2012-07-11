@@ -21,9 +21,9 @@
                --enable-applib                \
                --enable-udev_sync             \
                --enable-udev_rules            \
-               --enable-static_link           \
                $OPTS                         &&
 
-  default_make
+  default_make &&
+  make install_system_dirs
 
 ) > $C_FIFO 2>&1

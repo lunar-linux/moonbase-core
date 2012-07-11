@@ -1,3 +1,5 @@
 %KERNEL_HEADERS:kernel-headers kernel-headers-2.6
 %KMOD:kmod module-init-tools
+%SSL:openssl gnutls
 %UDEV:systemd udev
+%XMLRENDERER:libxml2 expat

@@ -1,0 +1,17 @@
+[Unit]
+Description=Device-mapper event daemon
+Requires=dm-event.socket
+After=dm-event.socket
+Before=local-fs.target
+DefaultDependencies=no
+
+[Service]
+Type=forking
+ExecStart=/sbin/dmeventd
+ExecReload=/sbin/dmeventd -R
+Environment=SD_ACTIVATION=1
+PIDFile=/var/run/dmeventd.pid
+OOMScoreAdjust=-1000
+
+[Install]
+WantedBy=sysinit.target
