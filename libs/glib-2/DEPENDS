@@ -1,3 +1,3 @@
-depends  zlib
-depends  libffi
-depends  Python
+depends zlib
+depends libffi
+optional_depends Python "" "" "build tests (for docs also say yes here)?"
