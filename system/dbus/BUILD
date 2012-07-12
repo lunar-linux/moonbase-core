@@ -4,8 +4,6 @@
   rm -fr /lib/systemd/system/sockets.target.wants/dbus.socket
   rm -fr /lib/systemd/system/multi-user.target.wants/dbus.service
 
-  patch_it $SOURCE2 1 &&
-
   if kernel_option_present CONFIG_INOTIFY_USER ; then
     OPTS+=" --enable-inotify"
   else
