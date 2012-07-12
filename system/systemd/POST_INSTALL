@@ -42,7 +42,7 @@ if egrep -q '^(proc|none|devpts|usbfs|tmpfs)' /etc/fstab; then
 fi
 
 if [ -n "$SYSTEMD_ERROR" ]; then
-  message "\e[5;31mPress any key to continue..."
+  message "\e[5;31mPress any key to continue...${DEFAULT_COLOR}"
   read -n 1
 fi
 
