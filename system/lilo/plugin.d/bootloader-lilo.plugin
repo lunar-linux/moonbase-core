@@ -12,6 +12,7 @@
 
 
 plugin_kernel_updatebootloader_lilo() {
+  local ARCH=$(arch)
   # preferred? - master switch for experienced users
   if [ -n "$BOOTLOADER" -a "$BOOTLOADER" != "lilo" ]; then
     return 2
@@ -35,9 +36,9 @@ plugin_kernel_updatebootloader_lilo() {
         # rename this one to .old
         LABEL="    label = $2.old"
         SIMAGE=$(echo $IMAGE | tr -d '[:blank:]' | sed 's/image=//')
-        if [ "$SIMAGE" == "/boot/$1" ]; then
+        if [ "$SIMAGE" == "/boot/vmlinuz-$1-$ARCH" ]; then
           # rename the image too since the module moved it to .old
-          IMAGE="image = /boot/$1.old"
+          IMAGE="image = /boot/vmlinuz-$1-$ARCH.old"
         fi
       elif [ "$SLABEL" == "$2.old" ]; then
         # delete this one!
@@ -60,7 +61,7 @@ plugin_kernel_updatebootloader_lilo() {
     sed '/other\|image/Q' /etc/lilo.conf
 
     # we didn't have this label yet - insert it rightaway
-    echo "image = /boot/$1"
+    echo "image = /boot/vmlinuz-$1-$ARCH"
     echo "    label = $2"
     if [ -z "$READONLY" ]; then
       echo "    read-only"

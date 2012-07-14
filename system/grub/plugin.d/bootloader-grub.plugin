@@ -105,11 +105,12 @@ plugin_kernel_updatebootloader_grub()
 
   add_grub_image()
   {
+    local ARCH=$(arch)
     if ! has_grub_title "$2" /boot/grub/menu.lst ; then
-      print_grub_image "$1" "$2" >> /boot/grub/menu.lst.new
+      print_grub_image "vmlinuz-$1-$ARCH" "$2" >> /boot/grub/menu.lst.new
     fi
-    if [ -f /boot/"$1.old" ] && ! has_grub_title "$2.old" /boot/grub/menu.lst ; then
-      print_grub_image "$1.old" "$2.old" >> /boot/grub/menu.lst.new
+    if [ -f /boot/vmlinuz-$1-$ARCH.old ] && ! has_grub_title "$2.old" /boot/grub/menu.lst ; then
+      print_grub_image "vmlinuz-$1-$ARCH.old" "$2.old" >> /boot/grub/menu.lst.new
     fi
   }
 
