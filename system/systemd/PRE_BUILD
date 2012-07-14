@@ -12,4 +12,12 @@ do
   fi
 done
 
+if mountpoint -q /usr; then
+  message "${PROBLEM_COLOR}WARNING: ${MESSAGE_COLOR}You appear to have an /usr partition mounted. If you continue this"
+  message "installation your computer will NOT be able to boot properly. This will be supported soon!${DEFAULT_COLOR}"
+  if ! query "Ignore this warning and continue installation?" n ; then
+    exit 1
+  fi
+fi
+
 default_pre_build
