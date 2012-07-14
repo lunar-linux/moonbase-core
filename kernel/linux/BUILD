@@ -1,5 +1,8 @@
 (
 
+  # Do not install firmware on modules_install
+  sedit '/Makefile.*__fw_modinst/d' Makefile
+
 # Needed for x86_64
   MYARCH="`arch | grep -qw i.86 && echo i386 || arch`"
 
