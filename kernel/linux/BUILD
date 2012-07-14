@@ -1,5 +1,8 @@
 (
 
+  # Do not install firmware on modules_install
+  sedit '/Makefile.*__fw_modinst/d' Makefile
+
 # Needed for x86_64
   MYARCH="`arch | grep -qw i.86 && echo i386 || arch`"
 
@@ -15,7 +18,8 @@
   backup_mods_krnl $FULL_VERSION
   prepare_install
   make modules_install
-  cp arch/${MYARCH}/boot/bzImage /boot/$FULL_VERSION-`arch`
-  cp System.map /boot/System.map-$FULL_VERSION-`arch`
+  cp arch/${MYARCH}/boot/bzImage /boot/vmlinuz-$FULL_VERSION-$(arch)
+  cp System.map /boot/System.map-$FULL_VERSION-$(arch)
+  gzip -c -9 .config > /boot/config-$FULL_VERSION-$(arch).gz
 
 ) > $C_FIFO 2>&1

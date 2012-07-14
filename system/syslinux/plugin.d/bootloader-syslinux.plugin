@@ -54,7 +54,7 @@ plugin_kernel_updatebootloader_syslinux() {
     if [ -z "$DONE" ]; then
       if echo "$LINE" | grep -q "^\s*label" ; then
         # insert
-        entry "$1" "$2" "$BOOTDIR" "$ROOTPART" >> $TMP
+        entry "vmlinuz-$1-$(arch)" "$2" "$BOOTDIR" "$ROOTPART" >> $TMP
         DONE="x"
       fi
     fi
