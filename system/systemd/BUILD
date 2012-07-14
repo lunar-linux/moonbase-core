@@ -1,5 +1,8 @@
 (
 
+  patch_it /var/spool/lunar/0001-printf-specifiers-u-and-h-USER-and-HOME.patch 1
+  patch_it /var/spool/lunar/0002-Set-WorkinDirectory-to-HOME-for-user-session-units.patch 1
+
   OPTS+=" --with-distro=other \
           --libexecdir=/usr/lib \
           --with-usb-ids-path=/usr/share/usb.ids \
