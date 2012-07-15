@@ -1,5 +1,8 @@
 (
 
+# patch to compile with glibc-2.16.0.
+  patch_it $SOURCE_CACHE/$SOURCE3 1  &&
+
   export SGML2LATEX=no
   export SGML2TXT=no
   export SGML2HTML=no
