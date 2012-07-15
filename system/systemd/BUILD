@@ -17,11 +17,6 @@
   # vconsole.conf defaults to us-layout
   [ -f /etc/vconsole.conf ] || install -m 0644 -o root -g root $SCRIPT_DIRECTORY/files/vconsole.conf /etc/vconsole.conf &&
 
-  # os-release should properly show lunar
-  # todo: we might replace this with some auto-generated
-  #       values from /etc/lunar.release in the future.
-  [ -f /etc/os-release ] || install -m 0644 -o root -g root $SCRIPT_DIRECTORY/files/os-release /etc/os-release &&
-
   # last but not least the locale settings, defaulting to US
   [ -f /etc/locale.conf ] || install -m 0644 -o root -g root $SCRIPT_DIRECTORY/files/locale.conf /etc/locale.conf &&
 
