@@ -46,4 +46,24 @@ if [ -n "$SYSTEMD_ERROR" ]; then
   read -n 1
 fi
 
+# Generate some good default files based on current settings
+# /etc/os-release
+if [ ! -f /etc/os-release ] || ! grep -q 'HOME_URL' /etc/os-release ; then
+  if [ -f /etc/lunar.release ]; then
+    DRELEASE=$(awk '{ print $3 }' /etc/lunar.release | cut -d- -f1)
+    DCNAME=$(sed 's;.*(\(.*\) -.*;\1;' /etc/lunar.release)
+    DDESC=$(cat /etc/lunar.release)
+    DVERSION="$DRELEASE ($DCNAME)"
+  fi
+cat <<EOF > /etc/os-release
+NAME="Lunar Linux"
+VERSION="$DVERSION"
+ID=lunar
+VERSION_ID=$DRELEASE
+PRETTY_NAME="$DDESC"
+ANSI_COLOR="1;34"
+HOME_URL="http://lunar-linux.org/"
+EOF
+fi
+
 lin -c dbus
