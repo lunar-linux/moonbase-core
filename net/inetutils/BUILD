@@ -1,7 +1,10 @@
 (
 
+# fix compile with glibc 2.16.0
+  sed -i '/gets is a security hole/d' lib/stdio.in.h  &&
+
   # To prevent compilation error:  undefined reference to `tgetent'
-  export LIBS+=" -lncurses" &&
+  export LIBS+=" -lncurses"  &&
 
   OPTS+=" --disable-servers   \
           --disable-ifconfig  \
