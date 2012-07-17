@@ -1,5 +1,8 @@
 (
 
+# fix compile with glibc 2.16.0
+  sed -i '/gets is a security hole/d' gnu/stdio.in.h  &&
+
   export FORCE_UNSAFE_CONFIGURE=1  &&
   cp $SOURCE_CACHE/$SOURCE2 tar.1.gz  &&
   # this sedit restores the tar --list to its older 1.15.1 format
