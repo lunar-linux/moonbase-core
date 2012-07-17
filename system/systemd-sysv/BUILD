@@ -11,6 +11,7 @@
   ln -sf /usr/bin/systemctl /sbin/reboot &&
   ln -sf /usr/bin/systemctl /sbin/runlevel &&
   ln -sf /usr/bin/systemctl /sbin/shutdown &&
-  ln -sf /usr/bin/systemctl /sbin/telinit
+  ln -sf /usr/bin/systemctl /sbin/telinit &&
+  ln -sf /bin/pgrep /bin/pidof
 
 ) > $C_FIFO
