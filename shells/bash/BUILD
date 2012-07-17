@@ -26,6 +26,18 @@
   patch_it $SOURCE23 0  &&
   patch_it $SOURCE24 0  &&
   patch_it $SOURCE25 0  &&
+  patch_it $SOURCE26 0  &&
+  patch_it $SOURCE27 0  &&
+  patch_it $SOURCE28 0  &&
+  patch_it $SOURCE29 0  &&
+  patch_it $SOURCE30 0  &&
+  patch_it $SOURCE31 0  &&
+  patch_it $SOURCE32 0  &&
+  patch_it $SOURCE33 0  &&
+  patch_it $SOURCE34 0  &&
+  patch_it $SOURCE35 0  &&
+  patch_it $SOURCE36 0  &&
+  patch_it $SOURCE37 0  &&
 
   OPTS+=" --bindir=/bin                 \
           --enable-readline             \
