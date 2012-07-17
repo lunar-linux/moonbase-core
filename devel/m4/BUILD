@@ -1,5 +1,8 @@
 (
 
+# fix compile with glibc 2.16.0
+  sed -i '/gets is a security hole/d' lib/stdio.in.h  &&
+
   sedit "s/\infodir = \$(prefix)\/info/infodir = \$(prefix)\/share\/info/" Makefile.in  &&
   ./configure  --build=$BUILD  \
                --prefix=/usr   \
