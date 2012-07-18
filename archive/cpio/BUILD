@@ -1,5 +1,8 @@
 (
 
+# fix compiling with glibc 2.16.0
+  sed -i '/gets is a security hole/d' gnu/stdio.in.h  &&
+
   default_config  &&
   if module_installed mt-st ; then
     sedit 's/install:: installdirs all/install:: installdirs/' Makefile  &&
