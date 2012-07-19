@@ -1,12 +1,12 @@
           MODULE=quota
-         VERSION=3.17
+         VERSION=4.00
           SOURCE=$MODULE-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-tools
    SOURCE_URL=$SFORGE_URL/linuxquota
-     SOURCE_VFY=sha1:8dc04ea803a43496dfe275a8260757f558a2d762
+     SOURCE_VFY=sha1:9ef79933bebfd80f007600fd422616ad161c5fd0
        WEB_SITE=http://sourceforge.net/projects/linuxquota
          ENTERED=20030820
-         UPDATED=20100216
+         UPDATED=20120719
            SHORT="The quota tool"
 
 cat << EOF
