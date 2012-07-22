@@ -2,17 +2,24 @@
          VERSION=6.2
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=readline62-001
+         SOURCE3=readline62-002
+         SOURCE4=readline62-003
+         SOURCE5=readline62-004
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.cwru.edu/pub/bash
    SOURCE_URL[2]=ftp://ftp.gnu.org/pub/gnu/$MODULE
       SOURCE_VFY=sha1:a9761cd9c3da485eb354175fcc2fe35856bc43ac
-  SOURCE2_URL[0]=$GNU_URL/$MODULE/$MODULE-$VERSION-patches
-  SOURCE2_URL[1]=ftp://ftp.cwru.edu/pub/bash/$MODULE-$VERSION-patches
-  SOURCE2_URL[2]=ftp://ftp.gnu.org/pub/gnu/$MODULE/$MODULE-$VERSION-patches
+  SOURCE2_URL=$GNU_URL/$MODULE/$MODULE-$VERSION-patches
+  SOURCE3_URL=$GNU_URL/$MODULE/$MODULE-$VERSION-patches
+  SOURCE4_URL=$GNU_URL/$MODULE/$MODULE-$VERSION-patches
+  SOURCE5_URL=$GNU_URL/$MODULE/$MODULE-$VERSION-patches
      SOURCE2_VFY=sha1:7d264c281f3b43e1c07c020b1785631411ce039e
+     SOURCE3_VFY=sha1:65775778480a35d60ec1ddeaf61ea9adff965167
+     SOURCE4_VFY=sha1:7e8dfc3e29c0e565a787496d7c71c0714ac8bde4
+     SOURCE5_VFY=sha1:362b351dbb144e3a6791bb5cc0ef1f7e5c64d1bc
         WEB_SITE=http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
          ENTERED=20010922
-         UPDATED=20110301
+         UPDATED=20120722
            SHORT="Lets users edit command lines as they are typed in"
 
 cat << EOF
