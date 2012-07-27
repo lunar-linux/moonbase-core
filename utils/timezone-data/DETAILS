@@ -12,7 +12,7 @@
   SOURCE3_URL[0]=$PATCH_URL
       SOURCE_VFY=sha1:65d98727233bfd3f5d20dceafab0a81ae2cb5527
      SOURCE2_VFY=sha1:a289800ba7b09f2e65b5ebeefa28b69eb49b7b65
-#     SOURCE3_VFY=sha1:9f3234708c0baa44d5aeb132871cb473d37f9dbe
+     SOURCE3_VFY=sha1:0592ef5c4ae2155d2585d915f5a2cf1089687bb8
         WEB_SITE=ftp://munnari.oz.au/pub
          ENTERED=20070203
          UPDATED=20120722
