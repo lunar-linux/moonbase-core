@@ -1,11 +1,11 @@
           MODULE=zile
-         VERSION=2.4.7
+         VERSION=2.4.8
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$GNU_URL/$MODULE
-      SOURCE_VFY=sha1:30c47a399b94b5dce68a178fe98807f86719a466
+      SOURCE_VFY=sha1:763224367472deecf71fb10d61806706a481fd48
         WEB_SITE=http://www.gnu.org/software/zile
          ENTERED=20010922
-         UPDATED=20120321
+         UPDATED=20120722
            SHORT="zile is a small, fast and powerful emacs clone"
 
 cat << EOF
