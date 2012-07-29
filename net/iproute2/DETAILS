@@ -1,11 +1,11 @@
           MODULE=iproute2
-         VERSION=3.3.0
+         VERSION=3.4.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://dev.lightcube.us/sources/$MODULE
-      SOURCE_VFY=sha1:25307c2418b9d4c6433d61a296f50b886da84b8c
+      SOURCE_VFY=sha1:fcea492dea2f3ecf9d35f279e2f1a7ea6ca0d527
         WEB_SITE=http://www.linuxfoundation.org/en/Net:Iproute2
          ENTERED=20021106
-         UPDATED=20120604
+         UPDATED=20120729
            SHORT="Professional tools to control networking in Linux kernels"
 
 cat << EOF
