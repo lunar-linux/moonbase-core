@@ -1,12 +1,12 @@
           MODULE=lunar-tools
-         VERSION=2012.2
+         VERSION=2012.3
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=http://lunar-linux.org/lunar/
-      SOURCE_VFY=sha1:3e03f5fd6e6bc0d6306b9e71479d7f9833ba8fd2
+      SOURCE_VFY=sha1:06c986888bf8d09bdaea7ec0824665e7909d6582
       MAINTAINER=sofar@lunar-linux.org
         WEB_SITE=http://lunar-linux.org/
          ENTERED=20041029
-         UPDATED=20120714
+         UPDATED=20120731
            SHORT="A collection of lunar tools"
 cat << EOF
 Lunar-tools is a package with non-vital tools that help you perform
