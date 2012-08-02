@@ -5,7 +5,7 @@
       SOURCE_VFY=sha1:fcea492dea2f3ecf9d35f279e2f1a7ea6ca0d527
         WEB_SITE=http://www.linuxfoundation.org/en/Net:Iproute2
          ENTERED=20021106
-         UPDATED=20120729
+         UPDATED=20120802
            SHORT="Professional tools to control networking in Linux kernels"
 
 cat << EOF

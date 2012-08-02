@@ -10,8 +10,8 @@
 
   chmod +x configure &&
   ./configure &&
-  KERNEL_INCLUDE=/usr/include/ make SBINDIR=/sbin &&
+  KERNEL_INCLUDE=/usr/include/ make SBINDIR=/usr/sbin &&
   prepare_install &&
-  make SBINDIR=/sbin install
+  make SBINDIR=/usr/sbin install
 
 ) > $C_FIFO 2>&1
