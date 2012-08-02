@@ -9,7 +9,7 @@
   cp -f /lib/libhistory.so.* /tmp/old.libraries &&
   LD_LIBRARY_PATH=/tmp/old.libraries:$LD_LIBRARY_PATH &&
 
-  OUR_OLD_READLINE_VVV=$(lvu installed readline | perl -pe 's/([0-9]).+/$1/')  &&
+  OUR_OLD_READLINE_VVV=$(lvu installed readline | sed -r 's/([0-9]+).+/\1/')  &&
   set_module_config OUR_OLD_READLINE_VVV "$OUR_OLD_READLINE_VVV"  &&
   # ************************ WARNING *************************
   # DO NOT MESS WITH THE CONFIGURE STUFF here unless you
