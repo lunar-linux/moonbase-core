@@ -13,18 +13,25 @@
 
 plugin_systemd_configure()
 {
-  local SERVICES SERVICE SYSTEMD_SERVICES
+  local SERVICES SERVICE_FLAGGED SERVICE SYSTEMD_SERVICES
   debug_msg "plugin_systemd_configure ($@)"
+
+  SYSTEMD_SERVICES=$(get_module_config SYSTEMD_SERVICES)
+
   if [ -d $SCRIPT_DIRECTORY/systemd.d ]; then
     cd $SCRIPT_DIRECTORY/systemd.d
 
     SERVICES=$(ls -1)
 
-    SYSTEMD_SERVICES=$(get_module_config SYSTEMD_SERVICES)
     for SERVICE in $SERVICES; do
       # don't ask for '@' services - these should always be installed but
       # never linked directly. Also ask for new or renamed services.
-      if echo $SERVICE | grep -q @ || echo $SYSTEMD_SERVICES | egrep -q "(^| )$SERVICE( |$)"; then
+      if echo $SERVICE | grep -q @ || echo $SYSTEMD_SERVICES | egrep -q "(^| )-?$SERVICE( |$)"; then
+	if systemctl -q is-enabled $SERVICE  ; then
+	  SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?($SERVICE)( |$);\1\2\3;")
+	else
+	  SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?($SERVICE)( |$);\1-\2\3;")
+	fi
         continue
       fi
       message "${MESSAGE_COLOR}$SERVICE: $(grep Description= $SERVICE | cut -d= -f2-)${DEFAULT_COLOR}"
@@ -32,27 +39,34 @@ plugin_systemd_configure()
       then
         SYSTEMD_SERVICES+=" $SERVICE"
       else
+        SYSTEMD_SERVICES+=" -$SERVICE"
         # ignore output here - this is likely to hit "not found" errors
         systemctl disable $SERVICE > /dev/null 2>&1
         systemctl stop $SERVICE > /dev/null 2>&1
       fi
     done
     cd $SCRIPT_DIRECTORY
-
-    # Look for renamed or removed services and stop and disable them.
-    # If we don't do it here it will be too late and there will be rogue
-    # processes left behind after a successful install
-    for SERVICE in $SYSTEMD_SERVICES; do
-      if ! echo $SERVICES | egrep -q "(^| )$SERVICE( |$)"; then
-        verbose_msg "Stopping removed service ($SERVICE)"
-        systemctl stop $SERVICE &> /dev/null
-        systemctl disable $SERVICE &> /dev/null
-        SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )$SERVICE( |$);\1;")
-      fi
-    done
-
-    set_module_config "SYSTEMD_SERVICES" "$SYSTEMD_SERVICES"
   fi
+
+  # Look for renamed or removed services and stop and disable them.
+  # If we don't do it here it will be too late and there will be rogue
+  # processes left behind after a successful install
+  for SERVICE_FLAGGED in $SYSTEMD_SERVICES; do
+    SERVICE=$(echo $SERVICE_FLAGGED | sed "s;^-;;")
+    if ! echo $SERVICES | egrep -q "(^| )$SERVICE( |$)"; then
+      verbose_msg "Stopping removed service ($SERVICE)"
+      systemctl stop $SERVICE &> /dev/null
+      systemctl disable $SERVICE &> /dev/null
+      SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?$SERVICE( |$);\2;")
+    fi
+  done
+
+  if echo "$SYSTEMD_SERVICES" | grep -q "[^ ]"; then
+    set_module_config "SYSTEMD_SERVICES" "$SYSTEMD_SERVICES"
+  else
+    unset_module_config "SYSTEMD_SERVICES"
+  fi
+
   return 2
 }
 
@@ -66,7 +80,7 @@ plugin_systemd_post_build()
 
   if [ -d $SCRIPT_DIRECTORY/systemd.d ]; then
     invoke_installwatch
-    verbose_msg "handling systemd.d services" | tee -a $C_LOG
+    verbose_msg "handling systemd.d services"
     cd $SCRIPT_DIRECTORY/systemd.d
     SERVICES=$(ls -1)
 
@@ -80,6 +94,9 @@ plugin_systemd_post_build()
   systemctl daemon-reload > /dev/null 2>&1
 
   for SERVICE in $SYSTEMD_SERVICES; do
+    if echo $SERVICE | grep -q ^-; then
+      continue;
+    fi
     systemctl disable $SERVICE
     invoke_installwatch
     systemctl enable $SERVICE
@@ -115,11 +132,12 @@ plugin_systemd_tmpfilesd_post_build() {
 }
 
 plugin_systemd_disable_services_pre_remove() {
-  local SYSTEMD_SERVICES
+  local SYSTEMD_SERVICES SERVICE SERVICE_FLAGGED
   debug_msg "plugin_systemd_disable_services_pre_remove ($@)"
 
   SYSTEMD_SERVICES=$(get_module_config SYSTEMD_SERVICES)
-  for SERVICE in $SYSTEMD_SERVICES; do
+  for SERVICE_FLAGGED in $SYSTEMD_SERVICES; do
+    SERVICE=$(echo $SERVICE_FLAGGED | sed "s;^-;;")
     verbose_msg "Stopping and disabling systemd service ($SERVICE)"
     systemctl stop $SERVICE &> /dev/null
     systemctl disable $SERVICE &> /dev/null
