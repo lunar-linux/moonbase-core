@@ -1,5 +1,5 @@
 rm -rf /tmp/old.libraries &&
-OUR_NEW_READLINE_VVV=$(lvu version readline | perl -pe 's/([0-9]).+/$1/')
+OUR_NEW_READLINE_VVV=$(lvu version readline | sed -r 's/([0-9]+).+/\1/')
 OUR_OLD_READLINE_VVV=$(get_module_config OUR_OLD_READLINE_VVV)
 
 if [[ "$OUR_NEW_READLINE_VVV" > "$OUR_OLD_READLINE_VVV" ]]; then
