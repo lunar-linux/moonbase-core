@@ -3,3 +3,5 @@ depends gettext
 depends bison
 
 optional_depends "os-prober" "" "" "for OS auto-detection on other partitions"
+optional_depends "lvm2" "--enable-device-mapper" "--disable-device-mapper" "enable Linux device-mapper support"
+optional_depends "fuse" "--enable-grub-mount" "--disable-grub-mount" "build and install the grub-mount utility"
