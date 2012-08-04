@@ -1,0 +1,15 @@
+          MODULE=os-prober
+         VERSION=1.54
+          SOURCE=${MODULE}_${VERSION}.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION/
+      SOURCE_URL=http://ftp.de.debian.org/debian/pool/main/o/os-prober
+      SOURCE_VFY=sha1:536577642976f40f76dc2a413348088998e6667a
+        WEB_SITE=http://kitenet.net/~joey/code/os-prober/
+         ENTERED=20110601
+         UPDATED=20111025
+           SHORT="utility to detect other OSes on a set of drives"
+
+cat << EOF
+This package detects other OSes available on a system and outputs
+the results in a generic machine-readable format.
+EOF
