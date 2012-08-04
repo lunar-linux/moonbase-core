@@ -2,7 +2,7 @@
          VERSION=2012.5
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=http://lunar-linux.org/lunar/
-      SOURCE_VFY=sha1:64a543afbb5f4bf728636bdcbbe7a2ed0804adc2
+      SOURCE_VFY=sha1:b962fcd2981f30d8eb82754433b411b0b0e9e4d9
       MAINTAINER=sofar@lunar-linux.org
         WEB_SITE=http://lunar-linux.org/
          ENTERED=20041029
