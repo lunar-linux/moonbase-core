@@ -1,8 +1,8 @@
           MODULE=lunar-tools
-         VERSION=2012.4
+         VERSION=2012.5
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=http://lunar-linux.org/lunar/
-      SOURCE_VFY=sha1:cfd7e056f9d55379ff5362abad511aa4349e4b49
+      SOURCE_VFY=sha1:64a543afbb5f4bf728636bdcbbe7a2ed0804adc2
       MAINTAINER=sofar@lunar-linux.org
         WEB_SITE=http://lunar-linux.org/
          ENTERED=20041029
