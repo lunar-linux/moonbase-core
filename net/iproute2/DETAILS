@@ -1,11 +1,14 @@
           MODULE=iproute2
-         VERSION=3.4.0
+         VERSION=3.5.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://dev.lightcube.us/sources/$MODULE
-      SOURCE_VFY=sha1:fcea492dea2f3ecf9d35f279e2f1a7ea6ca0d527
-        WEB_SITE=http://www.linuxfoundation.org/en/Net:Iproute2
+         SOURCE2=$MODULE-fhs.patch.bz2
+      SOURCE_URL=http://www.kernel.org/pub/linux/utils/net/$MODULE
+     SOURCE2_URL=$PATCH_URL
+      SOURCE_VFY=sha1:a78f6bbbb21a1932315baf7be2f3f1d6e6c5ed62
+     SOURCE2_VFY=sha1:b39063237e7a2c68fcfb731fe5bf5b3177e1b2dc
+        WEB_SITE=http://www.linuxfoundation.org/collaborate/workgroups/networking/$MODULE
          ENTERED=20021106
-         UPDATED=20120802
+         UPDATED=20120805
            SHORT="Professional tools to control networking in Linux kernels"
 
 cat << EOF
