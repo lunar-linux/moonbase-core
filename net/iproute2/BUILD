@@ -1,8 +1,6 @@
 (
 
-  sedit "s:/usr/lib/:lib/:" Makefile &&
-  sedit "s:\$(DESTDIR)\$(CONFDIR):\$(CONFDIR):" Makefile &&
-  sedit "s:\$(DESTDIR)\$(ARPDDIR):\$(ARPDDIR):" Makefile &&
+  patch_it $SOURCE_CACHE/$SOURCE2 1 &&
 
   if ! in_depends $MODULE db; then
     sedit 's/arpd//' misc/Makefile
