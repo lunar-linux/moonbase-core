@@ -4,6 +4,10 @@
   cp $SOURCE_CACHE/$SOURCE2 tar.1.gz  &&
   # this sedit restores the tar --list to its older 1.15.1 format
   sedit "s/tartime (st->mtime, false)/tartime (st->mtime, true)/" src/list.c  &&
+
+  # Fixes an incompatibility with glibc-2.16
+  sedit '/gets is a/d' gnu/stdio.in.h  &&
+
   ./configure  --build=$BUILD     \
                --prefix=/usr      \
                --libexecdir=/bin  \
