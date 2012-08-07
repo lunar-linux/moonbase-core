@@ -5,7 +5,8 @@
          SOURCE2=$MODULE-2.11-no_timezones.patch.bz2
          SOURCE3=$MODULE-2.11.1-__i686.patch.bz2
          SOURCE4=$MODULE-2.15-fixes-1.patch.bz2
-         SOURCE5=$MODULE-2.14.1-fixes-1.patch.bz2
+         SOURCE5=$MODULE-2.15-fix-res_query-assert.patch
+         SOURCE6=$MODULE-2.15-revert-c5a0802a.patch
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/glibc
@@ -13,11 +14,13 @@
      SOURCE3_URL=$PATCH_URL
      SOURCE4_URL=$PATCH_URL
      SOURCE5_URL=$PATCH_URL
+     SOURCE6_URL=$PATCH_URL
       SOURCE_VFY=sha1:9d4fffc9c4ac93e7919e124fa38bb51dcaff5216
      SOURCE2_VFY=sha1:fc5bf75815daeeef52f7558f27992e02c2cdc87d
      SOURCE3_VFY=sha1:e3f36e2bb17e51e31035f2cd405d099c624d0e9e
      SOURCE4_VFY=sha1:7e53ec5daaf29d13ff3e9a9b2450da1f93000add
-     SOURCE5_VFY=sha1:5e26fb8800dd974527b4b73443ddfe134beae7f9
+     SOURCE5_VFY=sha1:fa4f4ce87a08f40d70f4d88d1ee62cf63b644bcc
+     SOURCE6_VFY=sha1:aad4d183fc2509e87f0986802117a45772cc0a0c
         WEB_SITE=http://www.gnu.org/software/libc
          ENTERED=20010922
          UPDATED=20120712

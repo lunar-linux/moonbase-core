@@ -2,8 +2,6 @@
   # The fortify compiler option cause the build to fail
   bad_flags -D_FORTIFY_SOURCE=2  &&
 
-# This sedit takes care of Bug Report 398 submitted by Striker.
-#  sedit "s:/tmp:$SOURCE_DIRECTORY/tmp:g" scripts/test-installation.pl  &&
   mkdir -p $SOURCE_DIRECTORY/tmp  &&
 
   export CC_OPTS=( Pipe )  &&
@@ -28,16 +26,15 @@
   patch_it $SOURCE2 1  &&
   patch_it $SOURCE3 1  &&
   patch_it $SOURCE4 1  &&
+  
+  # Fix res_query assertion
+  patch_it $SOURCE5 1  &&
+  
+  # Fix various hangs
+  patch_it $SOURCE6 1  &&
 
-  # Fixes nvidia-settings and other apps segfault http://www.nvnews.net/vbulletin/showpost.php?p=2501574
-#  patch_it $SOURCE5 1  &&
-
-# disable final test
+  # disable final test
   sed -i '/test-installation.pl/d' Makefile  &&
-
-  sedit 's/^# \(.* := rpcinfo\)/\1/p'  sunrpc/Makefile  &&
-  sedit 's/test-netdb tst-nss-test1/test-netdb/' nss/Makefile  &&
-  sedit '/libnss_test1/d' shlib-versions  &&
 
   INSTALL_ROOT=$SOURCE_DIRECTORY/glibcroot  &&
   mkdir -p $INSTALL_ROOT  &&
