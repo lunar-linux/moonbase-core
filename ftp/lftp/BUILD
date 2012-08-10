@@ -1,7 +1,7 @@
 (
 
-# fix compiling with glibc 2.16.0
-  sed -i '/gets is a security hole/d' lib/stdio.in.h  &&
+  # fix compiling with glibc 2.16.0
+  sedit '/gets is a security hole/d' lib/stdio.in.h  &&
 
   # get the alias
   SSL=`unalias %SSL` &&
