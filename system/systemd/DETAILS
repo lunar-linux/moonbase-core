@@ -1,11 +1,11 @@
           MODULE=systemd
-         VERSION=187
+         VERSION=188
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://www.freedesktop.org/software/systemd
-      SOURCE_VFY=sha1:1bd025aec82929f4c7eb19b3fd3a0c25435e7bbb
+      SOURCE_VFY=sha1:1874a67d699ccb605ff23e8d8512eefb10a63882
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20120728
+         UPDATED=20120810
            SHORT="A system and program management daemon"
 
 cat << EOF
