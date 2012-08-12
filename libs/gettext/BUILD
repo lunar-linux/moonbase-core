@@ -1,4 +1,6 @@
 (
+  # Fixes an incompatibility with glibc-2.16
+  sedit '/gets is a/d' gettext-*/*/stdio.in.h &&
 
   if !( module_installed emacs ); then
       OPTS+=" --without-emacs"
