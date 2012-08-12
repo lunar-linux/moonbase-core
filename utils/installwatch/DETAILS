@@ -9,7 +9,7 @@
      SOURCE2_VFY=sha1:9be11b1101174419af3be14e65678a55e7f85ee6
         WEB_SITE=http://asic-linux.com.mx/~izto/checkinstall/installwatch.html
          ENTERED=20011230
-         UPDATED=20120912
+         UPDATED=20120812
            SHORT="utility for tracking files from installation of software"
 
 cat << EOF
