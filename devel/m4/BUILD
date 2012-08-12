@@ -1,4 +1,6 @@
 (
+  # Fixes an incompatibility with glibc-2.16
+  sedit '/gets is a/d' lib/stdio.in.h &&
 
   sedit "s/\infodir = \$(prefix)\/info/infodir = \$(prefix)\/share\/info/" Makefile.in  &&
   ./configure  --build=$BUILD  \
