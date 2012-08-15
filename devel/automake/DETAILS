@@ -1,14 +1,14 @@
           MODULE=automake
            MAJOR=1.12
-         VERSION=$MAJOR.2
+         VERSION=$MAJOR.3
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=ftp://sources.redhat.com/pub/$MODULE
-      SOURCE_VFY=sha1:3a31471923be1cff1d2fe68166ae209ab455aa0f
+      SOURCE_VFY=sha1:0cf6d03fa323f726f41044e3d57d248f565a07c0
         WEB_SITE=http://www.gnu.org/software/automake
          ENTERED=20010922
-         UPDATED=20120726
+         UPDATED=20120815
            SHORT="Generate GNU coding standards compliant Makefiles"
 
 cat << EOF
