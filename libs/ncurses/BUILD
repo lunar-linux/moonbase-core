@@ -27,7 +27,7 @@
 
   default_make &&
 
-  devoke_installwatch &&
+# devoke_installwatch &&
 
   set +x &&
 
