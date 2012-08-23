@@ -1,0 +1,22 @@
+
+# Turn on extended globbing
+shopt -s extglob
+
+_clad () 
+{
+    local cur prev
+    COMPREPLY=()
+    cur=${COMP_WORDS[COMP_CWORD]}
+    prev=${COMP_WORDS[COMP_CWORD-1]}
+
+    if [ $COMP_CWORD -eq 1 ] || [ "${prev:0:1}" = "-" ]; then
+       	COMPREPLY=( $( compgen -W 'create destroy add remove test run bgrun list login logout' $cur ))
+    elif [ $COMP_CWORD -eq 2 ]; then
+        COMPREPLY=( $( compgen -W "`ls /var/lib/clad`" ))
+    else
+        COMPREPLY=( $( compgen -W "`cat /var/lib/clad/$prev`" ))
+    fi
+    return 0
+}
+complete -F _clad clad
+
