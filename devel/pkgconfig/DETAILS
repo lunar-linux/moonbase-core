@@ -1,12 +1,12 @@
           MODULE=pkgconfig
-         VERSION=0.27
+         VERSION=0.27.1
           SOURCE=pkg-config-$VERSION.tar.gz
       SOURCE_URL=http://pkgconfig.freedesktop.org/releases
-      SOURCE_VFY=sha1:ca2ffd312b37064f0afeb352185485ef9205cab9
+      SOURCE_VFY=sha1:08249417a51c0a7a940e4276105b142b77e576b5
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/pkg-config-$VERSION
         WEB_SITE=http://pkgconfig.freedesktop.org
          ENTERED=20010922
-         UPDATED=20120726
+         UPDATED=20120825
            SHORT="A system for managing library compile/link flags that works with automake and autoconf"
 
 cat << EOF
