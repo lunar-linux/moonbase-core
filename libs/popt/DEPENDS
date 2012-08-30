@@ -1,2 +1,3 @@
-depends gettext
 depends pkgconfig
+
+optional_depends  "gettext"  ""  ""  "for i18n internationalization support"
