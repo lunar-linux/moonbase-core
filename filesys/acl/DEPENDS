@@ -1,1 +1,3 @@
 depends  attr
+
+optional_depends "gettext" "--enable-gettext" "--disable-gettext" "for NLS support"

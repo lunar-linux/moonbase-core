@@ -1,3 +1,4 @@
 depends  automake
 depends  libtool
 
+optional_depends "gettext" "--enable-gettext" "--disable-gettext" "for NLS support"
