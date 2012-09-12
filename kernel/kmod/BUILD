@@ -5,17 +5,14 @@
      sedit 's/man//' Makefile.am
   fi &&
 
-  sedit "s:/usr::" autogen.sh  &&
   sedit "s:\$(libdir)/pkgconfig:/usr/lib/pkgconfig:" Makefile.am  &&
 
   OPTS+=" --with-zlib"  &&
 
-  ./autogen.sh   &&
-
-
   ./configure  --prefix=      \
                --libdir=/lib  \
                --mandir=/usr/share/man \
+               --includedir=/usr/include \
                $OPTS  &&
 
   sedit "s:\${prefix}/include:/usr/include:"  Makefile  &&
