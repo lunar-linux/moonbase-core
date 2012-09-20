@@ -607,6 +607,12 @@ EOF
                   "SSE4A" "SSE4A" $( echo ${XTRA[@]} | grep -q "SSE4A" && echo "on" || echo "off" ) "AMD Streaming SIMD (Single Instruction, Multiple Data) Extensions v4"
                   )
               fi
+              if grep -qw avx /proc/cpuinfo; then
+                OPTIONS=(
+                  ${OPTIONS[@]}
+                  "AVX" "AVX" $( echo ${XTRA[@]} | grep -q "AVX" && echo "on" || echo "off" ) "AVX - Advanced Vector eXtensions (Extended SSE registers)"
+                  )
+              fi
               if grep -qw abm /proc/cpuinfo; then
                 OPTIONS=(
                   ${OPTIONS[@]}
