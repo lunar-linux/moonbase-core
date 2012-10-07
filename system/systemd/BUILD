@@ -34,6 +34,9 @@
     lrm --upgrade udev
   fi &&
 
+  # systemd is no longer PSAFE during the make install phase due to install order of some libs (systemd-journal).
+  # Please check if this is fixed with the next release.
+  unset MAKES &&
   make install &&
 
   # Always install the legacy.conf file even if SysV compatibility isn't enabled
