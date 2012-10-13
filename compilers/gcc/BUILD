@@ -39,10 +39,13 @@
   cd /usr/lib/gcc/$BUILD/$VERSION  &&
   ln    -sf /usr/bin/cpp cpp       &&
   cd /lib/                         &&
-  ln    -sf /usr/bin/cpp cpp       && 
+  ln    -sf /usr/bin/cpp cpp       &&
 
   if [ ! -e /usr/bin/cc ] ; then
   ln -s gcc /usr/bin/cc
-  fi
+  fi  &&
+
+# remove the offending broken freetype link
+  rm -f $MODULE_PREFIX/lib/gcc/$BUILD/$VERSION/include-fixed/freetype
 
 ) > $C_FIFO 2>&1
