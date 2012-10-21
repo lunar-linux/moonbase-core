@@ -1,11 +1,11 @@
           MODULE=iptables
-         VERSION=1.4.16.2
+         VERSION=1.4.16.3
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=ftp://ftp.netfilter.org/pub/$MODULE
-      SOURCE_VFY=sha1:6fd368c4f6c31752011a716cccd951601157a493
+      SOURCE_VFY=sha1:819949fdf4276a04c5061b82898b515f139b0117
         WEB_SITE=http://www.netfilter.org
          ENTERED=20010922
-         UPDATED=20121008
+         UPDATED=20121021
            SHORT="Tool to create netfilter rules"
            PSAFE=no
 
