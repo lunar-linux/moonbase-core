@@ -5,7 +5,7 @@
      sedit 's/man//' Makefile.am
   fi &&
 
-  sedit "s:\$(libdir)/pkgconfig:/usr/lib/pkgconfig:" Makefile.am  &&
+  sedit "s:\$(libdir)/pkgconfig:/usr/lib/pkgconfig:" Makefile.am  Makefile.in  &&
 
   OPTS+=" --with-zlib"  &&
 
