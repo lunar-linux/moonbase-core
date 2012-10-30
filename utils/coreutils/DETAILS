@@ -11,6 +11,7 @@
          ENTERED=20030217
          UPDATED=20121024
            SHORT="Contains latest sh-utils, textutils and fileutils"
+PSAFE=no
 
 cat << EOF
 Tools included perform the following file operations:
