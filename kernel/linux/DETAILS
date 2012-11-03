@@ -1,5 +1,5 @@
           MODULE=linux
-         VERSION=3.6.4
+         VERSION=3.6.5
             BASE=$(echo $VERSION | cut -d. -f1,2)
           SOURCE=$MODULE-$BASE.tar.xz
          SOURCE2=patch-$VERSION.bz2
@@ -8,10 +8,10 @@
   SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v3.x
   SOURCE2_URL[1]=http://www.kernel.org/pub/linux/kernel/v3.x
       SOURCE_VFY=sha1:e0bffe68a714cf3cb8548aff39c5311b2135b18c
-     SOURCE2_VFY=sha1:96608328732e9eeb6e964582c412ba05072b4328
+     SOURCE2_VFY=sha1:d8eaf018da3a91c61b021e25862d7266cc0da072
         WEB_SITE=http://www.kernel.org
          ENTERED=20111121
-         UPDATED=20121029
+         UPDATED=20121101
            SHORT="The core of a Linux GNU Operating System"
      KEEP_SOURCE=on
            TMPFS=off
