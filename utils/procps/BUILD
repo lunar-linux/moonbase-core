@@ -17,7 +17,9 @@
   fi  &&
 
   cp $SCRIPT_DIRECTORY/init.d/sysctl /etc/init.d  &&
-  ln -sf ../init.d/sysctl /etc/rcS.d/S99sysctl    &&
+  if [ -e /etc/rcS.d ]; then
+    ln -sf ../init.d/sysctl /etc/rcS.d/S99sysctl
+  fi  &&
 
   if [ ! -e /etc/sysctl.conf ] ; then
     install -g0 -o0 -m0600 $SCRIPT_DIRECTORY/sysctl.conf /etc
