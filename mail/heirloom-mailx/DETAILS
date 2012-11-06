@@ -11,6 +11,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/mailx-$VERSION
          ENTERED=20070401
          UPDATED=20080729
            SHORT="A plain command line mail program"
+PSAFE=no
 
 cat << EOF
 The Heirloom mailx package (formerly known as the Nail  package)
