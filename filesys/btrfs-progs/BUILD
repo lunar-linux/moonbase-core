@@ -5,7 +5,6 @@
   sedit 's/^bindir.*/bindir = \/sbin/' Makefile &&
 
   make &&
-  make convert &&
   prepare_install &&
   make install
 
