@@ -1,9 +1,9 @@
           MODULE=btrfs-progs
-         VERSION=0.19
+         VERSION=v0.20-rc1
           SOURCE=${MODULE}-${VERSION}.tar.bz2
-      SOURCE_URL=http://mirror.linux.org.au/linux/kernel/people/mason/btrfs
+      SOURCE_URL=http://www.kernel.org/pub/linux/kernel/people/mason/btrfs-progs
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
-      SOURCE_VFY=sha1:483b44e844c3a97ccb830add21ca9327545dbc69
+      SOURCE_VFY=sha1:744d391d7cf7d20cdd2627fb6ef6f43876552751
         WEB_SITE=http://btrfs.wiki.kernel.org/index.php/Main_Page
          ENTERED=20090819
          UPDATED=20090819
