@@ -1,21 +1,21 @@
           MODULE=timezone-data
          VERSION=2012
-    DATA_VERSION=${VERSION}h
-    CODE_VERSION=${VERSION}h
+    DATA_VERSION=${VERSION}i
+    CODE_VERSION=${VERSION}i
           SOURCE=tzdata${DATA_VERSION}.tar.gz
          SOURCE2=tzcode${CODE_VERSION}.tar.gz
-         SOURCE3=$MODULE-2012d-makefile.patch
+         SOURCE3=$MODULE-2012i-makefile.patch
    SOURCE_URL[0]=$MIRROR_URL
    SOURCE_URL[1]=http://www.iana.org/time-zones/repository/releases
   SOURCE2_URL[0]=$MIRROR_URL
   SOURCE2_URL[1]=http://www.iana.org/time-zones/repository/releases
   SOURCE3_URL[0]=$PATCH_URL
-      SOURCE_VFY=sha1:fac62cfb0bebbaf318a146eb67b201e3b714fab4
-     SOURCE2_VFY=sha1:2d1d54e3772afbcd8e6ab1ee19dad9ce7bdfa210
-     SOURCE3_VFY=sha1:0592ef5c4ae2155d2585d915f5a2cf1089687bb8
+      SOURCE_VFY=sha1:53b305e2d5042cd0147df41f7498243f0a55dc79
+     SOURCE2_VFY=sha1:05c5f21baf042965d771ba06a4fc3a7744a6fe5e
+     SOURCE3_VFY=sha1:b0b925d64f583abf1c476cf19b5462a607e17ad4
         WEB_SITE=ftp://munnari.oz.au/pub
          ENTERED=20070203
-         UPDATED=20121029
+         UPDATED=20121108
            SHORT="timezone data and utilities"
 
 cat << EOF
