@@ -7,7 +7,6 @@
     --enable-mm-debug \
     --enable-nls \
     --enable-cache-stats \
-    --enable-grub-mkfont \
     --disable-werror \
     --with-bootdir=/boot \
     --with-grubdir=grub " &&
