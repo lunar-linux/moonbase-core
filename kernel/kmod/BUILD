@@ -1,11 +1,6 @@
 (
 
-  if ! module_installed docbook-xml; then
-     sedit '/man\/Makefile/d' configure.ac  &&
-     sedit 's/man//' Makefile.am
-  fi &&
-
-  sedit "s:\$(libdir)/pkgconfig:/usr/lib/pkgconfig:" Makefile.am  Makefile.in  &&
+  sedit "s:\$(libdir)/pkgconfig:/usr/lib/pkgconfig:" Makefile.in  &&
 
   OPTS+=" --with-zlib"  &&
 
@@ -15,7 +10,6 @@
                --includedir=/usr/include \
                $OPTS  &&
 
-  sedit "s:\${prefix}/include:/usr/include:"  Makefile  &&
   default_make  &&
 
 # add symlinks to kmod
