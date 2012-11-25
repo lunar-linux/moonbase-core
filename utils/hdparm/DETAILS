@@ -1,11 +1,11 @@
           MODULE=hdparm
-         VERSION=9.42
+         VERSION=9.43
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha1:5429106f83a4e173cba8b109ad2051b28214f962
+      SOURCE_VFY=sha1:3ffbcf46237245868a569125a6d5c92a0e07e7ce
         WEB_SITE=http://www.ibiblio.org/pub/Linux/system/hardware
          ENTERED=20010922
-         UPDATED=20120930
+         UPDATED=20121119
            SHORT="A utility to access/tune Linux's EIDE drivers"
 
 cat << EOF
