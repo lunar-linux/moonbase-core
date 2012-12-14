@@ -1,13 +1,13 @@
           MODULE=util-linux
            MAJOR=2.22
-         VERSION=$MAJOR.1
+         VERSION=$MAJOR.2
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$KERNEL_URL/pub/linux/utils/$MODULE/v$MAJOR
    SOURCE_URL[1]=$MIRROR_URL
         WEB_SITE=http://freecode.com/projects/util-linux
-      SOURCE_VFY=sha1:095cee023046ad3e9a8c0c15674d1522290aa1e0
+      SOURCE_VFY=sha1:7c7c79de4d5ce5eae5825215c3840d0299fcd04f
          ENTERED=20010922
-         UPDATED=20121011
+         UPDATED=20121214
            SHORT="Essential utilities for any Linux box"
 
 cat << EOF
