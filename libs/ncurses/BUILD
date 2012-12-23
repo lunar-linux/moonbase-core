@@ -12,6 +12,8 @@
 # system!
   unset CC CXX &&
 
+  OPTS+=" PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig" &&
+
   set -x &&
   ./configure  --build=$BUILD                            \
                --prefix=/usr                             \
@@ -23,6 +25,7 @@
                --disable-termcap                         \
                --enable-colorfgbg                        \
                --with-terminfo-dirs=/usr/share/terminfo  \
+               --enable-pc-files                         \
                $OPTS                                    &&
 
   default_make &&
@@ -49,6 +52,7 @@
                --enable-colorfgbg                        \
                --with-terminfo-dirs=/usr/share/terminfo  \
                --enable-widec                            \
+               --enable-pc-files                         \
                $OPTS                                    &&
 
   set +x &&
