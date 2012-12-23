@@ -1,15 +1,15 @@
            MODULE=dracut
-          VERSION=020
+          VERSION=024
            SOURCE=$MODULE-$VERSION.tar.xz
           SOURCE2=0077-i18n-module-setup.sh-do-not-install-systemd-vconsole.patch
        SOURCE_URL=http://www.kernel.org/pub/linux/utils/boot/dracut
       SOURCE2_URL=$PATCH_URL
  SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
-       SOURCE_VFY=sha1:6bbfdd36bb65bbb5343baca985a6a2043f8bffdd
+       SOURCE_VFY=sha1:82b195b6028e7d0b84108b1d6b7d7e6bbfb9d1fa
       SOURCE2_VFY=sha1:04a75b432e5efe50f77dc6b2b4f54961cb35640e
          WEB_SITE=https://dracut.wiki.kernel.org/index.php/Main_Page
           ENTERED=20120715
-          UPDATED=20120715
+          UPDATED=20121223
             SHORT="Initramfs generator using udev"
 COMPRESS_MANPAGES=off # If we compress them it will mess up an upgrade for this module due to symlinks
 
