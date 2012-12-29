@@ -1,17 +1,17 @@
           MODULE=iptables
-         VERSION=1.4.16.3
+         VERSION=1.4.17
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=ftp://ftp.netfilter.org/pub/$MODULE
-      SOURCE_VFY=sha1:819949fdf4276a04c5061b82898b515f139b0117
+      SOURCE_VFY=sha1:441cc487f1c92db17dbf496b4821246d032c84a8
         WEB_SITE=http://www.netfilter.org
          ENTERED=20010922
-         UPDATED=20121021
+         UPDATED=20121229
            SHORT="Tool to create netfilter rules"
            PSAFE=no
 
 cat << EOF
 iptables is built on top of netfilter: the new packet alteration
-framework for Linux 2.4. It is an enhancement on ipchains, and is used
+framework for Linux. It is an enhancement on ipchains, and is used
 to control packet filtering, Network Address Translation (masquerading,
 portforwarding, transparent proxying), and special effects.
 EOF
