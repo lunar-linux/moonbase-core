@@ -13,19 +13,19 @@
   sedit "/^sysconf_DATA/d" modules/pam_env/Makefile.am  &&
 
   libtoolize -f &&
-  AT_M4DIR="m4" autoreconf &&
+#  AT_M4DIR="m4" autoreconf &&
 
-  ./configure  --libdir=/lib                            \
-               --docdir=/usr/share/doc/Linux-PAM        \
-               --disable-prelude                        \
-               --disable-nis                            \
-               --mandir=/usr/share/man                  \
-               --enable-db=no                           \
-               --disable-selinux                        \
-               --disable-audit                          \
-               --enable-isadir=../../lib/security       \
-               --enable-nls                             \
-               $OPTS &&
+  ./configure  --libdir=/lib                       \
+               --docdir=/usr/share/doc/Linux-PAM   \
+               --disable-prelude                   \
+               --disable-nis                       \
+               --mandir=/usr/share/man             \
+               --enable-db=no                      \
+               --disable-selinux                   \
+               --disable-audit                     \
+               --enable-isadir=../../lib/security  \
+               --enable-nls                        \
+               $OPTS                              &&
 
   sedit  "s/examples//"  Makefile           &&
   sedit  "s/read yes//"  conf/install_conf  &&
