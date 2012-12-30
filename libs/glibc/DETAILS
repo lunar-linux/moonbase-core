@@ -1,12 +1,11 @@
           MODULE=glibc
-           MAJOR=2.16
-         VERSION=$MAJOR.0
+         VERSION=2.17
+           MAJOR=${VERSION::4}
           SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=$MODULE-2.11-no_timezones.patch.bz2
+         SOURCE2=$MODULE-2.17-no_timezones.patch
          SOURCE3=$MODULE-2.11.1-__i686.patch.bz2
          SOURCE4=$MODULE-2.15-fixes-1.patch.bz2
-         SOURCE5=$MODULE-2.15-fix-res_query-assert.patch
-         SOURCE6=$MODULE-2.15-revert-c5a0802a.patch
+         SOURCE5=$MODULE-2.15-math64crash.patch
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/glibc
@@ -14,16 +13,14 @@
      SOURCE3_URL=$PATCH_URL
      SOURCE4_URL=$PATCH_URL
      SOURCE5_URL=$PATCH_URL
-     SOURCE6_URL=$PATCH_URL
-      SOURCE_VFY=sha1:9d4fffc9c4ac93e7919e124fa38bb51dcaff5216
-     SOURCE2_VFY=sha1:fc5bf75815daeeef52f7558f27992e02c2cdc87d
+      SOURCE_VFY=sha1:e210daf1d5d6d6da7bf216fbaad4922bd642952b
+     SOURCE2_VFY=sha1:5b6d568ef5c6f4a03a6ce75e9e8397edefb70426
      SOURCE3_VFY=sha1:e3f36e2bb17e51e31035f2cd405d099c624d0e9e
      SOURCE4_VFY=sha1:7e53ec5daaf29d13ff3e9a9b2450da1f93000add
-     SOURCE5_VFY=sha1:fa4f4ce87a08f40d70f4d88d1ee62cf63b644bcc
-     SOURCE6_VFY=sha1:aad4d183fc2509e87f0986802117a45772cc0a0c
+     SOURCE5_VFY=sha1:cbf649a7cf3648a5c4ce93ebe4d68a61349f3036
         WEB_SITE=http://www.gnu.org/software/libc
          ENTERED=20010922
-         UPDATED=20120712
+         UPDATED=20121229
            SHORT="C library for use with GNU/Hurd and GNU/Linux"
            PSAFE=no
 
