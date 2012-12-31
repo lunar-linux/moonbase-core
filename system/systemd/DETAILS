@@ -1,11 +1,14 @@
           MODULE=systemd
          VERSION=196
           SOURCE=$MODULE-$VERSION.tar.xz
+         SOURCE2=$MODULE-$VERSION-lunar.patch
       SOURCE_URL=http://www.freedesktop.org/software/systemd
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha1:65f6844c2d2a5e6b7ed1f77bb9f457b04774c74f
+     SOURCE2_VFY=sha1:7b6438dfec9534d3203f99ff2d66c7030ec884a2
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20121121
+         UPDATED=20121231
            SHORT="A system and program management daemon"
 
 cat << EOF

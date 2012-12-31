@@ -1,6 +1,5 @@
 depends docbook-xsl
 depends kmod
-depends Linux-PAM
 depends dbus
 depends libcap
 depends usbutils
@@ -8,4 +7,8 @@ depends pciutils
 depends intltool
 depends gperf
 
+# The SOURCE2 patch changes configure.ac and Makefile.am
+depends automake
+
 optional_depends "cryptsetup" "--enable-libcryptsetup" "--disable-libcryptsetup" "for Device-mapper crypto encryption"
+optional_depends "Linux-PAM" "--with-pamlibdir=/lib/security" "--disable-pam"
