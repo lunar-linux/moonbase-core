@@ -1,6 +1,7 @@
 (
 
-  OPTS+=" --libexecdir=/usr/lib \
+  OPTS+=" --with-distro=other \
+          --libexecdir=/usr/lib \
           --enable-split-usr \
           --disable-tcpwrap"
 
@@ -18,7 +19,9 @@
   # the case in lunar, so we switch it to root.
   sedit "s:0775 root lock:0775 root root:" tmpfiles.d/legacy.conf &&
 
-  patch_it $SOURCE2 1 &&
+  # loadkeys and setfont are in /usr/bin
+  sedit 's:"/bin/loadkeys:"/usr/bin/loadkeys:' Makefile.am &&
+  sedit 's:"/bin/setfont:"/usr/bin/setfont:' Makefile.am &&
   autoreconf &&
 
   default_config &&
