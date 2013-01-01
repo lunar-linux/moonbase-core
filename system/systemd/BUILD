@@ -2,14 +2,8 @@
 
   OPTS+=" --with-distro=other \
           --libexecdir=/usr/lib \
-          --with-usb-ids-path=/usr/share/usb.ids \
-          --with-pci-ids-path=/usr/share/pci.ids \
           --enable-split-usr \
           --disable-tcpwrap"
-
-  if module_installed Linux-PAM; then
-    OPTS+=" --with-pamlibdir=/lib/security"
-  fi
 
   # a not existing hostname is set to lunar.
   [ -f /etc/hostname ] || install -m 0644 -o root -g root $SCRIPT_DIRECTORY/files/hostname /etc/hostname &&
@@ -24,6 +18,9 @@
   # installation is a group called "lock" this isn't
   # the case in lunar, so we switch it to root.
   sedit "s:0775 root lock:0775 root root:" tmpfiles.d/legacy.conf &&
+
+  # loadkeys and setfont are in /usr/bin
+  sedit 's:"/bin/loadkeys:"/usr/bin/loadkeys:;s:"/bin/setfont:"/usr/bin/setfont:' Makefile.am Makefile.in &&
 
   default_config &&
   make &&
