@@ -20,9 +20,7 @@
   sedit "s:0775 root lock:0775 root root:" tmpfiles.d/legacy.conf &&
 
   # loadkeys and setfont are in /usr/bin
-  sedit 's:"/bin/loadkeys:"/usr/bin/loadkeys:' Makefile.am &&
-  sedit 's:"/bin/setfont:"/usr/bin/setfont:' Makefile.am &&
-  autoreconf &&
+  sedit 's:"/bin/loadkeys:"/usr/bin/loadkeys:;s:"/bin/setfont:"/usr/bin/setfont:' Makefile.am Makefile.in &&
 
   default_config &&
   make &&
