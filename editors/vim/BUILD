@@ -1,5 +1,7 @@
 (
 
+  OPTS+=" --disable-perlinterp"
+
   cd src           &&
   default_config   &&
   make             &&
