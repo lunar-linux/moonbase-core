@@ -24,6 +24,7 @@
 
   # add empty iptables file for flushing
   if [ ! -f /etc/config.d/iptables-empty ]; then
+    [ ! -d /etc/config.d ] && mkdir -p /etc/config.d
     cp $SCRIPT_DIRECTORY/files/iptables-empty /etc/config.d/iptables-empty
   fi &&
   # little wrapper for systemd's usage
