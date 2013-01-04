@@ -5,16 +5,15 @@
       SOURCE_VFY=sha1:86b7eb11cfdaefb1d4e9bfc10620beaf8f09bc90
         WEB_SITE=http://www.gnu.org/software/inetutils
          ENTERED=20080429
-         UPDATED=20120113
+         UPDATED=20130104
            SHORT="A collection of common network programs"
 
 cat << EOF
 A collection of common network programs such as:
-ping
-ping6
 rsh
 rcp
 talk
 telnet
+hostname
 and some other ...
 EOF
