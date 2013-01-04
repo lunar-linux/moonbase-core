@@ -41,6 +41,9 @@
   patch_it $SOURCE38 0  &&
   patch_it $SOURCE39 0  &&
   patch_it $SOURCE40 0  &&
+  patch_it $SOURCE41 0  &&
+  patch_it $SOURCE42 0  &&
+  patch_it $SOURCE43 0  &&
 
   OPTS+=" --bindir=/bin                 \
           --enable-readline             \
