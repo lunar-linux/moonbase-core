@@ -1,0 +1,4 @@
+depends libcap
+depends openssl
+depends sysfsutils
+optional_depends  "docbook-utils"  ""  ""  "to install the man pages"

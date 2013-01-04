@@ -1,0 +1,27 @@
+          MODULE=iputils
+         VERSION=s20121221
+          SOURCE=$MODULE-$VERSION.tar.bz2
+         SOURCE2=$MODULE-s20121221-manpages.tar.bz2
+      SOURCE_URL=http://www.skbuff.net/iputils
+     SOURCE2_URL=$PATCH_URL
+        WEB_SITE=http://www.skbuff.net/iputils/
+      SOURCE_VFY=sha1:4d56d8c75d6a5d58f052e4056e975f01ebab9ba9
+     SOURCE2_VFY=sha1:e2ccc9bb6bd8dc02b2c5949cc5f1cb4f98a8e564
+         ENTERED=20021106
+         UPDATED=20130104
+           SHORT="Essential utilities for IP networks"
+PSAFE=no
+
+cat << EOF
+arping
+clockdiff
+ipg
+ping
+ping6
+rarpd
+rdisc
+tftpd
+tracepath
+tracepath6
+traceroute6
+EOF
