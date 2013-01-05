@@ -11,6 +11,7 @@ depends findutils
 depends grep
 depends gzip
 depends installwatch
+depends iproute2
 depends less
 depends rpmunpack
 depends tar
@@ -18,7 +19,6 @@ depends unzip
 depends wget
 depends util-linux
 depends patch
-depends net-tools
 depends diffstat
 depends xz
 depends sed
