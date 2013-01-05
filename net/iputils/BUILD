@@ -4,8 +4,7 @@
   tar xvf $SOURCE_CACHE/$SOURCE2 --strip-components=1 &&
   
   # Set $CFLAGS
-  sedit "s;^CCOPTOPT=;CCOPTOPT=$CFLAGS ;" Makefile &&
-  cat Makefile &&
+  sedit "s;^CCOPTOPT=.*;CCOPTOPT=$CFLAGS;" Makefile &&
 
   make  &&
   prepare_install  &&
