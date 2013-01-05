@@ -2,10 +2,13 @@
          VERSION=3.6.0
           SOURCE=$MODULE-$VERSION.tar.xz
          SOURCE2=$MODULE-fhs.patch.bz2
+         SOURCE3=$MODULE-3.6.0-fix_install_manpage_error.patch
       SOURCE_URL=http://www.kernel.org/pub/linux/utils/net/$MODULE
      SOURCE2_URL=$PATCH_URL
+     SOURCE3_URL=$PATCH_URL
       SOURCE_VFY=sha1:6fa16fd2158d0f289ef454cad46555ead1c33c2d
      SOURCE2_VFY=sha1:b39063237e7a2c68fcfb731fe5bf5b3177e1b2dc
+     SOURCE3_VFY=sha1:82d82d0023a4d67a25af2f3bf137caa28eeac119
         WEB_SITE=http://www.linuxfoundation.org/collaborate/workgroups/networking/$MODULE
          ENTERED=20021106
          UPDATED=20121017
