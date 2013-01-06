@@ -2,9 +2,15 @@
 
   # manpages is manually created and packed by lunar devs
   tar xvf $SOURCE_CACHE/$SOURCE2 --strip-components=1 &&
-  
+
   # Set $CFLAGS
   sedit "s;^CCOPTOPT=.*;CCOPTOPT=$CFLAGS;" Makefile &&
+
+  # Disable LASTTAG
+  sedit "s;^LASTTAG.*;;" Makefile &&
+
+  # Disable gnutls in ping6 and use openssl
+  sedit "/^USE_GNUTLS/s;yes;no;" Makefile &&
 
   make  &&
   prepare_install  &&
