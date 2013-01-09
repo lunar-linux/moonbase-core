@@ -1,9 +1,10 @@
 (
 
-  OPTS+=" --with-distro=other \
-          --libexecdir=/usr/lib \
+  OPTS+=" --libexecdir=/usr/lib \
           --enable-split-usr \
-          --disable-tcpwrap"
+          --disable-tcpwrap \
+          --with-kbd-loadkeys=/usr/bin/loadkeys \
+          --with-kbd-setfont=/usr/bin/setfont"
 
   # a not existing hostname is set to lunar.
   [ -f /etc/hostname ] || install -m 0644 -o root -g root $SCRIPT_DIRECTORY/files/hostname /etc/hostname &&
@@ -19,9 +20,6 @@
   # the case in lunar, so we switch it to root.
   sedit "s:0775 root lock:0775 root root:" tmpfiles.d/legacy.conf &&
 
-  # loadkeys and setfont are in /usr/bin
-  sedit 's:"/bin/loadkeys:"/usr/bin/loadkeys:;s:"/bin/setfont:"/usr/bin/setfont:' Makefile.am Makefile.in &&
-
   default_config &&
   make &&
   prepare_install &&
@@ -31,10 +29,13 @@
     lrm --upgrade udev
   fi &&
 
-  # systemd is no longer PSAFE during the make install phase due to install order of some libs (systemd-journal).
-  # Please check if this is fixed with the next release.
-  unset MAKES &&
   make install &&
+
+  # Disable new naming scheme
+  if [[ "$NEW_NAME_SCHEME" == "n" && ! -e /etc/udev/rules.d/80-net-name-slot.rules ]]; then
+    echo "Disabled the new network interface naming scheme" 
+    ln -sf /dev/null /etc/udev/rules.d/80-net-name-slot.rules
+  fi &&
 
   # Always install the legacy.conf file even if SysV compatibility isn't enabled
   install -m 0644 -o root -g root tmpfiles.d/legacy.conf /usr/lib/tmpfiles.d
