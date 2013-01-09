@@ -1,6 +1,9 @@
 # generate the machine id
 /usr/bin/systemd-machine-id-setup
 
+# Remove obsolete 70-persistent-net.rules
+[ -f /etc/udev/rules.d/70-persistent-net.rules ] && rm /etc/udev/rules.d/70-persistent-net.rules
+
 # systemd readyness checks
 if [ ! -f /etc/machine-id ]; then
   SYSTEMD_ERROR=1
