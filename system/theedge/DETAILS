@@ -1,12 +1,12 @@
           MODULE=theedge
-         VERSION=8
+         VERSION=9
           SOURCE=lunar-$VERSION.tar.bz2
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/lunar-$VERSION
       SOURCE_URL=http://lunar-linux.org/lunar/lunar/
-      SOURCE_VFY=sha1:19c92505792c93208e07873789103196fc8308c2
+      SOURCE_VFY=sha1:d2abf64cd18dae5e6b69c2860aed071e73ace4c5
         WEB_SITE=http://lunar-linux.org/
          ENTERED=20020218
-         UPDATED=20130106
+         UPDATED=20130110
    AUTORESURRECT=off
            SHORT="development version of lunar core tools from Lunar-Linux."
 cat << EOF
