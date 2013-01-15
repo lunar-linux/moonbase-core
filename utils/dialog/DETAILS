@@ -1,11 +1,11 @@
           MODULE=dialog
-         VERSION=1.1-20120706
+         VERSION=1.2-20121230
           SOURCE=$MODULE-$VERSION.tgz
       SOURCE_URL=ftp://invisible-island.net/$MODULE
-      SOURCE_VFY=sha1:fa033f0fb166da86e29d70e68159a92a9b9cdb84
+      SOURCE_VFY=sha1:f6ba16481e04c707c7cbfc3c3c1340040bdb0aa3
         WEB_SITE=http://invisible-island.net/dialog
          ENTERED=20010922
-         UPDATED=20120711
+         UPDATED=20130115
            SHORT="allows shell scripts to provide fancy text dialog with users"
 
 cat << EOF
