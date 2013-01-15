@@ -1,11 +1,11 @@
           MODULE=traceroute
-         VERSION=2.0.18
+         VERSION=2.0.19
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha1:6bdccfd12f93b89aea53728b3c365db5a4362b6d
+      SOURCE_VFY=sha1:44c109cfe4950f1617d0d796b432356b9acf4bd4
         WEB_SITE=ftp://ftp.ee.lbl.gov
          ENTERED=20010922
-         UPDATED=20120728
+         UPDATED=20130110
            SHORT="traces the route Internet packets travel"
 
 cat << EOF
