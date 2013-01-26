@@ -1,11 +1,11 @@
           MODULE=cracklib
-         VERSION=2.8.19
+         VERSION=2.8.22
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha1:29224f51db85e1946c209f6ef6c38da699a9c7cc
+      SOURCE_VFY=sha1:d91d977a1909e0cc3f5cb30754ba5e5e90655ab0
         WEB_SITE=http://sourceforge.net/projects/cracklib
          ENTERED=20020313
-         UPDATED=20120902
+         UPDATED=20130123
            SHORT="library which may be used in a passwd-like program"
 PSAFE=no
 cat << EOF
