@@ -1,13 +1,13 @@
           MODULE=pkgconfig
-         VERSION=0.27.1
+         VERSION=0.28
           SOURCE=pkg-config-$VERSION.tar.gz
       SOURCE_URL=http://pkgconfig.freedesktop.org/releases
-      SOURCE_VFY=sha1:08249417a51c0a7a940e4276105b142b77e576b5
+      SOURCE_VFY=sha1:71853779b12f958777bffcb8ca6d849b4d3bed46
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/pkg-config-$VERSION
         WEB_SITE=http://pkgconfig.freedesktop.org
          ENTERED=20010922
-         UPDATED=20120825
-           SHORT="A system for managing library compile/link flags that works with automake and autoconf"
+         UPDATED=20130201
+           SHORT="A system for managing library compile/link flags"
 
 cat << EOF
 pkg-config is a system for managing library compile/link flags that
@@ -15,8 +15,4 @@ works with automake and autoconf. It replaces the ubiquitous *-config
 scripts you may have seen with a single tool. There's nothing
 desktop-specific or desktop-related about pkg-config, despite it being
 on freedesktop.org.
-NOTE: as of > pkgconfig-0.18, pkgconfig was renamed to pkg-config. So
-rather than renaming this module all over moonbase, I decided to keep
-the module as named pkgconfig, and adjusted the SOURCE and
-SOURCE_DIRECTORY accordingly.
 EOF
