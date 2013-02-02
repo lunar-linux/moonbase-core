@@ -26,12 +26,7 @@
   patch_it $SOURCE2 1  &&
   patch_it $SOURCE3 1  &&
   patch_it $SOURCE4 1  &&
-  
-  # Fix res_query assertion
   patch_it $SOURCE5 1  &&
-  
-  # Fix various hangs
-  patch_it $SOURCE6 1  &&
 
   # disable final test
   sed -i '/test-installation.pl/d' Makefile  &&
