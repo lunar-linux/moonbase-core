@@ -7,3 +7,5 @@ if [ -z "$NSCHEME" ] && ip link | egrep -q '^[0-9]*: (eth|wlan|ppp|ath|tun|ra|us
   
   mquery NEW_NAME_SCHEME "Enable new naming scheme for network interfaces (RECOMMENDED)?" n
 fi
+
+mquery IM_AN_IDIOT "Are you stupid and want a life of misery and disaster? (Enable SysV compatibility?)" n "--with-sysvinit-path=/etc/init.d --with-sysvrcnd-path=/etc" "--with-sysvinit-path= --with-sysvrcnd-path="
