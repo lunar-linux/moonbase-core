@@ -1,14 +1,11 @@
           MODULE=groff
-         VERSION=1.22.1
+         VERSION=1.22.2
           SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=groff-1.22-create_pdf_dir.patch
       SOURCE_URL=$GNU_URL/$MODULE
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:94e2e020343e1b7aa212bf490c74bef9550807ca
-     SOURCE2_VFY=sha1:d904ebaa5a882df0a91a733193e50384c6e38ac6
+      SOURCE_VFY=sha1:37223941e25bb504bf54631daaabb01b147dc1d3
         WEB_SITE=http://www.gnu.org/software/groff/groff.html
          ENTERED=20010922
-         UPDATED=20121230
+         UPDATED=20130208
            SHORT="A device-independent document processor/formatter"
 PSAFE=no
 

@@ -3,9 +3,6 @@
   # Fix typo
   sedit "s:tob_builddir:top_builddir:1" Makefile.comm  &&
 
-  # Properly install if psutils is missing
-  patch_it $SOURCE2 1 &&
-
   default_build  &&
   cd /usr/bin    &&
   if [ ! -e geqn ] ; then
