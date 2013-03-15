@@ -1,7 +1,5 @@
 (
 
-  patch_it $SOURCE2 1 &&
-
   # save tables
   if module_installed iptables ; then
     iptables-save -c > /etc/config.d/iptables.sav
