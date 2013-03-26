@@ -2,4 +2,5 @@ depends libmpc
 depends binutils
 
 optional_depends "cloog-ppl"  "--enable-cloog-backend=ppl" "" "for Graphite Optimizer"
+optional_depends "ppl"        "" "--without-ppl" "if you enabled cloog-ppl say y"
 optional_depends "libelf"     "" "" "for ELF object file access library support"
