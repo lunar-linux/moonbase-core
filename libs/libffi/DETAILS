@@ -1,12 +1,12 @@
           MODULE=libffi
-         VERSION=3.0.12
+         VERSION=3.0.13
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=ftp://sources.redhat.com/pub/$MODULE
    SOURCE_URL[1]=ftp://sourceware.org/pub/$MODULE
-      SOURCE_VFY=sha1:463dcb4ae9aea4c52bba12b67fbe4d91ed1e21fd
+      SOURCE_VFY=sha1:f5230890dc0be42fb5c58fbf793da253155de106
         WEB_SITE=http://sourceware.org/libffi
          ENTERED=20091102
-         UPDATED=20130315
+         UPDATED=20130325
            SHORT="A high level programming interface library"
 
 cat << EOF
