@@ -4,5 +4,5 @@ if ! module_installed $MODULE; then
            "the first time then all installed or held pam aware"  \
            "MODULEs should be re-lin for them to use Linux-PAM"   \
            "to authenticate.${DEFAULT_COLOR}"
-  mquery RElin_PAM_AWARE "Re-lin all Linux-PAM aware MODULEs?" y
+  mquery RElin_PAM_AWARE "Re-lin all Linux-PAM aware MODULEs?" ${ASK_FOR_REBUILDS:-y}
 fi
