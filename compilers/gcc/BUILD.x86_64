@@ -45,6 +45,9 @@
 
   if [ ! -e /usr/bin/cc ] ; then
   ln -s gcc /usr/bin/cc
-  fi
+  fi  &&
+
+# remove the offending freetype broken link
+  rm -f $MODULE_PREFIX/lib/gcc/$BUILD/$VERSION/include-fixed/freetype
 
 ) > $C_FIFO 2>&1
