@@ -1,16 +1,16 @@
 #
-# gcc-4.7.x compiler optimizations plugin
+# gcc-4.8.x compiler optimizations plugin
 #
 
-plugin_compiler_gcc_4_7_optimize()
+plugin_compiler_gcc_4_8_optimize()
 {
-  if [ "${LUNAR_COMPILER:-GCC_4_7}" != "GCC_4_7" ]; then
+  if [ "${LUNAR_COMPILER:-GCC_4_8}" != "GCC_4_8" ]; then
     return 2
   fi
 
-  debug_msg "plugin_compiler_gcc_4_7_optimize($@)"
-  if [ -f /etc/lunar/local/optimizations.GCC_4_7 ]; then
-    . /etc/lunar/local/optimizations.GCC_4_7
+  debug_msg "plugin_compiler_gcc_4_8_optimize($@)"
+  if [ -f /etc/lunar/local/optimizations.GCC_4_8 ]; then
+    . /etc/lunar/local/optimizations.GCC_4_8
   fi
 
   # some local macro's
@@ -49,7 +49,7 @@ plugin_compiler_gcc_4_7_optimize()
   if [ "$CPU" != "None" -a -n "$CPU" ]; then
     c_cxx_flags_add "-march=$CPU"
   fi
-  # CFLAGS -mtune cpu-specific tuning 
+  # CFLAGS -mtune cpu-specific tuning
   if [ "$CPUTUNE" != "None" -a -n "$CPUTUNE" ]; then
     c_cxx_flags_add "-mtune=$CPUTUNE"
   fi
@@ -159,17 +159,17 @@ plugin_compiler_gcc_4_7_optimize()
 }
 
 
-plugin_compiler_gcc_4_7_menu()
+plugin_compiler_gcc_4_8_menu()
 {
   # The main code calls this function WITHOUT $1 to find out which
   # compiler optimization plugins exist. It then returns the plugin
   # identifier which can be saved in $LUNAR_COMPILER as the user's
   # choice for COMPILERS
   if [ -z "$1" ]; then
-    echo "GCC_4_7"
-    echo "GNU C Compiler suite version 4.7.x"
+    echo "GCC_4_8"
+    echo "GNU C Compiler suite version 4.8.x"
     return 2
-  elif [ "$1" != "GCC_4_7" ]; then
+  elif [ "$1" != "GCC_4_8" ]; then
     # we don't display anything when the user selected a
     # different menu
     return 2
@@ -177,8 +177,8 @@ plugin_compiler_gcc_4_7_menu()
 
   # now we are done with determining if we are really the menu
   # that the user wants - so we can display it
-  menu() 
-  { 
+  menu()
+  {
     unset RESULT
     if [ "$1" == "checklist" ]; then
       RESULT=`$DIALOG --no-cancel --item-help --separate-output --checklist "$2" 0 0 0 "${OPTIONS[@]}"`
@@ -198,7 +198,7 @@ plugin_compiler_gcc_4_7_menu()
   save_optimizations()
   {
     debug_msg "save_optimizations($@)"
-    cat >/etc/lunar/local/optimizations.GCC_4_7  <<EOF
+    cat >/etc/lunar/local/optimizations.GCC_4_8  <<EOF
 CPU=$CPU
 CPUTUNE=$CPUTUNE
 BOPT=$BOPT
@@ -210,8 +210,8 @@ STACK=$STACK
 EOF
   }
 
-  if [ -f /etc/lunar/local/optimizations.GCC_4_7 ]; then
-    . /etc/lunar/local/optimizations.GCC_4_7
+  if [ -f /etc/lunar/local/optimizations.GCC_4_8 ]; then
+    . /etc/lunar/local/optimizations.GCC_4_8
   fi
 
   export IFS=$'\t\n'
@@ -221,7 +221,7 @@ EOF
 
   while true; do
     unset OPTIONS
-    IS_DEFAULT=$([ "$(get_local_config LUNAR_COMPILER)" == "GCC_4_7" ] && echo DEFAULT || get_local_config LUNAR_COMPILER)
+    IS_DEFAULT=$([ "$(get_local_config LUNAR_COMPILER)" == "GCC_4_8" ] && echo DEFAULT || get_local_config LUNAR_COMPILER)
     DEFAULT=${CHOICE:-safe}
     CHOICE=`$DIALOG --title "$TITLE" --ok-label "Select" --cancel-label "Close" --default-item "$DEFAULT" --item-help --menu "" 0 0 0 $(
       echo "default"
@@ -270,11 +270,11 @@ EOF
         return
       fi
 
-      case $CHOICE in 
+      case $CHOICE in
         default)
           if [ "$IS_DEFAULT" != "DEFAULT" ]; then
-            set_local_config LUNAR_COMPILER GCC_4_7
-            $DIALOG --msgbox "Gcc 4.7 is now the default compiler!" 6 60
+            set_local_config LUNAR_COMPILER GCC_4_8
+            $DIALOG --msgbox "Gcc 4.8 is now the default compiler!" 6 60
           fi
           ;;
         safe)
@@ -496,7 +496,7 @@ EOF
           OPTIONS=(
             "None" "Use compiler default" $([ "$FPM" == "None" ] && echo "on" || echo "off" ) "Use compiler default"
             )
-          case $PLATFORM in 
+          case $PLATFORM in
             x86|x86_64)
               if grep '^fpu' /proc/cpuinfo | grep -qw yes; then
                 OPTIONS=(
@@ -549,7 +549,7 @@ EOF
               fi
               if grep -qw sse /proc/cpuinfo; then
                 OPTIONS=(
-                  ${OPTIONS[@]} 
+                  ${OPTIONS[@]}
                   "SSE" "SSE" $( echo ${XTRA[@]} | grep -q "SSE" && echo "on" || echo "off" ) "Streaming SIMD (Single Instruction, Multiple Data) Extensions"
                   )
               fi
@@ -665,6 +665,5 @@ EOF
 }
 
 
-plugin_register BUILD_BUILD plugin_compiler_gcc_4_7_optimize
-plugin_register OPTIMIZE_MENU plugin_compiler_gcc_4_7_menu
-
+plugin_register BUILD_BUILD plugin_compiler_gcc_4_8_optimize
+plugin_register OPTIMIZE_MENU plugin_compiler_gcc_4_8_menu
