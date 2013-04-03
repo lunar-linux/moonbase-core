@@ -1,6 +1,7 @@
 (
 
   patch_it $SOURCE_CACHE/$SOURCE2 1  &&
+  patch_it $SOURCE_CACHE/$SOURCE3 1  &&
 
   # This will fix an issue where installwatch fail to track installed headers
   sedit 's;^\(build_install_headers_dir=\).*;\1install-headers-cp;' gcc/config.build &&
