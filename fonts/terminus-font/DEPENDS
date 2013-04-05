@@ -1,2 +1,2 @@
 depends perl
-depends fontconfig
+optional_depends "bdftopcf" "" "PCF=" "For X11 fonts"
