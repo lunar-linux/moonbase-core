@@ -1,11 +1,11 @@
           MODULE=systemd
-         VERSION=200
+         VERSION=201
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://www.freedesktop.org/software/systemd
-      SOURCE_VFY=sha1:114f6dcc5405a2706fe82d55aba46d57467ebd46
+      SOURCE_VFY=sha1:c6996ee93a39b32a9e71d2938e569e2a48e2695c
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20130330
+         UPDATED=20130409
            SHORT="A system and program management daemon"
 PSAFE=no
 
