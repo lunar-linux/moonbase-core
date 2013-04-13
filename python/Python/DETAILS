@@ -1,15 +1,12 @@
           MODULE=Python
            MAJOR=2.7
-         VERSION=$MAJOR.3
+         VERSION=$MAJOR.4
           SOURCE=$MODULE-$VERSION.tar.bz2
-         SOURCE2=$MODULE-compileall.patch.bz2
       SOURCE_URL=http://www.python.org/ftp/python/$VERSION
-      SOURCE_VFY=sha1:842c4e2aff3f016feea3c6e992c7fa96e49c9aa0
-     SOURCE2_URL=$PATCH_URL
-     SOURCE2_VFY=sha1:9aae8e93899aabc64bbd7f2921ed23f44ec8e6c4
+      SOURCE_VFY=sha1:deb8609d8e356b3388f33b6a4d6526911994e5b1
         WEB_SITE=http://www.python.org
          ENTERED=20010922
-         UPDATED=20120415
+         UPDATED=20130413
            PSAFE=no
            SHORT="Interpreted, interactive, object-oriented programming language"
 
