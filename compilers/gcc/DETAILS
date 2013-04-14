@@ -1,19 +1,16 @@
           MODULE=gcc
-         VERSION=4.7.2
+         VERSION=4.7.3
           SOURCE=$MODULE-$VERSION.tar.bz2
          SOURCE2=$MODULE-4.5.0-python.patch.bz2
-         SOURCE3=$MODULE-4.7.2-texinfo.patch
    SOURCE_URL[0]=$GNU_URL/gcc/$MODULE-$VERSION
    SOURCE_URL[1]=ftp://gcc.gnu.org/pub/gcc/releases/gcc-$VERSION
    SOURCE_URL[2]=http://www.online-mirror.org/gcc/$MODULE-$VERSION
      SOURCE2_URL=$PATCH_URL
-     SOURCE3_URL=$PATCH_URL
-      SOURCE_VFY=sha1:a464ba0f26eef24c29bcd1e7489421117fb9ee35
+      SOURCE_VFY=sha1:69e02737bd6e1a7c6047d801600d39c32b9427ca
      SOURCE2_VFY=sha1:7c1fc0b526b74cce301b85acee04011ed6e5aa5a
-     SOURCE3_VFY=sha1:259413ea042192e2f43e8cc9902119c15c1e088f
         WEB_SITE=http://gcc.gnu.org
          ENTERED=20020628
-         UPDATED=20120920
+         UPDATED=20130414
            SHORT="GNU compiler collection"
 
 cat << EOF
