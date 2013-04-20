@@ -159,6 +159,25 @@ _lunar_lvu()
 }
 complete -F _lunar_lvu lvu
 
+_lunar_comp_modules()
+{
+  local cur
+  cur=${COMP_WORDS[COMP_CWORD]}
+  _lunar_modules_list
+  return 0
+}
+
+alias lwtf="lvu what"
+complete -F _lunar_comp_modules lwtf
+
+function lcd(){
+  [[ -z "$1" || "$1" = "." ]] &&
+    cd "$(lsh 'echo $MOONBASE')" ||
+    cd "$(lsh "echo \$MOONBASE/\$(find_section $1)/$1")"
+  return 0
+}
+complete -F _lunar_comp_modules lcd
+
 _lunar_lin()
 {
   local cur
