@@ -221,7 +221,7 @@ EOF
 
   while true; do
     unset OPTIONS
-    IS_DEFAULT=$([ `get_local_config LUNAR_COMPILER` == "GCC_4_7" ] && echo DEFAULT || get_local_config LUNAR_COMPILER)
+    IS_DEFAULT=$([ "$(get_local_config LUNAR_COMPILER)" == "GCC_4_7" ] && echo DEFAULT || get_local_config LUNAR_COMPILER)
     DEFAULT=${CHOICE:-safe}
     CHOICE=`$DIALOG --title "$TITLE" --ok-label "Select" --cancel-label "Close" --default-item "$DEFAULT" --item-help --menu "" 0 0 0 $(
       echo "default"

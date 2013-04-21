@@ -58,7 +58,7 @@ EOF
     if [ $? != 0 ]; then
       break
     else
-      if [ $USE_CCACHE == 'yes' ]; then
+      if [ "$USE_CCACHE" == 'yes' ]; then
         USE_CCACHE=no
       else
         USE_CCACHE=yes
