@@ -40,6 +40,11 @@ plugin_kernel_updatebootloader_lilo() {
           # rename the image too since the module moved it to .old
           IMAGE="image = /boot/vmlinuz-$1-$ARCH.old"
         fi
+        SINITRD=$(echo $INITRD | tr -d '[:blank:]' | sed 's/initrd=//')
+        if [ "$SIMAGE" == "/boot/initramfs-$1-$ARCH" ]; then
+          # rename the image too since the module moved it to .old
+          INITRD="   initrd = /boot/initramfs-$1-$ARCH.old.img"
+        fi
       elif [ "$SLABEL" == "$2.old" ]; then
         # delete this one!
         return
@@ -47,6 +52,9 @@ plugin_kernel_updatebootloader_lilo() {
       echo "$IMAGE"
     fi
     echo "$LABEL"
+    if [ -n "$INITRD" ] ; then
+      echo "$INITRD"
+    fi
     for OPTIONS in "${OPTIONS[@]}" ; do
       echo "$OPTIONS"
     done
@@ -63,12 +71,15 @@ plugin_kernel_updatebootloader_lilo() {
     # we didn't have this label yet - insert it rightaway
     echo "image = /boot/vmlinuz-$1-$ARCH"
     echo "    label = $2"
+    if [ -f "/boot/initramfs-$1-$ARCH.img" ] ; then
+      echo "    initrd = /boot/initramfs-$1-$ARCH.img"
+    fi
     if [ -z "$READONLY" ]; then
       echo "    read-only"
     fi
 
     (( IMAGE_COUNT=0 ))
-    unset IMAGE OTHER LABEL OPTIONS
+    unset IMAGE OTHER LABEL OPTIONS INITRD
     # list old images
     while read LINE ; do
       if echo $LINE | grep -qw "image\|other" ; then
@@ -81,7 +92,7 @@ plugin_kernel_updatebootloader_lilo() {
 
         # output and reset
         output_image $1 $2
-        unset IMAGE OTHER LABEL OPTIONS
+        unset IMAGE OTHER LABEL OPTIONS INITRD
       fi
 
       # store the lines
@@ -94,6 +105,9 @@ plugin_kernel_updatebootloader_lilo() {
           ;;
         label=*)
           LABEL="$LINE"
+          ;;
+        initrd=*)
+          INITRD="$LINE"
           ;;
         *)
           OPTIONS=( "${OPTIONS[@]}" "$LINE" )
