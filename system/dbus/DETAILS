@@ -1,14 +1,14 @@
           MODULE=dbus
-         VERSION=1.6.8
+         VERSION=1.6.10
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=dbus-fix-sba-for-dbus-activation.patch.gz
       SOURCE_URL=http://$MODULE.freedesktop.org/releases/$MODULE
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:d9634807d1de9b64727ae2178e3af2227fca0fca
+      SOURCE_VFY=sha1:d27641d6162965ab6267ff7abb45138148ea549a
      SOURCE2_VFY=sha1:2ed74dbd2eccba415a337f01aa0a60999d379b04
         WEB_SITE=http://dbus.freedesktop.org
          ENTERED=20031219
-         UPDATED=20120929
+         UPDATED=20130428
            SHORT="A message bus system for applications"
 LUNAR_RESTART_SERVICES=off
 
