@@ -1,11 +1,11 @@
            MODULE=ed
-         VERSION=1.7
+         VERSION=1.8
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$GNU_URL/$MODULE
-     SOURCE_VFY=sha1:c14633332ff7b339878cbef0d09aab0e7298c5c6
+     SOURCE_VFY=sha1:e0a8edd4ed750ae67164b8bef7a30a051fe902ea
         WEB_SITE=http://www.gnu.org/software/ed/ed.html
          ENTERED=20010922
-         UPDATED=20121125
+         UPDATED=20130428
            SHORT="A line-oriented text editor"
 
 cat << EOF
