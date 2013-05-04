@@ -45,6 +45,8 @@
                --without-gd               \
                --without-cvs              \
                --enable-shared            \
+               --host=$BUILD              \
+               --build=$BUILD             \
                --enable-obsolete-rpc      \
                --disable-multi-arch       \
                --enable-bind-now          \
