@@ -1,0 +1,28 @@
+#!/bin/bash
+#############################################################
+#                                                           #
+# bootloader-grub2.plugin - plugin that generate grub.cfg   #
+#                                                           #
+#############################################################
+#                                                           #
+# Copyright 2013 by Peter de Ridder under GPLv2             #
+#                                                           #
+#############################################################
+
+
+plugin_kernel_updatebootloader_grub2()
+{
+  # preferred? - master switch for experienced users
+  if [ -n "$BOOTLOADER" -a "$BOOTLOADER" != "grub2" ]; then
+    return 2
+  fi
+  debug_msg "plugin_kernel_updatebootloader_grub2 ($@)"
+
+  grub-mkconfig -o /boot/grub/grub.cfg
+
+  # right now we want to have it run all bootloaders?
+  return 2
+}
+
+
+plugin_register KERNEL_UPDATEBOOTLOADER plugin_kernel_updatebootloader_grub2

@@ -94,6 +94,10 @@ plugin_kernel_updatebootloader_grub()
     debug_msg "kernel  $GRUB_BOOT/$1 $CMDLINE"
     echo   "title   $2"
     echo   "kernel  $GRUB_BOOT/$1 $CMDLINE"
+    if [ -f "$GRUB_BOOT/$3" ] ; then
+      debug_msg "initrd  $GRUB_BOOT/$3"
+      echo "initrd  $GRUB_BOOT/$3"
+    fi
     echo   ""
   }
 
@@ -107,10 +111,10 @@ plugin_kernel_updatebootloader_grub()
   {
     local ARCH=$(arch)
     if ! has_grub_title "$2" /boot/grub/menu.lst ; then
-      print_grub_image "vmlinuz-$1-$ARCH" "$2" >> /boot/grub/menu.lst.new
+      print_grub_image "vmlinuz-$1-$ARCH" "$2" "initramfs-$1-$ARCH.img" >> /boot/grub/menu.lst.new
     fi
     if [ -f /boot/vmlinuz-$1-$ARCH.old ] && ! has_grub_title "$2.old" /boot/grub/menu.lst ; then
-      print_grub_image "vmlinuz-$1-$ARCH.old" "$2.old" >> /boot/grub/menu.lst.new
+      print_grub_image "vmlinuz-$1-$ARCH.old" "$2.old" "initramfs-$1-$ARCH.old.img" >> /boot/grub/menu.lst.new
     fi
   }
 
