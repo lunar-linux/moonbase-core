@@ -16,7 +16,7 @@ plugin_kernel_updatebootloader_dracut()
 
   debug_msg "plugin_kernel_updatebootloader_dracut ($@)"
 
-  KVERSION=`echo $1 | cut -d- -f1`
+  KVERSION="$1-$(arch)"
 
   # create an old copy of the previous initramfs
   if [ -f "/boot/initramfs-$KVERSION.img" ]; then
@@ -24,7 +24,7 @@ plugin_kernel_updatebootloader_dracut()
   fi
 
   # we can force dracut as we copied the old initramfs
-  dracut -f "/boot/initramfs-$KVERSION.img" "$KVERSION"
+  dracut -f "/boot/initramfs-$KVERSION.img" "$1"
 
   # right now we want to have it run all bootloaders?
   return 2
