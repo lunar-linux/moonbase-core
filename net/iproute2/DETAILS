@@ -1,17 +1,14 @@
           MODULE=iproute2
-         VERSION=3.8.0
+         VERSION=3.9.0
           SOURCE=$MODULE-$VERSION.tar.xz
          SOURCE2=$MODULE-fhs.patch.bz2
-         SOURCE3=$MODULE-no-iptables.patch
       SOURCE_URL=http://www.kernel.org/pub/linux/utils/net/$MODULE
      SOURCE2_URL=$PATCH_URL
-     SOURCE3_URL=$PATCH_URL
-      SOURCE_VFY=sha1:6d40dd2b91aad9ae084c99973dcdfdbf6fb353fc
+      SOURCE_VFY=sha1:3f48a6d3019f1766f26cda6c4de5d3858837d92b
      SOURCE2_VFY=sha1:b39063237e7a2c68fcfb731fe5bf5b3177e1b2dc
-     SOURCE3_VFY=sha1:2ceac0fad93166ab2c4070b78c6d563c9808fa93
         WEB_SITE=http://www.linuxfoundation.org/collaborate/workgroups/networking/$MODULE
          ENTERED=20021106
-         UPDATED=20130323
+         UPDATED=20130505
            SHORT="Professional tools to control networking in Linux kernels"
 
 cat << EOF
