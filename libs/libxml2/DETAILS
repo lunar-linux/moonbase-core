@@ -1,14 +1,14 @@
           MODULE=libxml2
-         VERSION=2.8.0
+         VERSION=2.9.1
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=$MODULE-largefile64.patch
       SOURCE_URL=ftp://xmlsoft.org/$MODULE
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:a0c553bd51ba79ab6fff26dc700004c6a41f5250
+      SOURCE_VFY=sha1:eb3e2146c6d68aea5c2a4422ed76fe196f933c21
      SOURCE2_VFY=sha1:53c9fbb1b6cc6ec313bcc49a82a23c2a5ad06760
         WEB_SITE=http://xmlsoft.org
          ENTERED=20010922
-         UPDATED=20120526
+         UPDATED=20130510
            SHORT="XML version 2 parser for Gnome"
 
 cat << EOF
