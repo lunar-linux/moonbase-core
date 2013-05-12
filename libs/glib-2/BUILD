@@ -1,23 +1,19 @@
-(
+# Do not remove --enable-debug=minimum, it will break some common
+# API functions if debug is entirely disabled
+export OPTS+=" --disable-static --enable-shared --enable-debug=minimum --disable-fam"  &&
 
-  # Do not remove --enable-debug=minimum, it will break some common
-  # API functions if debug is entirely disabled
-  export OPTS+=" --disable-static --enable-shared --enable-debug=minimum --disable-fam"  &&
+# Disable docs (require Python and gdbus-codegen), we can enable
+# this later if necessary by introducing a glib-2-docs module
+sedit "s;^\(.*\SUBDIRS .*\=.*\)docs\(.*\)$;\1\2;" Makefile.in &&
+sedit "s;^\(.*\SUBDIRS .*\=.*\)docs\(.*\)$;\1\2;" Makefile.am &&
 
-  # Disable docs (require Python and gdbus-codegen), we can enable
-  # this later if necessary by introducing a glib-2-docs module
-  sedit "s;^\(.*\SUBDIRS .*\=.*\)docs\(.*\)$;\1\2;" Makefile.in
-  sedit "s;^\(.*\SUBDIRS .*\=.*\)docs\(.*\)$;\1\2;" Makefile.am
-
-  # Don't build tests
-  for i in $(find . -name Makefile.in -o -name Makefile.am); do
-    sedit "s;^\(.*\SUBDIRS .*\=.*\)tests\(.*\)$;\1\2;" $i
-  done
+# Don't build tests
+for i in $(find . -name Makefile.in -o -name Makefile.am); do
+  sedit "s;^\(.*\SUBDIRS .*\=.*\)tests\(.*\)$;\1\2;" $i
+done &&
   
-  # This patch splits out gdbus-codegen which is a separate module now
-  patch_it $SOURCE2 1 &&
+# This patch splits out gdbus-codegen which is a separate module now
+patch_it $SOURCE2 1 &&
 
-  AT_M4DIR=. autoreconf && 
-  default_build
-
-) > $C_FIFO 2>&1
+AT_M4DIR=. autoreconf &&
+default_build
