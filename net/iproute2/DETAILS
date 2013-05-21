@@ -8,7 +8,7 @@
      SOURCE2_VFY=sha1:b39063237e7a2c68fcfb731fe5bf5b3177e1b2dc
         WEB_SITE=http://www.linuxfoundation.org/collaborate/workgroups/networking/$MODULE
          ENTERED=20021106
-         UPDATED=20130505
+         UPDATED=20130518
            SHORT="Professional tools to control networking in Linux kernels"
 
 cat << EOF
