@@ -8,4 +8,4 @@ depends gperf
 
 optional_depends "cryptsetup" "--enable-libcryptsetup" "--disable-libcryptsetup" "for Device-mapper crypto encryption"
 optional_depends "Linux-PAM" "--with-pamlibdir=/lib/security" "--disable-pam" "for PAM support"
-optional_depends "docbook-xsl" "--enable-manpages" "--disable-manpages" "for manpages"
+optional_depends "docbook-xml" "--enable-manpages" "--disable-manpages" "for manpages"
