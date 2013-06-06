@@ -4,6 +4,8 @@
 
 plugin_gnu_ld_optimize()
 {
+  # default optimizations
+  LDF=( Strip )
 
   if [ -f /etc/lunar/local/optimizations.GNU_LD ]; then
     . /etc/lunar/local/optimizations.GNU_LD
