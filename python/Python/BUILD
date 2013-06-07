@@ -12,10 +12,10 @@
 
   default_build &&
 
-  install -d /usr/lib/python$MAJOR                        &&
+  install -d /usr/lib/python${VERSION%.*}                 &&
   install -m755 $SOURCE_DIRECTORY/Tools/i18n/msgfmt.py     \
                 $SOURCE_DIRECTORY/Tools/i18n/pygettext.py  \
-                /usr/lib/python$MAJOR/                    &&
+                /usr/lib/python${VERSION%.*}              &&
 
   # Docs
   mv Misc/{cheatsheet,NEWS} .  &&
