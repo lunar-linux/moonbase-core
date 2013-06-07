@@ -8,6 +8,10 @@ plugin_compiler_gcc_4_8_optimize()
     return 2
   fi
 
+  # default optimizations
+  BOPT=Fast
+  CC_OPTS=( Pipe Fortify )
+
   debug_msg "plugin_compiler_gcc_4_8_optimize($@)"
   if [ -f /etc/lunar/local/optimizations.GCC_4_8 ]; then
     . /etc/lunar/local/optimizations.GCC_4_8
