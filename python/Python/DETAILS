@@ -1,12 +1,11 @@
           MODULE=Python
-           MAJOR=2.7
-         VERSION=$MAJOR.4
+         VERSION=2.7.5
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=http://www.python.org/ftp/python/$VERSION
-      SOURCE_VFY=sha1:deb8609d8e356b3388f33b6a4d6526911994e5b1
+      SOURCE_VFY=sha1:6cfada1a739544a6fa7f2601b500fba02229656b
         WEB_SITE=http://www.python.org
          ENTERED=20010922
-         UPDATED=20130413
+         UPDATED=20130607
            PSAFE=no
            SHORT="Interpreted, interactive, object-oriented programming language"
 
