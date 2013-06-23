@@ -1,12 +1,11 @@
           MODULE=libusb-compat
-           MAJOR=0.1
-         VERSION=$MAJOR.4
+         VERSION=0.1.5
           SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=$SFORGE_URL/libusb/$MODULE-$MAJOR/$MODULE-$VERSION
-      SOURCE_VFY=sha1:fdc1df6f5cf7b71de7a74292aeea1aa2a39552ae
+      SOURCE_URL=$SFORGE_URL/libusb/$MODULE-${VERSION%.*}/$MODULE-$VERSION
+      SOURCE_VFY=sha1:062319276d913c753a4b1341036e6a2e42abccc9
         WEB_SITE=http://www.libusb.org/wiki/LibusbCompat0.1
          ENTERED=20090812
-         UPDATED=20120507
+         UPDATED=20130623
            SHORT="A compatibility layer for the old libusb"
 
 cat << EOF
