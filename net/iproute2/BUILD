@@ -9,6 +9,10 @@ if ! in_depends $MODULE db; then
 fi &&
 
 ./configure &&
+
+# do not treat warnings as errors
+sed -i 's/-Werror//' Makefile  &&
+
 KERNEL_INCLUDE=/usr/include/ make &&
 prepare_install &&
 make install
