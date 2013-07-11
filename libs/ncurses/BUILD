@@ -57,6 +57,7 @@
 
   set +x &&
   default_make &&
+  ln -sf /usr/include/ncursesw /usr/include/ncurses  &&
   gather_docs ANNOUNCE TODO
 
 ) > $C_FIFO 2>&1
