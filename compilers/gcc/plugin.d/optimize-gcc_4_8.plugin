@@ -129,7 +129,7 @@ plugin_compiler_gcc_4_8_optimize()
         c_cxx_flags_add "-pipe"
         ;;
       Fortify)
-        c_cxx_flags_add "-D_FORTIFY_SOURCE=2"
+        cppflags_add "-D_FORTIFY_SOURCE=2"
         ;;
       StackProt)
         c_cxx_flags_add "-fstack-protector"
