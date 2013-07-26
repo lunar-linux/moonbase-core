@@ -1,11 +1,5 @@
-(
+MAKE_OPTS="PREFIX=/usr MANDIR=/usr/man"   &&
 
-  sedit "s/-O2 -fomit-frame-pointer/ /" Makefile &&
-
-  MAKE_OPTS="PREFIX=/usr MANDIR=/usr/man"   &&
-
-  make  $MAKE_OPTS  &&
-  prepare_install   &&
-  make  $MAKE_OPTS  install
-
-) > $C_FIFO 2>&1
+make  $MAKE_OPTS  &&
+prepare_install   &&
+make  $MAKE_OPTS  install
