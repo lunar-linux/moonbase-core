@@ -1,6 +1,4 @@
-(
-
-  OPTS+=" --disable-perlinterp"
+  OPTS+=" --disable-perlinterp --disable-luainterp" &&
 
   cd src           &&
   default_config   &&
@@ -11,5 +9,3 @@
   make install                        &&
   ln  -sf  /usr/bin/vim  /usr/bin/vi  &&
   cp -f $SCRIPT_DIRECTORY/vimrc /usr/share/vim/vim${MAJOR}/sample.vimrc
-
-) > $C_FIFO 2>&1
