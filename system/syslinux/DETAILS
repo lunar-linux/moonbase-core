@@ -1,12 +1,12 @@
           MODULE=syslinux
-         VERSION=4.06
+         VERSION=4.07
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$KERNEL_URL/pub/linux/utils/boot/$MODULE
    SOURCE_URL[1]=ftp://ftp.kernel.org/pub/linux/utils/boot/$MODULE
-      SOURCE_VFY=sha1:829b325c384c9b9a26da8d13a46d7bb65cec7901
+      SOURCE_VFY=sha1:8e425b9f0b2d01530350f9304184271067dd3202
         WEB_SITE=http://syslinux.zytor.com
          ENTERED=20010922
-         UPDATED=20121026
+         UPDATED=20130729
       MAINTAINER=tchan@lunar-linux.org
            PSAFE=no
            SHORT="bootloader for Linux that works on FAT and ISO9660 filesystems"
