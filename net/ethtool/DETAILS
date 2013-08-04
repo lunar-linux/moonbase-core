@@ -1,11 +1,11 @@
           MODULE=ethtool
-         VERSION=3.9
+         VERSION=3.10
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$KERNEL_URL/pub/software/network/$MODULE
-      SOURCE_VFY=sha1:9e306742339953d3d3d52eb0a6ba5f947968834d
+      SOURCE_VFY=sha1:50afe27a18f1ab77e25d35af0c4c1cc5af1ef643
         WEB_SITE=http://www.kernel.org/pub/software/network/ethtool
          ENTERED=20031026
-         UPDATED=20130524
+         UPDATED=20130731
            SHORT="Ethernet diagnostic and tuning tool"
 
 cat << EOF
