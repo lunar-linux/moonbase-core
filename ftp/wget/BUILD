@@ -1,5 +1,3 @@
-(
-
   # get the alias
   SSL=`unalias %SSL` &&
 
@@ -27,5 +25,3 @@
               $OPTS                     &&
 
    default_make
-
-) > $C_FIFO 2>&1

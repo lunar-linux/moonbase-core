@@ -1,0 +1,3 @@
+default_pre_build &&
+
+sedit 's@=item $thing@=item ${thing}".($thing =~ /[0-9]+/ ? "Z<>" : "")."@' doc/texi2pod.pl
