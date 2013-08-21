@@ -3,6 +3,8 @@
   # make sure the luser has the source for this one!
   download_module wget  &&
 
+  patch_it $SOURCE3 1  &&
+
 # Enable MD2 (for nmap)
   sedit "s/ -DOPENSSL_NO_MD2//" Configure      &&
   sedit 's/"md2"/"rc5"/'        Configure      &&
