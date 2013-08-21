@@ -649,10 +649,10 @@ EOF
             "Deprecated" "-Wno-deprecated for C++" $( echo ${CC_OPTS[@]} | grep -qw "Deprecated" && echo "on" || echo "off" ) "Disable warnings of deprecated symbols in C++"
             "Debug" "-g" $( echo ${CC_OPTS[@]} | grep -qw "Debug" && echo "on" || echo "off" ) "Add debug symbols"
             "Pipe" "-pipe (RECOMMENDED)" $( echo ${CC_OPTS[@]} | grep -qw "Pipe" && echo "on" || echo "off" ) "Enable cc to use named pipes."
+            "Fortify" "-D_FORTIFY_SOURCE=2" $( echo ${CC_OPTS[@]} | grep -qw "Fortify" && echo "on" || echo "off" ) "Gcc Stack protector checking"
             )
           if [ "$SAFE_OPTIMIZATIONS" == "off" ]; then
           OPTIONS+=(
-            "Fortify" "-D_FORTIFY_SOURCE=2" $( echo ${CC_OPTS[@]} | grep -qw "Fortify" && echo "on" || echo "off" ) "Gcc Stack protector checking"
             "StackProt" "-fstack-protector" $( echo ${CC_OPTS[@]} | grep -qw "StackProt" && echo "on" || echo "off" ) "Gcc Stack protector checking (UNSAFE)"
             )
           fi
