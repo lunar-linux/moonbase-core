@@ -1,0 +1,3 @@
+default_pre_build &&
+
+sedit '/^#\s*warning \+_FORTIFY_SOURCE requires compiling with optimization/d' include/features.h
