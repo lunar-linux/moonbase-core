@@ -1,0 +1,3 @@
+default_pre_build &&
+
+sedit 's@^#\s*warning \+_FORTIFY_SOURCE requires compiling with optimization.*$@/* Disabled by lunar as there is no better solution: \0*/@' include/features.h
