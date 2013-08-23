@@ -1,0 +1,4 @@
+default_pre_build &&
+
+sedit "s:CLOOG_VERSION_MINOR != 16:CLOOG_VERSION_MINOR < 16:" configure &&
+sedit "s:CLOOG_VERSION_REVISION < 1:(CLOOG_VERSION_MINOR == 16 \&\& \0):" configure
