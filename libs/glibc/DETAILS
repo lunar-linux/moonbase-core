@@ -23,7 +23,7 @@
      SOURCE6_VFY=sha1:05cbd8de46c215db66b644e643f2be96a43eedc0
         WEB_SITE=http://www.gnu.org/software/libc
          ENTERED=20010922
-         UPDATED=20130323
+         UPDATED=20130821
            SHORT="C library for use with GNU/Hurd and GNU/Linux"
            PSAFE=no
 
