@@ -1,6 +1,3 @@
-(
-
-  patch_it $SOURCE2 1 &&
   sedit 's:dash:bash:' Makefile &&
 
   default_build &&
@@ -15,5 +12,3 @@
   cp -R $SCRIPT_DIRECTORY/dracut.d/90lunar-live /usr/lib/dracut/modules.d/ &&
 
   gather_docs HACKING TODO AUTHORS
-
-) > $C_FIFO 2>&1
