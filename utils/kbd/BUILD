@@ -1,7 +1,5 @@
 (
 
-  patch_it $SOURCE2 1  &&
-
   # rename keymap files with the same names
   # this is needed because when only name of keymap is specified
   # loadkeys loads the first keymap it can find, which is bad
