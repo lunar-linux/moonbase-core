@@ -1,0 +1,13 @@
+          MODULE=fhs
+         VERSION=2.3
+        WEB_SITE=http://refspecs.linuxfoundation.org/fhs.shtml
+         ENTERED=20130829
+         UPDATED=20130829
+           SHORT="Filesystem Hierarchy Standard"
+
+cat << EOF
+This package contains the directories specified by the Filesystem
+Hierarchy Standard.
+
+Directories required by systemd are also added.
+EOF
