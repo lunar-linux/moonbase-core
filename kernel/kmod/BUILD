@@ -6,7 +6,7 @@
 
   ./configure  --prefix=      \
                --libdir=/lib  \
-               --datadir=/usr/share \
+               --datarootdir=/usr/share \
                --includedir=/usr/include \
                $OPTS  &&
 
