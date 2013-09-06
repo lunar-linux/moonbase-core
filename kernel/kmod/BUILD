@@ -4,7 +4,8 @@
 
   OPTS+=" --with-zlib"  &&
 
-  ./configure  --prefix=      \
+  ./configure  --prefix=/usr  \
+               --bindir=/bin  \
                --libdir=/lib  \
                --mandir=/usr/share/man \
                --includedir=/usr/include \
