@@ -1,0 +1,30 @@
+#!/bin/bash
+######################################################################
+#                                                                    #
+# postbuild-depmod.plugin - postbuild update kernel module           #
+#                           dependency files                         #
+#                                                                    #
+######################################################################
+#                                                                    #
+# Copyright 2013 by Stefan Wold <ratler@lunar-linux.org> under GPLv2 #
+#                                                                    #
+######################################################################
+
+
+plugin_depmod_post_build()
+{
+  debug_msg "plugin_depmod_post_build ($@)"
+
+  # Find installed kernel modules and then run depmod
+  if parse_iw | grep -q "^/lib/modules/.*/"; then
+    while read kversion; do
+      debug_msg "Running depmod for kernel $kversion"
+      depmod -a $kversion
+    done < <(parse_iw | grep "^/lib/modules/.*/" | awk -F/ '{ print $4 }' | sort | uniq)
+  fi
+  
+  # We always return 2, fail or success
+  return 2
+}
+
+plugin_register BUILD_POST_BUILD plugin_depmod_post_build
