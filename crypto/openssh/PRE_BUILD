@@ -1,0 +1,4 @@
+default_pre_build &&
+
+# Don't generate host keys during BUILD. They should not be tracked
+sedit '/^install:/s/ host-key / /' Makefile.in
