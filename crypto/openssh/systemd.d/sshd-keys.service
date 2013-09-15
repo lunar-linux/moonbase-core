@@ -2,6 +2,7 @@
 Description=Create sshd host keys (one time service only)
 ConditionPathExists=|!/etc/ssh/ssh_host_rsa_key
 ConditionPathExists=|!/etc/ssh/ssh_host_dsa_key
+Before=sshd.service
 
 [Service]
 Type=oneshot
