@@ -1,12 +1,12 @@
           MODULE=mdadm
-         VERSION=3.2.6
+         VERSION=3.3
           SOURCE=$MODULE-$VERSION.tar.bz2
    SOURCE_URL[0]=$KERNEL_URL/pub/linux/utils/raid/mdadm
    SOURCE_URL[1]=http://www.cse.unsw.edu.au/~neilb/source/mdadm
-      SOURCE_VFY=sha1:3fd2c0d199f10dc81e9b8937d7da7c680da0971b
+      SOURCE_VFY=sha1:a8ef5da88d2b228c6792a838c1a890aa8530fe3c
         WEB_SITE=http://www.cse.unsw.edu.au/~neilb/source/mdadm
          ENTERED=20030212
-         UPDATED=20121026
+         UPDATED=20130907
            SHORT="Software raid tools"
 
 cat << EOF
