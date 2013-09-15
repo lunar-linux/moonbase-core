@@ -3,12 +3,6 @@
   # don't allow root login by default
   sedit 's/#PermitRootLogin yes/PermitRootLogin no/' sshd_config  &&
 
-  if ! [ -d /var/empty ]; then
-    mkdir -p /var/empty
-    chown root:sys /var/empty
-    chmod 755 /var/empty
-  fi  &&
-
   add_priv_user sshd:sshd  &&
 
 #  if echo $OPTS | grep -q -- "--with-kerberos5="; then
@@ -23,6 +17,11 @@
   if [ ! -f /etc/ssh/Makefile ] ; then
     install -m644 $SCRIPT_DIRECTORY/Makefile /etc/ssh/Makefile
   fi  &&
+
+  # create /var/empty
+  mkdir -p /var/empty  &&
+  chown root:sys /var/empty  &&
+  chmod 755 /var/empty  &&
 
   # install ssh-copy-id script and man page
   install -Dm755 {contrib,/usr/bin}/ssh-copy-id  &&
