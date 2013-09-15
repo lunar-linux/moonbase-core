@@ -27,7 +27,7 @@ plugin_systemd_configure()
       # don't ask for '@' services - these should always be installed but
       # never linked directly. Also ask for new or renamed services.
       if echo $SERVICE | grep -q @ || echo $SYSTEMD_SERVICES | egrep -q "(^| )-?$SERVICE( |$)"; then
-	if systemctl -q is-enabled $SERVICE  ; then
+	if systemctl -q is-enabled $SERVICE &> /dev/null ; then
 	  SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?($SERVICE)( |$);\1\2\3;")
 	else
 	  SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?($SERVICE)( |$);\1-\2\3;")
@@ -41,8 +41,8 @@ plugin_systemd_configure()
       else
         SYSTEMD_SERVICES+=" -$SERVICE"
         # ignore output here - this is likely to hit "not found" errors
-        systemctl disable $SERVICE > /dev/null 2>&1
-        systemctl stop $SERVICE > /dev/null 2>&1
+        systemctl disable $SERVICE &> /dev/null
+        systemctl stop $SERVICE &> /dev/null
       fi
     done
     cd $SCRIPT_DIRECTORY
@@ -91,13 +91,13 @@ plugin_systemd_post_build()
     devoke_installwatch
   fi
 
-  systemctl daemon-reload > /dev/null 2>&1
+  systemctl daemon-reload &> /dev/null
 
   for SERVICE in $SYSTEMD_SERVICES; do
     if echo $SERVICE | grep -q ^-; then
       continue;
     fi
-    systemctl disable $SERVICE
+    systemctl disable $SERVICE &> /dev/null
     invoke_installwatch
     systemctl enable $SERVICE
     devoke_installwatch
