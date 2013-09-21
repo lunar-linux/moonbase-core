@@ -71,10 +71,10 @@ plugin_systemd_configure()
 }
 
 
-plugin_systemd_post_build()
+plugin_systemd_post_install()
 {
   local SERVICES SERVICE SYSTEMDUNITDIR
-  debug_msg "plugin_systemd_post_build ($@)"
+  debug_msg "plugin_systemd_post_install ($@)"
 
   local SYSTEMDUNITDIR=$(pkg-config systemd --variable=systemdsystemunitdir)
 
@@ -97,9 +97,9 @@ plugin_systemd_post_build()
     if echo $SERVICE | grep -q ^-; then
       continue;
     fi
-    systemctl disable $SERVICE &> /dev/null
+    systemctl -q disable $SERVICE
     invoke_installwatch
-    systemctl enable $SERVICE
+    systemctl -q enable $SERVICE
     devoke_installwatch
 
     # start-or-restart it
@@ -119,13 +119,14 @@ plugin_systemd_tmpfilesd_post_build() {
   SYSTEMDTEMPFILES=$(pkg-config systemd --variable=prefix)/lib/tmpfiles.d
 
   if [ -d $SCRIPT_DIRECTORY/tmpfiles.d ]; then
-    invoke_installwatch
     verbose_msg "handling systemd tmpfiles.d files"
 
     for FILE in $SCRIPT_DIRECTORY/tmpfiles.d/*; do
+      invoke_installwatch
       /usr/bin/install -g 0 -o 0 -m 0644 $FILE $SYSTEMDTEMPFILES/
+      devoke_installwatch
+      systemd-tmpfiles --create $FILE
     done
-    devoke_installwatch
   fi
 
   return 2
@@ -147,6 +148,6 @@ plugin_systemd_disable_services_pre_remove() {
 }
 
 plugin_register BUILD_CONFIGURE plugin_systemd_configure
-plugin_register BUILD_POST_BUILD plugin_systemd_post_build
+plugin_register BUILD_POST_INSTALL plugin_systemd_post_install
 plugin_register BUILD_POST_BUILD plugin_systemd_tmpfilesd_post_build
 plugin_register BUILD_PRE_REMOVE plugin_systemd_disable_services_pre_remove
