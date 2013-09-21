@@ -27,11 +27,11 @@ plugin_systemd_configure()
       # don't ask for '@' services - these should always be installed but
       # never linked directly. Also ask for new or renamed services.
       if echo $SERVICE | grep -q @ || echo $SYSTEMD_SERVICES | egrep -q "(^| )-?$SERVICE( |$)"; then
-	if systemctl -q is-enabled $SERVICE &> /dev/null ; then
-	  SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?($SERVICE)( |$);\1\2\3;")
-	else
-	  SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?($SERVICE)( |$);\1-\2\3;")
-	fi
+	      if systemctl -q is-enabled $SERVICE &> /dev/null ; then
+	        SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?($SERVICE)( |$);\1\2\3;")
+	      else
+	        SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?($SERVICE)( |$);\1-\2\3;")
+	      fi
         continue
       fi
       message "${MESSAGE_COLOR}$SERVICE: $(grep Description= $SERVICE | cut -d= -f2-)${DEFAULT_COLOR}"
