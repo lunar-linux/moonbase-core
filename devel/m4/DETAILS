@@ -1,11 +1,11 @@
           MODULE=m4
-         VERSION=1.4.16
+         VERSION=1.4.17
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$GNU_URL/$MODULE
-      SOURCE_VFY=sha1:0390c77780ab4cd65b07fe4e2d23e4e39769f967
+      SOURCE_VFY=sha1:2c35fe4fb95585a58f08532518eca42e87cabce5
         WEB_SITE=http://www.gnu.org/software/m4
          ENTERED=20010922
-         UPDATED=20110303
+         UPDATED=20130923
            SHORT="GNU m4 macro processor"
 
 cat << EOF
