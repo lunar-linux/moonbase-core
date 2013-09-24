@@ -1,15 +1,16 @@
           MODULE=lvm2
-         VERSION=2.02.100
+         VERSION=2.02.102
           SOURCE=LVM2.$VERSION.tgz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/LVM2.$VERSION
    SOURCE_URL[0]=ftp://sources.redhat.com/pub/lvm2
    SOURCE_URL[1]=ftp://sources.redhat.com/pub/lvm2/old
-      SOURCE_VFY=sha1:95a4478e4a19bba2c6eb8c36b08b310a96e3944b
+      SOURCE_VFY=sha1:814ff785c447373dc5bad6352088eb7aaccf29ac
         WEB_SITE=http://sources.redhat.com/lvm2
          ENTERED=20040511
-         UPDATED=20130815
+         UPDATED=20130924
            SHORT="Logical volume manager"
 PSAFE=no
+LUNAR_RESTART_SERVICES=off
 
 cat << EOF
 The Logical Volume Manager (LVM) is a subsystem for online disk storage
