@@ -71,7 +71,7 @@ plugin_systemd_configure()
 }
 
 
-plugin_systemd_post_install()
+plugin_systemd_post_build()
 {
   local SERVICES SERVICE SYSTEMDUNITDIR
   debug_msg "plugin_systemd_post_install ($@)"
@@ -101,16 +101,27 @@ plugin_systemd_post_install()
     invoke_installwatch
     systemctl -q enable $SERVICE
     devoke_installwatch
-
-    # start-or-restart it
-    if [ "${LUNAR_RESTART_SERVICES:=on}" == "on" ]; then
-      systemctl restart $SERVICE
-    fi
-
   done
+
   return 2
 }
 
+plugin_systemd_restart_services() {
+  local SERVICE
+  debug_msg "plugin_systemd_restart_services ($@)"
+
+  # start-or-restart it
+  for SERVICE in $SYSTEMD_SERVICES; do
+    if echo $SERVICE | grep -q ^-; then
+      continue;
+    fi
+    if [ "${LUNAR_RESTART_SERVICES:=on}" == "on" ]; then
+      systemctl restart $SERVICE
+    fi
+  done
+
+  return 2
+}
 
 plugin_systemd_tmpfilesd_post_build() {
   local FILE SYSTEMDTEMPFILES
@@ -148,6 +159,7 @@ plugin_systemd_disable_services_pre_remove() {
 }
 
 plugin_register BUILD_CONFIGURE plugin_systemd_configure
-plugin_register BUILD_POST_INSTALL plugin_systemd_post_install
+plugin_register BUILD_POST_BUILD plugin_systemd_post_build
 plugin_register BUILD_POST_BUILD plugin_systemd_tmpfilesd_post_build
+plugin_register BUILD_POST_INSTALL plugin_systemd_restart_services
 plugin_register BUILD_PRE_REMOVE plugin_systemd_disable_services_pre_remove
