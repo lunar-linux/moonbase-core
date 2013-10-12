@@ -73,7 +73,7 @@ plugin_systemd_configure()
 
 plugin_systemd_post_build()
 {
-  local SERVICES SERVICE SYSTEMDUNITDIR
+  local SERVICES SERVICE SYSTEMDUNITDIR TOUCHME
   debug_msg "plugin_systemd_post_install ($@)"
 
   local SYSTEMDUNITDIR=$(pkg-config systemd --variable=systemdsystemunitdir)
