@@ -5,7 +5,7 @@
       SOURCE_VFY=sha1:e1a4e213d5d1e3498bca851347f2f07fdb9b4e1f
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20131002
+         UPDATED=20131012
            SHORT="A system and program management daemon"
 PSAFE=no
 
