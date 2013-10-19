@@ -1,11 +1,11 @@
           MODULE=dosfstools
-         VERSION=3.0.22
+         VERSION=3.0.23
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://www.daniel-baumann.ch/files/software/$MODULE
         WEB_SITE=http://www.daniel-baumann.ch/software/$MODULE
-      SOURCE_VFY=sha1:be4ece96b8d5d8a248dee1644d8585c86f0354fa
+      SOURCE_VFY=sha1:277b0c39bbf1e7696ef60d34a22113e7f9c619f6
          ENTERED=20011217
-         UPDATED=20130725
+         UPDATED=20131019
       MAINTAINER=sofar@lunar-linux.org
            SHORT="Utilities to create and check MS-DOS filesystems under Linux"
 
