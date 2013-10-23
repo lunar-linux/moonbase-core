@@ -1,4 +1,4 @@
-OPTS+=" --enable-agetty --disable-kill --disable-su \
+OPTS+=" --enable-agetty --disable-kill --disable-su --disable-nologin \
         --disable-last --disable-mesg --enable-partx --enable-raw \
         --enable-rename --disable-reset --disable-login --disable-sulogin \
         --enable-schedutils --disable-wall --enable-write --enable-fsck"  &&

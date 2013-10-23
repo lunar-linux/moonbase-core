@@ -6,7 +6,7 @@
         WEB_SITE=http://freecode.com/projects/util-linux
       SOURCE_VFY=sha1:258bc5b6c82f0d997ff464ccf2eb16f2d32d7e79
          ENTERED=20010922
-         UPDATED=20131022
+         UPDATED=20131023
            SHORT="Essential utilities for any Linux box"
 
 cat << EOF
