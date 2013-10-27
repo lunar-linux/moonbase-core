@@ -73,7 +73,7 @@ plugin_systemd_configure()
 
 plugin_systemd_post_build()
 {
-  local SERVICES SERVICE SYSTEMDUNITDIR
+  local SERVICES SERVICE SYSTEMDUNITDIR TOUCHME
   debug_msg "plugin_systemd_post_install ($@)"
 
   local SYSTEMDUNITDIR=$(pkg-config systemd --variable=systemdsystemunitdir)
@@ -99,7 +99,13 @@ plugin_systemd_post_build()
     fi
     systemctl -q disable $SERVICE
     invoke_installwatch
-    systemctl -q enable $SERVICE
+
+    # Necessary to track enabled services with installwatch
+    # due to how systemctl creates symlinks
+    TOUCHME=$(systemctl enable $SERVICE 2>&1 | cut -d\' -f4)
+    if [ -n "$TOUCHME" ]; then
+      touch -h $TOUCHME
+    fi
     devoke_installwatch
   done
 
