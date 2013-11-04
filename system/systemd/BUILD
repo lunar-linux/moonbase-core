@@ -8,13 +8,19 @@ OPTS+=" --libexecdir=/usr/lib \
 add_priv_group systemd-journal &&
 
 # a not existing hostname is set to lunar.
-[ -f /etc/hostname ] || install -m 0644 -o root -g root $SCRIPT_DIRECTORY/files/hostname /etc/hostname &&
+if [[ ! -f /etc/hostname ]]; then
+   install -m 0644 -o root -g root $SCRIPT_DIRECTORY/files/hostname /etc/hostname
+fi &&
 
 # vconsole.conf defaults to us-layout
-[ -f /etc/vconsole.conf ] || install -m 0644 -o root -g root $SCRIPT_DIRECTORY/files/vconsole.conf /etc/vconsole.conf &&
+if [[ ! -f /etc/vconsole.conf ]]; then
+   install -m 0644 -o root -g root $SCRIPT_DIRECTORY/files/vconsole.conf /etc/vconsole.conf
+fi &&
 
 # last but not least the locale settings, defaulting to US
-[ -f /etc/locale.conf ] || install -m 0644 -o root -g root $SCRIPT_DIRECTORY/files/locale.conf /etc/locale.conf &&
+if [[ ! -f /etc/locale.conf ]]; then
+   install -m 0644 -o root -g root $SCRIPT_DIRECTORY/files/locale.conf /etc/locale.conf
+fi &&
 
 # systemd guys wrongly assume that on every linux
 # installation is a group called "lock" this isn't
