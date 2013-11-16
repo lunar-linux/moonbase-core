@@ -29,7 +29,6 @@
   patch_it $SOURCE3 1  &&
   patch_it $SOURCE4 1  &&
   patch_it $SOURCE5 1  &&
-  patch_it $SOURCE6 1  &&
 
   # disable final test
   sed -i '/test-installation.pl/d' Makefile  &&
@@ -126,6 +125,13 @@
 
   # Remove the temporary libc
   rm /lib/{ld,lib{c,dl,m,rt,pthread,nss_files,util,nsl,crypt}}-lunar.so  &&
+
+  # Install nscd and gai related files
+  install -dm755 /usr/lib/{systemd/system,tmpfiles.d}  &&
+  install -m644 $SOURCE_DIRECTORY/nscd/nscd.conf /etc/nscd.conf  &&
+  install -m644 $SOURCE_DIRECTORY/posix/gai.conf /etc/gai.conf   &&
+  install -m644 $SCRIPT_DIRECTORY/nscd.service /usr/lib/systemd/system  &&
+  install -m644 $SCRIPT_DIRECTORY/nscd.tmpfiles /usr/lib/tmpfiles.d/nscd.conf  &&
 
   # Generate locale info
   if [ -z "$GLIBC_LOCALES" ]; then
