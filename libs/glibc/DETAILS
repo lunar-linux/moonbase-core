@@ -6,6 +6,14 @@
          SOURCE3=$MODULE-2.11.1-__i686.patch.bz2
          SOURCE4=$MODULE-2.15-fixes-1.patch.bz2
          SOURCE5=$MODULE-2.15-math64crash.patch
+         SOURCE6=glibc-2.18-readdir_r-CVE-2013-4237.patch
+         SOURCE7=glibc-2.18-malloc-corrupt-CVE-2013-4332.patch
+         SOURCE8=glibc-2.18-strcoll-CVE-2012-4412+4424.patch
+         SOURCE9=glibc-2.18-ptr-mangle-CVE-2013-4788.patch
+        SOURCE10=glibc-2.18-getaddrinfo-CVE-2013-4458.patch
+        SOURCE11=glibc-2.18-getaddrinfo-assertion.patch
+        SOURCE12=glibc-2.18-scanf-parse-0e-0.patch
+        SOURCE13=glibc-2.18-strstr-hackfix.patch
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/glibc
@@ -14,16 +22,31 @@
      SOURCE4_URL=$PATCH_URL
      SOURCE5_URL=$PATCH_URL
      SOURCE6_URL=$PATCH_URL
+     SOURCE7_URL=$PATCH_URL
+     SOURCE8_URL=$PATCH_URL
+     SOURCE9_URL=$PATCH_URL
+    SOURCE10_URL=$PATCH_URL
+    SOURCE11_URL=$PATCH_URL
+    SOURCE12_URL=$PATCH_URL
+    SOURCE12_URL=$PATCH_URL
       SOURCE_VFY=sha1:1f0e4e7ba5fe1f45ffd0548b6c36caef0bc7e51f
      SOURCE2_VFY=sha1:86c3b8d2424a27e05937b50fb545b250834b69a9
      SOURCE3_VFY=sha1:e3f36e2bb17e51e31035f2cd405d099c624d0e9e
      SOURCE4_VFY=sha1:7e53ec5daaf29d13ff3e9a9b2450da1f93000add
      SOURCE5_VFY=sha1:cbf649a7cf3648a5c4ce93ebe4d68a61349f3036
+     SOURCE6_VFY=sha1:7ecd9abb03495a620f0e4a2d45a6046310649fde
+     SOURCE7_VFY=sha1:d3dd647f2f292c44f31311ea3cf9e39db7ba798e
+     SOURCE8_VFY=sha1:04f38fe8508e2541c9d946a9d788c60f160c1cc0
+     SOURCE9_VFY=sha1:f0117b071f5f24c2522231aa9452342bea0d0c3f
+    SOURCE10_VFY=sha1:7c02334013be3cd41f242e8d65b27996d4df5f19
+    SOURCE11_VFY=sha1:ca210fa5c7751af73899f73d4cfbc901af4f70d8
+    SOURCE12_VFY=sha1:20ae27fd59e942442ef02f0624d9c30d568a0fde
+    SOURCE13_VFY=sha1:f928cedf0fb3d2bf046975680c637d6b09ad93cf
         WEB_SITE=http://www.gnu.org/software/libc
          ENTERED=20010922
-         UPDATED=20130813
+         UPDATED=20131116
            SHORT="C library for use with GNU/Hurd and GNU/Linux"
-           PSAFE=no
+PSAFE=no
 
 cat << EOF
 glibc - Library for use with GNU/Hurd and GNU/Linux.

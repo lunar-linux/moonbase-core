@@ -1,3 +1,4 @@
+
   # The fortify compiler option cause the build to fail
   bad_flags -D_FORTIFY_SOURCE=2  &&
 
@@ -8,7 +9,7 @@
   KVER=`installed_version kernel-headers`  &&
 
   # There is no other option but nptl
-  OPTS+=" --enable-add-ons=nptl,libidn --with-__thread --with-tls --disable-profile --enable-kernel=$KVER"  &&
+  OPTS+=" --enable-add-ons=nptl,libidn --with-__thread --with-tls --disable-profile --enable-kernel=$KVER --with-headers=/usr/include"  &&
 
   if [ -n "$MAKES" ] && [ "$MAKES" -gt 1 ] ; then
     sedit "s/# PARALLELMFLAGS = -j 4/PARALLELMFLAGS = -j $MAKES/" Makefile.in
@@ -22,19 +23,9 @@
   fi  &&
   unset LDFLAGS  &&
 
-  patch_it $SOURCE2 1  &&
-  patch_it $SOURCE3 1  &&
-  patch_it $SOURCE4 1  &&
-  patch_it $SOURCE5 1  &&
-
-  # disable final test
-  sed -i '/test-installation.pl/d' Makefile  &&
-
   INSTALL_ROOT=$SOURCE_DIRECTORY/glibcroot  &&
   mkdir -p $INSTALL_ROOT  &&
   cd $INSTALL_ROOT  &&
-
-  OPTS+=" --with-headers=/usr/include"  &&
 
   ../configure --prefix=/usr              \
                --infodir=/usr/share/info  \
@@ -136,12 +127,12 @@
   # Remove the temporary libc
   rm /lib/{ld,lib{c,dl,m,rt,pthread,nss_files,util,nsl,crypt}}-lunar.so  &&
 
-  # Install nscd and gai related files
-  install -dm755 /usr/lib/{systemd/system,tmpfiles.d}  &&
-  install -m644 $SOURCE_DIRECTORY/nscd/nscd.conf /etc/nscd.conf  &&
-  install -m644 $SOURCE_DIRECTORY/posix/gai.conf /etc/gai.conf   &&
-  install -m644 $SCRIPT_DIRECTORY/nscd.service /usr/lib/systemd/system  &&
-  install -m644 $SCRIPT_DIRECTORY/nscd.tmpfiles /usr/lib/tmpfiles.d/nscd.conf  &&
+  if [ ! -e /etc/nscd.conf ]; then
+    install -m644 $SOURCE_DIRECTORY/nscd/nscd.conf /etc/nscd.conf
+  fi &&
+  if [ ! -e /etc/gai.conf ]; then
+    install -m644 $SOURCE_DIRECTORY/posix/gai.conf /etc/gai.conf
+  fi &&
 
   # Generate locale info
   if [ -z "$GLIBC_LOCALES" ]; then
