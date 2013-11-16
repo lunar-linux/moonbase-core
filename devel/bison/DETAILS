@@ -7,7 +7,7 @@
       SOURCE_VFY=sha1:2cfd8dd1df58ffa0cec6e0ca717284f698a2111a
          ENTERED=20010922
          UPDATED=20131114
-          SHORT="A replacement for the parser generator yacc"
+           SHORT="A replacement for the parser generator yacc"
 
 cat << EOF
 bison - Replacement for the parser generator yacc
