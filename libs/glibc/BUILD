@@ -41,9 +41,7 @@
                --enable-bind-now          \
                --enable-stackguard-randomization \
                $OPTS  &&
-
-  # explicitly exit here since the following code unsets $?
-  make || exit 1  &&
+  make &&
 
   # Preserve the old glibc temporarily
   LD=/lib/ld-linux.so.2         &&
@@ -136,7 +134,7 @@
 
   # Generate locale info
   if [ -z "$GLIBC_LOCALES" ]; then
-    make localedata/install-locales || exit 1
+    make localedata/install-locales
   else
     devoke_installwatch  &&
     for LOCALE in $GLIBC_LOCALES; do
