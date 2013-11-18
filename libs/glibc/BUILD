@@ -1,3 +1,4 @@
+
   # The fortify compiler option cause the build to fail
   bad_flags -D_FORTIFY_SOURCE=2  &&
 
@@ -8,7 +9,7 @@
   KVER=`installed_version kernel-headers`  &&
 
   # There is no other option but nptl
-  OPTS+=" --enable-add-ons=nptl,libidn --with-__thread --with-tls --disable-profile --enable-kernel=$KVER"  &&
+  OPTS+=" --enable-add-ons=nptl,libidn --with-__thread --with-tls --disable-profile --enable-kernel=$KVER --with-headers=/usr/include"  &&
 
   if [ -n "$MAKES" ] && [ "$MAKES" -gt 1 ] ; then
     sedit "s/# PARALLELMFLAGS = -j 4/PARALLELMFLAGS = -j $MAKES/" Makefile.in
@@ -22,20 +23,9 @@
   fi  &&
   unset LDFLAGS  &&
 
-  patch_it $SOURCE2 1  &&
-  patch_it $SOURCE3 1  &&
-  patch_it $SOURCE4 1  &&
-  patch_it $SOURCE5 1  &&
-  patch_it $SOURCE6 1  &&
-
-  # disable final test
-  sed -i '/test-installation.pl/d' Makefile  &&
-
   INSTALL_ROOT=$SOURCE_DIRECTORY/glibcroot  &&
   mkdir -p $INSTALL_ROOT  &&
   cd $INSTALL_ROOT  &&
-
-  OPTS+=" --with-headers=/usr/include"  &&
 
   ../configure --prefix=/usr              \
                --infodir=/usr/share/info  \
@@ -51,9 +41,7 @@
                --enable-bind-now          \
                --enable-stackguard-randomization \
                $OPTS  &&
-
-  # explicitly exit here since the following code unsets $?
-  make || exit 1  &&
+  make &&
 
   # Preserve the old glibc temporarily
   LD=/lib/ld-linux.so.2         &&
@@ -137,9 +125,16 @@
   # Remove the temporary libc
   rm /lib/{ld,lib{c,dl,m,rt,pthread,nss_files,util,nsl,crypt}}-lunar.so  &&
 
+  if [ ! -e /etc/nscd.conf ]; then
+    install -m644 $SOURCE_DIRECTORY/nscd/nscd.conf /etc/nscd.conf
+  fi &&
+  if [ ! -e /etc/gai.conf ]; then
+    install -m644 $SOURCE_DIRECTORY/posix/gai.conf /etc/gai.conf
+  fi &&
+
   # Generate locale info
   if [ -z "$GLIBC_LOCALES" ]; then
-    make localedata/install-locales || exit 1
+    make localedata/install-locales
   else
     devoke_installwatch  &&
     for LOCALE in $GLIBC_LOCALES; do
@@ -149,7 +144,7 @@
       mkdir -p /usr/lib/locale/$OUTPUTFILE      &&
       echo "localedef -i $INPUTFILE -f $CHARMAP $OUTPUTFILE"  &&
       localedef -i $INPUTFILE -f $CHARMAP $OUTPUTFILE
-    done
+    done &&
     invoke_installwatch  &&
     touch /usr/lib/locale/locale-archive
   fi  &&
