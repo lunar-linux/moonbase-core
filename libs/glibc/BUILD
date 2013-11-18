@@ -144,7 +144,7 @@
       mkdir -p /usr/lib/locale/$OUTPUTFILE      &&
       echo "localedef -i $INPUTFILE -f $CHARMAP $OUTPUTFILE"  &&
       localedef -i $INPUTFILE -f $CHARMAP $OUTPUTFILE
-    done
+    done &&
     invoke_installwatch  &&
     touch /usr/lib/locale/locale-archive
   fi  &&
