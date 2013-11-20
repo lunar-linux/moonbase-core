@@ -1,12 +1,12 @@
            MODULE=dracut
-          VERSION=032
+          VERSION=034
            SOURCE=$MODULE-$VERSION.tar.xz
        SOURCE_URL=http://www.kernel.org/pub/linux/utils/boot/dracut
  SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
-       SOURCE_VFY=sha1:bfaed61ecffa213af56acec6a5d5b9b323174e2e
+       SOURCE_VFY=sha1:b61fd48a1dab3611560166584099e3e0fc25638f
          WEB_SITE=https://dracut.wiki.kernel.org/index.php/Main_Page
           ENTERED=20120715
-          UPDATED=20130830
+          UPDATED=20131118
             SHORT="Initramfs generator using udev"
 COMPRESS_MANPAGES=off # If we compress them it will mess up an upgrade for this module due to symlinks
 
