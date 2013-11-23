@@ -171,10 +171,19 @@ alias lwtf="lvu what"
 complete -F _lunar_comp_modules lwtf
 
 function lcd(){
-  [[ -z "$1" || "$1" = "." ]] &&
-    cd "$(lsh 'echo $MOONBASE')" ||
-    cd "$(lsh "echo \$MOONBASE/\$(find_section $1)/$1")"
-  return 0
+  local mb section
+  mb="$(lsh 'echo $MOONBASE')"
+  if [[ -z "$1" || "$1" = "." ]]; then
+    cd "$mb"
+  else
+    section="$(lsh find_section "$1")"
+    if [[ -z "$section" ]]; then
+      echo "$0: lcd: No such module in moonbase" >&2
+      return 1
+    else
+      cd "$mb/$section/$1"
+    fi
+  fi
 }
 complete -F _lunar_comp_modules lcd
 
