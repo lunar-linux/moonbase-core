@@ -37,11 +37,12 @@ plugin_ccache_optimize_menu()
     return 2
   fi
 
+  # Defaults
+  USE_CCACHE="yes"
+
   # load previous optimizations
   if [ -e /etc/lunar/local/optimizations.CCACHE ]; then
     . /etc/lunar/local/optimizations.CCACHE
-  else
-    USE_CCACHE="yes"
   fi
 
   save_optimizations()

@@ -215,13 +215,13 @@ STACK=$STACK
 EOF
   }
 
+  # default optimizations
+  BOPT=Faster
+  CC_OPTS=( Pipe Fortify )
+  CPU=$(arch | sed 's;_;-;')
+
   if [ -f /etc/lunar/local/optimizations.GCC_4_8 ]; then
     . /etc/lunar/local/optimizations.GCC_4_8
-  else
-    # default optimizations
-    BOPT=Faster
-    CC_OPTS=( Pipe Fortify )
-    CPU=$(arch | sed 's;_;-;')
   fi
 
   export IFS=$'\t\n'
