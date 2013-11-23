@@ -2,18 +2,24 @@
 # gcc-4.8.x compiler optimizations plugin
 #
 
+compiler_gcc_optimize_defaults()
+{
+  # default optimizations
+  BOPT=Faster
+  CC_OPTS=( Pipe Fortify )
+  CPU=$(arch | sed 's;_;-;')
+}
+
 plugin_compiler_gcc_4_8_optimize()
 {
   if [ "${LUNAR_COMPILER:-GCC_4_8}" != "GCC_4_8" ]; then
     return 2
   fi
 
-  # default optimizations
-  BOPT=Faster
-  CC_OPTS=( Pipe Fortify )
-  CPU=$(arch | sed 's;_;-;')
-
   debug_msg "plugin_compiler_gcc_4_8_optimize($@)"
+
+  compiler_gcc_optimize_defaults
+
   if [ -f /etc/lunar/local/optimizations.GCC_4_8 ]; then
     . /etc/lunar/local/optimizations.GCC_4_8
   fi
@@ -215,10 +221,7 @@ STACK=$STACK
 EOF
   }
 
-  # default optimizations
-  BOPT=Faster
-  CC_OPTS=( Pipe Fortify )
-  CPU=$(arch | sed 's;_;-;')
+  compiler_gcc_optimize_defaults
 
   if [ -f /etc/lunar/local/optimizations.GCC_4_8 ]; then
     . /etc/lunar/local/optimizations.GCC_4_8
