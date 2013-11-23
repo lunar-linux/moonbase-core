@@ -66,6 +66,9 @@ plugin_gnu_ld_optimize_menu()
   # load previous optimizations
   if [ -e /etc/lunar/local/optimizations.GNU_LD ]; then
     . /etc/lunar/local/optimizations.GNU_LD
+  else
+    # default optimizations
+    LDF=( Strip )
   fi
 
   save_optimizations()
