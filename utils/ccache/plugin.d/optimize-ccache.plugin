@@ -9,7 +9,7 @@ plugin_ccache_optimize()
     . /etc/lunar/local/optimizations.CCACHE
   fi
 
-  if [ "$USE_CCACHE" == "yes" ]; then
+  if [ "${USE_CCACHE:-yes}" == "yes" ]; then
     # we PRE-pend ccache in case distcc is also used to make sure that ccache goes first!
     echo $CC_EXT | grep -q "ccache" || CC_EXT="ccache $CC_EXT"
     echo $CXX_EXT | grep -q "ccache" || CXX_EXT="ccache $CXX_EXT"
@@ -37,6 +37,9 @@ plugin_ccache_optimize_menu()
     return 2
   fi
 
+  # Defaults
+  USE_CCACHE="yes"
+
   # load previous optimizations
   if [ -e /etc/lunar/local/optimizations.CCACHE ]; then
     . /etc/lunar/local/optimizations.CCACHE
@@ -58,7 +61,7 @@ EOF
     if [ $? != 0 ]; then
       break
     else
-      if [ "$USE_CCACHE" == 'yes' ]; then
+      if [ "$USE_CCACHE" == "yes" ]; then
         USE_CCACHE=no
       else
         USE_CCACHE=yes
