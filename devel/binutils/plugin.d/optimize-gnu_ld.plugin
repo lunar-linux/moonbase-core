@@ -2,10 +2,15 @@
 # GNU ld linker optimizations plugin
 #
 
-plugin_gnu_ld_optimize()
+gnu_ld_optimize_defaults()
 {
   # default optimizations
   LDF=( Strip )
+}
+
+plugin_gnu_ld_optimize()
+{
+  gnu_ld_optimize_defaults
 
   if [ -f /etc/lunar/local/optimizations.GNU_LD ]; then
     . /etc/lunar/local/optimizations.GNU_LD
@@ -62,6 +67,8 @@ plugin_gnu_ld_optimize_menu()
     # different menu
     return 2
   fi
+
+  gnu_ld_optimize_defaults
 
   # load previous optimizations
   if [ -e /etc/lunar/local/optimizations.GNU_LD ]; then
