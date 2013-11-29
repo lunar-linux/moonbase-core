@@ -1,11 +1,11 @@
           MODULE=check
-         VERSION=0.9.9
+         VERSION=0.9.11
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/$MODULE/
-      SOURCE_VFY=sha1:96c06ff9971884628c2512f0e3bca6141c49290b
+      SOURCE_VFY=sha1:84b5af72dd49df4ac837645d117ce9126535d549
         WEB_SITE=http://check.sourceforge.net
          ENTERED=20031201
-         UPDATED=20121118
+         UPDATED=20131127
            SHORT="unit test framework for C"
 
 cat << EOF
