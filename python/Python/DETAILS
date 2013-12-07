@@ -1,14 +1,11 @@
           MODULE=Python
-         VERSION=2.7.5
-          SOURCE=$MODULE-$VERSION.tar.bz2
-         SOURCE2=$MODULE-$VERSION-ssl.patch.bz2
+         VERSION=2.7.6
+          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://www.python.org/ftp/python/$VERSION
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:6cfada1a739544a6fa7f2601b500fba02229656b
-     SOURCE2_VFY=sha1:803a921e920a7333445c9ba6394324c447dee57f
+      SOURCE_VFY=sha1:8321636af2acbeaa68fc635d7dda7369ed446a80
         WEB_SITE=http://www.python.org
          ENTERED=20010922
-         UPDATED=20130907
+         UPDATED=20131130
            PSAFE=no
            SHORT="Interpreted, interactive, object-oriented programming language"
 

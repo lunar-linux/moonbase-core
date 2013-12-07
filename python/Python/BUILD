@@ -6,8 +6,6 @@
     cp Lib/plat-linux2/* Lib/plat-linux3/
   fi &&
 
-  patch_it $SOURCE2 1  &&
-
   sedit "s:-O3:$CFLAGS -Os:g" configure  &&
 
   OPTS+=" --enable-shared"  &&
