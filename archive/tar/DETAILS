@@ -1,15 +1,15 @@
           MODULE=tar
-         VERSION=1.26
+         VERSION=1.27.1
           SOURCE=$MODULE-$VERSION.tar.bz2
          SOURCE2=$MODULE.1-1.26.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/gnu/$MODULE
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:70f298c3cd997b694864c55e6d8655324c87a0cc
+      SOURCE_VFY=sha1:67aa31d0d497849c05ba5ea6eb41cff130407751
      SOURCE2_VFY=sha1:b1c90348615507bf8c5c281705090f69be365082
         WEB_SITE=http://www.gnu.org/software/tar/tar.html
          ENTERED=20010922
-         UPDATED=20110417
+         UPDATED=20131118
            SHORT="Creates GNU tar archives"
 
 cat << EOF
