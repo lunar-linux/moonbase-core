@@ -9,8 +9,9 @@
   # Stop pam_env from installing /etc/environment
   sedit "/^sysconf_DATA/d" modules/pam_env/Makefile.am  &&
 
+  aclocal &&
   libtoolize -f &&
-  AT_M4DIR="m4" autoreconf &&
+  AT_M4DIR="m4" autoreconf -i &&
 
   ./configure  --libdir=/lib                            \
                --docdir=/usr/share/doc/Linux-PAM        \
