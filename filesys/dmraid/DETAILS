@@ -8,6 +8,8 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE/$VERSION/dmraid
          ENTERED=20081025
          UPDATED=20091109
            SHORT="discovers, activates, deactivates and displays software RAID sets"
+PSAFE=no
+
 cat <<EOF
 This software discovers, activates, deactivates and displays properties
 of software RAID sets (eg, ATARAID) and contained DOS partitions.
