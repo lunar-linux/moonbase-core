@@ -23,6 +23,7 @@
                --disable-audit                          \
                --enable-isadir=../../lib/security       \
                --enable-nls                             \
+               --disable-regenerate-docu                \
                $OPTS &&
 
   sedit  "s/examples//"  Makefile           &&
