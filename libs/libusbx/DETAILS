@@ -1,0 +1,13 @@
+          MODULE=libusbx
+         VERSION=1.0.17
+          SOURCE=${MODULE}-${VERSION}.tar.bz2
+      SOURCE_URL=$SFORGE_URL/$MODULE
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+      SOURCE_VFY=sha1:a491054e7f4f3f52b12bd567335180586a54ae16
+        WEB_SITE="http://libusbx.org/"
+         ENTERED=20140106
+         UPDATED=20140106
+           SHORT="Library that provides generic access to USB devices"
+cat <<EOF
+Library that provides generic access to USB devices.
+EOF
