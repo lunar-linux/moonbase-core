@@ -16,7 +16,7 @@
     rm -f /etc/rcS.d/S99sysctl
   fi  &&
 
-  if ! module_installed systemd; then
+  if module_installed sysvinit; then
     cp $SCRIPT_DIRECTORY/init.d/sysctl /etc/init.d &&
     ln -sf ../init.d/sysctl /etc/rcS.d/S99sysctl
   fi  &&
