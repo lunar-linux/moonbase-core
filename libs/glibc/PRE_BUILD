@@ -13,4 +13,6 @@ patch_it $SOURCE9 1 &&
 patch_it $SOURCE10 1 &&
 patch_it $SOURCE11 1 &&
 patch_it $SOURCE12 1 &&
-patch_it $SOURCE13 1
+patch_it $SOURCE13 1 &&
+patch_it $SOURCE14 1 &&
+patch_it $SOURCE15 1
