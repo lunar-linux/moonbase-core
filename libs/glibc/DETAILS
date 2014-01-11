@@ -14,6 +14,8 @@
         SOURCE11=glibc-2.18-getaddrinfo-assertion.patch
         SOURCE12=glibc-2.18-scanf-parse-0e-0.patch
         SOURCE13=glibc-2.18-strstr-hackfix.patch
+        SOURCE14=glibc-2.18-make-4.patch
+        SOURCE15=glibc-2.18-xattr-compat-hack.patch
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/glibc
@@ -30,6 +32,8 @@
     SOURCE12_URL=$PATCH_URL
     SOURCE12_URL=$PATCH_URL
     SOURCE13_URL=$PATCH_URL
+    SOURCE14_URL=$PATCH_URL
+    SOURCE15_URL=$PATCH_URL
       SOURCE_VFY=sha1:1f0e4e7ba5fe1f45ffd0548b6c36caef0bc7e51f
      SOURCE2_VFY=sha1:86c3b8d2424a27e05937b50fb545b250834b69a9
      SOURCE3_VFY=sha1:e3f36e2bb17e51e31035f2cd405d099c624d0e9e
@@ -43,6 +47,8 @@
     SOURCE11_VFY=sha1:ca210fa5c7751af73899f73d4cfbc901af4f70d8
     SOURCE12_VFY=sha1:20ae27fd59e942442ef02f0624d9c30d568a0fde
     SOURCE13_VFY=sha1:f928cedf0fb3d2bf046975680c637d6b09ad93cf
+    SOURCE14_VFY=sha1:916d8d2c8353de0e556877f0dd6e65d4f2637563
+    SOURCE15_VFY=sha1:fb080732c00d111cd4e985b4f3dbb49c58caa891
         WEB_SITE=http://www.gnu.org/software/libc
          ENTERED=20010922
          UPDATED=20131116
