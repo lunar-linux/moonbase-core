@@ -22,7 +22,8 @@
           --enable-rsh         \
           --enable-ftp         \
           --enable-telnet      \
-          --enable-rcp"        &&
+          --enable-rcp         \
+          --enable-dnsdomainname" &&
 
   # Fixes an incompatibility with glibc-2.16
   sedit '/gets is a/d' lib/stdio.in.h &&
