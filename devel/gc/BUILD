@@ -1,6 +1,6 @@
 (
 
-  OPTS+=" --disable-static" &&
+  OPTS+=" --enable-cplusplus --disable-static" &&
 
   default_build
 
