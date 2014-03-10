@@ -1,11 +1,11 @@
           MODULE=nasm
-         VERSION=2.11
+         VERSION=2.11.01
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=http://www.nasm.us/pub/nasm/releasebuilds/$VERSION
-      SOURCE_VFY=sha1:20c68af1e02b56f147e6e3a162c9c799fea556d7
+      SOURCE_VFY=sha1:4d774ac546057914bf8aac89cb20a1de74c5cd19
         WEB_SITE=http://nasm.sourceforge.net
          ENTERED=20010922
-         UPDATED=20140108
+         UPDATED=20140226
            SHORT="The netwide assembler"
 
 cat << EOF
