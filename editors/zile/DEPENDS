@@ -1,3 +1,4 @@
 depends ncurses
 depends perl
 depends gc
+depends help2man
