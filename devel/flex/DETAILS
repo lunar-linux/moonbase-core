@@ -1,11 +1,11 @@
           MODULE=flex
-         VERSION=2.5.38
+         VERSION=2.5.39
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$SFORGE_URL/$MODULE
         WEB_SITE=http://www.gnu.org/software/flex/flex.html
-      SOURCE_VFY=sha1:5214d963dfac14e0607ae36b68076dfef71fdd40
+      SOURCE_VFY=sha1:267794c709d5c50f2dcb48ff5d8dcbbfe40f953e
          ENTERED=20010922
-         UPDATED=20140213
+         UPDATED=20140327
            SHORT="A fast lexical analyser generator"
 
 cat << EOF
