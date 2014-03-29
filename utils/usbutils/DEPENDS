@@ -1,2 +1,2 @@
 depends  zlib
-depends  libusbx
+depends  libusb

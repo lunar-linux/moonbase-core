@@ -5,7 +5,7 @@
       SOURCE_VFY=sha1:062319276d913c753a4b1341036e6a2e42abccc9
         WEB_SITE=http://www.libusb.org/wiki/LibusbCompat0.1
          ENTERED=20090812
-         UPDATED=20130623
+         UPDATED=20140323
            SHORT="A compatibility layer for the old libusb"
 
 cat << EOF

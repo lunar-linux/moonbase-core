@@ -8,7 +8,7 @@
       SOURCE_VFY=sha1:6632f8ac6116fa4fd9e879df3134a206f0c4473c
         WEB_SITE=http://kerneltrap.org/node/4649
          ENTERED=20030108
-         UPDATED=20130623
+         UPDATED=20140323
            SHORT="The pciutils of usb"
 
 cat << EOF
