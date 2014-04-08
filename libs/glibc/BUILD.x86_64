@@ -103,9 +103,6 @@
     done
   fi  &&
 
-  # Added a symlink for ash and others
-  ln -sf /usr/lib/libbsd-compat.a /usr/lib/libbsd.a  &&
-
   # Rebuild the ld cache
   rm -f /etc/ld.so.cache 2>/dev/null  &&
   ldconfig                            &&
