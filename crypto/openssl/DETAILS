@@ -1,14 +1,14 @@
           MODULE=openssl
-         VERSION=1.0.1f
+         VERSION=1.0.1g
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=Makefile.openssl-certs
-         SOURCE3=$MODULE-$VERSION-fix_pod_syntax.patch.gz
+         SOURCE3=$MODULE-${VERSION/g/f}-fix_pod_syntax.patch.gz
    SOURCE_URL[0]=http://www.openssl.org/source
    SOURCE_URL[1]=ftp://opensores.thebunker.net/pub/mirrors/openssl/source
    SOURCE_URL[2]=http://www.dentarthurdent.com/transfer/openssl
    SOURCE_URL[3]=ftp://ftp.infoscience.co.jp/pub/Crypto/SSL/openssl/source
    SOURCE_URL[4]=ftp://ftp.duth.gr/pub/OpenSSL/source
-      SOURCE_VFY=sha1:9ef09e97dfc9f14ac2c042f3b7e301098794fc0f
+      SOURCE_VFY=sha1:b28b3bcb1dc3ee7b55024c9f795be60eb3183e3c
      SOURCE2_URL=$PATCH_URL
      SOURCE2_VFY=sha1:0f30d44c0bf27883876bdf56fe9c541ee28bc2cd
      SOURCE3_URL=$PATCH_URL
