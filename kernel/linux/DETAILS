@@ -1,19 +1,17 @@
           MODULE=linux
-         VERSION=3.13.7
+         VERSION=3.14.1
             BASE=$(echo $VERSION | cut -d. -f1,2)
           SOURCE=$MODULE-$BASE.tar.xz
-if [ -n "$(echo $VERSION | cut -d. -f3)" ] ; then
          SOURCE2=patch-$VERSION.xz
-fi
    SOURCE_URL[0]=$KERNEL_URL/pub/linux/kernel/v3.x
    SOURCE_URL[1]=http://www.kernel.org/pub/linux/kernel/v3.x
   SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v3.x
   SOURCE2_URL[1]=http://www.kernel.org/pub/linux/kernel/v3.x
-      SOURCE_VFY=sha1:6b31602a80e817327d77037333408e002ec9884b
-     SOURCE2_VFY=sha1:ddba8cdde36f7ec835f40b75d148dc0800297633
+      SOURCE_VFY=sha1:fc777520e5976caf0d5513502b8156f73748e379
+     SOURCE2_VFY=sha1:4518cd93e2114bbb049be21a52d793d3dfb6c01f
         WEB_SITE=http://www.kernel.org
          ENTERED=20111121
-         UPDATED=20140326
+         UPDATED=20140415
            SHORT="The core of a Linux GNU Operating System"
      KEEP_SOURCE=on
            TMPFS=off

@@ -1,15 +1,9 @@
-mquery PREFER_XCONFIG "Do you prefer xconfig over nconfig?" n
+mquery PREFER_XCONFIG "Do you prefer xconfig over menuconfig?" n
 
 if [ "`get_module_config PREFER_XCONFIG`" = "y" ]; then
-    set_module_config "PREFER_NCONFIG" "n" ;
     set_module_config "PREFER_MENUCONFIG" "n" ;
 else
-    mquery PREFER_NCONFIG "Do you prefer nconfig over menuconfig?" y
-    if [ "`get_module_config PREFER_NCONFIG`" = "y" ]; then
-        set_module_config "PREFER_MENUCONFIG" "n" ;
-    else
-        mquery PREFER_MENUCONFIG "Do you prefer menuconfig over config?" y
-    fi
+    mquery PREFER_MENUCONFIG "Do you prefer menuconfig over config?" y
 fi
 
 unset_module_config CONFIG_KERNEL
