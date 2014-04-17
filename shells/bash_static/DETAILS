@@ -1,5 +1,6 @@
           MODULE=bash_static
          VERSION=4.3
+        PATCHLVL=011
           SOURCE=bash-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/bash-$VERSION
    SOURCE_URL[0]=$GNU_URL/$MODULE
