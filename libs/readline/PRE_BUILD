@@ -1,0 +1,31 @@
+cd     $BUILD_DIRECTORY  &&
+unpack $SOURCE           &&
+
+# patch #009 need it
+ln -sf $MODULE-$VERSION $MODULE-$VERSION-patched  &&
+
+if [[ $((10#${PATCHLVL})) -gt 0 ]]; then
+
+# get the RSA Key for patches verification
+  gpg --no-default-keyring --keyring vendors.gpg --keyserver pgp.mit.edu --recv-key $RSAIDKEY  &&
+
+  cd $BUILD_DIRECTORY  &&
+
+  for (( _p=1; _p<=$((10#${PATCHLVL})); _p++ )); do
+    SOURCE2=$MODULE${VERSION//.}-$(printf "%03d" $_p)  &&
+    PATCH2_URL=http://ftp.gnu.org/gnu/$MODULE/$MODULE-$VERSION-patches/$SOURCE2
+    wget $PATCH2_URL{,.sig}  &&
+    gpg --verify --verbose --keyring vendors.gpg ./$SOURCE2.sig  &&
+    message "Applying patch "$SOURCE2  &&
+    patch_it ./$SOURCE2 1
+    rm ${SOURCE2}*
+  done
+
+fi
+
+rm $MODULE-$VERSION-patched  &&
+
+cd $SOURCE_DIRECTORY
+
+# use this command in order to get the value of RSAIDKEY
+#gpg --verify <file.sig>
