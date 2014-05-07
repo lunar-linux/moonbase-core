@@ -1,13 +1,13 @@
           MODULE=lftp
-         VERSION=4.4.15
+         VERSION=4.4.16
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=ftp://ftp.yars.free.net/pub/source/$MODULE
    SOURCE_URL[1]=ftp://ftp.cs.tu-berlin.de/pub/net/ftp/$MODULE
    SOURCE_URL[2]=http://lftp.yar.ru/ftp/
-      SOURCE_VFY=sha1:f8d46096be03f2de7f344a690de5130b65eb18b0
+      SOURCE_VFY=sha1:4426801c8f08838a02dbd790eb7d8d75c460e445
         WEB_SITE=http://lftp.yar.ru
          ENTERED=20010922
-         UPDATED=20140124
+         UPDATED=20140507
            SHORT="A sophisticated ftp/http client, file transfer program"
 
 cat << EOF
