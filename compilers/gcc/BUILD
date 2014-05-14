@@ -21,12 +21,14 @@ LANGUAGES="${LANGUAGES:=c++}"  &&
              --infodir=${MODULE_PREFIX}/share/info  \
              --mandir=${MODULE_PREFIX}/share/man    \
              --enable-__cxa_atexit                  \
-             --enable-threads                       \
+             --enable-threads=posix                 \
              --disable-nls                          \
              --enable-target-optspace               \
              --with-gnu-ld                          \
              --with-system-zlib                     \
              --enable-shared                        \
+             --disable-multilib                     \
+             --disable-werror                       \
              $OPTS                                 &&
 
 make CFLAGS='-O' LIBCFLAGS='-g -O2' LIBCXXFLAGS='-g -O2 -fno-implicit-templates' bootstrap-lean  &&
