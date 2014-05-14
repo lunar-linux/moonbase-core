@@ -69,6 +69,9 @@
   [ -e /etc/securetty  ] || install -m 0644 $SCRIPT_DIRECTORY/securetty /etc/ &&
   ln -sf /sbin/vipw /sbin/vigr &&
   install $SCRIPT_DIRECTORY/adduser /sbin/ &&
-  install $SCRIPT_DIRECTORY/deluser /sbin/
+  install $SCRIPT_DIRECTORY/deluser /sbin/ &&
+
+  install -m 0644 $SCRIPT_DIRECTORY/shadow.timer /usr/lib/systemd/system/shadow.timer  &&
+  install -m 0644 $SCRIPT_DIRECTORY/lastlog.tmpfiles /usr/lib/tmpfiles.d/lastlog.conf
 
 ) > $C_FIFO 2>&1
