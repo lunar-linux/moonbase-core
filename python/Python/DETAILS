@@ -1,11 +1,11 @@
           MODULE=Python
-         VERSION=2.7.6
+         VERSION=2.7.7
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://www.python.org/ftp/python/$VERSION
-      SOURCE_VFY=sha1:8321636af2acbeaa68fc635d7dda7369ed446a80
+      SOURCE_VFY=sha1:5f82557cac5abf18d1df6f8bb2029aa335b321f4
         WEB_SITE=http://www.python.org
          ENTERED=20010922
-         UPDATED=20131130
+         UPDATED=20140603
            PSAFE=no
            SHORT="Interpreted, interactive, object-oriented programming language"
 
