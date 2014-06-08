@@ -1,11 +1,11 @@
           MODULE=diffstat
-         VERSION=1.58
+         VERSION=1.59
           SOURCE=$MODULE-$VERSION.tgz
       SOURCE_URL=ftp://invisible-island.net/$MODULE
-      SOURCE_VFY=sha1:7a67ecb996ea65480bd0b9db33d8ed458e5f2a24
+      SOURCE_VFY=sha1:85f81d9e6ec704cb8cf82eb404ca9dd69d6469ff
         WEB_SITE=http://invisible-island.net/diffstat/diffstat.html
          ENTERED=20060322
-         UPDATED=20131030
+         UPDATED=20140607
            SHORT="Shows a histogram of a diff/patch file"
 
 cat << EOF
