@@ -1,16 +1,16 @@
           MODULE=gcc
-         VERSION=4.8.2
+         VERSION=4.9.0
           SOURCE=$MODULE-$VERSION.tar.bz2
          SOURCE2=$MODULE-4.5.0-python.patch.bz2
    SOURCE_URL[0]=$GNU_URL/gcc/$MODULE-$VERSION
    SOURCE_URL[1]=ftp://gcc.gnu.org/pub/gcc/releases/gcc-$VERSION
    SOURCE_URL[2]=http://www.online-mirror.org/gcc/$MODULE-$VERSION
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:810fb70bd721e1d9f446b6503afe0a9088b62986
+      SOURCE_VFY=sha1:fbde8eb49f2b9e6961a870887cf7337d31cd4917
      SOURCE2_VFY=sha1:7c1fc0b526b74cce301b85acee04011ed6e5aa5a
         WEB_SITE=http://gcc.gnu.org
          ENTERED=20020628
-         UPDATED=20131017
+         UPDATED=20140423
            SHORT="GNU compiler collection"
 
 cat << EOF
