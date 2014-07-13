@@ -1,5 +1,3 @@
-(
-
   CFLAGS+=" -fPIE "
   LDFLAGS+=" -pie "
 
@@ -23,7 +21,10 @@
                --enable-udev_rules            \
                $OPTS                         &&
 
+
+# patch for gcc VirtualBox
+  sedit "s:const void const:const void:g" libdm/libdevmapper.h &&
+
   default_make &&
   make install_system_dirs
 
-) > $C_FIFO 2>&1
