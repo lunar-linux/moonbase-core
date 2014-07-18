@@ -1,5 +1,6 @@
           MODULE=bash_static
          VERSION=4.3
+        PATCHLVL=011
           SOURCE=bash-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/bash-$VERSION
    SOURCE_URL[0]=$GNU_URL/$MODULE
@@ -8,7 +9,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/bash-$VERSION
       SOURCE_VFY=sha1:45ac3c5727e7262334f4dfadecdf601b39434e84
         WEB_SITE=http://tiswww.case.edu/php/chet/bash_static/bashtop.html
          ENTERED=20020615
-         UPDATED=20140323
+         UPDATED=20140417
            SHORT="static bash build for rescue purposes"
 
 cat << EOF

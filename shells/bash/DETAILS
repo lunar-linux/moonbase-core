@@ -1,5 +1,7 @@
           MODULE=bash
-         VERSION=4.3
+          VERSION=4.3
+        PATCHLVL=011
+        RSAIDKEY=64EA74AB
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
@@ -7,7 +9,7 @@
       SOURCE_VFY=sha1:45ac3c5727e7262334f4dfadecdf601b39434e84
         WEB_SITE=http://www.gnu.org/software/bash
          ENTERED=20010922
-         UPDATED=20140323
+         UPDATED=20140417
            SHORT="A shell of the GNU operating system"
 PSAFE=no
 
