@@ -1,12 +1,12 @@
           MODULE=libusb
-         VERSION=1.0.18
+         VERSION=1.0.19
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$SFORGE_URL/$MODULE
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
-      SOURCE_VFY=sha1:5f7bbf42a4d6e6b88d5e7666958c80f8455ee915
+      SOURCE_VFY=sha1:c5d14ced155233ceeb5107c7eb3b94b16649ae05
         WEB_SITE=http://libusb.org/
          ENTERED=20140106
-         UPDATED=20140323
+         UPDATED=20140621
            SHORT="Library that provides generic access to USB devices"
 
 cat <<EOF
