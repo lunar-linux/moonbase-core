@@ -1,7 +1,6 @@
 (
 
-  sedit 's/^prefix.*/prefix = \//' Makefile
-  sedit 's/\/local//' man/Makefile &&
+  sedit 's/^prefix.*/prefix = \/usr/' Makefile
   sedit 's/^bindir.*/bindir = \/sbin/' Makefile &&
 
   make &&
