@@ -1,7 +1,7 @@
           MODULE=Python
          VERSION=2.7.8
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://www.python.org/ftp/python/$VERSION
+      SOURCE_URL=https://www.python.org/ftp/python/$VERSION
       SOURCE_VFY=sha1:9c6281eeace0c3646fa556c8087bb1b7e033c9c4
         WEB_SITE=http://www.python.org
          ENTERED=20010922
