@@ -1,14 +1,14 @@
           MODULE=kbd
-         VERSION=2.0.1
+         VERSION=2.0.2
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=$MODULE-1.15.3-es.po.patch.bz2
       SOURCE_URL=ftp://devel.altlinux.org/legion/$MODULE
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:8d7d6f9fc95d8abb80156da0713a4cbc0dbfda97
+      SOURCE_VFY=sha1:6c10f903f15034a3e6e7e8a32ea98a9953faacb7
      SOURCE2_VFY=sha1:2cc4ddd4d28de4955a7769af20d112583ef7daf4
         WEB_SITE=http://www.kernel.org/pub/linux/utils/kbd
          ENTERED=20040217
-         UPDATED=20131114
+         UPDATED=20140805
       MAINTAINER=florin@lunar-linux.org
            SHORT="kbd allows you to configure and manipulate Linux consoles"
 
