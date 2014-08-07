@@ -1,2 +1,4 @@
 depends bison
 depends flex
+
+optional_depends "%BLUEZ" "--enable-bluetooth" "--disable-bluetooth" "For bluetooth support"
