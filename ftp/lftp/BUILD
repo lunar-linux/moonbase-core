@@ -1,20 +1,10 @@
-(
+# setting the ssl option
+if in_depends $MODULE openssl && module_installed "openssl" ; then
+  OPTS+=" --with-openssl --without-gnutls"
+elif in_depends $MODULE gnutls && module_installed "gnutls" ; then
+  OPTS+=" --with-gnutls --without-openssl"
+else
+  OPTS+=" --without-openssl --without-gnutls"
+fi &&
 
-  # fix compiling with glibc 2.16.0
-  sedit '/gets is a security hole/d' lib/stdio.in.h  &&
-
-  # get the alias
-  SSL=`unalias %SSL` &&
-
-  # setting the ssl option
-  if [[ $SSL == "openssl" ]] && module_installed "openssl" ; then
-        OPTS+=" --with-openssl --without-gnutls"
-  elif [[ $SSL == "gnutls" ]] && module_installed "gnutls" ; then
-        OPTS+=" --with-gnutls --without-openssl"
-  else
-        OPTS+=" --without-openssl --without-gnutls"
-  fi &&
-
-  default_build
-
-) > $C_FIFO 2>&1
+default_build
