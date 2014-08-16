@@ -1,6 +1,8 @@
 OPTS+=" --libexecdir=/usr/lib \
         --enable-split-usr \
-        --disable-tcpwrap \
+        --disable-audit \
+        --disable-ima \
+        --disable-kdbus \
         --with-kbd-loadkeys=/usr/bin/loadkeys \
         --with-kbd-setfont=/usr/bin/setfont"
 
@@ -38,10 +40,12 @@ fi &&
 
 make install &&
 
+rm -rf /usr/lib/rpm &&
+
 # Disable new naming scheme
-if [[ "$NEW_NAME_SCHEME" == "n" && ! -e /etc/udev/rules.d/80-net-name-slot.rules ]]; then
+if [[ "$NEW_NAME_SCHEME" == "n" && ! -e /etc/udev/rules.d/80-net-setup-link.rules ]]; then
   echo "Disabled the new network interface naming scheme" 
-  ln -sf /dev/null /etc/udev/rules.d/80-net-name-slot.rules
+  ln -sf /dev/null /etc/udev/rules.d/80-net-setup-link.rules
 fi &&
 
 # Always install the legacy.conf file even if SysV compatibility isn't enabled
