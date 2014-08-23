@@ -1,11 +1,11 @@
           MODULE=yasm
-         VERSION=1.2.0
+         VERSION=1.3.0
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://www.tortall.net/projects/$MODULE/releases/
-      SOURCE_VFY=sha1:773d28f27f83c44ac35079add0d3167ca6c1def8
+      SOURCE_VFY=sha1:b7574e9f0826bedef975d64d3825f75fbaeef55e
         WEB_SITE=http://www.tortall.net/projects/yasm
          ENTERED=20051007
-         UPDATED=20111116
+         UPDATED=20140813
            SHORT="A complete rewrite of the NASM assembler"
 
 cat << EOF
