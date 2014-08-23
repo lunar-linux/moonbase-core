@@ -1,11 +1,14 @@
           MODULE=systemd
-         VERSION=208
+         VERSION=215
           SOURCE=$MODULE-$VERSION.tar.xz
+         SOURCE2=systemd-215-compat-1.patch
       SOURCE_URL=http://www.freedesktop.org/software/systemd
-      SOURCE_VFY=sha1:e1a4e213d5d1e3498bca851347f2f07fdb9b4e1f
+     SOURCE2_URL=$PATCH_URL
+      SOURCE_VFY=sha256:ce76a3c05e7d4adc806a3446a5510c0c9b76a33f19adc32754b69a0945124505
+     SOURCE2_VFY=sha256:36a9e52df6f10709225e0e16365f304ff9ff93833fabededdcafa23502df03c5
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20131012
+         UPDATED=20140816
            SHORT="A system and program management daemon"
 PSAFE=no
 

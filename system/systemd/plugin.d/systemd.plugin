@@ -102,7 +102,7 @@ plugin_systemd_post_build()
 
     # Necessary to track enabled services with installwatch
     # due to how systemctl creates symlinks
-    TOUCHME=$(systemctl enable $SERVICE 2>&1 | cut -d\' -f4)
+    TOUCHME=$(systemctl enable $SERVICE 2>&1 | cut -d' ' -f4)
     if [ -n "$TOUCHME" ]; then
       touch -h $TOUCHME
     fi
