@@ -4,4 +4,4 @@
   default_make           &&
   gather_docs Theory *.htm *.jpg
 
-) > $C_FIFO 2>&1 
+) > $C_FIFO 2>&1
