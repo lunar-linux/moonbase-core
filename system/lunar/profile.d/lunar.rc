@@ -22,7 +22,7 @@ _lunar_modules_held_list()
 
 _lunar_internal_variable_list()
 {
-  COMPREPLY=( $( compgen -W "$( sed -rn 's;\s*(.*)=.*;\1;p' /etc/lunar/local/config )" --  "$cur" ) )
+  COMPREPLY=( $( compgen -W "$( sed -rn 's;\s*([^=]*).*;\1;p' /etc/lunar/local/config )" --  "$cur" ) )
 }
 
 _lunar_exilable_module_list()
