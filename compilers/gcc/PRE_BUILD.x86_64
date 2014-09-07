@@ -1,2 +1,0 @@
-OPTS+=" --disable-multilib" &&
-default_pre_build

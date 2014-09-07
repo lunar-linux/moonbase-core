@@ -1,16 +1,19 @@
           MODULE=gcc
-         VERSION=4.8.3
+         VERSION=4.9.1
           SOURCE=$MODULE-$VERSION.tar.bz2
          SOURCE2=$MODULE-4.5.0-python.patch.bz2
+         SOURCE3=gcc-4.8-filename-output.patch
    SOURCE_URL[0]=$GNU_URL/gcc/$MODULE-$VERSION
    SOURCE_URL[1]=ftp://gcc.gnu.org/pub/gcc/releases/gcc-$VERSION
    SOURCE_URL[2]=http://www.online-mirror.org/gcc/$MODULE-$VERSION
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:6a8e4f11b185f4fe2ed9d7fc053e80f8c7e73f800c045f51f9d8bea33f080f1e
-     SOURCE2_VFY=sha1:7c1fc0b526b74cce301b85acee04011ed6e5aa5a
-        WEB_SITE=http://gcc.gnu.org
+     SOURCE3_URL=$PATCH_URL
+      SOURCE_VFY=sha256:d334781a124ada6f38e63b545e2a3b8c2183049515a1abab6d513f109f1d717e
+     SOURCE2_VFY=sha256:b27a75a9906e104c050fb28fb7e318661b4a5a8e9b25138bf7c8863664da5d44
+     SOURCE3_VFY=sha256:9278e745190bac0b3f6ef74972aecd4e2891d4930f7b6fa8840c3d4f7fbf4f98
+        WEB_SITE=http://gcc.gnu.org/
          ENTERED=20020628
-         UPDATED=20140714
+         UPDATED=20140907
            SHORT="GNU compiler collection"
 
 cat << EOF

@@ -1,11 +1,3 @@
-# move libstdc++.so.*-gdb.py to libexec dir
-patch_it $SOURCE2 1 &&
-
-# installwatch fails to track files installed using tar
-sedit 's;^\(build_install_headers_dir=\).*;\1install-headers-cp;' gcc/config.build &&
-
-# We use libiberty.a from binutils instead
-sedit 's/install_to_$(INSTALL_DEST) //' libiberty/Makefile.in  &&
 
 #sedit 's/trap 0/trap "" 0/' configure  &&
 
@@ -21,12 +13,14 @@ LANGUAGES="${LANGUAGES:=c++}"  &&
              --infodir=${MODULE_PREFIX}/share/info  \
              --mandir=${MODULE_PREFIX}/share/man    \
              --enable-__cxa_atexit                  \
-             --enable-threads                       \
+             --enable-threads=posix                 \
              --disable-nls                          \
              --enable-target-optspace               \
              --with-gnu-ld                          \
              --with-system-zlib                     \
              --enable-shared                        \
+             --disable-multilib                     \
+             --disable-werror                       \
              $OPTS                                 &&
 
 make CFLAGS='-O' LIBCFLAGS='-g -O2' LIBCXXFLAGS='-g -O2 -fno-implicit-templates' bootstrap-lean  &&
