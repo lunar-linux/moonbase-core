@@ -18,7 +18,7 @@ plugin_kernel_updatebootloader_grub2()
   fi
   debug_msg "plugin_kernel_updatebootloader_grub2 ($@)"
 
-  grub-mkconfig -o /boot/grub/grub.cfg
+  GRUB_CMDLINE_LINUX="${GRUB2_CMDLINE:-loglevel=3}" grub-mkconfig -o /boot/grub/grub.cfg
 
   # right now we want to have it run all bootloaders?
   return 2
