@@ -15,4 +15,7 @@ if [ -n "$WARN" ]; then
   fi
 fi
 
-default_pre_build
+default_pre_build &&
+
+# We don't have the 69-dm-lvm-metad.rules file
+patch_it $SOURCE2 1

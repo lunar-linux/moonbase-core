@@ -1,12 +1,14 @@
            MODULE=dracut
           VERSION=038
            SOURCE=$MODULE-$VERSION.tar.xz
+          SOURCE2=dracut-038-disable-lvmetad.patch
        SOURCE_URL=http://www.kernel.org/pub/linux/utils/boot/dracut
  SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
        SOURCE_VFY=sha256:3b0d4466ff5bb627fcc783f02a757187195567b97bdbf46203dfa4cf52ed6b70
+      SOURCE2_VFY=sha256:819551523493314923a66c9e222ea11d67de5cad60f1a457d84bb65704b2d27c
          WEB_SITE=https://dracut.wiki.kernel.org/index.php/Main_Page
           ENTERED=20120715
-          UPDATED=20140823
+          UPDATED=20140908
             SHORT="Initramfs generator using udev"
 COMPRESS_MANPAGES=off # If we compress them it will mess up an upgrade for this module due to symlinks
 
