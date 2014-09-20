@@ -1,20 +1,14 @@
           MODULE=lilo
-         VERSION=23.2
+         VERSION=24.0
           SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=lilo-23.0-ebda-01.patch
-         SOURCE3=lilo-23.2-gcc-4.8.patch
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-23.0
-   SOURCE_URL[0]=$MIRROR_URL
-   SOURCE_URL[1]=https://alioth.debian.org/frs/download.php/3315
-     SOURCE2_URL=$PATCH_URL
-     SOURCE3_URL=$PATCH_URL
-      SOURCE_VFY=sha1:2465f359f1c298d9bbf17843127cffc14e352e39
-     SOURCE2_VFY=sha1:d5aa745be815ae62847936d104460b4ae5222c68
-     SOURCE3_VFY=sha1:e949dac23485fbf98c1aef39b3bff892803324f0
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-24.0
+      SOURCE_URL=http://lilo.alioth.debian.org/ftp/sources
+      SOURCE_VFY=sha256:3d40c0af1d60a0adbe3696cd6cb8d7e892694351ff225371d871b6b479d82152
         WEB_SITE=http://home.san.rr.com/johninsd/pub/linux/lilo
          ENTERED=20010922
-         UPDATED=20110410
+         UPDATED=20140918
            SHORT="Boot loader for Linux/x86 and other PC operating systems"
+GARBAGE=off
 
 cat << EOF
 Lilo is a Boot loader for Linux/x86 and other PC operating systems.
