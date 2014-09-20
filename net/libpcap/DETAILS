@@ -1,11 +1,11 @@
           MODULE=libpcap
-         VERSION=1.6.1
+         VERSION=1.6.2
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://www.tcpdump.org/release
-      SOURCE_VFY=sha1:71ef78dc41ae12eec51726cff52721721b2db548
+      SOURCE_VFY=sha1:7efc7d56f4959de8bb33a92de2e15d92105eac32
         WEB_SITE=http://www.tcpdump.org/
          ENTERED=20011004
-         UPDATED=20140805
+         UPDATED=20140904
            SHORT="A capturing library used by tcpdump"
 
 cat << EOF
