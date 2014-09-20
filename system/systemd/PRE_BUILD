@@ -25,12 +25,14 @@ if [ -n "$FAIL" ]; then
   fi
 fi
 
-if mountpoint -q /usr; then
+if mountpoint -q /usr && ! module_installed dracut; then
   message "${PROBLEM_COLOR}WARNING: ${MESSAGE_COLOR}You appear to have an /usr partition mounted. If you continue this"
-  message "installation your computer will NOT be able to boot properly. This will be supported soon!${DEFAULT_COLOR}"
+  message "installation your computer might NOT be able to boot properly. Installing dracut to get initrd support"
+  message "will take care of the issue.${DEFAULT_COLOR}"
   if ! query "Ignore this warning and continue installation?" n ; then
     exit 1
   fi
 fi
 
-default_pre_build
+default_pre_build &&
+patch_it $SOURCE2 1

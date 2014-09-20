@@ -1,11 +1,9 @@
 OPTS+=" --libexecdir=/usr/lib  \
         --enable-split-usr     \
-        --enable-gudev         \
         --disable-terminal     \
         --disable-audit        \
         --disable-ima          \
         --disable-kdbus        \
-        --enable-introspection \
         --with-kbd-loadkeys=/usr/bin/loadkeys \
         --with-kbd-setfont=/usr/bin/setfont"
 
