@@ -3,14 +3,19 @@ depends dbus
 depends libcap
 depends intltool
 depends gperf
-depends xz
 depends util-linux
 depends kbd
+depends gobject-introspection
 
-optional_depends "acl" "--enable-acl" "--disable-acl" "for ACL support"
-optional_depends "cryptsetup" "--enable-libcryptsetup" "--disable-libcryptsetup" "for Device-mapper crypto encryption"
-optional_depends "Linux-PAM" "--with-pamlibdir=/lib/security" "--disable-pam" "for PAM support"
-optional_depends "docbook-xsl" "" "--disable-manpages" "for manpages"
-optional_depends "docbook-xml" "" "--disable-manpages" "for manpages"
-optional_depends "glib-2" "--enable-gudev" "--disable-gudev" "for Gobject libudev support"
-optional_depends "libgcrypt" "--enable-gcrypt" "--disable-gcrypt" "for gcrypt support"
+optional_depends "acl"           "--enable-acl"                   "--disable-acl"           "for ACL support"
+optional_depends "cryptsetup"    "--enable-libcryptsetup"         "--disable-libcryptsetup" "for device-mapper crypto encryption"
+optional_depends "Linux-PAM"     "--with-pamlibdir=/lib/security" "--disable-pam"           "for PAM support"
+optional_depends "docbook-xsl"   ""                               "--disable-manpages"      "for manpages"
+optional_depends "docbook-xml"   ""                               "--disable-manpages"      "for manpages"
+optional_depends "libgcrypt"     "--enable-gcrypt"                "--disable-gcrypt"        "for gcrypt support"
+optional_depends "elfutils"      "--enable-elfutils"              "--disable-elfutils"      "for elfutils support"
+optional_depends "libseccomp"    "--enable-seccomp"               "--disable-seccomp"       "for seccomp support"
+optional_depends "libmicrohttpd" "--enable-microhttpd"            "--disable-microhttpd"    "for microhttpd support"
+optional_depends "polkit"        "--enable-polkit"                "--disable-polkit"        "for user policy support"
+optional_depends "xz"            "--enable-xz"                    "--disable-xz"            "for xz compression support"
+#optional_depends "lz4"           "--enable-lz4"                   "--disable-lz4"           "for lz4 compression support"

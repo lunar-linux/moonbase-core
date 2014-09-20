@@ -33,5 +33,4 @@ if mountpoint -q /usr; then
   fi
 fi
 
-default_pre_build &&
-patch_it $SOURCE2 1
+default_pre_build
