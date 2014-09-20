@@ -5,15 +5,14 @@ else
 fi
 
 OPTS+=" --disable-static               \
-        --enable-checks                \
-        --with-xml=expat               \
         --localstatedir=/var           \
-        --disable-dnotify              \
         --with-session-socket-dir=/tmp \
         --with-dbus-user=messagebus    \
         --disable-xml-docs             \
         --with-init-scripts=none       \
         --disable-verbose-mode         \
+        --disable-tests                \
+        --disable-asserts              \
         --with-system-pid-file=/var/run/messagebus.pid"
 
 if module_installed systemd; then
