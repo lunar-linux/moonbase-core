@@ -1,12 +1,11 @@
           MODULE=libatomic_ops
-         VERSION=7.2
+         VERSION=7.4.0
           SOURCE=$MODULE-$VERSION.tar.gz
-          SOURCE=$MODULE-${VERSION}e.tar.gz
       SOURCE_URL=http://www.hpl.hp.com/research/linux/atomic_ops/download/
-      SOURCE_VFY=sha1:af2d72318b69597affe96ca1328dc33fbc4a43ef
+      SOURCE_VFY=sha1:3397c2b2a02be3c27af6ed603332e81464447653
         WEB_SITE=http://www.hpl.hp.com/research/linux/atomic_ops/index.php4
          ENTERED=20071005
-         UPDATED=20140115
+         UPDATED=20140926
            SHORT="Atomic memory update operations"
 
 cat << EOF
