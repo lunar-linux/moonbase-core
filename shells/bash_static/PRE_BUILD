@@ -1,5 +1,2 @@
 default_pre_build &&
-patch_it $SOURCE2 0 &&
-
-# Fix for CVE-2014-7169
-patch_it $SOURCE3 0
+patch_it $SOURCE2 0

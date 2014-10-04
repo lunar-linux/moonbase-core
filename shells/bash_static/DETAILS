@@ -1,8 +1,7 @@
           MODULE=bash_static
          VERSION=4.3
           SOURCE=bash-$VERSION.tar.gz
-         SOURCE2=bash43-patches-001-025.patch
-         SOURCE3=bash43-eol-pushback.patch
+         SOURCE2=bash43-patches-001-029.patch
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/bash-$VERSION
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
@@ -10,11 +9,10 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/bash-$VERSION
      SOURCE2_URL=$PATCH_URL
      SOURCE3_URL=$PATCH_URL
       SOURCE_VFY=sha1:45ac3c5727e7262334f4dfadecdf601b39434e84
-     SOURCE2_VFY=sha256:b44ed93696f544e01de2a427acb51130bbe389588d07908e69681f16fed0afc1
-     SOURCE3_VFY=sha256:1878fd6dbbe576dea53a28a6aae2a89d22ef016a3b7eeab4a91d9e2a0b4325b6
+     SOURCE2_VFY=sha256:937147191ef3032d6655ea9692b291989467384be404eb2913a5f2642c7270c0
         WEB_SITE=http://www.gnu.org/software/bash
          ENTERED=20020615
-         UPDATED=20140926
+         UPDATED=20141004
            SHORT="static bash build for rescue purposes"
 
 cat << EOF
