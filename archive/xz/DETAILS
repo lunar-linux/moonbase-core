@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:e8851dc749df2340dac6c9297cb2653eff684e73c3dedf690930119502edd616
         WEB_SITE=http://tukaani.org/xz
          ENTERED=20090224
-         UPDATED=20130922
+         UPDATED=20141005
            SHORT="Utils for XZ archive format"
 
 cat << EOF
