@@ -1,4 +1,3 @@
-(
 
    bad_flags ALL &&
    ./configure  --build=$BUILD               \
@@ -13,6 +12,10 @@
                 --mandir=/usr/share/man      \
                 --enable-utf8                \
                 --enable-unicode-properties  \
+                --enable-pcre16              \
+                --enable-pcre32              \
+                --enable-pcregrep-libz       \
+                --enable-pcregrep-libbz2     \
                 --disable-static            &&
 
    sedit 's:$(libdir)/pkgconfig:/usr/lib/pkgconfig:' Makefile  &&
@@ -28,5 +31,3 @@
 
 #  normal install of pcre
    default_make
-
-) > $C_FIFO 2>&1
