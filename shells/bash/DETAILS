@@ -1,17 +1,17 @@
           MODULE=bash
-         VERSION=4.3
+          VERSION=4.3
+        PATCHLVL=029
+        RSAIDKEY=64EA74AB
           SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=bash43-patches-001-029.patch
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=ftp://ftp.cwru.edu/pub/$MODULE
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:45ac3c5727e7262334f4dfadecdf601b39434e84
-     SOURCE2_VFY=sha256:937147191ef3032d6655ea9692b291989467384be404eb2913a5f2642c7270c0
+      SOURCE_VFY=sha256:afc687a28e0e24dc21b988fa159ff9dbcf6b7caa92ade8645cc6d5605cd024d4
         WEB_SITE=http://www.gnu.org/software/bash
          ENTERED=20010922
-         UPDATED=20141004
+         UPDATED=20141003
            SHORT="A shell of the GNU operating system"
+PSAFE=no
 
 cat << EOF
 bash - Shell of the GNU operating system. Bash is an sh-compatible
