@@ -1,16 +1,16 @@
           MODULE=bash
          VERSION=4.3
           SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=bash43-patches-001-029.patch
+         SOURCE2=bash43-patches-001-030.patch.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=ftp://ftp.cwru.edu/pub/$MODULE
      SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha1:45ac3c5727e7262334f4dfadecdf601b39434e84
-     SOURCE2_VFY=sha256:937147191ef3032d6655ea9692b291989467384be404eb2913a5f2642c7270c0
+     SOURCE2_VFY=sha256:b5ccc0fbafb80a07c823ccfc499c4ff2b454eff4ebbfc9cbee2925bf16803e29
         WEB_SITE=http://www.gnu.org/software/bash
          ENTERED=20010922
-         UPDATED=20141004
+         UPDATED=20141007
            SHORT="A shell of the GNU operating system"
 
 cat << EOF
