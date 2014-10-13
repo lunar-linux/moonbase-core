@@ -1,13 +1,3 @@
-(
-
-# This fixes some import not being installed when compiled against kernels 3.x
-  if [ `uname -r | cut -c 1` == "3" ] ; then
-    mkdir Lib/plat-linux3 &&
-    cp Lib/plat-linux2/* Lib/plat-linux3/
-  fi &&
-
-  sedit "s:-O3:$CFLAGS -Os:g" configure  &&
-
   OPTS+=" --enable-shared"  &&
 
   default_build &&
@@ -21,5 +11,3 @@
   mv Misc/{cheatsheet,NEWS} .  &&
   chmod 644 cheatsheet NEWS README  &&
   gather_docs cheatsheet NEWS README
-
-) > $C_FIFO 2>&1
