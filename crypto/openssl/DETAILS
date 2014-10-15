@@ -9,7 +9,7 @@
    SOURCE_URL[4]=ftp://ftp.duth.gr/pub/OpenSSL/source
       SOURCE_VFY=sha256:1b60ca8789ba6f03e8ef20da2293b8dc131c39d83814e775069f02d26354edf3
      SOURCE2_URL=$PATCH_URL
-     SOURCE2_VFY=sha1:0f30d44c0bf27883876bdf56fe9c541ee28bc2cd
+     SOURCE2_VFY=sha256:9b44b0bfac91672a3249e70484d036924ca528b4f704ff7ef2a9b46413d2afab
         WEB_SITE=http://www.openssl.org
          ENTERED=20010922
          UPDATED=20141015
