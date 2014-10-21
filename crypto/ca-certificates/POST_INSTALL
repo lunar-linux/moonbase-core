@@ -1,1 +1,1 @@
-/usr/sbin/update-ca-certificates --fresh
+/usr/sbin/update-ca-certificates --fresh &> /dev/null
