@@ -1,6 +1,6 @@
   make             &&
   prepare_install  &&
-  install -d -m755 /{etc/ca-certificates/updates.d,usr/{sbin,share/ca-certificates},etc/ssl/certs}  &&
+  install -d -m755 /{etc/{ca-certificates/update.d,ssl/certs},usr/share/ca-certificates}  &&
   install -D -m644 sbin/update-ca-certificates.8 /usr/share/man/man8/update-ca-certificates.8  &&
   make install     &&
 
