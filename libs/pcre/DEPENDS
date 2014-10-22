@@ -1,1 +1,3 @@
 depends pkgconfig
+depends zlib
+depends bzip2
