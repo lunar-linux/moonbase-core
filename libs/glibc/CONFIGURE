@@ -5,23 +5,20 @@ download_module glibc &&
 LOCALEDATA_DIR="/tmp/localedata"
 ORIGINAL_SUPPORTED="$LOCALEDATA_DIR/SUPPORTED"
 COPIED_SUPPORTED="/tmp/supported-locales"
-FILELIST_FILE="$LOCALEDATA_DIR-files"
 
 unpack_localedata() {
   # Write the path of the localedata archive path into a file
-  echo "${SOURCE/.tar.xz/}/localedata" > $FILELIST_FILE &&
 
   message "Extracting locale data .. this might take a second .."
 
   # Extract the localedata directory from the source tarball
   tar -C /tmp               \
-      -T $FILELIST_FILE     \
       --strip-components=1  \
-      -xJf $SOURCE_CACHE/$SOURCE
+      -xJf $SOURCE_CACHE/$SOURCE "${SOURCE/.tar.xz/}/localedata"
 }
 
 remove_temporary_files() {
-  rm -rf $LOCALEDATA_DIR $FILELIST_FILE $COPIED_SUPPORTED
+  rm -rf $LOCALEDATA_DIR $COPIED_SUPPORTED
 }
 
 make_locales_checklist() {
