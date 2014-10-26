@@ -1,13 +1,13 @@
           MODULE=less
-         VERSION=468
+         VERSION=470
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=http://www.greenwoodsoftware.com/$MODULE
    SOURCE_URL[1]=$GNU_URL/$MODULE
    SOURCE_URL[2]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:48e8b5ccb10d02447415e3b95d2e86fa39efe7cad2f7c235136e67c6ef8566e8
+      SOURCE_VFY=sha256:f191dc51144e7ea0e7f116118d0ee7a5fe50d1ce330257e1ae5ee4c9d35d86ef
         WEB_SITE=http://www.greenwoodsoftware.com/less
          ENTERED=20010922
-         UPDATED=20140927
+         UPDATED=20141016
            SHORT="A paginator that allows backward and forward movement"
 
 cat << EOF
