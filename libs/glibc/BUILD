@@ -1,13 +1,12 @@
-
   # The fortify compiler option cause the build to fail
-  bad_flags -D_FORTIFY_SOURCE=2  &&
+  bad_flags -D_FORTIFY_SOURCE=2 -fstack-protector-strong &&
+
+  # Fix NPTL issues with Xen on i686
+  export CFLAGS+=" -mno-tls-direct-seg-refs" &&
 
   mkdir -p $SOURCE_DIRECTORY/tmp  &&
 
   export CC_OPTS=( Pipe )  &&
-
-  # There is no other option but nptl
-  OPTS+=" --enable-add-ons=nptl,libidn --with-__thread --with-tls --disable-profile --enable-kernel=2.6.32 --with-headers=/usr/include"  &&
 
   if [ -n "$MAKES" ] && [ "$MAKES" -gt 1 ] ; then
     sedit "s/# PARALLELMFLAGS = -j 4/PARALLELMFLAGS = -j $MAKES/" Makefile.in
@@ -36,9 +35,24 @@
                --build=$BUILD             \
                --enable-obsolete-rpc      \
                --disable-multi-arch       \
+               --enable-add-ons           \
+               --with-__thread            \
+               --with-tls                 \
+               --disable-profile          \
                --enable-bind-now          \
+               --enable-kernel=2.6.32     \
+               --with-headers=/usr/include \
                --enable-stackguard-randomization \
                $OPTS  &&
+
+  # build libraries with hardening disabled
+  echo "build-programs=no" >> configparms &&
+  make &&
+
+  # Re-enable hardening
+  sedit '/build-programs=/s;no;yes;' configparms &&
+  echo "CC += -fstack-protector-strong -D_FORTIFY_SOURCE=2" >> configparms &&
+  echo "CXX += -fstack-protector-strong -D_FORTIFY_SOURCE=2" >> configparms &&
   make &&
 
   # Preserve the old glibc temporarily
