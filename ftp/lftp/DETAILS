@@ -10,6 +10,9 @@
          UPDATED=20141013
            SHORT="A sophisticated ftp/http client, file transfer program"
 
+
+
+
 cat << EOF
 LFTP is sophisticated ftp/http client, file transfer program. Like BASH,
 it has job control and uses readline library for input. It has bookmarks,
