@@ -9,6 +9,8 @@
          UPDATED=20130325
            SHORT="finds differences between and among files"
 
+	   # ANOTHER TEST
+
 cat << EOF
 diffutils is a group of utilities that displays difference between and
 among text files.
