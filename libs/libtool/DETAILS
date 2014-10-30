@@ -1,6 +1,5 @@
           MODULE=libtool
-            BASE=2.4
-         VERSION=${BASE}.3
+         VERSION=2.4.3
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
