@@ -1,1 +1,4 @@
-depends  "pcre"
+depends  pcre
+
+optional_depends "libunistring"  ""  ""  "for Unicode support"
+
