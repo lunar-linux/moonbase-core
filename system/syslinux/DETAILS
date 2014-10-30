@@ -1,16 +1,14 @@
           MODULE=syslinux
-         VERSION=4.07
-          SOURCE=$MODULE-$VERSION.tar.gz
+         VERSION=6.03
+          SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$KERNEL_URL/pub/linux/utils/boot/$MODULE
    SOURCE_URL[1]=ftp://ftp.kernel.org/pub/linux/utils/boot/$MODULE
-      SOURCE_VFY=sha1:8e425b9f0b2d01530350f9304184271067dd3202
+      SOURCE_VFY=sha1:1bea76b97b4e32a017dd4168e819934b7c6592cc
         WEB_SITE=http://syslinux.zytor.com
          ENTERED=20010922
-         UPDATED=20130729
-      MAINTAINER=tchan@lunar-linux.org
-           PSAFE=no
+         UPDATED=20141025
            SHORT="bootloader for Linux that works on FAT and ISO9660 filesystems"
-
+PSAFE=no
 cat << EOF
 SYSLINUX is a boot loader for the Linux operating system which operates
 off of MS-DOS floppies. It is intended to simplify first-time
