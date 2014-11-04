@@ -1,11 +1,11 @@
           MODULE=groff
-         VERSION=1.22.2
+         VERSION=1.22.3
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$GNU_URL/$MODULE
-      SOURCE_VFY=sha1:37223941e25bb504bf54631daaabb01b147dc1d3
+      SOURCE_VFY=sha256:3a48a9d6c97750bfbd535feeb5be0111db6406ddb7bb79fc680809cda6d828a5
         WEB_SITE=http://www.gnu.org/software/groff/groff.html
          ENTERED=20010922
-         UPDATED=20130208
+         UPDATED=20141104
            SHORT="A device-independent document processor/formatter"
 PSAFE=no
 
