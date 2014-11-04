@@ -1,7 +1,8 @@
 (
 
   cd wpa_supplicant  &&
-  sedit "s/\/usr\/local/\/usr/g" Makefile   &&
+  cp $SCRIPT_DIRECTORY/config ./.config  &&
+  sedit "s/\/usr\/local/\/usr/g"  Makefile  &&
   sedit "s/dynamic_eap_methods//" Makefile  &&
 
   for option in \
