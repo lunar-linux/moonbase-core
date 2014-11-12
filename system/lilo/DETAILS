@@ -1,12 +1,11 @@
           MODULE=lilo
-         VERSION=24.0
+         VERSION=24.1
           SOURCE=$MODULE-$VERSION.tar.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-24.0
       SOURCE_URL=http://lilo.alioth.debian.org/ftp/sources
-      SOURCE_VFY=sha256:3d40c0af1d60a0adbe3696cd6cb8d7e892694351ff225371d871b6b479d82152
+      SOURCE_VFY=sha256:a15280edacb8bca31b9163d65e61270b8c06cb9ffea74374a3a42164a13d4532
         WEB_SITE=http://home.san.rr.com/johninsd/pub/linux/lilo
          ENTERED=20010922
-         UPDATED=20140918
+         UPDATED=20141110
            SHORT="Boot loader for Linux/x86 and other PC operating systems"
 GARBAGE=off
 
