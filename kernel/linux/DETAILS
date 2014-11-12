@@ -1,5 +1,5 @@
           MODULE=linux
-         VERSION=3.16.3
+         VERSION=3.17.2
             BASE=$(echo $VERSION | cut -d. -f1,2)
           SOURCE=$MODULE-$BASE.tar.xz
 if [ -n "$(echo $VERSION | cut -d. -f3)" ] ; then
@@ -9,11 +9,11 @@ fi
    SOURCE_URL[1]=http://www.kernel.org/pub/linux/kernel/v3.x
   SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v3.x
   SOURCE2_URL[1]=http://www.kernel.org/pub/linux/kernel/v3.x
-      SOURCE_VFY=sha256:4813ad7927a7d92e5339a873ab16201b242b2748934f12cb5df9ba2cfe1d77a0
-     SOURCE2_VFY=sha256:3fbe03714f943605d711ff317aa52053e29bc50e63a8e6a17c2504cde1160208
+      SOURCE_VFY=sha256:f5153ec93c5fcd41b247950e6a9bcbc63fa87beafd112c133a622439a0f76251
+     SOURCE2_VFY=sha256:4576c30a46c016502cdd007d28dde4f2d141c0f8096be8623a9ff519323db777
         WEB_SITE=http://www.kernel.org/
          ENTERED=20111121
-         UPDATED=20140919
+         UPDATED=20141031
            SHORT="The core of a Linux GNU Operating System"
 KEEP_SOURCE=on
 TMPFS=off
