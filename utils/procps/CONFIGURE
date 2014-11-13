@@ -1,0 +1,3 @@
+mquery ENABLE_WIDE_PERCENT "Enable extra precision under %CPU and %MEM for top?" n "--enable-wide-percent" "--disable-wide-percent"
+mquery ENABLE_SIG_WINCH "Reduce impact of x-windows resize operations on top?" n "--enable-sigwinch" "--disable-sigwinch"
+mquery ENABLE_W "Enable w from field by default?" n "--enable-w-from" "--disable-w-from"
