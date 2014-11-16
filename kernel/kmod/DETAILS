@@ -1,11 +1,11 @@
           MODULE=kmod
-         VERSION=18
+         VERSION=19
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=ftp://ftp.kernel.org/pub/linux/utils/kernel/$MODULE
-      SOURCE_VFY=sha1:6cadc3b088fa5874f712d3bbe4df75ece59c4b77
+      SOURCE_VFY=sha256:3e7fee6eeff5435848b2dcc852bc8959066478d687d232284d67300c071e7b14
         WEB_SITE=http://www.politreco.com/2011/12/announce-kmod-1
          ENTERED=20120115
-         UPDATED=20140617
+         UPDATED=20141116
            SHORT="A lib for kernel modules management"
 
 cat << EOF
