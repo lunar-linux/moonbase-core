@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:3a48a9d6c97750bfbd535feeb5be0111db6406ddb7bb79fc680809cda6d828a5
         WEB_SITE=http://www.gnu.org/software/groff/groff.html
          ENTERED=20010922
-         UPDATED=20141104
+         UPDATED=20141120
            SHORT="A device-independent document processor/formatter"
 PSAFE=no
 
