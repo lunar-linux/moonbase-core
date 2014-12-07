@@ -1,2 +1,4 @@
 depends bison
 depends flex
+
+optional_depends libnl3 "--with-libnl" "--without-libnl" "enable libnl3 support"
