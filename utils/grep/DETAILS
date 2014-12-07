@@ -1,12 +1,12 @@
           MODULE=grep
-         VERSION=2.20
+         VERSION=2.21
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha1:55aac6158b51baa505669cf8f86440bcc106ec65
+      SOURCE_VFY=sha256:5244a11c00dee8e7e5e714b9aaa053ac6cbfa27e104abee20d3c778e4bb0e5de
         WEB_SITE=http://www.gnu.org/software/grep/grep.html
          ENTERED=20010922
-         UPDATED=20140604
+         UPDATED=20141124
            SHORT="grep finds lines that match specified patterns"
 
 cat << EOF
