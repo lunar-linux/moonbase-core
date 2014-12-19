@@ -1,12 +1,12 @@
           MODULE=file
-         VERSION=5.20
+         VERSION=5.21
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=ftp://ftp.astron.com/pub/$MODULE
    SOURCE_URL[1]=ftp://ftp.gw.com/pub/unix/$MODULE
-      SOURCE_VFY=sha256:5bc36bfbb83a009da25a7174848f1bc5824be03192a8fdce7f83dc897ed2d247
+      SOURCE_VFY=sha256:1a48741d3923c4cc73267109b8a396c0ce3aebe004181f3efb1b0a228d230bb6
         WEB_SITE=ftp://ftp.astron.com/pub/file
          ENTERED=20010922
-         UPDATED=20141012
+         UPDATED=20141213
            SHORT="File attempts to classify files by their content"
 
 cat << EOF
