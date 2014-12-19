@@ -1,11 +1,11 @@
           MODULE=pbzip2
-         VERSION=1.1.10
+         VERSION=1.1.11
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=https://launchpad.net/$MODULE/${VERSION%.*}/$VERSION/+download/
-      SOURCE_VFY=sha256:9d489191edd010e4c8f7bc86de88268cdc3da5a9f7904b257fda56941615a0c2
+      SOURCE_VFY=sha256:b4861389bd99c73d304a03b0dc0731a8a26905da8e94ca4cef873b96e1ab0e7f
         WEB_SITE=http://compression.ca/pbzip2
          ENTERED=20110221
-         UPDATED=20141124
+         UPDATED=20141215
            SHORT="parallel implementation of the bzip2 compressor"
 
 cat << EOF
