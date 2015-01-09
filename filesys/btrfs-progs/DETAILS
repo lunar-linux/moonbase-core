@@ -1,11 +1,11 @@
           MODULE=btrfs-progs
-         VERSION=v3.16
+         VERSION=v3.18
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://www.kernel.org/pub/linux/kernel/people/mason/btrfs-progs/
-      SOURCE_VFY=sha256:9a7651df6c0430b75fa0637519ca5be29a756684dada241b4398007ae3cb0b5e
+      SOURCE_URL=$MIRROR_URL
+      SOURCE_VFY=sha256:bfb61b3668f25a7b2ca40e684497f725359bfb0c6450ae59f54f90255a1c818b
         WEB_SITE=http://btrfs.wiki.kernel.org/index.php/Main_Page
          ENTERED=20090819
-         UPDATED=20140827
+         UPDATED=20150101
            SHORT="btrfs userspace tools"
 
 cat <<EOF
