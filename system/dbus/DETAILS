@@ -1,5 +1,5 @@
           MODULE=dbus
-         VERSION=1.8.144
+         VERSION=1.8.14
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://$MODULE.freedesktop.org/releases/$MODULE
       SOURCE_VFY=sha256:83425250a6a4c93b9ab4a349771a7700e8ddff2d73a5a088222ca47ae9ce1f1a
