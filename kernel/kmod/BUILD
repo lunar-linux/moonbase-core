@@ -12,6 +12,8 @@
 
   default_make  &&
 
+  install -dm755 /{etc,usr/lib}/{depmod,modprobe}.d &&
+
 # add symlinks to kmod
   ln -sf /bin/kmod "/bin/lsmod"  &&
   for tool in {ins,rm,dep}mod mod{info,probe}; do
