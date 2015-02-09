@@ -1,3 +1,6 @@
+  # optimize -O2
+  CFLAGS+=" -O2" &&
+
   # The fortify compiler option cause the build to fail
   bad_flags -D_FORTIFY_SOURCE=2 -fstack-protector-strong &&
 
@@ -24,6 +27,7 @@
   ../configure --prefix=/usr              \
                --infodir=/usr/share/info  \
                --mandir=/usr/share/man    \
+               --disable-werror           \
                --with-elf                 \
                --without-gd               \
                --without-cvs              \
