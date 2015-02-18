@@ -2,7 +2,7 @@
          VERSION=008
           SOURCE=$MODULE-$VERSION.tar.xz
          SOURCE2=usb.ids.gz
-   SOURCE_URL[0]=http://ftp.uni-frankfurt.de/kernel/linux/utils/usb/$MODULE
+   SOURCE_URL[0]=$KERNEL_URL/pub/linux/utils/usb/$MODULE
    SOURCE_URL[1]=http://mirror.anl.gov/pub/linux/utils/usb/$MODULE
      SOURCE2_URL=http://www.linux-usb.org
       SOURCE_VFY=sha1:233dee6cd6829476be778554984045663b568b18
