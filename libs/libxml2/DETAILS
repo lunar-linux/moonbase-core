@@ -2,13 +2,19 @@
          VERSION=2.9.2
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=$MODULE-largefile64.patch
+         SOURCE3=libxml2-2.9.2-revert-missing-initialization.patch
+         SOURCE4=libxml2-2.9.2-cve-2014-3660.patch
       SOURCE_URL=ftp://xmlsoft.org/$MODULE
      SOURCE2_URL=$PATCH_URL
+     SOURCE3_URL=$PATCH_URL
+     SOURCE4_URL=$PATCH_URL
       SOURCE_VFY=sha256:5178c30b151d044aefb1b08bf54c3003a0ac55c59c866763997529d60770d5bc
      SOURCE2_VFY=sha256:7ccd86fc493af76244e655b0f8a0c4b2df0bc5ef15856b07903f409f52bb0cde
+     SOURCE3_VFY=sha256:160258250f519b9d71e7d4ba913df6b2ba6109e1ac533bd19a3061ffbe82cd18
+     SOURCE4_VFY=sha256:e654d3f76b87d960e0dd4d8ef614c296bd8526db42f426f7276aaf8be086c166
         WEB_SITE=http://xmlsoft.org
          ENTERED=20010922
-         UPDATED=20141026
+         UPDATED=20150221
            SHORT="XML version 2 parser for Gnome"
 
 cat << EOF
