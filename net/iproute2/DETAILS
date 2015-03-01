@@ -1,14 +1,14 @@
           MODULE=iproute2
-         VERSION=3.18.0
+         VERSION=3.19.0
           SOURCE=$MODULE-$VERSION.tar.xz
          SOURCE2=$MODULE-fhs.patch.bz2
       SOURCE_URL=http://www.kernel.org/pub/linux/utils/net/$MODULE
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:d5a182154abd0749b1df7d1649115a32c65f559951477396203b1f514dbff1df
+      SOURCE_VFY=sha256:e2f9f8c36e166f2ba6c0e1e7a9ad84cdf7c1615b93df49dac44563d7b57fd7b0
      SOURCE2_VFY=sha256:99b4018992b0d0bac794267ccf665e5e0595d42a7b341ffffeb95aefe7299869
         WEB_SITE=http://www.linuxfoundation.org/collaborate/workgroups/networking/$MODULE
          ENTERED=20021106
-         UPDATED=20141231
+         UPDATED=20150213
            SHORT="Professional tools to control networking in Linux kernels"
 
 cat << EOF
