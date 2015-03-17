@@ -13,7 +13,7 @@ fi
      SOURCE2_VFY=sha256:3dbf80df9a81a285baa5188ea8d768110f24a3e4fe8bd37e1c9d7410d60a680b
         WEB_SITE=http://www.kernel.org/
          ENTERED=20111121
-         UPDATED=20150609
+         UPDATED=20150309
            SHORT="The core of a Linux GNU Operating System"
 KEEP_SOURCE=on
 TMPFS=off
