@@ -1,7 +1,8 @@
           MODULE=libidn
          VERSION=1.30
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=$GNU_URL/$MODULE
+   SOURCE_URL[0]=$GNU_URL/$MODULE/
+   SOURCE_URL[1]=http://ftp.gnu.org/gnu/$MODULE/
       SOURCE_VFY=sha256:39b9fc94d74081c185757b12e0891ce5a22db55268e7d1bb24533ff4432eb053
         WEB_SITE=http://www.gnu.org/software/libidn
          ENTERED=20041220
