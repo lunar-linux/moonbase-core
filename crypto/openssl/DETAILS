@@ -1,5 +1,5 @@
           MODULE=openssl
-         VERSION=1.0.2
+         VERSION=1.0.2a
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=Makefile.openssl-certs
    SOURCE_URL[0]=http://www.openssl.org/source
@@ -8,11 +8,11 @@
    SOURCE_URL[3]=ftp://ftp.infoscience.co.jp/pub/Crypto/SSL/openssl/source
    SOURCE_URL[4]=ftp://ftp.duth.gr/pub/OpenSSL/source
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:8c48baf3babe0d505d16cfc0cf272589c66d3624264098213db0fb00034728e9
+      SOURCE_VFY=sha256:15b6393c20030aab02c8e2fe0243cb1d1d18062f6c095d67bca91871dc7f324a
      SOURCE2_VFY=sha256:9b44b0bfac91672a3249e70484d036924ca528b4f704ff7ef2a9b46413d2afab
         WEB_SITE=http://www.openssl.org
          ENTERED=20010922
-         UPDATED=20150123
+         UPDATED=20150320
            PSAFE="no"
            SHORT="A library for providing encrypted transport layers"
 
