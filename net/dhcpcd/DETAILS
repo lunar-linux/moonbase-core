@@ -1,5 +1,5 @@
           MODULE=dhcpcd
-         VERSION=6.8.0
+         VERSION=6.8.1
           SOURCE=$MODULE-$VERSION.tar.bz2
    SOURCE_URL[0]=http://roy.marples.name/downloads/dhcpcd
    SOURCE_URL[1]=ftp://gentoo.arcticnetwork.ca/pub/gentoo/distfiles
@@ -8,10 +8,10 @@
    SOURCE_URL[4]=http://mirror.datapipe.net/gentoo/distfiles
    SOURCE_URL[5]=http://gentoo.chem.wisc.edu/gentoo/distfiles
    SOURCE_URL[6]=http://mirror.internode.on.net/pub/gentoo/distfiles
-      SOURCE_VFY=sha256:8b01454fa448cc0d87cd209edf03422cbd08dc5b4c7f2477c1de1dc4ffcca240
+      SOURCE_VFY=sha256:27b60cbf726a8319e6f1e7691132082c9cdac473317ea47cb093d0dd3d32af82
         WEB_SITE=http://roy.marples.name/projects/dhcpcd
          ENTERED=20011126
-         UPDATED=20150329
+         UPDATED=20150401
            SHORT="DHCP client/daemon that works with @home"
 cat << EOF
 dhcpcd is an RFC2131-, RFC2132-, and RFC1541-compliant DHCP client
