@@ -1,5 +1,3 @@
-(
-
   sedit 's/PREFIX=\/usr\/local/PREFIX=\/usr/' Makefile &&
   sedit "s:SHARED=no:SHARED=yes:" Makefile &&
 
@@ -15,5 +13,3 @@
   # the next line makes sure you will get a fresh pci id's db
   # everytime you lin pciutils:
   rm -f $SOURCE_CACHE/$SOURCE2
-
-) > $C_FIFO 2>&1
