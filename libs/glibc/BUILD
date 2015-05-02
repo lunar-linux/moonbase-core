@@ -1,6 +1,3 @@
-  # optimize -O2
-  CFLAGS+=" -O2" &&
-
   # The fortify compiler option cause the build to fail
   bad_flags -D_FORTIFY_SOURCE=2 -fstack-protector-strong &&
 

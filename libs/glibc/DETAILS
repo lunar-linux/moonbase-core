@@ -3,15 +3,18 @@
            MAJOR=${VERSION::4}
           SOURCE=$MODULE-$VERSION.tar.xz
          SOURCE2=$MODULE-2.18-no_timezones.patch
+         SOURCE3=glibc-2.21-roundup.patch
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/glibc
      SOURCE2_URL=$PATCH_URL
+     SOURCE3_URL=$PATCH_URL
       SOURCE_VFY=sha256:aeeb362437965a5d3f40b151094ca79def04a115bd363fdd4a9a0c69482923b8
      SOURCE2_VFY=sha256:1ba5c070fab87a0c0955385bfa2b0e20076230549717872c067628a03446417d
+     SOURCE3_VFY=sha256:4fa78b03a0f5a21212c6654e8578ed7a584867b07b6cda04aa03924ec21bb8e4
         WEB_SITE=http://www.gnu.org/software/libc
          ENTERED=20010922
-         UPDATED=20150207
+         UPDATED=20150502
            SHORT="C library for use with GNU/Hurd and GNU/Linux"
 PSAFE=no
 
