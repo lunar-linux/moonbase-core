@@ -1,0 +1,24 @@
+#!/bin/bash
+##############################################################################
+#                                                                            #
+# postbuild-glib_compile_schemas - recompile gconf schemas on schema changes #
+#                                                                            #
+##############################################################################
+#                                                                            #
+# Copyright 2015 Stefan Wold <ratler@lunar-linux.org>                        #
+#                                                                            #
+##############################################################################
+
+plugin_glib_compile_schemas_post_build()
+{
+  debug_msg "plugin_glib_compile_schemas_post_build ($@)"
+
+  if parse_iw | grep -q "^/usr/share/glib-2.0/schemas/.*"; then
+    debug_msg "Compiling glib-2.0 schemas..."
+    glib-compile-schemas /usr/share/glib-2.0/schemas/
+  fi
+
+  return 2
+}
+
+plugin_register BUILD_POST_BUILD plugin_glib_compile_schemas_post_build

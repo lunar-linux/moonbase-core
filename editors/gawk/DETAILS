@@ -1,12 +1,12 @@
           MODULE=gawk
-         VERSION=4.1.1
+         VERSION=4.1.2
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha1:547feb48d20e923aff58daccee97c94e047fdc18
+      SOURCE_VFY=sha256:ea8b53c5834ee27012fecba7273f97fca7104884975cf81ddae6f85c5581f481
         WEB_SITE=http://www.gnu.org/software/gawk/gawk.html
          ENTERED=20010922
-         UPDATED=20140410
+         UPDATED=20150429
            SHORT="A free version of awk"
 
 cat << EOF
