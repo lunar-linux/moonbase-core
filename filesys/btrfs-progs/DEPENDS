@@ -1,3 +1,6 @@
+depends zlib
 depends lzo
-optional_depends xmlto "" "" "for documentation (also requires asciidoc)"
+depends e2fsprogs
+
+optional_depends xmlto    "" "" "for documentation (also requires asciidoc)"
 optional_depends asciidoc "" "" "for documentation (also requires xmlto)"

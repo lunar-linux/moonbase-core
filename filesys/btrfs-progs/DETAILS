@@ -1,8 +1,8 @@
           MODULE=btrfs-progs
-         VERSION=v3.18
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$MIRROR_URL
-      SOURCE_VFY=sha256:bfb61b3668f25a7b2ca40e684497f725359bfb0c6450ae59f54f90255a1c818b
+         VERSION=4.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=http://github.com/kdave/btrfs-progs/archive/v4.0.tar.gz
+      SOURCE_VFY=sha256:ac9171b967d2159aaac170b184290820a9158ee324ae8641397f7866cd61860b
         WEB_SITE=http://btrfs.wiki.kernel.org/index.php/Main_Page
          ENTERED=20090819
          UPDATED=20150101
