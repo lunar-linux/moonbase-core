@@ -27,6 +27,7 @@
   ../configure --prefix=/usr              \
                --infodir=/usr/share/info  \
                --mandir=/usr/share/man    \
+               --disable-werror           \
                --with-elf                 \
                --without-gd               \
                --without-cvs              \

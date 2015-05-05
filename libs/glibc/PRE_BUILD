@@ -3,9 +3,5 @@ default_pre_build &&
 sedit 's@^#\s*warning \+_FORTIFY_SOURCE requires compiling with optimization.*$@/* Disabled by lunar as there is no better solution: \0*/@' include/features.h &&
 
 patch_it $SOURCE2 1 &&
-# fix for segfault, https://sourceware.org/ml/libc-alpha/2014-09/msg00312.html
-patch_it $SOURCE3 1 &&
-# kernel 3.16 additions
-patch_it $SOURCE4 1 &&
-# fix memory leak
-patch_it $SOURCE5 1
+# Fix for https://sourceware.org/bugzilla/show_bug.cgi?id=17949
+patch_it $SOURCE3 1
