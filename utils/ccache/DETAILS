@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:5d1c719c7dfe8d0dffbb4aea3ab5a67b602b065219e1f8ba7bd9298915966587
         WEB_SITE=http://ccache.samba.org
          ENTERED=20020701
-         UPDATED=20141514
+         UPDATED=20150516
            SHORT="A compiler cache"
 
 cat << EOF
