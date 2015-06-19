@@ -1,5 +1,3 @@
-(
-
   OPTS+=" --without-wrap       \
           --disable-servers    \
           --disable-ifconfig   \
@@ -26,5 +24,3 @@
           --enable-dnsdomainname" &&
 
   default_build
-
-) > $C_FIFO 2>&1
