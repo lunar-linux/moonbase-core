@@ -1,11 +1,11 @@
           MODULE=inetutils
-         VERSION=1.9.3
+         VERSION=1.9.4
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$GNU_URL/$MODULE
-      SOURCE_VFY=sha256:9276863f9e5874d05f403920b7fdee76e472ed4b713a7c62d729fa2ba582ba19
+      SOURCE_VFY=sha256:be8f75eff936b8e41b112462db51adf689715658a1b09e0d6b05d11ec92cc616
         WEB_SITE=http://www.gnu.org/software/inetutils
          ENTERED=20080429
-         UPDATED=20150515
+         UPDATED=20150617
            SHORT="A collection of common network programs"
 
 cat << EOF
