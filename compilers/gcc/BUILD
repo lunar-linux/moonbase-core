@@ -1,4 +1,3 @@
-
 #sedit 's/trap 0/trap "" 0/' configure  &&
 
 mkdir BUILD  &&
