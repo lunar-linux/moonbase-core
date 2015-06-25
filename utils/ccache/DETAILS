@@ -1,11 +1,11 @@
           MODULE=ccache
-         VERSION=3.2.1
+         VERSION=3.2.2
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://samba.org/ftp/$MODULE
-      SOURCE_VFY=sha256:f8709a83daaeb9be22fe35c42e7862a8699b50de181ba3e28c89c092014ccb55
+      SOURCE_VFY=sha256:5d1c719c7dfe8d0dffbb4aea3ab5a67b602b065219e1f8ba7bd9298915966587
         WEB_SITE=http://ccache.samba.org
          ENTERED=20020701
-         UPDATED=20141215
+         UPDATED=20150516
            SHORT="A compiler cache"
 
 cat << EOF
