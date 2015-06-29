@@ -1,5 +1,3 @@
-(
-
   OPTS+=" --disable-static"  &&
 
   if [ -f /usr/lib/libmpfr.so.1.2.2 ]; then
@@ -14,5 +12,3 @@
      mv -f /usr/lib/libmpfr.so.1.2.2.old /usr/lib/libmpfr.so.1.2.2
      ln -sf /usr/lib/libmpfr.so.1.2.2 /usr/lib/libmpfr.so.1
    fi
-
-) > $C_FIFO 2>&1
