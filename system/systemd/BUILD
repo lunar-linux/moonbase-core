@@ -1,16 +1,16 @@
 OPTS+=" --libexecdir=/usr/lib  \
         --enable-split-usr     \
+        --enable-compat-libs   \
         --disable-terminal     \
         --disable-audit        \
         --disable-ima          \
         --disable-kdbus        \
         --with-kbd-loadkeys=/usr/bin/loadkeys \
-        --with-kbd-setfont=/usr/bin/setfont"
-
+        --with-kbd-setfont=/usr/bin/setfont" &&
 
 add_priv_group systemd-journal &&
 
-# a not existing hostname is set to lunar.
+# a not existing hostname is set to lunar
 if [[ ! -f /etc/hostname ]]; then
    install -m 0644 -o root -g root $SCRIPT_DIRECTORY/files/hostname /etc/hostname
 fi &&

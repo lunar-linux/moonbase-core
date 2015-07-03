@@ -34,5 +34,6 @@ if mountpoint -q /usr && ! module_installed dracut; then
   fi
 fi
 
-default_pre_build &&
-patch_it $SOURCE2 1
+default_pre_build
+
+#patch_it $SOURCE2 1
