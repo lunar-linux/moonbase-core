@@ -1,14 +1,14 @@
           MODULE=systemd
-         VERSION=219
+         VERSION=221
           SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=systemd-219-compat-1.patch
+#         SOURCE2=systemd-219-compat-1.patch
       SOURCE_URL=http://www.freedesktop.org/software/systemd
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:5c57113454e37c040d0cb481bd960ae7cf3a3fe0a231ff4945259bc74503f2d9
-     SOURCE2_VFY=sha256:f28eaad4d4ecb35e98f8ba861b26884f7a724feb52217c9dc2d7a71f4fe2e5f0
+#     SOURCE2_URL=$PATCH_URL
+      SOURCE_VFY=sha256:085e088650afbfc688ccb13459aedb1fbc7c8810358605b076301f472d51cc4f
+#     SOURCE2_VFY=sha256:
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20150220
+         UPDATED=20150619
            SHORT="A system and program management daemon"
 PSAFE=no
 

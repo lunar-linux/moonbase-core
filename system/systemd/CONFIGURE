@@ -4,7 +4,7 @@ if [ -z "$NSCHEME" ] && ip link | egrep -q '^[0-9]*: (eth|wlan|ppp|ath|tun|ra|us
   message "It is recommended to switch to the new naming scheme. Please note"
   message "that reconfiguration of your network interfaces using the new"
   message "device names are required!\n"
-  
+
   mquery NEW_NAME_SCHEME "Enable new naming scheme for network interfaces (RECOMMENDED)?" n
 fi
 
