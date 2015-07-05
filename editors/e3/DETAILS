@@ -1,11 +1,11 @@
           MODULE=e3
-         VERSION=2.7.1
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://mitglied.multimania.de/albkleine
-      SOURCE_VFY=sha1:3efe3f0d463c10fe2f1ed04ff7726142df8470b4
-        WEB_SITE=http://mitglied.multimania.de/albkleine/
+         VERSION=2.8
+          SOURCE=$MODULE-$VERSION.tgz
+      SOURCE_URL=http://sites.google.com/site/e3editor/Home
+      SOURCE_VFY=sha256:035737d0cc82b287386fdff8682b2c23ef620d7ef97dff7a1b1fe1777e4c4fb7
+        WEB_SITE=https://sites.google.com/site/e3editor
          ENTERED=20010922
-         UPDATED=20071127
+         UPDATED=20150705
            SHORT="assembler written minimalistic full-screen text editor."
 
 cat << EOF
