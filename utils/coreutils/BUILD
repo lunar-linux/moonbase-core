@@ -1,5 +1,3 @@
-(
-
   patch_it $SOURCE_CACHE/$SOURCE2 1  &&
 
   export FORCE_UNSAFE_CONFIGURE=1  &&
@@ -26,5 +24,3 @@
     ln -sf /usr/bin/pwd /bin/pwd  &&
     ln -sf /usr/bin/ln /bin/ln
   fi
-
-) > $C_FIFO 2>&1
