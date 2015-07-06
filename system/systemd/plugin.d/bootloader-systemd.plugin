@@ -17,16 +17,21 @@ plugin_kernel_updatebootloader_systemd() {
     return 2
   fi
 
-  # Continue with the next plugin if systemd was installed without UEFI support
+  # Continue with the next plugin if systemd was installed without UEFI support or
+  # if the system doesn't support EFI
   if ! type bootctl &> /dev/null; then
+    return 2
+  fi
+
+  if [ ! -d /sys/firmware/efi ]; then
     return 2
   fi
 
   debug_msg "plugin_kernel_updatebootloader_systemd($@)"
 
   if [ ! -d /boot/EFI/systemd ]; then
-    message "${PROBLEM_COLOR}WARNING: systemd UEFI bootloader not properly initialized, see 'man bootctl' for help."
-    return 1
+    message "${PROBLEM_COLOR}WARNING: systemd UEFI bootloader not properly installed, see 'man bootctl' for help."
+    return 2
   fi
 
   ENTRY="/boot/loader/entries/lunar-$2.conf"
