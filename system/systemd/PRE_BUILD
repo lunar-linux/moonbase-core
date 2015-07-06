@@ -43,4 +43,10 @@ patch_it $SOURCE2 1 &&
 #  - rules: remove all power management from udev
 #  - sd-bus: don't leak kdbus notifications
 # See patch for detailed information.
-patch_it $SOURCE3 1
+patch_it $SOURCE3 1 &&
+
+# Migration code for libgudev which is no longer part of
+# systemd to prevent partial system crash
+if [ "$(lvu installed systemd)" -lt "221" ]; then
+  cp /usr/lib/libgudev-1.0.so.0.2.0{,.saveme}
+fi
