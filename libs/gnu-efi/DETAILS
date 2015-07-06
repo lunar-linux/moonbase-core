@@ -1,0 +1,16 @@
+          MODULE=gnu-efi
+         VERSION=3.0.2
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=$SFORGE_URL/$MODULE
+      SOURCE_VFY=sha256:194b580ecdb1fad0e41914845ba064c279afb687855960b58693459e5537b4d7
+        WEB_SITE=http://sourceforge.net/projects/gnu-efi/
+         ENTERED=20150705
+         UPDATED=20150705
+         SHORT="Library for building EFI applications"
+PSAFE=no
+
+cat << EOF
+Develop EFI applications for ARM-64, ARM-32, x86_64, IA-64 (IPF), and
+IA-32 (x86) platforms using the GNU toolchain and the EFI development
+environment.
+EOF

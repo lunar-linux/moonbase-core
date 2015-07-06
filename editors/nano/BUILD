@@ -1,4 +1,3 @@
-(
 
   if [[ "$COLOR" == "y" ]] ; then
     OPTS+=" --enable-color"
@@ -16,6 +15,4 @@
     bzcat $SOURCE_CACHE/$SOURCE2 > nanorc
     install -m 0644 nanorc /etc/
   fi
-
-) > $C_FIFO 2>&1
 
