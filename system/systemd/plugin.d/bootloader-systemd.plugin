@@ -24,7 +24,7 @@ plugin_kernel_updatebootloader_systemd() {
 
   debug_msg "plugin_kernel_updatebootloader_systemd($@)"
 
-  if [ ! -d /boot/loader/entries ]; then
+  if [ ! -d /boot/EFI/systemd ]; then
     message "${PROBLEM_COLOR}WARNING: systemd UEFI bootloader not properly initialized, see 'man bootctl' for help."
     return 1
   fi
