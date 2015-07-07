@@ -69,4 +69,7 @@ HOME_URL="http://lunar-linux.org/"
 EOF
 fi
 
+udevadm hwdb --update
+journalctl --update-catalog
+
 lin -c dbus

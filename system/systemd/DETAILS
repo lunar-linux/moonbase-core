@@ -1,16 +1,18 @@
           MODULE=systemd
-         VERSION=219
+         VERSION=221
           SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=systemd-219-compat-1.patch
+         SOURCE2=systemd-221-compat-1.patch
+         SOURCE3=systemd-221-fixes.patch
       SOURCE_URL=http://www.freedesktop.org/software/systemd
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:5c57113454e37c040d0cb481bd960ae7cf3a3fe0a231ff4945259bc74503f2d9
-     SOURCE2_VFY=sha256:f28eaad4d4ecb35e98f8ba861b26884f7a724feb52217c9dc2d7a71f4fe2e5f0
+     SOURCE3_URL=$PATCH_URL
+      SOURCE_VFY=sha256:085e088650afbfc688ccb13459aedb1fbc7c8810358605b076301f472d51cc4f
+     SOURCE2_VFY=sha256:d57e00a4d214786fc6fca59ea6d606d3bfe61ed04bcbee2c65354e6793c045dd
+     SOURCE3_VFY=sha256:c6b414611b4c26e08364b37a317b79c1ef7867871bef2a816228641c5c3f880c
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20150220
+         UPDATED=20150705
            SHORT="A system and program management daemon"
-PSAFE=no
 
 cat << EOF
 systemd is a system and session manager for Linux, compatible with SysV
