@@ -1,6 +1,7 @@
 [Unit]
 Description=SSH Per-Connection Server - no daemon version
 Conflicts=sshd.service
+Wants=sshd-keys.service
 
 [Socket]
 ListenStream=22

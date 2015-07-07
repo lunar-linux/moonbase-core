@@ -1,14 +1,20 @@
 [Unit]
 Description=Create sshd host keys (one time service only)
+ConditionPathExists=|!/etc/ssh/ssh_host_key
+ConditionPathExists=|!/etc/ssh/ssh_host_key.pub
 ConditionPathExists=|!/etc/ssh/ssh_host_rsa_key
+ConditionPathExists=|!/etc/ssh/ssh_host_rsa_key.pub
 ConditionPathExists=|!/etc/ssh/ssh_host_dsa_key
-Before=sshd.service
+ConditionPathExists=|!/etc/ssh/ssh_host_dsa_key.pub
+ConditionPathExists=|!/etc/ssh/ssh_host_ecdsa_key
+ConditionPathExists=|!/etc/ssh/ssh_host_ecdsa_key.pub
+ConditionPathExists=|!/etc/ssh/ssh_host_ed25519_key
+ConditionPathExists=|!/etc/ssh/ssh_host_ed25519_key.pub
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/make -C /etc/ssh server-keys
+ExecStart=/usr/bin/ssh-keygen -A
 RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
-

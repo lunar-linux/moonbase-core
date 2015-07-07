@@ -1,6 +1,7 @@
 [Unit]
 Description=OpenSSH Daemon - daemon version
-After=syslog.target 
+Wants=sshd-keys.service
+After=sshd-keys.service network.target
 
 [Service]
 ExecStart=/usr/sbin/sshd -D
@@ -11,4 +12,3 @@ StandardOutput=syslog
 
 [Install]
 WantedBy=multi-user.target
-
