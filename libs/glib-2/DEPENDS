@@ -2,3 +2,4 @@ depends automake
 depends zlib
 depends libffi
 depends gettext
+depends elfutils
