@@ -7,7 +7,6 @@ OPTS+=" --libexecdir=/usr/lib  \
         --with-kbd-loadkeys=/usr/bin/loadkeys \
         --with-kbd-setfont=/usr/bin/setfont"
 
-
 add_priv_group systemd-journal &&
 
 # a not existing hostname is set to lunar.
