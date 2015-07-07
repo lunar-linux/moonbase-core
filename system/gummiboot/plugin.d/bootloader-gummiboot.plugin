@@ -18,8 +18,8 @@ plugin_kernel_updatebootloader_gummiboot() {
   fi
   debug_msg "plugin_kernel_updatebootloader_gummiboot($@)"
 
-  if [ ! -d /boot/loader/entries ]; then
-    message "${PROBLEM_COLOR}WARNING: Gummiboot bootloader not properly initialized, see 'man bootctl' for help."
+  if [ ! -d /boot/EFI/gummiboot ]; then
+    message "${PROBLEM_COLOR}WARNING: Gummiboot bootloader not properly initialized, see 'man gummiboot' for help."
     return 1
   fi
 
