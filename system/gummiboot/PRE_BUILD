@@ -19,4 +19,5 @@ if [ -n "$FAIL" ]; then
   fi
 fi
 
-default_pre_build
+default_pre_build &&
+patch_it $SOURCE2 1
