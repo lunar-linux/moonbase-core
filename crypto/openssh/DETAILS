@@ -1,20 +1,13 @@
           MODULE=openssh
-         VERSION=6.8p1
+         VERSION=6.9p1
           SOURCE=$MODULE-$VERSION.tar.gz
-#         SOURCE2=openssh-heimdal_no_des.patch.gz
-#         SOURCE3=openssh-$VERSION-gsskex-20080404.patch
    SOURCE_URL[0]=http://ftp3.usa.openbsd.org/pub/OpenBSD/OpenSSH/portable
    SOURCE_URL[1]=ftp://ftp5.usa.openbsd.org/pub/OpenBSD/OpenSSH/portable
    SOURCE_URL[2]=ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable
-      SOURCE_VFY=sha256:3ff64ce73ee124480b5bf767b9830d7d3c03bbcb6abe716b78f0192c37ce160e
-#     SOURCE2_URL=$PATCH_URL
-#     SOURCE2_VFY=sha1:0e2228ba4564980fe0f60235559090ea7ba8c8f8
-#  SOURCE3_URL[0]=http://www.sxw.org.uk/computing/patches
-#  SOURCE3_URL[1]=$PATCH_URL
-#     SOURCE3_VFY=sha1:41dfe293b3a3c08163cd43926fefabd321f0c37f
-        WEB_SITE=http://www.openssh.com
+      SOURCE_VFY=sha256:6e074df538f357d440be6cf93dc581a21f22d39e236f217fcd8eacbb6c896cfe
+        WEB_SITE=http://www.openssh.com/
          ENTERED=20010922
-         UPDATED=20150319
+         UPDATED=20150701
            SHORT="Client and server for encrypted remote logins and file transfers"
 
 cat << EOF
