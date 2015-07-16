@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:058dc832c096139a059e6df814080f50251a8d313c21b13364c54a1e70109122
         WEB_SITE=http://hostap.epitest.fi/wpa_supplicant
          ENTERED=20041019
-         UPDATED=20150425
+         UPDATED=20150716
            SHORT="WPA key management for Linux"
 
 cat << EOF

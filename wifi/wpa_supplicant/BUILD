@@ -1,33 +1,25 @@
-(
+cd wpa_supplicant  &&
+cp $SCRIPT_DIRECTORY/config ./.config  &&
 
-  cd wpa_supplicant  &&
-  cp $SCRIPT_DIRECTORY/config ./.config  &&
-  sedit "s/\/usr\/local/\/usr/g"  Makefile  &&
-  sedit "s/dynamic_eap_methods//" Makefile  &&
+if ! in_depends $MODULE dbus; then
+  sedit '/CONFIG_CTRL_IFACE_DBUS.*=/s;y;n;g' .config
+fi &&
 
-  for option in \
-      DNET_PCAP CTRL_IFACE \
-      DRIVER_{HOSTAP,PRISM54,NL80211,NDISWRAPPER,ATMEL,WEXT,IPW,WIRED} \
-      WIRELESS_EXTENSION IEEE8021X_EAPOL MSCHAPV2 \
-      EAP_{MD5,TLS,PEAP,TTLS,GTC,OTP,SIM,AKA,PSK,LEAP}
-  do
-    echo "CONFIG_${option}=y" >> .config
-  done  &&
+make LIBDIR=/usr/lib BINDIR=/usr/bin &&
+prepare_install  &&
+make LIBDIR=/usr/lib BINDIR=/usr/bin install &&
 
-  if [ "${OPTS/*--dbus-no*/n}" != "n" ]; then
-     echo "CONFIG_CTRL_IFACE_DBUS_NEW=y" >> .config
-  fi &&
+if in_depends $MODULE dbus; then
+  install -m644 dbus/{fi.epitest.hostap.WPASupplicant.service,fi.w1.wpa_supplicant1.service} /usr/share/dbus-1/system-services/
+fi  &&
+install -d -m755 /etc/wpa_supplicant &&
+install -m644 wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf &&
 
-  make  &&
+if module_installed systemd; then
+  install -d -m755 /etc/dbus-1/system.d/ &&
+  install -d -m755 /usr/lib/systemd/system/ &&
+  install -m644 dbus/dbus-wpa_supplicant.conf /etc/dbus-1/system.d/wpa_supplicant.conf &&
+  install -m644 systemd/*.service /usr/lib/systemd/system/
+fi &&
 
-  prepare_install  &&
-  make install     &&
-
-  if [ "${OPTS/*--dbus-no*/n}" != "n" ]; then
-    install -m644 dbus/dbus-wpa_supplicant.conf /etc/dbus-1/system.d/
-  fi  &&
-  install -m644 wpa_supplicant.conf /etc/wpa_supplicant.conf.example  &&
-
-  gather_docs developer.txt wpa_supplicant.conf
-
-) > $C_FIFO 2>&1
+gather_docs developer.txt wpa_supplicant.conf
