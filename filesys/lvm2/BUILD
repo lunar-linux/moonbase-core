@@ -1,5 +1,3 @@
-(
-
   CFLAGS+=" -fPIE "
   LDFLAGS+=" -pie "
 
@@ -25,5 +23,3 @@
 
   default_make &&
   make install_system_dirs
-
-) > $C_FIFO 2>&1
