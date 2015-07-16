@@ -1,4 +1,3 @@
-(
   # Fixes an incompatibility with glibc-2.16
   sedit '/gets is a/d' gettext-*/*/stdio.in.h &&
 
@@ -17,5 +16,3 @@
                --disable-static           \
                $OPTS                     &&
   default_make
-
-) > $C_FIFO 2>&1
