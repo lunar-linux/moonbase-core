@@ -13,16 +13,19 @@
 
 plugin_systemd_configure()
 {
-  local SERVICES SERVICE_FLAGGED SERVICE SYSTEMD_SERVICES
+  local SERVICES SERVICE_FLAGGED SERVICE SYSTEMD_SERVICES DESC
   debug_msg "plugin_systemd_configure ($@)"
 
   SYSTEMD_SERVICES=$(get_module_config SYSTEMD_SERVICES)
 
   if [ -d $SCRIPT_DIRECTORY/systemd.d ]; then
     cd $SCRIPT_DIRECTORY/systemd.d
-
     SERVICES=$(ls -1)
+  elif [ -f $SCRIPT_DIRECTORY/systemd_units ]; then
+    SERVICES=$(grep ':' $SCRIPT_DIRECTORY/systemd_units | awk -F': ' '{ print $1 }')
+  fi
 
+  if [ -n "$SERVICES" ]; then
     for SERVICE in $SERVICES; do
       # don't ask for '@' services - these should always be installed but
       # never linked directly. Also ask for new or renamed services.
@@ -34,7 +37,12 @@ plugin_systemd_configure()
 	      fi
         continue
       fi
-      message "${MESSAGE_COLOR}$SERVICE: $(grep Description= $SERVICE | cut -d= -f2-)${DEFAULT_COLOR}"
+      if [ -f $SCRIPT_DIRECTORY/systemd.d/$SERVICE ]; then
+        DESC=$(grep Description= $SCRIPT_DIRECTORY/systemd.d/$SERVICE | cut -d= -f2-)
+      else
+        DESC=$(grep "^$SERVICE:" $SCRIPT_DIRECTORY/systemd_units | awk -F': ' '{ print $2 }')
+      fi
+      message "${MESSAGE_COLOR}$SERVICE: $DESC${DEFAULT_COLOR}"
       if query "Invoke $SERVICE via systemd automatically at boot ?"  y
       then
         SYSTEMD_SERVICES+=" $SERVICE"
