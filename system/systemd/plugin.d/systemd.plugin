@@ -18,11 +18,12 @@ plugin_systemd_configure()
 
   SYSTEMD_SERVICES=$(get_module_config SYSTEMD_SERVICES)
 
-  if [ -d $SCRIPT_DIRECTORY/systemd.d ]; then
-    cd $SCRIPT_DIRECTORY/systemd.d
-    SERVICES=$(ls -1)
-  elif [ -f $SCRIPT_DIRECTORY/systemd_units ]; then
-    SERVICES=$(grep ':' $SCRIPT_DIRECTORY/systemd_units | awk -F': ' '{ print $1 }')
+  SERVICES=""
+  if [[ -d $SCRIPT_DIRECTORY/systemd.d ]]; then
+    SERVICES="$SERVICES $(ls $SCRIPT_DIRECTORY/systemd.d/)"
+  fi
+  if [[ -f $SCRIPT_DIRECTORY/systemd_units ]]; then
+    SERVICES="$SERVICES $(fgrep ':' $SCRIPT_DIRECTORY/systemd_units | awk -F': ' '{ print $1 }')"
   fi
 
   if [ -n "$SERVICES" ]; then
