@@ -18,29 +18,30 @@ plugin_systemd_configure()
 
   SYSTEMD_SERVICES=$(get_module_config SYSTEMD_SERVICES)
 
-  if [ -d $SCRIPT_DIRECTORY/systemd.d ]; then
-    cd $SCRIPT_DIRECTORY/systemd.d
-    SERVICES=$(ls -1)
-  elif [ -f $SCRIPT_DIRECTORY/systemd_units ]; then
-    SERVICES=$(grep ':' $SCRIPT_DIRECTORY/systemd_units | awk -F': ' '{ print $1 }')
+  SERVICES=""
+  if [[ -d $SCRIPT_DIRECTORY/systemd.d ]]; then
+    SERVICES="$SERVICES $(ls $SCRIPT_DIRECTORY/systemd.d/)"
+  fi
+  if [[ -f $SCRIPT_DIRECTORY/systemd_units ]]; then
+    SERVICES="$SERVICES $(fgrep ':' $SCRIPT_DIRECTORY/systemd_units | awk -F': ' '{ print $1 }')"
   fi
 
-  if [ -n "$SERVICES" ]; then
+  if [[ -n "$SERVICES" ]]; then
     for SERVICE in $SERVICES; do
       # don't ask for '@' services - these should always be installed but
       # never linked directly. Also ask for new or renamed services.
       if echo $SERVICE | grep -q @ || echo $SYSTEMD_SERVICES | egrep -q "(^| )-?$SERVICE( |$)"; then
-	      if systemctl -q is-enabled $SERVICE &> /dev/null ; then
-	        SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?($SERVICE)( |$);\1\2\3;")
-	      else
-	        SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?($SERVICE)( |$);\1-\2\3;")
-	      fi
+        if systemctl -q is-enabled $SERVICE &> /dev/null ; then
+          SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?($SERVICE)( |$);\1\2\3;")
+        else
+          SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?($SERVICE)( |$);\1-\2\3;")
+        fi
         continue
       fi
-      if [ -f $SCRIPT_DIRECTORY/systemd.d/$SERVICE ]; then
-        DESC=$(grep Description= $SCRIPT_DIRECTORY/systemd.d/$SERVICE | cut -d= -f2-)
+      if [[ -f $SCRIPT_DIRECTORY/systemd.d/$SERVICE ]]; then
+        DESC=$(sed -n "s/Description=\(.*\)/\1/p" $SCRIPT_DIRECTORY/systemd.d/$SERVICE)
       else
-        DESC=$(grep "^$SERVICE:" $SCRIPT_DIRECTORY/systemd_units | awk -F': ' '{ print $2 }')
+        DESC=$(sed -n "s/^$SERVICE: \(.*\)/\1/p" $SCRIPT_DIRECTORY/systemd_units)
       fi
       message "${MESSAGE_COLOR}$SERVICE: $DESC${DEFAULT_COLOR}"
       if query "Invoke $SERVICE via systemd automatically at boot ?"  y
@@ -53,7 +54,6 @@ plugin_systemd_configure()
         systemctl stop $SERVICE &> /dev/null
       fi
     done
-    cd $SCRIPT_DIRECTORY
   fi
 
   # Look for renamed or removed services and stop and disable them.
@@ -86,7 +86,7 @@ plugin_systemd_post_build()
 
   local SYSTEMDUNITDIR=$(pkg-config systemd --variable=systemdsystemunitdir)
 
-  if [ -d $SCRIPT_DIRECTORY/systemd.d ]; then
+  if [[ -d $SCRIPT_DIRECTORY/systemd.d ]]; then
     invoke_installwatch
     verbose_msg "handling systemd.d services"
     cd $SCRIPT_DIRECTORY/systemd.d
@@ -111,7 +111,7 @@ plugin_systemd_post_build()
     # Necessary to track enabled services with installwatch
     # due to how systemctl creates symlinks
     TOUCHME=$(systemctl enable $SERVICE 2>&1 | cut -d' ' -f4)
-    if [ -n "$TOUCHME" ]; then
+    if [[ -n "$TOUCHME" ]]; then
       touch -h $TOUCHME
     fi
     devoke_installwatch
@@ -129,7 +129,7 @@ plugin_systemd_restart_services() {
     if echo $SERVICE | grep -q ^-; then
       continue;
     fi
-    if [ "${LUNAR_RESTART_SERVICES:=on}" == "on" ]; then
+    if [[ "${LUNAR_RESTART_SERVICES:=on}" == "on" ]]; then
       systemctl restart $SERVICE
     fi
   done
@@ -143,7 +143,7 @@ plugin_systemd_tmpfilesd_post_build() {
 
   SYSTEMDTEMPFILES=$(pkg-config systemd --variable=prefix)/lib/tmpfiles.d
 
-  if [ -d $SCRIPT_DIRECTORY/tmpfiles.d ]; then
+  if [[ -d $SCRIPT_DIRECTORY/tmpfiles.d ]]; then
     verbose_msg "handling systemd tmpfiles.d files"
 
     for FILE in $SCRIPT_DIRECTORY/tmpfiles.d/*; do
