@@ -1,4 +1,4 @@
-OPTS+=" --datadir=/usr/share/kbd"
+OPTS+=" --datadir=/usr/share/kbd --mandir=/usr/share/man"
 
 # rename keymap files with the same names
 # this is needed because when only name of keymap is specified
@@ -12,5 +12,6 @@ mv data/keymaps/i386/fgGIod/trf{,-fgGIod}.map &&
 
 default_config &&
 make KEYCODES_PROGS=yes RESIZECONS_PROGS=yes &&
+
 prepare_install  &&
-make KEYCODES_PROGS=yes RESIZECONS_PROGS=yes DESTDIR=${pkgdir} install
+make KEYCODES_PROGS=yes RESIZECONS_PROGS=yes install
