@@ -1,8 +1,11 @@
           MODULE=mpfr
          VERSION=3.1.3
           SOURCE=$MODULE-$VERSION.tar.bz2
+         SOURCE2=$MODULE-$VERSION-p4.patch.bz2
       SOURCE_URL=http://www.mpfr.org/$MODULE-$VERSION
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:f63bb459157cacd223caac545cb816bcdb5a0de28b809e7748b82e9eb89b0afd
+     SOURCE2_VFY=sha256:a4fbbac447994d61a3627b52df2d15068f9bb4d82259b061967b5856e106edaa
         WEB_SITE=http://www.mpfr.org
          ENTERED=20070111
          UPDATED=20150620
