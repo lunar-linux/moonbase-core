@@ -8,7 +8,7 @@
      SOURCE2_VFY=sha256:a4fbbac447994d61a3627b52df2d15068f9bb4d82259b061967b5856e106edaa
         WEB_SITE=http://www.mpfr.org
          ENTERED=20070111
-         UPDATED=20150620
+         UPDATED=20150720
            SHORT="C library for multiple-precision floating-point computations"
 
 cat << EOF
