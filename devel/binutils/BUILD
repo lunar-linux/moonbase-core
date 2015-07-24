@@ -1,4 +1,3 @@
-
 # Following the build procedure used by the LFS folks
 mkdir -p build-binutils &&
 cd build-binutils &&
