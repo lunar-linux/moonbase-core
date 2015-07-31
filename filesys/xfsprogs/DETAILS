@@ -1,12 +1,12 @@
           MODULE=xfsprogs
-         VERSION=3.2.3
+         VERSION=3.2.4
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=ftp://oss.sgi.com/projects/xfs/cmd_tars
    SOURCE_URL[1]=ftp://ftp.silug.org/pub/xfs/cmd_tars
-SOURCE_VFY=sha256:7a5124a880997939551b519610a2e54bd4cd0b0adfd563ce3f4de30827109ac9
+SOURCE_VFY=sha256:dde65ead82d3cbfa9b4ded9796b6d22095d7d759a22d41ae6f1a4ec458bb0465
         WEB_SITE=http://oss.sgi.com/projects/xfs
          ENTERED=20020110
-         UPDATED=20150611
+         UPDATED=20150731
            PSAFE=no
            SHORT="Required utilities for the XFS file system"
 
