@@ -1,5 +1,5 @@
-  OPTS+=" --sysconfdir=/etc/$MODULE --sbindir=/usr/bin --disable-static"  &&
+OPTS+=" --sysconfdir=/etc/$MODULE --sbindir=/usr/bin --disable-static"  &&
 
-  default_build  &&
+default_build  &&
 
-  ln -sf /usr/lib/libnl-3.so /usr/lib/libnl.so
+ln -sf /usr/lib/libnl-3.so /usr/lib/libnl.so
