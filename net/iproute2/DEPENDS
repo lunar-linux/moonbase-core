@@ -1,5 +1,6 @@
-depends  bison
-depends  flex
+depends flex
+depends bison
 
-optional_depends "db"       "" "--without-db" "to build arpd"
-optional_depends "iptables" "" ""             "to use IP tables"
+optional_depends iptables  "" "" "to use IP tables"
+optional_depends linux-atm "" "" "to use ATM networks"
+optional_depends db        "" "" "to build arpd"
