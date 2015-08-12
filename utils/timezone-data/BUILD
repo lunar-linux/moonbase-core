@@ -1,2 +1,2 @@
-  default_make &&
-  gather_docs Theory *.htm *.jpg
+default_make &&
+gather_docs Theory *.htm *.jpg
