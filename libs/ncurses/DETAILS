@@ -1,15 +1,12 @@
           MODULE=ncurses
-         VERSION=5.9
+         VERSION=6.0
           SOURCE=$MODULE-$VERSION.tar.gz
-	 SOURCE2=ncurses-5.9-gcc-5.patch
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:3e042e5f2c7223bffdaac9646a533b8c758b65b5
-     SOURCE2_VFY=sha256:dd0d0d24cfbb9b6a5b3c823266549e59c89e2f30e8b4d7a0de64316ee1995d47
+      SOURCE_VFY=sha256:f551c24b30ce8bfb6e96d9f59b42fbea30fa3a6123384172f9e7284bcf647260
         WEB_SITE=http://www.gnu.org/software/ncurses/ncurses.html
          ENTERED=20010922
-         UPDATED=20110430
+         UPDATED=20150809
            SHORT="Displays and updates text on text-only terminals"
            PSAFE=no
 

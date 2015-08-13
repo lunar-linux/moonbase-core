@@ -1,4 +1,0 @@
-default_pre_build &&
-
-# Gcc 5.1 fix
-patch_it $SOURCE2 1
