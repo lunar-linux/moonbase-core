@@ -1,0 +1,3 @@
+optional_depends ncurses "--with-ncurses" "--without-ncurses" "build ncurses based apps"
+
+optional_depends systemd "" "" "for systemd support"
