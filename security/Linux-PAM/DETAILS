@@ -1,17 +1,17 @@
           MODULE=Linux-PAM
-         VERSION=1.1.8
+         VERSION=1.2.1
         PVERSION=2.6
        RHVERSION=0.99.10-1
           SOURCE=$MODULE-$VERSION.tar.bz2
-         SOURCE2=$MODULE-patches-$PVERSION.tar.bz2
-      SOURCE_URL=https://fedorahosted.org/releases/l/i/linux-pam
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:c4b1f23a236d169e2496fea20721578d864ba00f7242d2b41d81050ac87a1e55
-     SOURCE2_VFY=sha256:8b64efdefc35dfdb8e8c628aa5cdbb240e63ce59b1f38047491c817df11c10d3
+#         SOURCE2=$MODULE-patches-$PVERSION.tar.bz2
+      SOURCE_URL=http://linux-pam.org/library/
+#     SOURCE2_URL=$PATCH_URL
+      SOURCE_VFY=sha256:342b1211c0d3b203a7df2540a5b03a428a087bd8a48c17e49ae268f992b334d9
+#     SOURCE2_VFY=sha256:8b64efdefc35dfdb8e8c628aa5cdbb240e63ce59b1f38047491c817df11c10d3
         WEB_SITE=https://fedorahosted.org/linux-pam
       MAINTAINER=ratler@lunar-linux.org
          ENTERED=20010922
-         UPDATED=20140104
+         UPDATED=20150520
            SHORT="Pluggable Authentication Modules"
 PSAFE=no
 
