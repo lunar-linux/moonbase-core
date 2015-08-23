@@ -1,12 +1,12 @@
           MODULE=check
-         VERSION=0.9.14
+         VERSION=0.10.0
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/$MODULE/
-      SOURCE_VFY=sha1:4b79e2d485d014ddb438e322b64235347d57b0ff
+      SOURCE_VFY=sha256:f5f50766aa6f8fe5a2df752666ca01a950add45079aa06416b83765b1cf71052
         WEB_SITE=http://check.sourceforge.net
          ENTERED=20031201
-         UPDATED=20140821
-           SHORT="unit test framework for C"
+         UPDATED=20150820
+           SHORT="A unit test framework for C"
 
 cat << EOF
 Check is a unit test framework for C. It features a simple interface
