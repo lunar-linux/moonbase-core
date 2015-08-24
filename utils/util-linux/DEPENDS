@@ -1,2 +1,2 @@
-depends  ncurses
-depends  zlib
+depends ncurses
+depends zlib
