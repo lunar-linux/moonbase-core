@@ -15,6 +15,9 @@ OPTS+=" --enable-agetty     \
         --disable-sulogin   \
         --disable-wall"    &&
 
+# for systems with /bin a symlink of /usr/bin
+# OPTS+=" --bindir=/usr/bin --libdir=/usr/lib --sbindir=/usr/sbin" &&
+
 default_build &&
 
 install -g0 -o0 -m755 $SCRIPT_DIRECTORY/make-issue /usr/sbin/make-issue
