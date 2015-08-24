@@ -1,8 +1,22 @@
-OPTS+=" --enable-agetty --disable-kill --disable-su --disable-nologin \
-        --disable-last --disable-mesg --enable-partx --enable-raw \
-        --enable-rename --disable-reset --disable-login --disable-sulogin \
-        --enable-schedutils --disable-wall --enable-write --enable-fsck"  &&
+OPTS+=" --enable-agetty      \
+        --disable-kill       \
+        --disable-su         \
+        --disable-nologin    \
+        --disable-last       \
+        --disable-mesg       \
+        --enable-partx       \
+        --enable-raw         \
+        --enable-rename      \
+        --disable-reset      \
+        --disable-login      \
+        --disable-static     \
+        --disable-sulogin    \
+        --enable-schedutils  \
+        --disable-wall       \
+        --enable-write       \
+        --enable-fsck        \
+        --disable-chfn-chsh" &&
 
-default_build  &&
+default_build &&
 
-install -g0 -o0 -m755 $SCRIPT_DIRECTORY/make-issue /sbin/make-issue
+install -g0 -o0 -m755 $SCRIPT_DIRECTORY/make-issue /usr/sbin/make-issue
