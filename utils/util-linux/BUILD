@@ -14,8 +14,7 @@ OPTS+=" --enable-agetty      \
         --enable-schedutils  \
         --disable-wall       \
         --enable-write       \
-        --enable-fsck        \
-        --disable-chfn-chsh" &&
+        --enable-fsck"      &&
 
 default_build &&
 
