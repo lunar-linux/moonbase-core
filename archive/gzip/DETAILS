@@ -3,7 +3,7 @@
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[1]=http://www.funet.fi/pub/gnu/alpha/gnu/$MODULE
-      SOURCE_VFY=sha1:7ec6403090b3eaeb53ef017223cb8034eebc1f49
+      SOURCE_VFY=sha256:97eb83b763d9e5ad35f351fe5517e6b71521d7aac7acf3e3cacdb6b1496d8f7e
         WEB_SITE=http://www.gzip.org
          ENTERED=20010922
          UPDATED=20130612
