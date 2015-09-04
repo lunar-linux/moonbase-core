@@ -1,12 +1,8 @@
+CFLAGS="$CFLAGS -I$SOURCE_DIRECTORY/include $(pkg-config libnl-genl-3.0 --cflags)" &&
 
-  patch_it $SOURCE2 1 &&
+default_build &&
 
-  if module_installed bluez-5 ; then
-    OPTS+=" --enable-bluetooth"
-  fi &&
-
-  sedit "s/all: libpcap.a shared pcap-config/all: shared pcap-config/g" Makefile.in &&
-  sedit "s/install: install-shared install-archive pcap-config/install: install-shared pcap-config/g" Makefile.in &&
-
-
-  default_build
+# backwards compatibility, programs often look for net/bpf.h
+mkdir -p /usr/include/net &&
+cd /usr/include/net &&
+ln -s ../pcap-bpf.h bpf.h
