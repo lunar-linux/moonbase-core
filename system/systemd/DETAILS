@@ -1,17 +1,14 @@
           MODULE=systemd
-         VERSION=221
-          SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=systemd-221-compat-1.patch
-         SOURCE3=systemd-221-fixes.patch
-      SOURCE_URL=http://www.freedesktop.org/software/systemd
+         VERSION=225
+          SOURCE=$MODULE-$VERSION.tar.gz
+         SOURCE2=systemd-225-compat-1.patch
+ SOURCE_URL_FULL=https://github.com/systemd/systemd/archive/v$VERSION.tar.gz
      SOURCE2_URL=$PATCH_URL
-     SOURCE3_URL=$PATCH_URL
-      SOURCE_VFY=sha256:085e088650afbfc688ccb13459aedb1fbc7c8810358605b076301f472d51cc4f
-     SOURCE2_VFY=sha256:d57e00a4d214786fc6fca59ea6d606d3bfe61ed04bcbee2c65354e6793c045dd
-     SOURCE3_VFY=sha256:c6b414611b4c26e08364b37a317b79c1ef7867871bef2a816228641c5c3f880c
+      SOURCE_VFY=sha256:b2f576bb3688e9315f2f49b98e141ac6f964567370e98ebd8fd7332a0a6f9701
+     SOURCE2_VFY=sha256:701b2f151a1f0669d7977017efd4c22db2c722be89fa688292dcf4db474f2d08
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20150705
+         UPDATED=20150905
            SHORT="A system and program management daemon"
 
 cat << EOF
