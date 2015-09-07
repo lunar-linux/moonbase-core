@@ -1,0 +1,4 @@
+# relin util-linux if necessary
+if module_installed util-linux; then
+  lin util-linux
+fi
