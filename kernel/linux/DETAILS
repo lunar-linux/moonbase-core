@@ -1,5 +1,5 @@
           MODULE=linux
-         VERSION=4.1.3
+         VERSION=4.2
             BASE=$(echo $VERSION | cut -d. -f1,2)
           SOURCE=$MODULE-$BASE.tar.xz
 if [ -n "$(echo $VERSION | cut -d. -f3)" ] ; then
@@ -9,14 +9,14 @@ fi
    SOURCE_URL[1]=http://www.kernel.org/pub/linux/kernel/v4.x
   SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v4.x
   SOURCE2_URL[1]=http://www.kernel.org/pub/linux/kernel/v4.x
-      SOURCE_VFY=sha256:caf51f085aac1e1cea4d00dbbf3093ead07b551fc07b31b2a989c05f8ea72d9f
-     SOURCE2_VFY=sha256:b949517b832af2fc90c57a35e475340f32c186f391cbdbfbe0aba7720dbb0b3e
+      SOURCE_VFY=sha256:cf20e044f17588d2a42c8f2a450b0fd84dfdbd579b489d93e9ab7d0e8b45dbeb
+     SOURCE2_VFY=sha256:
         WEB_SITE=http://www.kernel.org/
          ENTERED=20111121
-         UPDATED=20150722
+         UPDATED=20150903
            SHORT="The core of a Linux GNU Operating System"
-KEEP_SOURCE=on
-TMPFS=off
+     KEEP_SOURCE=on
+           TMPFS=off
 
 cat << EOF
 This is the latest stable version the Linux kernel for Lunar Linux distro.
