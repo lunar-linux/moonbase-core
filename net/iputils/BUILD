@@ -1,29 +1,30 @@
-(
+make &&
 
-  # manpages is manually created and packed by lunar devs
-  tar xvf $SOURCE_CACHE/$SOURCE2 --strip-components=1 &&
+prepare_install &&
 
-  # Set $CFLAGS
-  sedit "s;^CCOPTOPT=.*;CCOPTOPT=$CFLAGS;" Makefile &&
+install -m755 arping clockdiff rdisc tracepath tracepath6 traceroute6 rarpd tftpd /usr/sbin/ &&
 
-  # Disable LASTTAG
-  sedit "s;^LASTTAG.*;;" Makefile &&
+install -m4711 ping /usr/bin/ &&
+ln -sf /usr/bin/ping /usr/bin/ping6 &&
 
-  # Disable gnutls in ping6 and use openssl
-  sedit "/^USE_GNUTLS/s;yes;no;" Makefile &&
+if [ "`get_module_config DOCS`" = "y" ]; then
+  # generate manpages and html documentation
+  make man &&
+  make html
+else
+  # manpages are manually created and packed by lunar devs
+  cd $BUILD_DIRECTORY &&
+  unpack $SOURCE2 --strip-components=1 &&
+  cd $SOURCE_DIRECTORY
+fi &&
 
-  make  &&
-  prepare_install  &&
+install -dm755 /usr/share/man/man8 &&
+install -m644 doc/{clockdiff,arping,rdisc,tracepath,traceroute6,rarpd,ping,tftpd}.8 /usr/share/man/man8/ &&
 
-  install -dm755 /usr/{sbin,bin} &&
-  install -m755 clockdiff arping rdisc tracepath tracepath6 traceroute6 rarpd tftpd /usr/sbin/ &&
-  install -m4711 ping ping6 /usr/bin/ &&
-  install -dm755 /usr/share/man/man8 &&
-  install -m644 doc/{clockdiff,arping,rdisc,tracepath,traceroute6,rarpd,ping,tftpd}.8 /usr/share/man/man8/ &&
+ln -sf ping.8.gz /usr/share/man/man8/ping6.8.gz &&
+ln -sf tracepath.8.gz /usr/share/man/man8/tracepath6.8.gz &&
 
-  ln -sf ping.8.gz /usr/share/man/man8/ping6.8.gz &&
-  ln -sf tracepath.8.gz /usr/share/man/man8/tracepath6.8.gz &&
+gather_docs doc/*.html &&
 
-  gather_docs doc/*.html
-
-) > $C_FIFO 2>&1
+install -dm755 /etc/xinetd.d/ &&
+install -m644 $SCRIPT_DIRECTORY/tftp.xinetd /etc/xinetd.d/tftp
