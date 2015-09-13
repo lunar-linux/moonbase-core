@@ -1,3 +1,8 @@
 depends libcap
 depends openssl
 depends sysfsutils
+depends git
+
+if [ "`get_module_config DOCS`" = "y" ]; then
+  depends docbook-utils
+fi

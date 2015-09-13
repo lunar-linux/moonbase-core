@@ -1,27 +1,29 @@
           MODULE=iputils
-         VERSION=s20121221
-          SOURCE=$MODULE-$VERSION.tar.bz2
-         SOURCE2=$MODULE-s20121221-manpages.tar.bz2
-      SOURCE_URL=http://www.skbuff.net/iputils
+         VERSION=s20150815
+          SOURCE=$MODULE-$VERSION.tar.gz
+         SOURCE2=$MODULE-$VERSION-manpages.tar.gz
+ SOURCE_URL_FULL=http://github.com/iputils/iputils/archive/$VERSION.tar.gz
      SOURCE2_URL=$PATCH_URL
-        WEB_SITE=http://www.skbuff.net/iputils/
-      SOURCE_VFY=sha1:4d56d8c75d6a5d58f052e4056e975f01ebab9ba9
-     SOURCE2_VFY=sha1:e2ccc9bb6bd8dc02b2c5949cc5f1cb4f98a8e564
+        WEB_SITE=http://github.com/iputils/iputils/
+      SOURCE_VFY=sha256:1f9c11783e9db90b3ebc43145e412160d989fb133a573638745379957c73c082
+     SOURCE2_VFY=sha256:87efb5ded21dc1e179bf70aec37c6b5143aedc3ddac955d26489dccbab0f3b4b
          ENTERED=20021106
-         UPDATED=20130104
+         UPDATED=20150904
            SHORT="Essential utilities for IP networks"
-PSAFE=no
+           PSAFE=no
 
 cat << EOF
-arping
-clockdiff
-ipg
-ping
-ping6
-rarpd
-rdisc
-tftpd
-tracepath
-tracepath6
-traceroute6
+The iputils package is set of small useful utilities for Linux networking.
+These tools are included in iputils:
+  arping
+  clockdiff
+  ipg
+  ping
+  ping6
+  rarpd
+  rdisc
+  tftpd
+  tracepath
+  tracepath6
+  traceroute6
 EOF
