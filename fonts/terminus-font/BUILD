@@ -1,4 +1,5 @@
-OPTS+=' psfdir=$(prefix)/share/kbd/consolefonts ' &&
+OPTS+=' --psfdir=/usr/share/kbd/consolefonts \
+        --x11dir=/usr/share/fonts/misc' &&
 chmod +x configure &&
 
 default_build &&
