@@ -1,2 +1,5 @@
-depends  ncurses
-depends  zlib
+depends Python
+depends ncurses
+depends zlib
+
+optional_depends Linux-PAM "" "" "for PAM support"
