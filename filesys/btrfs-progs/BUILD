@@ -4,8 +4,10 @@ if ! in_depends $MODULE asciidoc || ! in_depends $MODULE xmlto; then
   OPTS+=" --disable-documentation"
 fi &&
 
-./configure prefix=/usr \
-            --bindir=/sbin \
-            $OPTS &&
+OPTS+=" --bindir=/usr/bin" &&
 
-default_make
+default_build &&
+
+# remove the static lib
+rm /usr/lib/libbtrfs.a
+
