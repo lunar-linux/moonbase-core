@@ -8,7 +8,7 @@
      SOURCE2_VFY=sha256:3795517082f4719938094fb194b455d195c32a965d0f73ecbbdc89326f1c3b28
         WEB_SITE=http://expat.sourceforge.net
          ENTERED=20010928
-         UPDATED=20120401
+         UPDATED=20120422
            SHORT="XML parsing library"
 
 cat << EOF
