@@ -1,0 +1,10 @@
+service tftp
+{
+	socket_type	= dgram
+	protocol	= udp
+	wait		= yes
+	user		= nobody
+	server		= /usr/bin/tftpd
+	server_args	= /var/tftpboot
+	disable		= yes
+}
