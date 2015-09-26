@@ -1,7 +1,6 @@
 depends libcap
 depends openssl
 depends sysfsutils
-depends git
 
 optional_depends docbook-utils "" "" "for documentation regeneration"
 optional_depends xinetd        "" "" "for xinetd support"
