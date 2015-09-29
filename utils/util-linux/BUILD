@@ -1,6 +1,6 @@
 OPTS+=" --enable-agetty --disable-kill --disable-su --disable-nologin \
         --disable-last --disable-mesg --enable-partx --enable-raw \
-        --enable-rename --disable-reset --disable-login --disable-sulogin \
+        --enable-rename --disable-reset --disable-login --enable-sulogin \
         --enable-schedutils --disable-wall --enable-write --enable-fsck"  &&
 
 default_build  &&

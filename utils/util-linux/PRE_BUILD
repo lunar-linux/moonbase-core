@@ -1,0 +1,5 @@
+default_pre_build &&
+
+# Install sulogin in /usr/sbin
+sedit 's;sbin_PROGRAMS += sulogin;usrsbin_exec_PROGRAMS += sulogin;' login-utils/Makemodule.am &&
+./autogen.sh
