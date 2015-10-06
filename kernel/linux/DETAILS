@@ -1,24 +1,22 @@
           MODULE=linux
-         VERSION=4.2
+         VERSION=4.2.2
             BASE=$(echo $VERSION | cut -d. -f1,2)
           SOURCE=$MODULE-$BASE.tar.xz
 if [ -n "$(echo $VERSION | cut -d. -f3)" ] ; then
          SOURCE2=patch-$VERSION.xz
 fi
-         SOURCE2=linux-4.2-fixes.patch
    SOURCE_URL[0]=$KERNEL_URL/pub/linux/kernel/v4.x
    SOURCE_URL[1]=http://www.kernel.org/pub/linux/kernel/v4.x
-  #SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v4.x
-  #SOURCE2_URL[1]=http://www.kernel.org/pub/linux/kernel/v4.x
-     SOURCE2_URL=$PATCH_URL
+  SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v4.x
+  SOURCE2_URL[1]=http://www.kernel.org/pub/linux/kernel/v4.x
       SOURCE_VFY=sha256:cf20e044f17588d2a42c8f2a450b0fd84dfdbd579b489d93e9ab7d0e8b45dbeb
-     SOURCE2_VFY=sha256:2d2d3eacaeb42cd90eb52a8c4f6721f79fbf64672acbc4e095823ba95c6d6950
+     SOURCE2_VFY=sha256:8b4578f1e1dcfbef1e39c39b861d4715aa99917af0b7c2dc324622d65884dcb5
         WEB_SITE=http://www.kernel.org/
          ENTERED=20111121
-         UPDATED=20150903
+         UPDATED=20150930
            SHORT="The core of a Linux GNU Operating System"
-KEEP_SOURCE=on
-TMPFS=off
+     KEEP_SOURCE=on
+           TMPFS=off
 
 cat << EOF
 This is the latest stable version the Linux kernel for Lunar Linux distro.
