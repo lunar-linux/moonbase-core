@@ -8,6 +8,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
          ENTERED=20140106
          UPDATED=20141010
            SHORT="Library that provides generic access to USB devices"
+PSAFE=no
 
 cat <<EOF
 Library that provides generic access to USB devices.
