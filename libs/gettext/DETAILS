@@ -1,12 +1,12 @@
           MODULE=gettext
-         VERSION=0.19.5.1
+         VERSION=0.19.6
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:a198d53b0c1fb11421ead197b7e76b144e887c9ef5a685323e92cbc950227731
+      SOURCE_VFY=sha256:ed4b4c19bd3a3034eb6769500a3592ff616759ef43cf30586dbb7a17c9dd695d
         WEB_SITE=http://www.gnu.org/software/gettext
          ENTERED=20010922
-         UPDATED=20150715
+         UPDATED=20150911
            PSAFE="no"
            SHORT="The GNU internationalisation library"
 

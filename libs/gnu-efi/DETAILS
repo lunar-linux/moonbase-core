@@ -5,9 +5,9 @@
       SOURCE_VFY=sha256:c530f21a15fd9c214dd92d29a6caa20fac989289267512020b6da1f5e6f5b4cb
         WEB_SITE=http://sourceforge.net/projects/gnu-efi/
          ENTERED=20150705
-         UPDATED=20150905
+         UPDATED=20151008
          SHORT="Library for building EFI applications"
-PSAFE=no
+         PSAFE=no
 
 cat << EOF
 Develop EFI applications for ARM-64, ARM-32, x86_64, IA-64 (IPF), and
