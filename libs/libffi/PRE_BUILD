@@ -1,0 +1,5 @@
+default_pre_build &&
+
+# Fix include dir install path
+sedit '/^includesdir/s;$(libdir).*$;$(includedir);' include/Makefile.in &&
+sedit '/^includedir/s;=.*$;=@includedir@;;/^toolexeclibdir/d;/^Libs:/s;toolexeclibdir;libdir;' libffi.pc.in
