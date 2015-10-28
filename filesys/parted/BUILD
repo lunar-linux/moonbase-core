@@ -1,14 +1,11 @@
-(
+OPTS+=" --disable-rpath \
+        --disable-debug \
+        --disable-static" &&
 
-  # fix for inlines not supported by gcc-4.2.x
-  export CFLAGS="$CFLAGS -fgnu89-inline" &&
+default_config &&
 
-  sedit 's/'-Wl,--as-needed'//' m4/lib-ignore.m4 configure &&
+sedit "s:-1.14::" Makefile &&
 
-  OPTS+=" --disable-rpath --disable-debug --disable-device-mapper --disable-static" &&
+default_make &&
 
-  default_build &&
-
-  gather_docs ABOUT-NLS BUGS THANKS doc/API doc/FAQ doc/FAT doc/USER.jp
-
-) > $C_FIFO
+gather_docs ABOUT-NLS BUGS THANKS doc/API doc/FAQ doc/FAT doc/USER.jp
