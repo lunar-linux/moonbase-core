@@ -20,7 +20,7 @@ plugin_depmod_post_build()
     debug_msg "Running depmod for kernel $kversion"
     depmod -a $kversion
   done
-  
+
   # We always return 2, fail or success
   return 2
 }
