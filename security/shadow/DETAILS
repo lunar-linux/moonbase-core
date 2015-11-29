@@ -8,7 +8,7 @@
          ENTERED=20010922
          UPDATED=20140510
            SHORT="Contains the shadow password file utilities"
-PSAFE=no
+           PSAFE=no
 
 cat << EOF
 The Shadow password file utilities package includes the programs
