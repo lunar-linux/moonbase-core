@@ -1,5 +1,5 @@
-cd wpa_supplicant  &&
-cp $SCRIPT_DIRECTORY/config ./.config  &&
+cd wpa_supplicant &&
+cp $SCRIPT_DIRECTORY/config ./.config &&
 
 if ! in_depends $MODULE dbus; then
   sedit '/CONFIG_CTRL_IFACE_DBUS.*=/s;y;n;g' .config
