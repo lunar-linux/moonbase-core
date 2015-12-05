@@ -1,11 +1,9 @@
-(
+OPTS="--enable-cxx --disable-static" &&
 
-  OPTS="--enable-cxx --disable-static"  &&
-  default_config   &&
-  make             &&
-  make check       &&
-  prepare_install  &&
-  make install     &&
-  ln -sf /usr/lib/libgmp.so  /usr/lib/libgmp.so.3
+default_config  &&
+make            &&
+make check      &&
+prepare_install &&
+make install    &&
 
-) > $C_FIFO 2>&1
+ln -sf /usr/lib/libgmp.so  /usr/lib/libgmp.so.3
