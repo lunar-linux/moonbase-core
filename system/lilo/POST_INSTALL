@@ -1,5 +1,4 @@
-case $RUN_LILO in
-  y|Y)  /usr/bin/lilo ;;
-esac &&
-
+case  $RUN_LILO  in
+  y|Y)  /sbin/lilo  ;;
+esac
 true
