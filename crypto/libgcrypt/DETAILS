@@ -1,8 +1,8 @@
           MODULE=libgcrypt
-         VERSION=1.6.3
+         VERSION=1.6.4
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=ftp://ftp.gnupg.org/gcrypt/libgcrypt
-      SOURCE_VFY=sha256:41b4917b93ae34c6a0e2127378d7a4d66d805a2a86a09911d4f9bd871db7025f
+      SOURCE_VFY=sha256:c9bc2c7fe2e5f4ea13b0c74f9d24bcbb1ad889bb39297d8082aebf23f4336026
         WEB_SITE=http://www.gnu.org/directory/security/libgcrypt.html
          ENTERED=20020212
          UPDATED=20150427
