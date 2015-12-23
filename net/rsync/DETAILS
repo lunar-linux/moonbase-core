@@ -1,12 +1,12 @@
           MODULE=rsync
-         VERSION=3.1.1
+         VERSION=3.1.2
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=http://rsync.samba.org/ftp/$MODULE
    SOURCE_URL[1]=ftp://rsync.samba.org/pub/$MODULE
-      SOURCE_VFY=sha1:c84faba04f721d393feccfa0476bfeed9b5b5250
+      SOURCE_VFY=sha256:ecfa62a7fa3c4c18b9eccd8c16eaddee4bd308a76ea50b5c02a5840f09c0a1c2
         WEB_SITE=http://rsync.samba.org
          ENTERED=20010922
-         UPDATED=20140624
+         UPDATED=20141222
            SHORT="A replacement for rcp"
            PSAFE=no
 
