@@ -1,11 +1,11 @@
-depends  autoconf
+depends autoconf
 
-optional_depends "bzip2"  "" "--without-bzip2" "to compress data with bzip2"
-optional_depends "xz"     "" "--without-xz"    "to compress data with xz"
+optional_depends bzip2 "" "--without-bzip2" "to compress data with bzip2"
+optional_depends xz    "" "--without-xz"    "to compress data with xz"
 
-optional_depends "libunistring"  ""  ""  "for Unicode support"
-optional_depends "expat"         ""  ""  "for XML support"
-optional_depends "libcroco"      ""  ""  "for CSSS2 support"
-optional_depends "ncurses"       ""  ""  "for ncurses support"
-optional_depends "libxml2"       ""  ""  "for XML 2 support"
+optional_depends libunistring "" "" "for Unicode support"
+optional_depends expat        "" "" "for XML support"
+optional_depends libcroco     "" "" "for CSSS2 support"
+optional_depends ncurses      "" "" "for ncurses support"
+optional_depends libxml2      "" "" "for XML 2 support"
 
