@@ -1,1 +1,1 @@
-install-info  --delete gettext  --info-dir /usr/info
+install-info --delete gettext --info-dir /usr/info
