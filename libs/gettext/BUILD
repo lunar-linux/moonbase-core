@@ -1,18 +1,9 @@
-  # Fixes an incompatibility with glibc-2.16
-  sedit '/gets is a/d' gettext-*/*/stdio.in.h &&
+if !( module_installed emacs ); then
+  OPTS+=" --without-emacs"
+fi &&
 
-  if !( module_installed emacs ); then
-      OPTS+=" --without-emacs"
-  fi  &&
+OPTS+=" --disable-csharp         \
+        --without-libintl-prefix \
+        --disable-static"       &&
 
-  ./configure  --build=$BUILD             \
-               --host=$BUILD              \
-               --prefix=/usr              \
-               --sysconfdir=/etc          \
-               --mandir=/usr/share/man    \
-               --infodir=/usr/share/info  \
-               --disable-csharp           \
-               --without-libintl-prefix   \
-               --disable-static           \
-               $OPTS                     &&
-  default_make
+default_build
