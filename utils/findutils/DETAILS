@@ -1,11 +1,11 @@
           MODULE=findutils
-         VERSION=4.4.2
+         VERSION=4.6.0
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$GNU_URL/$MODULE
-      SOURCE_VFY=sha1:e8dd88fa2cc58abffd0bfc1eddab9020231bb024
+      SOURCE_VFY=sha256:ded4c9f73731cd48fec3b6bdaccce896473b6d8e337e9612e16cf1431bb1169d
         WEB_SITE=http://www.gnu.org/software/$MODULE
          ENTERED=20010922
-         UPDATED=20130731
+         UPDATED=20151229
            SHORT="Utilities for locating files"
 
 cat << EOF
