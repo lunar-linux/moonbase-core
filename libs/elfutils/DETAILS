@@ -1,12 +1,12 @@
           MODULE=elfutils
-         VERSION=0.164
+         VERSION=0.165
           SOURCE=$MODULE-$VERSION.tar.bz2
    SOURCE_URL[0]=$MIRROR_URL
    SOURCE_URL[1]=http://fedorahosted.org/releases/e/l/$MODULE/$VERSION
-      SOURCE_VFY=sha256:9683c025928a12d06b7fe812928aa6235249e22d197d086f7084606a48165900
+      SOURCE_VFY=sha256:a7fc9277192caaa5f30b47e8c0518dbcfd8c4a19c6493a63d511d804290ce972
         WEB_SITE=http://fedorahosted.org/elfutils
          ENTERED=20021102
-         UPDATED=20151021
+         UPDATED=20160112
            SHORT="Utilities related to ELF (UNIX binaries) objects"
     USE_WRAPPERS=no
 
