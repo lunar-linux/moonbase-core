@@ -1,12 +1,12 @@
           MODULE=ca-certificates
-         VERSION=20151214
+         VERSION=20160104
           SOURCE=${MODULE}_$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE
       SOURCE_URL=http://ftp.debian.org/debian/pool/main/c/$MODULE
-      SOURCE_VFY=sha256:59286e6403f482a24c672e09b810c7d089a73153d4772ff4a66e86053a920525
+      SOURCE_VFY=sha256:09eb770122e23260316120c0cbbddc8a1d33e7147210ce44e146084d5d5abcdd
         WEB_SITE=http://packages.qa.debian.org/c/ca-certificates.html
          ENTERED=20100405
-         UPDATED=20151229
+         UPDATED=20160120
            SHORT="Common CA certificates"
 
 cat << EOF
