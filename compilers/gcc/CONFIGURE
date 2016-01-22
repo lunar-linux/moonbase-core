@@ -1,9 +1,10 @@
 
 # only lin -r gcc will trigger the language selector!
-if [ -n "$RECONFIGURE" ] ; then
-
-  LANGUAGES=$(get_module_config LANGUAGES)
-  [ -z "$LANGUAGES" ]  && LANGUAGES=${LANGUAGES:=c++}
+if [ -n "$RECONFIGURE" ]; then
+  LANGUAGES=$(get_module_config LANGUAGES) &&
+  if [ -z "$LANGUAGES" ]; then
+    LANGUAGES=${LANGUAGES:=c++}
+  fi &&
 
   if query "Do you want to select additional compiler languages ? " n ; then
     OPTIONS=(
@@ -11,23 +12,21 @@ if [ -n "$RECONFIGURE" ] ; then
       "go"      "go"          "off"
       "objc"    "Objective C" "off"
       "fortran" "Fortran"     "off"
-    )
+    ) &&
     RESULT=`dialog --title "Select additional compiler languages"  \
                    --stdout                                        \
                    --separate-output                               \
                    --checklist  "Available additional languages:"  \
                     0 0 0                                          \
-                   "${OPTIONS[@]}"`
+                   "${OPTIONS[@]}"` &&
 
-    LANGUAGES="c++,$(echo $RESULT | sed 's/ /,/g')"
+    LANGUAGES="c++,$(echo $RESULT | sed 's/ /,/g')" &&
     set_module_config LANGUAGES "$LANGUAGES"
-
   else
-
-    LANGUAGES=$(get_module_config LANGUAGES)
-    [ -z "$LANGUAGES" ]  && LANGUAGES=${LANGUAGES:=c++}
+    LANGUAGES=$(get_module_config LANGUAGES) &&
+    if [ -z "$LANGUAGES" ]; then
+      LANGUAGES=${LANGUAGES:=c++}
+    fi &&
     set_module_config LANGUAGES "$LANGUAGES"
-
   fi
-
 fi
