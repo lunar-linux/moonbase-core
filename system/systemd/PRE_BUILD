@@ -12,7 +12,7 @@ for O in \
   CONFIG_PROC_FS \
   CONFIG_FHANDLE
 do
-  if ! kernel_option_present $O ; then
+  if ! kernel_option_present $O; then
     FAIL=1
     message "${MESSAGE_COLOR}Required kernel option not present: ${PROBLEM_COLOR}$O${DEFAULT_COLOR}${MESSAGE_COLOR}"
   fi
@@ -20,7 +20,7 @@ done
 
 if [ -n "$FAIL" ]; then
   message "Please ensure the kernel options above are enabled, then try again.${DEFAULT_COLOR}"
-  if ! query "Ignore this warning?" n ; then
+  if ! query "Ignore this warning?" n; then
     exit 1
   fi
 fi
@@ -29,12 +29,21 @@ if mountpoint -q /usr && ! module_installed dracut; then
   message "${PROBLEM_COLOR}WARNING: ${MESSAGE_COLOR}You appear to have an /usr partition mounted. If you continue this"
   message "installation your computer might NOT be able to boot properly. Installing dracut to get initrd support"
   message "will take care of the issue.${DEFAULT_COLOR}"
-  if ! query "Ignore this warning and continue installation?" n ; then
+  if ! query "Ignore this warning and continue installation?" n; then
     exit 1
   fi
 fi
 
-default_pre_build &&
-# Compat .pc files
-patch_it $SOURCE2 1 &&
-./autogen.sh
+default_pre_build
+
+# systemd guys wrongly assume that on every linux
+# installation is a group called "lock" this isn't
+# the case in lunar, so we switch it to root.
+sedit "s:0775 root lock:0775 root root:" tmpfiles.d/legacy.conf &&
+
+# Needed to migrate from udev module
+if module_installed udev; then
+  lrm --upgrade udev
+fi
+
+patch_it $SOURCE2 1

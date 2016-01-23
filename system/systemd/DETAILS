@@ -1,14 +1,14 @@
           MODULE=systemd
-         VERSION=226
+         VERSION=228
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=systemd-225-compat-1.patch
- SOURCE_URL_FULL=https://github.com/systemd/systemd/archive/v$VERSION.tar.gz
+ SOURCE_URL_FULL=http://github.com/systemd/systemd/archive/v$VERSION.tar.gz
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:baff6a938c5579769330d0224280bf1a1ff5920151d7201545fc9880b6326c67
+      SOURCE_VFY=sha256:dd124ff561a07e6439ed2b3713f38ca914df7747f110ce86deea17b56d245ae6
      SOURCE2_VFY=sha256:701b2f151a1f0669d7977017efd4c22db2c722be89fa688292dcf4db474f2d08
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20150913
+         UPDATED=20151119
            SHORT="A system and program management daemon"
 
 cat << EOF
