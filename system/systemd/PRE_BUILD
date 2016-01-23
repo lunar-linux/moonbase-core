@@ -37,4 +37,9 @@ fi
 default_pre_build &&
 # Compat .pc files
 patch_it $SOURCE2 1 &&
+
+# Fixes:
+# sd-ndisc: drop RA packets from non-link-local addresses
+# networkd: link - do not drop config for loopback device
+patch_it $SOURCE3 1 &&
 ./autogen.sh
