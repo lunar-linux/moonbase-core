@@ -6,7 +6,7 @@
       SOURCE_VFY=sha256:e3cf55e91e31ea2845f8338bedd91e40671fc30e4d82ea147d220e687abda625
         WEB_SITE=http://www.gnu.org/software/gawk/gawk.html
          ENTERED=20010922
-         UPDATED=20150921
+         UPDATED=20160124
            SHORT="A free version of awk"
 
 cat << EOF
