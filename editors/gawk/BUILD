@@ -6,7 +6,6 @@ OPTS+="--build=$BUILD             \
        --bindir=/bin              \
        --mandir=/usr/share/man    \
        --infodir=/usr/share/info  \
-       --without-libsigsegv       \
          ac_cv_func_working_mktime=yes" &&
 
 default_config &&
