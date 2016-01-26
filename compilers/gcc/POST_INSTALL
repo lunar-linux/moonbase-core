@@ -1,0 +1,38 @@
+
+OLD_GCC_VERSION="$(get_module_config OLD_GCC_VERSION)" &&
+if [[ "${OLD_GCC_VERSION%%.*}" = "4" ]]; then
+
+message "${MESSAGE_COLOR}GCC5 changed the c++11 ABI used to compile new binaries."
+message "This breaks the build of all modules that depend on"
+message "libraries compiled with GCC4. The best way to avoid this"
+message "is to find and rebuild ALL modules that depend on libstd++.so.6"
+message "This takes a long time though.${DEFAULT_COLOR}"
+
+# rebuilding everything avoids this error in modules
+# which depend on modules still using the old ABI:
+# > undefined reference to `get_defs[abi:cxx11](unsigned long, bool (*)(unsigned long))'
+
+if query "Do you want lunar to attempt to rebuild all affected modules?" ${ASK_FOR_REBUILDS:-y}; then
+  CPP_MODULES=$( list_installed | grep -xv 'gcc\|moonbase' | while read mod
+  do
+    lvu install "$mod" | grep '.*\.so$\|/bin/\|/sbin/\|/games/' | while read modfile
+    do
+      ldd "$modfile" 2>/dev/null | fgrep -q "libstdc++.so.6" &&
+      echo "$mod" &&
+      break
+    done
+  done )
+
+  CPP_MODULES=$(sort_by_dependency $CPP_MODULES)
+
+  lin -c binutils
+  lin -c glibc
+  for m in $CPP_MODULES; do
+    lin -c $m
+  done
+fi
+
+fi &&
+
+unset_module_config OLD_GCC_VERSION &&
+unset OLD_GCC_VERSION

@@ -1,3 +1,4 @@
+
 # using -pipe causes spurious test-suite failures
 bad_flags -pipe &&
 
