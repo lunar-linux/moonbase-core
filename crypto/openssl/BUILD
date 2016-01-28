@@ -1,10 +1,3 @@
-# make sure the luser has the source for this one!
-download_module wget &&
-
-# Enable MD2 (for nmap)
-sedit "s/ -DOPENSSL_NO_MD2//" Configure &&
-sedit 's/"md2"/"rc5"/'        Configure &&
-
 ./config --prefix=/usr         \
          --openssldir=/etc/ssl \
          shared                \
