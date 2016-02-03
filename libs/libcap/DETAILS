@@ -1,11 +1,8 @@
           MODULE=libcap
-         VERSION=2.24
+         VERSION=2.25
           SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=$MODULE-2.22-raise_cap.patch.bz2
       SOURCE_URL=http://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:b2754cddb614567de445ffdaac7a00b9671b858a
-     SOURCE2_VFY=sha1:85b796fe66a6671790563507ae8c4e66f477049b
+      SOURCE_VFY=sha256:693c8ac51e983ee678205571ef272439d83afe62dd8e424ea14ad9790bc35162
         WEB_SITE=http://www.kernel.org/pub/linux/libs/security/linux-privs
          ENTERED=20040906
          UPDATED=20140111
