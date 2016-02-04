@@ -1,2 +1,7 @@
-depends  ncurses
-depends  zlib
+depends Python
+depends ncurses
+depends zlib
+depends shadow
+
+optional_depends Linux-PAM "" "" "for PAM support"
+optional_depends systemd   "" "" "for systemd support"

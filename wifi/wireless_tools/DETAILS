@@ -3,7 +3,7 @@
           SOURCE=$MODULE.$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE.$VERSION
       SOURCE_URL=http://hpl.hp.com/personal/Jean_Tourrilhes/Linux
-      SOURCE_VFY=sha1:22040ac1497f4c5f8ddeca365591b01ae3475710
+      SOURCE_VFY=sha256:6fb80935fe208538131ce2c4178221bab1078a1656306bce8909c19887e2e5a1
         WEB_SITE=http://hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html
          ENTERED=20020219
          UPDATED=20100317

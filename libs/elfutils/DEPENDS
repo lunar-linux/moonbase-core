@@ -1,3 +1,7 @@
-optional_depends "zlib"     "--with-zlib"  "--without-zlib"  "For zlib compression support in libdwfl"
-optional_depends "bzip2"    "--with-bzlib" "--without-bzlib" "For bzlib compression support in libdwfl"
-optional_depends "lzma-sdk" "--with-lzma"  "--without-lzma"  "For lzma compression support in libdwfl"
+optional_depends zlib "" "" "for gzip compression support"
+
+# cureently broken
+#optional_depends zlib "--with-zlib"  "--without-zlib"  "for gzip compression support"
+
+optional_depends bzip2 "--with-bzlib" "--without-bzlib" "for bzlib compression support"
+optional_depends xz    "--with-lzma"  "--without-lzma"  "for lzma/xz compression support"

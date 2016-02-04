@@ -1,15 +1,15 @@
           MODULE=elfutils
-         VERSION=0.163
+         VERSION=0.165
           SOURCE=$MODULE-$VERSION.tar.bz2
    SOURCE_URL[0]=$MIRROR_URL
    SOURCE_URL[1]=http://fedorahosted.org/releases/e/l/$MODULE/$VERSION
-      SOURCE_VFY=sha256:7c774f1eef329309f3b05e730bdac50013155d437518a2ec0e24871d312f2e23
+      SOURCE_VFY=sha256:a7fc9277192caaa5f30b47e8c0518dbcfd8c4a19c6493a63d511d804290ce972
         WEB_SITE=http://fedorahosted.org/elfutils
          ENTERED=20021102
-         UPDATED=20150701
+         UPDATED=20160112
            SHORT="Utilities related to ELF (UNIX binaries) objects"
+    USE_WRAPPERS=no
 
-USE_WRAPPERS=no
 cat << EOF
 Elfutils is a collection of utilities, including ld (a linker), nm (for
 listing symbols from object files), size (for listing the section sizes

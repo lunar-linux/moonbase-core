@@ -1,0 +1,4 @@
+default_pre_build &&
+
+# disable werror
+sedit "s:-Werror::" Makefile

@@ -1,8 +1,8 @@
-depends  zlib
-depends  automake
-depends  libtool
+depends zlib
+depends automake
+depends libtool
 
-optional_depends  "xz"  "--with-xz"  "--without-xz"  "support for xz compressed modules"
+optional_depends xz "--with-xz" "--without-xz" "support for xz compressed modules"
 
-optional_depends  "docbook-xsl" "" "--disable-manpages" "build manpages"
-optional_depends  "docbook-xml" "" "--disable-manpages" "build manpages"
+optional_depends docbook-xsl "" "--disable-manpages" "build manpages"
+optional_depends docbook-xml "" "--disable-manpages" "build manpages"
