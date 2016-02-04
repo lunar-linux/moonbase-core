@@ -1,21 +1,21 @@
           MODULE=timezone-data
-         VERSION=2015
-    DATA_VERSION=${VERSION}g
-    CODE_VERSION=${VERSION}g
+         VERSION=2016
+    DATA_VERSION=${VERSION}a
+    CODE_VERSION=${VERSION}a
           SOURCE=tzdata${DATA_VERSION}.tar.gz
          SOURCE2=tzcode${CODE_VERSION}.tar.gz
-         SOURCE3=$MODULE-2015e-makefile.patch
+         SOURCE3=$MODULE-2016a-makefile.patch
    SOURCE_URL[0]=$MIRROR_URL
    SOURCE_URL[1]=http://www.iana.org/time-zones/repository/releases
   SOURCE2_URL[0]=$MIRROR_URL
   SOURCE2_URL[1]=http://www.iana.org/time-zones/repository/releases
   SOURCE3_URL[0]=$PATCH_URL
-      SOURCE_VFY=sha256:b923cdbf078491696b17bc8d069c74bce73fabc5774629da2f410c9b31576161
-     SOURCE2_VFY=sha256:18e402ef24bfad2ded38643c9a7a9a580f940a729cb47d983052fc28ff0c7ec4
-     SOURCE3_VFY=sha256:8546f0896d6c642b9de2f428fb220b22f52a95a77face75013848b59502e2fc1
+      SOURCE_VFY=sha256:5efa6b324e64ef921ef700ac3273a51895f672684a30e342f68e47871c6a8cd1
+     SOURCE2_VFY=sha256:11ae66d59b844e8c6c81914c9dd73b666627bd7792855ba9de195eee4520c28d
+     SOURCE3_VFY=sha256:1290777fab911ee3daf2fb34a94f8564095207d42cc47f70df4b25845b35eedf
         WEB_SITE=ftp://munnari.oz.au/pub
          ENTERED=20070203
-         UPDATED=20151004
+         UPDATED=20160131
            SHORT="Timezone data and utilities"
 
 cat << EOF
