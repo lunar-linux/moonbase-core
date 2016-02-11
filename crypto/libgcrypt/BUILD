@@ -1,12 +1,5 @@
-(
+OPTS+=" --sysconfdir=/etc \
+        --disable-static  \
+        --disable-padlock-support" &&
 
-  ./configure   --prefix=/usr       \
-                --sysconfdir=/etc   \
-                --disable-static    \
-                $OPTS              &&
-
-  make                             &&
-  prepare_install                  &&
-  make    install
-
-) > $C_FIFO 2>&1
+default_build
