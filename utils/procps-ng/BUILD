@@ -1,14 +1,11 @@
-patch_it $SOURCE2 1  &&
-patch_it $SOURCE3 1  &&
+OPTS+=" --exec-prefix=/     \
+        --sysconfdir=/etc   \
+        --libdir=/usr/lib   \
+        --bindir=/usr/bin   \
+        --sbindir=/usr/sbin \
+        --disable-static"  &&
 
-# Fix for make 3.82
-sedit "s;*/module.mk;proc/module.mk ps/module.mk;" Makefile  &&
-sedit "s/\/usr\/bin/\/bin/g" Makefile  &&
-
-make CFLAGS="$CFLAGS" PKG_CFLAGS="-W"  &&
-
-prepare_install  &&
-make -e XSCPT='' DESTDIR=/ install  &&
+default_build &&
 
 if [ -e /etc/init.d/sysctl.sh ]; then
   rm -f /etc/init.d/sysctl.sh  &&
