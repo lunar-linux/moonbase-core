@@ -12,7 +12,7 @@
      SOURCE2_VFY=sha256:9b44b0bfac91672a3249e70484d036924ca528b4f704ff7ef2a9b46413d2afab
         WEB_SITE=http://www.openssl.org
          ENTERED=20010922
-         UPDATED=20151204
+         UPDATED=20160211
            PSAFE="no"
            SHORT="A library for providing encrypted transport layers"
 
