@@ -1,5 +1,5 @@
 # generate the machine id
-/usr/bin/systemd-machine-id-setup
+/usr/bin/systemd-machine-id-setup &&
 
 # Remove obsolete 70-persistent-net.rules
 [ -f /etc/udev/rules.d/70-persistent-net.rules ] && rm /etc/udev/rules.d/70-persistent-net.rules
@@ -53,11 +53,11 @@ fi
 # /etc/os-release
 if [ ! -f /etc/os-release ] || ! grep -q 'HOME_URL' /etc/os-release ; then
   if [ -f /etc/lunar.release ]; then
-    DRELEASE=$(awk '{ print $3 }' /etc/lunar.release | cut -d- -f1)
-    DCNAME=$(sed 's;.*(\(.*\) -.*;\1;' /etc/lunar.release)
-    DDESC=$(cat /etc/lunar.release)
+    DRELEASE=$(awk '{ print $3 }' /etc/lunar.release | cut -d- -f1) &&
+    DCNAME=$(sed 's;.*(\(.*\) -.*;\1;' /etc/lunar.release) &&
+    DDESC=$(cat /etc/lunar.release) &&
     DVERSION="$DRELEASE ($DCNAME)"
-  fi
+  fi &&
 cat <<EOF > /etc/os-release
 NAME="Lunar Linux"
 VERSION="$DVERSION"
@@ -67,10 +67,10 @@ PRETTY_NAME="$DDESC"
 ANSI_COLOR="1;34"
 HOME_URL="http://lunar-linux.org/"
 EOF
-fi
+fi &&
 
-systemd-sysusers
-udevadm hwdb --update
-journalctl --update-catalog
+udevadm hwdb --update &&
+
+journalctl --update-catalog &&
 
 lin -c dbus
