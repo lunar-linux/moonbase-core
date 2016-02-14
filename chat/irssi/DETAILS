@@ -1,7 +1,7 @@
           MODULE=irssi
          VERSION=0.8.17
           SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=http://irssi.org/files
+      SOURCE_URL=https://github.com/irssi-import/irssi/releases/download/$VERSION/
       SOURCE_VFY=sha256:3c9600cad2edf58f1d012febc1a0ba844274df6e331c01a9e935467705166807
         WEB_SITE=http://irssi.org
          ENTERED=20020908
