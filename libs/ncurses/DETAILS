@@ -6,7 +6,7 @@
       SOURCE_VFY=sha256:f551c24b30ce8bfb6e96d9f59b42fbea30fa3a6123384172f9e7284bcf647260
         WEB_SITE=http://www.gnu.org/software/ncurses/ncurses.html
          ENTERED=20010922
-         UPDATED=20150809
+         UPDATED=20160217
            SHORT="Displays and updates text on text-only terminals"
            PSAFE=no
 
