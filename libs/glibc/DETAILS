@@ -5,19 +5,22 @@
          SOURCE2=$MODULE-2.22-no_timezones.patch
          SOURCE3=glibc-2.22-roundup.patch
          SOURCE4=glibc-2.22-fhs.patch
+         SOURCE5=glibc-2.22-CVE-2015-7547.patch
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/glibc
      SOURCE2_URL=$PATCH_URL
      SOURCE3_URL=$PATCH_URL
      SOURCE4_URL=$PATCH_URL
+     SOURCE5_URL=$PATCH_URL
       SOURCE_VFY=sha256:eb731406903befef1d8f878a46be75ef862b9056ab0cde1626d08a7a05328948
      SOURCE2_VFY=sha256:f16aa82eacd70efe2a14dc42db5b666b5ec3afef1613c7e9518270131aab1f6f
      SOURCE3_VFY=sha256:a966028e8381069886aa20fe4821906a4c0030d2bb95b8e87b65991f75690148
-     SOURCE4_VFU=sha256:672d14826e8722455e55e136999137f6e0598e456e5940a91c245d1e54eeab82
+     SOURCE4_VFY=sha256:672d14826e8722455e55e136999137f6e0598e456e5940a91c245d1e54eeab82
+     SOURCE5_VFY=sha256:3ac8d2a4dd3c18e922d9fa146d11bf410decbdb9b37337dd5b8edadc0b0fc380
         WEB_SITE=http://www.gnu.org/software/libc
          ENTERED=20010922
-         UPDATED=20160123
+         UPDATED=20160217
            SHORT="C library for use with GNU/Hurd and GNU/Linux"
 PSAFE=no
 
