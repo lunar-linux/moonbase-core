@@ -6,4 +6,7 @@ patch_it $SOURCE2 1 &&
 # Fix for https://sourceware.org/bugzilla/show_bug.cgi?id=17949
 patch_it $SOURCE3 1 &&
 # FHS fixes
-patch_it $SOURCE4 1
+patch_it $SOURCE4 1 &&
+
+# libresolv security fix CVE-2015-7547 -  https://sourceware.org/ml/libc-alpha/2016-02/msg00416.html
+patch_it $SOURCE5 1
