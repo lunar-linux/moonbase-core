@@ -35,11 +35,19 @@ if mountpoint -q /usr && ! module_installed dracut; then
 fi
 
 default_pre_build &&
+
+# systemd guys wrongly assume that on every linux
+# installation is a group called "lock" this isn't
+# the case in lunar, so we switch it to root.
+sedit "s:0775 root lock:0775 root root:" tmpfiles.d/legacy.conf &&
+
 # Compat .pc files
 patch_it $SOURCE2 1 &&
 
 # Fixes:
-# sd-ndisc: drop RA packets from non-link-local addresses
-# networkd: link - do not drop config for loopback device
+# networkd: FIONREAD is not reliable on some sockets
+# core: fix assertion check
+# udev: fix cg_unified() return code checking
+# core: revert "core: resolve specifier in config_parse_exec()"
 patch_it $SOURCE3 1 &&
 ./autogen.sh
