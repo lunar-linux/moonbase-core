@@ -1,1 +1,3 @@
+depends findutils
 depends ncurses
+depends gzip
