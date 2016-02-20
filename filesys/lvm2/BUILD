@@ -10,7 +10,7 @@ else
   OPTS+=" --with-udev_prefix=/"
 fi &&
 
-OPTS+=" --sbindir=/usr/sbin   \
+OPTS+=" --sbindir=/usr/bin    \
         --libdir=/usr/lib     \
         --enable-cmdlib       \
         --enable-pkgconfig    \
