@@ -4,5 +4,6 @@ default_build &&
 
 # backwards compatibility, programs often look for net/bpf.h
 mkdir -p /usr/include/net &&
+
 cd /usr/include/net &&
 ln -s ../pcap-bpf.h bpf.h
