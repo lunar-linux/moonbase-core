@@ -1,4 +1,5 @@
-# Create /sbin/cryptsetup rather than /usr/sbin/cryptsetup, so Gnome can find it
-OPTS+=" --sbindir=/sbin" &&
+OPTS+=" --sbindir=/usr/bin \
+        --disable-static \
+        --enable-cryptsetup-reencrypt" &&
 
 default_build
