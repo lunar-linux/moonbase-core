@@ -1,5 +1,6 @@
+depends libnl3
+
 optional_depends bison   "--with-bison"       "--without-bison"     "enable bison support"
 optional_depends flex    "--with-flex"        "--without-flex"      "enable flex support"
-optional_depends libnl3  "--with-libnl"       "--without-libnl"     "enable libnl3 support"
 optional_depends libusb  "--enable-usb"       "--disable-usb"       "enable usb support"
 optional_depends bluez-5 "--enable-bluetooth" "--disable-bluetooth" "enable bluetooth support"
