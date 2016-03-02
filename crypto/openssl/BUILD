@@ -1,5 +1,5 @@
 # make sure the luser has the source for this one!
-download_module wget &&
+WANT_VERSION= download_module wget &&
 
 # Enable MD2 (for nmap)
 sedit "s/ -DOPENSSL_NO_MD2//" Configure &&
