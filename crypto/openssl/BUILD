@@ -7,6 +7,7 @@ sedit 's/"md2"/"rc5"/'        Configure &&
 
 ./config --prefix=/usr         \
          --openssldir=/etc/ssl \
+         no-ssl2 no-ssl3       \
          shared                \
          $OPTS                &&
 
