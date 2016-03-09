@@ -5,7 +5,7 @@
 rm -rf /usr/lib/gcc-lib/*/$(installed_version gcc)/include/openssl &> /dev/null
 
 # Has to be done BEFORE anything else
-lunar fix wget &&
+lin -c wget &&
 
 # Recent openssl changes may break ssh undetectable to lunar fix
 if module_installed openssh; then
