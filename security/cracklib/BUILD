@@ -1,9 +1,5 @@
-  ./configure  -prefix=/usr     \
-              --without-python  \
-              $OPTS            &&
+OPTS+=" --exec-prefix=/usr \
+        --without-python" &&
 
-#  sedit 's:${exec_prefix}/lib/python:/usr/lib/python:' python/Makefile  &&
-#  sedit 's:${prefix}/lib/python:/usr/lib/python:'      python/Makefile  &&
-
-  default_make  &&
-  make dict
+default_build &&
+make dict
