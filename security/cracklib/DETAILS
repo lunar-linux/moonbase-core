@@ -1,20 +1,21 @@
           MODULE=cracklib
-         VERSION=2.9.4
+         VERSION=2.9.6
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:f2a866b4b9808344228ea6d68b69e3ba9a8a99210e23dfd718d4b95c60be8958
-        WEB_SITE=http://sourceforge.net/projects/cracklib
+      SOURCE_URL=http://github.com/cracklib/cracklib/releases/download/$MODULE-$VERSION/
+      SOURCE_VFY=sha256:17cf76943de272fd579ed831a1fd85339b393f8d00bf9e0d17c91e972f583343
+        WEB_SITE=http://github.com/cracklib/cracklib/
          ENTERED=20020313
-         UPDATED=20150430
-           SHORT="library which may be used in a passwd-like program"
-PSAFE=no
+         UPDATED=20160310
+           SHORT="A library which may be used in a passwd-like program"
+           PSAFE=no
+
 cat << EOF
 Cracklib is a library which may be used in a passwd-like program.
-CrackLib is a library containing a C function (well, lots of functions
-really, but you only need to use one of them) which may be used in a
-"passwd"-like program.
-The idea is simple: try to prevent users from choosing passwords that
-could be guessed by "Crack" by filtering them out, at source.
-CrackLib is an offshoot of the the version 5 "Crack" software, and
-contains a considerable number of ideas nicked from the new software.
+CrackLib is a library containing a C function (well, lots of functions really,
+but you only need to use one of them) which may be used in a "passwd"-like
+program.
+The idea is simple: try to prevent users from choosing passwords that could be
+guessed by "Crack" by filtering them out, at source.
+CrackLib is an offshoot of the the version 5 "Crack" software, and contains a
+considerable number of ideas nicked from the new software.
 EOF
