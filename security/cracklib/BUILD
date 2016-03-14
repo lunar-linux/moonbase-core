@@ -1,9 +1,9 @@
-  ./configure  -prefix=/usr     \
-              --without-python  \
-              $OPTS            &&
+OPTS+=" --exec-prefix=/usr \
+        --without-python" &&
 
-#  sedit 's:${exec_prefix}/lib/python:/usr/lib/python:' python/Makefile  &&
-#  sedit 's:${prefix}/lib/python:/usr/lib/python:'      python/Makefile  &&
+default_build &&
 
-  default_make  &&
-  make dict
+make dict &&
+
+rm /usr/lib/libcrack.a
+
