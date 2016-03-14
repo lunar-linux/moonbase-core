@@ -1,14 +1,11 @@
           MODULE=expat
-         VERSION=2.1.0
-          SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=$MODULE-xmlparse_fix.patch.gz
+         VERSION=2.1.1
+          SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$SFORGE_URL/$MODULE
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:823705472f816df21c8f6aa026dd162b280806838bb55b3432b0fb1fcca7eb86
-     SOURCE2_VFY=sha256:3795517082f4719938094fb194b455d195c32a965d0f73ecbbdc89326f1c3b28
+      SOURCE_VFY=sha256:aff584e5a2f759dcfc6d48671e9529f6afe1e30b0cd6a4cec200cbe3f793de67
         WEB_SITE=http://expat.sourceforge.net
          ENTERED=20010928
-         UPDATED=20150922
+         UPDATED=20160313
            SHORT="XML parsing library"
 
 cat << EOF
