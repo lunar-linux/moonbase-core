@@ -1,12 +1,12 @@
           MODULE=pkgconfig
-         VERSION=0.28
+         VERSION=0.29.1
           SOURCE=pkg-config-$VERSION.tar.gz
-      SOURCE_URL=http://pkgconfig.freedesktop.org/releases
-      SOURCE_VFY=sha1:71853779b12f958777bffcb8ca6d849b4d3bed46
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/pkg-config-$VERSION
+      SOURCE_URL=http://pkgconfig.freedesktop.org/releases
+      SOURCE_VFY=sha256:beb43c9e064555469bd4390dcfd8030b1536e0aa103f08d7abf7ae8cac0cb001
         WEB_SITE=http://pkgconfig.freedesktop.org
          ENTERED=20010922
-         UPDATED=20130201
+         UPDATED=20160318
            SHORT="A system for managing library compile/link flags"
 
 cat << EOF
