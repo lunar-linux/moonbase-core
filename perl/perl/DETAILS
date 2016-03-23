@@ -2,12 +2,15 @@
           MODULE=perl
          VERSION=5.22.1
           SOURCE=$MODULE-$VERSION.tar.gz
+         SOURCE2=$MODULE-CVE-2016-2381_duplicate_env.patch.gz
    SOURCE_URL[0]=http://www.cpan.org/src/5.0
    SOURCE_URL[1]=http://mirrors.kernel.org/cpan/src
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:2b475d0849d54c4250e9cba4241b7b7291cffb45dfd083b677ca7b5d38118f27
+     SOURCE2_VFY=sha256:475677aac5f4f4595fa9b838003b519c44e5d0c83741498eef5f62ba3002e9ab
         WEB_SITE=http://www.perl.org
          ENTERED=20010922
-         UPDATED=20151214
+         UPDATED=20150311
            PSAFE=no
            SHORT="Larry Wall's practical extraction and reporting language"
 
