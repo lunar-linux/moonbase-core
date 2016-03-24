@@ -8,4 +8,7 @@ default_pre_build &&
 
 # Rename COMPILE to something else in these files since COMPILE gets set by lunar.
 # Perl uses COMPILE when compling win32 test programs.
-sedit 's/COMPILE/PERL_DID_AN_OOPS/' Makefile.SH installperl
+sedit 's/COMPILE/PERL_DID_AN_OOPS/' Makefile.SH installperl &&
+
+# patch for CVE 2016-2381
+patch_it $SOURCE2 1
