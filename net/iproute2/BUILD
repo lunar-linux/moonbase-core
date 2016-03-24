@@ -2,8 +2,6 @@ if ! in_depends $MODULE db; then
   sedit 's/arpd//' misc/Makefile
 fi &&
 
-OPTS+=" --sbindir=/usr/bin" &&
-
 default_build &&
 
 install -Dm644 include/libnetlink.h /usr/include/libnetlink.h &&
