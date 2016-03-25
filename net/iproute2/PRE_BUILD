@@ -1,5 +1,7 @@
 default_pre_build &&
+
 # FHS
 patch_it $SOURCE2 1 &&
+
 # do not treat warnings as errors
 sed -i 's/-Werror//' Makefile
