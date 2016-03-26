@@ -3,7 +3,6 @@ WANT_VERSION= download_module wget &&
 
 ./config --prefix=/usr         \
          --openssldir=/etc/ssl \
-         zlib                  \
          shared                \
          no-ssl2               \
          no-ssl3               \
