@@ -1,15 +1,14 @@
           MODULE=heirloom-mailx
-         VERSION=12.4
-          SOURCE=mailx-$VERSION.tar.bz2
-         SOURCE2=mailx-$VERSION-openssl.patch.bz2
-      SOURCE_URL=$SFORGE_URL/heirloom
+         VERSION=12.5
+          SOURCE=${MODULE}_${VERSION}.orig.tar.gz
+         SOURCE2=heirloom-mailx-12.5-fixes-1.patch
+      SOURCE_URL=http://ftp.debian.org/debian/pool/main/h/heirloom-mailx
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:b1e105adf9d36269daf317dedf68b6e4cca404a7
-     SOURCE2_VFY=sha1:9104ff73c6b2c559074d965ac9befa7a7791e731
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/mailx-$VERSION
-        WEB_SITE=http://lfs.osuosl.org/blfs/view/cvs/basicnet/mailnews.html#mailx
+      SOURCE_VFY=sha256:015ba4209135867f37a0245d22235a392b8bbed956913286b887c2e2a9a421ad
+     SOURCE2_VFY=sha256:6c21fba61cbc9c626e4557a2460586ef3a302affaf81540666905d855674b7f1
+        WEB_SITE=http://heirloom.sourceforge.net/mailx.html
          ENTERED=20070401
-         UPDATED=20080729
+         UPDATED=20160326
            SHORT="A plain command line mail program"
 PSAFE=no
 
