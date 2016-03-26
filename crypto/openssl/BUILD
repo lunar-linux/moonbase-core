@@ -1,13 +1,13 @@
 # make sure the luser has the source for this one!
 WANT_VERSION= download_module wget &&
 
-# Enable MD2 (for nmap)
-sedit "s/ -DOPENSSL_NO_MD2//" Configure &&
-sedit 's/"md2"/"rc5"/'        Configure &&
-
 ./config --prefix=/usr         \
          --openssldir=/etc/ssl \
+         zlib                  \
          shared                \
+         no-ssl2               \
+         no-ssl3               \
+         no-ssl3-method        \
          $OPTS                &&
 
 sedit "/^CC/d" Makefile &&
