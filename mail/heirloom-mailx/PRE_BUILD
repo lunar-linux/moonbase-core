@@ -1,0 +1,4 @@
+default_pre_build &&
+
+# Removal of SSL2 and fixes CVE-2004-2771 and CVE-2014-7844
+patch_it $SOURCE2 1
