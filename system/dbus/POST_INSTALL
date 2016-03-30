@@ -1,5 +1,6 @@
 dbus-uuidgen --ensure=/etc/machine-id &&
-if ! module_installed gtk-sharp ; then
+
+if ! module_installed gtk-sharp; then
   message "${CYAN}You don't seem to have gtk-sharp installed"
   message "and there's nothing wrong about that."
   message "But if you were to compile mono bindings for dbus"
