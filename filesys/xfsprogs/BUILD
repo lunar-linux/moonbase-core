@@ -9,7 +9,7 @@ mkdir -p $DEST_DIR &&
 default_config &&
 make &&
 make DESTDIR=$DEST_DIR PKG_ROOT_SBIN_DIR="/usr/sbin" install install-dev &&
-mv -f $DEST_DIR/lib* $DEST_DIR/usr/
+cp -fr $DEST_DIR/lib* $DEST_DIR/usr/
 rm -rf $DEST_DIR/lib*
 
 # cleanup static libs
