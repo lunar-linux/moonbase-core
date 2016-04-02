@@ -1,5 +1,16 @@
-depends pkgconfig
 depends expat
-depends docbook-xsl
+depends pkgconfig
 
-optional_depends "libX11" "--with-x" "--without-x" "for X support"
+optional_depends libX11 "--with-x" "--without-x" "for X support"
+
+optional_depends libxslt "" "" "for XSL support" n
+
+optional_depends doxygen \
+                 "--enable-doxygen-docs" \
+                 "--disable-doxygen-docs" \
+                 "for Doxygen documentation support" n
+
+optional_depends xmlto \
+                 "--enable-xml-docs" \
+                 "--disable-xml-docs" \
+                 "for XML documentation support" n
