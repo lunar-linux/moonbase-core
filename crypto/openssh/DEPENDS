@@ -1,14 +1,27 @@
-depends  zlib
-depends  openssl
-depends  coreutils
-depends  psmisc
+depends zlib
+depends openssl
+depends coreutils
+depends psmisc
 
-optional_depends "Linux-PAM"             \
-                 "--with-pam"            \
-                 "--without-pam"         \
+optional_depends Linux-PAM \
+                 "--with-pam" \
+                 "--without-pam" \
                  "for Linux PAM support"
 
+optional_depends libedit \
+                 "--with-libedit" "" \
+                 "generic line editing support"
+
+optional_depends ldns \
+                 "--with-ldns" "" \
+                 "for DNSSEC support"
+
 optional_depends heimdal \
-                 "--with-kerberos5=/usr" \
-                 "" \
-                 "Heimdal Kerberos5/GSSAPI Support"
+                 "--with-kerberos5=/usr" "" \
+                 "Heimdal Kerberos5/GSSAPI support"
+
+optional_depends xauth \
+                 "--with-xauth=/usr/bin/xauth" "" \
+                 "X11 forwarding support"
+
+optional_depends x11-ssh-askpass "" "" "for passphrase input in X11"
