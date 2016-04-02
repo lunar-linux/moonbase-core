@@ -14,7 +14,7 @@ ARGS="--fork --system"
 start () {
   get_data
   echo -n "Starting $SHORT: "
-  if [ -x /usr/bin/dbus-uuidgen ] ; then
+  if [ -x /usr/bin/dbus-uuidgen ]; then
     /usr/bin/dbus-uuidgen --ensure
   fi
 
@@ -23,7 +23,7 @@ start () {
   chown messagebus:messagebus /var/run/dbus
 
   dbus-daemon $ARGS &> /dev/null
-  if [ $? == 0 ] ; then
+  if [ $? == 0 ]; then
     mkpid
     echo -e $RESULT_OK
   else
