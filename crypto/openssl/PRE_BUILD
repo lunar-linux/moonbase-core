@@ -1,0 +1,11 @@
+default_pre_build &&
+
+# Enable MD2 (for nmap)
+sedit "s/ -DOPENSSL_NO_MD2//" Configure &&
+sedit 's/"md2"/"rc5"/'        Configure &&
+
+# Disable a test that fails when ssl3 is disabled
+sedit "s:TLSv1.2 SSLv3:TLSv1.2:" test/testssl
+
+# Remove rpath
+sedit "s:\$(CFLAGS) -Wl,-rpath,\$(LIBRPATH):\$(CFLAGS):" Makefile.shared
