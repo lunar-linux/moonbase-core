@@ -7,4 +7,6 @@ else
   OPTS+=" --without-openssl --without-gnutls"
 fi &&
 
+OPTS+=" --without-included-regex" &&
+
 default_build
