@@ -1,5 +1,9 @@
-export PREFIX=/usr     &&
+export PREFIX=/usr &&
+export CSTD=gnu99  &&
 export SYSCONFDIR=/etc &&
-export CSTD=gnu99      &&
+
+OPTS+=" --rundir=/run \
+        --dbdir=/var/lib/dhcpcd" &&
 
 default_build
+
