@@ -1,7 +1,7 @@
           MODULE=timezone-data
          VERSION=2016
-    DATA_VERSION=${VERSION}c
-    CODE_VERSION=${VERSION}c
+    DATA_VERSION=${VERSION}d
+    CODE_VERSION=${VERSION}d
           SOURCE=tzdata${DATA_VERSION}.tar.gz
          SOURCE2=tzcode${CODE_VERSION}.tar.gz
          SOURCE3=$MODULE-2016a-makefile.patch
@@ -10,12 +10,12 @@
   SOURCE2_URL[0]=$MIRROR_URL
   SOURCE2_URL[1]=http://www.iana.org/time-zones/repository/releases
   SOURCE3_URL[0]=$PATCH_URL
-      SOURCE_VFY=sha256:8700d981e6f2007ac037dabb5d2b12f390e8629bbc30e564bc21cf0c069a2d48
-     SOURCE2_VFY=sha256:344b1bd486935bca2b7baa47db3b99b32211c45f31ec0d1ead8bacd103c5a416
+      SOURCE_VFY=sha256:d9554dfba0efd76053582bd89e8c7036ef12eee14fdd506675b08a5b59f0a1b4
+     SOURCE2_VFY=sha256:a8f33d6f87aef7e109e4769fc7f6e63637d52d07ddf6440a1a50df3d9a34e0ca
      SOURCE3_VFY=sha256:1290777fab911ee3daf2fb34a94f8564095207d42cc47f70df4b25845b35eedf
         WEB_SITE=ftp://munnari.oz.au/pub
          ENTERED=20070203
-         UPDATED=20160324
+         UPDATED=20160420
            SHORT="Timezone data and utilities"
 
 cat << EOF
