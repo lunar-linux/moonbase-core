@@ -10,14 +10,21 @@ OPTS+=" --enable-agetty     \
         --enable-newgrp     \
         --enable-write      \
         --disable-kill      \
-        --disable-last      \
         --disable-reset     \
         --disable-static    \
-        --disable-wall      \
         --enable-libmount-force-mountinfo" &&
 
+OPTS+=" --exec-prefix=/usr \
+        --enable-fs-paths-extra=/usr/bin" &&
+
 default_build &&
+
+# allow only thr root user to use wall command
+chmod 700 /usr/bin/wall &&
+
 chmod 4711 /usr/bin/{newgrp,ch{sh,fn}} &&
 install -g0 -o0 -m755 $SCRIPT_DIRECTORY/make-issue /usr/bin/make-issue &&
 
-sedit '/ListenStream/ aRuntimeDirectory=uuidd' /usr/lib/systemd/system/uuidd.socket
+if module_installed systemd; then
+  sedit '/ListenStream/ aRuntimeDirectory=uuidd' /usr/lib/systemd/system/uuidd.socket
+fi
