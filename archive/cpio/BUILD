@@ -1,15 +1,13 @@
-(
+OPTS+=" --exec-prefix=/usr    \
+        --mandir=/usr/share/man" &&
 
-  # Fixes an incompatibility with glibc-2.16
-  sedit '/gets is a/d' gnu/stdio.in.h &&
-  default_config  &&
-  if module_installed mt-st ; then
-    sedit 's/install:: installdirs all/install:: installdirs/' Makefile  &&
-    make cpio rmt
-  else
-    make
-  fi               &&
-  prepare_install  &&
-  make install
-  
-) > $C_FIFO 2>&1
+OPTS+=" --libexecdir=/usr/bin" &&
+
+default_build &&
+
+# remove the rmt application
+rm -f /usr/bin/rmt &&
+rm -f /usr/share/man/man8/rmt.8 &&
+
+# remove infodir
+rm /usr/share/info/dir

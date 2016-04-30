@@ -1,16 +1,16 @@
           MODULE=cpio
-         VERSION=2.11
+         VERSION=2.12
           SOURCE=$MODULE-$VERSION.tar.bz2
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha1:6f1934b0079dc1e85ddff89cabdf01adb3a74abb
-        WEB_SITE=http://www.gnu.org/software/cpio/cpio.html
+      SOURCE_VFY=sha256:70998c5816ace8407c8b101c9ba1ffd3ebbecba1f5031046893307580ec1296e
+        WEB_SITE=http://www.gnu.org/software/cpio/
          ENTERED=20011004
-         UPDATED=20100711
-           SHORT="cpio creates cpio archives and have rmt"
+         UPDATED=20160430
+           SHORT="A tool to copy files into or out of a cpio or tar archive"
 
 cat << EOF
 GNU cpio - Creates cpio or tar archives and provides rmt.
 cpio equivalent to tar with a couple of buts and depends.
-this also provides the rmt command.
+It also provides the rmt command.
 EOF
