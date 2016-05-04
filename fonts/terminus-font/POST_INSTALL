@@ -1,4 +1,4 @@
-cd /usr/share/fonts/terminus
+cd /usr/share/fonts/misc
 rm -f fonts.scale fonts.dir fonts.cache*
 mkfontscale &&
 mkfontdir &&
