@@ -1,6 +1,6 @@
            MODULE=vim
-            MAJOR=74
           VERSION=7.4
+            MAJOR=${VERSION//./}
            SOURCE=$MODULE-$VERSION.tar.bz2
  SOURCE_DIRECTORY=$BUILD_DIRECTORY/vim${MAJOR}
     SOURCE_URL[0]=ftp://ftp.vim.org/pub/vim/unix
