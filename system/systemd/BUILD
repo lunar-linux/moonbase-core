@@ -1,6 +1,5 @@
 OPTS+=" --libexecdir=/usr/lib  \
         --enable-split-usr     \
-        --disable-terminal     \
         --disable-audit        \
         --disable-ima          \
         --disable-kdbus        \
