@@ -5,15 +5,15 @@ depends gettext
 depends elfutils
 depends pkgconfig
 
-optional_depends libxslt     "" "" "for XSL support"
-optional_depends docbook-xml "" "" "for DocBook XML support"
-optional_depends docbook-xsl "" "" "for DocBook XSL support"
-
 optional_depends pcre \
                  "--with-pcre=system" "" \
                  "use the systemd installed pcre library"
 
+optional_depends libxslt     "" "" "for XSL support" n
+optional_depends docbook-xml "" "" "for DocBook XML support" n
+optional_depends docbook-xsl "" "" "for DocBook XSL support" n
+
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
                  "--disable-gtk-doc" \
-                 "for building documentation"
+                 "for building documentation" n
