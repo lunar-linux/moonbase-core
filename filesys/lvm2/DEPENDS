@@ -1,3 +1,5 @@
 depends readline
 depends pkgconfig
-depends %UDEV
+
+# circular depend with systemd
+#depends %UDEV
