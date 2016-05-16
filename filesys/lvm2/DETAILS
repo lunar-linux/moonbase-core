@@ -1,13 +1,13 @@
           MODULE=lvm2
-         VERSION=2.02.152
+         VERSION=2.02.154
           SOURCE=LVM2.$VERSION.tgz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/LVM2.$VERSION
    SOURCE_URL[0]=ftp://sources.redhat.com/pub/lvm2
    SOURCE_URL[1]=ftp://sources.redhat.com/pub/lvm2/old
-      SOURCE_VFY=sha256:2a7ff6252c8d024f27d4bfc881bf6162198c806d2b75ea166f2797b573be7b4d
+      SOURCE_VFY=sha256:db1399374fe9190bb9c8220a66f05bacac2ce6dc7ffcac02ff2b1fc1d83ab793
         WEB_SITE=http://sources.redhat.com/lvm2
          ENTERED=20040511
-         UPDATED=20160430
+         UPDATED=20160516
            SHORT="Logical volume manager"
            PSAFE=no
 LUNAR_RESTART_SERVICES=off
