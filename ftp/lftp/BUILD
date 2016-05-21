@@ -1,7 +1,7 @@
 # setting the ssl option
-if in_depends $MODULE openssl && module_installed "openssl"; then
+if in_depends $MODULE openssl; then
   OPTS+=" --with-openssl --without-gnutls"
-elif in_depends $MODULE gnutls && module_installed "gnutls"; then
+elif in_depends $MODULE gnutls; then
   OPTS+=" --with-gnutls --without-openssl"
 else
   OPTS+=" --without-openssl --without-gnutls"
