@@ -1,11 +1,11 @@
           MODULE=e2fsprogs
-         VERSION=1.42.13
+         VERSION=1.43
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:59993ff3a44f82e504561e0ebf95e8c8fa9f9f5746eb6a7182239605d2a4e2d4
-        WEB_SITE=http://e2fsprogs.sourceforge.net
+      SOURCE_VFY=sha256:8729c4a7d2e7bb194ea4ea76db5473d9d0161cc94ad1641c50d7d61910055f0a
+      WEB_SITE=http://e2fsprogs.sourceforge.net
          ENTERED=20010922
-         UPDATED=20150519
+         UPDATED=20150521
            SHORT="Utilities for the EXT2 file system"
 
 cat << EOF
