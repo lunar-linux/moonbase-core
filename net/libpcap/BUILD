@@ -6,4 +6,4 @@ default_build &&
 mkdir -p /usr/include/net &&
 
 cd /usr/include/net &&
-ln -s ../pcap-bpf.h bpf.h
+ln -sf ../pcap-bpf.h bpf.h
