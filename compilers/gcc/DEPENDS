@@ -1,4 +1,4 @@
 depends libmpc
 depends binutils
 
-optional_depends "isl" "--with-isl" "--without-isl" "for ISL library suppor"
+optional_depends isl "--with-isl" "--without-isl" "for ISL library support"
