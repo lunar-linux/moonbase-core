@@ -1,4 +1,3 @@
-
 OLD_GCC_VERSION="$(get_module_config OLD_GCC_VERSION)" &&
 if [[ "${OLD_GCC_VERSION%%.*}" = "4" ]]; then
 
