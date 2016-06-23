@@ -1,14 +1,14 @@
           MODULE=nano
-         VERSION=2.5.3
+         VERSION=2.6.0
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=nanorc-20130602.bz2
       SOURCE_URL=http://www.nano-editor.org/dist/v${VERSION%.*}
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:b2b060129b9feff2d4870d803a441178c96531de9aed144ec0b83bd63ccb12ee
+      SOURCE_VFY=sha256:d517a5fcaa9fa6ceda8a63e22be1d83dd7f4af13703c73b10a48e95a6e1178d3
      SOURCE2_VFY=sha256:f6282a2338c30f6dc87e2b8121ffca3809fe051c1b5ccedfeaa672b6c1b56ca4
         WEB_SITE=http://www.nano-editor.org
          ENTERED=20010922
-         UPDATED=20160229
+         UPDATED=20160620
            SHORT="Superior clone of the pico text editor"
 
 cat << EOF
