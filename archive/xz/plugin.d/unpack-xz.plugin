@@ -16,7 +16,7 @@
 plugin_unpack_xz() {
   case $1 in
     *.tar.xz)
-      if [ ! -x /bin/tar ]; then
+      if [ ! -x /usr/bin/tar ]; then
         message "${PROBLEM_COLOR}! Cannot unpack tar.xz file without ${MODULE_COLOR}tar${DEFAULT_COLOR}${PROBLEM_COLOR} installed${DEFAULT_COLOR}";
         exit 1
       fi
@@ -28,7 +28,7 @@ plugin_unpack_xz() {
       tar Jxf $1 --no-same-owner --no-same-permissions || return 1
       ;;
     *.tar.lzma)
-      if [ ! -x /bin/tar ]; then
+      if [ ! -x /usr/bin/tar ]; then
         message "${PROBLEM_COLOR}! Cannot unpack tar.lzma file without ${MODULE_COLOR}tar${DEFAULT_COLOR}${PROBLEM_COLOR} installed${DEFAULT_COLOR}";
         exit 1
       fi

@@ -10,14 +10,13 @@ else
   OPTS+=" --with-udev_prefix=/"
 fi &&
 
-OPTS+=" --sbindir=/usr/bin    \
-        --libdir=/usr/lib     \
-        --enable-cmdlib       \
-        --enable-pkgconfig    \
-        --enable-fsadm        \
-        --enable-dmeventd     \
-        --enable-applib       \
-        --enable-udev_sync    \
+OPTS+=" --libdir=/usr/lib  \
+        --enable-cmdlib    \
+        --enable-pkgconfig \
+        --enable-fsadm     \
+        --enable-dmeventd  \
+        --enable-applib    \
+        --enable-udev_sync \
         --enable-udev_rules" &&
 
 default_build &&

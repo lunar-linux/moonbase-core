@@ -1,12 +1,15 @@
           MODULE=make
-         VERSION=4.1
+         VERSION=4.2
           SOURCE=$MODULE-$VERSION.tar.bz2
+         SOURCE2=make-4.2-fix-double-colon-targets.patch
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:0bc7613389650ee6a24554b52572a272f7356164fd2c4132b0bcf13123e4fca5
+     SOURCE2_URL=$PATCH_URL
+      SOURCE_VFY=sha256:4e5ce3b62fe5d75ff8db92b7f6df91e476d10c3aceebf1639796dc5bfece655f
+     SOURCE2_VFY=sha256:a7afc4e264a4a5fcaed6be750486242b518fb81d38f9c094c26d0918442d8772
         WEB_SITE=http://make.paulandlesley.org
          ENTERED=20010922
-         UPDATED=20141006
+         UPDATED=20160607
            SHORT="make generates executables and other non-source programs"
 
 cat << EOF

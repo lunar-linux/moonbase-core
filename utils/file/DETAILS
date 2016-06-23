@@ -1,12 +1,11 @@
           MODULE=file
-         VERSION=5.25
+         VERSION=5.28
           SOURCE=$MODULE-$VERSION.tar.gz
-   SOURCE_URL[0]=ftp://ftp.astron.com/pub/$MODULE
-   SOURCE_URL[1]=ftp://ftp.gw.com/pub/unix/$MODULE
-      SOURCE_VFY=sha256:3735381563f69fb4239470b8c51b876a80425348b8285a7cded8b61d6b890eca
-        WEB_SITE=ftp://ftp.astron.com/pub/file
+      SOURCE_URL=ftp://ftp.astron.com/pub/$MODULE
+      SOURCE_VFY=sha256:0ecb5e146b8655d1fa84159a847ee619fc102575205a0ff9c6cc60fc5ee2e012
+        WEB_SITE=http://www.darwinsys.com/file/
          ENTERED=20010922
-         UPDATED=20150917
+         UPDATED=20160614
            SHORT="File attempts to classify files by their content"
 
 cat << EOF

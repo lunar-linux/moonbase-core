@@ -32,7 +32,7 @@ message "$DEFAULT_COLOR" &&
 #     lin -c vim
 #   fi
 # fi
-# unfortunately the in_depends branch in the above never fires due to a big
+# unfortunately the in_depends branch in the above never fires due to a bug
 # see http://bugs.lunar-linux.org/view.php?id=474
 # therefore just rebuild vim whether it uses perl or not
 if module_installed vim; then
