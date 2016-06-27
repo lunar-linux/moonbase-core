@@ -1,9 +1,10 @@
-./configure --build=$BUILD   \
-            --prefix=/usr    \
+./configure --build=$BUILD \
+            --prefix=/usr  \
             --disable-static \
-            $OPTS           &&
+            $OPTS &&
 
 sedit 's/ln -s/ln -sf/' Makefile &&
+
 default_make &&
 
 ln -sf flex /usr/bin/lex
