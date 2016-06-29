@@ -3,8 +3,10 @@ mkdir -p build-binutils &&
 cd build-binutils &&
 
 ../configure --prefix=/usr    \
+             --disable-gdb    \
              --disable-werror \
              --enable-shared  \
+             --enable-threads \
              --enable-gold    \
              $OPTS           &&
 
@@ -21,4 +23,9 @@ if [ -e /usr/bin/ld ]; then
 fi
 
 # Remove unwanted files
-rm /usr/share/man/man1/{dlltool,nlmconv,windres,windmc}*
+rm /usr/share/man/man1/{dlltool,nlmconv,windres,windmc}* &&
+
+# No shared linking to these files outside binutils
+rm /usr/lib/lib{bfd,opcodes}.so &&
+echo "INPUT ( /usr/lib/libbfd.a -liberty -lz -ldl )" > /usr/lib/libbfd.so &&
+echo "INPUT ( /usr/lib/libopcodes.a -lbfd )" > /usr/lib/libopcodes.so
