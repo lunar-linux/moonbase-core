@@ -1,4 +1,4 @@
 depends flex
 depends zlib
 
-optional_depends "cloog"  "--enable-cloog-backend=isl" "" "for Graphite Optimizer"
+optional_depends cloog "--enable-cloog-backend=isl" "" "for Graphite Optimizer"
