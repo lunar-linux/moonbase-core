@@ -1,6 +1,6 @@
 depends pkgconfig
 
-optional_depends db     "" "" "for support of the db library"
+optional_depends db     "" "" "for support of the db library" n
 optional_depends gdbm   "" "" "for support of the gdbm library"
 optional_depends sqlite "" "" "for support of the sqlite library"
 
