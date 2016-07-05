@@ -8,6 +8,7 @@ cd build-binutils &&
              --enable-shared  \
              --enable-threads \
              --enable-gold    \
+             --enable-install-libiberty \
              $OPTS           &&
 
 make tooldir=/usr &&
