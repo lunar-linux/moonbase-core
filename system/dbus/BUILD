@@ -10,7 +10,6 @@ OPTS+=" --localstatedir=/var           \
         --disable-tests                \
         --disable-asserts              \
         --disable-verbose-mode         \
-        --enable-inotify               \
         --enable-user-session          \
         --with-dbus-user=messagebus    \
         --with-init-scripts=none       \
