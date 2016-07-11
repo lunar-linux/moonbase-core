@@ -1,5 +1,5 @@
           MODULE=timezone-data
-           TZONE=e
+           TZONE=f
          VERSION=2016$TZONE
           SOURCE=tzdata$VERSION.tar.gz
          SOURCE2=tzcode$VERSION.tar.gz
@@ -9,12 +9,12 @@
   SOURCE2_URL[0]=$MIRROR_URL
   SOURCE2_URL[1]=http://www.iana.org/time-zones/repository/releases
   SOURCE3_URL[0]=$PATCH_URL
-      SOURCE_VFY=sha256:ba00f899f18dc4048d7fa21f5e1fdef434496084eedc06f6caa15e5ecdb6bd81
-     SOURCE2_VFY=sha256:57d8c4fcd5e8a90657d0e298eac5effb1a642119c92308db68d13a4612fa459e
+      SOURCE_VFY=sha256:ed8c951008d12f1db55a11e96fc055718c6571233327d9de16a7f8475e2502b0
+     SOURCE2_VFY=sha256:72325f384490a310eeb2ea0fab7e6f011a5be19adab2ff9d83bf9d1993b066ed
      SOURCE3_VFY=sha256:1290777fab911ee3daf2fb34a94f8564095207d42cc47f70df4b25845b35eedf
         WEB_SITE=ftp://munnari.oz.au/pub
          ENTERED=20070203
-         UPDATED=20160615
+         UPDATED=20160710
            SHORT="Timezone data and utilities"
 
 cat << EOF
