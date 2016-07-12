@@ -2,6 +2,8 @@
 mkdir -p build-binutils &&
 cd build-binutils &&
 
+CFLAGS+=" -fPIC" &&
+
 ../configure --prefix=/usr    \
              --disable-gdb    \
              --disable-werror \
@@ -21,7 +23,7 @@ cp -p ../binutils/NEWS ../binutils/ChangeLog $DOCUMENT_DIRECTORY/binutils &&
 # For some reason installwatch fail to pick up the ld hardlink, touching it solves that issue
 if [ -e /usr/bin/ld ]; then
   touch /usr/bin/ld
-fi
+fi &&
 
 # Remove unwanted files
 rm /usr/share/man/man1/{dlltool,nlmconv,windres,windmc}* &&
