@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:e728ed296fe9f069a0e005003c3d6b2dde3d9cad453422a10d6558616d304cc8
         WEB_SITE=http://rpm5.org
          ENTERED=20010922
-         UPDATED=20100515
+         UPDATED=20160717
            SHORT="The popt library exists essentially for parsing command line options"
 
 cat << EOF
