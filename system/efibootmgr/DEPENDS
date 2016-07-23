@@ -1,4 +1,3 @@
 depends efivar
 depends pciutils
 depends zlib
-depends git
