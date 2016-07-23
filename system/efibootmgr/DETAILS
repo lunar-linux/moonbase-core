@@ -1,8 +1,7 @@
           MODULE=efibootmgr
-         TARDATE=20160723
+        SNAPSHOT=20160723
          VERSION=0.12
-          SOURCE=$MODULE-$VERSION-$TARDATE.tar.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+          SOURCE=$MODULE-$VERSION-$SNAPSHOT.tar.gz
       SOURCE_URL=$MIRROR_URL
       SOURCE_VFY=sha256:2a31cd2683f1b36dbff5a065bd3912bbd01c8c6144053497a658b86ecc7db226
         WEB_SITE=http://github.com/rhinstaller/efibootmgr/
