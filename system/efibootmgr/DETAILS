@@ -1,8 +1,9 @@
           MODULE=efibootmgr
-        SNAPSHOT=20160723
          VERSION=0.12
+        SNAPSHOT=20160723
           SOURCE=$MODULE-$VERSION-$SNAPSHOT.tar.gz
-      SOURCE_URL=$MIRROR_URL
+   SOURCE_URL[0]=http://download.lunar-linux.org/lunar/mirrors/
+   SOURCE_URL[1]=$MIRROR_URL
       SOURCE_VFY=sha256:2a31cd2683f1b36dbff5a065bd3912bbd01c8c6144053497a658b86ecc7db226
         WEB_SITE=http://github.com/rhinstaller/efibootmgr/
          ENTERED=20160723
