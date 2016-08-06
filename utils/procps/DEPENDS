@@ -2,3 +2,8 @@ optional_depends ncurses \
                  "--with-ncurses" \
                  "--without-ncurses" \
                  "build ncurses based apps"
+
+optional_depends systemd \
+                 --with-systemd \
+                 --without-systemd \
+                 "support systemd mechanics"
