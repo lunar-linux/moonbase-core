@@ -1,5 +1,5 @@
           MODULE=dhcpcd
-         VERSION=6.11.1
+         VERSION=6.11.2
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=http://roy.marples.name/downloads/dhcpcd
    SOURCE_URL[1]=ftp://gentoo.arcticnetwork.ca/pub/gentoo/distfiles
@@ -8,10 +8,10 @@
    SOURCE_URL[4]=http://mirror.datapipe.net/gentoo/distfiles
    SOURCE_URL[5]=http://gentoo.chem.wisc.edu/gentoo/distfiles
    SOURCE_URL[6]=http://mirror.internode.on.net/pub/gentoo/distfiles
-      SOURCE_VFY=sha256:5c823d607ed1d7513d16ec51c54e21657f1324899e0ba333a497682d88a8c6ee
+      SOURCE_VFY=sha256:f19fb50b97540a27a7172d7aa17d0237c26eca5f42c7a28f7716fc81340a1eaa
         WEB_SITE=http://roy.marples.name/projects/dhcpcd
          ENTERED=20011126
-         UPDATED=20160623
+         UPDATED=20160808
            SHORT="DHCP client/daemon that works with @home"
 
 cat << EOF
