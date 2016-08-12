@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:d303d5519faec9d69e1132f6b37db2579db17a7fb5c1517da0115d03ba168155
         WEB_SITE=http://www.politreco.com/2011/12/announce-kmod-1
          ENTERED=20120115
-         UPDATED=20160720
+         UPDATED=20160813
            SHORT="A lib for kernel modules management"
 
 cat << EOF
