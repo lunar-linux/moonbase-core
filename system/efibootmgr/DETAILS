@@ -1,13 +1,12 @@
           MODULE=efibootmgr
-         VERSION=0.12
-        SNAPSHOT=94a9adc005073af7725cf5a54018544f68bfa03f
+         VERSION=13
           SOURCE=$MODULE-$VERSION.tar.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$SNAPSHOT
- SOURCE_URL_FULL=https://github.com/rhinstaller/efibootmgr/archive/$SNAPSHOT.tar.gz
-      SOURCE_VFY=sha256:331bf9e6af5b6765e430d0c4a496e888c344053806ac2cbaeaee51d2aef08928
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+ SOURCE_URL_FULL=http://github.com/rhinstaller/efibootmgr/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:1ceb1607b450bf98060dbe87f23172014c28ba7687e5228b096064b9f777ac97
         WEB_SITE=http://github.com/rhinstaller/efibootmgr/
          ENTERED=20160723
-         UPDATED=20160723
+         UPDATED=20160818
            SHORT="Tool to modify UEFI Firmware Boot Manager Variables"
 
 cat << EOF
