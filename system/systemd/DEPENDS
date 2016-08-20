@@ -13,8 +13,8 @@ optional_depends gnu-efi       "--enable-gnuefi"                "--disable-gnuef
 optional_depends acl           "--enable-acl"                   "--disable-acl"           "for ACL support"                     y
 optional_depends cryptsetup    "--enable-libcryptsetup"         "--disable-libcryptsetup" "for device-mapper crypto encryption"
 optional_depends Linux-PAM     "--with-pamlibdir=/lib/security" "--disable-pam"           "for PAM support"                     y
-optional_depends docbook-xsl   ""                               "--disable-manpages"      "for manpages"                        y
-optional_depends docbook-xml   ""                               "--disable-manpages"      "for manpages"                        y
+optional_depends docbook-xsl   ""                               "--disable-manpages"      "for manpages"                        n
+optional_depends docbook-xml   ""                               "--disable-manpages"      "for manpages"                        n
 optional_depends libgcrypt     "--enable-gcrypt"                "--disable-gcrypt"        "for gcrypt support"                  y
 optional_depends elfutils      "--enable-elfutils"              "--disable-elfutils"      "for elfutils support"                n
 optional_depends libseccomp    "--enable-seccomp"               "--disable-seccomp"       "for seccomp support"                 n

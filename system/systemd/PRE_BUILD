@@ -41,13 +41,9 @@ default_pre_build &&
 # the case in lunar, so we switch it to root.
 sedit "s:0775 root lock:0775 root root:" tmpfiles.d/legacy.conf &&
 
-# Compat .pc files
-patch_it $SOURCE2 1 &&
-
 # Fixes:
-# networkd: FIONREAD is not reliable on some sockets
-# core: fix assertion check
-# udev: fix cg_unified() return code checking
-# core: revert "core: resolve specifier in config_parse_exec()"
-patch_it $SOURCE3 1 &&
+# Revert "rules: allow users to access frame buffer devices" (#3333)
+# {machine,system}ctl: always pass &changes and &n_changes (#3350)
+# systemctl: fix return values on success
+patch_it $SOURCE2 1 &&
 ./autogen.sh
