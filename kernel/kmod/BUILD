@@ -1,14 +1,17 @@
-OPTS+=" --exec-prefix=/usr --with-zlib" &&
+OPTS+=" --with-zlib" &&
 
-OPTS+=" --sbindir=/usr/bin" &&
+./configure --prefix=     \
+            --libdir=/lib \
+            --datarootdir=/usr/share \
+            --includedir=/usr/include \
+            $OPTS  &&
 
-default_build &&
+default_make &&
 
 install -dm755 /{etc,usr/lib}/{depmod,modprobe}.d &&
 
 # add symlinks to kmod
-ln -sf /usr/bin/kmod /usr/bin/lsmod &&
+ln -sf /bin/kmod "/bin/lsmod"  &&
 for tool in {ins,rm,dep}mod mod{info,probe}; do
-#  ln -sf /usr/bin/kmod /usr/sbin/$tool
-  ln -sf /usr/bin/kmod /usr/bin/$tool
+  ln -sf /bin/kmod "/sbin/$tool"
 done
