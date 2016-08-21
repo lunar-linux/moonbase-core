@@ -1,6 +1,5 @@
 # using -pipe causes spurious test-suite failures
-CFLAGS=${CFLAGS/-pipe/} &&
-CXXFLAGS=${CXXFLAGS/-pipe/} &&
+bad_flags -pipe &&
 
 mkdir BUILD &&
 cd BUILD &&
@@ -56,4 +55,4 @@ install -m0755 {${SCRIPT_DIRECTORY},/usr/bin}/c99 &&
 # remove the offending broken freetype link
 rm -f /usr/lib/gcc/$BUILD/$VERSION/include-fixed/freetype
 
-#ln -sf /usr/bin/cpp /lib/cpp
+ln -sf /usr/bin/cpp /lib/cpp
