@@ -1,22 +1,17 @@
 # make a backup for gawk app
-cp -f /bin/gawk /bin/gawk.old  &&
+cp -f /usr/bin/gawk /usr/bin/gawk.old  &&
 
-OPTS+="--build=$BUILD             \
-       --prefix=/usr              \
-       --bindir=/bin              \
-       --mandir=/usr/share/man    \
-       --infodir=/usr/share/info  \
-         ac_cv_func_working_mktime=yes" &&
+OPTS+=" --libexecdir=/usr/lib" &&
 
-default_config &&
-make &&
-prepare_install &&
+OPTS+=" ac_cv_func_working_mktime=yes" &&
+
+default_build &&
 
 # restore backup gawk app
-mv /bin/gawk.old /bin/gawk &&
-ln -sf /bin/gawk /bin/awk  &&
+mv /usr/bin/gawk.old /usr/bin/gawk &&
+ln -sf /usr/bin/gawk /usr/bin/awk  &&
 
 make install &&
 
-ln -sf /bin/gawk /bin/awk &&
-rm -f /bin/{,p}gawk-*
+ln -sf /usr/bin/gawk /usr/bin/awk &&
+rm -f /usr/bin/{,p}gawk-*
