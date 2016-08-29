@@ -1,5 +1,5 @@
 depends libcap
-depends openssl
+depends %OSSL
 depends sysfsutils
 
 optional_depends docbook-utils "" "" "for documentation regeneration"
