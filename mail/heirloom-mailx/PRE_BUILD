@@ -4,4 +4,7 @@ default_pre_build &&
 patch_it $SOURCE2 1 &&
 
 # Removal of SSL3
-patch_it $SOURCE3 1
+patch_it $SOURCE3 1 &&
+
+# support libressl
+sedit "/include <openssl\/rand\.h>/ a #ifdef OPENSSL_NO_EGD\nint RAND_egd(const char* x){return 0;}\n#endif"  openssl.c
