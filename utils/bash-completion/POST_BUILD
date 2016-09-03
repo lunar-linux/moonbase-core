@@ -1,0 +1,2 @@
+# relin util-linux because some completions are overlaping with bash-completion
+lin -c util-linux
