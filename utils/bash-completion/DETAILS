@@ -1,21 +1,13 @@
           MODULE=bash-completion
-         VERSION=2.1
-          SOURCE=${MODULE}-${VERSION}.tar.bz2
-         SOURCE2=${MODULE}-1.99-lunar_fixes.patch
-         SOURCE3=${MODULE}_words_bad_array_fix.patch
-         SOURCE4=${MODULE}-bash-4.3.patch
-      SOURCE_URL=http://bash-completion.alioth.debian.org/files
-     SOURCE2_URL=$PATCH_URL
-     SOURCE3_URL=$PATCH_URL
-     SOURCE4_URL=$PATCH_URL
-      SOURCE_VFY=sha1:b74bf7d83646e1412bb07dbb1de09db1c9715599
-     SOURCE2_VFY=sha1:0cf95e853a09e58488c92106898b8ee1db434f30
-     SOURCE3_VFY=sha256:1c48279c796fb82a4e1ec9d52548418e455e96f079a123118dd3d6dcd9ff2964
-     SOURCE4_VFY=sha256:9092e6ac975bf43e9ec672477e4e21ca5b0bf52ca5d4e22ec71962ff2a195a5b
-        WEB_SITE="http://bash-completion.alioth.debian.org/"
+         VERSION=2.4
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=http://github.com/scop/bash-completion/releases/download/$VERSION/
+      SOURCE_VFY=sha256:c0f76b5202fec9ef8ffba82f5605025ca003f27cfd7a85115f838ba5136890f6
+        WEB_SITE=http://github.com/scop/bash-completion/
          ENTERED=20120406
-         UPDATED=20150110
+         UPDATED=20160903
            SHORT="Completion for the bash shell"
+
 cat << EOF
 Completion for the bash shell.
 EOF
