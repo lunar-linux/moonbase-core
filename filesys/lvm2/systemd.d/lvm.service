@@ -9,8 +9,8 @@ Conflicts=shutdown.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/vgchange --sysinit --available y
-ExecStop=/usr/bin/vgchange  --sysinit --available n
+ExecStart=/usr/sbin/vgchange --sysinit --available y
+ExecStop=/usr/sbin/vgchange  --sysinit --available n
 
 [Install]
 WantedBy=basic.target
