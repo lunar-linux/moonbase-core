@@ -1,5 +1,5 @@
            MODULE=vim
-          VERSION=7.4
+          VERSION=8.0
             MAJOR=${VERSION//./}
            SOURCE=$MODULE-$VERSION.tar.bz2
  SOURCE_DIRECTORY=$BUILD_DIRECTORY/vim${MAJOR}
@@ -16,11 +16,11 @@
    SOURCE_URL[10]=ftp://ftp.es.vim.org/pub/vim/unix
    SOURCE_URL[11]=ftp://ftp.pl.vim.org/pub/vim/unix
    SOURCE_URL[12]=ftp://ftp2.pl.vim.org/pub/vim/unix
-       SOURCE_VFY=sha1:601abf7cc2b5ab186f40d8790e542f86afca86b7
+       SOURCE_VFY=sha256:acab24b07d9e87a1c1581cf5ecfe0439562ff7e111d0d2dbd274260490cb64e8
          WEB_SITE=http://vim.sf.net
        MAINTAINER=sofar@lunar-linux.org
           ENTERED=20010922
-          UPDATED=20130818
+          UPDATED=20160913
             SHORT="Improved version of vi"
 
 cat << EOF
