@@ -5,12 +5,11 @@
       SOURCE_VFY=sha256:9c8eca0d7f39e74bbc14706293e653b699238eeb1a7690cc9c136fb8c2644115
         WEB_SITE=http://search.cpan.org/dist/URI/
          ENTERED=20020727
-         UPDATED=20160426
+         UPDATED=20150917
            SHORT="A perl module for using Uniform Resource Identifiers"
 
 cat << EOF
-URI:
-A perl module which implements the URI class. Objects of this class represent
+URI: A perl module which implements the URI class. Objects of this class represent
 "Uniform Resource Identifier references" as specified in RFC 2396 (and updated
 by RFC 2732).
 EOF
