@@ -1,11 +1,11 @@
           MODULE=joe
-         VERSION=4.0
+         VERSION=4.3
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/joe-editor
-      SOURCE_VFY=sha256:c556adff77fd97bf1b86198de6cb82e0b92cda18579c4fef6c83b608d2ed2915
+      SOURCE_VFY=sha256:985d6a8f943a06e64165996c24d7fecaeae8c59efb52998a49b3fb4b8a3e26e1
         WEB_SITE=http://sourceforge.net/projects/joe-editor
          ENTERED=20020420
-         UPDATED=20150705
+         UPDATED=20160917
            SHORT="Free ASCII-Text Screen Editor for UNIX"
 
 cat << EOF
