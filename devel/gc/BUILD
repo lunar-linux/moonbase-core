@@ -1,7 +1,5 @@
-(
+CXXFLAGS+=' -std=gnu++98' &&
 
-  OPTS+=" --enable-cplusplus --disable-static" &&
+OPTS+=" --enable-cplusplus --disable-static" &&
 
-  default_build
-
-) > $C_FIFO 2>&1
+default_build
