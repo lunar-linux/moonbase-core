@@ -2,7 +2,6 @@ OPTS+=" --libexecdir=/usr/lib  \
         --enable-split-usr     \
         --disable-audit        \
         --disable-ima          \
-        --disable-kdbus        \
         --with-default-dnssec=no \
         --with-kbd-loadkeys=/usr/bin/loadkeys \
         --with-kbd-setfont=/usr/bin/setfont"
