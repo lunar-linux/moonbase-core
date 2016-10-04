@@ -1,20 +1,20 @@
           MODULE=timezone-data
-           TZONE=f
+           TZONE=g
          VERSION=2016$TZONE
           SOURCE=tzdata$VERSION.tar.gz
          SOURCE2=tzcode$VERSION.tar.gz
-         SOURCE3=$MODULE-2016a-makefile.patch
+         SOURCE3=$MODULE-2016g-makefile.patch
    SOURCE_URL[0]=$MIRROR_URL
    SOURCE_URL[1]=http://www.iana.org/time-zones/repository/releases
   SOURCE2_URL[0]=$MIRROR_URL
   SOURCE2_URL[1]=http://www.iana.org/time-zones/repository/releases
   SOURCE3_URL[0]=$PATCH_URL
-      SOURCE_VFY=sha256:ed8c951008d12f1db55a11e96fc055718c6571233327d9de16a7f8475e2502b0
-     SOURCE2_VFY=sha256:72325f384490a310eeb2ea0fab7e6f011a5be19adab2ff9d83bf9d1993b066ed
-     SOURCE3_VFY=sha256:1290777fab911ee3daf2fb34a94f8564095207d42cc47f70df4b25845b35eedf
+      SOURCE_VFY=sha256:3c7137b2bc47323b0de47b77786bacf81ed503d4b2c693ff8ada2fbd1281ebd1
+     SOURCE2_VFY=sha256:1ff90b47ad7986140a513b5287b1851c40f80fd44fd636db5cc5b46d06f9fa2b
+     SOURCE3_VFY=sha256:882592a15bc3fe43254408a4969f578541a49aacfefa442548bd7af94ee18e04
         WEB_SITE=ftp://munnari.oz.au/pub
          ENTERED=20070203
-         UPDATED=20160710
+         UPDATED=20161003
            SHORT="Timezone data and utilities"
 
 cat << EOF
