@@ -1,8 +1,11 @@
           MODULE=wpa_supplicant
          VERSION=2.5
           SOURCE=$MODULE-$VERSION.tar.gz
+         SOURCE2=wpa_supplicant-2.5-libressl.patch
       SOURCE_URL=http://hostap.epitest.fi/releases
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:cce55bae483b364eae55c35ba567c279be442ed8bab5b80a3c7fb0d057b9b316
+     SOURCE2_VFY=sha256:9a58e723392b5af26e1fa3f2aad43fa72a435038d1b399f4d50cf0ad9047d668
         WEB_SITE=http://hostap.epitest.fi/wpa_supplicant
          ENTERED=20041019
          UPDATED=20151127
