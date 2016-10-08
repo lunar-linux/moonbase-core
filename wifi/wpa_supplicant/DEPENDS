@@ -1,4 +1,6 @@
-depends %OSSL
+#depends %OSSL -- for testing it with libressl
+depends libressl
 depends libnl3
+depends readline
 
 optional_depends dbus "--dbus-yes" "--dbus-no" "for new dbus interface"
