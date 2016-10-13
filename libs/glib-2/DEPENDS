@@ -3,7 +3,6 @@ depends zlib
 depends libffi
 depends gettext
 depends elfutils
-depends pkgconfig
 
 optional_depends pcre \
                  "--with-pcre=system" "" \
