@@ -1,11 +1,17 @@
           MODULE=bash-completion
          VERSION=2.4
           SOURCE=$MODULE-$VERSION.tar.xz
+         SOURCE2=$MODULE-2.4-lunar_fixes.patch
+         SOURCE3=$MODULE-fix_conflicts_with_util-linux.patch
       SOURCE_URL=http://github.com/scop/bash-completion/releases/download/$VERSION/
+     SOURCE2_URL=$PATCH_URL
+     SOURCE3_URL=$PATCH_URL
       SOURCE_VFY=sha256:c0f76b5202fec9ef8ffba82f5605025ca003f27cfd7a85115f838ba5136890f6
+     SOURCE2_VFY=sha256:f5c5ce2a1dead4dcbc4317f5a0636f3bb6283bb676b8a4138d158d9f364b1896
+     SOURCE3_VFY=sha256:9229b23bdd9d4dc035765d3375f96c600209093b3c9149d75779935283156217
         WEB_SITE=http://github.com/scop/bash-completion/
          ENTERED=20120406
-         UPDATED=20160903
+         UPDATED=20161016
            SHORT="Completion for the bash shell"
 
 cat << EOF
