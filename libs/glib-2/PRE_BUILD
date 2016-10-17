@@ -12,4 +12,3 @@ done &&
 
 # This patch splits out gdbus-codegen which is a separate module now
 patch_it $SOURCE2 1
-
