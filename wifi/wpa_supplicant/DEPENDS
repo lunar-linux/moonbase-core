@@ -1,5 +1,4 @@
-#depends %OSSL -- for testing it with libressl
-depends libressl
+depends %OSSL
 depends libnl3
 depends readline
 

@@ -1,5 +1,2 @@
 default_pre_build &&
-
-if in_depends $MODULE libressl; then
-  patch_it $SOURCE2 1
-fi
+patch_it $SOURCE2 1
