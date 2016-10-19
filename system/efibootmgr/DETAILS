@@ -1,0 +1,16 @@
+          MODULE=efibootmgr
+         VERSION=14
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://github.com/rhinstaller/efibootmgr/releases/download/$VERSION/
+      SOURCE_VFY=sha256:377ec16484414b80afd1b8a586153d7ef55ccf048638080101d49b7c77f37ad8
+        WEB_SITE=http://github.com/rhinstaller/efibootmgr/
+         ENTERED=20160723
+         UPDATED=20160928
+           SHORT="Tool to modify UEFI Firmware Boot Manager Variables"
+
+cat << EOF
+Efibootmgr is a Linux user-space application to modify the Intel Extensible
+Firmware Interface (EFI) Boot Manager. This application can create and destroy
+boot entries, change the boot order, change the next running boot option, and
+more.
+EOF
