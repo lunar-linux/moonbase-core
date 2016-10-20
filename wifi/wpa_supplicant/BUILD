@@ -11,7 +11,8 @@ make LIBDIR=/usr/lib BINDIR=/usr/bin install &&
 
 if in_depends $MODULE dbus; then
   install -m644 dbus/{fi.epitest.hostap.WPASupplicant.service,fi.w1.wpa_supplicant1.service} /usr/share/dbus-1/system-services/
-fi  &&
+fi &&
+
 install -d -m755 /etc/wpa_supplicant &&
 install -m644 wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf &&
 
