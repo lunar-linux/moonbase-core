@@ -1,23 +1,14 @@
           MODULE=bash
-         VERSION=4.3.46
-          SOURCE=$MODULE-${VERSION%.*}.tar.gz
-         SOURCE2=bash43-patches-001-046.patch.xz
-         SOURCE3=bash43-privmode-setuid-fail.patch
-         SOURCE4=bash43-old-memleak.patch
+         VERSION=4.4
+          SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=ftp://ftp.cwru.edu/pub/$MODULE
-     SOURCE2_URL=$PATCH_URL
-     SOURCE3_URL=$PATCH_URL
-     SOURCE4_URL=$PATCH_URL
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION%.*}
-      SOURCE_VFY=sha256:afc687a28e0e24dc21b988fa159ff9dbcf6b7caa92ade8645cc6d5605cd024d4
-     SOURCE2_VFY=sha256:d357ae015285d1e1101c3c5d387d0deb40ef24b8e258f26292eb4b084011c04c
-     SOURCE3_VFY=sha256:6bc2d4e48ad05fb3c8aac120a012baf1911f6522464ed18c8232b111a40b7901
-     SOURCE4_VFY=sha256:4664d14fd4a8a711cb23326b09c4f2860a79c1c3eb66f1f53d6972d4c10da808
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+      SOURCE_VFY=sha256:d86b3392c1202e8ff5a423b302e6284db7f8f435ea9f39b5b1b20fd3ac36dfcb
         WEB_SITE=http://www.gnu.org/software/bash
          ENTERED=20010922
-         UPDATED=20160702
+         UPDATED=20161030
            SHORT="A shell of the GNU operating system"
 
 cat << EOF
