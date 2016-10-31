@@ -1,33 +1,34 @@
-(
+# Real and working fix for readline 6 to 7 upgrade
+# Especially workaround issue when you would like to lin again readline 7 after lining readline 6 already
+mkdir -p /tmp/old.libraries &&
+cp -f /lib/libreadline.so.* /tmp/old.libraries &&
+cp -f /lib/libhistory.so.*  /tmp/old.libraries &&
+LD_LIBRARY_PATH=/tmp/old.libraries:$LD_LIBRARY_PATH &&
 
-  patch_it $SOURCE2 0 &&
+OUR_OLD_READLINE_VVV=$(lvu installed readline | sed -r 's/([0-9]+).+/\1/') &&
+set_module_config OUR_OLD_READLINE_VVV "$OUR_OLD_READLINE_VVV" &&
 
-  # Real and working fix for readline 5 to 6 upgrade
-  # Especially workaround issue when you would like to lin again readline 6 after lining readline 6 already
-  mkdir -p /tmp/old.libraries &&
-  cp -f /lib/libreadline.so.* /tmp/old.libraries &&
-  cp -f /lib/libhistory.so.* /tmp/old.libraries &&
-  LD_LIBRARY_PATH=/tmp/old.libraries:$LD_LIBRARY_PATH &&
+# ************************ WARNING *************************
+# DO NOT MESS WITH THE CONFIGURE STUFF here unless you
+# really know what you're doing! We chose the lib location
+# specifically so we could link readline to bash which is
+# needed at init time! If you move it you could break your
+# system!
 
-  OUR_OLD_READLINE_VVV=$(lvu installed readline | sed -r 's/([0-9]+).+/\1/')  &&
-  set_module_config OUR_OLD_READLINE_VVV "$OUR_OLD_READLINE_VVV"  &&
-  # ************************ WARNING *************************
-  # DO NOT MESS WITH THE CONFIGURE STUFF here unless you
-  # really know what you're doing! We chose the lib location
-  # specifically so we could link readline to bash which is
-  # needed at init time! If you move it you could break your
-  # system!
+if [[ $(arch) == x86_64 ]]; then
+  CFLAGS+=" -fPIC"
+fi &&
 
-  ./configure --libdir=/lib               \
-              --prefix=/usr               \
-              --mandir=/usr/share/man     \
-              --infodir=/usr/share/info   \
-              --disable-static           &&
-  make SHLIB_LIBS=-lncurses &&
-  prepare_install &&
-  make install &&
-  if [ ! -e /etc/inputrc ] ; then
-    install $SCRIPT_DIRECTORY/inputrc /etc/
-  fi
+./configure --libdir=lib \
+            --prefix=/usr \
+            --mandir=/usr/share/man \
+            --infodir=/usr/share/info \
+            --disable-static &&
 
-) > $C_FIFO 2>&1
+make SHLIB_LIBS=-lncurses &&
+prepare_install &&
+make install &&
+
+if [ ! -e /etc/inputrc ]; then
+  install $SCRIPT_DIRECTORY/inputrc /etc/
+fi
