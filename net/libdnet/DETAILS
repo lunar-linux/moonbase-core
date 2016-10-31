@@ -1,11 +1,12 @@
           MODULE=libdnet
          VERSION=1.12
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://libdnet.googlecode.com/files
-      SOURCE_VFY=sha1:c6c3325e8e17797b45aa8510c6b2271bc685ef4b
-        WEB_SITE=http://libdnet.googlecode.com
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-$VERSION
+      SOURCE_URL=https://github.com/dugsong/libdnet/archive/
+      SOURCE_VFY=sha256:b6360659c93fa2e3cde9e0a1fc9c07bc4111f3448c5de856e095eb98315dd424
+        WEB_SITE=https://github.com/dugsong/libdnet/
          ENTERED=20060314
-         UPDATED=20111010
+         UPDATED=20161027
            SHORT="A interface to several low-level networking routines"
 
 cat << EOF
