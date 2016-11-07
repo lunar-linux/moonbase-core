@@ -1,16 +1,16 @@
           MODULE=glib-2
-         VERSION=50.1
+         VERSION=50.2
           SOURCE=$MODULE.$VERSION.tar.xz
          SOURCE2=glib-2.50.x-external-gdbus-codegen.patch
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE.$VERSION
    SOURCE_URL[0]=$GNOME_URL/sources/glib/${MODULE#*-}.${VERSION%.*}
    SOURCE_URL[1]=http://ftp.gtk.org/pub/glib/${MODULE#*-}.${VERSION%.*}
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:2ef87a78f37c1eb5b95f4cc95efd5b66f69afad9c9c0899918d04659cf6df7dd
+      SOURCE_VFY=sha256:be68737c1f268c05493e503b3b654d2b7f43d7d0b8c5556f7e4651b870acfbf5
      SOURCE2_VFY=sha256:983da47da96897df63fef7159408403e1a8c391a15b08d6d1b1226a442f636b6
         WEB_SITE=http://library.gnome.org/devel/glib
          ENTERED=20020313
-         UPDATED=20161012
+         UPDATED=20161107
            SHORT="A library of useful C routines for trees, hashes, and lists"
 
 cat << EOF
