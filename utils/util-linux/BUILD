@@ -11,7 +11,7 @@ OPTS+=" --enable-agetty     \
         --enable-write      \
         --disable-kill      \
         --disable-reset     \
-        --disable-static"   \
+        --disable-static    \
         --enable-fs-paths-extra=/usr/bin" &&
 
 default_build &&
