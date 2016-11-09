@@ -12,14 +12,11 @@ OPTS+=" --enable-agetty     \
         --disable-kill      \
         --disable-reset     \
         --disable-static    \
-        --enable-libmount-force-mountinfo" &&
-
-OPTS+=" --exec-prefix=/usr \
         --enable-fs-paths-extra=/usr/bin" &&
 
 default_build &&
 
-# allow only thr root user to use wall command
+# allow only the root user to use wall command
 chmod 700 /usr/bin/wall &&
 
 chmod 4711 /usr/bin/{newgrp,ch{sh,fn}} &&
