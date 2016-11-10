@@ -1,9 +1,12 @@
           MODULE=flex
          VERSION=2.6.2
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=https://github.com/westes/flex/releases/download/v$VERSION/
-        WEB_SITE=http://www.gnu.org/software/flex/flex.html
+         SOURCE2=$MODULE-2.6.2-fix_compat.patch
+      SOURCE_URL=http://github.com/westes/flex/releases/download/v$VERSION/
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:9a01437a1155c799b7dc2508620564ef806ba66250c36bf5f9034b1c207cb2c9
+     SOURCE2_VFY=sha256:73628be2e4bfdbe606cc3562aaed4adb97f2a87b5268d3673bd7478097129da3
+        WEB_SITE=http://www.gnu.org/software/flex/flex.html
          ENTERED=20010922
          UPDATED=20161025
            SHORT="A fast lexical analyser generator"
