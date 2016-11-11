@@ -1,12 +1,12 @@
           MODULE=e3
-         VERSION=2.8
+         VERSION=2.82
           SOURCE=$MODULE-$VERSION.tgz
       SOURCE_URL=http://sites.google.com/site/e3editor/Home
-      SOURCE_VFY=sha256:035737d0cc82b287386fdff8682b2c23ef620d7ef97dff7a1b1fe1777e4c4fb7
-        WEB_SITE=https://sites.google.com/site/e3editor
+      SOURCE_VFY=sha256:53c51d656801fd3ae0179a5b27f028e07eaba328e80c8c55050268359b9a2924
+        WEB_SITE=http://sites.google.com/site/e3editor/
          ENTERED=20010922
-         UPDATED=20150705
-           SHORT="assembler written minimalistic full-screen text editor."
+         UPDATED=20161107
+           SHORT="An assembler written minimalistic full-screen text editor"
 
 cat << EOF
 e3 - a full-screen text editor written in assembler
