@@ -152,7 +152,7 @@ _lunar_lvu()
                                what where cd alien from leafs orphans conflicts search service website install size installed compile \
                                compiler links sources maintainer version sum md5sum export import section moonbase html updatelog \
                                activity newer older voyeur pam expired depends tree eert stree leert held exiled urls versions short \
-                               info edit unedit diff new submit moonalyze' -- "$cur" ) )
+                               info edit unedit diff new submit moonalyze apropos' -- "$cur" ) )
   fi
 
   return 0

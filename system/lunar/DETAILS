@@ -6,7 +6,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
       SOURCE_VFY=sha256:3b4134c50e0cdc5b81d3c0d871317ae7aca1a9462e1a051e3cb4b165c59e8ecd
         WEB_SITE=http://lunar-linux.org/
          ENTERED=20020218
-         UPDATED=20161111
+         UPDATED=20161112
            SHORT="lunar contains the package management tools for Lunar-Linux."
 USE_WRAPPERS=off
 cat << EOF
