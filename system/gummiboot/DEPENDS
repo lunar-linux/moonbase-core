@@ -1,4 +1,0 @@
-depends util-linux
-depends xz
-depends libxslt
-depends gnu-efi
