@@ -287,7 +287,7 @@ EOF
         default)
           if [ "$IS_DEFAULT" != "DEFAULT" ]; then
             set_local_config LUNAR_COMPILER GCC_6_2
-            $DIALOG --msgbox "Gcc 5.3 is now the default compiler!" 6 60
+            $DIALOG --msgbox "Gcc 6.2 is now the default compiler!" 6 60
           fi
           ;;
         safe)
