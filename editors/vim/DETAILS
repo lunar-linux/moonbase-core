@@ -16,11 +16,11 @@
    SOURCE_URL[10]=ftp://ftp.es.vim.org/pub/vim/unix
    SOURCE_URL[11]=ftp://ftp.pl.vim.org/pub/vim/unix
    SOURCE_URL[12]=ftp://ftp2.pl.vim.org/pub/vim/unix
-       SOURCE_VFY=sha256:acab24b07d9e87a1c1581cf5ecfe0439562ff7e111d0d2dbd274260490cb64e8
+       SOURCE_VFY=sha256:2e179182814715c3c77010c7300a4abcb964ba8a99a470640f9f2f03884b2ccb
          WEB_SITE=http://vim.sf.net
        MAINTAINER=sofar@lunar-linux.org
           ENTERED=20010922
-          UPDATED=20160913
+          UPDATED=20161111
             SHORT="Improved version of vi"
 
 cat << EOF

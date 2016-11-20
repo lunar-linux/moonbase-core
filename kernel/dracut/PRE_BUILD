@@ -15,4 +15,7 @@ if [ -n "$WARN" ]; then
   fi
 fi
 
-default_pre_build
+default_pre_build &&
+
+# Temp fix for bash 4.4 issues
+patch_it $SOURCE2 1
