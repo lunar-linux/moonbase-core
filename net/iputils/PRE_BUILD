@@ -3,7 +3,7 @@ default_pre_build &&
 # Set $CFLAGS
 sedit "s;^CCOPTOPT=.*;CCOPTOPT=$CFLAGS;" Makefile &&
 
-# Disable LASTTAG
+# Disable LASTTAG (removes the build dependency of git)
 sedit "s;^LASTTAG.*;;" Makefile &&
 
 # Disable gnutls in ping6 and use openssl
