@@ -1,4 +1,4 @@
-make &&
+make USE_NETTLE=no USE_GNUTLS=no &&
 
 prepare_install &&
 
@@ -7,7 +7,7 @@ install -m755 arping clockdiff rdisc tracepath traceroute6 rarpd tftpd /usr/bin/
 install -m4711 ping /usr/bin/ &&
 ln -sf /usr/bin/ping /usr/bin/ping6 &&
 
-if ( in_depends $MODULE docbook-utils ) && [ "$DOCS" == "y" ]; then
+if in_depends $MODULE docbook-utils; then
   # generate manpages and html documentation
   make man
 #  make html
@@ -23,6 +23,6 @@ install -m644 doc/{clockdiff,arping,rdisc,tracepath,traceroute6,rarpd,ping,tftpd
 
 ln -sf ping.8.gz /usr/share/man/man8/ping6.8.gz &&
 
-if module_installed docbook-utils; then
+if in_depends $MODULE docbook-utils; then
   gather_docs doc/*.html
 fi
