@@ -1,6 +1,8 @@
 depends libcap
+depends libidn
 depends %OSSL
 depends sysfsutils
 
-optional_depends docbook-utils "" "" "for documentation regeneration"
-optional_depends xinetd        "" "" "for xinetd support"
+optional_depends xinetd "" "" "for xinetd support"
+
+optional_depends docbook-utils "" "" "for documentation regeneration" n
