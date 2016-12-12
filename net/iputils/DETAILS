@@ -1,14 +1,14 @@
           MODULE=iputils
-         VERSION=s20150815
+         VERSION=s20161105
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=$MODULE-$VERSION-manpages.tar.gz
  SOURCE_URL_FULL=http://github.com/iputils/iputils/archive/$VERSION.tar.gz
      SOURCE2_URL=$PATCH_URL
         WEB_SITE=http://github.com/iputils/iputils/
-      SOURCE_VFY=sha256:1f9c11783e9db90b3ebc43145e412160d989fb133a573638745379957c73c082
-     SOURCE2_VFY=sha256:87efb5ded21dc1e179bf70aec37c6b5143aedc3ddac955d26489dccbab0f3b4b
+      SOURCE_VFY=sha256:f813092f03d17294fd23544b129b95cdb87fe19f7970a51908a6b88509acad8a
+     SOURCE2_VFY=sha256:23d9ab10157c46373751bd36b19468f03eb52d9d828927d9d603f4b19a7e7d44
          ENTERED=20021106
-         UPDATED=20150904
+         UPDATED=20161127
            SHORT="Essential utilities for IP networks"
            PSAFE=no
 

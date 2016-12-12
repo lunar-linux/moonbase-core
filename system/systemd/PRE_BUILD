@@ -36,18 +36,16 @@ fi
 
 default_pre_build &&
 
+# Fixes security/DoS issues:
+# - Revert "pid1: reconnect to the console before being re-executed"
+# - If the notification message length is 0, ignore the message (#4237)
+# - pid1: process zero-length notification messages again
+# - pid1: don't return any error in manager_dispatch_notify_fd() (#4240)
+patch_it $SOURCE2 1 &&
+
 # systemd guys wrongly assume that on every linux
 # installation is a group called "lock" this isn't
 # the case in lunar, so we switch it to root.
 sedit "s:0775 root lock:0775 root root:" tmpfiles.d/legacy.conf &&
 
-# Compat .pc files
-patch_it $SOURCE2 1 &&
-
-# Fixes:
-# networkd: FIONREAD is not reliable on some sockets
-# core: fix assertion check
-# udev: fix cg_unified() return code checking
-# core: revert "core: resolve specifier in config_parse_exec()"
-patch_it $SOURCE3 1 &&
 ./autogen.sh

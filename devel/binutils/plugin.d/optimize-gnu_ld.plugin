@@ -28,7 +28,7 @@ plugin_gnu_ld_optimize()
         LDFLAGS="$LDFLAGS -Wl,-O1"
       ;;
       Reduce)
-        if echo $LDFLAGS | grep -q 'Wl,-O1' ; then
+        if echo $LDFLAGS | grep -q 'Wl,-O1'; then
           LDFLAGS="$LDFLAGS -Wl,-O1,--as-needed"
         else
           LDFLAGS="$LDFLAGS -Wl,--as-needed"
@@ -86,7 +86,6 @@ EOF
   export IFS=$'\t\n'
   TITLE="Lunar Linker Optimizations"
 
-
   OPTIONS=(
     "Strip" "-s (RECOMMENDED)" $( echo ${LDF[@]} | grep -qw "Strip" && echo "on" || echo "off" ) "Strip all symbols"
     "StripDebug" "-S" $( echo ${LDF[@]} | grep -qw "StripDebug" && echo "on" || echo "off" ) "Strip debug symbols only"
@@ -95,7 +94,7 @@ EOF
     "Combreloc" "-z combreloc" $( echo ${LDF[@]} | grep -qw "Combreloc" && echo "on" || echo "off" ) "Combreloc"
     "Relro" "-z relro" $( echo ${LDF[@]} | grep -qw "Relro" && echo "on" || echo "off" ) "Randomize ELF segments (security)"
     "Now" "-z now" $( echo ${LDF[@]} | grep -qw "Now" && echo "on" || echo "off" ) "Make ELF segments R/O at dl load time (slow, security)"
-    )
+  )
   RESULT=`$DIALOG --item-help --separate-output --checklist "Select linker optimizations. These options only apply to the link stage of binaries." 0 0 0 "${OPTIONS[@]}"`
   if [ $? == 0 ]; then
     LDF=($RESULT)

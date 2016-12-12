@@ -1,15 +1,12 @@
           MODULE=tar
-         VERSION=1.28
+         VERSION=1.29
           SOURCE=$MODULE-$VERSION.tar.bz2
-         SOURCE2=$MODULE.1-1.28.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/gnu/$MODULE
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:60e4bfe0602fef34cd908d91cf638e17eeb09394d7b98c2487217dc4d3147562
-     SOURCE2_VFY=sha256:b194977bfb3772eab84ca92ecbf7fb2726bceb10df8a9a8d7d9329a569333145
+      SOURCE_VFY=sha256:236b11190c0a3a6885bdb8d61424f2b36a5872869aa3f7f695dea4b4843ae2f2
         WEB_SITE=http://www.gnu.org/software/tar/tar.html
          ENTERED=20010922
-         UPDATED=20140819
+         UPDATED=20160516
            SHORT="Creates GNU tar archives"
 
 cat << EOF

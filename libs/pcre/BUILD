@@ -1,15 +1,13 @@
-sedit 's:$(libdir)/pkgconfig:/usr/lib/pkgconfig:' Makefile.am Makefile.in &&
-
 bad_flags ALL &&
 
-OPTS+=" --enable-jit                \
-        --enable-utf8               \
-        --enable-pcre16             \
-        --enable-pcre32             \
-        --enable-pcregrep-libz      \
-        --enable-pcregrep-libbz2    \
+OPTS+=" --enable-jit \
+        --enable-utf8 \
+        --enable-pcre16 \
+        --enable-pcre32 \
+        --enable-pcregrep-libz \
+        --enable-pcregrep-libbz2 \
         --enable-unicode-properties \
-        --disable-static"          &&
+        --disable-static" &&
 
 default_config &&
 

@@ -1,0 +1,5 @@
+default_pre_build &&
+
+# use queue.h from compat directory
+sedit 's:include "queue.h":include "compat/queue.h":' eloop.c
+

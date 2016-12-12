@@ -1,4 +1,3 @@
-
 # only lin -r gcc will trigger the language selector!
 if [ -n "$RECONFIGURE" ]; then
   LANGUAGES=$(get_module_config LANGUAGES) &&
@@ -6,7 +5,7 @@ if [ -n "$RECONFIGURE" ]; then
     LANGUAGES=${LANGUAGES:=c++}
   fi &&
 
-  if query "Do you want to select additional compiler languages ? " n ; then
+  if query "Do you want to select additional compiler languages ? " n; then
     OPTIONS=(
       "java"    "Java"        "off"
       "go"      "go"          "off"

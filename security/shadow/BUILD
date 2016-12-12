@@ -1,6 +1,8 @@
 set_login_opts() {
   local option=$1 value=$2
-  if [[ -z $value ]]; then
+  if [[ "$value" == "empty" ]]; then
+    sed -r -i "/^${option}/s;.*;${option};" etc/login.defs
+  elif [[ -z $value ]]; then
     # comment
     sed -r -i "/^#?${option}/s;.*;#&;" etc/login.defs
   else
@@ -28,6 +30,7 @@ make DESTDIR=$SOURCE_DIRECTORY/__shadowdest/ suidperms=4711 install &&
 
 # remove the installed chfn, chsh, login, nologin, su, vigr and vipw apps
 # util-linux install these apps in Lunar
+cp $SOURCE_DIRECTORY/__shadowdest/usr/bin/login /tmp/ &&
 rm $SOURCE_DIRECTORY/__shadowdest/usr/bin/{login,su,chfn,chsh,nologin} &&
 rm $SOURCE_DIRECTORY/__shadowdest/usr/sbin/{vigr,vipw,logoutd} &&
 
@@ -65,12 +68,12 @@ else
   # Disable pam incompatible options
   for lopt in FAILLOG_ENAB LASTLOG_ENAB MAIL_CHECK_ENAB \
               OBSCURE_CHECKS_ENAB PORTTIME_CHECKS_ENAB QUOTAS_ENAB \
-              MOTD_FILE FTMP_FILE NOLOGINS_FILE ENV_HZ PASS_MIN_LEN \
+              FTMP_FILE NOLOGINS_FILE ENV_HZ PASS_MIN_LEN \
               SU_WHEEL_ONLY CRACKLIB_DICTPATH PASS_CHANGE_TRIES \
               PASS_ALWAYS_WARN CHFN_AUTH ENVIRON_FILE; do
     set_login_opts $lopt
   done
-
+  set_login_opts MOTD_FILE empty
   set_login_opts ENCRYPT_METHOD SHA512
 
   [ -e /etc/login.defs ] || install -m 0644 etc/login.defs /etc/login.defs

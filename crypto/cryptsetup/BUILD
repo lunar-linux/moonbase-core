@@ -1,5 +1,4 @@
-OPTS+=" --sbindir=/usr/bin \
-        --disable-static \
+OPTS+=" --disable-static \
         --enable-cryptsetup-reencrypt" &&
 
 default_build

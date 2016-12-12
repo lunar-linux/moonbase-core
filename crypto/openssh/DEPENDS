@@ -1,7 +1,7 @@
-depends  zlib
-depends  %OSSL
-depends  coreutils
-depends  psmisc
+depends zlib
+depends %OSSL
+depends coreutils
+depends psmisc
 
 optional_depends "Linux-PAM"             \
                  "--with-pam"            \

@@ -1,0 +1,4 @@
+default_pre_build &&
+
+sedit 's|-O0|-Os|g' Make.defaults
+sedit 's|-rpath,$(TOPDIR)/src|-rpath,$(libdir)|g' src/test/Makefile

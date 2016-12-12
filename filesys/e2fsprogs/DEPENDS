@@ -1,3 +1,2 @@
-depends  gawk
-depends  util-linux
-depends  pkgconfig
+depends gawk
+depends util-linux
