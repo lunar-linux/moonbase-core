@@ -1,11 +1,11 @@
           MODULE=libnftnl
-         VERSION=1.0.6
+         VERSION=1.0.7
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=http://netfilter.org/projects/$MODULE/files/
-       SOURCE_VFY=sha256:ad3b932a39a1e567308e91b683b32239a5e1aea9b4582dfffe2288c3400ab07e
+       SOURCE_VFY=sha256:9bb66ecbc64b8508249402f0093829f44177770ad99f6042b86b3a467d963982
         WEB_SITE=http://netfilter.org/projects/libnftnl/
          ENTERED=20160321
-         UPDATED=20160612
+         UPDATED=20161225
         SHORT="Netfilter library interface to the nf_tables subsystem"
 
 cat << EOF
