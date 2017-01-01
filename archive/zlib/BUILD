@@ -1,12 +1,11 @@
-  sedit "s:\${libdir}/pkgconfig:/usr/lib/pkgconfig:" Makefile.in  &&
+export CFLAGS="$CFLAGS -fPIC" &&
 
-  export CFLAGS="$CFLAGS -fPIC"  &&
+# binutils needs static the lib
+./configure --prefix=/usr &&
+make &&
 
-  ./configure  --prefix=/usr  &&
-  make                        &&
+./configure --prefix=/usr \
+            --libdir=/lib \
+            --shared &&
 
-  ./configure  --prefix=/usr  \
-               --libdir=/lib  \
-               --shared       &&
-
-  default_make
+default_make
