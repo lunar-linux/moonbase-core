@@ -1,4 +1,4 @@
-optional_depends "acl"                                   \
-                 "--enable-acl"                          \
-                 "--disable-acl"                         \
+optional_depends acl \
+                 "--enable-acl" \
+                 "--disable-acl" \
                  "for access control list (acl) support"
