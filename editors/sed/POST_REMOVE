@@ -1,1 +1,1 @@
-install-info  --delete sed  --info-dir /usr/share/info
+install-info --delete sed --info-dir /usr/share/info

@@ -4,4 +4,4 @@ depends ncurses
 optional_depends perl    "--with-perl" "--without-perl" "for perl support"
 optional_depends %OSSL   ""            "--disable-ssl"  "for SSL support"
 
-optional_depends perl-libwww "" "" "for scriptassist script"
+optional_depends libwww-perl "" "" "for scriptassist script"
