@@ -13,7 +13,7 @@ plugin_gnu_make_optimize()
     unset MAKES
   elif (( MAKES < 2 )); then
     unset MAKES
-
+  else
     verbose_msg "MAKES=\"$MAKES\""
     export MAKES
   fi
