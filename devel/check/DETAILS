@@ -1,11 +1,11 @@
           MODULE=check
-         VERSION=0.10.0
+         VERSION=0.11.0
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=$SFORGE_URL/$MODULE/
-      SOURCE_VFY=sha256:f5f50766aa6f8fe5a2df752666ca01a950add45079aa06416b83765b1cf71052
-        WEB_SITE=http://check.sourceforge.net
+      SOURCE_URL=http://github.com/libcheck/check/releases/download/$VERSION/
+      SOURCE_VFY=sha256:24f7a48aae6b74755bcbe964ce8bc7240f6ced2141f8d9cf480bc3b3de0d5616
+        WEB_SITE=http://github.com/libcheck/check/
          ENTERED=20031201
-         UPDATED=20150820
+         UPDATED=20170128
            SHORT="A unit test framework for C"
 
 cat << EOF
