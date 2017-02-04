@@ -1,6 +1,10 @@
   # The fortify compiler option cause the build to fail
   bad_flags -D_FORTIFY_SOURCE=2 -fstack-protector-strong &&
 
+  # 32bit build fails with -Os due to a ebp inline assembly problem
+  bad_flags -Os &&
+  CFLAGS+=" -O2" &
+
   # Fix NPTL issues with Xen on i686
   export CFLAGS+=" -mno-tls-direct-seg-refs" &&
 
