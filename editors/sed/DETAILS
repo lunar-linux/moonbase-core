@@ -1,12 +1,12 @@
           MODULE=sed
-         VERSION=4.3
+         VERSION=4.4
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE/
-      SOURCE_VFY=sha256:47c20d8841ce9e7b6ef8037768aac44bc2937fff1c265b291c824004d56bd0aa
+      SOURCE_VFY=sha256:cbd6ebc5aaf080ed60d0162d7f6aeae58211a1ee9ba9bb25623daa6cd942683b
         WEB_SITE=http://www.gnu.org/software/sed/
          ENTERED=20010922
-         UPDATED=20170105
+         UPDATED=20170204
            SHORT="A stream-oriented non-interactive text editor"
 
 cat << EOF
