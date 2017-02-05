@@ -13,26 +13,26 @@ for O in \
   CONFIG_FHANDLE
 do
   if ! kernel_option_present $O ; then
-    FAIL=1
+    FAIL=1 &&
     message "${MESSAGE_COLOR}Required kernel option not present: ${PROBLEM_COLOR}$O${DEFAULT_COLOR}${MESSAGE_COLOR}"
   fi
-done
+done &&
 
 if [ -n "$FAIL" ]; then
-  message "Please ensure the kernel options above are enabled, then try again.${DEFAULT_COLOR}"
+  message "Please ensure the kernel options above are enabled, then try again.${DEFAULT_COLOR}" &&
   if ! query "Ignore this warning?" n ; then
-    exit 1
+    false
   fi
-fi
+fi &&
 
 if mountpoint -q /usr && ! module_installed dracut; then
-  message "${PROBLEM_COLOR}WARNING: ${MESSAGE_COLOR}You appear to have an /usr partition mounted. If you continue this"
-  message "installation your computer might NOT be able to boot properly. Installing dracut to get initrd support"
-  message "will take care of the issue.${DEFAULT_COLOR}"
+  message "${PROBLEM_COLOR}WARNING: ${MESSAGE_COLOR}You appear to have an /usr partition mounted. If you continue this" &&
+  message "installation your computer might NOT be able to boot properly. Installing dracut to get initrd support" &&
+  message "will take care of the issue.${DEFAULT_COLOR}" &&
   if ! query "Ignore this warning and continue installation?" n ; then
-    exit 1
+    false
   fi
-fi
+fi &&
 
 default_pre_build &&
 
