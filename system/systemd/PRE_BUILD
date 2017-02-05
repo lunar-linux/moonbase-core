@@ -48,4 +48,7 @@ patch_it $SOURCE2 1 &&
 # the case in lunar, so we switch it to root.
 sedit "s:0775 root lock:0775 root root:" tmpfiles.d/legacy.conf &&
 
+# fix version liblz4 version check
+sedit 's:125:1.2.5:' configure.ac &&
+
 ./autogen.sh
