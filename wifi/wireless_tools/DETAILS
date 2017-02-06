@@ -1,12 +1,13 @@
           MODULE=wireless_tools
-         VERSION=29
-          SOURCE=$MODULE.$VERSION.tar.gz
+         VERSION=30
+          PREVER=pre9
+          SOURCE=$MODULE.$VERSION.$PREVER.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE.$VERSION
       SOURCE_URL=http://hpl.hp.com/personal/Jean_Tourrilhes/Linux
-      SOURCE_VFY=sha256:6fb80935fe208538131ce2c4178221bab1078a1656306bce8909c19887e2e5a1
+      SOURCE_VFY=sha256:abd9c5c98abf1fdd11892ac2f8a56737544fe101e1be27c6241a564948f34c63
         WEB_SITE=http://hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html
          ENTERED=20020219
-         UPDATED=20100317
+         UPDATED=20170206
            SHORT="Tools for wireless networking"
 
 cat << EOF
