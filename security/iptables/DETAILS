@@ -1,13 +1,13 @@
           MODULE=iptables
-         VERSION=1.6.0
+         VERSION=1.6.1
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=ftp://ftp.netfilter.org/pub/$MODULE
-      SOURCE_VFY=sha256:4bb72a0a0b18b5a9e79e87631ddc4084528e5df236bc7624472dcaa8480f1c60
+      SOURCE_VFY=sha256:0fc2d7bd5d7be11311726466789d4c65fb4c8e096c9182b56ce97440864f0cf5
         WEB_SITE=http://www.netfilter.org
          ENTERED=20010922
-         UPDATED=20160321
+         UPDATED=20170128
            SHORT="Tool to create netfilter rules"
-PSAFE=no
+           PSAFE=no
 
 cat << EOF
 iptables is built on top of netfilter: the new packet alteration
