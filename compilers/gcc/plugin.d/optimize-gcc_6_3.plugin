@@ -1,5 +1,5 @@
 #
-# gcc-6.2.x compiler optimizations plugin
+# gcc-6.3.x compiler optimizations plugin
 #
 
 compiler_gcc_optimize_defaults()
@@ -10,18 +10,18 @@ compiler_gcc_optimize_defaults()
   CPU=$(arch | sed 's;_;-;')
 }
 
-plugin_compiler_gcc_6_2_optimize()
+plugin_compiler_gcc_6_3_optimize()
 {
-  if [ "${LUNAR_COMPILER:-GCC_6_2}" != "GCC_6_2" ]; then
+  if [ "${LUNAR_COMPILER:-GCC_6_3}" != "GCC_6_3" ]; then
     return 2
   fi
 
-  debug_msg "plugin_compiler_gcc_6_2_optimize($@)"
+  debug_msg "plugin_compiler_gcc_6_3_optimize($@)"
 
   compiler_gcc_optimize_defaults
 
-  if [ -f /etc/lunar/local/optimizations.GCC_6_2 ]; then
-    . /etc/lunar/local/optimizations.GCC_6_2
+  if [ -f /etc/lunar/local/optimizations.GCC_6_3 ]; then
+    . /etc/lunar/local/optimizations.GCC_6_3
   fi
 
   # some local macro's
@@ -170,17 +170,17 @@ plugin_compiler_gcc_6_2_optimize()
 }
 
 
-plugin_compiler_gcc_6_2_menu()
+plugin_compiler_gcc_6_3_menu()
 {
   # The main code calls this function WITHOUT $1 to find out which
   # compiler optimization plugins exist. It then returns the plugin
   # identifier which can be saved in $LUNAR_COMPILER as the user's
   # choice for COMPILERS
   if [ -z "$1" ]; then
-    echo "GCC_6_2"
-    echo "GNU C Compiler suite version 6.2.x"
+    echo "GCC_6_3"
+    echo "GNU C Compiler suite version 6.3.x"
     return 2
-  elif [ "$1" != "GCC_6_2" ]; then
+  elif [ "$1" != "GCC_6_3" ]; then
     # we don't display anything when the user selected a
     # different menu
     return 2
@@ -209,7 +209,7 @@ plugin_compiler_gcc_6_2_menu()
   save_optimizations()
   {
     debug_msg "save_optimizations($@)"
-    cat >/etc/lunar/local/optimizations.GCC_6_2  <<EOF
+    cat >/etc/lunar/local/optimizations.GCC_6_3  <<EOF
 CPU=$CPU
 CPUTUNE=$CPUTUNE
 BOPT=$BOPT
@@ -223,8 +223,8 @@ EOF
 
   compiler_gcc_optimize_defaults
 
-  if [ -f /etc/lunar/local/optimizations.GCC_6_2 ]; then
-    . /etc/lunar/local/optimizations.GCC_6_2
+  if [ -f /etc/lunar/local/optimizations.GCC_6_3 ]; then
+    . /etc/lunar/local/optimizations.GCC_6_3
   fi
 
   export IFS=$'\t\n'
@@ -234,7 +234,7 @@ EOF
 
   while true; do
     unset OPTIONS
-    IS_DEFAULT=$([ "$(get_local_config LUNAR_COMPILER)" == "GCC_6_2" ] && echo DEFAULT || get_local_config LUNAR_COMPILER)
+    IS_DEFAULT=$([ "$(get_local_config LUNAR_COMPILER)" == "GCC_6_3" ] && echo DEFAULT || get_local_config LUNAR_COMPILER)
     DEFAULT=${CHOICE:-safe}
     CHOICE=`$DIALOG --title "$TITLE" --ok-label "Select" --cancel-label "Close" --default-item "$DEFAULT" --item-help --menu "" 0 0 0 $(
       echo "default"
@@ -286,8 +286,8 @@ EOF
       case $CHOICE in
         default)
           if [ "$IS_DEFAULT" != "DEFAULT" ]; then
-            set_local_config LUNAR_COMPILER GCC_6_2
-            $DIALOG --msgbox "Gcc 6.2 is now the default compiler!" 6 60
+            set_local_config LUNAR_COMPILER GCC_6_3
+            $DIALOG --msgbox "Gcc 6.3 is now the default compiler!" 6 60
           fi
           ;;
         safe)
@@ -678,5 +678,5 @@ EOF
 }
 
 
-plugin_register BUILD_BUILD plugin_compiler_gcc_6_2_optimize
-plugin_register OPTIMIZE_MENU plugin_compiler_gcc_6_2_menu
+plugin_register BUILD_BUILD plugin_compiler_gcc_6_3_optimize
+plugin_register OPTIMIZE_MENU plugin_compiler_gcc_6_3_menu

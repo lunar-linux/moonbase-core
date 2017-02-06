@@ -1,13 +1,13 @@
           MODULE=gcc
-         VERSION=6.2.0
+         VERSION=6.3.0
           SOURCE=$MODULE-$VERSION.tar.bz2
-   SOURCE_URL[0]=$GNU_URL/gcc/$MODULE-$VERSION
-   SOURCE_URL[1]=ftp://gcc.gnu.org/pub/gcc/releases/gcc-$VERSION
-   SOURCE_URL[2]=http://www.online-mirror.org/gcc/$MODULE-$VERSION
-      SOURCE_VFY=sha256:9944589fc722d3e66308c0ce5257788ebd7872982a718aa2516123940671b7c5
+   SOURCE_URL[0]=$GNU_URL/gcc/$MODULE-$VERSION/
+   SOURCE_URL[1]=ftp://gcc.gnu.org/pub/gcc/releases/gcc-$VERSION/
+   SOURCE_URL[2]=http://www.online-mirror.org/gcc/$MODULE-$VERSION/
+      SOURCE_VFY=sha256:f06ae7f3f790fbf0f018f6d40e844451e6bc3b7bc96e128e63b09825c1f8b29f
         WEB_SITE=http://gcc.gnu.org/
          ENTERED=20020628
-         UPDATED=20160822
+         UPDATED=20161221
            SHORT="GNU compiler collection"
 
 cat << EOF
