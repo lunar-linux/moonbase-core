@@ -1,11 +1,11 @@
           MODULE=os-prober
-         VERSION=1.71
+         VERSION=1.74
           SOURCE=${MODULE}_$VERSION.tar.xz
       SOURCE_URL=http://ftp.de.debian.org/debian/pool/main/o/$MODULE/
-      SOURCE_VFY=sha256:5d6141e02b58e82194422b97d683d61c7ff78175d89c2f055f5d2e7a363bdd20
+      SOURCE_VFY=sha256:c8e97ae193783eb8b5f5aba6b6d447b2e3e60696bb71f86ad029c33e14c5a7be
         WEB_SITE=http://kitenet.net/~joey/code/os-prober/
          ENTERED=20110601
-         UPDATED=20160312
+         UPDATED=20170207
            SHORT="An utility to detect other OSes on a set of drives"
 
 cat << EOF
