@@ -53,6 +53,6 @@ install -m0755 {${SCRIPT_DIRECTORY},/usr/bin}/c89 &&
 install -m0755 {${SCRIPT_DIRECTORY},/usr/bin}/c99 &&
 
 # remove the offending broken freetype link
-rm -f /usr/lib/gcc/$BUILD/$VERSION/include-fixed/freetype
+rm -f /usr/lib/gcc/$BUILD/$VERSION/include-fixed/freetype &&
 
 ln -sf /usr/bin/cpp /lib/cpp
