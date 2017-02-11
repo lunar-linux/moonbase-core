@@ -1,11 +1,11 @@
           MODULE=gperf
-         VERSION=3.0.4
+         VERSION=3.1
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$GNU_URL/$MODULE
-      SOURCE_VFY=sha1:e32d4aff8f0c730c9a56554377b2c6d82d0951b8
+      SOURCE_VFY=sha256:588546b945bba4b70b6a3a616e80b4ab466e3f33024a352fc2198112cdbb3ae2
         WEB_SITE=http://www.gnu.org/software/gperf
          ENTERED=20061025
-         UPDATED=20070918
+         UPDATED=20170206
            SHORT="A perfect hash function generator"
 
 cat << EOF
