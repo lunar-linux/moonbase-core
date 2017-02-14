@@ -1,0 +1,4 @@
+default_pre_build &&
+
+# fix crash in rtnl_link_sriov_parse_vflist
+sedit "s/vf_vlan_info[len] = nla_data(nla_list)/vf_vlan_info[list_len] = nla_data(nla_list)/" lib/route/link/sriov.c
