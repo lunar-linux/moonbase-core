@@ -5,13 +5,11 @@
  SOURCE_URL_FULL=https://github.com/systemd/systemd/archive/v$VERSION.tar.gz
      SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:1172c7c7d5d72fbded53186e7599d5272231f04cc8b72f9a0fb2c5c20dfc4880
-     SOURCE2_VFY=sha256:6b7d2a92d6298d48b06c342c40256f7c4489e7ce8d7d19c736f61fbf0bc56b45
+     SOURCE2_VFY=sha256:9ffd9519a2afc6dfabc91bcf53b8af7284d9c831f63974a51d910c2d9117906f
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
          UPDATED=20170219
            SHORT="A system and program management daemon"
-PSAFE=no
-
 
 cat << EOF
 systemd is a system and session manager for Linux, compatible with SysV

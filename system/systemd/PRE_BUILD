@@ -47,6 +47,7 @@ default_pre_build &&
 # - nspawn: don't hide --bind=/tmp/* mounts
 # - disable RestrictAddressFamilies on i686
 # - Revert "nspawn: try to bind mount resolved's resolv.conf
+# - build-sys: add check for gperf lookup function signature (#5055)
 patch_it $SOURCE2 1 &&
 
 # systemd guys wrongly assume that on every linux
