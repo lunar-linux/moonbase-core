@@ -10,6 +10,8 @@
          ENTERED=20100919
          UPDATED=20170219
            SHORT="A system and program management daemon"
+PSAFE=no
+
 
 cat << EOF
 systemd is a system and session manager for Linux, compatible with SysV
