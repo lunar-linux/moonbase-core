@@ -1,14 +1,17 @@
           MODULE=bash_static
-         VERSION=4.4
-          SOURCE=bash-${VERSION}.tar.gz
+         VERSION=4.4.12
+          SOURCE=bash-${VERSION%.*}.tar.gz
+         SOURCE2=bash44-patches-001-012.patch
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=ftp://ftp.cwru.edu/pub/$MODULE
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/bash-${VERSION}
+     SOURCE_URL2=$PATCH_URL
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/bash-${VERSION%.*}
       SOURCE_VFY=sha256:d86b3392c1202e8ff5a423b302e6284db7f8f435ea9f39b5b1b20fd3ac36dfcb
+     SOURCE2_VFY=sha256:a29c30ee2759e7f75d527ef1d2485ffd110b54a2a7b65e21f506c407226b48a9
         WEB_SITE=http://www.gnu.org/software/bash
          ENTERED=20020615
-         UPDATED=20161030
+         UPDATED=20170222
            SHORT="static bash build for rescue purposes"
 
 cat << EOF
