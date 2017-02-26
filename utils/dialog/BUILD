@@ -1,3 +1,3 @@
-OPTS+=" --with-shared" &&
+OPTS+=" --with-ncurses --with-shared" &&
 
 default_build
