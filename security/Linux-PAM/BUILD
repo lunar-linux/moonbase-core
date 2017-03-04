@@ -28,6 +28,7 @@ AT_M4DIR="m4" autoreconf -i &&
 sedit  "s/examples//"  Makefile           &&
 sedit  "s/read yes//"  conf/install_conf  &&
 
+make -C po update-gmo &&
 make &&
 
 # Test our modules, we don't want a broken system
