@@ -1,8 +1,11 @@
           MODULE=libcap
          VERSION=2.25
           SOURCE=$MODULE-$VERSION.tar.xz
+         SOURCE2=libcap-2.25-no-perl-and-fix-gperf.patch
       SOURCE_URL=http://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:693c8ac51e983ee678205571ef272439d83afe62dd8e424ea14ad9790bc35162
+     SOURCE2_VFY=sha256:f15f2d11f8ce61907b189efed361b982a8fc30d3ac789b97910dcf7afd532995
         WEB_SITE=http://www.kernel.org/pub/linux/libs/security/linux-privs
          ENTERED=20040906
          UPDATED=20140111

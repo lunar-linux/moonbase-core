@@ -1,5 +1,8 @@
 default_pre_build &&
 
+# Removed perl as build dep and fix for gperf 3.1
+patch_it $SOURCE2 1 &&
+
 # no static libs
 sedit "s/all: \$(MINLIBNAME) \$(STALIBNAME)/all: \$(MINLIBNAME)/g" libcap/Makefile &&
 sedit "/install -m 0644 \$(STALIBNAME)/d" libcap/Makefile &&

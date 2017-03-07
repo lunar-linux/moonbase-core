@@ -1,11 +1,11 @@
           MODULE=lzo
-         VERSION=2.09
+         VERSION=2.10
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://www.oberhumer.com/opensource/$MODULE/download
-      SOURCE_VFY=sha256:f294a7ced313063c057c504257f437c8335c41bfeed23531ee4e6a2b87bcb34c
+      SOURCE_VFY=sha256:c0f892943208266f9b6543b3ae308fab6284c5c90e627931446fb49b4221a072
         WEB_SITE=http://www.oberhumer.com/opensource/lzo
          ENTERED=20031113
-         UPDATED=20150211
+         UPDATED=20170302
            SHORT="LZO - a real-time data compression library"
 
 cat << EOF

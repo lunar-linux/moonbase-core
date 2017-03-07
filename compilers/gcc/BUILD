@@ -10,7 +10,6 @@ OPTS+=" --build=$BUILD                \
         --host=$BUILD                 \
         --prefix=/usr                 \
         --libdir=/usr/lib             \
-        --libexecdir=/usr/libexec     \
         --infodir=/usr/share/info     \
         --mandir=/usr/share/man       \
         --enable-languages=$LANGUAGES \
