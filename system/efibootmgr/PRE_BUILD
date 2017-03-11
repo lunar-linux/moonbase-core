@@ -1,6 +1,0 @@
-default_pre_build &&
-
-sedit "s:efivar.h:efivar/efivar.h:" src/efibootmgr.c
-sedit "s:efiboot.h:efivar/efiboot.h:" src/efibootmgr.c
-
-
