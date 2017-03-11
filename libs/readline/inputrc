@@ -11,10 +11,7 @@ set input-meta On
 set convert-meta Off
 set output-meta On
 
-# Set various nice escape sequences:
-"\eOd": backward-word
-"\eOc": forward-word
-
+$if mode=emacs
 # for linux console
 "\e[1~": beginning-of-line
 "\e[4~": end-of-line
@@ -24,6 +21,15 @@ set output-meta On
 "\e[8~": end-of-line
 "\e[3~": delete-char
 "\e[2~": quoted-insert
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+# for rxvt
+"\e[8~": end-of-line
 
 # for xterm
 "\eOH": beginning-of-line
@@ -32,3 +38,4 @@ set output-meta On
 # for freebsd console
 "\e[H": beginning-of-line
 "\e[F": end-of-line
+$endif
