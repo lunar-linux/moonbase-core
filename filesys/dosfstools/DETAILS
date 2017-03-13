@@ -1,12 +1,11 @@
           MODULE=dosfstools
-         VERSION=4.0
+         VERSION=4.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://github.com/$MODULE/$MODULE/releases/download/v$VERSION/
         WEB_SITE=http://github.com/dosfstools/dosfstools/
-      SOURCE_VFY=sha256:9037738953559d1efe04fc5408b6846216cc0138f7f9d32de80b6ec3c35e7daf
+      SOURCE_VFY=sha256:e6b2aca70ccc3fe3687365009dd94a2e18e82b688ed4e260e04b7412471cc173
          ENTERED=20011217
-         UPDATED=20160509
-      MAINTAINER=sofar@lunar-linux.org
+         UPDATED=20170311
            SHORT="Utilities to create and check MS-DOS filesystems under Linux"
 
 cat << EOF
