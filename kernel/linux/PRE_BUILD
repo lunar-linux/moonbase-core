@@ -1,8 +1,8 @@
 # Bail if we're not running a core with kernel functions
 
 if [ ! -e $FUNCTIONS/kernel.lunar ] ; then
-  message "${PROBLEM_COLOR}Bailing out, ${DEFAULT_COLOR}Lunar code version too old"
-  message "${PROBLEM_COLOR}Update core ${MODULE_COLOR}(lin lunar)${DEFAULT_COLOR} to install this kernel"
+  message "${PROBLEM_COLOR}Bailing out, ${DEFAULT_COLOR}Lunar (or theedge) code version too old"
+  message "${PROBLEM_COLOR}Update core ${MODULE_COLOR}(lin lunar or lin theedge)${DEFAULT_COLOR} to install this kernel"
   exit 1
 fi
 
