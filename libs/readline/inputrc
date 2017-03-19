@@ -2,7 +2,7 @@
 # This file configures keyboard input for programs using readline.
 # See "man 3 readline" for more examples.
 
-# Configure the system bell.  Options are none, visible, and audible.
+# Configure the system bell. Options are none, visible, and audible.
 #set bell-style none
 
 # Enable 8 bit input.
