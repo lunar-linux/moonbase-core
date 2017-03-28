@@ -7,7 +7,7 @@ if [ ! -e $FUNCTIONS/kernel.lunar ] ; then
 fi &&
 
 mk_source_dir $SOURCE_DIRECTORY &&
-rm -f /usr/src/linux &&
+rm -f /usr/src/linux
 ln -sf $SOURCE_DIRECTORY /usr/src/linux
 cd $SOURCE_DIRECTORY &&
 
