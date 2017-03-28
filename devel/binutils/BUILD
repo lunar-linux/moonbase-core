@@ -10,6 +10,7 @@ CFLAGS+=" -fPIC" &&
              --enable-shared  \
              --enable-threads \
              --enable-gold    \
+             --enable-plugins \
              --enable-install-libiberty \
              $OPTS           &&
 

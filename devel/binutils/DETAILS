@@ -6,7 +6,7 @@
       SOURCE_VFY=sha256:cd717966fc761d840d451dbd58d44e1e5b92949d2073d75b73fccb476d772fcf
         WEB_SITE=http://sources.redhat.com/binutils
          ENTERED=20010922
-         UPDATED=20170309
+         UPDATED=20170328
            SHORT="An essential collection of binary utilities"
 
 cat << EOF
