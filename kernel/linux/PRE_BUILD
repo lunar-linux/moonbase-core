@@ -8,7 +8,7 @@ fi &&
 
 mk_source_dir $SOURCE_DIRECTORY &&
 rm -f /usr/src/linux &&
-ln -sf $SOURCE_DIRECTORY /usr/src/linux &&
+ln -sf $SOURCE_DIRECTORY /usr/src/linux
 cd $SOURCE_DIRECTORY &&
 
 # Check wether we're running an up-to-date tar
@@ -50,4 +50,3 @@ while
 do
   true
 done
-
