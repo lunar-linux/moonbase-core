@@ -1,11 +1,11 @@
           MODULE=irssi
-         VERSION=1.0.1
+         VERSION=1.0.2
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://github.com/irssi/irssi/releases/download/$VERSION/
-      SOURCE_VFY=sha256:196ae830763be0a9dc0b377e571db105e82f9b7f7e0f443a81fbc665cea819db
+      SOURCE_VFY=sha256:8e4f79797a269cc5e026f084b4b0017c4818bb83735f0d0011153df371335ab9
         WEB_SITE=http://irssi.org/
          ENTERED=20020908
-         UPDATED=20170206
+         UPDATED=20170315
            SHORT="irssi: an IRC client"
 
 cat << EOF
