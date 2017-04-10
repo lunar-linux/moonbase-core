@@ -1,15 +1,12 @@
            MODULE=dracut
-          VERSION=044
+          VERSION=045
            SOURCE=$MODULE-$VERSION.tar.xz
-          SOURCE2=dracut-044-bash44-temp-fix.patch
        SOURCE_URL=http://www.kernel.org/pub/linux/utils/boot/dracut
-      SOURCE2_URL=$PATCH_URL
  SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
-       SOURCE_VFY=sha256:84b97c9b0120e9fde06c3b9cf2ede1c4632cccd8e085e980b9ec9c788655af05
-      SOURCE2_VFY=sha256:225648f3e2d671cfc857ec4a496095d561328dd2010ffa0460c89ce9159f8531
+       SOURCE_VFY=sha256:ca9c7ea54d3efc8b57ac1427cc5fa4d66688f6cf9d3088f4c5e7ae7c7e84ebf8
          WEB_SITE=https://dracut.wiki.kernel.org/index.php/Main_Page
           ENTERED=20120715
-          UPDATED=20161112
+          UPDATED=20170410
             SHORT="Initramfs generator using udev"
 COMPRESS_MANPAGES=off # If we compress them it will mess up an upgrade for this module due to symlinks
 
