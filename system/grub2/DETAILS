@@ -1,16 +1,12 @@
           MODULE=grub2
-         VERSION=2.00
-          SOURCE=grub-$VERSION.tar.gz
-         SOURCE2=grub2-glibc-2.16.patch
-   SOURCE_URL[0]=ftp://ftp.gnu.org/gnu/grub
-   SOURCE_URL[1]=http://www.funet.fi/pub/gnu/alpha/gnu/grub
-     SOURCE2_URL=$PATCH_URL
+         VERSION=2.02
+          SOURCE=grub-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/grub-$VERSION
-      SOURCE_VFY=sha1:fcb39b621680caf34071abcb9ec913d5da458554
-     SOURCE2_VFY=sha1:f59b24e886914691c952823a02a7c46a87f51315
+      SOURCE_URL=$GNU_URL/grub/
+      SOURCE_VFY=sha256:810b3798d316394f94096ec2797909dbf23c858e48f7b3830826b8daa06b7b0f
         WEB_SITE=http://www.gnu.org/software/grub
          ENTERED=20100112
-         UPDATED=20120802
+         UPDATED=20170426
       MAINTAINER=dagbrown@lunar-linux.org
            SHORT="GNU GRUB boot loader"
 
