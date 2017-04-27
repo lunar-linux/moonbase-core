@@ -1,0 +1,17 @@
+default_pre_build &&
+
+if in_depends $MODULE dejavu-ttf; then
+  # Fix DejaVuSans.ttf location so that grub-mkfont can create *.pf2 files for starfield theme
+  sedit 's|/usr/share/fonts/dejavu|/usr/share/fonts/dejavu-ttf|g' configure.ac
+fi &&
+
+if in_depends $MODULE unifont; then
+  # Avoid the problem with unifont during compile of grub
+  cp /usr/share/fonts/BDF/unifont.bdf unifont.bdf
+fi &&
+
+# Pull in latest language files
+./linguas.sh &&
+
+# Remove not working langs which need LC_ALL=C.UTF-8
+sedit 's#en@cyrillic en@greek##g' po/LINGUAS

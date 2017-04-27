@@ -2,6 +2,21 @@ depends ncurses
 depends gettext
 depends bison
 
-optional_depends "os-prober" "" "" "for OS auto-detection on other partitions"
-optional_depends "lvm2" "--enable-device-mapper" "--disable-device-mapper" "enable Linux device-mapper support"
-optional_depends "fuse" "--enable-grub-mount" "--disable-grub-mount" "build and install the grub-mount utility"
+optional_depends efibootmgr \
+                 "--with-platform=efi" \
+                 "--with-platform=pc --target=i386" \
+                 "for grub-install EFI instead of BIOS support" n
+
+optional_depends lvm2 \
+                 "--enable-device-mapper" \
+                 "--disable-device-mapper" \
+                 "enable Linux device-mapper support"
+
+optional_depends fuse \
+                 "--enable-grub-mount" \
+                 "--disable-grub-mount" \
+                 "build and install the grub-mount utility"
+
+optional_depends os-prober  "" "" "for OS auto-detection on other partitions"
+optional_depends dejavu-ttf "" "" "for starfield theme install"
+optional_depends unifont    "" "" "for unifont.ps2 font install"
