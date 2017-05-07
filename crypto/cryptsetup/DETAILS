@@ -1,11 +1,11 @@
           MODULE=cryptsetup
-         VERSION=1.7.4
+         VERSION=1.7.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://www.kernel.org/pub/linux/utils/cryptsetup/v${VERSION%.*}
-      SOURCE_VFY=sha256:7ccf893ef79a38fb92d61f03c17b964982119f5319cdaa85a1335b8558cca016
+      SOURCE_VFY=sha256:2b30cd1d0dd606a53ac77b406e1d37798d4b0762fa89de6ea546201906a251bd
         WEB_SITE=http://code.google.com/p/cryptsetup
          ENTERED=20050309
-         UPDATED=20170318
+         UPDATED=20170428
            SHORT="Device-mapper crypto userspace setup tool"
 
 cat << EOF
