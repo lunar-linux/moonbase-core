@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:e87aae032bf07c26f85ac0ed3250998c37621d95f8bd748b31f15b33c45ee995
         WEB_SITE=http://www.gnu.org/software/flex/flex.html
          ENTERED=20010922
-         UPDATED=2017-5-7
+         UPDATED=20170507
            SHORT="A fast lexical analyser generator"
 
 cat << EOF
