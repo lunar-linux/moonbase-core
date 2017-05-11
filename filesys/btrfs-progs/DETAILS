@@ -3,7 +3,7 @@
           SOURCE=$MODULE-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
  SOURCE_URL_FULL=http://github.com/kdave/btrfs-progs/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:0271266501e09a2ba61d0a37b9e2c9b770bfe059e2b2e6c1e3093b2745f6f29e
+      SOURCE_VFY=sha256:9f126f253a0067126556c4563f2220cca5962b2c0f66c60fec0c80b9cef8fb63
         WEB_SITE=http://btrfs.wiki.kernel.org/index.php/Main_Page
          ENTERED=20090819
          UPDATED=20170402
