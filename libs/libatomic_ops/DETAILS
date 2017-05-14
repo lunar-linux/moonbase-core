@@ -1,18 +1,18 @@
           MODULE=libatomic_ops
-         VERSION=7.4.0
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://www.hpl.hp.com/research/linux/atomic_ops/download/
-      SOURCE_VFY=sha1:3397c2b2a02be3c27af6ed603332e81464447653
-        WEB_SITE=http://www.hpl.hp.com/research/linux/atomic_ops/index.php4
+         VERSION=7.4.4
+          SOURCE=$MODULE-${VERSION//./_}.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-${VERSION//./_}
+      SOURCE_URL=http://github.com/ivmai/libatomic_ops/archive/
+      SOURCE_VFY=sha256:ef8335676f18a111f885d48810ab090fb6bfad94e5a5dd76cdccd2a536828662
+        WEB_SITE=http://github.com/ivmai/libatomic_ops/
          ENTERED=20071005
-         UPDATED=20140926
+         UPDATED=20170514
            SHORT="Atomic memory update operations"
 
 cat << EOF
-Provides implementations for atomic memory update operations on a
-number of architectures. This allows direct use of these in
-reasonably portable code. Unlike earlier similar packages, this
-one explicitly considers memory barrier semantics, and allows
-the construction of code that involves minimum overhead across a
-variety of architectures.
+Provides implementations for atomic memory update operations on a number of
+architectures. This allows direct use of these in reasonably portable code.
+Unlike earlier similar packages, this one explicitly considers memory barrier
+semantics, and allows the construction of code that involves minimum overhead
+across a variety of architectures.
 EOF
