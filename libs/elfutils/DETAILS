@@ -1,9 +1,8 @@
           MODULE=elfutils
-         VERSION=0.168
+         VERSION=0.169
           SOURCE=$MODULE-$VERSION.tar.bz2
-   SOURCE_URL[0]=https://sourceware.org/elfutils/ftp/$VERSION
-   SOURCE_URL[1]=$MIRROR_URL
-      SOURCE_VFY=sha256:b88d07893ba1373c7dd69a7855974706d05377766568a7d9002706d5de72c276
+      SOURCE_URL=https://sourceware.org/elfutils/ftp/$VERSION/
+      SOURCE_VFY=sha256:9412fac7b30872b738bc1ed1ebcaed54493c26ef9a67887913498c17b10f3bc2
         WEB_SITE=https://sourceware.org/elfutils/
          ENTERED=20021102
          UPDATED=20161229
