@@ -1,11 +1,12 @@
           MODULE=libatomic_ops
-         VERSION=7.4.6
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://github.com/ivmai/libatomic_ops/releases/download/v$VERSION/
-      SOURCE_VFY=sha256:96e88ba450ae5fa10aa8e94e6b151a63ffbe47f8069574bd12da22ae80c686db
+         VERSION=7.4.4
+          SOURCE=$MODULE-${VERSION//./_}.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-${VERSION//./_}
+      SOURCE_URL=http://github.com/ivmai/libatomic_ops/archive/
+      SOURCE_VFY=sha256:ef8335676f18a111f885d48810ab090fb6bfad94e5a5dd76cdccd2a536828662
         WEB_SITE=http://github.com/ivmai/libatomic_ops/
          ENTERED=20071005
-         UPDATED=20170525
+         UPDATED=20170514
            SHORT="Atomic memory update operations"
 
 cat << EOF
