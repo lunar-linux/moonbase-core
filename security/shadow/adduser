@@ -111,17 +111,17 @@ read FOO
 echo
 if ! grep -q "^$GID:" /etc/group ; then
   echo Making new group...
-  /sbin/groupadd $GID
+  /usr/bin/groupadd $GID
 fi
 echo Making new account...
-/sbin/useradd $GHME -m $GEXP $GGID $GAGID $GSHL $GUID $LOGIN
+/usr/bin/useradd $GHME -m $GEXP $GGID $GAGID $GSHL $GUID $LOGIN
 if [ -d $HME ]; then
   chmod 711 $HME
 fi
 echo
-/bin/chfn $LOGIN
+/usr/bin/chfn $LOGIN
 echo
-/bin/passwd $LOGIN
+/usr/bin/passwd $LOGIN
 echo
 # lets touch the mailbox
 if ! [ -d /var/spool/mail ]; then
