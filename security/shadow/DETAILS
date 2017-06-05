@@ -6,7 +6,7 @@
         WEB_SITE=http://packages.qa.debian.org/s/shadow.html
       MAINTAINER=ratler@lunar-linux.org
          ENTERED=20010922
-         UPDATED=20160712
+         UPDATED=20170531
            SHORT="Contains the shadow password file utilities"
 PSAFE=no
 
