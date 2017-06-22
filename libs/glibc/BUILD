@@ -1,5 +1,5 @@
   # The fortify compiler option cause the build to fail
-  bad_flags -D_FORTIFY_SOURCE=2 -fstack-protector-strong &&
+  bad_flags -D_FORTIFY_SOURCE=2 &&
 
   # 32bit build fails with -Os due to a ebp inline assembly problem
   bad_flags -Os &&
@@ -48,6 +48,7 @@
                --enable-kernel=2.6.32     \
                --with-headers=/usr/include \
                --enable-stackguard-randomization \
+               --enable-stack-protector=strong \
                $OPTS  &&
 
   # build libraries with hardening disabled
@@ -56,8 +57,8 @@
 
   # Re-enable hardening
   sedit '/build-programs=/s;no;yes;' configparms &&
-  echo "CC += -fstack-protector-strong -D_FORTIFY_SOURCE=2" >> configparms &&
-  echo "CXX += -fstack-protector-strong -D_FORTIFY_SOURCE=2" >> configparms &&
+  echo "CC += -D_FORTIFY_SOURCE=2" >> configparms &&
+  echo "CXX += -D_FORTIFY_SOURCE=2" >> configparms &&
   make &&
 
   # Preserve the old glibc temporarily
