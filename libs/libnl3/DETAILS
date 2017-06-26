@@ -1,12 +1,12 @@
           MODULE=libnl3
-         VERSION=3.2.29
+         VERSION=3.3.0
           SOURCE=libnl-$VERSION.tar.gz
       SOURCE_URL=https://github.com/thom311/libnl/releases/download/libnl${VERSION//./_}/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/libnl-$VERSION
-      SOURCE_VFY=sha256:0beb593dc6abfffa18a5c787b27884979c1b7e7f1fd468c801e3cc938a685922
+      SOURCE_VFY=sha256:705468b5ae4cd1eb099d2d1c476d6a3abe519bc2810becf12fb1e32de1e074e4
         WEB_SITE=http://www.infradead.org/~tgr/libnl/
          ENTERED=20110511
-         UPDATED=20170103
+         UPDATED=20170636
            SHORT="A library for applications dealing with netlink sockets"
 
 cat << EOF
