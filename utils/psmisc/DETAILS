@@ -1,18 +1,17 @@
           MODULE=psmisc
-         VERSION=22.21
-          SOURCE=$MODULE-$VERSION.tar.gz
+         VERSION=23.1
+          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha1:09fabbef4539b58b6b8738a73da3d21d5daa1a58
+      SOURCE_VFY=sha256:2e84d474cf75dfbe3ecdacfb797bbfab71a35c7c2639d1b9f6d5f18b2149ba30
         WEB_SITE=http://psmisc.sourceforge.net
          ENTERED=20010922
-         UPDATED=20130422
+         UPDATED=20170705
            SHORT="A set of useful utilities that use /proc"
 
 cat << EOF
 This PSmisc package is a set of some small useful utilities that use the
 proc filesystem. We're not about changing the world, but providing the
 system administrator with some help in common tasks.
-
 The package contains the following programs:
     * fuser   - identifies what processes are using files.
     * killall - kills a process by its name, similar to a pkill found in
