@@ -1,3 +1,0 @@
-default_pre_build &&
-
-sedit 's:configure.ac \$(builddir)/src/zile\$(EXEEXT):configure.ac:' Makefile.in
