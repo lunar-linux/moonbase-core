@@ -1,11 +1,11 @@
           MODULE=terminus-font
-         VERSION=4.40
+         VERSION=4.46
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/$MODULE/
-      SOURCE_VFY=sha256:64f52c24d3f1c1e39f21e6c43077a9be3e21d4384f176f5766c00558ba670711
+      SOURCE_VFY=sha256:4e29433e5699b76df1f5c9a96f1228cccf8ea8a16791cfef063f2b8506c75bcd
         WEB_SITE=http://terminus-font.sourceforge.net
          ENTERED=20060604
-         UPDATED=20150822
+         UPDATED=20170708
            SHORT="Terminus Font - a clean fixed width font"
 
 cat << EOF
