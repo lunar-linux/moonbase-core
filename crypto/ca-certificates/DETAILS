@@ -1,4 +1,3 @@
-set -x
           MODULE=ca-certificates
          VERSION=20161130+nmu1
           SOURCE=${MODULE}_$VERSION.tar.xz
@@ -18,4 +17,3 @@ in this package are not in any way audited for trustworthiness and RFC 3647
 compliance, and that full responsibility to assess them belongs to the
 local system administrator.
 EOF
-set +x
