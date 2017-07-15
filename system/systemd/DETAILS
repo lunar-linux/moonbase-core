@@ -1,11 +1,8 @@
           MODULE=systemd
          VERSION=234
           SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=systemd-233-various-fixes.patch
  SOURCE_URL_FULL=https://github.com/systemd/systemd/archive/v$VERSION.tar.gz
-     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:da3e69d10aa1c983d33833372ad4929037b411ac421fb085c8cee79ae1d80b6a
-     SOURCE2_VFY=sha256:ee347d8ac396de74892806765fda5bb9f0078a47427b5431f805509b954f9e9b
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
          UPDATED=20170715

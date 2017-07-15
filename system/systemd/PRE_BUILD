@@ -36,20 +36,6 @@ fi &&
 
 default_pre_build &&
 
-# Fixes issues:
-# - core: don't use the unified hierarchy for the systemd cgroup yet (#4628)
-# - basic/virt: fix userns check on CONFIG_USER_NS=n kernel (#4651)
-# - build-sys: do not install ctrl-alt-del.target symlink twice
-# - device: Avoid calling unit_free(NULL) in device setup logic (#4748)
-# - nspawn: fix exit code for --help and --version (#4609)
-# - journal: make sure to initially populate the space info cache (#4807)
-# - build-sys: check for lz4 in the old and new numbering scheme (#4717)
-# - nspawn: don't hide --bind=/tmp/* mounts
-# - disable RestrictAddressFamilies on i686
-# - Revert "nspawn: try to bind mount resolved's resolv.conf
-# - build-sys: add check for gperf lookup function signature (#5055)
-patch_it $SOURCE2 1 &&
-
 # systemd guys wrongly assume that on every linux
 # installation is a group called "lock" this isn't
 # the case in lunar, so we switch it to root.
