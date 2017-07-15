@@ -1,12 +1,12 @@
           MODULE=ca-certificates
-         VERSION=20161130
+         VERSION=20161130+nmu1
           SOURCE=${MODULE}_$VERSION.tar.xz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE
-      SOURCE_URL=ftp://ftp.debian.org/debian/pool/main/c/$MODULE/
-      SOURCE_VFY=sha256:04bca9e142a90a834aca0311f7ced237368d71fee7bd5c9f68ef7f4611aee471
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}-${VERSION%+*}
+      SOURCE_URL=http://cdn-fastly.deb.debian.org/debian/pool/main/c/$MODULE
+      SOURCE_VFY=sha256:77f9aca431e3122bf04aa0ffd989b723d906db4d1c106e3290e463d73c177f0e
         WEB_SITE=http://packages.qa.debian.org/c/ca-certificates.html
          ENTERED=20100405
-         UPDATED=20170110
+         UPDATED=20170710
            SHORT="Common CA certificates"
 
 cat << EOF
