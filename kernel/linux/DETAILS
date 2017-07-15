@@ -1,5 +1,5 @@
           MODULE=linux
-         VERSION=4.11.6
+         VERSION=4.12.2
             BASE=$(echo $VERSION | cut -d. -f1,2)
           SOURCE=$MODULE-$BASE.tar.xz
 if [ -n "$(echo $VERSION | cut -d. -f3)" ] ; then
@@ -9,11 +9,11 @@ fi
    SOURCE_URL[1]=http://www.kernel.org/pub/linux/kernel/v4.x
   SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v4.x
   SOURCE2_URL[1]=http://www.kernel.org/pub/linux/kernel/v4.x
-      SOURCE_VFY=sha256:b67ecafd0a42b3383bf4d82f0850cbff92a7e72a215a6d02f42ddbafcf42a7d6
-     SOURCE2_VFY=sha256:00c0b804ccda18d6ed4a32ba0be049a80363aa2bc084733a22da03f435d992a4
+      SOURCE_VFY=sha256:a45c3becd4d08ce411c14628a949d08e2433d8cdeca92036c7013980e93858ab
+     SOURCE2_VFY=sha256:8447d28c88834bac75653a0370a6f30615688db4756b953720e9b024537e34ac
          WEB_SITE=http://www.kernel.org/
          ENTERED=20111121
-         UPDATED=20170617
+         UPDATED=20170715
            SHORT="The core of a Linux GNU Operating System"
      KEEP_SOURCE=on
            TMPFS=off
