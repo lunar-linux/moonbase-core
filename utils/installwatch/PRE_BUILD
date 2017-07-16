@@ -2,18 +2,20 @@ if  [  -u  /usr/bin/make  ]   ||
     [  -g  /usr/bin/make  ];  then
   message  "A non setuid/gid /usr/bin/make is required."
   lin  -c  make
-fi
+fi &&
 
 
-if  !  ldd  /bin/tar  >  /dev/null;  then
-  message  "A dynamically linked /bin/tar is required."
+if  !  ldd  /usr/bin/tar  >  /dev/null;  then
+  message  "A dynamically linked /usr/bin/tar is required."
   lin  -c  tar
-fi
+fi &&
 
 
 if  !  ldd  /usr/bin/bzip2  >  /dev/null;  then
   message  "A dynamically linked /usr/bin/bzip2 is required."
   lin  -c  bzip2
-fi
+fi &&
 
-default_pre_build
+default_pre_build &&
+patch_it $SOURCE2 1 &&
+patch_it $SOURCE3 1
