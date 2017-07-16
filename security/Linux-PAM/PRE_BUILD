@@ -17,7 +17,11 @@ do
     do
       patch_it ${MODULE}-patches-${PVERSION}/${i}-patches/${fname} 1 || exit 1
     done
-done
+done &&
+
+# Lex compile fix (drop static), might be a better way to do this
+sedit '/define YY_DECL/d' modules/pam_console/sed-static
+
 
 # Copy fresh install-sh from automake
 #cp /usr/share/automake/install-sh $SOURCE_DIRECTORY
