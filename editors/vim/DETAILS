@@ -16,7 +16,7 @@
    SOURCE_URL[10]=ftp://ftp.es.vim.org/pub/vim/unix
    SOURCE_URL[11]=ftp://ftp.pl.vim.org/pub/vim/unix
    SOURCE_URL[12]=ftp://ftp2.pl.vim.org/pub/vim/unix
-       SOURCE_VFY=sha256:2e179182814715c3c77010c7300a4abcb964ba8a99a470640f9f2f03884b2ccb
+       SOURCE_VFY=sha256:08bd0d1dd30ece3cb9905ccd48b82b2f81c861696377508021265177dc153a61
          WEB_SITE=http://vim.sf.net
        MAINTAINER=sofar@lunar-linux.org
           ENTERED=20010922
