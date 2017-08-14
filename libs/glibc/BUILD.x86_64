@@ -24,11 +24,6 @@ INSTALL_ROOT=$SOURCE_DIRECTORY/glibcroot &&
 mkdir -p $INSTALL_ROOT &&
 cd $INSTALL_ROOT &&
 
-OPTS+=" --libdir=/usr/lib     \
-        --libexecdir=/usr/lib \
-        --sbindir=/usr/bin"  &&
-
-
 ../configure --prefix=/usr             \
              --infodir=/usr/share/info \
              --mandir=/usr/share/man   \
