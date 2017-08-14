@@ -9,6 +9,7 @@
          SOURCE6=CVE-2017-1000366-rtld-LD_LIBRARY_PATH.patch
          SOURCE7=cvs-vectorized-strcspn-guards.patch
          SOURCE8=cvs-hwcap-AT_SECURE.patch
+         SOURCE9=$MODULE-2.25-symbol-versions.patch
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/glibc
@@ -19,6 +20,7 @@
      SOURCE6_URL=$PATCH_URL
      SOURCE7_URL=$PATCH_URL
      SOURCE8_URL=$PATCH_URL
+     SOURCE9_URL=$PATCH_URL
       SOURCE_VFY=sha256:067bd9bb3390e79aa45911537d13c3721f1d9d3769931a30c2681bfee66f23a0
      SOURCE2_VFY=sha256:ca034407a9b8161341965f4ecdb51303c175b3f6031f5741002aab64ba3f8e1e
      SOURCE3_VFY=sha256:672d14826e8722455e55e136999137f6e0598e456e5940a91c245d1e54eeab82
@@ -27,6 +29,7 @@
      SOURCE6_VFY=sha256:cd6e67589a012f33706865ed4ef32c26635b392ed384b37c5b639c5d010a9b53
      SOURCE7_VFY=sha256:71d008aff72388969c3180361403876edb1dfaaf85e4e6e47b60a301933451fd
      SOURCE8_VFY=sha256:d805148f1da77acaed5fc3d634d83716ecc45bc74e189d3d20b77728b8cd164b
+     SOURCE9_VFY=sha256:9f230e1b69fe7d999d55eb51fa6592acf4076a8ba9c88af26a69f38c6847c92d
         WEB_SITE=http://www.gnu.org/software/libc
          ENTERED=20010922
          UPDATED=20170621
