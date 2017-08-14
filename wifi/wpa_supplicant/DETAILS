@@ -2,13 +2,16 @@
          VERSION=2.6
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=wpa_supplicant-2.6-libressl.patch
+         SOURCE3=rh1462262-use-system-openssl-ciphers.patch
       SOURCE_URL=http://hostap.epitest.fi/releases
      SOURCE2_URL=$PATCH_URL
+     SOURCE3_URL=$PATCH_URL
       SOURCE_VFY=sha256:b4936d34c4e6cdd44954beba74296d964bc2c9668ecaa5255e499636fe2b1450
      SOURCE2_VFY=sha256:8495db2aa46e86853c7305d286adaaa5afc64bb001066e99e434a710bccca54d
+     SOURCE3_VFY=sha256:c52ee8bc67466cd662ebac4bad4b25dbb429526ba16fbc179a2ae014be01edfc
         WEB_SITE=http://hostap.epitest.fi/wpa_supplicant
          ENTERED=20041019
-         UPDATED=20161019
+         UPDATED=20170824
            SHORT="WPA key management for Linux"
 
 cat << EOF
