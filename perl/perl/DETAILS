@@ -1,13 +1,13 @@
 ### YOU MUST ALSO UPDATE SGMLSpm !!!
           MODULE=perl
-         VERSION=5.24.1
+         VERSION=5.26.0
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=http://www.cpan.org/src/5.0
    SOURCE_URL[1]=http://mirrors.kernel.org/cpan/src
-      SOURCE_VFY=sha256:e6c185c9b09bdb3f1b13f678999050c639859a7ef39c8cad418448075f5918af
+      SOURCE_VFY=sha256:ebe7c66906d4fb55449380ab1b7e004eeef52c38d3443fa301f8e17a1a4cb67f
         WEB_SITE=http://www.perl.org
          ENTERED=20010922
-         UPDATED=20170115
+         UPDATED=20170604
            PSAFE=no
            SHORT="Larry Wall's practical extraction and reporting language"
 
