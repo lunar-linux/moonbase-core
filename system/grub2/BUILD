@@ -1,6 +1,5 @@
 (
   
-  patch_it $SOURCE_CACHE/$SOURCE2 0 &&
   unset CPP CXX CC CFLAGS CXXFLAGS CPPFLAGS LDFLAGS  &&
   
   OPTS+=" --with-platform="pc" \
