@@ -1,12 +1,12 @@
           MODULE=btrfs-progs
-         VERSION=4.12
+         VERSION=4.12.1
           SOURCE=$MODULE-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
  SOURCE_URL_FULL=http://github.com/kdave/btrfs-progs/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:00b0b2ded8c115fb72103ce61b7268bccd1c31666c60dd2acac3245161f1bc33
+      SOURCE_VFY=sha256:41b37662e282f352c964631d38ce854de7bc7b076cd0568e90b4308745285e3c
         WEB_SITE=http://btrfs.wiki.kernel.org/index.php/Main_Page
          ENTERED=20090819
-         UPDATED=20170731
+         UPDATED=20170828
            SHORT="btrfs userspace tools"
 
 cat <<EOF
