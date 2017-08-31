@@ -1,5 +1,5 @@
 depends readline
 depends pkgconfig
 
-# circular depend with systemd
-#depends %UDEV
+# optional circular depend with systemd->cryptsetup
+depends %UDEV
