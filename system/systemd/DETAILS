@@ -1,14 +1,11 @@
           MODULE=systemd
-         VERSION=233
+         VERSION=234
           SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=systemd-233-various-fixes.patch
  SOURCE_URL_FULL=https://github.com/systemd/systemd/archive/v$VERSION.tar.gz
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:8b3e99da3d4164b66581830a7f2436c0c8fe697b5fbdc3927bdb960646be0083
-     SOURCE2_VFY=sha256:ee347d8ac396de74892806765fda5bb9f0078a47427b5431f805509b954f9e9b
+      SOURCE_VFY=sha256:da3e69d10aa1c983d33833372ad4929037b411ac421fb085c8cee79ae1d80b6a
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20170709
+         UPDATED=20170715
            SHORT="A system and program management daemon"
 
 cat << EOF
