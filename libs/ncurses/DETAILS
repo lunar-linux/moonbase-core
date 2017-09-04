@@ -1,12 +1,13 @@
           MODULE=ncurses
          VERSION=6.0
-          SOURCE=$MODULE-$VERSION.tar.gz
-   SOURCE_URL[0]=$GNU_URL/$MODULE
-   SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:f551c24b30ce8bfb6e96d9f59b42fbea30fa3a6123384172f9e7284bcf647260
+         CURRENT=20170902
+          SOURCE=$MODULE-$VERSION-$CURRENT.tgz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION-$CURRENT
+      SOURCE_URL=ftp://ftp.invisible-island.net/$MODULE/current/
+      SOURCE_VFY=sha256:2437043fe3bb6a0deebe758a9744ee8e9d2e0b272ae2cb0d978804f2f5237ab2
         WEB_SITE=http://www.gnu.org/software/ncurses/ncurses.html
          ENTERED=20010922
-         UPDATED=20160217
+         UPDATED=20170904
            SHORT="Displays and updates text on text-only terminals"
            PSAFE=no
 
