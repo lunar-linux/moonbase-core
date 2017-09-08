@@ -74,3 +74,15 @@ udevadm hwdb --update
 journalctl --update-catalog
 
 lin -c dbus
+
+if [ ! -f /etc/systemd/user/default.target.wants ]
+then
+  mkdir -p /etc/systemd/user/default.target.wants
+fi
+
+if [ ! -f /etc/systemd/user/default.target.wants/dbus.socket ]
+then
+  cd /etc/systemd/user/default.target.wants
+  ln -s /usr/lib/systemd/user/dbus.service .
+  ln -s /usr/lib/systemd/user/dbus.socket .
+fi
