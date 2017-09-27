@@ -1,15 +1,14 @@
 ### YOU MUST ALSO UPDATE SGMLSpm !!!
           MODULE=perl
-         VERSION=5.26.0
+         VERSION=5.26.1
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=http://www.cpan.org/src/5.0
    SOURCE_URL[1]=http://mirrors.kernel.org/cpan/src
-      SOURCE_VFY=sha256:ebe7c66906d4fb55449380ab1b7e004eeef52c38d3443fa301f8e17a1a4cb67f
+      SOURCE_VFY=sha256:e763aa485e8dc1a70483dbe6d615986bbf32b977f38016480d68c99237e701dd
         WEB_SITE=http://www.perl.org
          ENTERED=20010922
-         UPDATED=20170604
-           PSAFE=no
-           SHORT="Larry Wall's practical extraction and reporting language"
+         UPDATED=20170927
+           SHORT="A highly capable, feature-rich programming language"
 
 cat << EOF
 Perl is a high-level, general-purpose programming language that makes
