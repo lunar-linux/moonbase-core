@@ -15,4 +15,5 @@ make install &&
 mkdir -p /etc/pki/tls /usr/share/ssl &&
 ln -sf /etc/ssl/certs /etc/pki/tls/certs &&
 ln -sf /etc/ssl/certs /usr/share/ssl/certs &&
-ln -sf /etc/ssl/certs/ca-{certificates,bundle}.crt
+ln -sf /etc/ssl/certs/ca-{certificates,bundle}.crt &&
+/usr/sbin/update-ca-certificates --fresh &> /dev/null
