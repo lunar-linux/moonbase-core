@@ -12,7 +12,6 @@ OPTS+=" --localstatedir=/var           \
         --disable-verbose-mode         \
         --enable-user-session          \
         --with-dbus-user=messagebus    \
-        --with-init-scripts=none       \
         --with-session-socket-dir=/tmp \
         --with-console-auth-dir=/run/console/ \
         --with-system-pid-file=/var/run/dbus/dbus.pid \
