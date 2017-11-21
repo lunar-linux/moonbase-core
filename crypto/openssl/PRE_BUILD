@@ -9,3 +9,6 @@ sedit "s:TLSv1.2 SSLv3:TLSv1.2:" test/testssl
 
 # Remove rpath
 sedit "s:\$(CFLAGS) -Wl,-rpath,\$(LIBRPATH):\$(CFLAGS):" Makefile.shared
+
+# Fix some OpenSSL developer laziness
+patch_it $SOURCE3 1
