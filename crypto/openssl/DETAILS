@@ -9,7 +9,7 @@
    SOURCE_URL[3]=ftp://ftp.infoscience.co.jp/pub/Crypto/SSL/openssl/source
    SOURCE_URL[4]=ftp://ftp.duth.gr/pub/OpenSSL/source
      SOURCE2_URL=$PATCH_URL
-     SOURCE3_URL-$PATCH_URL
+     SOURCE3_URL=$PATCH_URL
       SOURCE_VFY=sha256:8c6ff15ec6b319b50788f42c7abc2890c08ba5a1cdcd3810eb9092deada37b0f
      SOURCE2_VFY=sha256:9b44b0bfac91672a3249e70484d036924ca528b4f704ff7ef2a9b46413d2afab
      SOURCE3_VFY=sha256:475bf416305107de5af9f022e5c5658a4b9bd4be3fca9289f3eb838b7fa27f2f
