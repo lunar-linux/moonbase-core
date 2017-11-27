@@ -1,11 +1,14 @@
           MODULE=efivar
-         VERSION=31
+         VERSION=32
           SOURCE=$MODULE-$VERSION.tar.gz
+         SOURCE2=$MODULE-fix-efivar.h-location.patch
  SOURCE_URL_FULL=http://github.com/rhinstaller/efivar/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:fa9331b762ab9f0749dd8d58a218701f33e4ea515ac57a120657447e046e6568
+      SOURCE_URL=$PATCH_URL
+      SOURCE_VFY=sha256:44e3db4241c14dfc167dd5bf8c399ef41a7bf966cbc49519694d605f3c843420
+     SOURCE2_VFY=sha256:422d07d9674ebe1701e81fbf25016dfa7f28fe1458038e55950b5755225486cc
         WEB_SITE=http://github.com/rhinstaller/efivar/
          ENTERED=20160717
-         UPDATED=20170309
+         UPDATED=20171127
            SHORT="Tools and library to manipulate EFI variables"
 
 cat << EOF
