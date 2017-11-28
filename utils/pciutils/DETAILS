@@ -1,15 +1,15 @@
           MODULE=pciutils
-         VERSION=3.5.4
+         VERSION=3.5.5
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=pci.ids.bz2
    SOURCE_URL[0]=ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci
    SOURCE_URL[1]=$KERNEL_URL/pub/software/utils/$MODULE
    SOURCE_URL[2]=http://www.ibiblio.org/pub/Linux/hardware
      SOURCE2_URL=http://pciids.sourceforge.net
-      SOURCE_VFY=sha256:1a650f10170423371d481c580071c27420b16a40eda995f3e906b8a9ade530c5
+      SOURCE_VFY=sha256:58ad27f25c510598bdc5337160c8b573d6e9b328b3c5235636e89a1cc04d6a48
         WEB_SITE=http://mfj.ucw.cz/pciutils.html
          ENTERED=20020125
-         UPDATED=20170317
+         UPDATED=20170923
            PSAFE=no
            SHORT="The setpci and lspci utils"
 

@@ -53,7 +53,7 @@ find $SOURCE_DIRECTORY/__shadowdest/usr/share/man \
 
 # Now install the cleaned up files from DESTDIR
 prepare_install &&
-cp -rf --remove-destination $SOURCE_DIRECTORY/__shadowdest/* / &&
+cp -rfp --remove-destination $SOURCE_DIRECTORY/__shadowdest/* / &&
 
 # We only need these files without PAM
 if ! module_installed Linux-PAM; then

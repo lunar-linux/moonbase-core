@@ -1,16 +1,14 @@
           MODULE=grub2
-         VERSION=2.00
+         VERSION=2.02
           SOURCE=grub-$VERSION.tar.gz
-         SOURCE2=grub2-glibc-2.16.patch
-   SOURCE_URL[0]=ftp://ftp.gnu.org/gnu/grub
+   SOURCE_URL[0]=https://ftp.gnu.org/gnu/grub
    SOURCE_URL[1]=http://www.funet.fi/pub/gnu/alpha/gnu/grub
      SOURCE2_URL=$PATCH_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/grub-$VERSION
-      SOURCE_VFY=sha1:fcb39b621680caf34071abcb9ec913d5da458554
-     SOURCE2_VFY=sha1:f59b24e886914691c952823a02a7c46a87f51315
+      SOURCE_VFY=sha256:660ee136fbcee08858516ed4de2ad87068bfe1b6b8b37896ce3529ff054a726d
         WEB_SITE=http://www.gnu.org/software/grub
          ENTERED=20100112
-         UPDATED=20120802
+         UPDATED=20170822
       MAINTAINER=dagbrown@lunar-linux.org
            SHORT="GNU GRUB boot loader"
 
@@ -22,30 +20,4 @@ that runs when a computer starts. It is responsible for loading and
 transferring control to the operating system kernel software (such as
 the Hurd or the Linux). The kernel, in turn, initializes the rest of
 the operating system (e.g. GNU).  Now with md, LVM and ZFS support!
-
-Sample command to install grub on an ide hard drive with a boot
-partition mounted anywhere, and a root partition mounted likewise:
-
-~# grub-install /dev/sda
-
-Sample /boot/grub/grub.cfg file is:
-
-set default=0
-set timeout=30
-
-menuentry "Lunar Linux 2.6.31" {
-    linux /2.6.31 ramdisk_size=16384 ro
-    initrd /initramfs-raid.gz
-}
-
-menuentry "Lunar Linux 2.6.31 (emergency initrd boot)" {
-    linux /2.6.31 ramdisk_size=16384 ro init=/bin/sh
-    initrd /initramfs-raid.gz
-}
-
-menuentry "Lunar Linux 2.6.31 (rescue boot)" {
-    linux /2.6.31 ramdisk_size=16384 ro init_run=/bin/sh
-    initrd /initramfs-raid.gz
-}
-
 EOF

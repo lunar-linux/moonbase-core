@@ -1,12 +1,11 @@
+  # optimize -O2
+  CFLAGS+=" -O2" &&
+
   # The fortify compiler option cause the build to fail
   bad_flags -D_FORTIFY_SOURCE=2 &&
-
   # 32bit build fails with -Os due to a ebp inline assembly problem
+  # (note: This problem might be obsolete)
   bad_flags -Os &&
-  CFLAGS+=" -O2" &
-
-  # Fix NPTL issues with Xen on i686
-  export CFLAGS+=" -mno-tls-direct-seg-refs" &&
 
   mkdir -p $SOURCE_DIRECTORY/tmp  &&
 
@@ -36,10 +35,11 @@
                --without-gd               \
                --without-cvs              \
                --enable-shared            \
+               --enable-obsolete-rpc      \
                --host=$BUILD              \
                --build=$BUILD             \
-               --enable-obsolete-rpc      \
                --disable-multi-arch       \
+               --enable-bind-now          \
                --enable-add-ons           \
                --with-__thread            \
                --with-tls                 \
@@ -62,7 +62,7 @@
   make &&
 
   # Preserve the old glibc temporarily
-  LD=/lib/ld-linux.so.2         &&
+  LD=/lib/ld-linux.so.2  &&
   GLIBC=/lib/libc.so.6          &&
   DL=/lib/libdl.so.2            &&
   M=/lib/libm.so.6              &&
@@ -73,20 +73,7 @@
   NSL=/lib/libnsl.so.1          &&
   CRYPT=/lib/libcrypt.so.1      &&
 
-  case "`arch`" in
-    alpha)
-          GLIBC=/lib/libc.so.6.1  &&
-          DL=/lib/libdl.so.2.1    &&
-          M=/lib/libm.so.6.1
-          ;;
-     ppc)
-          LD=/lib/ld.so.1  &&
-          DL=/lib/libdl.so.2
-          ;;
-     *)
-          DL=/lib/libdl.so.2
-          ;;
-  esac  &&
+  DL=/lib/libdl.so.2  &&
 
   cp $LD /lib/ld-lunar.so               &&
   cp $GLIBC /lib/libc-lunar.so          &&
