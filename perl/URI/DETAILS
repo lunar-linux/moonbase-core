@@ -9,8 +9,7 @@
            SHORT="A perl module for using Uniform Resource Identifiers"
 
 cat << EOF
-URI:
-A perl module which implements the URI class. Objects of this class represent
+URI: A perl module which implements the URI class. Objects of this class represent
 "Uniform Resource Identifier references" as specified in RFC 2396 (and updated
 by RFC 2732).
 EOF
