@@ -6,7 +6,7 @@
    SOURCE_URL[1]=$KERNEL_URL/pub/software/utils/$MODULE
    SOURCE_URL[2]=http://www.ibiblio.org/pub/Linux/hardware
      SOURCE2_URL=http://pciids.sourceforge.net
-      SOURCE_VFY=sha256:0d4d507d395e727384737d3c45cf8c5a0023864a6eb5c6ed7caf7d483995391d
+      SOURCE_VFY=sha256:04ca0dab0f1d190c7f5016dcea0cc3a024901bb01aeb7a3d4af5e5327b7a2448
         WEB_SITE=http://mfj.ucw.cz/pciutils.html
          ENTERED=20020125
          UPDATED=20171125
