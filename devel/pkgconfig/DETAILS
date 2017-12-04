@@ -2,9 +2,9 @@
          VERSION=0.29.2
           SOURCE=pkg-config-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/pkg-config-$VERSION
-      SOURCE_URL=http://pkgconfig.freedesktop.org/releases
+      SOURCE_URL=https://pkgconfig.freedesktop.org/releases
       SOURCE_VFY=sha256:6fc69c01688c9458a57eb9a1664c9aba372ccda420a02bf4429fe610e7e7d591
-        WEB_SITE=http://pkgconfig.freedesktop.org
+        WEB_SITE=https://pkgconfig.freedesktop.org
          ENTERED=20010922
          UPDATED=20170422
            SHORT="A system for managing library compile/link flags"
