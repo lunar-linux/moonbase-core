@@ -1,6 +1,11 @@
 OPTS+=" --enable-shared" &&
 
-default_build &&
+default_config &&
+
+# This is important, lets 3.x versions and it to coexist.
+make &&
+prepare_install &&
+make altinstall &&
 
 install -d /usr/lib/python${VERSION%.*} &&
 install -m755 $SOURCE_DIRECTORY/Tools/i18n/msgfmt.py \
