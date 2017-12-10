@@ -133,7 +133,11 @@
   ldconfig                            &&
 
   # Remove the temporary libc
-  rm /lib/{ld,lib{c,dl,m,rt,pthread,nss_files,util,nsl,crypt,mvec}}-lunar.so  &&
+  rm /lib/{ld,lib{c,dl,m,rt,pthread,nss_files,util,nsl,crypt}}-lunar.so  &&
+
+  if [ -f /lib/libmvec-lunar.so ]; then
+    rm /lib/libmvec-lunar.so
+  fi &&
 
   if [ ! -e /etc/nscd.conf ]; then
     install -m644 $SOURCE_DIRECTORY/nscd/nscd.conf /etc/nscd.conf
