@@ -30,25 +30,29 @@
   ../configure --prefix=/usr              \
                --infodir=/usr/share/info  \
                --mandir=/usr/share/man    \
-               --disable-werror           \
+               --host=$BUILD              \
+               --build=$BUILD             \
+               --with-bugurl=https://github.com/lunar-linux/moonbase-core/issues \
                --with-elf                 \
+               --with-__thread            \
+               --with-tls                 \
+               --with-headers=/usr/include \
                --without-gd               \
                --without-cvs              \
                --enable-shared            \
                --enable-obsolete-rpc      \
-               --host=$BUILD              \
-               --build=$BUILD             \
-               --disable-multi-arch       \
+               --enable-obsolete-nsl      \
                --enable-bind-now          \
-               --enable-add-ons           \
-               --with-__thread            \
-               --with-tls                 \
-               --disable-profile          \
                --enable-bind-now          \
-               --enable-kernel=2.6.32     \
-               --with-headers=/usr/include \
+               --enable-kernel=3.2        \
+               --enable-lock-elision      \
                --enable-stackguard-randomization \
                --enable-stack-protector=strong \
+               --enable-add-ons           \
+               --disable-timezone-tools   \
+               --disable-multi-arch       \
+               --disable-profile          \
+               --disable-werror           \
                $OPTS  &&
 
   # build libraries with hardening disabled
@@ -72,8 +76,7 @@
   UTIL=/lib/libutil.so.1        &&
   NSL=/lib/libnsl.so.1          &&
   CRYPT=/lib/libcrypt.so.1      &&
-
-  DL=/lib/libdl.so.2  &&
+  MVEC=/lib/libmvec.so.1        &&
 
   cp $LD /lib/ld-lunar.so               &&
   cp $GLIBC /lib/libc-lunar.so          &&
@@ -97,6 +100,11 @@
   sln /lib/libutil-lunar.so $UTIL        &&
   sln /lib/libnsl-lunar.so $NSL          &&
   sln /lib/libcrypt-lunar.so $CRYPT      &&
+
+  if [ -f "$MVEC" ]; then
+    cp $MVEC /lib/libmvec-lunar.so &&
+    sln /lib/libmvec-lunar.so $MVEC
+  fi &&
 
   # clean hack to make sure gnu/stubs.h gets refreshed
   rm -f /usr/include/gnu/stubs.h  &&
@@ -125,7 +133,7 @@
   ldconfig                            &&
 
   # Remove the temporary libc
-  rm /lib/{ld,lib{c,dl,m,rt,pthread,nss_files,util,nsl,crypt}}-lunar.so  &&
+  rm /lib/{ld,lib{c,dl,m,rt,pthread,nss_files,util,nsl,crypt,mvec}}-lunar.so  &&
 
   if [ ! -e /etc/nscd.conf ]; then
     install -m644 $SOURCE_DIRECTORY/nscd/nscd.conf /etc/nscd.conf
@@ -152,7 +160,7 @@
   fi  &&
 
   # Touch undetected symlinks
-  touch -c -h $LD $GLIBC $DL $M $RT $PTHREAD $NSS $UTIL $NSL $CRYPT /lib/lib{BrokenLocale.so.1,anl.so.1,cidn.so.1,nss_compat.so.2,nss_db.so.2,nss_dns.so.2,nss_hesiod.so.2,nss_nis.so.2,nss_nisplus.so.2,resolv.so.2,thread_db.so.1}  &&
+  touch -c -h $LD $GLIBC $DL $M $RT $PTHREAD $NSS $UTIL $NSL $CRYPT $MVEC /lib/lib{BrokenLocale.so.1,anl.so.1,cidn.so.1,nss_compat.so.2,nss_db.so.2,nss_dns.so.2,nss_hesiod.so.2,nss_nis.so.2,nss_nisplus.so.2,resolv.so.2,thread_db.so.1}  &&
   touch -c -h /usr/lib/lib{BrokenLocale,anl,cidn,crypt,dl,m,nsl,nss_compat,nss_db,nss_dns,nss_files,nss_hesiod,nss_nis,nss_nisplus,resolv,rt,thread_db,util}.so  &&
 
   ldconfig
