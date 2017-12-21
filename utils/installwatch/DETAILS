@@ -3,16 +3,19 @@
           SOURCE=$MODULE-$VERSION.tgz
          SOURCE2=$MODULE-$VERSION-at_support_realpathfix6.patch.gz
          SOURCE3=$MODULE-$VERSION-symlinkat_support.patch
+         SOURCE4=$MODULE-$VERSION-init_support.patch.gz
    SOURCE_URL[0]=http://download.lunar-linux.org/lunar/mirrors
    SOURCE_URL[1]=http://asic-linux.com.mx/~izto/checkinstall/files/source
      SOURCE2_URL=$PATCH_URL
      SOURCE3_URL=$PATCH_URL
+     SOURCE4_URL=$PATCH_URL
       SOURCE_VFY=sha256:0d02e5e625c15bf0ffca1d53108902b29d9e80dadc62dc648e6bfd229d63fdec
      SOURCE2_VFY=sha256:0a054f633a522cbfb8e761a34a36adb7f254815ad59cdb94c83d33b15c97b51a
      SOURCE3_VFY=sha256:26434c3801279097ec86d1d8fe47a3482ff266b4d0a3a855d345a4802803d616
+     SOURCE4_VFY=sha256:d156911b09cea1cafd111a2bfeeb504b880555eadb294c68a85446516f3fc050
         WEB_SITE=http://asic-linux.com.mx/~izto/checkinstall/installwatch.html
          ENTERED=20011230
-         UPDATED=20170715
+         UPDATED=20171218
       MAINTAINER=v4hn@lunar-linux.org
            SHORT="utility for tracking files from installation of software"
 
