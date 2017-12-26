@@ -1,5 +1,4 @@
-
-if in_depends $MODULE systemd ; then
+if in_depends $MODULE systemd; then
   OPTS+=" --with-systemd"
 fi &&
 
