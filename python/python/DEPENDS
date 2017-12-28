@@ -1,0 +1,4 @@
+depends %OSSL
+depends libffi
+depends expat
+depends zlib

@@ -1,8 +1,0 @@
-depends pkgconfig
-
-optional_depends db     "" "" "for support of the db library" n
-optional_depends gdbm   "" "" "for support of the gdbm library"
-optional_depends sqlite "" "" "for support of the sqlite library"
-
-optional_depends expat  "--with-system-expat" "--without-system-expat" "Use system provided expat support"
-optional_depends libffi "--with-system-ffi"   "--without-system-ffi"   "Use system provided libffi support"

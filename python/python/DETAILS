@@ -1,12 +1,12 @@
-          MODULE=Python
-         VERSION=2.7.14
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://www.python.org/ftp/python/$VERSION
-      SOURCE_VFY=sha256:71ffb26e09e78650e424929b2b457b9c912ac216576e6bd9e7d204ed03296a66
-        WEB_SITE=http://www.python.org
-         ENTERED=20010922
-         UPDATED=20170920
-           PSAFE=no
+          MODULE=python
+         VERSION=3.6.4
+          SOURCE=Python-$VERSION.tar.xz
+      SOURCE_URL=https://www.python.org/ftp/python/$VERSION/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/Python-$VERSION
+      SOURCE_VFY=sha256:159b932bf56aeaa76fd66e7420522d8c8853d486b8567c459b84fe2ed13bcaba
+        WEB_SITE=http://www.python.org/
+         ENTERED=20121013
+         UPDATED=20171222
            SHORT="Interpreted, interactive, object-oriented programming language"
 
 cat << EOF
