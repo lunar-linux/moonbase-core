@@ -1,11 +1,10 @@
           MODULE=libdaemon
          VERSION=0.14
-             PKG=${MODULE}-${VERSION}
-          SOURCE=${PKG}.tar.gz
-        WEB_SITE=http://pkgs.fedoraproject.org/repo/pkgs/libdaemon/libdaemon-0.14.tar.gz/509dc27107c21bcd9fbf2f95f5669563/
-      SOURCE_URL[0]=${WEB_SITE}
-      SOURCE_URL[1]=http://0pointer.de/lennart/projects/libdaemon/
+          SOURCE=${MODULE}-${VERSION}.tar.gz
+   SOURCE_URL[0]=http://pkgs.fedoraproject.org/repo/pkgs/libdaemon/${SOURCE}/509dc27107c21bcd9fbf2f95f5669563/
+   SOURCE_URL[1]=http://0pointer.de/lennart/projects/libdaemon/
       SOURCE_VFY=sha1:78a4db58cf3a7a8906c35592434e37680ca83b8f
+        WEB_SITE=http://0pointer.de/lennart/projects/libdaemon/
          ENTERED=20060317
          UPDATED=20091116
            SHORT="A lightweight C library that eases the writing of UNIX daemons."
