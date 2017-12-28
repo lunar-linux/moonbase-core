@@ -1,15 +1,15 @@
           MODULE=coreutils
-         VERSION=8.28
+         VERSION=8.29
           SOURCE=$MODULE-$VERSION.tar.xz
          SOURCE2=$MODULE-8.1-uname.patch.bz2
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/gnu/$MODULE
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:1117b1a16039ddd84d51a9923948307cfa28c2cea03d1a2438742253df0a0c65
+      SOURCE_VFY=sha256:92d0fa1c311cacefa89853bdb53c62f4110cdfda3820346b59cbd098f40f955e
      SOURCE2_VFY=sha256:4d16bcaa918a602a7623685c0930b415aa06b3b3721ec73789d37c5628e3aac8
         WEB_SITE=http://www.gnu.org/software/coreutils
          ENTERED=20030217
-         UPDATED=20170903
+         UPDATED=20171228
            SHORT="Contains latest sh-utils, textutils and fileutils"
 PSAFE=no
 
