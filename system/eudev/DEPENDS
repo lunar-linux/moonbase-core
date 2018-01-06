@@ -1,10 +1,8 @@
 depends kbd
-depends kmod
+depends usbutils
+depends pciutils
 depends util-linux
 depends elfutils
-#depends hwids
-
-#optional_depends eudev-systemdcompat "" "" "make modules compiled with systemd features run"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
