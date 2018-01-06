@@ -1,2 +1,2 @@
 conflicts systemd
-conflicts eudev
+conflicts udev

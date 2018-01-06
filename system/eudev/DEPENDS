@@ -1,0 +1,18 @@
+depends kbd
+depends kmod
+depends util-linux
+depends elfutils
+depends intltool
+#depends hwids
+
+#optional_depends eudev-systemdcompat "" "" "make modules compiled with systemd features run"
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for introspection support"
+
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation"
