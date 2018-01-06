@@ -3,3 +3,8 @@ depends lvm2
 depends libgcrypt
 depends util-linux
 depends json-c
+
+optional_depends argon2 \
+                 "--enable-libargon2" \
+                 "--disable-libargon2" \
+                 "for argon2 password-hashing support"
