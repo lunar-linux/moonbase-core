@@ -1,11 +1,11 @@
           MODULE=kmod
-         VERSION=24
+         VERSION=25
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KERNEL_URL/pub/linux/utils/kernel/$MODULE
-      SOURCE_VFY=sha256:610b8d1df172acc39a4fdf1eaa47a57b04873c82f32152e7a62e29b6ff9cb397
+      SOURCE_VFY=sha256:7165e6496656159dcb909a91ed708a0fe273a4b128b4b1dc997ccb5189eef1cd
         WEB_SITE=http://www.politreco.com/2011/12/announce-kmod-1
          ENTERED=20120115
-         UPDATED=20170224
+         UPDATED=20180109
            SHORT="A lib for kernel modules management"
 
 cat << EOF
