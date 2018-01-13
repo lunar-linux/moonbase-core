@@ -1,12 +1,12 @@
           MODULE=gzip
-         VERSION=1.8
+         VERSION=1.9
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[1]=http://www.funet.fi/pub/gnu/alpha/gnu/$MODULE
-      SOURCE_VFY=sha256:ff1767ec444f71e5daf8972f6f8bf68cfcca1d2f76c248eb18e8741fc91dbbd3
+      SOURCE_VFY=sha256:ae506144fc198bd8f81f1f4ad19ce63d5a2d65e42333255977cf1dcf1479089a
         WEB_SITE=http://www.gzip.org
          ENTERED=20010922
-         UPDATED=20160427
+         UPDATED=20180108
            SHORT="Compression utility designed to replace compress"
 
 cat << EOF
