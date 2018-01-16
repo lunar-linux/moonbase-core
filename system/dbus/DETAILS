@@ -1,7 +1,7 @@
           MODULE=dbus
          VERSION=1.12.2
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://$MODULE.freedesktop.org/releases/$MODULE
+      SOURCE_URL=https://$MODULE.freedesktop.org/releases/$MODULE
       SOURCE_VFY=sha256:272bb5091770b047c8188b926d5e6038fa4fe6745488b2add96b23e2d9a83d88
         WEB_SITE=http://dbus.freedesktop.org
          ENTERED=20031219
