@@ -4,14 +4,12 @@ OPTS+=" --disable-static\
 
 if [ -f /usr/lib/libmpfr.so.4.1.6 ]; then
 # preserve the old version to prevent the crash of gcc
-  cp /usr/lib/libmpfr.so.4.1.6 /usr/lib/libmpfr.so.4.1.6.old &&
-  ln -sf /usr/lib/libmpfr.so.4.1.6.old /usr/lib/libmpfr.so.4
+  cp /usr/lib/libmpfr.so.4.1.6 /usr/lib/libmpfr.so.4.1.6.old
 fi &&
 
 if [ -f /usr/lib/libmpfr.so.1.2.2 ]; then
 # preserve the old version to prevent the crash of gcc
-  cp /usr/lib/libmpfr.so.1.2.2 /usr/lib/libmpfr.so.1.2.2.old &&
-  ln -sf /usr/lib/libmpfr.so.1.2.2.old /usr/lib/libmpfr.so.1
+  cp /usr/lib/libmpfr.so.1.2.2 /usr/lib/libmpfr.so.1.2.2.old
 fi &&
 
 default_build &&
