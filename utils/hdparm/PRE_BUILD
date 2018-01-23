@@ -1,0 +1,3 @@
+default_pre_build &&
+
+sedit 's/^ *CFLAGS *:= *\(.*\) *-O2 *\(.*\)/CFLAGS := \1 \2/' Makefile
