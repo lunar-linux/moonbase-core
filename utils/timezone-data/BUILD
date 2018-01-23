@@ -1,3 +1,5 @@
+mv -f /etc/localtime /etc/localtime.bak
+
 default_make &&
 
-gather_docs Theory *.htm *.jpg
+mv -f /etc/localtime.bak /etc/localtime
