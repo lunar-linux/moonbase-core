@@ -1,5 +1,5 @@
-mv -f /etc/localtime /etc/localtime.bak
+[ -f /etc/localtime ] && mv -f /etc/localtime /etc/localtime.bak &&
 
 default_make &&
 
-mv -f /etc/localtime.bak /etc/localtime
+[ -f /etc/localtime.bak ] && mv -f /etc/localtime.bak /etc/localtime
