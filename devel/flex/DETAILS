@@ -1,11 +1,14 @@
           MODULE=flex
          VERSION=2.6.4
           SOURCE=$MODULE-$VERSION.tar.gz
+         SOURCE2=flex-2.6.4-fix-build-with-glibc2.6+.patch
       SOURCE_URL=http://github.com/westes/flex/releases/download/v$VERSION/
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:e87aae032bf07c26f85ac0ed3250998c37621d95f8bd748b31f15b33c45ee995
+     SOURCE2_VFY=sha256:5800f9abcfafebcdc1115bc7791af6c9da757f7f33ae425268ad94640d231aef
         WEB_SITE=http://www.gnu.org/software/flex/flex.html
          ENTERED=20010922
-         UPDATED=20170507
+         UPDATED=20180126
            SHORT="A fast lexical analyser generator"
 
 cat << EOF
