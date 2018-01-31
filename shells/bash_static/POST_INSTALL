@@ -8,6 +8,6 @@ rescue purposes.
 
 END
 
-if [ "$ROOTSHELL" == "y" ] ; then
+if [ "$ROOTSHELL" == "y" ]; then
   chsh -s /bin/bash_static root
 fi

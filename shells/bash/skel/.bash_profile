@@ -25,10 +25,10 @@ LANG=${LANG:-en_US}
     }
 
 # miscellaenous initialization:
-umask	022
+umask 022
 
 # Now we can set package specific paths and variables:
-for RC in /etc/profile.d/*.rc ; do
+for RC in /etc/profile.d/*.rc; do
     # note we can set the permissions for root-specific scripts:
     [ -r $RC ] && . $RC
 done
@@ -38,4 +38,3 @@ done
 
 # finished
 export EDITOR PATH LANG
-
