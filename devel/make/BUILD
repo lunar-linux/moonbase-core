@@ -1,11 +1,11 @@
 default_config &&
 
-if ! make ${MAKES:-j${MAKES}} 
+if ! make ${MAKES:-j${MAKES}}
 then
-    ./build.sh &&
-    prepare_install &&
-    ./make install
+  ./build.sh &&
+  prepare_install &&
+  ./make install
 else
-    prepare_install &&
-    make install
+  prepare_install &&
+  make install
 fi
