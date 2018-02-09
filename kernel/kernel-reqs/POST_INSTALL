@@ -6,12 +6,13 @@ kreqs="fglrx \
        submount \
        virtualbox-module \
        easy-slow-down-manager \
+       broadcom-wl \
        spl \
-       zfs \
-       zfs-git"
+       zfs"
+
 
 for req in $kreqs; do
-  if module_installed $req ; then
+  if module_installed $req; then
     # ignore failures as much as possible
     lin -c $req || true
   fi
