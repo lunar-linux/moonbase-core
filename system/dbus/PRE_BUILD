@@ -1,0 +1,4 @@
+default_pre_build &&
+
+# Reduce docs size
+printf '%s\n' >>Doxyfile.in HAVE_DOT=yes DOT_IMAGE_FORMAT=svg INTERACTIVE_SVG=yes
