@@ -1,19 +1,14 @@
-(
+bad_flags -malign-double -s
 
-   bad_flags -malign-double -s
+OPTS+=" --without-bash-malloc \
+        --with-curses \
+        --without-installed-readline \
+        --enable-static-link \
+        --disable-profiling" &&
 
-   OPTS+=" --bindir=/bin                 \
-           --without-bash-malloc         \
-           --without-installed-readline  \
-           --with-curses                 \
-           --enable-static-link          \
-           --disable-profiling"         &&
+default_config &&
+make version.h &&
+make &&
+prepare_install &&
 
-   default_config   &&
-   make version.h   &&
-   make             &&
-   prepare_install  &&
-
-   cp -f bash /bin/bash_static
-
-) > $C_FIFO 2>&1
+cp -f bash /usr/bin/bash_static
