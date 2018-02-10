@@ -1,0 +1,10 @@
+depends kbd
+depends usbutils
+depends pciutils
+depends util-linux
+depends elfutils
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for introspection support"

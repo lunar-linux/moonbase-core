@@ -2,5 +2,5 @@
 %KMOD:kmod module-init-tools
 %SSL:openssl libressl gnutls
 %OSSL:openssl libressl
-%UDEV:systemd udev
+%UDEV:systemd eudev
 %XMLRENDERER:libxml2 expat
