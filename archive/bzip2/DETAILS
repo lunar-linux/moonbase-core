@@ -1,11 +1,14 @@
           MODULE=bzip2
          VERSION=1.0.6
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://www.bzip.org/$VERSION
-      SOURCE_VFY=sha1:3f89f861209ce81a6bab1fd1998c0ef311712002
+         SOURCE2=$MODULE-$VERSION-CVE-2016-3189.patch
+       SOURCE_URL=http://www.bzip.org/$VERSION
+      SOURCE2_URL=$PATCH_URL
+      SOURCE_VFY=sha256:a2848f34fcd5d6cf47def00461fcb528a0484d8edef8208d6d2e2909dc61d9cd
+     SOURCE2_VFY=sha256:b11f836f4abcc746ab76109728b1fb3e131a1fe0d3c2adfa640d99b02ff8a5a4
         WEB_SITE=http://www.bzip.org
          ENTERED=20020218
-         UPDATED=20080920
+         UPDATED=20180208
            SHORT="High-quality data compressor"
 
 cat << EOF
