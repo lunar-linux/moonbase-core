@@ -1,13 +1,13 @@
            MODULE=patch
-         VERSION=2.7.5
+         VERSION=2.7.6
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:7436f5a19f93c3ca83153ce9c5cbe4847e97c5d956e57a220121e741f6e7968f
+      SOURCE_VFY=sha256:8cf86e00ad3aaa6d26aca30640e86b0e3e1f395ed99f189b06d4c9f74bc58a4e
         WEB_SITE=http://www.gnu.org/software/patch/patch.html
          ENTERED=20010922
-         UPDATED=20150309
-           SHORT="patch applies a patch to a file"
+         UPDATED=20180212
+           SHORT="Patch applies a patch to a file"
 
 cat << EOF
 patch - Applies a patch to a file
