@@ -1,14 +1,11 @@
           MODULE=mpfr
-         VERSION=3.1.5
-          SOURCE=$MODULE-$VERSION.tar.bz2
-         SOURCE2=$MODULE-$VERSION-p2.patch.bz2
+         VERSION=4.0.0
+          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://www.mpfr.org/$MODULE-$VERSION/
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:ca498c1c7a74dd37a576f353312d1e68d490978de4395fa28f1cbd46a364e658
-     SOURCE2_VFY=sha256:02b62f9f898f692929f73f5a98455e9712b96455dd0bbfde87eec3e102517111
+      SOURCE_VFY=sha256:fbe2cd1418b321f5c899ce4f0f0f4e73f5ecc7d02145b0e1fd096f5c3afb8a1d
         WEB_SITE=http://www.mpfr.org
          ENTERED=20070111
-         UPDATED=20170106
+         UPDATED=20180120
            SHORT="C library for multiple-precision floating-point computations"
 
 cat << EOF

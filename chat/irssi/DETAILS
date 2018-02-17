@@ -1,18 +1,17 @@
           MODULE=irssi
-         VERSION=1.0.5
+         VERSION=1.1.1
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://github.com/irssi/irssi/releases/download/$VERSION/
-      SOURCE_VFY=sha256:e560f537ca878471e64a3e9aee6967539717557a6edfd1746098b0481d5a5ad1
+      SOURCE_VFY=sha256:ea36959398f8c3d8f52065818e3c1500908390dd5d1125ece1a382e77cb84925
         WEB_SITE=http://irssi.org/
          ENTERED=20020908
-         UPDATED=20171023
+         UPDATED=20180216
            SHORT="irssi: an IRC client"
 
 cat << EOF
-Irssi is a modular IRC client for UNIX that currently has only text mode
-user interface, but 80-90% of the code isn't text mode specific, so other
-UIs could be created pretty easily. Also, Irssi isn't really even IRC
-specific anymore, there's already working SILC and ICB modules
-available. Support for other protocols like ICQ and Jabber could be
-created some day too.
+Irssi is a modular IRC client for UNIX that currently has only text mode user
+interface, but 80-90% of the code isn't text mode specific, so other UIs could
+be created pretty easily. Also, Irssi isn't really even IRC specific anymore,
+there's already working SILC and ICB modules available. Support for other
+protocols like ICQ and Jabber could be created some day too.
 EOF

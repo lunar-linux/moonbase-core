@@ -2,18 +2,8 @@ default_pre_build &&
 
 sedit 's@^#\s*warning \+_FORTIFY_SOURCE requires compiling with optimization.*$@/* Disabled by lunar as there is no better solution: \0*/@' include/features.h &&
 
+# FHS fixes
 patch_it $SOURCE2 1 &&
 
-# FHS fixes
-patch_it $SOURCE3 1 &&
-
-# Security fixes see https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt for info
-patch_it $SOURCE4 1 &&
-patch_it $SOURCE5 1 &&
-patch_it $SOURCE6 1 &&
-patch_it $SOURCE7 1 &&
-patch_it $SOURCE8 1 &&
-# End security fixes
-
-# compile failure fix with newer binutils
-patch_it $SOURCE9 1
+# Disable nss_test2
+sedit '/"nss_test1"/s;"nss_test1";& \&\& $name ne "nss_test2";' scripts/test-installation.pl

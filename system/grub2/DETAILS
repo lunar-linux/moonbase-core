@@ -1,7 +1,7 @@
           MODULE=grub2
          VERSION=2.02
           SOURCE=grub-$VERSION.tar.gz
-   SOURCE_URL[0]=ftp://ftp.gnu.org/gnu/grub
+   SOURCE_URL[0]=https://ftp.gnu.org/gnu/grub
    SOURCE_URL[1]=http://www.funet.fi/pub/gnu/alpha/gnu/grub
      SOURCE2_URL=$PATCH_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/grub-$VERSION

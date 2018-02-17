@@ -1,8 +1,11 @@
           MODULE=procps
          VERSION=ng-3.3.12
           SOURCE=$MODULE-$VERSION.tar.xz
+         SOURCE2=$MODULE-ng-impossibly_high_memory.patch
       SOURCE_URL=http://downloads.sourceforge.net/project/$MODULE-ng/Production/
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:6ed65ab86318f37904e8f9014415a098bec5bc53653e5d9ab404f95ca5e1a7d4
+     SOURCE2_VFY=sha256:113bc36594c963a6d8aec722a611d970e49b283725fe752c03fa3af65f797d33
         WEB_SITE=http://gitlab.com/procps-ng/procps/
          ENTERED=20010922
          UPDATED=20160713
