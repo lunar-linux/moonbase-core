@@ -1,17 +1,17 @@
           MODULE=btrfs-progs
-         VERSION=4.15
+         VERSION=4.15.1
           SOURCE=$MODULE-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
  SOURCE_URL_FULL=http://github.com/kdave/btrfs-progs/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:923eefd822ea7e27f45dc193ff97465028d027e3a5c2c08093bbdba2dd6fd348
+      SOURCE_VFY=sha256:9cb985b3466e2e0ca712ef8570d7eb2f94b56592221baf0fc76622f413852445
         WEB_SITE=http://btrfs.wiki.kernel.org/index.php/Main_Page
          ENTERED=20090819
-         UPDATED=20180204
+         UPDATED=20180222
            SHORT="btrfs userspace tools"
 
 cat <<EOF
 Btrfs is a new copy on write filesystem for Linux aimed at implementing
 advanced features while focusing on fault tolerance, repair and easy
-administration. Initially developed by Oracle, Btrfs is licensed
-under the GPL and open for contribution from anyone.
+administration. Initially developed by Oracle, Btrfs is licensed under the
+GPL and open for contribution from anyone.
 EOF
