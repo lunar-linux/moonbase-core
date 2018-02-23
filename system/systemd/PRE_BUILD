@@ -44,6 +44,9 @@ default_pre_build &&
 # - shared: Add a linker script so that all functions are tagget @SD_SHARED instead of @Base (#6669)
 patch_it $SOURCE2 1 &&
 
+# Glibc 2.27 (memfd_create) fix
+patch_it $SOURCE3 1 &&
+
 # systemd guys wrongly assume that on every linux
 # installation is a group called "lock" this isn't
 # the case in lunar, so we switch it to root.
