@@ -1,5 +1,5 @@
 #
-# gcc-7.2.x compiler optimizations plugin
+# gcc-7.3.x compiler optimizations plugin
 #
 
 compiler_gcc_optimize_defaults()
@@ -10,18 +10,18 @@ compiler_gcc_optimize_defaults()
   CPU=$(arch | sed 's;_;-;')
 }
 
-plugin_compiler_gcc_7_2_optimize()
+plugin_compiler_gcc_7_3_optimize()
 {
-  if [ "${LUNAR_COMPILER:-GCC_7_2}" != "GCC_7_2" ]; then
+  if [ "${LUNAR_COMPILER:-GCC_7_3}" != "GCC_7_3" ]; then
     return 2
   fi
 
-  debug_msg "plugin_compiler_gcc_7_2_optimize($@)"
+  debug_msg "plugin_compiler_gcc_7_3_optimize($@)"
 
   compiler_gcc_optimize_defaults
 
-  if [ -f /etc/lunar/local/optimizations.GCC_7_2 ]; then
-    . /etc/lunar/local/optimizations.GCC_7_2
+  if [ -f /etc/lunar/local/optimizations.GCC_7_3 ]; then
+    . /etc/lunar/local/optimizations.GCC_7_3
   fi
 
   # some local macro's
@@ -170,17 +170,17 @@ plugin_compiler_gcc_7_2_optimize()
 }
 
 
-plugin_compiler_gcc_7_2_menu()
+plugin_compiler_gcc_7_3_menu()
 {
   # The main code calls this function WITHOUT $1 to find out which
   # compiler optimization plugins exist. It then returns the plugin
   # identifier which can be saved in $LUNAR_COMPILER as the user's
   # choice for COMPILERS
   if [ -z "$1" ]; then
-    echo "GCC_7_2"
+    echo "GCC_7_3"
     echo "GNU C Compiler suite version 7.2.x"
     return 2
-  elif [ "$1" != "GCC_7_2" ]; then
+  elif [ "$1" != "GCC_7_3" ]; then
     # we don't display anything when the user selected a
     # different menu
     return 2
@@ -209,7 +209,7 @@ plugin_compiler_gcc_7_2_menu()
   save_optimizations()
   {
     debug_msg "save_optimizations($@)"
-    cat >/etc/lunar/local/optimizations.GCC_7_2  <<EOF
+    cat >/etc/lunar/local/optimizations.GCC_7_3  <<EOF
 CPU=$CPU
 CPUTUNE=$CPUTUNE
 BOPT=$BOPT
@@ -223,8 +223,8 @@ EOF
 
   compiler_gcc_optimize_defaults
 
-  if [ -f /etc/lunar/local/optimizations.GCC_7_2 ]; then
-    . /etc/lunar/local/optimizations.GCC_7_2
+  if [ -f /etc/lunar/local/optimizations.GCC_7_3 ]; then
+    . /etc/lunar/local/optimizations.GCC_7_3
   fi
 
   export IFS=$'\t\n'
@@ -234,7 +234,7 @@ EOF
 
   while true; do
     unset OPTIONS
-    IS_DEFAULT=$([ "$(get_local_config LUNAR_COMPILER)" == "GCC_7_2" ] && echo DEFAULT || get_local_config LUNAR_COMPILER)
+    IS_DEFAULT=$([ "$(get_local_config LUNAR_COMPILER)" == "GCC_7_3" ] && echo DEFAULT || get_local_config LUNAR_COMPILER)
     DEFAULT=${CHOICE:-safe}
     CHOICE=`$DIALOG --title "$TITLE" --ok-label "Select" --cancel-label "Close" --default-item "$DEFAULT" --item-help --menu "" 0 0 0 $(
       echo "default"
@@ -286,7 +286,7 @@ EOF
       case $CHOICE in
         default)
           if [ "$IS_DEFAULT" != "DEFAULT" ]; then
-            set_local_config LUNAR_COMPILER GCC_7_2
+            set_local_config LUNAR_COMPILER GCC_7_3
             $DIALOG --msgbox "Gcc 7.2 is now the default compiler!" 6 60
           fi
           ;;
@@ -350,9 +350,14 @@ EOF
                 "pentium4" "P4" $( [ "$VAL" == "pentium4" ] && echo "on" || echo "off" ) "Pentium 4 processors"
                 "pentium4m" "P4 mobile" $( [ "$VAL" == "pentium4m" ] && echo "on" || echo "off" ) "Pentium 4 mobile processors"
                 "core2" "Core 2" $( [ "$VAL" == "core2" ] && echo "on" || echo "off" ) "Intel Core 2 processors"
-                "corei7" "Core i7" $( [ "$VAL" == "corei7" ] && echo "on" || echo "off" ) "Intel Core i7 processors (NHM)"
-                "corei7-avx" "Core i7 AVX" $( [ "$VAL" == "corei7-avx" ] && echo "on" || echo "off" ) "Intel Core i7 processors (SNB)"
-                "atom" "Intel Atom" $( [ "$VAL" == "atom" ] && echo "on" || echo "off" ) "Intel Atom CPU with 64-bit extensions"
+                "nehalem" "Intel Nehalem" $( [ "$VAL" == "nehalem" ] && echo "on" || echo "off" ) "Intel Nehalem CPU with 64-bit extensions, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT."
+                "westmere" "Intel Westmare" $( [ "$VAL" == "westmere" ] && echo "on" || echo "off" ) "Intel Westmere CPU with 64-bit extensions, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AES, PCLMUL."
+                "sandybridge" "Intel Sandy Bridge" $( [ "$VAL" == "sandybridge" ] && echo "on" || echo "off" ) "Intel Sandy Bridge CPU with 64-bit extensions, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AES, PCLMUL."
+                "ivybridge" "Intel Ivy Bridge" $( [ "$VAL" == "ivybridge" ] && echo "on" || echo "off" ) "Intel Ivy Bridge CPU with 64-bit extensions, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AES, PCLMUL, FSGSBASE, RDRND, F16C."
+                "haswell" "Intel Haswell" $( [ "$VAL" == "haswell" ] && echo "on" || echo "off" ) "Intel Haswell CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA, BMI, BMI2, F16C"
+                "broadwell" "Intel Broadwell" $( [ "$VAL" == "broadwell" ] && echo "on" || echo "off" ) "Intel Broadwell CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA, BMI, BMI2, F16C, RDSEED, ADCX, PREFETCHW"
+                "skylake" "Intel Skylake" $( [ "$VAL" == "skylake" ] && echo "on" || echo "off" ) "Intel Skylake CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA, BMI, BMI2, F16C, RDSEED, ADCX, PREFETCHW, CLFLUSHOPT, XSAVEC, XSAVES"
+                "skylake-avx512" "Intel Skylake (AVX-512)" $( [ "$VAL" == "skylake-axv512" ] && echo "on" || echo "off" ) "Intel Skylake Server CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, PKU, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA, BMI, BMI2, F16C, RDSEED, ADCX, PREFETCHW, CLFLUSHOPT, XSAVEC, XSAVES, AVX512F, AVX512VL, AVX512BW, AVX512DQ, AVX512CD"
                 "prescott" "Xeon" $( [ "$VAL" == "prescott" ] && echo "on" || echo "off" ) "Newer Xeons with sse3"
                 "nocona" "nocona" $( [ "$VAL" == "nocona" ] && echo "on" || echo "off" ) "Newer Xeons with sse3 and em64t"
                 "k6" "k6" $( [ "$VAL" == "k6" ] && echo "on" || echo "off" ) "AMD K6 processors"
@@ -452,9 +457,14 @@ EOF
                 "x86-64" "x86-64" $( [ "$VAL" == "x86-64" ] && echo "on" || echo "off" ) "Both AMD64 and Intel EM64T machines"
                 "nocona" "nocona" $( [ "$VAL" == "nocona" ] && echo "on" || echo "off" ) "Newer Xeons with sse3 and em64t"
                 "core2" "core2" $( [ "$VAL" == "core2" ] && echo "on" || echo "off" ) "Intel Core2 CPU with em64t SSE3 and SSSE3"
-                "corei7" "Core i7" $( [ "$VAL" == "corei7" ] && echo "on" || echo "off" ) "Intel Core i7 processors (NHM)"
-                "corei7-avx" "Core i7 AVX" $( [ "$VAL" == "corei7-avx" ] && echo "on" || echo "off" ) "Intel Core i7 processors (SNB)"
-                "atom" "Intel Atom" $( [ "$VAL" == "atom" ] && echo "on" || echo "off" ) "Intel Atom CPU with 64-bit extensions"
+                "nehalem" "Intel Nehalem" $( [ "$VAL" == "nehalem" ] && echo "on" || echo "off" ) "Intel Nehalem CPU with 64-bit extensions, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT."
+                "westmere" "Intel Westmare" $( [ "$VAL" == "westmere" ] && echo "on" || echo "off" ) "Intel Westmere CPU with 64-bit extensions, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AES, PCLMUL."
+                "sandybridge" "Intel Sandy Bridge" $( [ "$VAL" == "sandybridge" ] && echo "on" || echo "off" ) "Intel Sandy Bridge CPU with 64-bit extensions, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AES, PCLMUL."
+                "ivybridge" "Intel Ivy Bridge" $( [ "$VAL" == "ivybridge" ] && echo "on" || echo "off" ) "Intel Ivy Bridge CPU with 64-bit extensions, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AES, PCLMUL, FSGSBASE, RDRND, F16C."
+                "haswell" "Intel Haswell" $( [ "$VAL" == "haswell" ] && echo "on" || echo "off" ) "Intel Haswell CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA, BMI, BMI2, F16C"
+                "broadwell" "Intel Broadwell" $( [ "$VAL" == "broadwell" ] && echo "on" || echo "off" ) "Intel Broadwell CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA, BMI, BMI2, F16C, RDSEED, ADCX, PREFETCHW"
+                "skylake" "Intel Skylake" $( [ "$VAL" == "skylake" ] && echo "on" || echo "off" ) "Intel Skylake CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA, BMI, BMI2, F16C, RDSEED, ADCX, PREFETCHW, CLFLUSHOPT, XSAVEC, XSAVES"
+                "skylake-avx512" "Intel Skylake (AVX-512)" $( [ "$VAL" == "skylake-axv512" ] && echo "on" || echo "off" ) "Intel Skylake Server CPU with 64-bit extensions, MOVBE, MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, POPCNT, PKU, AVX, AVX2, AES, PCLMUL, FSGSBASE, RDRND, FMA, BMI, BMI2, F16C, RDSEED, ADCX, PREFETCHW, CLFLUSHOPT, XSAVEC, XSAVES, AVX512F, AVX512VL, AVX512BW, AVX512DQ, AVX512CD"
                 "k8" "k8" $( [ "$VAL" == "k8" ] && echo "on" || echo "off" ) "AMD K8 processors"
                 "opteron" "opteron" $( [ "$VAL" == "opteron" ] && echo "on" || echo "off" ) "AMD opteron processors"
                 "athlon64" "athlon64" $( [ "$VAL" == "athlon64" ] && echo "on" || echo "off" ) "AMD Athlon 64 processors"
@@ -663,6 +673,9 @@ EOF
           if [ "$SAFE_OPTIMIZATIONS" == "off" ]; then
           OPTIONS+=(
             "StackProt" "-fstack-protector" $( echo ${CC_OPTS[@]} | grep -qw "StackProt" && echo "on" || echo "off" ) "Gcc Stack protector checking (UNSAFE)"
+            "MindirectBranchThunk" "-mindirect-branch=thunk" $( echo ${CC_OPTS[@]} | grep -qw "MindirectBranchThunk" && echo "on" || echo "off" ) "Spectre V2 mitigation - creates retpoline for indirect calls"
+            "MfunctionReturnThunk" "-mfunction-return=thunk" $( echo ${CC_OPTS[@]} | grep -qw "MfunctionReturnThunk" && echo "on" || echo "off" ) "Spectre V2 mitigation - use retpolines for every function return (for CPU that predicts return)"
+            "MindirectBranchRegister" "-mindirect-branch-register" $( echo ${CC_OPTS[@]} | grep -qw "MindirectBranchRegister" && echo "on" || echo "off" ) "Spectre V2 mitigation - use register instead of stack to store address of indirect call"
             )
           fi
           menu checklist "General C/C++ compiler settings" &&
@@ -678,5 +691,5 @@ EOF
 }
 
 
-plugin_register BUILD_BUILD plugin_compiler_gcc_7_2_optimize
-plugin_register OPTIMIZE_MENU plugin_compiler_gcc_7_2_menu
+plugin_register BUILD_BUILD plugin_compiler_gcc_7_3_optimize
+plugin_register OPTIMIZE_MENU plugin_compiler_gcc_7_3_menu
