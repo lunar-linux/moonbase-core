@@ -1,3 +1,4 @@
+depends gperf
 depends kmod
 depends util-linux
 depends intltool
