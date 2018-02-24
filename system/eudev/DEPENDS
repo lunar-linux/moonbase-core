@@ -1,9 +1,5 @@
 depends kmod
-depends kbd
-depends usbutils
-depends pciutils
 depends util-linux
-depends elfutils
 depends intltool
 
 optional_depends gobject-introspection \
