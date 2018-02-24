@@ -1,12 +1,12 @@
           MODULE=ncurses
-         VERSION=6.0
+         VERSION=6.1
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:f551c24b30ce8bfb6e96d9f59b42fbea30fa3a6123384172f9e7284bcf647260
+      SOURCE_VFY=sha256:aa057eeeb4a14d470101eff4597d5833dcef5965331be3528c08d99cebaa0d17
         WEB_SITE=http://www.gnu.org/software/ncurses/ncurses.html
          ENTERED=20010922
-         UPDATED=20160217
+         UPDATED=20180130
            SHORT="Displays and updates text on text-only terminals"
            PSAFE=no
 
