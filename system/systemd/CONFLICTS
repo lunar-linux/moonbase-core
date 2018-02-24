@@ -1,2 +1,3 @@
 conflicts eudev
-conflicts openrc
+conflicts openrc-sysvinit
+conflicts sysvinit
