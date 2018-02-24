@@ -1,18 +1,18 @@
           MODULE=gc
-         VERSION=7.6.0
+         VERSION=7.6.4
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://www.hboehm.info/gc/gc_source
-      SOURCE_VFY=sha256:a14a28b1129be90e55cd6f71127ffc5594e1091d5d54131528c24cd0c03b7d90
+      SOURCE_VFY=sha256:b94c1f2535f98354811ee644dccab6e84a0cf73e477ca03fb5a3758fb1fecd1c
         WEB_SITE=http://www.hboehm.info/gc/
          ENTERED=20020314
-         UPDATED=20160928
+         UPDATED=20180224
            SHORT="A garbage collector"
 
 cat << EOF
-The Boehm-Demers-Weiser conservative garbage collector can be used as a
-garbage collecting replacement for C malloc or C++ new. It is also used
-by a number of programming language implementations that use C as
-intermediate code. Alternatively, it may be used as a leak detector for
-C or C++ programs. A slightly older version of the garbage collector is
-also included as part of the GNU compiler (gcc) distribution.
+The Boehm-Demers-Weiser conservative garbage collector can be used as a garbage
+collecting replacement for C malloc or C++ new. It is also used by a number of
+programming language implementations that use C as intermediate code.
+Alternatively, it may be used as a leak detector for C or C++ programs
+A slightly older version of the garbage collector is also included as part of
+the GNU compiler (gcc) distribution.
 EOF
