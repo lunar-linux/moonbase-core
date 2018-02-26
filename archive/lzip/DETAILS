@@ -1,7 +1,7 @@
           MODULE=lzip
          VERSION=1.20
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://download.savannah.gnu.org/releases/lzip
+      SOURCE_URL=https://download.savannah.gnu.org/releases/lzip
       SOURCE_VFY=sha256:c93b81a5a7788ef5812423d311345ba5d3bd4f5ebf1f693911e3a13553c1290c
         WEB_SITE=http://nongnu.askapache.com/lzip/manual/lzip_manual.html
          ENTERED=20091122
