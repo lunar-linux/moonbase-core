@@ -5,5 +5,8 @@ sedit 's@^#\s*warning \+_FORTIFY_SOURCE requires compiling with optimization.*$@
 # FHS fixes
 patch_it $SOURCE2 1 &&
 
+# Various fixes
+patch_it $SOURCE3 1 &&
+
 # Disable nss_test2
 sedit '/"nss_test1"/s;"nss_test1";& \&\& $name ne "nss_test2";' scripts/test-installation.pl

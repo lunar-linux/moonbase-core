@@ -133,7 +133,7 @@ rm -f /etc/ld.so.cache 2>/dev/null &&
 ldconfig &&
 
 # Remove the temporary libc
-rm /lib/{ld,lib{c,cidn,dl,m,rt,pthread,nss_files,util,nsl,crypt}}-lunar.so &&
+rm /lib/{ld,lib{c,dl,m,rt,pthread,nss_files,util,nsl,crypt}}-lunar.so  &&
 if [ -f /lib/libmvec-lunar.so ]; then
   rm /lib/libmvec-lunar.so
 fi &&
