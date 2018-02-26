@@ -1,6 +1,6 @@
 # Seems that ncurses-5.5 has problems with garbage in /usr/share/terminfo
 # Note: ncurses-5.5 also has all the "screen" files for terminfo, so no recompile is needed
-rm -rf /usr/share/terminfo  &&
+rm -rf /usr/share/terminfo &&
 
 # ************************ WARNING *************************
 # DO NOT MESS WITH THE CONFIGURE STUFF here unless you
@@ -13,18 +13,20 @@ unset CC CXX &&
 OPTS+=" PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig" &&
 
 set -x &&
-./configure  --build=$BUILD                            \
-             --prefix=/usr                             \
-             --libdir=/lib                             \
-             --with-normal                             \
-             --with-shared                             \
-             --mandir=/usr/share/man                   \
-             --with-manpage-format=gzip                \
-             --disable-termcap                         \
-             --enable-colorfgbg                        \
-             --with-terminfo-dirs=/usr/share/terminfo  \
-             --enable-pc-files                         \
-             $OPTS                                    &&
+./configure  --build=$BUILD                           \
+             --prefix=/usr                            \
+             --libdir=/lib                            \
+             --mandir=/usr/share/man                  \
+             --disable-termcap                        \
+             --enable-pc-files                        \
+             --enable-colorfgbg                       \
+             --without-ada                            \
+             --without-debug                          \
+             --with-normal                            \
+             --with-shared                            \
+             --with-manpage-format=gzip               \
+             --with-terminfo-dirs=/usr/share/terminfo \
+             $OPTS                                   &&
 
 default_make &&
 
@@ -38,23 +40,25 @@ set +x &&
 # Now to make ncurses wide
 make clean &&
 
-unset CC CXX  &&
+unset CC CXX &&
 
 set -x &&
-./configure  --build=$BUILD                            \
-             --prefix=/usr                             \
-             --libdir=/lib                             \
-             --with-normal                             \
-             --with-shared                             \
-             --includedir=/usr/include/ncursesw        \
-             --mandir=/usr/share/man                   \
-             --with-manpage-format=gzip                \
-             --disable-termcap                         \
-             --enable-colorfgbg                        \
-             --with-terminfo-dirs=/usr/share/terminfo  \
-             --enable-widec                            \
-             --enable-pc-files                         \
-             $OPTS                                    &&
+./configure  --build=$BUILD                           \
+             --prefix=/usr                            \
+             --libdir=/lib                            \
+             --includedir=/usr/include/ncursesw       \
+             --mandir=/usr/share/man                  \
+             --disable-termcap                        \
+             --enable-colorfgbg                       \
+             --enable-widec                           \
+             --enable-pc-files                        \
+             --without-ada                            \
+             --without-debug                          \
+             --with-normal                            \
+             --with-shared                            \
+             --with-manpage-format=gzip               \
+             --with-terminfo-dirs=/usr/share/terminfo \
+            $OPTS                                    &&
 
 set +x &&
 default_make &&
