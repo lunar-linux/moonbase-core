@@ -2,7 +2,7 @@
          VERSION=2.0.4
           SOURCE=$MODULE-$VERSION.tar.xz
          SOURCE2=$MODULE-fix_euro2.patch.gz
-      SOURCE_URL=http://kbd-project.org/download
+      SOURCE_URL=https://www.kernel.org/pub/linux/utils/$MODULE/
      SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:5fd90af6beb225a9bb9b9fb414c090fba53c9a55793e172f508cd43652e59a88
      SOURCE2_VFY=sha256:65e36484977c68efeda1b80255284381e350408a409760c15fef8dd308ccf47b
