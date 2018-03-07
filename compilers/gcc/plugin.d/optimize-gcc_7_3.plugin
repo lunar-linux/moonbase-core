@@ -178,7 +178,7 @@ plugin_compiler_gcc_7_3_menu()
   # choice for COMPILERS
   if [ -z "$1" ]; then
     echo "GCC_7_3"
-    echo "GNU C Compiler suite version 7.2.x"
+    echo "GNU C Compiler suite version 7.3.x"
     return 2
   elif [ "$1" != "GCC_7_3" ]; then
     # we don't display anything when the user selected a
@@ -287,7 +287,7 @@ EOF
         default)
           if [ "$IS_DEFAULT" != "DEFAULT" ]; then
             set_local_config LUNAR_COMPILER GCC_7_3
-            $DIALOG --msgbox "Gcc 7.2 is now the default compiler!" 6 60
+            $DIALOG --msgbox "Gcc 7.3 is now the default compiler!" 6 60
           fi
           ;;
         safe)
