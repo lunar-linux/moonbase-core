@@ -1,15 +1,15 @@
           MODULE=hdparm
-         VERSION=9.53
+         VERSION=9.54
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:2673f591df6916c6a1faec07069a7eb1cb8ee307615a615d808192fb0c0265e5
+      SOURCE_VFY=sha256:4d7a684b97ebc1a74f34dc85f8fe9e7b265b94bb5c35e81d53863b7e6483163e
         WEB_SITE=http://www.ibiblio.org/pub/Linux/system/hardware
          ENTERED=20010922
-         UPDATED=20180123
+         UPDATED=20180228
            SHORT="A utility to access/tune Linux's EIDE drivers"
 
 cat << EOF
-hdparm is a shell utility to access/tune ioctl features of the Linux
-hard disk and (E)IDE drivers for the Linux kernel. Its primary use is
-for enabling irq-unmasking and IDE multiplemode.
+hdparm is a shell utility to access/tune ioctl features of the Linux hard
+disk and (E)IDE drivers for the Linux kernel. Its primary use is for enabling
+irq-unmasking and IDE multiplemode.
 EOF
