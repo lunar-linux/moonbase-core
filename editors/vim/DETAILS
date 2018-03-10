@@ -20,7 +20,7 @@
          WEB_SITE=http://vim.sf.net
        MAINTAINER=sofar@lunar-linux.org
           ENTERED=20010922
-          UPDATED=20161111
+          UPDATED=20180303
             SHORT="Improved version of vi"
 
 cat << EOF
