@@ -3,6 +3,12 @@ OPTS+=" --disable-perlinterp --disable-luainterp --disable-rubyinterp" &&
 
 OPTS+=" --with-features=huge --enable-cscope --enable-fail-if-missing" &&
 
+# otherwise it defaults to auto/x+gtk
+if ! in_depends $MODULE gtk+-3 && ! in_depends $MODULE gtk+-2; then
+  OPTS+=" --enable-gui=no --without-x"
+fi &&
+
+
 cd src &&
 
 default_config &&
