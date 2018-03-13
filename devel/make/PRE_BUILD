@@ -4,4 +4,6 @@ default_pre_build &&
 sedit 's|guile-1.8|guile-2.2|g' configure.ac &&
 
 # work around an error caused by glibc-2.27
-sedit '211,217 d; 219,229 d; 232 d' glob/glob.c
+sedit '211,217 d; 219,229 d; 232 d' glob/glob.c &&
+
+autoreconf -fi
