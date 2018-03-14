@@ -10,4 +10,4 @@ ExecStart=/usr/sbin/dhcpcd -A -q -w %I
 ExecStop=/usr/sbin/dhcpcd -k %I
 
 [Install]
-Alias=multi-user.target.wants/dhcpcd@eth0.service
+WantedBy=multi-user.target
