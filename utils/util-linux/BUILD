@@ -14,7 +14,15 @@ OPTS+=" --enable-agetty     \
         --disable-static    \
         --enable-fs-paths-extra=/usr/bin" &&
 
-default_build &&
+
+default_config &&
+make ${MAKES:+-j${MAKES}} &&
+mkdir _pkg &&
+make install DESTDIR=$(cd _pkg && pwd) &&
+mv _pkg/sbin/sulogin _pkg/usr/sbin &&
+cd _pkg &&
+prepare_install &&
+find . -depth -print0 | cpio -0pdmuv / &&
 
 # allow only the root user to use wall command
 chmod 700 /usr/bin/wall &&
