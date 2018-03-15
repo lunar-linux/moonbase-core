@@ -1,0 +1,9 @@
+default_pre_build &&
+
+# Fix OS naming
+sedit 's|GNU/Linux|Linux|' util/grub.d/10_linux.in &&
+
+# Remove not working langs which need LC_ALL=C.UTF-8
+sedit 's#en@cyrillic en@greek##g' po/LINGUAS &&
+
+./autogen.sh
