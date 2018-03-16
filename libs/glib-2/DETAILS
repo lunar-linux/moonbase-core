@@ -1,21 +1,21 @@
           MODULE=glib-2
-         VERSION=54.3
+         VERSION=56.0
           SOURCE=$MODULE.$VERSION.tar.xz
          SOURCE2=glib-2.54.x-external-gdbus-codegen.patch
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE.$VERSION
    SOURCE_URL[0]=$GNOME_URL/sources/glib/${MODULE#*-}.${VERSION%.*}
    SOURCE_URL[1]=http://ftp.gtk.org/pub/glib/${MODULE#*-}.${VERSION%.*}
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:963fdc6685dc3da8e5381dfb9f15ca4b5709b28be84d9d05a9bb8e446abac0a8
+      SOURCE_VFY=sha256:ecef6e17e97b8d9150d0e8a4b3edee1ac37331213b8a2a87a083deea408a0fc7
      SOURCE2_VFY=sha256:a66ced114bebdaa43d9f0fbdd90ae7021a1563b7d74a5696fa90423de9e64d00
         WEB_SITE=http://library.gnome.org/devel/glib
          ENTERED=20020313
-         UPDATED=20180109
+         UPDATED=20180316
            SHORT="A library of useful C routines for trees, hashes, and lists"
 
 cat << EOF
-GLib is the low-level core library that forms the basis for projects
-such as GTK+ and GNOME. It provides data structure handling for C,
-portability wrappers, and interfaces for such runtime functionality as
-an event loop, threads, dynamic loading, and an object system.
+GLib is the low-level core library that forms the basis for projects such as
+GTK+ and GNOME. It provides data structure handling for C, portability wrappers,
+and interfaces for such runtime functionality as an event loop, threads, dynamic
+loading, and an object system.
 EOF
