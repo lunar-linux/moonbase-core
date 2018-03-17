@@ -1,4 +1,4 @@
-unset CPP CXX CC CFLAGS CXXFLAGS CPPFLAGS LDFLAGS  &&
+unset CPP CXX CC CFLAGS CXXFLAGS CPPFLAGS LDFLAGS MAKEFLAGS &&
 
 if [ "$(arch)" == "x86_64" ]; then
   _EFI_ARCH="x86_64"
@@ -15,10 +15,10 @@ OPTS+=" --prefix=/usr \
         --infodir=/usr/share/info \
         --datarootdir=/usr/share \
         --sysconfdir=/etc \
-        --enable-mm-debug \
         --enable-nls \
-        --enable-cache-stats \
+        --enable-mm-debug \
         --enable-boot-time \
+        --enable-cache-stats \
         --with-bootdir=/boot \
         --with-grubdir=grub \
         --disable-silent-rules \
