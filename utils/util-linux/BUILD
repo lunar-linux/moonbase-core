@@ -20,16 +20,16 @@ make ${MAKES:+-j${MAKES}} &&
 mkdir _pkg &&
 make install DESTDIR=$(cd _pkg && pwd) &&
 mv _pkg/sbin/sulogin _pkg/usr/sbin &&
+chmod 700 _pkg/usr/bin/wall &&
+chmod 4711 _pkg/usr/bin/{newgrp,ch{sh,fn}} &&
+if module_installed systemd; then
+  sedit '/ListenStream/ aRuntimeDirectory=uuidd' _pkg/usr/lib/systemd/system/uuidd.socket
+fi &&
 cd _pkg &&
+
 prepare_install &&
+
 find . -depth -print0 | cpio -0pdmuv / &&
 
 # allow only the root user to use wall command
-chmod 700 /usr/bin/wall &&
-
-chmod 4711 /usr/bin/{newgrp,ch{sh,fn}} &&
-install -g0 -o0 -m755 $SCRIPT_DIRECTORY/make-issue /usr/bin/make-issue &&
-
-if module_installed systemd; then
-  sedit '/ListenStream/ aRuntimeDirectory=uuidd' /usr/lib/systemd/system/uuidd.socket
-fi
+install -g0 -o0 -m755 $SCRIPT_DIRECTORY/make-issue /usr/bin/make-issue

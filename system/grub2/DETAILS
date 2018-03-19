@@ -8,16 +8,16 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/grub-$VERSION
       SOURCE_VFY=sha256:660ee136fbcee08858516ed4de2ad87068bfe1b6b8b37896ce3529ff054a726d
         WEB_SITE=http://www.gnu.org/software/grub
          ENTERED=20100112
-         UPDATED=20170822
+         UPDATED=20180315
       MAINTAINER=dagbrown@lunar-linux.org
            SHORT="GNU GRUB boot loader"
 
 cat << EOF
-GNU GRUB is a Multiboot boot loader. It was derived from GRUB, GRand
-Unified Bootloader, which was originally designed and implemented by
-Erich Stefan Boleyn. Briefly, bootloader is the first software program
-that runs when a computer starts. It is responsible for loading and
-transferring control to the operating system kernel software (such as
-the Hurd or the Linux). The kernel, in turn, initializes the rest of
-the operating system (e.g. GNU).  Now with md, LVM and ZFS support!
+GNU GRUB is a Multiboot boot loader. It was derived from GRUB, GRand Unified
+Bootloader, which was originally designed and implemented by Erich Stefan
+Boleyn. Briefly, bootloader is the first software program that runs when a
+computer starts. It is responsible for loading and transferring control to
+the operating system kernel software (such as the Hurd or the Linux).
+The kernel, in turn, initializes the rest of the operating system (e.g. GNU).
+Now with md, LVM and ZFS support!
 EOF
