@@ -1,11 +1,11 @@
           MODULE=nano
          VERSION=2.9.4
           SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=nanorc-20160704.bz2
+         SOURCE2=nanorc-20180319.bz2
       SOURCE_URL=http://www.nano-editor.org/dist/v${VERSION%.*}
      SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:f20e57fa2cfbb2c016b82e6dba8ce0804dc4d9a21a931a82020af7466bb7927d
-     SOURCE2_VFY=sha256:aa2e5b0b0868d6c275c29e2ced6dd383fc1c6075b78b52d4bbf05a5e6f510e0e
+     SOURCE2_VFY=sha256:3dfd4130f2eadf485d0f7b5f6ccbfd344aa295664bdbbc55132375169db09b06
         WEB_SITE=http://www.nano-editor.org
          ENTERED=20010922
          UPDATED=20180308
