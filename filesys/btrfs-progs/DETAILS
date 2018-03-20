@@ -6,7 +6,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
       SOURCE_VFY=sha256:9cb985b3466e2e0ca712ef8570d7eb2f94b56592221baf0fc76622f413852445
         WEB_SITE=http://btrfs.wiki.kernel.org/index.php/Main_Page
          ENTERED=20090819
-         UPDATED=20180222
+         UPDATED=20180320
            SHORT="btrfs userspace tools"
 
 cat <<EOF
