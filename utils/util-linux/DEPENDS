@@ -1,8 +1,8 @@
 depends ncurses
-depends zlib
 depends shadow
+depends zlib
 
-optional_depends Python-3 "--with-python=3" "" "for Python 3.x support" n
+optional_depends Python-3 "--with-python=3" "" "for Python support" y
+optional_depends Python   "--with-python=2" "" "for Python2 support" n
 
-optional_depends Python    "" "" "for Python 2.x support"
 optional_depends Linux-PAM "" "" "for PAM support"
