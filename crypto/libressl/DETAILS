@@ -1,18 +1,15 @@
           MODULE=libressl
-         VERSION=2.6.4
+         VERSION=2.7.1
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://ftp.openbsd.org/pub/OpenBSD/LibreSSL/
-     SOURCE_VFY=sha256:638a20c2f9e99ee283a841cd787ab4d846d1880e180c4e96904fc327d419d11f
+     SOURCE_VFY=sha256:937507e236ba7370acaba689444515d4e8f429136f4e7e3623083392d96b7070
         WEB_SITE=http://www.libressl.org
          ENTERED=20160301
-         UPDATED=20180126
+         UPDATED=20180324
            SHORT="A version of the TLS/crypto stack forked from OpenSSL"
 
 cat << EOF
-LibreSSL is a version of the TLS/crypto stack forked from OpenSSL in
-2014, with goals of modernizing the codebase, improving security, and
-applying best practice development processes.
-
-This module is in a preliminary state, and is only recommended for the
-especially daring.
+LibreSSL is a version of the TLS/crypto stack forked from OpenSSL in 2014,
+with goals of modernizing the codebase, improving security, and applying best
+practice development processes.
 EOF
