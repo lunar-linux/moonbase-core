@@ -1,23 +1,24 @@
           MODULE=e2fsprogs
-         VERSION=1.44.0
+         VERSION=1.44.1
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:04abf8c2c7c9a70aa3aa9757da23a929baf18423ccd06e8a0320c2effe091fd1
+      SOURCE_VFY=sha256:a5a8068dfe105050d8c63d67515a0ae5fff3f37232f725e0aa72b389eeb6c1e6
         WEB_SITE=http://e2fsprogs.sourceforge.net
          ENTERED=20010922
-         UPDATED=20180308
+         UPDATED=20180325
            SHORT="Utilities for the EXT2 file system"
 
 cat << EOF
-e2fsprogs - The EXT2 file system utilities and libraries. EXT2 stands
-for "Extended Filesystem", version 2. It is the main filesystem type
-used for hard disks on Debian and other Linux systems. This package
-contains programs for creating, checking, and maintaining EXT2
-filesystems, and the generic fsck wrapper. The ext2fsprogs package
-contains essential ext2 filesystem utilities which consists of e2fsck,
-mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core ext2
-filesystem utilities.
+e2fsprogs - The EXT file system utilities and libraries. EXT stands for
+"Extended Filesystem". It is the main filesystem type used for hard disks on
+Debian and other Linux systems. This package contains programs for creating,
+checking, and maintaining EXT filesystems, and the generic fsck wrapper.
+The ext2fsprogs package contains essential EXT filesystem utilities which
+consists of e2fsck,
 
-This module also provides the generic init.d mount script which is
-vital to your linux system.
+mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core EXT filesystem
+utilities.
+
+This module also provides the generic init.d mount script which is vital to
+your linux system.
 EOF
