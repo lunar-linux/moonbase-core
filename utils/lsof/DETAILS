@@ -1,20 +1,23 @@
           MODULE=lsof
          VERSION=4.90
-          SOURCE=${MODULE}_$VERSION.tar.bz2
+           SOURCE=${MODULE}_$VERSION.tar.bz2
+          SOURCE2=$MODULE-fix_excessive_reporting.patch
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}_${VERSION}
    SOURCE_URL[0]=http://ftp.u-strasbg.fr/securite/$MODULE
-   SOURCE_URL[1]=http://fossies.org/linux/misc/
+   SOURCE_URL[1]=ftp://ftp.fu-berlin.de/pub/unix/tools/$MODULE
    SOURCE_URL[2]=http://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/$MODULE
    SOURCE_URL[3]=$MIRROR_URL
+SOURCE2_URL_FULL=https://github.com/masatake/lsof-linux/commit/f5d024877006deb5d0a500235068f8c4f928939e.patch
       SOURCE_VFY=sha256:6f14840c791926715cd80ba3b049220256470f9f16a457a2e4b516baab1a16f6
+     SOURCE2_VFY=sha256:798cbb121fd156935754d7a5417a271c52bbe11543365e4453f1d89e3063933f
         WEB_SITE=ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/README
          ENTERED=20011005
-         UPDATED=20180217
+         UPDATED=20180326
            SHORT="Lists open files for running processes"
 
 cat << EOF
-Lsof is a Unix-specific diagnostic tool. Its name stands for LiSt Open
-Files, and it does just that. It lists information about any files that
-are open by processes currently running on the system. It can also list
-communications open by each process.
+Lsof is a Unix-specific diagnostic tool. Its name stands for LiSt Open Files,
+and it does just that. It lists information about any files that are open by
+processes currently running on the system. It can also list communications
+open by each process.
 EOF

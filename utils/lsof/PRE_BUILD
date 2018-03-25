@@ -1,0 +1,6 @@
+default_pre_build &&
+
+tar xf ${MODULE}_${VERSION}_src.tar &&
+cd ${MODULE}_${VERSION}_src &&
+
+patch_it $SOURCE2 1
