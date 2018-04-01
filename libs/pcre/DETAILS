@@ -1,18 +1,17 @@
           MODULE=pcre
-         VERSION=8.41
+         VERSION=8.42
           SOURCE=$MODULE-$VERSION.tar.bz2
    SOURCE_URL[0]=ftp://ftp.csx.cam.ac.uk/pub/software/programming/$MODULE
    SOURCE_URL[1]=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:e62c7eac5ae7c0e7286db61ff82912e1c0b7a0c13706616e94a7dd729321b530
+      SOURCE_VFY=sha256:2cd04b7c887808be030254e8d77de11d3fe9d4505c39d4b15d2664ffe8bf9301
         WEB_SITE=http://www.pcre.org
          ENTERED=20010922
-         UPDATED=20170708
+         UPDATED=20180330
            SHORT="Perl compatible regular expression library"
 
 cat << EOF
 The PCRE library is a set of functions that implement regular expression
-pattern matching using the same syntax and semantics as Perl 5, with
-just a few differences. PCRE was originally written for the Exim MTA, but
-is now used by many projects including Python, Apache, Postfix, KDE, Analog,
-PHP and Ferite.
+pattern matching using the same syntax and semantics as Perl 5, with just a
+few differences. PCRE was originally written for the Exim MTA, but is now used
+by many projects including Python, Apache, Postfix, KDE, Analog, PHP and Ferite.
 EOF
