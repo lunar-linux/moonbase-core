@@ -1,19 +1,19 @@
           MODULE=nano
-         VERSION=2.9.4
+         VERSION=2.9.5
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=nanorc-20180319.bz2
       SOURCE_URL=http://www.nano-editor.org/dist/v${VERSION%.*}
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:f20e57fa2cfbb2c016b82e6dba8ce0804dc4d9a21a931a82020af7466bb7927d
+      SOURCE_VFY=sha256:620290467d5340448b728fc7535418db18edac661cf8f95bccc74d768b2614d0
      SOURCE2_VFY=sha256:3dfd4130f2eadf485d0f7b5f6ccbfd344aa295664bdbbc55132375169db09b06
         WEB_SITE=http://www.nano-editor.org
          ENTERED=20010922
-         UPDATED=20180308
+         UPDATED=20180330
            SHORT="Superior clone of the pico text editor"
 
 cat << EOF
-The nano project was started because of a few problems with the
-wonderfully easy-to-use and friendly Pico text editor. GNU nano
+The nano project was started because of a few problems with the wonderfully
+easy-to-use and friendly Pico text editor. GNU nano
 features:
 * Autoconf support.
 * Truly free license (GNU GPL).
@@ -28,7 +28,6 @@ features:
 * Toggles for cmdline flags via Meta keys.
 * Tab completion when reading/writing files.
 
-The main disadvantage is lack of mailer integration, but this is also
-a strength. GNU nano aims to emulate Pico and perhaps provide extra
-functionality.
+The main disadvantage is lack of mailer integration, but this is also a
+strength. GNU nano aims to emulate Pico and perhaps provide extra functionality.
 EOF
