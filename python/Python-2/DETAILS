@@ -1,5 +1,5 @@
           MODULE=Python
-         VERSION=2.7.14
+         VERSION=7.14
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://www.python.org/ftp/python/$VERSION
       SOURCE_VFY=sha256:71ffb26e09e78650e424929b2b457b9c912ac216576e6bd9e7d204ed03296a66
