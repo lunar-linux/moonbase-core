@@ -1,18 +1,18 @@
           MODULE=sed
-         VERSION=4.4
+         VERSION=4.5
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE/
-      SOURCE_VFY=sha256:cbd6ebc5aaf080ed60d0162d7f6aeae58211a1ee9ba9bb25623daa6cd942683b
+      SOURCE_VFY=sha256:7aad73c8839c2bdadca9476f884d2953cdace9567ecd0d90f9959f229d146b40
         WEB_SITE=http://www.gnu.org/software/sed/
          ENTERED=20010922
-         UPDATED=20170204
+         UPDATED=20180402
            SHORT="A stream-oriented non-interactive text editor"
 
 cat << EOF
 sed - A stream-oriented non-interactive text editor.
-Takes text input, performs some operation (or set of operations) on it
-and outputs the modified text. Sed is typically used for extracting part
-of a file using pattern matching or substituting multiple occurences of
-a string within a file.
+Takes text input, performs some operation (or set of operations) on it and
+outputs the modified text. Sed is typically used for extracting part of a file
+using pattern matching or substituting multiple occurences of a string within a
+file.
 EOF
