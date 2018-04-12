@@ -1,4 +1,4 @@
-          MODULE=Python
+          MODULE=Python-2
          VERSION=7.14
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://www.python.org/ftp/python/$VERSION
