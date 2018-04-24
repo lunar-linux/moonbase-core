@@ -1,7 +1,8 @@
-          MODULE=Python-2
+          MODULE=python2
          VERSION=7.14
-          SOURCE=$MODULE-$VERSION.tar.xz
+          SOURCE=Python-2.$VERSION.tar.xz
       SOURCE_URL=http://www.python.org/ftp/python/$VERSION
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/Python-2.$VERSION
       SOURCE_VFY=sha256:71ffb26e09e78650e424929b2b457b9c912ac216576e6bd9e7d204ed03296a66
         WEB_SITE=http://www.python.org
          ENTERED=20010922
