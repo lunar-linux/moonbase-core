@@ -5,7 +5,9 @@ message "on a major version change like 2.4, to 2.5 or 2.6. Minor version number
 message "like 2.5.1, to 2.5.2 are usually safe without recompiling.${DEFAULT_COLOR}"
 
 if query "Do you want lunar to attempt to upgrade your Python modules?" ${ASK_FOR_REBUILDS:-y}; then
-  PYTHONMODS="$( lvu from /usr/lib/python2*/site-packages | cut -d: -f1 | uniq | grep -v '^python2:')"
+  # The "Python" in the next line is temporary until the bump in module
+  # renaming passes
+  PYTHONMODS="$(lvu from /usr/lib/python2*/site-packages | awk -F: '$1 != "Python" && $1 != "python2" && last != $1 { last = $1; print $1 }')"
   for PYTHONMOD in $(sort_by_dependency $PYTHONMODS); do
     lin -c $PYTHONMOD || true
   done
