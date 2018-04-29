@@ -1,3 +1,3 @@
 default_pre_build
 
-patch_it $SOURCE2 1
+sedit 's:<ncursesw/:<:g' -i watch.c

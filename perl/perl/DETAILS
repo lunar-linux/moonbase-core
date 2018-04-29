@@ -1,20 +1,20 @@
 ### YOU MUST ALSO UPDATE SGMLSpm !!!
           MODULE=perl
-         VERSION=5.26.1
+         VERSION=5.26.2
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=http://www.cpan.org/src/5.0
    SOURCE_URL[1]=http://mirrors.kernel.org/cpan/src
-      SOURCE_VFY=sha256:e763aa485e8dc1a70483dbe6d615986bbf32b977f38016480d68c99237e701dd
+      SOURCE_VFY=sha256:572f9cea625d6062f8a63b5cee9d3ee840800a001d2bb201a41b9a177ab7f70d
         WEB_SITE=http://www.perl.org
          ENTERED=20010922
-         UPDATED=20171224
+         UPDATED=20180419
            SHORT="A highly capable, feature-rich programming language"
 
 cat << EOF
-Perl is a high-level, general-purpose programming language that makes
-easy things easy and hard things possible. It is optimized for scanning
-arbitrary text files and system administration. It has built-in extended
-regular expression matching and replacement, a dataflow mechanism to
-improve security with setuid scripts and is extendable via modules that
-can interface to C libraries.
+Perl is a high-level, general-purpose programming language that makes easy
+things easy and hard things possible. It is optimized for scanning arbitrary
+text files and system administration.
+It has built-in extended regular expression matching and replacement, a dataflow
+mechanism to improve security with setuid scripts and is extendable via modules
+that can interface to C libraries.
 EOF
