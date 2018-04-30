@@ -1,3 +1,3 @@
-OPTS+=" --disable-static --libdir=/usr/lib" &&
+OPTS+=" --disable-static --libdir=/lib" &&
 
 default_build
