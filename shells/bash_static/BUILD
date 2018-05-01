@@ -11,4 +11,5 @@ make version.h &&
 make &&
 prepare_install &&
 
-cp -f bash /usr/bin/bash_static
+cp -f bash /usr/bin/bash_static &&
+ln -sf /usr/bin/bash_static /bin/sh
