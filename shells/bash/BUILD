@@ -1,3 +1,5 @@
+#!/bin/bash
+
 bad_flags -malign-double &&
 
 OPTS+=" --bindir=/bin                 \
@@ -8,7 +10,6 @@ OPTS+=" --bindir=/bin                 \
         --disable-profiling"         &&
 
 default_build &&
-ln -sf bash /bin/sh &&
 ln -f /bin/bash /bin/rbash &&
 
 rm -f /usr/share/man/man1/bash.1 &&
