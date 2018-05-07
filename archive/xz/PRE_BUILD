@@ -1,0 +1,3 @@
+default_pre_build &&
+
+sedit "s:\$(libdir)/pkgconfig:/usr/lib/pkgconfig:" src/liblzma/Makefile.am src/liblzma/Makefile.in

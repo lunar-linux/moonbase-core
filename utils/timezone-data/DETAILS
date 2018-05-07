@@ -1,5 +1,5 @@
           MODULE=timezone-data
-           TZONE=d
+           TZONE=e
          VERSION=2018$TZONE
           SOURCE=tzdata$VERSION.tar.gz
          SOURCE2=tzcode$VERSION.tar.gz
@@ -9,15 +9,15 @@
   SOURCE2_URL[0]=$MIRROR_URL
   SOURCE2_URL[1]=http://www.iana.org/time-zones/repository/releases
   SOURCE3_URL[0]=$PATCH_URL
-      SOURCE_VFY=sha256:5106eddceb5f1ae3a91dbd3960e1b8b11ba0dc08579a31cf0724a7691b10c054
-     SOURCE2_VFY=sha256:7de44e85baad748d217e3fd60706f599f9aec68bce6356b163f52b0dbd40a8d9
+      SOURCE_VFY=sha256:6b288e5926841a4cb490909fe822d85c36ae75538ad69baf20da9628b63b692e
+     SOURCE2_VFY=sha256:ca340cf20e80b699d6e5c49b4ba47361b3aa681f06f38a0c88a8e8308c00ebce
      SOURCE3_VFY=sha256:279d99c676758f918fe061cc64791123a109f85f1ddfdf677593999ae47d8877
         WEB_SITE=ftp://munnari.oz.au/pub
          ENTERED=20070203
-         UPDATED=20180324
+         UPDATED=20180504
            SHORT="Timezone data and utilities"
 
 cat << EOF
-Timezone-data contains the timezone data (/usr/share/zoneinfo/*) and
-various timezone related utilities (tzselect/zic/zdump).
+Timezone-data contains the timezone data (/usr/share/zoneinfo/*) and various
+timezone related utilities (tzselect/zic/zdump).
 EOF
