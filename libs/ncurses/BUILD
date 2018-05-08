@@ -12,6 +12,17 @@ rm -rf /usr/share/terminfo &&
 # system!
 unset CC CXX &&
 
+# Attempt to preserve whatever version of ncurses gawk uses, if gawk is linked
+# with ncurses
+
+GAWK_NCURSES=$(ldd /bin/gawk |
+    sed -n '/libncurses/{ s/^[ \t]*\([^ ][^ ]*\) .*/\1/;p }')
+
+if [[ ! -z $GAWK_NCURSES ]]
+then
+    cp /lib/$GAWK_NCURSES /lib/lunar-$GAWK_NCURSES
+fi &&
+
 OPTS+=" PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig" &&
 
 set -x &&
@@ -64,18 +75,11 @@ make &&
 
 prepare_install &&
 
-# figure out if removing the previous libncurses has killed gawk, and do
-# a little hack to try to remedy the situation before trying to actually
-# do the install
-
-GAWK_NCURSES=$(ldd /bin/gawk |
-    sed -n '/libncurses/{ s/^[ \t]*\([^ ][^ ]*\) .*/\1/;p }')
-
-if [[ ! -z "$GAWK_HACK" && ! -e /lib/$GAWK_NCURSES ]]
+if [[ ! -z $GAWK_NCURSES ]]
 then
-    ln -s /lib/libncurses.so /lib/$GAWK_NCURSES
+    mv /lib/lunar-$GAWK_NCURSES /lib/$GAWK_NCURSES
 fi &&
 
-make install
+make install &&
 
 gather_docs ANNOUNCE TODO
