@@ -1,5 +1,7 @@
+#!/bin/bash
 # Seems that ncurses-5.5 has problems with garbage in /usr/share/terminfo
-# Note: ncurses-5.5 also has all the "screen" files for terminfo, so no recompile is needed
+# Note: ncurses-5.5 also has all the "screen" files for terminfo, so no
+# recompile is needed
 rm -rf /usr/share/terminfo &&
 
 # ************************ WARNING *************************
@@ -31,7 +33,6 @@ set -x &&
 default_make &&
 
 devoke_installwatch &&
-
 set +x &&
 
 # Now to make ncurses wide
@@ -58,6 +59,23 @@ set -x &&
             $OPTS                                    &&
 
 set +x &&
-default_make &&
+
+make &&
+
+prepare_install &&
+
+# figure out if removing the previous libncurses has killed gawk, and do
+# a little hack to try to remedy the situation before trying to actually
+# do the install
+
+GAWK_NCURSES=$(ldd /bin/gawk |
+    sed -n '/libncurses/{ s/^[ \t]*\([^ ][^ ]*\) .*/\1/;p }')
+
+if [[ ! -z "$GAWK_HACK" && ! -e /lib/$GAWK_NCURSES ]]
+then
+    ln -s /lib/libncurses.so /lib/$GAWK_NCURSES
+fi &&
+
+make install
 
 gather_docs ANNOUNCE TODO
