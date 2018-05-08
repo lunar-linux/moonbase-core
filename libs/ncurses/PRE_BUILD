@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Temporarily replace bash with bash_static
+mv /bin/bash /bin/bash_dynamic
+cp /usr/bin/bash_static /bin/bash

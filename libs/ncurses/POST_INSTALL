@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Restore the system to working order as soon as possible
+lin -c readline bash
+if in_depends gawk readline
+then
+    lin -c gawk
+fi
+
+rm /bin/bash_dynamic

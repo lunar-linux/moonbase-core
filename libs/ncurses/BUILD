@@ -30,9 +30,6 @@ set -x &&
 
 default_make &&
 
-# Do not break some essential apps like gawk
-ln -sf libncurses.so.6 /lib/libncurses.so.5 &&
-
 devoke_installwatch &&
 
 set +x &&
@@ -62,8 +59,5 @@ set -x &&
 
 set +x &&
 default_make &&
-
-# Do not break some essential apps like gawk
-ln -sf libncurses.so.6 /lib/libncurses.so.5 &&
 
 gather_docs ANNOUNCE TODO
