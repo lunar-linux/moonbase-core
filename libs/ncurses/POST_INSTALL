@@ -1,6 +1,24 @@
 #!/bin/bash
 
 # Restore the system to working order as soon as possible
+
+# readline requires gawk to be working, but all it needs is to be
+# able to link with whatever version of libcurses, because
+# readline's use of gawk in its configure script doesn't actually
+# make use of readline capabilities (thank goodness).  So throw up
+# a temporary hack to ensure it still actually loads.
+
+GAWK_HACK=false
+
+GAWK_NCURSES=$(ldd /bin/gawk |
+    sed -n '/libncurses/{ s/^[ \t]*\([^ ][^ ]*\) .*/\1/;p }')
+
+if [[ ! -z "$GAWK_HACK" && ! -e /lib/$GAWK_NCURSES ]]
+then
+    ln -s /lib/libncurses.so /lib/$GAWK_NCURSES
+    GAWK_HACK=true
+fi
+
 lin -c readline bash
 if in_depends gawk readline
 then
@@ -8,3 +26,4 @@ then
 fi
 
 rm /bin/bash_dynamic
+$GAWK_HACK && rm /lib/$GAWK_NCURSES
