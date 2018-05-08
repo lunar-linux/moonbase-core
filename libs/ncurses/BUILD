@@ -12,17 +12,6 @@ rm -rf /usr/share/terminfo &&
 # system!
 unset CC CXX &&
 
-# Attempt to preserve whatever version of ncurses gawk uses, if gawk is linked
-# with ncurses
-
-GAWK_NCURSES=$(ldd /bin/gawk |
-    sed -n '/libncurses/{ s/^[ \t]*\([^ ][^ ]*\) .*/\1/;p }')
-
-if [[ ! -z $GAWK_NCURSES ]]
-then
-    cp /lib/$GAWK_NCURSES /lib/lunar-$GAWK_NCURSES
-fi &&
-
 OPTS+=" PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig" &&
 
 set -x &&
@@ -75,10 +64,13 @@ make &&
 
 prepare_install &&
 
-if [[ ! -z $GAWK_NCURSES ]]
-then
-    mv /lib/lunar-$GAWK_NCURSES /lib/$GAWK_NCURSES
-fi &&
+devoke_installwatch &&
+
+cp -r old.libraries ${SOURCE_DIRECTORY}-old.libraries &&
+
+invoke_installwatch &&
+
+export LD_LIBRARY_PATH=${SOURCE_DIRECTORY}-old.libraries &&
 
 make install &&
 
