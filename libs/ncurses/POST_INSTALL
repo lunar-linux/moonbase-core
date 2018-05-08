@@ -15,5 +15,4 @@ then
     lin -c gawk
 fi  &&
 
-rm /bin/bash_dynamic &&
 rm -rf ${SOURCE_DIRECTORY}-old.libraries

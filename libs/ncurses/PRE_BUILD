@@ -1,9 +1,0 @@
-#!/bin/sh
-
-default_pre_build &&
-
-bash_static=$(type -p bash_static)
-    
-# Temporarily replace bash with bash_static
-mv /bin/bash /bin/bash_dynamic &&
-cp $bash_static /bin/bash
