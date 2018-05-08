@@ -1,5 +1,7 @@
 #!/bin/sh
 
+default_pre_build &&
+    
 # Temporarily replace bash with bash_static
-mv /bin/bash /bin/bash_dynamic
+mv /bin/bash /bin/bash_dynamic &&
 cp /usr/bin/bash_static /bin/bash
