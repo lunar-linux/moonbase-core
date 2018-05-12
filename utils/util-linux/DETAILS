@@ -1,11 +1,11 @@
           MODULE=util-linux
-         VERSION=2.31.1
+         VERSION=2.32
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KERNEL_URL/pub/linux/utils/$MODULE/v${VERSION::4}
-      SOURCE_VFY=sha256:1a51b16fa9cd51d26ef9ab52d2f1de12403b810fc8252bf7d478df91b3cddf11
+      SOURCE_VFY=sha256:6c7397abc764e32e8159c2e96042874a190303e77adceb4ac5bd502a272a4734
         WEB_SITE=http://freecode.com/projects/util-linux
          ENTERED=20010922
-         UPDATED=20171219
+         UPDATED=20180322
            SHORT="Essential utilities for any Linux box"
 
 cat << EOF
