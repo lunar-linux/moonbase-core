@@ -1,5 +1,0 @@
-default_pre_build &&
-
-sedit 's|/sbin|/bin|g' configure.ac &&
-
-./autogen.sh
