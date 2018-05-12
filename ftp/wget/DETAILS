@@ -1,28 +1,28 @@
           MODULE=wget
-         VERSION=1.19.4
+         VERSION=1.19.5
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:93fb96b0f48a20ff5be0d9d9d3c4a986b469cb853131f9d5fe4cc9cecbc8b5b5
+      SOURCE_VFY=sha256:b39212abe1a73f2b28f4c6cb223c738559caac91d6e416a6d91d4b9d55c9faee
         WEB_SITE=http://www.gnu.org/software/wget/
          ENTERED=20010922
-         UPDATED=20180125
+         UPDATED=20180506
            SHORT="wget retreives files from web and ftp sites"
 
 cat << EOF
 Wget - Retrieves files from the Web
-Wget is a network utility to retrieve files from the Web using http and
-ftp, the two most widely used Internet protocols. It works
-non-interactively, so it will work in the background, after having
-logged off. The program supports recursive retrieval of web-authoring
-pages as well as ftp sites-- you can use wget to make mirrors of
-archives and home pages or to travel the Web like a WWW robot.
-Wget works particularly well with slow or unstable connections by
-continuing to retrive a document until the document is fully downloaded.
-Re-getting files from where it left off works on servers (both http and
-ftp) that support it. Both http and ftp retrievals can be time stamped,
-so wget can see if the remote file has changed since the last retrieval
-and automatically retrieve the new version if it has.
+Wget is a network utility to retrieve files from the Web using http and ftp,
+the two most widely used Internet protocols. It works non-interactively, so it
+will work in the background, after having logged off.
+The program supports recursive retrieval of web-authoring pages as well as ftp
+sites-- you can use wget to make mirrors of archives and home pages or to travel
+the Web like a WWW robot.
+Wget works particularly well with slow or unstable connections by continuing to
+retrive a document until the document is fully downloaded.
+Re-getting files from where it left off works on servers (both http and ftp)
+that support it. Both http and ftp retrievals can be time stamped, so wget can
+see if the remote file has changed since the last retrieval and automatically
+retrieve the new version if it has.
 Wget supports proxy servers; this can lighten the network load, speed up
 retrieval, and provide access behind firewalls.
 EOF
