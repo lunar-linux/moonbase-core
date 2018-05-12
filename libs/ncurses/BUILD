@@ -1,5 +1,7 @@
+#!/bin/bash
 # Seems that ncurses-5.5 has problems with garbage in /usr/share/terminfo
-# Note: ncurses-5.5 also has all the "screen" files for terminfo, so no recompile is needed
+# Note: ncurses-5.5 also has all the "screen" files for terminfo, so no
+# recompile is needed
 rm -rf /usr/share/terminfo &&
 
 # ************************ WARNING *************************
@@ -30,11 +32,7 @@ set -x &&
 
 default_make &&
 
-# Do not break some essential apps like gawk
-ln -sf libncurses.so.6 /lib/libncurses.so.5 &&
-
 devoke_installwatch &&
-
 set +x &&
 
 # Now to make ncurses wide
@@ -61,9 +59,19 @@ set -x &&
             $OPTS                                    &&
 
 set +x &&
-default_make &&
 
-# Do not break some essential apps like gawk
-ln -sf libncurses.so.6 /lib/libncurses.so.5 &&
+make &&
+
+prepare_install &&
+
+devoke_installwatch &&
+
+cp -r old.libraries ${SOURCE_DIRECTORY}-old.libraries &&
+
+invoke_installwatch &&
+
+export LD_LIBRARY_PATH=${SOURCE_DIRECTORY}-old.libraries &&
+
+make install &&
 
 gather_docs ANNOUNCE TODO

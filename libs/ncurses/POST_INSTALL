@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Restore the system to working order as soon as possible
+if [[ -z $LD_LIBRARY_PATH ]]
+then
+    export LD_LIBRARY_PATH=${SOURCE_DIRECTORY}-old.libraries
+else
+    export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${SOURCE_DIRECTORY}-old.libraries
+fi &&
+
+lin -c readline &&
+lin -c bash &&
+if in_depends gawk readline
+then
+    lin -c gawk
+fi  &&
+
+rm -rf ${SOURCE_DIRECTORY}-old.libraries
