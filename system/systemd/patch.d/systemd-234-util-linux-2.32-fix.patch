@@ -1,0 +1,116 @@
+diff -Naur systemd-234/src/basic/missing.h systemd-234-lunar/src/basic/missing.h
+--- systemd-234/src/basic/missing.h	2017-07-12 16:01:10.000000000 +0200
++++ systemd-234-lunar/src/basic/missing.h	2018-05-12 14:02:21.330855882 +0200
+@@ -490,46 +490,6 @@
+ #define BPF_FS_MAGIC 0xcafe4a11
+ #endif
+ 
+-#ifndef MS_MOVE
+-#define MS_MOVE 8192
+-#endif
+-
+-#ifndef MS_REC
+-#define MS_REC 16384
+-#endif
+-
+-#ifndef MS_PRIVATE
+-#define MS_PRIVATE      (1<<18)
+-#endif
+-
+-#ifndef MS_REC
+-#define MS_REC          (1<<19)
+-#endif
+-
+-#ifndef MS_SHARED
+-#define MS_SHARED       (1<<20)
+-#endif
+-
+-#ifndef MS_RELATIME
+-#define MS_RELATIME     (1<<21)
+-#endif
+-
+-#ifndef MS_KERNMOUNT
+-#define MS_KERNMOUNT    (1<<22)
+-#endif
+-
+-#ifndef MS_I_VERSION
+-#define MS_I_VERSION    (1<<23)
+-#endif
+-
+-#ifndef MS_STRICTATIME
+-#define MS_STRICTATIME  (1<<24)
+-#endif
+-
+-#ifndef MS_LAZYTIME
+-#define MS_LAZYTIME     (1<<25)
+-#endif
+-
+ #ifndef SCM_SECURITY
+ #define SCM_SECURITY 0x03
+ #endif
+diff -Naur systemd-234/src/core/dbus-execute.c systemd-234-lunar/src/core/dbus-execute.c
+--- systemd-234/src/core/dbus-execute.c	2017-07-12 16:01:10.000000000 +0200
++++ systemd-234-lunar/src/core/dbus-execute.c	2018-05-12 13:55:40.245972684 +0200
+@@ -17,6 +17,7 @@
+   along with systemd; If not, see <http://www.gnu.org/licenses/>.
+ ***/
+ 
++#include <sys/mount.h>
+ #include <sys/prctl.h>
+ 
+ #ifdef HAVE_SECCOMP
+diff -Naur systemd-234/src/core/load-fragment.c systemd-234-lunar/src/core/load-fragment.c
+--- systemd-234/src/core/load-fragment.c	2017-07-12 16:01:10.000000000 +0200
++++ systemd-234-lunar/src/core/load-fragment.c	2018-05-12 14:02:39.524412937 +0200
+@@ -20,7 +20,6 @@
+ 
+ #include <errno.h>
+ #include <fcntl.h>
+-#include <linux/fs.h>
+ #include <linux/oom.h>
+ #ifdef HAVE_SECCOMP
+ #include <seccomp.h>
+diff -Naur systemd-234/src/core/manager.h systemd-234-lunar/src/core/manager.h
+--- systemd-234/src/core/manager.h	2017-07-12 16:01:10.000000000 +0200
++++ systemd-234-lunar/src/core/manager.h	2018-05-12 13:56:22.673130030 +0200
+@@ -19,7 +19,6 @@
+   along with systemd; If not, see <http://www.gnu.org/licenses/>.
+ ***/
+ 
+-#include <libmount.h>
+ #include <stdbool.h>
+ #include <stdio.h>
+ 
+@@ -32,6 +31,8 @@
+ #include "list.h"
+ #include "ratelimit.h"
+ 
++struct libmnt_monitor;
++
+ /* Enforce upper limit how many names we allow */
+ #define MANAGER_MAX_NAMES 131072 /* 128K */
+ 
+diff -Naur systemd-234/src/core/mount.c systemd-234-lunar/src/core/mount.c
+--- systemd-234/src/core/mount.c	2017-07-12 16:01:10.000000000 +0200
++++ systemd-234-lunar/src/core/mount.c	2018-05-12 13:56:56.793524252 +0200
+@@ -22,6 +22,8 @@
+ #include <stdio.h>
+ #include <sys/epoll.h>
+ 
++#include <libmount.h>
++
+ #include "sd-messages.h"
+ 
+ #include "alloc-util.h"
+diff -Naur systemd-234/src/shared/bus-unit-util.c systemd-234-lunar/src/shared/bus-unit-util.c
+--- systemd-234/src/shared/bus-unit-util.c	2017-07-12 16:01:10.000000000 +0200
++++ systemd-234-lunar/src/shared/bus-unit-util.c	2018-05-12 14:03:09.198110154 +0200
+@@ -40,6 +40,8 @@
+ #include "utf8.h"
+ #include "util.h"
+ 
++#include <sys/mount.h>
++
+ int bus_parse_unit_info(sd_bus_message *message, UnitInfo *u) {
+         assert(message);
+         assert(u);
