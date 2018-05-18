@@ -3,7 +3,7 @@ depends lzo
 depends e2fsprogs
 
 optional_depends zstd "" "--disable-zstd" "for zstd compression support" n
-optional_depends python3 "--enable-python" "--disable-python" \
+optional_depends Python-3 "--enable-python" "--disable-python" \
     "to build libbtrfsutil Python bindings"
 
 optional_depends xmlto    "" "" "for documentation (also requires asciidoc)" n
