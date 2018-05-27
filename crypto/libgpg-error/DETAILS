@@ -1,8 +1,7 @@
           MODULE=libgpg-error
          VERSION=1.31
           SOURCE=$MODULE-$VERSION.tar.bz2
-   SOURCE_URL[0]=https://www.gnupg.org/ftp/gcrypt/$MODULE/
-   SOURCE_URL[1]=ftp://ftp.gnupg.org/gcrypt/$MODULE/
+      SOURCE_URL=https://www.gnupg.org/ftp/gcrypt/$MODULE
       SOURCE_VFY=sha256:40d0a823c9329478063903192a1f82496083b277265904878f4bc09e0db7a4ef
         WEB_SITE=http://www.gnupg.org
          ENTERED=20020212
