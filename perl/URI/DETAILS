@@ -4,6 +4,7 @@
       SOURCE_URL=http://search.cpan.org/CPAN/authors/id/E/ET/ETHER
       SOURCE_VFY=sha256:cca7ab4a6f63f3ccaacae0f2e1337e8edf84137e73f18548ec7d659f23efe413
         WEB_SITE=http://search.cpan.org/dist/URI/
+            TYPE=perl
          ENTERED=20020727
          UPDATED=20180109
            SHORT="A perl module for using Uniform Resource Identifiers"
