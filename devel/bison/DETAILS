@@ -4,7 +4,7 @@
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
         WEB_SITE=http://www.gnu.org/software/bison/bison.html
-      SOURCE_VFY=sha256:e9ac5585002b71208aee8a20bbe1ced96c48766e6c4247bc7ef8f3141f7624c8
+      SOURCE_VFY=sha256:075cef2e814642e30e10e8155e93022e4a91ca38a65aa1d5467d4e969f97f338
          ENTERED=20010922
          UPDATED=20180529
            SHORT="A replacement for the parser generator yacc"
