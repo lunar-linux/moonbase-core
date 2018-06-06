@@ -7,7 +7,7 @@
 #              changed during normal kernel operation.
 
 start () {
-  if [ -f /etc/sysctl.conf ] ; then
+  if [ -f /etc/sysctl.conf ]; then
     echo -n "Setting up sysctl: "
     sysctl -p &&
     echo -e $RESULT_OK ||
