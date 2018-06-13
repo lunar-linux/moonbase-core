@@ -5,7 +5,7 @@ fi
 
 if module_installed systemd; then
   OPTS+=" --with-udev_prefix=/usr \
-          --with-systemdsystemunitdir=$(pkg-config systemd --variable=systemdsystemunitdir)"
+          --with-systemdsystemunitdir=/usr/lib/systemd/system"
 else
   OPTS+=" --with-udev_prefix=/"
 fi &&
@@ -17,7 +17,7 @@ OPTS+=" --libdir=/usr/lib  \
         --enable-dmeventd  \
         --enable-applib    \
         --enable-udev_sync \
-        --enable-udev_rules" &&
+        --enable-udev_rules"
 
 default_build &&
 
