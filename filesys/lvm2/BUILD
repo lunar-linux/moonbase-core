@@ -17,7 +17,7 @@ OPTS+=" --libdir=/usr/lib  \
         --enable-dmeventd  \
         --enable-applib    \
         --enable-udev_sync \
-        --enable-udev_rules" &&
+        --enable-udev_rules"
 
 default_build &&
 

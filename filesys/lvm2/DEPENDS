@@ -1,5 +1,6 @@
 depends readline
 depends pkgconfig
+depends libaio
 
 # optional circular depend with systemd->cryptsetup
 depends %UDEV
