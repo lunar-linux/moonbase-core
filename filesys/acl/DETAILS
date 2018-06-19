@@ -1,13 +1,12 @@
           MODULE=acl
-         VERSION=2.2.52
-          SOURCE=$MODULE-$VERSION.src.tar.gz
-   SOURCE_URL[0]=http://download.savannah.gnu.org/releases/$MODULE
-   SOURCE_URL[1]=ftp://oss.sgi.com/projects/xfs/cmd_tars-oct_09
-   SOURCE_URL[2]=http://mirrors.zerg.biz/nongnu/acl
-      SOURCE_VFY=sha1:537dddc0ee7b6aa67960a3de2d36f1e2ff2059d9
+         VERSION=2.2.53
+          SOURCE=$MODULE-$VERSION.tar.gz
+   SOURCE_URL[0]=http://download.savannah.nongnu.org/releases/$MODULE/
+   SOURCE_URL[1]=http://mirrors.zerg.biz/nongnu/acl
+      SOURCE_VFY=sha256:06be9865c6f418d851ff4494e12406568353b891ffe1f596b34693c387af26c7
         WEB_SITE=http://oss.sgi.com/projects/xfs
          ENTERED=20020531
-         UPDATED=20130608
+         UPDATED=20130619
            SHORT="POSIX access control list"
            PSAFE=no
 
