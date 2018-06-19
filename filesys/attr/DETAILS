@@ -1,16 +1,16 @@
           MODULE=attr
-         VERSION=2.4.47
-          SOURCE=$MODULE-$VERSION.src.tar.gz
-   SOURCE_URL[0]=http://download.savannah.gnu.org/releases/$MODULE
+         VERSION=2.4.48
+          SOURCE=$MODULE-$VERSION.tar.gz
+   SOURCE_URL[0]=http://download.savannah.nongnu.org/releases/$MODULE/
    SOURCE_URL[1]=http://mirror.dknss.com/nongnu/$MODULE
-      SOURCE_VFY=sha1:5060f0062baee6439f41a433325b8b3671f8d2d8
+      SOURCE_VFY=sha256:5ead72b358ec709ed00bbf7a9eaef1654baad937c001c044fe8b74c57f5324e7
         WEB_SITE=http://oss.sgi.com/projects/xfs
          ENTERED=20020531
-         UPDATED=20130608
+         UPDATED=20130619
            SHORT="Extended Attribute (EA) support"
-PSAFE=no
+           PSAFE=no
 
 cat << EOF
-Currently, support for extended attributes is implemented on Linux by
-the ext2, ext3, ext4, XFS, JFS and reiserfs filesystems.
+Currently, support for extended attributes is implemented on Linux by the ext2,
+ext3, ext4, XFS, JFS and reiserfs filesystems.
 EOF
