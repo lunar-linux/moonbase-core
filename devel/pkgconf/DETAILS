@@ -1,0 +1,18 @@
+          MODULE=pkgconf
+         VERSION=1.5.1
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE
+ SOURCE_URL_FULL=https://git.dereferenced.org/pkgconf/pkgconf/archive/master.tar.gz
+      SOURCE_VFY=sha256:009e814f77c1da914770dbec06711af10980187a0bedc69461626f924d5fac62
+        WEB_SITE=https://git.dereferenced.org/pkgconf/pkgconf/
+         ENTERED=20180619
+         UPDATED=20180619
+           SHORT="Package compiler and linker metadata toolkit"
+
+cat << EOF
+pkgconf is a program which helps to configure compiler and linker flags for
+development libraries. It is similar to pkg-config from freedesktop.org.
+libpkgconf is a library which provides access to most of pkgconf's functionality
+to allow other tooling such as compilers and IDEs to discover and use libraries
+configured by pkgconf.
+EOF
