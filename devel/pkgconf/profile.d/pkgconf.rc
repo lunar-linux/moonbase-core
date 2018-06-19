@@ -1,0 +1,2 @@
+export PKG_CONFIG="/usr/bin/pkgconf"
+export PKG_CONFIG_PATH="/usr/lib/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PATH"
