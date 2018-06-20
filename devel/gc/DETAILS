@@ -1,11 +1,12 @@
           MODULE=gc
-         VERSION=7.6.4
+         VERSION=7.6.6
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://www.hboehm.info/gc/gc_source
-      SOURCE_VFY=sha256:b94c1f2535f98354811ee644dccab6e84a0cf73e477ca03fb5a3758fb1fecd1c
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/bdw$MODULE-$VERSION
+ SOURCE_URL_FULL=https://github.com/ivmai/bdwgc/archive/v$VERSION.tar.gz
+      SOURCE_VFY=sha256:6797540e2b51f48ea1c8409066063b686ffd330b578f568811d3fe5b7ab33749
         WEB_SITE=http://www.hboehm.info/gc/
          ENTERED=20020314
-         UPDATED=20180224
+         UPDATED=20180620
            SHORT="A garbage collector"
 
 cat << EOF
