@@ -1,5 +1,5 @@
 depends expat
-depends pkgconfig
+depends %PKGCONF
 
 optional_depends libX11 "--with-x" "--without-x" "for X support"
 
