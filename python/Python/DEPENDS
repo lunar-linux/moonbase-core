@@ -1,4 +1,4 @@
-depends %PKGCONF
+depends pkgconf
 
 optional_depends db     "" "" "for support of the db library" n
 optional_depends gdbm   "" "" "for support of the gdbm library"

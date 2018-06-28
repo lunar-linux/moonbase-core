@@ -4,4 +4,3 @@
 %OSSL:openssl libressl
 %UDEV:systemd udev
 %XMLRENDERER:libxml2 expat
-%PKGCONF: pkgconf pkgconfig
