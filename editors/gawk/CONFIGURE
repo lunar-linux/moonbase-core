@@ -1,0 +1,1 @@
+mquery GAWK_EXTENSIONS "Enable optional extensions" n "--enable-extensions" "--disable-extensions"
