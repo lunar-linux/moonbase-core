@@ -1,7 +1,7 @@
           MODULE=lilo
          VERSION=24.2
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://lilo.alioth.debian.org/ftp/sources
+      SOURCE_URL=https://alioth-archive.debian.org/releases/lilo/Lilo/$VERSION
       SOURCE_VFY=sha256:e158f19de4560c935ebe0507c21b79bff17618b9230d8076fe8c5fff9fdbd5b1
         WEB_SITE=http://home.san.rr.com/johninsd/pub/linux/lilo
          ENTERED=20010922
