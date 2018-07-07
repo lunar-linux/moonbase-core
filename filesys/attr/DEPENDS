@@ -1,4 +1,5 @@
-depends  automake
-depends  libtool
+depends automake
+depends libtool
 
-optional_depends "gettext" "--enable-gettext" "--disable-gettext" "for NLS support"
+# circular depend with gettext via acl, sed, ncurses
+#depends gettext
