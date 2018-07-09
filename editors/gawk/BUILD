@@ -1,12 +1,12 @@
 # make a backup for gawk app
 cp -f /bin/gawk /bin/gawk.old &&
 
-OPTS+="--build=$BUILD \
-       --prefix=/usr \
-       --bindir=/bin \
-       --mandir=/usr/share/man \
-       --infodir=/usr/share/info \
-       ac_cv_func_working_mktime=yes" &&
+OPTS+=" --build=$BUILD \
+        --prefix=/usr \
+        --bindir=/bin \
+        --mandir=/usr/share/man \
+        --infodir=/usr/share/info \
+        ac_cv_func_working_mktime=yes" &&
 
 default_config &&
 make &&
