@@ -10,7 +10,6 @@
          ENTERED=20021106
          UPDATED=20161127
            SHORT="Essential utilities for IP networks"
-           PSAFE=no
 
 cat << EOF
 The iputils package is set of small useful utilities for Linux networking.
