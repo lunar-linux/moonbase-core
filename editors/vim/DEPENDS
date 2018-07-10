@@ -17,6 +17,6 @@ optional_depends gtk+-2 \
 
 # broken due to API changes
 # these might work again with the upcoming releases
-#optional_depends "perl" "--enable-perlinterp" "--disable-perlinterp" "for Perl interpreter support"
-#optional_depends "lua"  "--enable-luainterp"  "--disable-luainterp"  "for Lua interpreter support"
-#optional_depends "ruby" "--enable-rubyinterp" "--disable-rubyinterp" "for Ruby interpreter support"
+optional_depends "perl" "--enable-perlinterp=yes" "--disable-perlinterp" "for Perl interpreter support"
+optional_depends "lua"  "--enable-luainterp"  "--disable-luainterp"  "for Lua interpreter support"
+optional_depends "ruby" "--enable-rubyinterp" "--disable-rubyinterp" "for Ruby interpreter support"
