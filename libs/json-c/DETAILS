@@ -10,7 +10,6 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-$VERSION-$VSUFFIX
          UPDATED=20180325
            SHORT="JavaScript Object Notation"
 
-PSAFE=no
 cat << EOF
 JSON (JavaScript Object Notation) is a lightweight data-interchange format.
 EOF

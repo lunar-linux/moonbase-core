@@ -7,7 +7,6 @@
         WEB_SITE=http://www.gnu.org/software/gettext
          ENTERED=20010922
          UPDATED=20160612
-           PSAFE="no"
            SHORT="The GNU internationalisation library"
 
 cat << EOF
