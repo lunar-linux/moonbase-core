@@ -1,7 +1,7 @@
           MODULE=attr
          VERSION=2.4.48
           SOURCE=$MODULE-$VERSION.tar.gz
-   SOURCE_URL[0]=http://download.savannah.nongnu.org/releases/$MODULE/
+   SOURCE_URL[0]=https://download.savannah.nongnu.org/releases/$MODULE/
    SOURCE_URL[1]=http://mirror.dknss.com/nongnu/$MODULE
       SOURCE_VFY=sha256:5ead72b358ec709ed00bbf7a9eaef1654baad937c001c044fe8b74c57f5324e7
         WEB_SITE=http://oss.sgi.com/projects/xfs
