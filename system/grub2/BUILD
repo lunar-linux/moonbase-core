@@ -44,9 +44,9 @@ make &&
 
 prepare_install &&
 cd $GRUB_BIOS &&
-make bashcompletiondir=/usr/share/bash-completion/completions install
+make bashcompletiondir=/usr/share/bash-completion/completions install &&
 cd $GRUB_EFI &&
 make bashcompletiondir=/usr/share/bash-completion/completions install &&
 
 # Clean up some debug files etc
-rm -f /usr/lib/grub/{i386-pc,${_EFI_ARCH}-efi}/{*.module,*.image,kernel.exec,gdb_grub,gmodule.pl} || true
+(rm -f /usr/lib/grub/{i386-pc,${_EFI_ARCH}-efi}/{*.module,*.image,kernel.exec,gdb_grub,gmodule.pl} || true)
