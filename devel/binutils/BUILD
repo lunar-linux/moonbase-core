@@ -4,6 +4,11 @@ cd build-binutils &&
 
 CFLAGS+=" -fPIC" &&
 
+# Enable 64bit bfd for x86
+if [[ "$(arch)" == "i686" ]]; then
+  OPTS+=" --enable-64-bit-bfd"
+fi &&
+
 ../configure --prefix=/usr    \
              --disable-gdb    \
              --disable-werror \
