@@ -17,7 +17,7 @@ fi &&
              --enable-gold    \
              --enable-plugins \
              --enable-install-libiberty \
-             $OPTS           &&
+             $OPTS &&
 
 make tooldir=/usr &&
 prepare_install &&
@@ -32,7 +32,8 @@ if [ -e /usr/bin/ld ]; then
 fi &&
 
 # Remove unwanted files
-rm /usr/share/man/man1/{dlltool,nlmconv,windres,windmc}* &&
+# nlmconv
+`rm /usr/share/man/man1/{dlltool,windres,windmc}* &&
 
 # No shared linking to these files outside binutils
 rm /usr/lib/lib{bfd,opcodes}.so &&
