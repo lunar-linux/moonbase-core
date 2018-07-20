@@ -1,6 +1,3 @@
-# broken for now
-OPTS+=" --disable-perlinterp --disable-luainterp --disable-rubyinterp" &&
-
 OPTS+=" --with-features=huge --enable-cscope --enable-fail-if-missing" &&
 
 # otherwise it defaults to auto/x+gtk
