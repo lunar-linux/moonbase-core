@@ -5,6 +5,6 @@ depends findutils
 depends cpio
 
 optional_depends Python-3 "--with-python=3" "" "for Python support" n
-optional_depends Python   "--with-python=2" "" "for Python2 support" y
+optional_depends python2   "--with-python=2" "" "for Python2 support" y
 
 optional_depends Linux-PAM "" "" "for PAM support"
