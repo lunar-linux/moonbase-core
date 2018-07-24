@@ -1,34 +1,34 @@
 OPTS+=" --enable-shared \
+        --enable-ipv6 \
         --with-threads \
-        --without-ensurepip" &&
+        --with-system-ffi \
+        --with-system-expat \
+        --with-computed-gotos \
+        --without-ensurepip"
 
-# Makes sure shipped expat is not used when we want system expat
-if in_depends $MODULE expat; then
-  rm -fr Modules/expat
-fi &&
-
-# Makes sure shipped libffi stuff is not used when we want system libffi
-if in_depends $MODULE libffi ; then
-  rm -fr Modules/_ctypes/libffi*
-fi &&
+_BASEVER=${VERSION%.*}
+_PYDESTDIR=$SOURCE_DIRECTORY/__pythondest3
+mkdir -p $_PYDESTDIR &&
 
 default_config &&
+make EXTRA_CFLAGS="$CFLAGS" &&
 
-# This is important, lets 2.x versions and it to coexist.
-make &&
+# Avoid rebuild on make install
+sedit 's;^all:.*$;all: build_all;' Makefile &&
+make DESTDIR="$_PYDESTDIR" EXTRA_CFLAGS="$CFLAGS" install &&
+
+# Convenience symlinks
+ln -sf python3 "$_PYDESTDIR"/usr/bin/python &&
+ln -sf python3-config "$_PYDESTDIR"/usr/bin/python-config &&
+ln -sf idle3 "$_PYDESTDIR"/usr/bin/idle &&
+ln -sf pydoc3 "$_PYDESTDIR"/usr/bin/pydoc &&
+ln -sf python${_BASEVER}.1 "$_PYDESTDIR"/usr/share/man/man1/python.1 &&
+ln -sf python-${_BASEVER}.pc "$_PYDESTDIR"/usr/lib/pkgconfig/python3.pc &&
+
+install -dm755 "$_PYDESTDIR"/usr/lib/python${_BASEVER}/Tools/{i18n,scripts} &&
+install -m755 $SOURCE_DIRECTORY/Tools/i18n/{msgfmt,pygettext}.py "$_PYDESTDIR"/usr/lib/python${_BASEVER}/Tools/i18n/ &&
+install -m755 $SOURCE_DIRECTORY/Tools/scripts/{README,*.py} "$_PYDESTDIR"/usr/lib/python${_BASEVER}/Tools/scripts/ &&
+
 prepare_install &&
-make altinstall &&
-
-# libixion (libreoffice-bin) need this
-ln -sf /usr/lib/pkgconfig/python-3.6.pc /usr/lib/pkgconfig/python3.pc &&
-
-# Till Python 3 based apps catch up we need a symlink from python3.3 to python3
-ln -sf /usr/bin/python3.`lvu version python | cut -f2 -d.` /usr/bin/python3 &&
-
-if [[ $SYS_PYTHON == "y" ]]
-then
-    ln -sf /usr/bin/python3 /usr/bin/python
-fi
-
-# Some apps look for /usr/bin/python3-config
-ln -sf /usr/bin/python3.`lvu version python | cut -f2 -d.`m-config /usr/bin/python3-config
+find $_PYDESTDIR/usr/bin &&
+cp -rfv --remove-destination "$_PYDESTDIR"/* /
