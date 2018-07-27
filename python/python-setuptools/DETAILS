@@ -1,4 +1,4 @@
-          MODULE=setuptools-3
+          MODULE=python-setuptools
          VERSION=28.8.0
           SOURCE=setuptools-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/setuptools-$VERSION
@@ -7,6 +7,8 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/setuptools-$VERSION
         WEB_SITE=http://packages.python.org/distribute/
          ENTERED=20071221
          UPDATED=20171221
+            TYPE=python3
+        REPLACES=setuptools-3
            SHORT="A simplified packaging system for Python 3.x"
 
 cat << EOF
