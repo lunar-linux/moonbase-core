@@ -1,0 +1,2 @@
+default_pre_build &&
+python3 bootstrap.py
