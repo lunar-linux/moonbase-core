@@ -1,0 +1,2 @@
+depends python
+depends re2c
