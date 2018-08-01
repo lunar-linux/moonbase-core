@@ -1,0 +1,7 @@
+default_pre_build &&
+
+sedit 's|{INSTALL} -m 555|{INSTALL} -m 755|' Makefile.pre.in &&
+
+# Ensure that we link against system libraries
+rm -rf Modules/{expat,zlib} &&
+rm -rf Modules/_ctypes/{darwin,libffi}*
