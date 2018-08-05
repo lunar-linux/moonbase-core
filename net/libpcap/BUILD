@@ -1,4 +1,4 @@
-CFLAGS="$CFLAGS -I$SOURCE_DIRECTORY/include $(pkg-config libnl-genl-3.0 --cflags)" &&
+CFLAGS="$CFLAGS -I$SOURCE_DIRECTORY/include $(pkg-config libnl-genl-3.0 --cflags)"
 
 default_build &&
 
