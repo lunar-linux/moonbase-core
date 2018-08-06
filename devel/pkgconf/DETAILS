@@ -5,6 +5,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE
      SOURCE_URL=https://git.dereferenced.org/pkgconf/pkgconf/archive/
       SOURCE_VFY=sha256:5b95c2fb7ddf3d34611af60cdd46fc16e39ebfd6369837d60b1da6b720d13d49
         WEB_SITE=https://git.dereferenced.org/pkgconf/pkgconf/
+        REPLACES=pkgconfig
          ENTERED=20180619
          UPDATED=20180730
            SHORT="Package compiler and linker metadata toolkit"
