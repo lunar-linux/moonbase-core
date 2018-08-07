@@ -1,5 +1,5 @@
 depends readline
-depends %PKGCONF
+depends pkgconf
 depends libaio
 
 # optional circular depend with systemd->cryptsetup
