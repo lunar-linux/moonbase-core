@@ -1,0 +1,27 @@
+          MODULE=git
+         VERSION=2.18.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+         SOURCE2=$MODULE-manpages-$VERSION.tar.xz
+      SOURCE_URL=http://www.kernel.org/pub/software/scm/git/
+     SOURCE2_URL=http://www.kernel.org/pub/software/scm/git/
+      SOURCE_VFY=sha256:8b40be383a603147ae29337136c00d1c634bdfdc169a30924a024596a7e30e92
+     SOURCE2_VFY=sha256:9ae3be95e63379597164c79c9018e84b7ef6964da923e5689dbc307693266096
+        WEB_SITE=http://git-scm.com
+         ENTERED=20050728
+         UPDATED=20180622
+           SHORT="Fast version control system"
+
+cat << EOF
+Git is a popular version control system designed to handle very large projects
+with speed and efficiency; it is used mainly for various open source projects,
+most notably the Linux kernel.
+
+Git falls in the category of distributed source code management tools, similar
+to e.g. GNU Arch or Monotone (or BitKeeper in the proprietary world). Every
+Git working directory is a full-fledged repository with full revision tracking
+capabilities, not dependent on network access or a central server.
+
+Git is an Open Source project covered by the GNU General Public License v2. It
+was originally written by Linus Torvalds and is currently maintained by
+Junio C Hamano.
+EOF
