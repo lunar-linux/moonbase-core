@@ -22,3 +22,4 @@ optional_depends polkit        "-Dpolkit=true"                        "-Dpolkit=
 optional_depends xz            "-Dxz=true"                            "-Dxz=false"            "for xz compression support"          y
 optional_depends lz4           "-Dlz4=true"                           "-Dlz4=false"           "for lz4 compression support"         n
 optional_depends quota         "-Dquotacheck=true"                    "-Dquotacheck=false"    "for quota support"                   y
+optional_depends docbook-xsl   "-Dman=true"                           "-Dman=false"           "for man-pages"                       n
