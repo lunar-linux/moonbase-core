@@ -5,7 +5,9 @@ fi &&
 # build shared lib first so the app part will
 # not complain about the missing static lib
 make -f Makefile-libbz2_so PREFIX=/usr &&
-make PREFIX=/usr &&
+# HACK - bzip2 seems to depend on bzip2 already being installed
+ln -s libbz2.so.1.0 libbz2.so &&
+make PREFIX=/usr LD_LIBRARY_PATH=${LD_LIBRARY_PATH:.} &&
 
 prepare_install &&
 make PREFIX=/usr install &&
