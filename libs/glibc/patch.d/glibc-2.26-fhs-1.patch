@@ -9,7 +9,7 @@ Description:             This patch removes references to /var/db directory whic
 
 --- a/Makeconfig	2012-12-25 04:02:13.000000000 +0100
 +++ b/Makeconfig	2013-02-11 01:32:32.500667439 +0100
-@@ -250,7 +250,7 @@
+@@ -245,7 +245,7 @@
  
  # Directory for the database files and Makefile for nss_db.
  ifndef vardbdir
@@ -20,7 +20,7 @@ Description:             This patch removes references to /var/db directory whic
  
 --- a/nscd/nscd.h	2012-12-25 04:02:13.000000000 +0100
 +++ b/nscd/nscd.h	2013-02-11 01:32:32.500667439 +0100
-@@ -112,11 +112,11 @@
+@@ -161,11 +161,11 @@
  
  
  /* Paths of the file for the persistent storage.  */
