@@ -16,7 +16,4 @@ if  !  ldd  /usr/bin/bzip2  >  /dev/null;  then
   lin  -c  bzip2
 fi &&
 
-default_pre_build &&
-patch_it $SOURCE2 1 &&
-patch_it $SOURCE3 1 &&
-patch_it $SOURCE4 1
+default_pre_build

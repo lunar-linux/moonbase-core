@@ -3,7 +3,7 @@
 export OPTS+=" --enable-debug=minimum \
                --disable-static \
                --enable-shared \
-               --disable-fam" &&
+               --disable-fam"
 
 # Fix SUN-JDK segfault: https://bugzilla.gnome.org/show_bug.cgi?id=755609
 LDFLAGS+=" -Wl,-z,nodelete" &&
