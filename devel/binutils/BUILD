@@ -2,12 +2,7 @@
 mkdir -p build-binutils &&
 cd build-binutils &&
 
-CFLAGS+=" -fPIC" &&
-
-# Enable 64bit bfd for x86
-if [[ "$(arch)" == "i686" ]]; then
-  OPTS+=" --enable-64-bit-bfd"
-fi &&
+CFLAGS+=" -fPIC"
 
 ../configure --prefix=/usr    \
              --disable-gdb    \
@@ -17,14 +12,19 @@ fi &&
              --enable-gold    \
              --enable-plugins \
              --enable-install-libiberty \
-             $OPTS           &&
+             --with-system-zlib \
+             $OPTS &&
 
+make configure-host &&
 make tooldir=/usr &&
+
 prepare_install &&
+
 make tooldir=/usr install &&
-make tooldir=/usr install-info &&
-mkdir -p $DOCUMENT_DIRECTORY/binutils &&
-cp -p ../binutils/NEWS ../binutils/ChangeLog $DOCUMENT_DIRECTORY/binutils &&
+
+#make tooldir=/usr install-info &&
+#mkdir -p $DOCUMENT_DIRECTORY/binutils &&
+#cp -p ../binutils/NEWS ../binutils/ChangeLog $DOCUMENT_DIRECTORY/binutils &&
 
 # For some reason installwatch fail to pick up the ld hardlink, touching it solves that issue
 if [ -e /usr/bin/ld ]; then
@@ -32,7 +32,8 @@ if [ -e /usr/bin/ld ]; then
 fi &&
 
 # Remove unwanted files
-rm /usr/share/man/man1/{dlltool,nlmconv,windres,windmc}* &&
+# nlmconv
+rm /usr/share/man/man1/{dlltool,windres,windmc}*
 
 # No shared linking to these files outside binutils
 rm /usr/lib/lib{bfd,opcodes}.so &&
