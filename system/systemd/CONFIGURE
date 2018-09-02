@@ -8,9 +8,7 @@ if [ -z "$NSCHEME" ] && ip link | egrep -q '^[0-9]*: (eth|wlan|ath|ra|usb)[0-9]+
   mquery NEW_NAME_SCHEME "Enable new naming scheme for network interfaces (RECOMMENDED)?" n
 fi
 
-mquery IM_AN_IDIOT "Enable SysV compatibility? (WARNING: UNLESS YOU KNOW WHAT YOU ARE DOING; SAY NO! IT MAY CRIPPLE YOUR SYSTEM)" n "--with-sysvinit-path=/etc/init.d --with-sysvrcnd-path=/etc" "--with-sysvinit-path= --with-sysvrcnd-path="
-
-mquery RESOLVED  "Build systemd's resolve-daemon (manages /etc/resolv.conf)"  y "--enable-resolved"  "--disable-resolved"
-mquery TIMESYNCD "Build systemd's timesync-daemon (systemd's ntpd)"           y "--enable-timesyncd" "--disable-timesyncd"
-mquery BACKLIGHT "Use systemd's backlight tools (sets backlight on startup)"  y "--enable-backlight" "--disable-backlight"
-mquery NOKILLPROC "Allow user background processes after logout?"             y "--without-kill-user-processes" ""
+mquery RESOLVE  "Build systemd's resolve-daemon (manages /etc/resolv.conf)"  y "-Dresolve=true"  "-Dresolve=false"
+mquery TIMESYNCD "Build systemd's timesync-daemon (systemd's ntpd)"           y "-Dtimesyncd=true" "-Dtimesyncd=false"
+mquery BACKLIGHT "Use systemd's backlight tools (sets backlight on startup)"  y "-Dbacklight=true" "-Dbacklight=false"
+mquery NOKILLPROC "Allow user background processes after logout?"             y "-Ddefault-kill-user-processes=false" "-Ddefault-kill-user-processes=true"
