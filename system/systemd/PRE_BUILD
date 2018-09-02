@@ -34,25 +34,4 @@ if mountpoint -q /usr && ! module_installed dracut; then
   fi
 fi &&
 
-default_pre_build &&
-
-# Fixes issues:
-# - cryptsetup: fix infinite timeout (#6486)
-# - process-util: add getpid_cached() as a caching wrapper for getpid()
-# - tree-wide: make use of getpid_cached() wherever we can
-# - call chase_symlinks without the /sysroot prefix (#6411)
-# - shared: Add a linker script so that all functions are tagget @SD_SHARED instead of @Base (#6669)
-patch_it $SOURCE2 1 &&
-
-# Glibc 2.27 (memfd_create) fix
-patch_it $SOURCE3 1 &&
-
-# systemd guys wrongly assume that on every linux
-# installation is a group called "lock" this isn't
-# the case in lunar, so we switch it to root.
-sedit "s:0775 root lock:0775 root root:" tmpfiles.d/legacy.conf &&
-
-# fix version liblz4 version check
-sedit 's:125:1.2.5:' configure.ac &&
-
-./autogen.sh
+default_pre_build

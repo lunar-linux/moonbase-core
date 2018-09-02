@@ -1,0 +1,24 @@
+diff -Naur systemd-239.orig/rules/50-udev-default.rules.in systemd-239/rules/50-udev-default.rules.in
+--- systemd-239.orig/rules/50-udev-default.rules.in	2018-06-22 13:11:49.000000000 +0200
++++ systemd-239/rules/50-udev-default.rules.in	2018-08-07 12:34:29.253674225 +0200
+@@ -22,7 +22,7 @@
+ SUBSYSTEM=="tty", KERNEL=="ttysclp[0-9]*", GROUP="tty", MODE="0620"
+ SUBSYSTEM=="tty", KERNEL=="3270/tty[0-9]*", GROUP="tty", MODE="0620"
+ SUBSYSTEM=="vc", KERNEL=="vcs*|vcsa*", GROUP="tty"
+-KERNEL=="tty[A-Z]*[0-9]|ttymxc[0-9]*|pppox[0-9]*|ircomm[0-9]*|noz[0-9]*|rfcomm[0-9]*", GROUP="dialout"
++KERNEL=="tty[A-Z]*[0-9]|ttymxc[0-9]*|pppox[0-9]*|ircomm[0-9]*|noz[0-9]*|rfcomm[0-9]*", GROUP="uucp"
+ 
+ SUBSYSTEM=="mem", KERNEL=="mem|kmem|port", GROUP="kmem", MODE="0640"
+ 
+diff -Naur systemd-239.orig/sysusers.d/basic.conf.in systemd-239/sysusers.d/basic.conf.in
+--- systemd-239.orig/sysusers.d/basic.conf.in	2018-06-22 13:11:49.000000000 +0200
++++ systemd-239/sysusers.d/basic.conf.in	2018-08-07 12:34:57.714012087 +0200
+@@ -25,7 +25,7 @@
+ # Hardware access groups
+ g audio   -     -            -
+ g cdrom   -     -            -
+-g dialout -     -            -
++g uucp -     -            -
+ g disk    -     -            -
+ g input   -     -            -
+ g kvm     -     -            -

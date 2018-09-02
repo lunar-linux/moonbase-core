@@ -1,17 +1,11 @@
           MODULE=systemd
-         VERSION=234
+         VERSION=239
           SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=systemd-234-various-fixes.patch
-         SOURCE3=systemd-234-glibc-2.27-memfd_create-fix.patch
  SOURCE_URL_FULL=https://github.com/systemd/systemd/archive/v$VERSION.tar.gz
-     SOURCE2_URL=$PATCH_URL
-     SOURCE3_URL=$PATCH_URL
-      SOURCE_VFY=sha256:da3e69d10aa1c983d33833372ad4929037b411ac421fb085c8cee79ae1d80b6a
-     SOURCE2_VFY=sha256:67bd9725e6efb3d695a53069db4765e54a1535a9f17d8d565eb7afed3ff61825
-     SOURCE3_VFY=sha256:a1e54a9a7685db691145c4c83e7ed978add3ef7f94c56e4a0b3c539d460c379b
+      SOURCE_VFY=sha256:8a11b1b07d620f4c06a16e95bba4dd2a97e90efdf2a5ba47ed0a935085787a14
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20170903
+         UPDATED=20180809
            SHORT="A system and program management daemon"
 
 cat << EOF
