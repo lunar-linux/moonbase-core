@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:6640d76b043bc658139c8903e293d5978309bf0f408107146505eca701e67cf6
         WEB_SITE=http://www.gnu.org/software/m4
          ENTERED=20010922
-         UPDATED=20170101
+         UPDATED=20180905
            SHORT="GNU m4 macro processor"
 
 cat << EOF
