@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:ded4c9f73731cd48fec3b6bdaccce896473b6d8e337e9612e16cf1431bb1169d
         WEB_SITE=http://www.gnu.org/software/$MODULE
          ENTERED=20010922
-         UPDATED=20151229
+         UPDATED=20180905
            SHORT="Utilities for locating files"
 
 cat << EOF
