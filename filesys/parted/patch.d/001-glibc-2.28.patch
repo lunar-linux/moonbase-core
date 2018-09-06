@@ -1,0 +1,11 @@
+diff -C 2 -r parted-3.2.orig/include/parted/parted.h parted-3.2/include/parted/parted.h
+*** parted-3.2.orig/include/parted/parted.h	2014-07-29 12:04:41.000000000 +0900
+--- parted-3.2/include/parted/parted.h	2018-09-06 14:51:54.274339830 +0900
+***************
+*** 43,46 ****
+--- 43,47 ----
+  #include <stdlib.h>
+  #include <string.h>
++ #include <sys/sysmacros.h>
+  
+  extern const char *ped_get_version ()
