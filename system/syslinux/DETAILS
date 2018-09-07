@@ -6,7 +6,7 @@
       SOURCE_VFY=sha1:1bea76b97b4e32a017dd4168e819934b7c6592cc
         WEB_SITE=http://syslinux.zytor.com
          ENTERED=20010922
-         UPDATED=20141025
+         UPDATED=20180906
            SHORT="bootloader for Linux that works on FAT and ISO9660 filesystems"
 PSAFE=no
 cat << EOF
