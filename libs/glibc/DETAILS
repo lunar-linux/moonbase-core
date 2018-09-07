@@ -1,16 +1,18 @@
           MODULE=glibc
-         VERSION=2.28
+         VERSION=2.27
            MAJOR=${VERSION::4}
           SOURCE=$MODULE-$VERSION.tar.xz
+         SOURCE2=glibc-2.26-fhs-1.patch
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/glibc
-      SOURCE_VFY=sha256:b1900051afad76f7a4f73e71413df4826dce085ef8ddb785a945b66d7d513082
+     SOURCE2_URL=$PATCH_URL
+     SOURCE2_VFY=sha256:643552db030e2f2d7ffde4f558e0f5f83d3fabf34a2e0e56ebdb49750ac27b0d
         WEB_SITE=http://www.gnu.org/software/libc
          ENTERED=20010922
-         UPDATED=20180802
+         UPDATED=20180202
            SHORT="C library for use with GNU/Hurd and GNU/Linux"
-#           PSAFE=no
+           PSAFE=no
 
 cat << EOF
 glibc - Library for use with GNU/Hurd and GNU/Linux.
