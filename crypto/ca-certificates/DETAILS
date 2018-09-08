@@ -6,7 +6,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}
       SOURCE_VFY=sha256:7af6f5bfc619fd29cbf0258c1d95107c38ce840ad6274e343e1e0d971fc72b51
         WEB_SITE=http://packages.qa.debian.org/c/ca-certificates.html
          ENTERED=20100405
-         UPDATED=20180822
+         UPDATED=20180908
            SHORT="Common CA certificates"
 
 cat << EOF
