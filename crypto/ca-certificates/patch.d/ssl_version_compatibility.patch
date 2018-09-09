@@ -1,0 +1,26 @@
+diff -Naur ca-certificates.orig/sbin/update-ca-certificates ca-certificates/sbin/update-ca-certificates
+--- ca-certificates.orig/sbin/update-ca-certificates	2018-04-10 01:43:49.000000000 +0200
++++ ca-certificates/sbin/update-ca-certificates	2018-09-08 18:01:03.544853802 +0200
+@@ -171,12 +171,20 @@
+ 
+ if [ "$ADDED_CNT" -gt 0 ] || [ "$REMOVED_CNT" -gt 0 ]
+ then
++  # Added support to handle older openssl and libressl
+   # only run if set of files has changed
++  if type c_rehash &> /dev/null; then
++    SSLCMD="c_rehash"
++  elif openssl version | grep -q '^OpenSSL'; then
++    SSLCMD="openssl rehash"
++  else # Assume libressl
++    SSLCMD="openssl certhash"
++  fi
+   if [ "$verbose" = 0 ]
+   then
+-    openssl rehash . > /dev/null
++    $SSLCMD . > /dev/null
+   else
+-    openssl rehash .
++    $SSLCMD .
+   fi
+ fi
+ 
