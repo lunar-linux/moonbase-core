@@ -8,7 +8,7 @@
      SOURCE2_VFY=sha256:b11f836f4abcc746ab76109728b1fb3e131a1fe0d3c2adfa640d99b02ff8a5a4
         WEB_SITE=http://www.bzip.org
          ENTERED=20020218
-         UPDATED=20180208
+         UPDATED=20180913
            SHORT="High-quality data compressor"
 
 cat << EOF
