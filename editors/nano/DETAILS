@@ -8,7 +8,7 @@
      SOURCE2_VFY=sha256:3dfd4130f2eadf485d0f7b5f6ccbfd344aa295664bdbbc55132375169db09b06
         WEB_SITE=http://www.nano-editor.org
          ENTERED=20010922
-         UPDATED=20180909
+         UPDATED=20180914
            SHORT="Superior clone of the pico text editor"
 
 cat << EOF
