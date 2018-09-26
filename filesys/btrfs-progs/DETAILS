@@ -7,6 +7,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
         WEB_SITE=http://btrfs.wiki.kernel.org/index.php/Main_Page
          ENTERED=20090819
          UPDATED=20180810
+   DESTDIR_BUILD=n
            SHORT="btrfs userspace tools"
 
 cat <<EOF

@@ -9,6 +9,7 @@
         WEB_SITE=http://kbd-project.org
          ENTERED=20040217
          UPDATED=20170116
+   DESTDIR_BUILD=n
            SHORT="kbd allows you to configure and manipulate Linux consoles"
 
 cat << EOF

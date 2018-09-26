@@ -10,6 +10,7 @@
         WEB_SITE=http://personal.riverusers.com/~thegrendel/software.html
          ENTERED=20020313
          UPDATED=20051026
+   DESTDIR_BUILD=n
            SHORT="wordlist"
 cat << EOF
 yawl, The YAWL LIST (updated Y2K version) is a combination of the

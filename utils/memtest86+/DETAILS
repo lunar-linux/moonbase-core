@@ -6,6 +6,7 @@
         WEB_SITE=http://www.memtest.org
          ENTERED=20041110
          UPDATED=20110126
+   DESTDIR_BUILD=n
            SHORT="A bootable application to test your system's memory"
 
 cat << EOF

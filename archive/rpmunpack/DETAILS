@@ -13,6 +13,7 @@
          WEB_SITE=unknown
           ENTERED=20011017
           UPDATED=20100417
+    DESTDIR_BUILD=n
             SHORT="Program to extract an archive from a RPM file"
 
 cat << EOF

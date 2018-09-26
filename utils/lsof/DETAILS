@@ -10,6 +10,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}_${VERSION}
         WEB_SITE=ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/README
          ENTERED=20011005
          UPDATED=20180329
+   DESTDIR_BUILD=n
            SHORT="Lists open files for running processes"
 
 cat << EOF

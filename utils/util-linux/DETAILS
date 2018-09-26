@@ -6,6 +6,7 @@
         WEB_SITE=http://freecode.com/projects/util-linux
          ENTERED=20010922
          UPDATED=20180716
+   DESTDIR_BUILD=n
            SHORT="Essential utilities for any Linux box"
 
 cat << EOF

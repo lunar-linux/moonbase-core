@@ -9,6 +9,7 @@
      SOURCE2_VFY=sha256:62ca4fa09a7d5196803269fe98bcd29339d8a5b3e688e6dd04bc1b1112ee0536
          ENTERED=20021106
          UPDATED=20180712
+   DESTDIR_BUILD=n
            SHORT="Essential utilities for IP networks"
 
 cat << EOF

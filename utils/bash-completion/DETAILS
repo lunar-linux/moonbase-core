@@ -12,6 +12,7 @@
         WEB_SITE=http://github.com/scop/bash-completion/
          ENTERED=20120406
          UPDATED=20180318
+   DESTDIR_BUILD=n
            SHORT="Completion for the bash shell"
 
 cat << EOF

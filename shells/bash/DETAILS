@@ -8,6 +8,7 @@
         WEB_SITE=http://www.gnu.org/software/bash
          ENTERED=20010922
          UPDATED=20180131
+   DESTDIR_BUILD=n
            SHORT="A shell of the GNU operating system"
 
 cat << EOF

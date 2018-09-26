@@ -7,6 +7,7 @@
         WEB_SITE=http://www.gnu.org/software/ncurses/ncurses.html
          ENTERED=20010922
          UPDATED=20180130
+   DESTDIR_BUILD=n
            SHORT="Displays and updates text on text-only terminals"
            PSAFE=no
 

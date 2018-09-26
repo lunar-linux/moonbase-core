@@ -7,6 +7,7 @@
         WEB_SITE=http://www.gnu.org/software/gawk/gawk.html
          ENTERED=20010922
          UPDATED=20180226
+   DESTDIR_BUILD=n
            SHORT="A free version of awk"
 
 cat << EOF

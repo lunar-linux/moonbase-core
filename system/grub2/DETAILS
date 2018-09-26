@@ -9,6 +9,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/grub-$VERSION
         WEB_SITE=http://www.gnu.org/software/grub
          ENTERED=20100112
          UPDATED=20180315
+   DESTDIR_BUILD=n
       MAINTAINER=dagbrown@lunar-linux.org
            SHORT="GNU GRUB boot loader"
 

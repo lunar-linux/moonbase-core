@@ -7,6 +7,7 @@
       MAINTAINER=ratler@lunar-linux.org
          ENTERED=20010922
          UPDATED=20171022
+   DESTDIR_BUILD=n
            SHORT="Contains the shadow password file utilities"
 PSAFE=no
 

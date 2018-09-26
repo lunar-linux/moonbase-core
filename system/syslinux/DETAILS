@@ -7,6 +7,7 @@
         WEB_SITE=http://syslinux.zytor.com
          ENTERED=20010922
          UPDATED=20180906
+   DESTDIR_BUILD=n
            SHORT="bootloader for Linux that works on FAT and ISO9660 filesystems"
 PSAFE=no
 cat << EOF

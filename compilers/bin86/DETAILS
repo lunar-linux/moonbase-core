@@ -8,6 +8,7 @@
         WEB_SITE=http://www.debath.co.uk
          ENTERED=20010922
          UPDATED=20140511
+  DESDTDIR_BUILD=n
            SHORT="a86 and ld86 provide a complete 8086/80386 assembler and loader"
 
 cat << EOF

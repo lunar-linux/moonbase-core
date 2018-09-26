@@ -8,6 +8,7 @@
         WEB_SITE=http://gcc.gnu.org/
          ENTERED=20020628
          UPDATED=20180730
+   DESTDIR_BUILD=n
            SHORT="GNU compiler collection"
 
 cat << EOF

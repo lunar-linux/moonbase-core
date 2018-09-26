@@ -6,6 +6,7 @@
         WEB_SITE=http://sourceforge.net/projects/gnu-efi/
          ENTERED=20150705
          UPDATED=20151008
+   DESTDIR_BUILD=n
          SHORT="Library for building EFI applications"
          PSAFE=no
 

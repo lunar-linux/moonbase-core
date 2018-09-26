@@ -6,6 +6,7 @@
         WEB_SITE=http://github.com/rhinstaller/efibootmgr/
          ENTERED=20160723
          UPDATED=20180411
+   DESTDIR_BUILD=n
            SHORT="Tool to modify UEFI Firmware Boot Manager Variables"
 
 cat << EOF

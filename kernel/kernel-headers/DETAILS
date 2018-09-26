@@ -7,6 +7,7 @@
           WEB_SITE=http://www.lunar-linux.org/
            ENTERED=20040226
            UPDATED=20180719
+     DESTDIR_BUILD=n
             SHORT="Sanitized kernel headers for userspace"
 
 cat << EOF

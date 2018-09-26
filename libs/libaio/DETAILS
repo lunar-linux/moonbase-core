@@ -6,6 +6,7 @@
         WEB_SITE=http://www.kernel.org/pub/linux/kernel/people/andrea/libaio/
          ENTERED=20090611
          UPDATED=20180502
+   DESTDIR_BUILD=n
            SHORT="The Linux-native asynchronous I/O library"
 
 cat << EOF

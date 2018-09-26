@@ -6,6 +6,7 @@
         WEB_SITE=http://wipe.sf.net/
          ENTERED=20051222
          UPDATED=20100622
+   DESTDIR_BUILD=n
            SHORT="more or less securely wipe data from files or devices"
 cat << EOF
 Wipe is a secure file wiping utility.

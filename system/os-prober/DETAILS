@@ -6,6 +6,7 @@
         WEB_SITE=http://kitenet.net/~joey/code/os-prober/
          ENTERED=20110601
          UPDATED=20170814
+   DESTDIR_BUILD=n
            SHORT="An utility to detect other OSes on a set of drives"
 
 cat << EOF

@@ -6,6 +6,7 @@
         WEB_SITE=http://home.san.rr.com/johninsd/pub/linux/lilo
          ENTERED=20010922
          UPDATED=20151123
+   DESTDIR_BUILD=n
            SHORT="Boot loader for Linux/x86 and other PC operating systems"
          GARBAGE=off
 

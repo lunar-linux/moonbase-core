@@ -6,6 +6,7 @@
         WEB_SITE=http://martine.github.io/ninja/
          ENTERED=20141002
          UPDATED=20170911
+   DESTDIR_BUILD=n
            SHORT="A small build system with a focus on speed"
 
 cat << EOF

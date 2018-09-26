@@ -8,6 +8,7 @@
         WEB_SITE=http://mfj.ucw.cz/pciutils.html
          ENTERED=20020125
          UPDATED=20171202
+   DESTDIR_BUILD=n
            PSAFE=no
            SHORT="The setpci and lspci utils"
 

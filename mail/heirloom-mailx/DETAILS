@@ -12,6 +12,7 @@
         WEB_SITE=http://heirloom.sourceforge.net/mailx.html
          ENTERED=20070401
          UPDATED=20160326
+   DESTDIR_BUILD=n
            SHORT="A plain command line mail program"
 PSAFE=no
 

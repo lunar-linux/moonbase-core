@@ -3,6 +3,7 @@
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20110612
          UPDATED=20110512
+   DESTDIR_BUILD=n
            SHORT="sysvinit replacement links for systemd"
 
 cat << EOF

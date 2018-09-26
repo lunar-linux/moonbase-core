@@ -9,6 +9,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/bash-$VERSION
         WEB_SITE=http://tiswww.case.edu/php/chet/bash_static/bashtop.html
          ENTERED=20020615
          UPDATED=20180131
+   DESTDIR_BUILD=n
            SHORT="static bash build for rescue purposes"
 
 cat << EOF
