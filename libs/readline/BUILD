@@ -22,8 +22,8 @@ set_module_config OUR_OLD_READLINE_VVV "$OUR_OLD_READLINE_VVV" &&
 
 make SHLIB_LIBS=-lncurses &&
 prepare_install &&
-make install &&
+make install DESTDIR=${DESTDIR:-} &&
 
 if [ ! -e /etc/inputrc ]; then
-  install $SCRIPT_DIRECTORY/inputrc /etc/
+  install $SCRIPT_DIRECTORY/inputrc ${DESTDIR:-}/etc/
 fi
