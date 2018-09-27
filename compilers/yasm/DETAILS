@@ -6,7 +6,6 @@
         WEB_SITE=http://www.tortall.net/projects/yasm
          ENTERED=20051007
          UPDATED=20140813
-   DESTDIR_BUILD=n
            SHORT="A complete rewrite of the NASM assembler"
 
 cat << EOF

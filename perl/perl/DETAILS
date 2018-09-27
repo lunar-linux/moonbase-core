@@ -8,7 +8,6 @@
         WEB_SITE=http://www.perl.org
          ENTERED=20010922
          UPDATED=20180625
-   DESTDIR_BUILD=no
            SHORT="A highly capable, feature-rich programming language"
 
 cat << EOF

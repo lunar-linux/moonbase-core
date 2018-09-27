@@ -7,7 +7,6 @@
         WEB_SITE=http://make.paulandlesley.org
          ENTERED=20010922
          UPDATED=20160612
-   DESTDIR_BUILD=n
            SHORT="make generates executables and other non-source programs"
 
 cat << EOF

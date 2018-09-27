@@ -7,7 +7,6 @@
         WEB_SITE=http://oss.sgi.com/projects/xfs
          ENTERED=20020531
          UPDATED=20130619
-   DESTDIR_BUILD=n
            SHORT="Extended Attribute (EA) support"
            PSAFE=no
 

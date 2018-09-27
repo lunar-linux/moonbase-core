@@ -21,7 +21,6 @@
        MAINTAINER=sofar@lunar-linux.org
           ENTERED=20010922
           UPDATED=20180518
-    DESTDIR_BUILD=n
             SHORT="Improved version of vi"
 
 cat << EOF

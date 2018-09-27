@@ -6,7 +6,6 @@
         WEB_SITE=http://oss.sgi.com/projects/xfs
          ENTERED=20020110
          UPDATED=20180825
-   DESTDIR_BUILD=n
            SHORT="Required utilities for the XFS file system"
            PSAFE=no
 

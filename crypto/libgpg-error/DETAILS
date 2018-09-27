@@ -6,7 +6,6 @@
         WEB_SITE=http://www.gnupg.org
          ENTERED=20020212
          UPDATED=20180508
-   DESTDIR_BUILD=n
            SHORT="Defines common error values for all GnuPG components"
 
 cat << EOF

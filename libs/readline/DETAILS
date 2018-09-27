@@ -13,7 +13,6 @@
         WEB_SITE=http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
          ENTERED=20010922
          UPDATED=20110301
-   DESTDIR_BUILD=n
            SHORT="Lets users edit command lines as they are typed in"
 
 cat << EOF

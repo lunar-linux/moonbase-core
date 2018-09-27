@@ -6,7 +6,6 @@
         WEB_SITE=http://nongnu.askapache.com/lzip/manual/lzip_manual.html
          ENTERED=20091122
          UPDATED=20180220
-   DESTDIR_BUILD=n
            SHORT="lossless data compressor"
 
 cat << EOF

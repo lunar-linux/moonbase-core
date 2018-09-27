@@ -6,7 +6,6 @@
         WEB_SITE=http://www.linuxfoundation.org/collaborate/workgroups/networking/$MODULE/
          ENTERED=20021106
          UPDATED=20180814
-   DESTDIR_BUILD=n
            SHORT="Professional tools to control networking in Linux kernels"
 
 cat << EOF
