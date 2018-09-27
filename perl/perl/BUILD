@@ -22,6 +22,4 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$SOURCE_DIRECTORY" &&
 ldconfig &&
 
 prepare_install &&
-make install &&
-
-strip --strip-unneeded $(which perl)
+make install DESTDIR=${DESTDIR:-}
