@@ -6,7 +6,6 @@
         WEB_SITE=http://foremost.sourceforge.net/
          ENTERED=20060207
          UPDATED=20101106
-   DESTDIR_BUILD=n
            SHORT="data carving / recovery tool"
 cat << EOF
 Foremost is a console program to recover files based on their headers,
