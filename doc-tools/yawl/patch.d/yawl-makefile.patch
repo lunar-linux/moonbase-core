@@ -1,0 +1,69 @@
+*** ./Makefile.orig	2018-09-28 16:47:00.003630018 +0900
+--- ./Makefile	2018-09-28 16:49:31.639564519 +0900
+***************
+*** 13,23 ****
+  #+ remove '-mcpu=pentiumpro' below.
+  
+  anagram: anagram.c srch.h
+! 	gcc -O3 -fomit-frame-pointer -v -Wall -mcpu=pentiumpro -o anagram anagram.c
+  	strip anagram
+  
+  multi: multi.c srch.h
+! 	gcc -O3 -fomit-frame-pointer -v -Wall -mcpu=pentiumpro -o multi multi.c
+  	strip multi
+  
+  b_msg:
+--- 13,23 ----
+  #+ remove '-mcpu=pentiumpro' below.
+  
+  anagram: anagram.c srch.h
+! 	gcc SeDcFlAgS -Wall -o anagram anagram.c
+  	strip anagram
+  
+  multi: multi.c srch.h
+! 	gcc SeDcFlAgS -Wall -o multi multi.c
+  	strip multi
+  
+  b_msg:
+***************
+*** 30,47 ****
+  # As root, of course.
+  
+  install_list:
+  	chmod 644 word.list
+! 	cp word.list /usr/share/dict
+! 	ln -s /usr/share/dict/word.list /usr/share/dict/word.lst
+  	@echo "word.list installed in /usr/share/dict and symlinked to word.lst."
+  
+  install_bins:
+  	chmod 755 anagram multi wstrings.sh
+! 	cp anagram multi wstrings.sh /usr/local/bin
+  
+  install_man:
+  	chmod 644 anagram.1 multi.1
+! 	cp anagram.1 multi.1 /usr/local/man/man1
+  
+  i_msg:
+  	@echo
+--- 30,50 ----
+  # As root, of course.
+  
+  install_list:
++ 	mkdir -p $(DESTDIR)/usr/share/dict
+  	chmod 644 word.list
+! 	cp word.list $(DESTDIR)/usr/share/dict
+! 	ln -s /usr/share/dict/word.list $(DESTDIR)/usr/share/dict/word.lst
+  	@echo "word.list installed in /usr/share/dict and symlinked to word.lst."
+  
+  install_bins:
++ 	mkdir -p $(DESTDIR)/usr/bin
+  	chmod 755 anagram multi wstrings.sh
+! 	cp anagram multi wstrings.sh $(DESTDIR)/usr/bin
+  
+  install_man:
++ 	mkdir -p $(DESTDIR)/usr/share/man/man1
+  	chmod 644 anagram.1 multi.1
+! 	cp anagram.1 multi.1 $(DESTDIR)/usr/share/man/man1
+  
+  i_msg:
+  	@echo
