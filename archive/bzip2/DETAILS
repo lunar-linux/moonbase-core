@@ -9,7 +9,6 @@
         WEB_SITE=http://www.bzip.org
          ENTERED=20020218
          UPDATED=20180208
-   DESTDIR_BUILD=n
            SHORT="High-quality data compressor"
 
 cat << EOF
