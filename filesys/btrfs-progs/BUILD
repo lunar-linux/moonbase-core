@@ -7,7 +7,7 @@ fi &&
 default_build &&
 
 # remove the static lib
-rm /usr/lib/libbtrfs.a &&
+rm $DESTDIR/usr/lib/libbtrfs.a &&
 
 # install bash completion
-install -Dm644 btrfs-completion /usr/share/bash-completion/completions/btrfs
+install -Dm644 btrfs-completion $DESTDIR/usr/share/bash-completion/completions/btrfs
