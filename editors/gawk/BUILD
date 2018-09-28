@@ -21,5 +21,5 @@ make install &&
 ln -sf /bin/gawk /bin/awk &&
 rm -f /bin/{,p}gawk-* &&
 
-mv /etc/profile.d/gawk.{sh,rc} &&
-rm -f /etc/profile.d/gawk.csh
+mv $DESTDIR/etc/profile.d/gawk.{sh,rc} &&
+rm -f $DESTDIR/etc/profile.d/gawk.csh
