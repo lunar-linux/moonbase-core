@@ -6,7 +6,6 @@
         WEB_SITE=http://mesonbuild.com/
          ENTERED=20160429
          UPDATED=20180826
-   DESTDIR_BUILD=n
            SHORT="The meson build system"
             TYPE=python3
 
