@@ -1,11 +1,11 @@
           MODULE=meson
-         VERSION=0.47.2
+         VERSION=0.48.0
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/mesonbuild/meson/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:69e251dc169e82e3d3235643c873167764d63020515d9ca837ea95ff021f2c83
+      SOURCE_VFY=sha256:9de95eff4577a9b2b258bdef7a544da3f7fedab94ac2eabc6bacfcd11ea4e07e
         WEB_SITE=http://mesonbuild.com/
          ENTERED=20160429
-         UPDATED=20180826
+         UPDATED=20180924
            SHORT="The meson build system"
             TYPE=python3
 
