@@ -1,0 +1,19 @@
+*** systemd-239/meson_options.txt.orig  2018-10-11 11:09:29.394008442 +0900
+--- systemd-239/meson_options.txt       2018-10-11 14:50:07.266162388 +0900
+***************
+*** 46,52 ****
+         description : 'path to debug shell binary')
+  option('debug-tty', type : 'string', value : '/dev/tty9',
+         description : 'specify the tty device for debug shell')
+! option('debug', type : 'array', choices : ['hashmap', 'mmap-cache'], value : [],
+         description : 'enable extra debugging')
+  option('memory-accounting-default', type : 'boolean',
+         description : 'enable MemoryAccounting= by default')
+--- 46,52 ----
+         description : 'path to debug shell binary')
+  option('debug-tty', type : 'string', value : '/dev/tty9',
+         description : 'specify the tty device for debug shell')
+! option('debug-extra', type : 'array', choices : ['hashmap', 'mmap-cache'], value : [],
+         description : 'enable extra debugging')
+  option('memory-accounting-default', type : 'boolean',
+         description : 'enable MemoryAccounting= by default')
