@@ -114,12 +114,15 @@
 
   export LD_LIBRARY_PATH=$INSTALL_ROOT/lib:$INSTALL_ROOT/usr/lib &&
 
-  # This removes the old glibc
-  prepare_install &&
+  invoke_installwatch &&
+
+
 
   ( cd $INSTALL_ROOT &&
 
-    lib/ld-linux.so /usr/bin/cp -a -r --remove-destination * / ) &&
+  # --remove-destination to avoid overwriting potentially mmap()'ed
+  # shared libraries
+  /lib/ld-lunar.so /usr/bin/cp -a -r --remove-destination * / ) &&
 
   # Now optionally perform debug symbol stripping only
   if [ "$STRIP" == "y" ] ; then
