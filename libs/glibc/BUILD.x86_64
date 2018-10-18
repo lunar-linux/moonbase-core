@@ -20,7 +20,7 @@ if [[ "$LDFLAGS" == *-s* ]]; then
 fi &&
 unset LDFLAGS &&
 
-INSTALL_ROOT=$SOURCE_DIRECTORY/glibcroot &&
+INSTALL_ROOT=$SOURCE_DIRECTORY/glibcbuild &&
 mkdir -p $INSTALL_ROOT &&
 cd $INSTALL_ROOT &&
 
@@ -103,14 +103,24 @@ if [ -f "$MVEC" ]; then
   sln /lib/libmvec-lunar.so $MVEC
 fi &&
 
-# clean hack to make sure gnu/stubs.h gets refreshed
-rm -f /usr/include/gnu/stubs.h &&
-
-# This removes the old glibc
-prepare_install &&
+INSTALL_ROOT=$SOURCE_DIRECTORY/glibcroot &&
+mkdir -p $INSTALL_ROOT &&
 
 # And now we install the new
-make install &&
+make install DESTDIR=$INSTALL_ROOT &&
+
+[ -d $INSTALL_ROOT/lib64 ] && mv $INSTALL_ROOT/lib64 $INSTALL_ROOT/lib &&
+[ -d $INSTALL_ROOT/usr/lib64 ] && mv $INSTALL_ROOT/usr/lib64 $INSTALL_ROOT/usr/lib &&
+
+export LD_LIBRARY_PATH=$INSTALL_ROOT/lib:$INSTALL_ROOT/usr/lib &&
+
+invoke_installwatch &&
+
+( cd $INSTALL_ROOT &&
+
+  # --remove-destination to avoid overwriting potentially mmap()'ed
+  # shared libraries
+  /lib/ld-lunar.so /usr/bin/cp -a -r --remove-destination * / ) &&
 
 # Now optionally perform debug symbol stripping only
 if [ "$STRIP" == "y" ] ; then
