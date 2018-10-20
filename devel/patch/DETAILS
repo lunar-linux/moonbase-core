@@ -6,7 +6,7 @@
       SOURCE_VFY=sha256:8cf86e00ad3aaa6d26aca30640e86b0e3e1f395ed99f189b06d4c9f74bc58a4e
         WEB_SITE=http://www.gnu.org/software/patch/patch.html
          ENTERED=20010922
-         UPDATED=20180212
+         UPDATED=20181019
            SHORT="Patch applies a patch to a file"
 
 cat << EOF
