@@ -15,12 +15,6 @@ sedit "s/-O3/-Os/" Makefile &&
 sedit "s/^CFLAG=/CFLAG=$CFLAGS /g" Makefile &&
 
 make &&
-mkdir _dest &&
-make MANDIR=/usr/share/man INSTALL_PREFIX=$(pwd)/_dest install &&
-if [ -d _dest/usr/lib64 ]
-then
-    mv _dest/usr/lib64 _dest/usr/lib
-fi &&
 prepare_install &&
-( cd _dest && cp -r * /) &&
+make MANDIR=/usr/share/man install &&
 cp $SOURCE_CACHE/$SOURCE2 /etc/ssl/certs/Makefile
