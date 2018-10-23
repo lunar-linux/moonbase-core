@@ -14,7 +14,6 @@
          ENTERED=20010922
          UPDATED=20180814
            PSAFE="no"
-   DESTDIR_BUILD=n
            SHORT="A library for providing encrypted transport layers"
 
 cat << EOF

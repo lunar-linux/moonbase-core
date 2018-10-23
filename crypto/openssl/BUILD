@@ -16,5 +16,5 @@ sedit "s/^CFLAG=/CFLAG=$CFLAGS /g" Makefile &&
 
 make &&
 prepare_install &&
-make MANDIR=/usr/share/man install &&
-cp $SOURCE_CACHE/$SOURCE2 /etc/ssl/certs/Makefile
+make MANDIR=/usr/share/man install INSTALL_PREFIX=${DESTDIR:-} &&
+cp $SOURCE_CACHE/$SOURCE2 ${DESTDIR:-}/etc/ssl/certs/Makefile
