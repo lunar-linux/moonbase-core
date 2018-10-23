@@ -7,7 +7,6 @@
         WEB_SITE=http://www.cse.unsw.edu.au/~neilb/source/mdadm
          ENTERED=20030212
          UPDATED=20170309
-   DESTDIR_BUILD=n
            SHORT="Software raid tools"
 
 cat << EOF

@@ -3,4 +3,4 @@ make CXFLAGS="$CFLAGS" UDEVDIR=/usr/lib/udev &&
 
 prepare_install &&
 
-make install
+make install DESTDIR=$DESTDIR
