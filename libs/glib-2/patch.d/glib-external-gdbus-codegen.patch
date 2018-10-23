@@ -1,6 +1,6 @@
 --- ./configure.ac.old	2013-04-16 00:22:24.000000000 +0300
 +++ ./configure.ac	2013-04-20 11:12:24.155259923 +0300
-@@ -3453,8 +3453,6 @@
+@@ -3480,8 +3480,6 @@
  gobject/tests/Makefile
  gthread/Makefile
  gio/Makefile
@@ -11,7 +11,7 @@
  gio/inotify/Makefile
 --- ./docs/reference/gio/Makefile.am.orig	2016-10-12 16:48:57.224594892 +0300
 +++ ./docs/reference/gio/Makefile.am		2016-10-12 16:52:02.298924980 +0300
-@@ -176,9 +176,6 @@
+@@ -211,9 +211,6 @@
  	glib-compile-resources.1	\
  	gsettings.1			\
  	gresource.1			\
@@ -34,7 +34,7 @@
  SUBDIRS += xdgmime
 --- ./gio/tests/Makefile.am.orig	2014-03-29 01:18:48.392622448 +0200
 +++ ./gio/tests/Makefile.am		2014-03-29 01:25:35.679728555 +0200
-@@ -449,7 +449,7 @@
+@@ -494,7 +494,7 @@
  
  BUILT_SOURCES += gdbus-test-codegen-generated.c gdbus-test-codegen-generated.h
  gdbus-test-codegen.o: gdbus-test-codegen-generated.h

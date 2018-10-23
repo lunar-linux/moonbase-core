@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:8a11b1b07d620f4c06a16e95bba4dd2a97e90efdf2a5ba47ed0a935085787a14
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20180809
+         UPDATED=20181011
    DESTDIR_BUILD=n
            SHORT="A system and program management daemon"
 

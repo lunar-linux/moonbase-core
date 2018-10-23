@@ -4,7 +4,7 @@ if in_depends $MODULE $(expand_alias %OSSL); then
 elif in_depends $MODULE gnutls; then
   OPTS+=" --with-ssl"
 else
-  OPTS+=" --without-ssl"
+    OPTS+=" --without-ssl"
 fi &&
 
 OPTS+=" --disable-debug"  &&

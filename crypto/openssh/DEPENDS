@@ -3,9 +3,9 @@ depends %OSSL
 depends coreutils
 depends psmisc
 
-optional_depends Linux-PAM \
-                 "--with-pam" \
-                 "--without-pam" \
+optional_depends "Linux-PAM"             \
+                 "--with-pam"            \
+                 "--without-pam"         \
                  "for Linux PAM support"
 
 optional_depends libedit \
