@@ -7,7 +7,6 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE$VERSION
         WEB_SITE=http://www.info-zip.org/UnZip.html
          ENTERED=20010922
          UPDATED=20180419
-   DESTDIR_BUILD=n
            SHORT="PKWARE compatible decompressor"
 
 cat << EOF

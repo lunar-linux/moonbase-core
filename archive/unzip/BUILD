@@ -6,5 +6,5 @@ prepare_install &&
 
 make install &&
 
-cp -af libunzip.s* /usr/lib &&
+cp -af libunzip.s* ${DESTDIR:-}/usr/lib &&
 gather_docs BUGS WHERE ToDo
