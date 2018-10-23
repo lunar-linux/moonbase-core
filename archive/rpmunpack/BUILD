@@ -4,11 +4,12 @@
   patch_it $SOURCE3 0 &&
   make                &&
   prepare_install     &&
-  install -m755 -s  rpmunpack  /usr/bin/  &&
+  mkdir -p ${DESTDIR:-}/usr/bin &&
+  install -m755 -s  rpmunpack  ${DESTDIR:-}/usr/bin/  &&
 
   if ! module_installed rpm && ! module_installed rpm-old ; then
     # rpm module provides /usr/bin/rpm2cpio
-    install -m755 rpm2cpio /usr/bin/
+    install -m755 rpm2cpio ${DESTDIR:-}/usr/bin/
   fi
 
 ) > $C_FIFO 2>&1
