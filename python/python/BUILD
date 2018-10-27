@@ -30,5 +30,4 @@ install -m755 $SOURCE_DIRECTORY/Tools/i18n/{msgfmt,pygettext}.py "$_PYDESTDIR"/u
 install -m755 $SOURCE_DIRECTORY/Tools/scripts/{README,*.py} "$_PYDESTDIR"/usr/lib/python${_BASEVER}/Tools/scripts/ &&
 
 prepare_install &&
-find $_PYDESTDIR/usr/bin &&
 cp -rfv --remove-destination "$_PYDESTDIR"/* /
