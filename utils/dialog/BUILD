@@ -1,5 +1,5 @@
 OPTS+=" --with-ncurses \
         --with-shared \
-        --enable-nls" &&
+        --enable-nls"
 
 default_build
