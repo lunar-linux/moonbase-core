@@ -1,4 +1,7 @@
 default_pre_build &&
 
 # Don't generate host keys during BUILD. They should not be tracked
-sedit '/^install:/s/ host-key / /' Makefile.in
+sedit '/^install:/s/ host-key / /' Makefile.in &&
+
+# don't allow root login by default
+sedit 's/#PermitRootLogin yes/PermitRootLogin no/' sshd_config
