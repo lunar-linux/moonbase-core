@@ -3,8 +3,8 @@
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=$MODULE-1.6e-manpaths-makewhatis.patch
          SOURCE3=$MODULE-1.6e-trim-dup-manpaths.patch
-   SOURCE_URL[0]=http://primates.ximian.com/~flucifredi/$MODULE
-   SOURCE_URL[1]=http://www.ibiblio.org/pub/Linux/apps/doctools/$MODULE
+   SOURCE_URL[0]=https://fossies.org/linux/misc/old/
+   SOURCE_URL[1]=http://www.ibiblio.org/pub/Linux/apps/doctools/
      SOURCE2_URL=$PATCH_URL
      SOURCE3_URL=$PATCH_URL
       SOURCE_VFY=sha1:ef9e1f36a1a536a31112d52c3f39340900b0d3cb
