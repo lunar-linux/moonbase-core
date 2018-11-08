@@ -1,4 +1,5 @@
 depends m4
 
-optional_depends bison  "" "" "parser generator"
-optional_depends indent "" "" "control of whitespace"
+optional_depends bison    "" "" "parser generator"
+optional_depends indent   "" "" "control of whitespace"
+optional_depends help2man "" "" "generate the man page"
