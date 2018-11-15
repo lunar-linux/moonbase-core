@@ -1,7 +1,7 @@
 prepare_install &&
 
 # / Requirements
-mkdir -p /{bin,boot,dev,etc,lib,media,mnt,opt,sbin,srv,tmp,usr,var} &&
+mkdir -p /{boot,dev,etc,media,mnt,opt,srv,tmp,usr,var,run} &&
 
 # / Specific Options
 mkdir -p /{home,root} &&
@@ -17,6 +17,11 @@ mkdir -p /lib/modules &&
 
 # /usr Requirements
 mkdir -p /usr/{bin,include,lib,local,sbin,share} &&
+
+# https://www.freedesktop.org/wiki/Software/systemd/TheCaseForTheUsrMerge/
+ln -sfT /usr/bin /bin &&
+ln -sfT /usr/lib /lib &&
+ln -sfT /usr/sbin /sbin &&
 
 # /usr Specific Options
 mkdir -p /usr/{games,src} &&
