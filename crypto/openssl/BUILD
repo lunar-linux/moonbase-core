@@ -4,7 +4,6 @@ WANT_VERSION= download_module wget &&
 ./config --prefix=/usr         \
          --openssldir=/etc/ssl \
          shared                \
-         no-ssl2               \
          no-ssl3               \
          no-ssl3-method        \
          $OPTS                &&

@@ -5,8 +5,7 @@
 download_module wget
 
 # Check to see if we're migrating from openssl to libressl
-if module_installed libressl
-then
-    lrm libressl
-    touch /var/state/lunar/migrating.from.libressl
+if module_installed libressl; then
+   lrm libressl
+   touch /var/state/lunar/migrating.from.libressl
 fi
