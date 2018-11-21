@@ -3,7 +3,7 @@ make &&
 prepare_install &&
 
 make destdir=/usr \
-     sbindir=/bin \
+     sbindir=/usr/bin \
      mandir=/usr/share/man \
      install &&
 
