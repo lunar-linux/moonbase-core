@@ -6,9 +6,11 @@ if [ -n "$(echo $VERSION | cut -d. -f3)" ] ; then
          SOURCE2=patch-$VERSION.xz
 fi
    SOURCE_URL[0]=$KERNEL_URL/pub/linux/kernel/v4.x
-   SOURCE_URL[1]=http://www.kernel.org/pub/linux/kernel/v4.x
+   SOURCE_URL[1]=https://www.kernel.org/pub/linux/kernel/v4.x
+    SOURCE_URL[2]=https://mirrors.ustc.edu.cn/kernel.org/linux/kernel/v4.x
   SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v4.x
-  SOURCE2_URL[1]=http://www.kernel.org/pub/linux/kernel/v4.x
+  SOURCE2_URL[1]=https://www.kernel.org/pub/linux/kernel/v4.x
+  SOURCE2_URL[2]=https://mirrors.ustc.edu.cn/kernel.org/linux/kernel/v4.x/
       SOURCE_VFY=sha256:0c68f5655528aed4f99dae71a5b259edc93239fa899e2df79c055275c21749a1
      SOURCE2_VFY=sha256:51603f6bd4549f97d99a8c8f7e898f6f2b53b2347cb37ed404bf210e2f83f81d
          WEB_SITE=http://www.kernel.org/
