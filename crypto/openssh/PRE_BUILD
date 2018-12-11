@@ -4,4 +4,4 @@ default_pre_build &&
 sedit '/^install:/s/ host-key / /' Makefile.in &&
 
 # don't allow root login by default
-sedit 's/#PermitRootLogin yes/PermitRootLogin no/' sshd_config
+sedit 's/^#PermitRootLogin.*/PermitRootLogin prohibit-password/' sshd_config
