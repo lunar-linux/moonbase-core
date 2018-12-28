@@ -1,18 +1,15 @@
-(
+default_build &&
 
-  # Fix typo
-  sedit "s:tob_builddir:top_builddir:1" Makefile.comm  &&
+cd /usr/bin &&
 
-  default_build  &&
-  cd /usr/bin    &&
-  if [ ! -e geqn ] ; then
-    ln -sf eqn geqn
-  fi  &&
-  if [ ! -e gtbl ] ; then
-    ln -sf tbl gtbl
-  fi  &&
-  if [ ! -e zsoelim ] ; then
-    ln -sf soelim zsoelim
-  fi
+if [ ! -e geqn ]; then
+  ln -sf eqn geqn
+fi &&
 
-) > $C_FIFO 2>&1
+if [ ! -e gtbl ]; then
+  ln -sf tbl gtbl
+fi &&
+
+if [ ! -e zsoelim ]; then
+  ln -sf soelim zsoelim
+fi
