@@ -1,11 +1,11 @@
           MODULE=diffstat
-         VERSION=1.61
+         VERSION=1.62
           SOURCE=$MODULE-$VERSION.tgz
-      SOURCE_URL=http://invisible-mirror.net/archives/diffstat/
-      SOURCE_VFY=sha256:25359e0c27183f997b36c9202583b5dc2df390c20e22a92606af4bf7856a55ee
+      SOURCE_URL=https://invisible-mirror.net/archives/$MODULE
+      SOURCE_VFY=sha256:7f09183644ed77a156b15346bbad4e89c93543e140add9dab18747e30522591f
         WEB_SITE=http://invisible-island.net/diffstat/diffstat.html
          ENTERED=20060322
-         UPDATED=20160728
+         UPDATED=20181231
            SHORT="Shows a histogram of a diff/patch file"
 
 cat << EOF
