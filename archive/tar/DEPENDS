@@ -4,8 +4,11 @@ depends gzip
 depends bzip2
 depends xz
 
-optional_depends pbzip2 "--with-bzip2=/usr/bin/pbzip2" "" "for parallel bzip2 (de)compression (speedup on multi-core systems)"
-optional_depends lzip   "--with-lzip=/usr/bin/lzip"    "" "for lzip compression support"
+optional_depends pbzip2 \
+                 "--with-bzip2=/usr/bin/pbzip2" "" \
+                 "for parallel bzip2 (de)compression (speedup on multi-core systems)"
+
+optional_depends lzip "--with-lzip=/usr/bin/lzip" "" "for lzip compression support"
 
 optional_depends attr "" "--without-xattrs"     "for attr support"
 optional_depends acl  "" "--without-posix-acls" "for acl support"
