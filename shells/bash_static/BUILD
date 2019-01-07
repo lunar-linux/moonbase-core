@@ -4,7 +4,7 @@ OPTS+=" --without-bash-malloc \
         --with-curses \
         --without-installed-readline \
         --enable-static-link \
-        --disable-profiling" &&
+        --disable-profiling"
 
 default_config &&
 make version.h &&

@@ -10,7 +10,6 @@ alias '~'='cd'
 alias ls='ls --color=auto $LS_OPTIONS'
 alias ll='ls -lh'
 alias la='ll -a'
-alias lt='ls -t'
 alias lr='ll -R --group-directories-first'
 
 # grep aliases

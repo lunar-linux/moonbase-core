@@ -5,14 +5,13 @@
 # by default:
 
 # this is the minimum and given by init to start scripts (so a good start)
-PATH=/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin
+PATH="/usr/bin:."
 
-# these might not be present, so keep our path clean:
-for DIR in /usr/local/bin /usr/X11/bin ; do
-    [ -d $DIR ] && PATH="$PATH:$DIR"
+# some of these might not be present, so keep our path clean:
+for DIR in  ${HOME}/bin /usr/local/bin; do
+  [ -d $DIR ] && PATH="$DIR:$PATH"
 done
 
 # bare necessities:
-export  PATH LANG=
-umask   022
-
+export PATH
+umask  022
