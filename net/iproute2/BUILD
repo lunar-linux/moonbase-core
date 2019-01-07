@@ -1,7 +1,3 @@
-if ! in_depends $MODULE db; then
-  sedit 's/arpd//' misc/Makefile
-fi &&
-
 ./configure &&
 
 make &&
