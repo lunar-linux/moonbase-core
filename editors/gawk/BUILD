@@ -6,7 +6,8 @@ OPTS+="--build=$BUILD \
        --bindir=/bin \
        --mandir=/usr/share/man \
        --infodir=/usr/share/info \
-       ac_cv_func_working_mktime=yes" &&
+       --without-readline \
+       ac_cv_func_working_mktime=yes"
 
 default_config &&
 make &&

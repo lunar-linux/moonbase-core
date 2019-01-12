@@ -1,2 +1,4 @@
 depends mpfr
-optional_depends readline "--with-readline" "--without-readline" "To enable readline support"
+
+# it creates a circular depend with readline
+#optional_depends readline "--with-readline" "--without-readline" "To enable readline support"
