@@ -1,5 +1,3 @@
-export FORCE_UNSAFE_CONFIGURE=1 &&
-
-OPTS+=" --libexecdir=/usr/lib/tar" &&
+export FORCE_UNSAFE_CONFIGURE=1
 
 default_build
