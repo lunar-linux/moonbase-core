@@ -6,7 +6,7 @@
       SOURCE_VFY=sha256:577bd4463eea103bdfc662fc385789e2228dbeb399a1d0b98571ed9ce044f763
         WEB_SITE=http://www.gnu.org/software/tar/tar.html
          ENTERED=20010922
-         UPDATED=20190103
+         UPDATED=20190115
            SHORT="Creates GNU tar archives"
 
 cat << EOF
