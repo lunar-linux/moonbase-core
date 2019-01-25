@@ -1,11 +1,11 @@
           MODULE=libgpg-error
-         VERSION=1.33
+         VERSION=1.34
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://www.gnupg.org/ftp/gcrypt/$MODULE
-      SOURCE_VFY=sha256:5d38826656e746c936e7742d9cde072b50baa3c4c49daa168a56813612bf03ff
+      SOURCE_VFY=sha256:0680799dee71b86b2f435efb825391eb040ce2704b057f6bd3dcc47fbc398c81
         WEB_SITE=http://www.gnupg.org
          ENTERED=20020212
-         UPDATED=20181210
+         UPDATED=20190117
            SHORT="Defines common error values for all GnuPG components"
 
 cat << EOF
