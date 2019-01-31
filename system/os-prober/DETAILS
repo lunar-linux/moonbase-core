@@ -1,8 +1,8 @@
           MODULE=os-prober
-         VERSION=1.76
+         VERSION=1.77
           SOURCE=${MODULE}_$VERSION.tar.xz
       SOURCE_URL=http://ftp.de.debian.org/debian/pool/main/o/$MODULE/
-      SOURCE_VFY=sha256:d3a580610e0148ee1fea98de993b27b856870fb0a31e9ce1a33be2654e2c64ed
+      SOURCE_VFY=sha256:8d8ea4afbe1aeef3c8b73f74a0fb37b06185e21a6abc78f80fc2160009cf705f
         WEB_SITE=http://kitenet.net/~joey/code/os-prober/
          ENTERED=20110601
          UPDATED=20170814
