@@ -1,12 +1,12 @@
           MODULE=python-setuptools
-         VERSION=40.6.3
+         VERSION=40.7.2
           SOURCE=setuptools-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/pypa/setuptools/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:ae2a0bea7c79ac14dfb313dae8896362a1f966e547cfbbfd39cd592836926614
+      SOURCE_VFY=sha256:4e5ee836c4bd3358d674f0a7ca52591bf77a33dafb5943fed4d57fbbcd4d92b1
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/setuptools-$VERSION
         WEB_SITE=http://packages.python.org/distribute/
          ENTERED=20071221
-         UPDATED=20181212
+         UPDATED=20190201
             TYPE=python3
         REPLACES=setuptools-3
            SHORT="A simplified packaging system for Python 3.x"
