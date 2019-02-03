@@ -1,12 +1,12 @@
           MODULE=binutils
-         VERSION=2.31.1
+         VERSION=2.32
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=$MIRROR_URL
-      SOURCE_VFY=sha256:e88f8d36bd0a75d3765a4ad088d819e35f8d7ac6288049780e2fefcad18dde88
+      SOURCE_VFY=sha256:9b0d97b3d30df184d302bced12f976aa1e5fbf4b0be696cdebc6cca30411a46e
         WEB_SITE=http://sources.redhat.com/binutils
          ENTERED=20010922
-         UPDATED=20180802
+         UPDATED=20190203
            SHORT="An essential collection of binary utilities"
 
 cat << EOF
