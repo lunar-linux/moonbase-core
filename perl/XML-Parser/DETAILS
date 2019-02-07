@@ -1,7 +1,7 @@
           MODULE=XML-Parser
          VERSION=2.44
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://search.cpan.org/CPAN/authors/id/T/TO/TODDR/
+      SOURCE_URL=https://cpan.metacpan.org/authors/id/T/TO/TODDR/
       SOURCE_VFY=sha256:1ae9d07ee9c35326b3d9aad56eae71a6730a73a116b9fe9e8a4758b7cc033216
         WEB_SITE=http://search.cpan.org/search?dist=XML-Parser
             TYPE=perl
