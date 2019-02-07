@@ -1,9 +1,11 @@
---- ./gio/glib-compile-schemas.c
-+++ ./gio/glib-compile-schemas.c
+diff --git i/gio/glib-compile-schemas.c w/gio/glib-compile-schemas.c
+index b8de0907248f6860..130f89b1728f7932 100644
+--- i/gio/glib-compile-schemas.c
++++ w/gio/glib-compile-schemas.c
 @@ -1233,19 +1233,6 @@ parse_state_start_schema (ParseState  *state,
        return;
      }
- 
+
 -  if (path && (g_str_has_prefix (path, "/apps/") ||
 -               g_str_has_prefix (path, "/desktop/") ||
 -               g_str_has_prefix (path, "/system/")))
@@ -19,4 +21,4 @@
 -
    state->schema_state = schema_state_new (path, gettext_domain,
                                            extends, extends_name, list_of);
- 
+
