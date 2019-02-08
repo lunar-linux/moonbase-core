@@ -1,6 +1,7 @@
 depends zlib
 depends automake
 depends libtool
+depends %OSSL
 
 optional_depends xz \
                  "--with-xz" \
