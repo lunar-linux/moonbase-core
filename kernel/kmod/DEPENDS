@@ -1,11 +1,8 @@
 depends zlib
+depends xz
 depends automake
 depends libtool
-
-optional_depends xz \
-                 "--with-xz" \
-                 "--without-xz" \
-                 "support for xz compressed modules" y
+depends %OSSL
 
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \

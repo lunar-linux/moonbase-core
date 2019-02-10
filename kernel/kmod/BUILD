@@ -1,4 +1,6 @@
-OPTS+=" --with-zlib" &&
+OPTS+=" --with-zlib \
+        --with-xz \
+        --with-openssl"
 
 ./configure --prefix=     \
             --libdir=/lib \
