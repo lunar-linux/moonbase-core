@@ -1,4 +1,5 @@
 OPTS+=" --with-zlib \
+        --with-xz \
         --with-openssl"
 
 ./configure --prefix=     \
