@@ -1,12 +1,12 @@
           MODULE=tar
-         VERSION=1.31
+         VERSION=1.32
           SOURCE=$MODULE-$VERSION.tar.bz2
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/gnu/$MODULE
-      SOURCE_VFY=sha256:577bd4463eea103bdfc662fc385789e2228dbeb399a1d0b98571ed9ce044f763
+      SOURCE_VFY=sha256:e4bb9e08e12e7fa9f11fef544efc85e59ba34538593d9ad38148c7ca2bfbb566
         WEB_SITE=http://www.gnu.org/software/tar/tar.html
          ENTERED=20010922
-         UPDATED=20190115
+         UPDATED=20190223
            SHORT="Creates GNU tar archives"
 
 cat << EOF
