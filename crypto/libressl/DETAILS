@@ -1,11 +1,11 @@
           MODULE=libressl
-         VERSION=2.8.3
+         VERSION=2.9.0
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://ftp.openbsd.org/pub/OpenBSD/LibreSSL/
-     SOURCE VFY=sha256:9b640b13047182761a99ce3e4f000be9687566e0828b4a72709e9e6a3ef98477
+     SOURCE VFY=sha256:eb5f298408b723f11a0ca0192c122ecb79b4855bfdf7eea183a6264296a13cf4
         WEB_SITE=http://www.libressl.org
          ENTERED=20160301
-         UPDATED=20181217
+         UPDATED=20190225
            SHORT="A version of the TLS/crypto stack forked from OpenSSL"
 
 cat << EOF
