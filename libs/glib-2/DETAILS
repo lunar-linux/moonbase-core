@@ -2,8 +2,7 @@
          VERSION=60.0
           SOURCE=$MODULE.$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE.$VERSION
-   SOURCE_URL[0]=$GNOME_URL/sources/glib/${MODULE#*-}.${VERSION%.*}
-   SOURCE_URL[1]=http://ftp.gtk.org/pub/glib/${MODULE#*-}.${VERSION%.*}
+      SOURCE_URL=$GNOME_URL/sources/glib/${MODULE#*-}.${VERSION%.*}
       SOURCE_VFY=sha256:20865d8b96840d89d9340fc485b4b1131c1bb24d16a258a22d642c3bb1b44353
         WEB_SITE=http://library.gnome.org/devel/glib
          ENTERED=20020313
