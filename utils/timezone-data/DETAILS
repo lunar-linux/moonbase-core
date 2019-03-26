@@ -1,6 +1,6 @@
           MODULE=timezone-data
-           TZONE=i
-         VERSION=2018$TZONE
+           TZONE=a
+         VERSION=2019$TZONE
           SOURCE=tzdata$VERSION.tar.gz
          SOURCE2=tzcode$VERSION.tar.gz
          SOURCE3=$MODULE-2018b-makefile.patch
@@ -9,12 +9,12 @@
   SOURCE2_URL[0]=http://www.iana.org/time-zones/repository/releases
   SOURCE2_URL[1]=$MIRROR_URL
   SOURCE3_URL[0]=$PATCH_URL
-      SOURCE_VFY=sha256:82c45ef84ca3bc01d0a4a397ba8adeb8f7f199c6550740587c6ac5a7108c00d9
-     SOURCE2_VFY=sha256:aaacdb876ca6fb9d58e244b462cbc7578a496b1b10994381b4b32b9f2ded32dc
+      SOURCE_VFY=sha256:90366ddf4aa03e37a16cd49255af77f801822310b213f195e2206ead48c59772
+     SOURCE2_VFY=sha256:8739f162bc30cdfb482435697f969253abea49595541a0afd5f443fbae433ff5
      SOURCE3_VFY=sha256:279d99c676758f918fe061cc64791123a109f85f1ddfdf677593999ae47d8877
         WEB_SITE=ftp://munnari.oz.au/pub
          ENTERED=20070203
-         UPDATED=20181231
+         UPDATED=20190326
            SHORT="Timezone data and utilities"
 
 cat << EOF
