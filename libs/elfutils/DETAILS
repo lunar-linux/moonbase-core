@@ -1,11 +1,11 @@
           MODULE=elfutils
-         VERSION=0.175
+         VERSION=0.176
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://sourceware.org/elfutils/ftp/$VERSION/
-      SOURCE_VFY=sha256:f7ef925541ee32c6d15ae5cb27da5f119e01a5ccdbe9fe57bf836730d7b7a65b
+      SOURCE_VFY=sha256:eb5747c371b0af0f71e86215a5ebb88728533c3a104a43d4231963f308cd1023
         WEB_SITE=https://sourceware.org/elfutils/
          ENTERED=20021102
-         UPDATED=20181205
+         UPDATED=20190226
            SHORT="Utilities related to ELF (UNIX binaries) objects"
     USE_WRAPPERS=no
 
