@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:22a95ebe0d5c9fb2915b3a100450f8f37484d1dbb8b296f55b343cc84f10397d
         WEB_SITE=http://github.com/rhinstaller/efibootmgr/
          ENTERED=20160723
-         UPDATED=20181221
+         UPDATED=20190402
            SHORT="Tool to modify UEFI Firmware Boot Manager Variables"
 
 cat << EOF

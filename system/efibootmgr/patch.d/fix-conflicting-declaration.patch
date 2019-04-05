@@ -1,0 +1,17 @@
+diff -C 4 -r efibootmgr-17/src/efibootmgr.c efibootmgr-17/src/efibootmgr.c
+*** efibootmgr-17/src/efibootmgr.c	2018-06-11 05:12:10.000000000 +0900
+--- efibootmgr-17/src/efibootmgr.c	2019-04-02 14:49:40.229838753 +0900
+***************
+*** 1535,1545 ****
+  					errorx(39,
+  					       "invalid numeric value %s\n",
+  					       optarg);
+  			}
+-                         /* XXX efivar-36 accidentally doesn't have a public
+-                          * header for this */
+- 			extern int efi_set_verbose(int verbosity, FILE *errlog);
+  			efi_set_verbose(opts.verbose - 2, stderr);
+  			break;
+  		case 'V':
+  			opts.showversion = 1;
+--- 1535,1542 ----
