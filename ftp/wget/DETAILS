@@ -1,12 +1,12 @@
           MODULE=wget
-         VERSION=1.20.1
+         VERSION=1.20.3
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:b783b390cb571c837b392857945f5a1f00ec6b043177cc42abb8ee1b542ee1b3
+      SOURCE_VFY=sha256:31cccfc6630528db1c8e3a06f6decf2a370060b982841cfab2b8677400a5092e
         WEB_SITE=http://www.gnu.org/software/wget/
          ENTERED=20010922
-         UPDATED=20181229
+         UPDATED=20190405
            SHORT="wget retreives files from web and ftp sites"
 
 cat << EOF
