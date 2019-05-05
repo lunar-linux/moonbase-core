@@ -1,11 +1,11 @@
           MODULE=cracklib
-         VERSION=2.9.6
+         VERSION=2.9.7
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://github.com/cracklib/cracklib/releases/download/$MODULE-$VERSION/
-      SOURCE_VFY=sha256:17cf76943de272fd579ed831a1fd85339b393f8d00bf9e0d17c91e972f583343
+      SOURCE_URL=http://github.com/cracklib/cracklib/releases/download/v$VERSION/
+      SOURCE_VFY=sha256:8b6fd202f3f1d8fa395d3b7a5d821227cfd8bb4a9a584a7ae30cf62cea6287dd
         WEB_SITE=http://github.com/cracklib/cracklib/
          ENTERED=20020313
-         UPDATED=20160310
+         UPDATED=20190418
            SHORT="A library which may be used in a passwd-like program"
            PSAFE=no
 
