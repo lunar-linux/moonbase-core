@@ -2,8 +2,8 @@
           MODULE=perl
          VERSION=5.28.2
           SOURCE=$MODULE-$VERSION.tar.gz
-   SOURCE_URL[0]=http://www.cpan.org/src/5.0
-   SOURCE_URL[1]=http://mirrors.kernel.org/cpan/src
+   SOURCE_URL[0]=https://www.cpan.org/src/5.0
+   SOURCE_URL[1]=https://mirrors.kernel.org/cpan/src
       SOURCE_VFY=sha256:aa95456dddb3eb1cc5475fed4e08f91876bea71fb636fba6399054dfbabed6c7
         WEB_SITE=http://www.perl.org
          ENTERED=20010922
