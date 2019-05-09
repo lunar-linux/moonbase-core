@@ -11,7 +11,7 @@ _PYDESTDIR=$SOURCE_DIRECTORY/__pythondest3
 mkdir -p $_PYDESTDIR &&
 
 default_config &&
-make EXTRA_CFLAGS="$CFLAGS" &&
+make build_all EXTRA_CFLAGS="$CFLAGS" &&
 
 # Avoid rebuild on make install
 sedit 's;^all:.*$;all: build_all;' Makefile &&
