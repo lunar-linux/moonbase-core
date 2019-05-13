@@ -1,9 +1,9 @@
 if !( module_installed emacs ); then
   OPTS+=" --without-emacs"
-fi &&
+fi
 
 OPTS+=" --disable-csharp \
         --disable-static \
-        --without-libintl-prefix" &&
+        --without-libintl-prefix"
 
 default_build
