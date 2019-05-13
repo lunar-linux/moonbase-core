@@ -1,0 +1,11 @@
+--- kmod-26/Makefile.am	2019-02-07 22:43:28.991962463 +0100
++++ kmod-26-lunar/Makefile.am	2019-05-13 18:37:23.845733527 +0200
+@@ -98,7 +98,7 @@
+ libkmod_libkmod_internal_la_DEPENDENCIES  = $(libkmod_libkmod_la_DEPENDENCIES)
+ libkmod_libkmod_internal_la_LIBADD = $(libkmod_libkmod_la_LIBADD)
+ 
+-pkgconfigdir = $(libdir)/pkgconfig
++pkgconfigdir = /usr/lib/pkgconfig
+ pkgconfig_DATA = libkmod/libkmod.pc
+ EXTRA_DIST += libkmod/libkmod.pc.in
+ CLEANFILES += libkmod/libkmod.pc

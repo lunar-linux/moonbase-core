@@ -2,5 +2,4 @@ default_pre_build &&
 
 # regenerate Makefile.in since patch.d/ modifies it
 autoconf &&
-automake --add-missing --force-missing --copy &&
-sedit "s:\$(libdir)/pkgconfig:/usr/lib/pkgconfig:" Makefile.in
+automake --add-missing --force-missing --copy
