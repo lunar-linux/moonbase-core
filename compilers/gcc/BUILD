@@ -41,6 +41,9 @@ make CFLAGS='-O' LIBCFLAGS='-g -O2' LIBCXXFLAGS='-g -O2 -fno-implicit-templates'
 prepare_install &&
 make install &&
 
+( cd /usr/lib/gcc/`arch`-pc-linux-gnu/$VERSION &&
+  strip cc1 cc1plus lto1 ) &&
+
 install -d /usr/share/gdb/auto-load &&
 mv /usr/lib/libstdc++.so.6.*-gdb.py /usr/share/gdb/auto-load/ &&
 
