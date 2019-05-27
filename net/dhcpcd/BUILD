@@ -1,7 +1,5 @@
 OPTS+=" --rundir=/run \
-        --dbdir=/var/lib/dhcpcd" &&
-
-OPTS+=" --libexecdir=/usr/lib/dhcpcd" &&
+        --dbdir=/var/lib/dhcpcd"
 
 default_build &&
 
