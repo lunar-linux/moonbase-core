@@ -1,21 +1,21 @@
           MODULE=wpa_supplicant
-         VERSION=2.6
+         VERSION=2.8
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=https://w1.fi/releases/
-      SOURCE_VFY=sha256:b4936d34c4e6cdd44954beba74296d964bc2c9668ecaa5255e499636fe2b1450
+    SOURCE_VFY=sha256:a689336a12a99151b9de5e25bfccadb88438f4f4438eb8db331cd94346fd3d96
         WEB_SITE=http://hostap.epitest.fi/wpa_supplicant
          ENTERED=20041019
-         UPDATED=20180527
+         UPDATED=20190502
            SHORT="WPA key management for Linux"
 
 cat << EOF
-wpa_supplicant is a WPA Supplicant for Linux with support for
-WPA and WPA2 (IEEE 802.11i / RSN). Supplicant is the IEEE 802.1X/WPA
-component that is used in the client stations. It implements
-key negotiation with a WPA Authenticator and it controls the
-roaming and IEEE 802.11 authentication/association of the wlan driver.
-wpa_supplicant is designed to be a "daemon" program that runs in the
-background and acts as the backend component controlling the wireless
-connection. wpa_supplicant supports separate frontend programs and an
-example text-based frontend, wpa_cli, is included with wpa_supplicant.
+wpa_supplicant is a WPA Supplicant for Linux with support for WPA and WPA2 (IEEE
+802.11i / RSN). Supplicant is the IEEE 802.1X/WPA component that is used in the
+client stations. It implements key negotiation with a WPA Authenticator and it
+controls the roaming and IEEE 802.11 authentication/association of the wlan
+driver.
+wpa_supplicant is designed to be a "daemon" program that runs in the background
+and acts as the backend component controlling the wireless connection.
+wpa_supplicant supports separate frontend programs and an example text-based
+frontend, wpa_cli, is included with wpa_supplicant.
 EOF
