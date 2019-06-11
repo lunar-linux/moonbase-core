@@ -7,7 +7,7 @@ depends meson
 
 optional_depends pcre \
                  "-D internal_pcre=false" \
-		 "-D internal_pcre=true" \
+        		 "-D internal_pcre=true" \
                  "use the system installed pcre library"
 
 optional_depends libxslt     "" "" "for XSL support" n
