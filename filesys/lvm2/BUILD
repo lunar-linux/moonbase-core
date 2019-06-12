@@ -10,7 +10,7 @@ if module_installed systemd; then
   OPTS+=" --with-systemdsystemunitdir=/usr/lib/systemd/system"
 fi
 
-if ( module_installed udev ) || ( module_installed eudev ); then
+if module_installed udev || module_installed eudev ; then
    OPTS+=" --enable-udev_sync \
            --enable-udev_rules"
 else
