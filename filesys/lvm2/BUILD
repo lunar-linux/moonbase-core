@@ -44,4 +44,5 @@ cd udev &&
 make 69-dm-lvm-metad.rules &&
 
 # extra udev rule for lvmetad in non-systemd initramfs
+mkdir -p /usr/lib/dracut/modules.d/90lvm &&
 install -D -m644 69-dm-lvm-metad.rules /usr/lib/dracut/modules.d/90lvm/
