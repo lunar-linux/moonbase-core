@@ -14,5 +14,7 @@ if [ -n "$WARN" ]; then
   fi
 fi
 
-default_pre_build
+default_pre_build &&
+
+sedit 's:dash:bash:' Makefile
 

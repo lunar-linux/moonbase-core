@@ -2,7 +2,7 @@ OPTS+=" -Dprefix=/usr \
         -Dscriptdir=/usr/bin \
         -Duseshrplib=true \
         -Dman1dir=/usr/share/man/man1 \
-        -Dman3dir=/usr/share/man/man3 -d -e" &&
+        -Dman3dir=/usr/share/man/man3 -d -e"
 
 if [ "$CUSTOM" == "y" ] ; then
   ./Configure $OPTS

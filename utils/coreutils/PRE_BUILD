@@ -1,9 +1,3 @@
 default_pre_build &&
 
-patch_it $SOURCE_CACHE/$SOURCE2 1 &&
-
-# FUGLY hack to get around the use of renameat2() which completely break installwatch
-# with no easy fix for installwatch in sight at the moment. This hack revert coreutils to the
-# old behavior using renameat().
-# Background info http://gnu-coreutils.7620.n7.nabble.com/bug-30918-Don-t-use-syscall-to-call-renameat2-td26383.html
-sedit 's;^#ifdef SYS_renameat2;#ifdef SYS_LUNAR_BOGUS;' lib/renameat2.c
+patch_it $SOURCE_CACHE/$SOURCE2 1

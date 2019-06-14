@@ -1,6 +1,7 @@
 depends readline
 depends pkgconf
 depends libaio
+depends util-linux
 
 # optional circular depend with systemd->cryptsetup
-depends %UDEV
+optional_depends %UDEV "" "" "udev support can only be kept in initramfs"
