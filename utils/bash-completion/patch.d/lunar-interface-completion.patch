@@ -1,0 +1,13 @@
+--- bash-completion-2.9/bash_completion	2019-04-27 10:54:49.000000000 +0200
++++ bash-completion-2.9-lunar/bash_completion	2019-06-15 15:20:41.045134025 +0200
+@@ -905,6 +905,10 @@
+         COMPREPLY=( $(compgen -W "$(command ls -B \
+             /etc/sysconfig/interfaces | \
+             command sed -ne 's|.*ifcfg-\([^*].*\)$|\1|p')" -- "$cur") )
++    elif [[ -f /etc/lunar.release ]] || grep -q "Lunar Linux" /etc/os-release; then
++        # Lunar Linux
++        COMPREPLY=( $( compgen -W "$( command ls -B \
++            /etc/config.d/network)" -- "$cur" ) )
+     else
+         # Assume Red Hat
+         COMPREPLY=( $(compgen -W "$(printf '%s\n' \
