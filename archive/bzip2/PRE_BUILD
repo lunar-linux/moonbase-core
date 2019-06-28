@@ -8,7 +8,4 @@ sedit "s/\$(PREFIX)\/man/\$(PREFIX)\/share\/man/g" Makefile &&
 sedit "s/all: libbz2.a/all:/g" Makefile &&
 sedit "s/bzip2: libbz2.a/bzip2:/g" Makefile &&
 sedit "/cp -f libbz2.a/d" Makefile &&
-sedit "/chmod a+r \$(PREFIX)\/lib\/libbz2.a/d" Makefile &&
-
-# CVE 2016-3189 patch
-patch_it $SOURCE2 1
+sedit "/chmod a+r \$(PREFIX)\/lib\/libbz2.a/d" Makefile
