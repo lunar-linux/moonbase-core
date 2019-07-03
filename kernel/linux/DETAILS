@@ -1,5 +1,4 @@
-          MODULE=linux
-         VERSION=5.1.10
+          MODULE=linux VERSION=5.1.16
             BASE=$(echo $VERSION | cut -d. -f1,2)
           SOURCE=$MODULE-$BASE.tar.xz
 if [ -n "$(echo $VERSION | cut -d. -f3)" ] ; then
@@ -10,10 +9,10 @@ fi
   SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v5.x
   SOURCE2_URL[1]=https://www.kernel.org/pub/linux/kernel/v5.x
       SOURCE_VFY=sha256:d06a7be6e73f97d1350677ad3bae0ce7daecb79c2c2902aaabe806f7fa94f041
-     SOURCE2_VFY=sha256:d50fd9b01c35b161d0e116a0f4950afebc191d231e903f299c55270b491400a1
+     SOURCE2_VFY=sha256:62521554a7c13151a6b7d58e0093656b45fa9a6de06e127e96725a897dc2813a
          WEB_SITE=https://www.kernel.org/
          ENTERED=20111121
-         UPDATED=20190615
+         UPDATED=20190703
            SHORT="The core of a Linux GNU Operating System"
      KEEP_SOURCE=on
            TMPFS=off
