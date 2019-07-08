@@ -6,7 +6,7 @@
        SOURCE_VFY=sha256:7c53d05991d802dff78323fb1783871be57352ba59f65f1f7ed712bf281e5f1e
          WEB_SITE=https://dracut.wiki.kernel.org/index.php/Main_Page
           ENTERED=20120715
-          UPDATED=20190516
+          UPDATED=20190708
             SHORT="Initramfs generator using udev"
 COMPRESS_MANPAGES=off # If we compress them it will mess up an upgrade for this module due to symlinks
 
