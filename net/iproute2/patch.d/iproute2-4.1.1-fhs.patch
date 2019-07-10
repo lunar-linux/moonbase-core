@@ -1,7 +1,7 @@
 diff -Naur iproute2-4.1.1/netem/Makefile iproute2-4.1.1-lunar/netem/Makefile
 --- iproute2-4.1.1/netem/Makefile	2015-07-06 23:57:34.000000000 +0200
 +++ iproute2-4.1.1-lunar/netem/Makefile	2015-07-25 21:59:40.088900998 +0200
-@@ -20,9 +20,9 @@
+@@ -23,9 +23,9 @@
  	$(HOSTCC) $(CCOPTS) -I../include -o $@ $@.c -lm
  
  install: all
@@ -16,7 +16,7 @@ diff -Naur iproute2-4.1.1/netem/Makefile iproute2-4.1.1-lunar/netem/Makefile
 diff -Naur iproute2-4.1.1/tc/tc_util.c iproute2-4.1.1-lunar/tc/tc_util.c
 --- iproute2-4.1.1/tc/tc_util.c	2015-07-06 23:57:34.000000000 +0200
 +++ iproute2-4.1.1-lunar/tc/tc_util.c	2015-07-25 21:58:47.742232502 +0200
-@@ -28,8 +28,8 @@
+@@ -27,8 +27,8 @@
  #include "tc_util.h"
  #include "tc_common.h"
  
