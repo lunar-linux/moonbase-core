@@ -1,5 +1,5 @@
           MODULE=linux
-         VERSION=5.2
+         VERSION=5.2.1
             BASE=$(echo $VERSION | cut -d. -f1,2)
    MAJOR_RELEASE=${VERSION%%.*}
           SOURCE=$MODULE-$BASE.tar.xz
@@ -11,10 +11,10 @@ fi
   SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v${MAJOR_RELEASE}.x
   SOURCE2_URL[1]=https://www.kernel.org/pub/linux/kernel/v${MAJOR_RELEASE}.x
       SOURCE_VFY=sha256:54ad66f672e1a831b574f5e704e8a05f1e6180a8245d4bdd811208a6cb0ac1e7
-     # SOURCE2_VFY=sha256:d50fd9b01c35b161d0e116a0f4950afebc191d231e903f299c55270b491400a1
+     SOURCE2_VFY=sha256:b7c0c14fcc945dbbd3194786bc4834d812b23666fcd3cf49790a74e217473773
          WEB_SITE=https://www.kernel.org/
          ENTERED=20111121
-         UPDATED=20190615
+         UPDATED=20190716
            SHORT="The core of a Linux GNU Operating System"
      KEEP_SOURCE=on
            TMPFS=off
