@@ -1,5 +1,5 @@
           MODULE=linux
-         VERSION=4.9.59
+         VERSION=4.19.59
             BASE=$(echo $VERSION | cut -d. -f1,2)
    MAJOR_RELEASE=${VERSION%%.*}
           SOURCE=$MODULE-$BASE.tar.xz
@@ -11,7 +11,7 @@ fi
   SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v${MAJOR_RELEASE}.x
   SOURCE2_URL[1]=https://www.kernel.org/pub/linux/kernel/v${MAJOR_RELEASE}.x
       SOURCE_VFY=sha256:029098dcffab74875e086ae970e3828456838da6e0ba22ce3f64ef764f3d7f1a
-     SOURCE2_VFY=sha256:2490246b965c7df24208e6e3512ff19c69e0603435865fda5152195eab073800
+     SOURCE2_VFY=sha256:6551b81c5b73b230a7889198d6547a9beb4be03715ac0edba948fd7fae76b790
          WEB_SITE=https://www.kernel.org/
          ENTERED=20111121
          UPDATED=20190716
