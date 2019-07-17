@@ -10,7 +10,7 @@ fi
    SOURCE_URL[1]=https://www.kernel.org/pub/linux/kernel/v${MAJOR_RELEASE}.x
   SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v${MAJOR_RELEASE}.x
   SOURCE2_URL[1]=https://www.kernel.org/pub/linux/kernel/v${MAJOR_RELEASE}.x
-      SOURCE_VFY=sha256:029098dcffab74875e086ae970e3828456838da6e0ba22ce3f64ef764f3d7f1a
+      SOURCE_VFY=sha256:0c68f5655528aed4f99dae71a5b259edc93239fa899e2df79c055275c21749a1
      SOURCE2_VFY=sha256:6551b81c5b73b230a7889198d6547a9beb4be03715ac0edba948fd7fae76b790
          WEB_SITE=https://www.kernel.org/
          ENTERED=20111121
