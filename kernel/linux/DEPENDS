@@ -2,3 +2,4 @@ depends  autoconf
 depends  %KMOD
 depends  linux-firmware
 depends  bc
+depends  elfutils
