@@ -1,16 +1,16 @@
           MODULE=ccache
-         VERSION=3.7.1
+         VERSION=3.7.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://github.com/ccache/ccache/releases/download/v$VERSION/
-      SOURCE_VFY=sha256:66fc121a2a33968f9ec428e02f48ff4b8896fbabb759e9c09352267014dcbe65
+      SOURCE_VFY=sha256:a5da0008512ff9e882097acaffb3616fae98ec25827167bb4bd1e4acf0b66793
         WEB_SITE=http://ccache.samba.org
          ENTERED=20020701
-         UPDATED=20190503
+         UPDATED=20190725
            SHORT="A compiler cache"
 
 cat << EOF
 ccache is a compiler cache. It acts as a caching pre-processor to C/C++
 compilers, using the -E compiler switch and a hash to detect when a
-compilation can be satisfied from cache. This often results in a 5 to 10
-times speedup in common compilations.
+compilation can be satisfied from cache.
+This often results in a 5 to 10 times speedup in common compilations.
 EOF
