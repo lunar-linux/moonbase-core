@@ -15,7 +15,6 @@ OPTS+=" --libdir=/usr/lib  \
         --enable-pkgconfig \
         --enable-fsadm     \
         --enable-dmeventd  \
-        --enable-applib    \
         --enable-udev_sync \
         --enable-udev_rules"
 
