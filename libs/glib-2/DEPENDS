@@ -9,12 +9,3 @@ optional_depends pcre \
                  "-D internal_pcre=false" \
         		 "-D internal_pcre=true" \
                  "use the system installed pcre library"
-
-optional_depends libxslt     "" "" "for XSL support" n
-optional_depends docbook-xml "" "" "for DocBook XML support" n
-optional_depends docbook-xsl "" "" "for DocBook XSL support" n
-
-optional_depends gtk-doc \
-                 "-D gtk-doc=true" \
-                 "-D gtk-doc=false" \
-                 "for building documentation" n
