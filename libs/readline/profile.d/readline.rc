@@ -1,5 +1,3 @@
-
 stty erase ^?
 
 [ -f /etc/inputrc ] && export INPUTRC=/etc/inputrc
-

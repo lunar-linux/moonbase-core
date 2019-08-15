@@ -17,4 +17,3 @@ fi
 default_pre_build &&
 
 sedit 's:dash:bash:' Makefile
-

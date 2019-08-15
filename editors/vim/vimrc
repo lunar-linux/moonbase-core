@@ -104,4 +104,3 @@ nmap ,hu wbi<u><ESC>ea</i><ESC>bb
 nmap ,hs wbi<strong><ESC>ea</strong><ESC>bb
 nmap ,ht wbi<tt><ESC>ea</tt><ESC>bb
 nmap ,hx wbF<df>f<df>
-

@@ -15,4 +15,3 @@ done
 # bare necessities:
 export  PATH LANG=
 umask   022
-

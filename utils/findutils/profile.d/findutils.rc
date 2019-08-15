@@ -3,4 +3,3 @@
 if [ -f ${HOME}/.locatedb ]; then
     export  LOCATE_PATH=/var/cache/locate/locatedb:${HOME}/.locatedb
 fi
-
