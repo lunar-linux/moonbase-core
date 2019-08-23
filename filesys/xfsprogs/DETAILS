@@ -1,11 +1,11 @@
           MODULE=xfsprogs
-         VERSION=5.1.0
+         VERSION=5.2.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/
-      SOURCE_VFY=sha256:ca8b4e73dfc5b6227bb6d4e73d019035a1975b83ea41e218cdff15058a9f6c45
+      SOURCE_VFY=sha256:7b500e148cebd08f99e37cf744c7843817b37e7be2a32c4dc57d6ea16e3019ae
         WEB_SITE=http://oss.sgi.com/projects/xfs
          ENTERED=20020110
-         UPDATED=20190920
+         UPDATED=20190822
            SHORT="Required utilities for the XFS file system"
            PSAFE=no
 
