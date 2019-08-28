@@ -1,11 +1,11 @@
           MODULE=wpa_supplicant
-         VERSION=2.8
+         VERSION=2.9
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=https://w1.fi/releases/
-    SOURCE_VFY=sha256:a689336a12a99151b9de5e25bfccadb88438f4f4438eb8db331cd94346fd3d96
+    SOURCE_VFY=sha256:fcbdee7b4a64bea8177973299c8c824419c413ec2e3a95db63dd6a5dc3541f17
         WEB_SITE=http://hostap.epitest.fi/wpa_supplicant
          ENTERED=20041019
-         UPDATED=20190502
+         UPDATED=20190828
            SHORT="WPA key management for Linux"
 
 cat << EOF
@@ -19,3 +19,4 @@ and acts as the backend component controlling the wireless connection.
 wpa_supplicant supports separate frontend programs and an example text-based
 frontend, wpa_cli, is included with wpa_supplicant.
 EOF
+
