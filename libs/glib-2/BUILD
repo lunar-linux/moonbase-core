@@ -11,3 +11,4 @@ sedit '/install.*true/s;true;false;' gio/gdbus-2.0/codegen/meson.build &&
 LDFLAGS+=" -Wl,-z,nodelete" &&
 
 default_meson_build
+

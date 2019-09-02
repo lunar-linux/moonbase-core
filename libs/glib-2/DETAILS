@@ -1,12 +1,12 @@
           MODULE=glib-2
-         VERSION=60.6
+         VERSION=60.7
           SOURCE=$MODULE.$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE.$VERSION
       SOURCE_URL=$GNOME_URL/sources/glib/${MODULE#*-}.${VERSION%.*}
-      SOURCE_VFY=sha256:ff8fab8d8deaa4fd0536c90f90d9769a09071779c7e6183907f6855645bffb6c
+      SOURCE_VFY=sha256:8b12c0af569afd3b71200556ad751bad4cf4bf7bc4b5f880638459a42ca86310
         WEB_SITE=http://library.gnome.org/devel/glib
          ENTERED=20020313
-         UPDATED=20190724
+         UPDATED=20190902
            SHORT="A library of useful C routines for trees, hashes, and lists"
 
 cat << EOF
@@ -15,3 +15,4 @@ GTK+ and GNOME. It provides data structure handling for C, portability wrappers,
 and interfaces for such runtime functionality as an event loop, threads, dynamic
 loading, and an object system.
 EOF
+
