@@ -2,7 +2,7 @@ diff --git i/gio/glib-compile-schemas.c w/gio/glib-compile-schemas.c
 index b8de0907248f6860..130f89b1728f7932 100644
 --- i/gio/glib-compile-schemas.c
 +++ w/gio/glib-compile-schemas.c
-@@ -1233,19 +1233,6 @@ parse_state_start_schema (ParseState  *state,
+@@ -1232,19 +1232,6 @@ parse_state_start_schema (ParseState  *state,
        return;
      }
 
