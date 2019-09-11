@@ -1,4 +1,3 @@
 # Remove dangling symlinks
 cd /usr/lib &&
 rm -f libdnet.so libdnet.so.1
-

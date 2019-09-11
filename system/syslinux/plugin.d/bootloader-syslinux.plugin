@@ -74,4 +74,3 @@ plugin_kernel_updatebootloader_syslinux() {
 
 
 plugin_register KERNEL_UPDATEBOOTLOADER plugin_kernel_updatebootloader_syslinux
-

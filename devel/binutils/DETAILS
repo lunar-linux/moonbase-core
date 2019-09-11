@@ -25,4 +25,3 @@ binutils is a collection of binary utilities:
   addr2line -converts addresses to file and line
   nlmconv   -converts object code into an NLM
 EOF
-

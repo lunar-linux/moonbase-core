@@ -8,4 +8,3 @@
 # config:      /etc/ssh/sshd_config
 
 . /lib/lsb/init-functions
-

@@ -1,4 +1,3 @@
 # these gadgets make less work nicer:
 export LESS="-M -i -r"
 export LESSOPEN="|lesspipe.sh %s"
-

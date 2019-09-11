@@ -20,4 +20,3 @@ else
   su  -  -c  "PATH=$PATH  $0  $1"
 
 fi
-
