@@ -1,0 +1,11 @@
+--- ./Makefile.orig	2018-01-17 11:05:36.000000000 +0200
++++ ./Makefile	2018-01-23 19:53:36.120170825 +0200
+@@ -515,8 +515,6 @@
+ 		cp tzselect '$(DESTDIR)$(BINDIR)/.'
+ 		cp zdump '$(DESTDIR)$(ZDUMPDIR)/.'
+ 		cp zic '$(DESTDIR)$(ZICDIR)/.'
+-		cp libtz.a '$(DESTDIR)$(LIBDIR)/.'
+-		$(RANLIB) '$(DESTDIR)$(LIBDIR)/libtz.a'
+ 		cp -f newctime.3 newtzset.3 '$(DESTDIR)$(MANDIR)/man3/.'
+ 		cp -f tzfile.5 '$(DESTDIR)$(MANDIR)/man5/.'
+ 		cp -f tzselect.8 zdump.8 zic.8 '$(DESTDIR)$(MANDIR)/man8/.'
