@@ -1,3 +1,5 @@
 default_pre_build &&
 
-sedit 's:\$(datarootdir)/pkgconfig:/usr/lib/pkgconfig:g' Makefile.in
+./autogen.sh
+
+#sedit 's:\$(datarootdir)/pkgconfig:/usr/lib/pkgconfig:g' Makefile.in
