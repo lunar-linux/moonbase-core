@@ -2,9 +2,9 @@
          VERSION=4.4.18
           SOURCE=bash-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/bash-$VERSION
-   SOURCE_URL[0]=$GNU_URL/$MODULE
-   SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-   SOURCE_URL[2]=ftp://ftp.cwru.edu/pub/$MODULE
+   SOURCE_URL[0]=$GNU_URL/${MODULE%_static}
+   SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/${MODULE%_static}
+   SOURCE_URL[2]=ftp://ftp.cwru.edu/pub/${MODULE%_static}
       SOURCE_VFY=sha256:604d9eec5e4ed5fd2180ee44dd756ddca92e0b6aa4217bbab2b6227380317f23
         WEB_SITE=http://tiswww.case.edu/php/chet/bash_static/bashtop.html
          ENTERED=20020615
