@@ -1,0 +1,5 @@
+default_pre_build &&
+
+sedit "s|.so ./version|.ds VN ${VERSION}|" -i Lsof.8 &&
+sedit 's|/\* #define\tHASSECURITY\t1 \*/|#define\tHASSECURITY\t1|' dialects/linux/machine.h
+
