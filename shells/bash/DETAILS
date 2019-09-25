@@ -1,24 +1,27 @@
           MODULE=bash
-         VERSION=5.0
-        PATCHLVL=011
-          SOURCE=$MODULE-$VERSION.tar.gz
+         VERSION=5.0.11
+    BASE_VERSION=${VERSION%.*}
+          SOURCE=$MODULE-$BASE_VERSION.tar.gz
+SOURCE_DIRECTORY=$MODULE-$BASE_VERSION
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=ftp://ftp.cwru.edu/pub/$MODULE
       SOURCE_VFY=sha256:b4a80f2ac66170b2913efbfb9f2594f1f76c7b1afd11f799e22035d63077fb4d
         WEB_SITE=http://www.gnu.org/software/bash
          ENTERED=20010922
-         UPDATED=20190830
+         UPDATED=20190918
            SHORT="A shell of the GNU operating system"
 
 cat << EOF
-bash - Shell of the GNU operating system. Bash is an sh-compatible shell that
-incorporates useful features from the Korn shell (ksh) and C shell (csh). It is
-intended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools
-standard.
-It offers functional improvements over sh for both programming and interactive
-use; these include command line editing, unlimited size command history, job
-control, shell functions and aliases, indexed arrays of unlimited size, and
-integer arithmetic in any base from two to sixty-four. In addition, most sh
-scripts can be run by Bash without modification.
+bash - Shell of the GNU operating system. Bash is an sh-compatible shell
+that incorporates useful features from the Korn shell (ksh) and C shell
+(csh). It is intended to conform to the IEEE POSIX P1003.2/ISO 9945.2
+Shell and Tools standard.
+
+It offers functional improvements over sh for both programming and
+interactive use; these include command line editing, unlimited size
+command history, job control, shell functions and aliases, indexed
+arrays of unlimited size, and integer arithmetic in any base from two to
+sixty-four. In addition, most sh scripts can be run by Bash without
+modification.
 EOF
