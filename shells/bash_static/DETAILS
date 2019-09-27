@@ -1,8 +1,8 @@
           MODULE=bash_static
-         VERSION=5.0
-        PATCHLVL=011
-          SOURCE=bash-$VERSION.tar.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/bash-$VERSION
+         VERSION=5.0.11
+    BASE_VERSION=${VERSION%.*}
+          SOURCE=bash-$BASE_VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/bash-$BASE_VERSION
    SOURCE_URL[0]=$GNU_URL/${MODULE%_static}
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/${MODULE%_static}
    SOURCE_URL[2]=ftp://ftp.cwru.edu/pub/${MODULE%_static}
