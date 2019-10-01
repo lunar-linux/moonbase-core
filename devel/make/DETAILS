@@ -6,7 +6,7 @@
       SOURCE_VFY=sha256:d6e262bf3601b42d2b1e4ef8310029e1dcf20083c5446b4b7aa67081fdffc589
         WEB_SITE=http://make.paulandlesley.org
          ENTERED=20010922
-         UPDATED=20181104
+         UPDATED=20191001
            SHORT="make generates executables and other non-source programs"
 
 cat << EOF

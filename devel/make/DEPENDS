@@ -1,1 +1,2 @@
-optional_depends guile "--with-guile" "--without-guile" "for guile support"
+# updating libffi (guile depend) breaks make
+#optional_depends guile "--with-guile" "--without-guile" "for guile support"

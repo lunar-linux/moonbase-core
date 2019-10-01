@@ -1,3 +1,5 @@
+OPTS+="--without-guile"
+
 default_config &&
 
 if ! make ${MAKES:-j${MAKES}}
