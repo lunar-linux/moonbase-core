@@ -7,7 +7,6 @@ OPTS+=" --datadir=/usr/share/kbd --mandir=/usr/share/man"
 mv data/keymaps/i386/qwertz/cz{,-qwertz}.map &&
 mv data/keymaps/i386/olpc/es{,-olpc}.map &&
 mv data/keymaps/i386/olpc/pt{,-olpc}.map &&
-mv data/keymaps/i386/dvorak/no{,-dvorak}.map &&
 mv data/keymaps/i386/fgGIod/trf{,-fgGIod}.map &&
 
 default_config &&
