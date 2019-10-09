@@ -1,15 +1,11 @@
           MODULE=lsof
-         VERSION=4.91
-           SOURCE=${MODULE}_$VERSION.tar.bz2
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}_${VERSION}
-   SOURCE_URL[0]=http://ftp.u-strasbg.fr/securite/$MODULE
-   SOURCE_URL[1]=ftp://ftp.fu-berlin.de/pub/unix/tools/$MODULE
-   SOURCE_URL[2]=http://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/$MODULE
-   SOURCE_URL[3]=$MIRROR_URL
-      SOURCE_VFY=sha256:c9da946a525fbf82ff80090b6d1879c38df090556f3fe0e6d782cb44172450a3
+         VERSION=4.93.2
+           SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/lsof-org/lsof/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:3df912bd966fc24dc73ddea3e36a61d79270b21b085936a4caabca56e5b486a2
         WEB_SITE=ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/README
          ENTERED=20011005
-         UPDATED=20180329
+         UPDATED=20190914
            SHORT="Lists open files for running processes"
 
 cat << EOF
