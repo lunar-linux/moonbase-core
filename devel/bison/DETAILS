@@ -1,20 +1,19 @@
           MODULE=bison
-         VERSION=3.4.1
+         VERSION=3.4.2
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
+      SOURCE_VFY=sha256:27d05534699735dc69e86add5b808d6cb35900ad3fd63fa82e3eb644336abfa0
         WEB_SITE=http://www.gnu.org/software/bison/bison.html
-      SOURCE_VFY=sha256:27159ac5ebf736dffd5636fd2cd625767c9e437de65baa63cb0de83570bd820d
          ENTERED=20010922
-         UPDATED=20190612
+         UPDATED=20190913
            SHORT="A replacement for the parser generator yacc"
 
 cat << EOF
 bison - Replacement for the parser generator yacc
-General purpose parser generator that converts a grammar description for
-a LALR context-free grammar into a C program to parse that grammar. It
-can be used to create a range of language parsers. Bison is upwardly
-compatible with Yacc, so properly written Yacc grammars and those users
-familiar with Yacc should have little trouble, although you do need to
-be fluent in C to use Bison.
+General purpose parser generator that converts a grammar description for a LALR
+context-free grammar into a C program to parse that grammar. It can be used to
+create a range of language parsers. Bison is upwardly compatible with Yacc, so
+properly written Yacc grammars and those users familiar with Yacc should have
+little trouble, although you do need to be fluent in C to use Bison.
 EOF
