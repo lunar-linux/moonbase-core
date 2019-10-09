@@ -1,8 +1,8 @@
 depends popt
 depends lvm2
-depends libgcrypt
 depends util-linux
 depends json-c
+depends %OSSL
 
 optional_depends argon2 \
                  "--enable-libargon2" \
