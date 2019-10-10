@@ -1,4 +1,5 @@
-OPTS+=" --disable-static" &&
+OPTS+=" --disable-static \
+        --without-docbook"
 
 default_build &&
 
