@@ -1,20 +1,20 @@
           MODULE=glibc
-         VERSION=2.29
+         VERSION=2.30
            MAJOR=${VERSION::4}
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/glibc
-      SOURCE_VFY=sha256:f3eeb8d57e25ca9fc13c2af3dae97754f9f643bc69229546828e3a240e2af04b
+      SOURCE_VFY=sha256:e2c4114e569afbe7edbc29131a43be833850ab9a459d81beb2588016d2bbb8af
         WEB_SITE=http://www.gnu.org/software/libc
          ENTERED=20010922
-         UPDATED=20190201
+         UPDATED=20191004
            SHORT="C library for use with GNU/Hurd and GNU/Linux"
 #           PSAFE=no
 
 cat << EOF
 glibc - Library for use with GNU/Hurd and GNU/Linux.
-GNU C Library is one of the most important components of the GNU Hurd
-and most modern Linux distributions. It is used by almost all C programs
-and provides the most essential program interface.
+GNU C Library is one of the most important components of the GNU Hurd and most
+modern Linux distributions. It is used by almost all C programs and provides
+the most essential program interface.
 EOF
