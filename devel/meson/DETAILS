@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:0f426ed1362c38bcc5b9027ec6aec3445d6db88e8d7249ed992e9af88a42d0e0
         WEB_SITE=http://mesonbuild.com/
          ENTERED=20160429
-         UPDATED=2019107
+         UPDATED=20191007
            SHORT="The meson build system"
             TYPE=python3
 
