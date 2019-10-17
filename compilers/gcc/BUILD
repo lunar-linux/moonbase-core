@@ -31,9 +31,7 @@ OPTS+=" --build=$BUILD                \
         --disable-libssp              \
         --disable-multilib            \
         --disable-libstdcxx-pch       \
-        --disable-libunwind-exceptions" &&
-
-OPTS+=" --libexecdir=/usr/lib" &&
+        --disable-libunwind-exceptions"
 
 ../configure $OPTS &&
 
@@ -41,8 +39,14 @@ make CFLAGS='-O' LIBCFLAGS='-g -O2' LIBCXXFLAGS='-g -O2 -fno-implicit-templates'
 prepare_install &&
 make install &&
 
-( cd /usr/lib/gcc/`arch`-pc-linux-gnu/$VERSION &&
+( cd /usr/libexec/gcc/`arch`-pc-linux-gnu/$VERSION &&
   strip cc1 cc1plus lto1 ) &&
+
+# Make the package archive a lot smaller
+#(
+#  cd /usr/lib/gcc/`arch`-pc-linux-gnu/$VERSION &&
+#  strip cc1 cc1plus lto1
+#) &&
 
 install -d /usr/share/gdb/auto-load &&
 mv /usr/lib/libstdc++.so.6.*-gdb.py /usr/share/gdb/auto-load/ &&
@@ -55,6 +59,4 @@ install -m0755 {${SCRIPT_DIRECTORY},/usr/bin}/c89 &&
 install -m0755 {${SCRIPT_DIRECTORY},/usr/bin}/c99 &&
 
 # remove the offending broken freetype link
-rm -f /usr/lib/gcc/$BUILD/$VERSION/include-fixed/freetype &&
-
-ln -sf /usr/bin/cpp /lib/cpp
+rm -f /usr/lib/gcc/$BUILD/$VERSION/include-fixed/freetype
