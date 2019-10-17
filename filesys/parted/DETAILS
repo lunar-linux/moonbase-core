@@ -1,18 +1,12 @@
           MODULE=parted
-         VERSION=3.2
+         VERSION=3.3
           SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=$MODULE-3.2-devmapper.patch.xz
-         SOURCE3=$MODULE-fat16_crash.patch.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/gnu/$MODULE
-   SOURCE2_URL=$PATCH_URL
-   SOURCE3_URL=$PATCH_URL
-      SOURCE_VFY=sha256:858b589c22297cacdf437f3baff6f04b333087521ab274f7ab677cb8c6bb78e4
-      SOURCE2_VFY=sha256:3576111326d643d5ae1acb9cc296b11d8c6430215a52ebfc287a70dc229546d9
-      SOURCE3_VFY=sha256:77e1cc03be81dd70420744e7afc2ce64877b2fdcad361411655cb795869f53ea
+      SOURCE_VFY=sha256:57e2b4bd87018625c515421d4524f6e3b55175b472302056391c5f7eccb83d44
         WEB_SITE=http://www.gnu.org/software/parted
          ENTERED=20010922
-         UPDATED=20180906
+         UPDATED=20191011
            SHORT="create, destroy, resize, and copy partitions"
 
 cat << EOF
