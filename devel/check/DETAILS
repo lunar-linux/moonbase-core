@@ -1,11 +1,11 @@
           MODULE=check
-         VERSION=0.12.0
+         VERSION=0.13.0
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://github.com/libcheck/check/releases/download/$VERSION/
-      SOURCE_VFY=sha256:464201098bee00e90f5c4bdfa94a5d3ead8d641f9025b560a27755a83b824234
+      SOURCE_VFY=sha256:c4336b31447acc7e3266854f73ec188cdb15554d0edd44739631da174a569909
         WEB_SITE=http://github.com/libcheck/check/
          ENTERED=20031201
-         UPDATED=20171112
+         UPDATED=20191022
            SHORT="A unit test framework for C"
 
 cat << EOF
