@@ -1,17 +1,18 @@
           MODULE=iptables
-         VERSION=1.8.2
+         VERSION=1.8.3
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=http://ftp.netfilter.org/pub/$MODULE
-      SOURCE_VFY=sha256:a3778b50ed1a3256f9ca975de82c2204e508001fc2471238c8c97f3d1c4c12af
+      SOURCE_VFY=sha256:a23cac034181206b4545f4e7e730e76e08b5f3dd78771ba9645a6756de9cdd80
         WEB_SITE=http://www.netfilter.org
          ENTERED=20010922
-         UPDATED=20181113
+         UPDATED=20190915
            SHORT="Tool to create netfilter rules"
            PSAFE=no
 
 cat << EOF
-iptables is built on top of netfilter: the new packet alteration
-framework for Linux. It is an enhancement on ipchains, and is used
-to control packet filtering, Network Address Translation (masquerading,
-portforwarding, transparent proxying), and special effects.
+iptables is built on top of netfilter: the new packet alteration framework
+for Linux.
+It is an enhancement on ipchains, and is used to control packet filtering,
+Network Address Translation (masquerading, portforwarding, transparent
+proxying), and special effects.
 EOF
