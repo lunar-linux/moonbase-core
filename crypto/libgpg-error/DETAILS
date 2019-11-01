@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:babd98437208c163175c29453f8681094bcaf92968a15cafb1a276076b33c97c
         WEB_SITE=http://www.gnupg.org
          ENTERED=20020212
-         UPDATED=20190320
+         UPDATED=20191101
            SHORT="Defines common error values for all GnuPG components"
 
 cat << EOF
