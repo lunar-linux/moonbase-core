@@ -1,8 +1,8 @@
           MODULE=glib-2
-         VERSION=62.3
-          SOURCE=$MODULE.$VERSION.tar.xz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE.$VERSION
-      SOURCE_URL=$GNOME_URL/sources/glib/${MODULE#*-}.${VERSION%.*}
+         VERSION=2.62.3
+          SOURCE=${MODULE%-*}-$VERSION.tar.xz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%-*}-$VERSION
+      SOURCE_URL=$GNOME_URL/sources/glib/${VERSION%.*}
       SOURCE_VFY=sha256:4400adc9f0d3ffcfe8e84225210370ce3f9853afb81812ddadb685325aa655c4
         WEB_SITE=http://library.gnome.org/devel/glib
          ENTERED=20020313
