@@ -1,0 +1,11 @@
+--- Makefile.old	2019-12-07 21:45:11.000000000 +0200
++++ Makefile	2019-12-09 21:23:44.950172642 +0200
+@@ -16,7 +16,6 @@
+ ifeq ($(GOLANG),yes)
+ 	$(MAKE) -C go $@
+ endif
+-	$(MAKE) -C tests $@
+ 	$(MAKE) -C progs $@
+ 	$(MAKE) -C doc $@
+ 	$(MAKE) -C kdebug $@
+
