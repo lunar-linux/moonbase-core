@@ -8,7 +8,6 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-$VERSION
         REPLACES=pkgconfig
          ENTERED=20180619
          UPDATED=20190723
-         :x
            SHORT="Package compiler and linker metadata toolkit"
 
 cat << EOF
