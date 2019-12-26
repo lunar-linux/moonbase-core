@@ -1,0 +1,14 @@
+--- ./libcap/Makefile.old	2019-12-26 17:11:17.292794183 +0200
++++ ./libcap/Makefile		2019-12-26 17:34:16.845073260 +0200
+@@ -88,9 +88,9 @@
+ 	install -m 0644 libcap.pc $(FAKEROOT)$(PKGCONFIGDIR)/libcap.pc
+ ifeq ($(GOLANG),yes)
+ 	mkdir -p -m 0755 $(FAKEROOT)$(GOPKGDIR)/libcap/cap
+-	install -m 0644 src/libcap/cap/* $(FAKEROOT)$(GOPKGDIR)/libcap/cap/
++	install -m 0644 ../go/src/libcap/cap/* $(FAKEROOT)$(GOPKGDIR)/libcap/cap/
+ 	mkdir -p -m 0755 $(FAKEROOT)$(GOPKGDIR)/libcap/psx
+-	install -m 0644 src/libcap/psx/* $(FAKEROOT)$(GOPKGDIR)/libcap/psx/
++	install -m 0644 ../go/src/libcap/psx/* $(FAKEROOT)$(GOPKGDIR)/libcap/psx/
+ endif
+ 
+ clean:
