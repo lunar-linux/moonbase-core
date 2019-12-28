@@ -31,11 +31,7 @@ make DESTDIR=$SOURCE_DIRECTORY/__shadowdest/ suidperms=4711 install &&
 # remove the installed chfn, chsh, login, nologin, su, vigr and vipw apps
 # util-linux install these apps in Lunar
 cp $SOURCE_DIRECTORY/__shadowdest/usr/bin/login /tmp/ &&
-rm $SOURCE_DIRECTORY/__shadowdest/usr/bin/{login,su,chfn,chsh,nologin} &&
-rm $SOURCE_DIRECTORY/__shadowdest/usr/sbin/{vigr,vipw,logoutd} &&
-
-# Move stuff to bin
-mv $SOURCE_DIRECTORY/__shadowdest/usr/sbin/* $SOURCE_DIRECTORY/__shadowdest/usr/bin/ &&
+rm $SOURCE_DIRECTORY/__shadowdest/usr/bin/{login,su,chfn,chsh,nologin,vigr,vipw,logoutd} &&
 mv $SOURCE_DIRECTORY/__shadowdest/usr/bin/{newgrp,sg} &&
 rm -rf $SOURCE_DIRECTORY/__shadowdest/usr/sbin &&
 
