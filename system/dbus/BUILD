@@ -25,7 +25,7 @@ default_build &&
 
 # The following used to be in POST_INSTALL but the service wasn't starting
 # on FIRST install due to the lack of existing /var/lib/dbus
-add_priv_user messagebus:messagebus -d /dev/null -s /bin/false &&
+add_priv_user messagebus:messagebus -d /dev/null -s /usr/bin/false &&
 mkdir -p /var/run/dbus &&
 chown -R messagebus:messagebus /var/run/dbus &&
 
