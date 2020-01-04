@@ -10,7 +10,7 @@ Type=forking
 ExecStart=/usr/sbin/dmeventd
 ExecReload=/usr/sbin/dmeventd -R
 Environment=SD_ACTIVATION=1
-PIDFile=/var/run/dmeventd.pid
+PIDFile=/run/dmeventd.pid
 OOMScoreAdjust=-1000
 
 [Install]
