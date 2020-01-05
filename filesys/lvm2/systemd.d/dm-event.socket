@@ -3,8 +3,8 @@ Description=Device-mapper event daemon FIFOs
 DefaultDependencies=no
 
 [Socket]
-ListenFIFO=/var/run/dmeventd-server
-ListenFIFO=/var/run/dmeventd-client
+ListenFIFO=/run/dmeventd-server
+ListenFIFO=/run/dmeventd-client
 SocketMode=0600
 
 [Install]
