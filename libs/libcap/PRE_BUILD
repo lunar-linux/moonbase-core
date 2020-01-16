@@ -1,7 +1,3 @@
 default_pre_build &&
-
-# no static libs
-sedit "s/all: \$(MINLIBNAME) \$(STALIBNAME)/all: \$(MINLIBNAME)/g" libcap/Makefile &&
-sedit "/install -m 0644 \$(STALIBNAME)/d" libcap/Makefile &&
 sedit "/SBINDIR/s#sbin#bin#" Make.Rules &&
-sedit "s#/bin/##g" progs/quicktest.sh
+sedit 's;$(LIBDIR);/lib;g' pam_cap/Makefile
