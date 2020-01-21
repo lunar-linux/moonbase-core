@@ -1,29 +1,53 @@
           MODULE=lunar
-         VERSION=35
+         VERSION=36
           SOURCE=$MODULE-$VERSION.tar.bz2
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
       SOURCE_URL=http://lunar-linux.org/lunar/lunar/
-      SOURCE_VFY=sha256:afd64be26f46a35a16929a50addb0219252694a44f467c3ad37f946799407952
+      SOURCE_VFY=sha256:adfb4f6a648887da6b63c72073d117c61a0edebca38bc4d4b69278e2e0734572
         WEB_SITE=http://lunar-linux.org/
          ENTERED=20020218
-         UPDATED=20190924
+         UPDATED=20200121
            SHORT="lunar contains the package management tools for Lunar-Linux."
 USE_WRAPPERS=off
 cat << EOF
 lunar - Tools package management by source.
 
 lunar includes the following files:
-/etc/lunar/config /etc/lunar/dialogrc /etc/lunar/local /etc/lunar/mirrors configuration files.
-/usr/share/doc/lunar/COPYING-2.0 /usr/share/doc/lunar/CVS /usr/share/doc/lunar/ChangeLog /usr/share/doc/lunar/Changelog /usr/share/doc/lunar/README /usr/share/doc/lunar/contributions /usr/share/doc/lunar/gpl.html documentation, please read
-/usr/sbin/lunar menu driven interface
-/usr/sbin/lget downloads modules sources
-/usr/sbin/lin installs modules
-/usr/sbin/lrm removes modules
-/usr/sbin/lvu provides information about the box
-/var/lib/lunar/excluded list of files that are ignored
-/var/lib/lunar/protected list of files that will not be deleted
-/var/lib/lunar/subroutines common subroutines
 
-and man pages.
+Shell scripts:
+    /usr/sbin/lunar  menu driven interface
+    /usr/sbin/lget   downloads modules sources
+    /usr/sbin/lin    installs modules
+    /usr/sbin/lrm    removes modules
+    /usr/sbin/lvu    provides information about the box
+
+Configuration files:
+    /etc/lunar/config    base Lunar config
+    /etc/lunar/dialogrc  color definitions for Lunar menus
+    /etc/lunar/local     [directory] configuration local to your system
+    /etc/lunar/mirrors   [directory] lists of mirrors
+
+Documentation (please read):
+    /usr/share/doc/lunar/doc/COPYING-2.0
+    /usr/share/doc/lunar/doc/core-documentation [directory]
+    /usr/share/doc/lunar/doc/CREDITS
+    /usr/share/doc/lunar/doc/gpl.html
+    /usr/share/doc/lunar/doc/module-example [directory]
+    /usr/share/doc/lunar/README
+
+And also:
+    /var/lib/lunar/excluded    list of files that are ignored
+    /var/lib/lunar/protected   list of files that will not be deleted
+    /var/lib/lunar/functions   [directory] common functions
+
+and man pages:
+    /usr/share/man/man1/lvu.1.gz
+    /usr/share/man/man5/moonbase.5.gz
+    /usr/share/man/man8/lcrash.8.gz
+    /usr/share/man/man8/lfirsttime.8.gz
+    /usr/share/man/man8/lget.8.gz
+    /usr/share/man/man8/lin.8.gz
+    /usr/share/man/man8/lrm.8.gz
+    /usr/share/man/man8/lunar.8.gz
 
 EOF
