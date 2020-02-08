@@ -1,11 +1,11 @@
           MODULE=dbus
-         VERSION=1.12.16
-          SOURCE=$MODULE-$VERSION.tar.gz
+         VERSION=1.13.12
+          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://$MODULE.freedesktop.org/releases/$MODULE
-      SOURCE_VFY=sha256:54a22d2fa42f2eb2a871f32811c6005b531b9613b1b93a0d269b05e7549fec80
+      SOURCE_VFY=sha256:7588649b56dd257c6a5f85a8c45aa2dfdf9e99f4de3983710f452081ca43eca6
         WEB_SITE=http://dbus.freedesktop.org
          ENTERED=20031219
-         UPDATED=20190611
+         UPDATED=20200125
            SHORT="A message bus system for applications"
 LUNAR_RESTART_SERVICES=off
 
