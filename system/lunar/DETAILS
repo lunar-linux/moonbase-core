@@ -1,12 +1,12 @@
           MODULE=lunar
-         VERSION=35
+         VERSION=38
           SOURCE=$MODULE-$VERSION.tar.bz2
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
       SOURCE_URL=http://lunar-linux.org/lunar/lunar/
-      SOURCE_VFY=sha256:afd64be26f46a35a16929a50addb0219252694a44f467c3ad37f946799407952
+      SOURCE_VFY=sha256:2cadb3325b395cb2d3276e5febf08190855a70de96de2c8df8fe3429147ccd25
         WEB_SITE=http://lunar-linux.org/
          ENTERED=20020218
-         UPDATED=20190924
+         UPDATED=20200208
            SHORT="lunar contains the package management tools for Lunar-Linux."
 USE_WRAPPERS=off
 cat << EOF
