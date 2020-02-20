@@ -1,11 +1,11 @@
           MODULE=procps
-         VERSION=ng-3.3.15
+         VERSION=ng-3.3.16
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://downloads.sourceforge.net/project/$MODULE-ng/Production/
-      SOURCE_VFY=sha256:10bd744ffcb3de2d591d2f6acf1a54a7ba070fdcc432a855931a5057149f0465
+      SOURCE_VFY=sha256:925eacd65dedcf9c98eb94e8978bbfb63f5de37294cc1047d81462ed477a20af
         WEB_SITE=http://gitlab.com/procps-ng/procps/
          ENTERED=20010922
-         UPDATED=20180601
+         UPDATED=20200220
            SHORT="Utilities for monitoring your system and its processes"
 
 cat << EOF
