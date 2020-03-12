@@ -1,5 +1,5 @@
           MODULE=bash
-         VERSION=5.0.11
+         VERSION=5.0.16
     BASE_VERSION=${VERSION%.*}
           SOURCE=$MODULE-$BASE_VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$BASE_VERSION
@@ -9,7 +9,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$BASE_VERSION
       SOURCE_VFY=sha256:b4a80f2ac66170b2913efbfb9f2594f1f76c7b1afd11f799e22035d63077fb4d
         WEB_SITE=http://www.gnu.org/software/bash
          ENTERED=20010922
-         UPDATED=20190925
+         UPDATED=20200208
            SHORT="A shell of the GNU operating system"
 
 cat << EOF
