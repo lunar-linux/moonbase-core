@@ -1,7 +1,7 @@
           MODULE=cryptsetup
          VERSION=2.3.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://www.kernel.org/pub/linux/utils/cryptsetup/v${VERSION%.*}
+      SOURCE_URL=http://mirrors.kernel.org/pub/linux/utils/cryptsetup/v${VERSION%.*}
       SOURCE_VFY=sha256:92aba4d559a2cf7043faed92e0f22c5addea36bd63f8c039ba5a8f3a159fe7d2
         WEB_SITE=http://code.google.com/p/cryptsetup
          ENTERED=20050309
