@@ -1,12 +1,12 @@
           MODULE=gmp
-         VERSION=6.1.2
+         VERSION=6.2.0
           SOURCE=$MODULE-${VERSION}.tar.xz
    SOURCE_URL[0]=http://gmplib.org/download/$MODULE/
    SOURCE_URL[1]=$GNU_URL/$MODULE
-      SOURCE_VFY=sha256:87b565e89a9a684fe4ebeeddb8399dce2599f9c9049854ca8c0dfbdea0e21912
+      SOURCE_VFY=sha256:258e6cd51b3fbdfc185c716d55f82c08aff57df0c6fbd143cf6ed561267a1526
         WEB_SITE=http://gmplib.org
          ENTERED=20010922
-         UPDATED=20161225
+         UPDATED=20200214
            SHORT="The GNU mathematics precision library"
 
 cat << EOF
