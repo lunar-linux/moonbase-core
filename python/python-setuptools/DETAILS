@@ -1,15 +1,17 @@
-          MODULE=python-setuptools
-         VERSION=45.0.0
+# THIS MODULE MIRRORS ez_setup.py SO DON'T MAKE IT USE
+# THE UPSTREAM REPOSITORY. THIS COULD BREAK MODULES USING setuptools
+          MODULE=python2-setuptools
+         VERSION=46.0.0
           SOURCE=setuptools-$VERSION.tar.gz
- SOURCE_URL_FULL=https://github.com/pypa/setuptools/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:1977aee7d2d4b6deb3684da3a27def2db6db517b46d0af32585f15f8839740be
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/setuptools-$VERSION
+ SOURCE_URL_FULL=https://github.com/pypa/setuptools/archive/v$VERSION.tar.gz
+      SOURCE_VFY=sha256:
         WEB_SITE=http://packages.python.org/distribute/
-         ENTERED=20071221
-         UPDATED=20200115
-            TYPE=python3
-        REPLACES=setuptools-3
-           SHORT="A simplified packaging system for Python 3.x"
+         ENTERED=20071008
+         UPDATED=20200316
+            TYPE=python2
+        REPLACES=setuptools
+           SHORT="A simplified packaging system for Python modules"
 
 cat << EOF
 setuptools is a collection of enhancements to the Python distutils
