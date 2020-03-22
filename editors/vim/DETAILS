@@ -1,16 +1,13 @@
            MODULE=vim
-          VERSION=8.2
-            MAJOR=${VERSION//./}
-           SOURCE=$MODULE-$VERSION.tar.bz2
- SOURCE_DIRECTORY=$BUILD_DIRECTORY/vim${MAJOR}
-    SOURCE_URL[0]=http://ftp.vim.org/pub/vim/unix
-    SOURCE_URL[1]=http://mirrors-usa.go-parts.com/pub/vim/unix
-    SOURCE_URL[2]=http://mirror.netinch.com/pub/vim/unix
-       SOURCE_VFY=sha256:f087f821831b4fece16a0461d574ccd55a8279f64d635510a1e10225966ced3b
+          VERSION=8.2.0343
+            MAJOR=${VERSION%.*}
+           SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=https://github.com/vim/vim/archive/v${VERSION}/
+       SOURCE_VFY=sha256:f2ca740b7f1b68d92a724766e860701593a88b742ca784b58500b9e4bf224053
          WEB_SITE=http://vim.sf.net
        MAINTAINER=sofar@lunar-linux.org
           ENTERED=20010922
-          UPDATED=20191212
+          UPDATED=20200302
             SHORT="Improved version of vi"
 
 cat << EOF

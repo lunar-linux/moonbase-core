@@ -18,4 +18,4 @@ rm -f /usr/bin/vim /usr/bin/vi  &&
 make install &&
 
 ln -sf /usr/bin/vim /usr/bin/vi &&
-cp -f $SCRIPT_DIRECTORY/vimrc /usr/share/vim/vim${MAJOR}/sample.vimrc
+cp -f $SCRIPT_DIRECTORY/vimrc /usr/share/vim/vim${MAJOR//./}/sample.vimrc
