@@ -1,13 +1,13 @@
            MODULE=vim
-          VERSION=8.2.0343
+          VERSION=8.2.0510
             MAJOR=${VERSION%.*}
            SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=https://github.com/vim/vim/archive/v${VERSION}/
-       SOURCE_VFY=sha256:f2ca740b7f1b68d92a724766e860701593a88b742ca784b58500b9e4bf224053
+       SOURCE_VFY=sha256:96444016c54211badcf260d50064fa341a69049eced8afc80e157470aef94053
          WEB_SITE=http://vim.sf.net
        MAINTAINER=sofar@lunar-linux.org
           ENTERED=20010922
-          UPDATED=20200302
+          UPDATED=20200404
             SHORT="Improved version of vi"
 
 cat << EOF
