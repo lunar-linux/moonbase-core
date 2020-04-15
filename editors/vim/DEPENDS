@@ -15,6 +15,11 @@ optional_depends gtk+-2 \
                  "--enable-gui=gtk2 --with-x=yes" "" \
                  "for GTK 2.x Graphical User Interface support"
 
+optional_depends libcanberra \
+                 "--enable-canberra" \
+                 "--disable-canberra" \
+                 "for XDG-compatible sound generation"
+
 # broken due to API changes
 # these might work again with the upcoming releases
 optional_depends "perl" "--enable-perlinterp=yes" "--disable-perlinterp" "for Perl interpreter support"
