@@ -11,7 +11,7 @@
       SOURCE_VFY=sha256:4a31ae9edcb469dc626e9e70f61c7a87104c26936126ccac24be6d45d4cfe46a
         WEB_SITE=http://roy.marples.name/projects/dhcpcd
          ENTERED=20011126
-         UPDATED=20200408
+         UPDATED=20200420
            SHORT="DHCP client/daemon that works with @home"
 
 cat << EOF
