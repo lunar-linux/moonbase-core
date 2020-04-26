@@ -1,7 +1,6 @@
-(
 
-  OPTS+=" --disable-static" &&
+./autogen.sh &&
 
-  default_build
+OPTS+=" --disable-static" &&
 
-) > $C_FIFO 2>&1
+default_build
