@@ -1,4 +1,7 @@
-OPTS+=" --rundir=/run \
+add_priv_user dhcpcd:dhcpcd -s /usr/bin/false &&
+
+OPTS+=" --runstatedir=/run \
+        --privsepuser=dhcpcd \
         --dbdir=/var/lib/dhcpcd"
 
 default_build &&
