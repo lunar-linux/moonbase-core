@@ -6,6 +6,7 @@ fi &&
 
 OPTS+=" --localstatedir=/var           \
         --libexecdir=/usr/lib/dbus-1.0 \
+        --runstatedir=/run             \
         --disable-static               \
         --disable-tests                \
         --disable-asserts              \
