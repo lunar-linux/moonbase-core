@@ -2,4 +2,6 @@ default_pre_build &&
 
 if ! in_depends $MODULE asciidoc || ! in_depends $MODULE xmlto; then
   message "${PROBLEM_COLOR}WARNING: ${DEFAULT_COLOR}Installation of docs disabled, to enable documentation install asciidoc and xmlto then rebuild $MODULE!"
-fi
+fi &&
+
+./autogen.sh

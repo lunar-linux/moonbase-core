@@ -1,8 +1,6 @@
-./autogen.sh &&
-
 if ! in_depends $MODULE asciidoc || ! in_depends $MODULE xmlto; then
   OPTS+=" --disable-documentation"
-fi &&
+fi
 
 default_build &&
 
