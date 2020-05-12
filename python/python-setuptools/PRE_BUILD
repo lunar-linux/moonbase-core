@@ -1,2 +1,7 @@
 default_pre_build &&
+
+# Fix 2to3 warning
+sedit '/2081/i \    ignore:2to3 support is deprecated:setuptools.SetuptoolsDeprecationWarning' \
+      pytest.ini &&
+
 python3 bootstrap.py
