@@ -1,12 +1,12 @@
           MODULE=python-setuptools
-         VERSION=46.3.0
+         VERSION=46.3.1
           SOURCE=setuptools-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/setuptools-$VERSION
  SOURCE_URL_FULL=https://github.com/pypa/setuptools/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:e5459fbbd4634045f20ebfc1e1229c592ecd8a001c07d5958b3373c0e9ced703
+      SOURCE_VFY=sha256:3577da2e8f0f69e849b370b17af9cf0d8939095193bd3a43feb2932f49219795
         WEB_SITE=http://packages.python.org/distribute/
          ENTERED=20071221
-         UPDATED=20200514
+         UPDATED=20200515
             TYPE=python3
         REPLACES=setuptools-3
            SHORT="A simplified packaging system for Python 3.x"
