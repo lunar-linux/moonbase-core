@@ -27,37 +27,39 @@ cd $INSTALL_ROOT &&
 ../configure --prefix=/usr             \
              --infodir=/usr/share/info \
              --mandir=/usr/share/man   \
-             --host=$BUILD             \
-             --build=$BUILD            \
-             --with-bugurl=https://github.com/lunar-linux/moonbase-core/issues \
-             --with-elf                \
-             --without-gd              \
-             --without-cvs             \
-             --with-__thread           \
-             --with-tls                \
+             --host=$BUILD   \
+             --build=$BUILD  \
+             --without-gd    \
+             --without-cvs   \
+             --with-elf      \
+             --with-tls      \
+             --with-__thread \
              --with-headers=/usr/include \
-             --enable-bind-now         \
-             --enable-kernel=3.2       \
-             --enable-shared           \
-             --enable-obsolete-rpc     \
-             --enable-obsolete-nsl     \
-             --enable-bind-now         \
-             --enable-add-ons          \
-             --enable-lock-elision     \
+             --with-bugurl=https://github.com/lunar-linux/moonbase-core/issues \
+             --enable-cet          \
+             --enable-shared       \
+             --enable-add-ons      \
+             --enable-bind-now     \
+             --enable-obsolete-rpc \
+             --enable-obsolete-nsl \
+             --enable-lock-elision \
              --enable-stack-protector=strong \
              --enable-stackguard-randomization \
-             --disable-timezone-tools  \
-             --disable-multi-arch      \
-             --disable-profile         \
-             --disable-werror          \
+             --disable-werror         \
+             --disable-profile        \
+             --disable-systemtap      \
+             --disable-multi-arch     \
+             --disable-timezone-tools \
              $OPTS &&
+
+#             --enable-kernel=3.2   \
 
 # build libraries with hardening disabled
 echo "build-programs=no" >> configparms &&
 make &&
 
 # Re-enable hardening
-sedit '/build-programs=/s;no;yes;' configparms &&
+sedit '/build-programs=/s;no;yes;'   configparms &&
 echo "CC  += -D_FORTIFY_SOURCE=2" >> configparms &&
 echo "CXX += -D_FORTIFY_SOURCE=2" >> configparms &&
 make &&
