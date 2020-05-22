@@ -1,12 +1,12 @@
           MODULE=python-six
-         VERSION=1.14.0
+         VERSION=1.15.0
           SOURCE=six-$VERSION.tar.gz
-      SOURCE_URL=https://pypi.io/packages/source/s/six/
-      SOURCE_VFY=sha256:236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/six-$VERSION
+      SOURCE_URL=https://pypi.io/packages/source/s/six/
+      SOURCE_VFY=sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259
         WEB_SITE=https://pypi.python.org/pypi/six/
          ENTERED=20020520
-         UPDATED=20200118
+         UPDATED=20200522
             TYPE=python3
         REPLACES=six
            SHORT="Python 2 and 3 compatibility utilities"
