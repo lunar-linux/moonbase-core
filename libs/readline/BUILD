@@ -1,12 +1,3 @@
-# Real and working fix for readline major version upgrade
-mkdir -p /tmp/old.libraries &&
-cp -f /lib/libreadline.so.* /tmp/old.libraries &&
-cp -f /lib/libhistory.so.*  /tmp/old.libraries &&
-LD_LIBRARY_PATH=/tmp/old.libraries:$LD_LIBRARY_PATH &&
-
-OUR_OLD_READLINE_VVV=$(lvu installed readline | sed -r 's/([0-9]+).+/\1/') &&
-set_module_config OUR_OLD_READLINE_VVV "$OUR_OLD_READLINE_VVV" &&
-
 # ************************ WARNING *************************
 # DO NOT MESS WITH THE CONFIGURE STUFF here unless you
 # really know what you're doing! We chose the lib location
