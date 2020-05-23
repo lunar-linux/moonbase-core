@@ -2,9 +2,21 @@ depends zlib
 depends lzo
 depends e2fsprogs
 
-optional_depends zstd "" "--disable-zstd" "for zstd compression support" n
-optional_depends python  "--enable-python" "--disable-python" \
-    "to build libbtrfsutil Python bindings"
+optional_depends python \
+                 "--enable-python" \
+                 "--disable-python" \
+                 "to build the Python bindings"
 
-optional_depends xmlto    "" "" "for documentation (also requires asciidoc)" n
-optional_depends asciidoc "" "" "for documentation (also requires xmlto)" n
+optional_depends libgcrypt \
+                 "--with-crypto=libgcrypt" ""\
+                 "to use libgcrypt for encryption"
+
+optional_depends libsodium \
+                 "--with-crypto=libsodium" ""\
+                 "to use libsodium for encryption" \
+                 "n"
+
+optional_depends zstd "" "--disable-zstd" "for zstd compression support" "n"
+
+optional_depends xmlto    "" "" "for documentation (also requires asciidoc)" "n"
+optional_depends asciidoc "" "" "for documentation (also requires xmlto)" "n"
