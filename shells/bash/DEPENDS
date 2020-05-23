@@ -1,3 +1,8 @@
-depends readline
 depends bison
 depends ncurses
+
+optional_depends readline \
+                 "--with-installed-readline"  \
+                 "--without-installed-readline" \
+                 "for  the system installed readline library support" \
+                 "n"
