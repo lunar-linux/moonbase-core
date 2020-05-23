@@ -1,3 +1,4 @@
 default_pre_build &&
+
 sedit "/SBINDIR/s#sbin#bin#" Make.Rules &&
 sedit 's;$(LIBDIR);/lib;g' pam_cap/Makefile
