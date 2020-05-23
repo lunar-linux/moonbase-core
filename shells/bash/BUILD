@@ -1,11 +1,11 @@
 bad_flags -malign-double &&
 
-OPTS+=" --bindir=/bin                 \
-        --enable-readline             \
-        --without-installed-readline  \
-        --with-curses                 \
-        --without-bash-malloc         \
-        --disable-profiling"         &&
+OPTS+=" --bindir=/bin \
+        --with-curses \
+        --enable-readline \
+        --disable-profiling \
+        --without-bash-malloc \
+        --without-installed-readline"
 
 default_build &&
 ln -sf bash /bin/sh &&
