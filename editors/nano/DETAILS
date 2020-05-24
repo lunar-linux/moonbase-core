@@ -1,33 +1,31 @@
           MODULE=nano
-         VERSION=4.9.2
+         VERSION=4.9.3
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=nanorc-20180319.bz2
       SOURCE_URL=http://www.nano-editor.org/dist/v4
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:31186eab2c266575a049d73216d422f3ad035304e071a82a9f34560b1cfee320
+      SOURCE_VFY=sha256:f7fa578ba6406a5e6785900038992dfb75b84bdcbf5c60d9b9a535ecbe02733c
      SOURCE2_VFY=sha256:3dfd4130f2eadf485d0f7b5f6ccbfd344aa295664bdbbc55132375169db09b06
         WEB_SITE=http://www.nano-editor.org
          ENTERED=20010922
-         UPDATED=20200506
+         UPDATED=20200524
            SHORT="Superior clone of the pico text editor"
 
 cat << EOF
 The nano project was started because of a few problems with the wonderfully
-easy-to-use and friendly Pico text editor. GNU nano
-features:
-* Autoconf support.
-* Truly free license (GNU GPL).
-* Goto-line# command w/o flag.
-* Case sensitive search function.
-* Interactive search and replace.
-* 2/3 - 1/8 size of Pico binary.
-* Slang and ncurses support.
-* Autoindent abillity.
-* Displayed tab width option.
-* Regular expression search and replace.
-* Toggles for cmdline flags via Meta keys.
-* Tab completion when reading/writing files.
-
+easy-to-use and friendly Pico text editor. GNU nano features:
+ * Autoconf support.
+ * Truly free license (GNU GPL).
+ * Goto-line# command w/o flag.
+ * Case sensitive search function.
+ * Interactive search and replace.
+ * 2/3 - 1/8 size of Pico binary.
+ * Slang and ncurses support.
+ * Autoindent abillity.
+ * Displayed tab width option.
+ * Regular expression search and replace.
+ * Toggles for cmdline flags via Meta keys.
+ * Tab completion when reading/writing files.
 The main disadvantage is lack of mailer integration, but this is also a
 strength. GNU nano aims to emulate Pico and perhaps provide extra functionality.
 EOF
