@@ -3,7 +3,12 @@ depends libidn2
 depends libmnl
 depends %OSSL
 depends sysfsutils
+depends meson
 
 optional_depends xinetd "" "" "for xinetd support"
 
-optional_depends docbook-utils "" "" "for documentation regeneration" n
+optional_depends docbook-utils \
+                 "-DBUILD_MANS=true" \
+                 "-DBUILD_MANS=false" \
+                 "for documentation regeneration" \
+                 "n"
