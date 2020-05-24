@@ -1,11 +1,11 @@
           MODULE=gnu-efi
-         VERSION=3.0.3
+         VERSION=3.0.12
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:c530f21a15fd9c214dd92d29a6caa20fac989289267512020b6da1f5e6f5b4cb
+      SOURCE_VFY=sha256:0196f2e1fd3c334b66e610a608a0e59233474c7a01bec7bc53989639aa327669
         WEB_SITE=http://sourceforge.net/projects/gnu-efi/
          ENTERED=20150705
-         UPDATED=20151008
+         UPDATED=20200524
          SHORT="Library for building EFI applications"
          PSAFE=no
 
