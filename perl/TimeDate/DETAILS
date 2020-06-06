@@ -1,12 +1,12 @@
           MODULE=TimeDate
-         VERSION=2.32
+         VERSION=2.33
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=https://www.cpan.org/authors/id/A/AT/ATOOMIC/
-      SOURCE_VFY=sha256:34eca099e375e2d142ea6cc935922c4980dc21c65ce7c24823ca08457c4bb3d6
+      SOURCE_VFY=sha256:c0b69c4b039de6f501b0d9f13ec58c86b040c1f7e9b27ef249651c143d605eb2
         WEB_SITE=http://search.cpan.org/~gbarr/TimeDate/
             TYPE=perl
          ENTERED=20021228
-         UPDATED=20200306
+         UPDATED=20200520
            SHORT="Convert date strings into time format"
 cat << EOF
 This distribution replaces my earlier GetDate distribution, which was
