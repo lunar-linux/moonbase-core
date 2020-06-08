@@ -13,7 +13,7 @@ fi
      SOURCE2_VFY=sha256:07e737cfdc79382dc259c4844a150d8d72ebbcdc9d7e03a9503f8f8e19f1aea4
          WEB_SITE=https://www.kernel.org/
          ENTERED=20111121
-         UPDATED=2020520
+         UPDATED=20200520
            SHORT="The coe of a Linux GNU Operating System"
      KEEP_SOURCE=on
            TMPFS=off
