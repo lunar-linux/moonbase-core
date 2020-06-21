@@ -1,4 +1,4 @@
 depends which
 
 optional_depends gdbm "" "" "for gdbm support"
-optional_depends db   "" "" "for Berkely Database support" n
+optional_depends db   "" "" "for Berkely Database support" "n"
