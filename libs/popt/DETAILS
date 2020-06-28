@@ -1,11 +1,12 @@
           MODULE=popt
-         VERSION=1.16
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://rpm5.org/files/popt
-      SOURCE_VFY=sha256:e728ed296fe9f069a0e005003c3d6b2dde3d9cad453422a10d6558616d304cc8
-        WEB_SITE=http://rpm5.org
+         VERSION=1.18
+          SOURCE=$MODULE-$VERSION-release.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-$VERSION-release
+      SOURCE_URL=https://github.com/rpm-software-management/popt/archive/
+      SOURCE_VFY=sha256:36245242c59b5a33698388e415a3e1efa2d48fc4aead91aeb2810b4c0744f4e3
+        WEB_SITE=https://github.com/rpm-software-management/popt/
          ENTERED=20010922
-         UPDATED=20160717
+         UPDATED=20200627
            SHORT="The popt library exists essentially for parsing command line options"
 
 cat << EOF
