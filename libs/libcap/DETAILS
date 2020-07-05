@@ -1,11 +1,11 @@
           MODULE=libcap
-         VERSION=2.31
+         VERSION=2.37
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://mirrors.kernel.org/pub/linux/libs/security/linux-privs/libcap2/
-      SOURCE_VFY=sha256:c6088de41e1c97fa8047e2e7de0e4ee0cd13e6cc16538022230ae76727a87c46
+      SOURCE_URL=http://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/
+      SOURCE_VFY=sha256:17ea6b808e06271886d3e2a55aa5df16f0976e36eb0391e8f630d6c735bec838
         WEB_SITE=http://www.kernel.org/pub/linux/libs/security/linux-privs
          ENTERED=20040906
-         UPDATED=20200208
+         UPDATED=20200705
            SHORT="POSIX 1003.1e capabilities"
 
 cat << EOF

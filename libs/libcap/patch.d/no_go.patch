@@ -1,0 +1,31 @@
+--- Makefile.old	2020-07-04 01:47:35.000000000 +0300
++++ Makefile	2020-07-05 14:33:32.541485399 +0300
+@@ -14,8 +14,8 @@
+ 	$(MAKE) -C pam_cap $@
+ endif
+ ifeq ($(GOLANG),yes)
+-	$(MAKE) -C go $@
+-	rm -f cap/go.sum
++#	$(MAKE) -C go $@
++#	rm -f cap/go.sum
+ endif
+ 	$(MAKE) -C tests $@
+ 	$(MAKE) -C progs $@
+@@ -44,7 +44,7 @@
+ 	$(MAKE) -C pam_cap $@
+ endif
+ ifeq ($(GOLANG),yes)
+-	make -C go $@
++#	make -C go $@
+ endif
+ 	make -C progs $@
+ 
+@@ -54,7 +54,7 @@
+ 	$(MAKE) -C pam_cap $@
+ endif
+ ifeq ($(GOLANG),yes)
+-	make -C go $@
++#	make -C go $@
+ endif
+ 	make -C progs $@
+ 
