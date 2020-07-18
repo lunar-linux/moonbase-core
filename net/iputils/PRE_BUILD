@@ -1,4 +1,8 @@
 default_pre_build &&
+unpack ${SOURCE2} &&
+
+# remove the doc directory
+rm -fR doc &&
 
 # Set $CFLAGS
 sedit "s;^CCOPTOPT=.*;CCOPTOPT=$CFLAGS;" Makefile &&
