@@ -1,7 +1,7 @@
-OPTS+=" --exec-prefix=/usr    \
-        --mandir=/usr/share/man" &&
+CFLAGS+=' -fcommon' # fix the compilation with gcc 10.x
 
-OPTS+=" --libexecdir=/usr/bin" &&
+OPTS+=" --exec-prefix=/usr \
+        --mandir=/usr/share/man"
 
 default_build &&
 
