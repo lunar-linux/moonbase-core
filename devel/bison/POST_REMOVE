@@ -1,1 +1,1 @@
-install-info  --delete bison  --info-dir /usr/info
+install-info --delete bison --info-dir /usr/info
