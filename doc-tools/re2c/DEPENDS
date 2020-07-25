@@ -1,4 +1,5 @@
 optional_depends go \
                  "--enable-golang" \
                  "--disable-golang" \
-                 "for Go language support"
+                 "for Go language support" \
+                 "n"
