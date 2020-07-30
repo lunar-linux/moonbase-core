@@ -1,13 +1,13 @@
           MODULE=json-c
-         VERSION=0.13.1
-         VSUFFIX=20180305
+         VERSION=0.15
+         VSUFFIX=20200726
           SOURCE=$MODULE-$VERSION-$VSUFFIX.tar.gz
       SOURCE_URL=https://github.com/json-c/json-c/archive
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-$VERSION-$VSUFFIX
-      SOURCE_VFY=sha256:5d867baeb7f540abe8f3265ac18ed7a24f91fe3c5f4fd99ac3caba0708511b90
+      SOURCE_VFY=sha256:4ba9a090a42cf1e12b84c64e4464bb6fb893666841d5843cc5bef90774028882
         WEB_SITE=https://github.com/json-c/json-c
          ENTERED=20111005
-         UPDATED=20180325
+         UPDATED=20200730
            SHORT="JavaScript Object Notation"
 
 cat << EOF
