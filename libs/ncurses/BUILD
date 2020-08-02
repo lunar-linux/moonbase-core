@@ -10,8 +10,6 @@ rm -rf /usr/share/terminfo &&
 # system!
 unset CC CXX &&
 
-OPTS+=" PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig" &&
-
 set -x &&
 ./configure  --build=$BUILD                           \
              --prefix=/usr                            \
@@ -26,6 +24,7 @@ set -x &&
              --with-shared                            \
              --with-manpage-format=gzip               \
              --with-terminfo-dirs=/usr/share/terminfo \
+             --with-pkg-config-libdir=/usr/lib/pkgconfig \
              $OPTS                                   &&
 
 default_make &&
@@ -58,6 +57,7 @@ set -x &&
              --with-shared                            \
              --with-manpage-format=gzip               \
              --with-terminfo-dirs=/usr/share/terminfo \
+             --with-pkg-config-libdir=/usr/lib/pkgconfig \
             $OPTS                                    &&
 
 set +x &&
