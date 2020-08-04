@@ -1,5 +1,4 @@
-mv /var/lock/installing.glibc /var/lock/installing.$$
+# Update fixed headers
+/usr/libexec/gcc/$(arch)-pc-linux-gnu/$(installed_version gcc)/install-tools/mkheaders
 
 lin -c timezone-data
-
-mv /var/lock/installing.$$ /var/lock/installing.glibc
