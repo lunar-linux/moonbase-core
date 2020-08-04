@@ -3,8 +3,5 @@ default_pre_build &&
 # installwatch fails to track files installed using tar
 sedit 's;^\(build_install_headers_dir=\).*;\1install-headers-cp;' gcc/config.build &&
 
-# We use libiberty.a from binutils instead
-sedit 's/install_to_$(INSTALL_DEST) //' libiberty/Makefile.in &&
-
 # store old version for POST_INSTALL
 set_module_config OLD_GCC_VERSION "$(installed_version $MODULE)"
