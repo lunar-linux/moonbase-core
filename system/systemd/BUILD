@@ -7,7 +7,8 @@ OPTS+=" -Drootprefix=/usr \
         -Dfallback-hostname=lunarlinux \
         -Drpmmacrosdir=no \
         -Dsysvinit-path= \
-        -Dsysvrcnd-path="
+        -Dsysvrcnd-path= \
+        -Dhomed=false"
 
 add_priv_group systemd-journal &&
 
