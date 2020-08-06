@@ -45,7 +45,6 @@ cd $INSTALL_ROOT &&
              --enable-add-ons         \
              --enable-bind-now        \
              --enable-obsolete-rpc    \
-             --enable-obsolete-nsl    \
              --enable-lock-elision    \
              --enable-stack-protector=strong \
              --disable-werror         \
@@ -77,7 +76,6 @@ RT=/lib/librt.so.1            &&
 PTHREAD=/lib/libpthread.so.0  &&
 NSS=/lib/libnss_files.so.2    &&
 UTIL=/lib/libutil.so.1        &&
-NSL=/lib/libnsl.so.1          &&
 CRYPT=/lib/libcrypt.so.1      &&
 MVEC=/lib/libmvec.so.1        &&
 
@@ -89,7 +87,6 @@ cp $RT /lib/librt-lunar.so            &&
 cp $PTHREAD /lib/libpthread-lunar.so  &&
 cp $NSS /lib/libnss_files-lunar.so    &&
 cp $UTIL /lib/libutil-lunar.so        &&
-cp $NSL /lib/libnsl-lunar.so          &&
 cp $CRYPT /lib/libcrypt-lunar.so      &&
 
 # Setup links for libraries
@@ -101,7 +98,6 @@ sln /lib/librt-lunar.so $RT            &&
 sln /lib/libpthread-lunar.so $PTHREAD  &&
 sln /lib/libnss_files-lunar.so $NSS    &&
 sln /lib/libutil-lunar.so $UTIL        &&
-sln /lib/libnsl-lunar.so $NSL          &&
 sln /lib/libcrypt-lunar.so $CRYPT      &&
 
 if [ -f "$MVEC" ]; then
@@ -121,7 +117,7 @@ make install &&
 # Now optionally perform debug symbol stripping only
 if [ "$STRIP" == "y" ] ; then
    for FN in ld-$MAJOR.so \
-       lib{anl,BrokenLocale,c,crypt,dl,m,nsl,util,pthread,resolv}-$MAJOR.so \
+       lib{anl,BrokenLocale,c,crypt,dl,m,util,pthread,resolv}-$MAJOR.so \
        libnss_{compat,files,hesiod,nis,nisplus}-$MAJOR.so \
        lib{memusage,pcprofile,SegFault,thread_db-1.0}.so ; do
       strip -S /lib/$FN
@@ -136,7 +132,7 @@ rm -f /etc/ld.so.cache 2>/dev/null &&
 ldconfig &&
 
 # Remove the temporary libc
-rm /lib/{ld,lib{c,dl,m,rt,pthread,nss_files,util,nsl,crypt}}-lunar.so &&
+rm /lib/{ld,lib{c,dl,m,rt,pthread,nss_files,util,crypt}}-lunar.so &&
 
 if [ -f /lib/libmvec-lunar.so ]; then
    rm /lib/libmvec-lunar.so
@@ -168,7 +164,7 @@ else
 fi &&
 
 # Touch undetected symlinks
-touch -c -h $LD $GLIBC $DL $M $RT $PTHREAD $NSS $UTIL $NSL $CRYPT $MVEC /lib/lib{BrokenLocale.so.1,anl.so.1,cidn.so.1,nss_compat.so.2,nss_db.so.2,nss_dns.so.2,nss_hesiod.so.2,nss_nis.so.2,nss_nisplus.so.2,resolv.so.2,thread_db.so.1} &&
-touch -c -h /usr/lib/lib{BrokenLocale,anl,cidn,crypt,dl,m,nsl,nss_compat,nss_db,nss_dns,nss_files,nss_hesiod,nss_nis,nss_nisplus,resolv,rt,thread_db,util}.so &&
+touch -c -h $LD $GLIBC $DL $M $RT $PTHREAD $NSS $UTIL $CRYPT $MVEC /lib/lib{BrokenLocale.so.1,anl.so.1,cidn.so.1,nss_compat.so.2,nss_db.so.2,nss_dns.so.2,nss_hesiod.so.2,nss_nis.so.2,nss_nisplus.so.2,resolv.so.2,thread_db.so.1} &&
+touch -c -h /usr/lib/lib{BrokenLocale,anl,cidn,crypt,dl,m,nss_compat,nss_db,nss_dns,nss_files,nss_hesiod,nss_nis,nss_nisplus,resolv,rt,thread_db,util}.so &&
 
 ldconfig
