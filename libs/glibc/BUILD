@@ -44,7 +44,7 @@ cd $INSTALL_ROOT &&
              --enable-shared          \
              --enable-add-ons         \
              --enable-bind-now        \
-             --enable-obsolete-rpc    \
+             --enable-static-pie      \
              --enable-lock-elision    \
              --enable-stack-protector=strong \
              --disable-werror         \
@@ -55,7 +55,7 @@ cd $INSTALL_ROOT &&
              --enable-stackguard-randomization \
              $OPTS &&
 
-#             --enable-kernel=3.2        \
+#             --enable-kernel=3.2      \
 
 # build libraries with hardening disabled
 echo "build-programs=no" >> configparms &&
