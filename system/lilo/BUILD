@@ -1,5 +1,6 @@
+# gcc 10 fix -fcommon
+export CPPFLAGS+=" -fcommon"
 sedit 's;strip lilo.static;& || true;' src/Makefile &&
-
 # We don't need to install everything so we call the targets we require
 make test &&
 make -C src all &&
