@@ -44,7 +44,6 @@ cd $INSTALL_ROOT &&
              --enable-shared          \
              --enable-add-ons         \
              --enable-bind-now        \
-             --enable-static-pie      \
              --enable-lock-elision    \
              --enable-stack-protector=strong \
              --disable-werror         \
