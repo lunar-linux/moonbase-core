@@ -78,6 +78,9 @@ UTIL=/lib/libutil.so.1        &&
 CRYPT=/lib/libcrypt.so.1      &&
 MVEC=/lib/libmvec.so.1        &&
 
+# deprecated
+NSL=/lib/libnsl.so.1         &&
+
 cp $LD /lib/ld-lunar.so               &&
 cp $GLIBC /lib/libc-lunar.so          &&
 cp $DL /lib/libdl-lunar.so            &&
@@ -98,6 +101,11 @@ sln /lib/libpthread-lunar.so $PTHREAD  &&
 sln /lib/libnss_files-lunar.so $NSS    &&
 sln /lib/libutil-lunar.so $UTIL        &&
 sln /lib/libcrypt-lunar.so $CRYPT      &&
+
+if [ -f "$NSL" ]; then
+   cp $NSL /lib/libnsl-lunar.so &&
+   sln /lib/libnsl-lunar.so $NSL
+fi &&
 
 if [ -f "$MVEC" ]; then
    cp $MVEC /lib/libmvec-lunar.so &&
