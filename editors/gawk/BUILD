@@ -1,26 +1,30 @@
-# make a backup for gawk app
-cp -f /bin/gawk /bin/gawk.old &&
 
 OPTS+="--build=$BUILD \
        --prefix=/usr \
-       --bindir=/bin \
        --mandir=/usr/share/man \
        --infodir=/usr/share/info \
        --without-readline \
        ac_cv_func_working_mktime=yes"
+
+# make a backup for gawk app
+ if [ -f "/bin/gawk" ]; then
+   cp -f /bin/gawk /usr/bin/gawk.old
+ else
+   cp -f /usr/bin/gawk{,.old}
+ fi &&
 
 default_config &&
 make &&
 prepare_install &&
 
 # restore backup gawk app
-mv /bin/gawk.old /bin/gawk &&
-ln -sf /bin/gawk /bin/awk  &&
+mv /usr/bin/gawk{.old,} &&
+ln -sf /usr/bin/{g,}awk
 
 make install &&
 
-ln -sf /bin/gawk /bin/awk &&
-rm -f /bin/{,p}gawk-* &&
+ln -sf /usr/bin/{g,}awk &&
+rm -f /usr/bin/{,p}gawk-* &&
 
 mv /etc/profile.d/gawk.{sh,rc} &&
 rm -f /etc/profile.d/gawk.csh
