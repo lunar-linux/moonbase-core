@@ -1,3 +1,6 @@
+# upstream compiles with -mno-sse
+bad_flags -mfpmath=sse -mfpmath=both &&
+
 if [[ "$(arch)" == "x86_64" ]]; then
   EFI_ARCH=x86_64
 else
