@@ -6,7 +6,6 @@ After=sshd-keys.service
 ExecStart=-/usr/sbin/sshd -i
 ExecReload=/usr/bin/kill -HUP $MAINPID
 StandardInput=socket
-StandardError=syslog
 
 [Install]
 WantedBy=network.target
