@@ -5,7 +5,7 @@
 gnu_ld_optimize_defaults()
 {
   # default optimizations
-  LDF=( Strip )
+  LDF=( Strip Relro Now )
 }
 
 plugin_gnu_ld_optimize()
