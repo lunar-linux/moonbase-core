@@ -12,10 +12,6 @@ compiler_gcc_optimize_defaults()
 
 plugin_compiler_gcc_optimize()
 {
-  if [ "${LUNAR_COMPILER:-GCC}" != "GCC" ]; then
-    return 2
-  fi
-
   debug_msg "plugin_compiler_gcc_optimize($@)"
 
   compiler_gcc_optimize_defaults
