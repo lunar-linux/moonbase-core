@@ -178,6 +178,13 @@ plugin_systemd_sysusersd_post_build() {
 
   SYSTEMDUSERSDIR=$(pkg-config systemd --variable=prefix)/lib/sysusers.d
 
+  for FILE in $(parse_iw | grep "^$SYSTEMDUSERSDIR"); do
+    if [ -f "$FILE" ]; then
+      verbose_msg "loading systemd-sysusers $FILE"
+      systemd-sysusers $FILE
+    fi
+  done
+
   if [[ -d $SCRIPT_DIRECTORY/sysusers.d ]]; then
     verbose_msg "handling systemd sysusers.d files"
 
