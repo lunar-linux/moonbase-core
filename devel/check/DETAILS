@@ -1,18 +1,17 @@
           MODULE=check
-         VERSION=0.15.0
+         VERSION=0.15.2
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://github.com/libcheck/check/releases/download/$VERSION/
-      SOURCE_VFY=sha256:aea2e3c68fa6e1e92378e744b1c0db350ccda4b6bd0d19530d0ae185b3d1ac60
+      SOURCE_VFY=sha256:a8de4e0bacfb4d76dd1c618ded263523b53b85d92a146d8835eb1a52932fa20a
         WEB_SITE=http://github.com/libcheck/check/
          ENTERED=20031201
          UPDATED=20200624
            SHORT="A unit test framework for C"
 
 cat << EOF
-Check is a unit test framework for C. It features a simple interface
-for defining unit tests, putting little in the way of the developer.
-Tests are run in a separate address space, so Check can catch both
-assertion failures and code errors that cause segmentation faults or
-other signals. The output from unit tests can be used within source
-code editors and IDEs.
+Check is a unit test framework for C. It features a simple interface for
+defining unit tests, putting little in the way of the developer. Tests are run
+in a separate address space, so Check can catch both assertion failures and
+code errors that cause segmentation faults or other signals. The output from
+unit tests can be used within source code editors and IDEs.
 EOF
