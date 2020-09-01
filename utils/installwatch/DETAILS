@@ -1,11 +1,11 @@
           MODULE=installwatch
-         VERSION=0.8.0rc6
+         VERSION=0.8.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://github.com/lunar-linux/installwatch/releases/download/v$VERSION
-      SOURCE_VFY=sha256:174a5f2132be59dfb156b5ef2312def46445faacf14de50683e5ca30c641bd7c
+      SOURCE_VFY=sha256:ed939f335789d5e50c58b313c36e912ede7faf58addba22d40fee79360ff310b
         WEB_SITE=https://github.com/lunar-linux/installwatch
          ENTERED=20011230
-         UPDATED=20190528
+         UPDATED=20200901
            SHORT="utility for tracking files from installation of software"
 
 cat << EOF
