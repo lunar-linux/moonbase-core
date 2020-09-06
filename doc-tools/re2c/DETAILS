@@ -1,11 +1,11 @@
           MODULE=re2c
-         VERSION=2.0.1
-          SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=http://github.com/skvadrik/re2c/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:be64fee83b398250572286e09e75171add727bdf43c562576d3e640d1960c40d
+         VERSION=2.0.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=https://github.com/skvadrik/re2c/releases/download/$VERSION
+      SOURCE_VFY=sha256:b2bc1eb8aaaa21ff2fcd26507b7e6e72c5e3d887e58aa515c2155fb17d744278
         WEB_SITE=http://re2c.sourceforge.net/
          ENTERED=20091001
-         UPDATED=20200730
+         UPDATED=20200825
            SHORT="A toolfor writing fast and flexible scanners"
 
 cat << EOF
