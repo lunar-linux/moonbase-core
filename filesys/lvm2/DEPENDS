@@ -1,6 +1,9 @@
-depends readline
 depends pkgconf
 depends libaio
 
 # optional circular depend with systemd->cryptsetup
 depends %UDEV
+
+optional_depends readline \
+                 "--enable-readline" "" \
+                 "for line edit thru readline support"
