@@ -1,12 +1,12 @@
           MODULE=python
-         VERSION=3.8.4
+         VERSION=3.8.5
           SOURCE=Python-$VERSION.tgz
       SOURCE_URL=https://www.python.org/ftp/python/$VERSION/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/Python-$VERSION
-      SOURCE_VFY=sha256:32c4d9817ef11793da4d0d95b3191c4db81d2e45544614e8449255ca9ae3cc18
+      SOURCE_VFY=sha256:015115023c382eb6ab83d512762fe3c5502fa0c6c52ffebc4831c4e1a06ffc49
         WEB_SITE=http://www.python.org
          ENTERED=20121013
-         UPDATED=20200715
+         UPDATED=20200722
         REPLACES=Python-3
            SHORT="Interpreted, interactive, object-oriented programming language"
 
