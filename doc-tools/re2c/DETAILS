@@ -1,8 +1,8 @@
           MODULE=re2c
          VERSION=2.0.3
-          SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=http://github.com/skvadrik/re2c/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:f131b3d5b618454caa5f2ddcc8288b797c78781056a40c2899c832493827c003
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=https://github.com/skvadrik/re2c/releases/download/$VERSION
+      SOURCE_VFY=sha256:b2bc1eb8aaaa21ff2fcd26507b7e6e72c5e3d887e58aa515c2155fb17d744278
         WEB_SITE=http://re2c.sourceforge.net/
          ENTERED=20091001
          UPDATED=20200825
