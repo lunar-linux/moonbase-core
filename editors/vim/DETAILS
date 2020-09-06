@@ -1,19 +1,18 @@
            MODULE=vim
-          VERSION=8.2.0510
-            MAJOR=${VERSION%.*}
+            MAJOR=8.2
+          VERSION=$MAJOR.1584
+            MAJOR=${MAJOR//./}
            SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=https://github.com/vim/vim/archive/v${VERSION}/
-       SOURCE_VFY=sha256:96444016c54211badcf260d50064fa341a69049eced8afc80e157470aef94053
-         WEB_SITE=http://vim.sf.net
-       MAINTAINER=sofar@lunar-linux.org
+  SOURCE_URL_FULL=https://github.com/vim/vim/archive/v$VERSION.tar.gz
+      SOURCE_VFY=sha256:31ce1664ab91636a6edbe67cf2e9e5772b26a493836411b79accfe3663268d2e
           ENTERED=20010922
-          UPDATED=20200404
+          UPDATED=20200904
             SHORT="Improved version of vi"
 
 cat << EOF
-VIM is an improved version of the editor vi, one of the standard text
-editors on UNIX systems. VIM adds many of the features that you would
-expect in an editor: Unlimited undo, syntax coloring, split windows,
-visual selection, graphical user interface (read: menus, mouse control,
-scrollbars, text selection), and much much more.
+VIM is an improved version of the editor vi, one of the standard text editors
+on UNIX systems. VIM adds many of the features that you would expect in an
+editor: Unlimited undo, syntax coloring, split windows, visual selection,
+graphical user interface (read: menus, mouse control, scrollbars, text
+selection), and much much more.
 EOF
