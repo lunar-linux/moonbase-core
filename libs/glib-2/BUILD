@@ -8,5 +8,5 @@ OPTS+=" -D fam=false \
 LDFLAGS+=" -Wl,-z,nodelete"
 
 # Do not install gdbus-codegen, it's part of gdbus-codegen module
-sedit '/install.*true/s;true;false;' gio/gdbus-2.0/codegen/meson.build &&
+sedit '/install_dir/d' gio/gdbus-2.0/codegen/meson.build &&
 default_meson_build
