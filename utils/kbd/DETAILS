@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:21a1bc5f6fb3b18ce9fdd717e4533368060a3182a39c7155eaf7ec0f5f83e9f7
         WEB_SITE=http://kbd-project.org
          ENTERED=20040217
-         UPDATED=20190829
+         UPDATED=20200814
            SHORT="kbd allows you to configure and manipulate Linux consoles"
 
 cat << EOF
