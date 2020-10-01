@@ -7,7 +7,7 @@
       SOURCE_VFY=sha256:b8dd4368bb9c7f0b98188317ee0254dd8cc99d1e3a18d0ff146c855fe16c1d8c
         WEB_SITE=http://gcc.gnu.org/
          ENTERED=20020628
-         UPDATED=20200723
+         UPDATED=20200930
            SHORT="GNU compiler collection"
 
 cat << EOF
