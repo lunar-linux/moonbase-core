@@ -11,7 +11,7 @@
  endif
  	$(MAKE) -C tests $@
  	$(MAKE) -C progs $@
-@@ -45,7 +45,7 @@
+@@ -48,7 +48,7 @@
  	$(MAKE) -C pam_cap $@
  endif
  ifeq ($(GOLANG),yes)
@@ -20,7 +20,7 @@
  endif
  	make -C progs $@
  
-@@ -55,7 +55,7 @@
+@@ -58,7 +58,7 @@
  	$(MAKE) -C pam_cap $@
  endif
  ifeq ($(GOLANG),yes)
