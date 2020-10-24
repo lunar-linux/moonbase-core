@@ -1,11 +1,11 @@
           MODULE=libressl
-         VERSION=3.1.2
+         VERSION=3.2.2
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://ftp.openbsd.org/pub/OpenBSD/LibreSSL/
-      SOURCE_VFY=sha256:f88a2f7ea617149a34e40c022d9912963f00eaa6109af421317525e6c978d892
+      SOURCE_VFY=sha256:a9d1e1d030b8bcc67bf6428b8c0fff14a5602e2236257b9e3d77acaf12e2a7a1
         WEB_SITE=http://www.libressl.org
          ENTERED=20160301
-         UPDATED=20200804
+         UPDATED=20201024
            SHORT="A version of the TLS/crypto stack forked from OpenSSL"
 
 cat << EOF
