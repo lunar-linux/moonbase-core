@@ -1,8 +1,8 @@
           MODULE=expat
-         VERSION=2.2.9
+         VERSION=2.2.10
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:f1063084dc4302a427dabcca499c8312b3a32a29b7d2506653ecc8f950a9a237
+      SOURCE_VFY=sha256:b2c160f1b60e92da69de8e12333096aeb0c3bf692d41c60794de278af72135a5
         WEB_SITE=http://expat.sourceforge.net
          ENTERED=20010928
          UPDATED=20191009
