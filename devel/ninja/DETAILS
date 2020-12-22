@@ -1,9 +1,9 @@
           MODULE=ninja
-         VERSION=1.10.1
+         VERSION=1.10.2
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/martine/$MODULE/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:a6b6f7ac360d4aabd54e299cc1d8fa7b234cd81b9401693da21221c62569a23e
-        WEB_SITE=http://martine.github.io/ninja/
+      SOURCE_VFY=sha256:ce35865411f0490368a8fc383f29071de6690cbadc27704734978221f25e2bed
+        WEB_SITE=https://github.com/ninja-build/ninja
          ENTERED=20141002
          UPDATED=20200906
            SHORT="A small build system with a focus on speed"
