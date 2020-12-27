@@ -2,10 +2,10 @@
          VERSION=5.10.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://mirrors.kernel.org/pub/linux/utils/net/$MODULE/
-      SOURCE_VFY=sha256:1508c9476a5b087d26f094e031a2d4fda184783a630f09596e0a6c1f978cee96
+      SOURCE_VFY=sha256:a54a34ae309c0406b2d1fb3a46158613ffb83d33fefd5d4a27f0010237ac53e9
         WEB_SITE=http://www.linuxfoundation.org/collaborate/workgroups/networking/$MODULE/
          ENTERED=20021106
-         UPDATED=20201221
+         UPDATED=20201227
            SHORT="Professional tools to control networking in Linux kernels"
 
 cat << EOF
