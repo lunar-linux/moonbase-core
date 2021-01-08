@@ -1,5 +1,7 @@
 CFLAGS="$CFLAGS -I$SOURCE_DIRECTORY/include $(pkg-config libnl-genl-3.0 --cflags)"
 
+OPTS+=" --with-libnl"
+
 default_build &&
 
 # backwards compatibility, programs often look for net/bpf.h
