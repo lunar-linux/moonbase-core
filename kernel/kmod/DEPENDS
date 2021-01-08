@@ -4,7 +4,14 @@ depends automake
 depends libtool
 depends %OSSL
 
+optional_depends zstd \
+                 "--with-zstd" \
+                 "--without-zstd" \
+                 "for zstd compression support" \
+                 "n"
+
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
                  "--disable-gtk-doc" \
-                 "for building documentation" n
+                 "for building documentation" \
+                 "n"
