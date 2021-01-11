@@ -6,7 +6,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
       SOURCE_VFY=sha256:7efd2685f7b327326dcfb85cee426d9b871fd70e22caa15bb68d595ce2a2b12a
         WEB_SITE=http://libusb.org/
          ENTERED=20140106
-         UPDATED=20191211
+         UPDATED=20210111
            SHORT="Library that provides generic access to USB devices"
            PSAFE=no
 
