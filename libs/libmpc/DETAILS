@@ -1,13 +1,13 @@
           MODULE=libmpc
-         VERSION=1.1.0
+         VERSION=1.2.1
           SOURCE=mpc-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/mpc-$VERSION
    SOURCE_URL[0]=https://ftp.gnu.org/gnu/mpc/
    SOURCE_URL[1]=http://www.multiprecision.org/mpc/download
-      SOURCE_VFY=sha256:6985c538143c1208dcb1ac42cedad6ff52e267b47e5f970183a3e75125b43c2e
+      SOURCE_VFY=sha256:17503d2c395dfcf106b622dc142683c1199431d095367c6aacba6eec30340459
         WEB_SITE=http://www.multiprecision.org
          ENTERED=20100416
-         UPDATED=20180120
+         UPDATED=20201224
            SHORT="A complex floating-point library"
 
 cat << EOF
