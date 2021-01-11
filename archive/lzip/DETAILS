@@ -1,11 +1,11 @@
           MODULE=lzip
-         VERSION=1.21
+         VERSION=1.22
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://download.savannah.gnu.org/releases/lzip
-      SOURCE_VFY=sha256:e48b5039d3164d670791f9c5dbaa832bf2df080cb1fbb4f33aa7b3300b670d8b
+      SOURCE_VFY=sha256:c3342d42e67139c165b8b128d033b5c96893a13ac5f25933190315214e87a948
         WEB_SITE=http://nongnu.askapache.com/lzip/manual/lzip_manual.html
          ENTERED=20091122
-         UPDATED=20190113
+         UPDATED=2010111
            SHORT="lossless data compressor"
 
 cat << EOF
