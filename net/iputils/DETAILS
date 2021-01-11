@@ -1,15 +1,15 @@
-          MODULE=iputils
-         VERSION=s20190709
-          SOURCE=$MODULE-$VERSION.tar.gz
+         MODULE=iputils
+        VERSION=s20200821
+         SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=$MODULE-$VERSION-manpages.tar.gz
-  SOURCE_URL_FULL=https://github.com/iputils/iputils/archive/$VERSION.tar.gz
-     SOURCE2_URL=$PATCH_URL
-         WEB_SITE=http://github.com/iputils/iputils/
-       SOURCE_VFY=sha256:a15720dd741d7538dd2645f9f516d193636ae4300ff7dbc8bfca757bf166490a
-     SOURCE2_VFY=sha256:b2b3e2b913fd5f4fa5c27efecdbb14132189a0d74d198f0e43a337108e9484cf
-          ENTERED=20021106
-          UPDATED=20200524
-            SHORT="Essential utilities for IP networks"
+ SOURCE_URL_FULL=https://github.com/iputils/iputils/archive/${VERSION}.tar.gz
+     SOURCE2_URL=$MIRROR_URL
+        WEB_SITE=http://github.com/iputils/iputils/
+      SOURCE_VFY=sha256:f265da0d02dd2259efd8c57a9c2e0c8bb3361abb14639fcffb26707be5783a5b
+     SOURCE2_VFY=sha256:cacb3ab572942ee61759c1c3368bc384cd5a8e0fae9d29238ceff6409aea39a1  iputils-s20200821-manpages.tar.gz
+         ENTERED=20021106
+         UPDATED=20200907
+           SHORT="Essential utilities for IP networks"
 
 cat << EOF
 The iputils package is set of small useful utilities for Linux networking.
