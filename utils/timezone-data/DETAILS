@@ -1,17 +1,17 @@
           MODULE=timezone-data
-           TZONE=d
-         VERSION=2020$TZONE
+           TZONE=a
+         VERSION=2021$TZONE
           SOURCE=tzdata$VERSION.tar.gz
          SOURCE2=tzcode$VERSION.tar.gz
    SOURCE_URL[0]=https://www.iana.org/time-zones/repository/releases
    SOURCE_URL[1]=$MIRROR_URL
   SOURCE2_URL[0]=http://www.iana.org/time-zones/repository/releases
   SOURCE2_URL[1]=$MIRROR_URL
-      SOURCE_VFY=sha256:8d813957de363387696f05af8a8889afa282ab5016a764c701a20758d39cbaf3
-     SOURCE2_VFY=sha256 6cf050ba28e8053029d3f32d71341d11a794c6b5dd51a77fc769d6dae364fad5
+      SOURCE_VFY=sha256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+     SOURCE2_VFY=sha256:eb46bfa124b5b6bd13d61a609bfde8351bd192894708d33aa06e5c1e255802d0
         WEB_SITE=ftp://munnari.oz.au/pub
          ENTERED=20070203
-         UPDATED=20201026
+         UPDATED=20210126
            SHORT="Timezone data and utilities"
 
 cat << EOF
