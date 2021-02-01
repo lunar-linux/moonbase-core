@@ -1,6 +1,7 @@
 depends gawk
 depends sed
 depends texinfo
+depends libnsl
 depends python
 depends %KERNEL_HEADERS
 
