@@ -40,7 +40,6 @@ cd $INSTALL_ROOT &&
              --enable-shared       \
              --enable-add-ons      \
              --enable-bind-now     \
-             --enable-obsolete-rpc \
              --enable-lock-elision \
              --enable-stack-protector=strong \
              --enable-stackguard-randomization \
@@ -51,6 +50,7 @@ cd $INSTALL_ROOT &&
              --disable-timezone-tools \
              $OPTS &&
 
+#             --enable-obsolete-rpc \
 #             --enable-obsolete-nsl \
 #             --enable-kernel=3.2   \
 

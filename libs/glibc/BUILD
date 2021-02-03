@@ -44,7 +44,6 @@ cd $INSTALL_ROOT &&
              --enable-shared          \
              --enable-add-ons         \
              --enable-bind-now        \
-             --enable-obsolete-rpc    \
              --enable-lock-elision    \
              --enable-stack-protector=strong \
              --disable-werror         \
@@ -55,6 +54,7 @@ cd $INSTALL_ROOT &&
              --enable-stackguard-randomization \
              $OPTS &&
 
+#             --enable-obsolete-rpc    \
 #             --enable-obsolete-nsl    \
 #             --enable-kernel=3.2      \
 
