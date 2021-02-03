@@ -1,5 +1,5 @@
 # optimize -O2
-CFLAGS+=" -O2" &&
+CFLAGS+=" -O2"
 
 # The fortify compiler option cause the build to fail
 bad_flags -D_FORTIFY_SOURCE=2 &&
@@ -16,7 +16,7 @@ if [ -n "$MAKES" ] && [ "$MAKES" -gt 1 ] ; then
    sedit "s/# PARALLELMFLAGS = -j 4/PARALLELMFLAGS = -j $MAKES/" Makefile.in
 fi &&
 
-export CC=gcc  &&
+export CC=gcc &&
 
 # Don't fully strip libc
 if [[ "$LDFLAGS" == *-s* ]] ; then
@@ -45,7 +45,6 @@ cd $INSTALL_ROOT &&
              --enable-add-ons         \
              --enable-bind-now        \
              --enable-obsolete-rpc    \
-             --enable-obsolete-nsl    \
              --enable-lock-elision    \
              --enable-stack-protector=strong \
              --disable-werror         \
@@ -56,7 +55,8 @@ cd $INSTALL_ROOT &&
              --enable-stackguard-randomization \
              $OPTS &&
 
-#             --enable-kernel=3.2        \
+#             --enable-obsolete-nsl    \
+#             --enable-kernel=3.2      \
 
 # build libraries with hardening disabled
 echo "build-programs=no" >> configparms &&

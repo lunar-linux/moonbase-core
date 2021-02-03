@@ -1,0 +1,11 @@
+--- ./shlib-versions.old	2021-02-03 03:57:57.324500825 +0200
++++ ./shlib-versions		2021-02-03 03:57:33.004499742 +0200
+@@ -53,7 +53,7 @@
+ libnss_test2=2
+ 
+ # Version for libnsl with YP and NIS+ functions.
+-libnsl=1
++#libnsl=1
+ 
+ # This defines the shared library version numbers we will install.
+ libcrypt=1
