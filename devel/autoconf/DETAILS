@@ -1,22 +1,22 @@
           MODULE=autoconf
-         VERSION=2.69
+         VERSION=2.71
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha1:e891c3193029775e83e0534ac0ee0c4c711f6d23
+      SOURCE_VFY=sha256:f14c83cfebcc9427f2c3cea7258bd90df972d92eb26752da4ddad81c87a0faa4
         WEB_SITE=http://www.gnu.org/software/autoconf
          ENTERED=20010922
-         UPDATED=20120429
+         UPDATED=20210131
            SHORT="Produces shell scripts which configure source code"
            PSAFE=no
 
 cat << EOF
-autoconf - Produces shell scripts which automatically configure source
-code Extensible package of M4 macros that produce shell scripts to
-automatically configure software source code packages. These scripts can
-adapt the packages to many kinds of UNIX-like systems without manual
-user intervention. Autoconf requires GNU M4. You must install GNU M4
-before configuring autoconf, so that Autoconf's configure script can
-find it. The configuration scripts produced by autoconf are
-self-contained, so their users do not need to have autoconf or GNU M4.
+autoconf - Produces shell scripts which automatically configure source code
+Extensible package of M4 macros that produce shell scripts to automatically
+configure software source code packages. These scripts can adapt the packages
+to many kinds of UNIX-like systems without manual user intervention.
+Autoconf requires GNU M4. You must install GNU M4 before configuring autoconf,
+so that Autoconf's configure script can find it. The configuration scripts
+produced by autoconf are self-contained, so their users do not need to have
+autoconf or GNU M4.
 EOF

@@ -1,2 +1,2 @@
-depends  perl
-depends  m4
+depends perl
+depends m4
