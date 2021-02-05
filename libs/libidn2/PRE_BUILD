@@ -1,3 +1,7 @@
+GTKDOCIZE=$(type -p gtkdocize)
+GTKDOCIZE=${GTKDOCIZE:-/usr/bin/true}
+export GTKDOCIZE
+
 default_pre_build &&
 
 autoreconf -fvi
