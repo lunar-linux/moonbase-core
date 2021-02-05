@@ -77,20 +77,20 @@ RT=/lib/librt.so.1            &&
 PTHREAD=/lib/libpthread.so.0  &&
 NSS=/lib/libnss_files.so.2    &&
 UTIL=/lib/libutil.so.1        &&
-NSL=/lib/libnsl.so.1          &&
 CRYPT=/lib/libcrypt.so.1      &&
 MVEC=/lib/libmvec.so.1        &&
+NSL=/lib/libnsl.so.1          &&
 
-cp $LD /lib/ld-lunar.so               &&
-cp $GLIBC /lib/libc-lunar.so          &&
-cp $DL /lib/libdl-lunar.so            &&
-cp $M /lib/libm-lunar.so              &&
-cp $RT /lib/librt-lunar.so            &&
-cp $PTHREAD /lib/libpthread-lunar.so  &&
-cp $NSS /lib/libnss_files-lunar.so    &&
-cp $UTIL /lib/libutil-lunar.so        &&
-cp $NSL /lib/libnsl-lunar.so          &&
-cp $CRYPT /lib/libcrypt-lunar.so      &&
+cp -f $LD /lib/ld-lunar.so               &&
+cp -f $GLIBC /lib/libc-lunar.so          &&
+cp -f $DL /lib/libdl-lunar.so            &&
+cp -f $M /lib/libm-lunar.so              &&
+cp -f $RT /lib/librt-lunar.so            &&
+cp -f $PTHREAD /lib/libpthread-lunar.so  &&
+cp -f $NSS /lib/libnss_files-lunar.so    &&
+cp -f $UTIL /lib/libutil-lunar.so        &&
+cp -f $CRYPT /lib/libcrypt-lunar.so      &&
+cp -f $NSL /lib/libnsl-lunar.so          &&
 
 # Setup links for libraries
 sln /lib/ld-lunar.so $LD               &&
@@ -101,11 +101,11 @@ sln /lib/librt-lunar.so $RT            &&
 sln /lib/libpthread-lunar.so $PTHREAD  &&
 sln /lib/libnss_files-lunar.so $NSS    &&
 sln /lib/libutil-lunar.so $UTIL        &&
-sln /lib/libnsl-lunar.so $NSL          &&
 sln /lib/libcrypt-lunar.so $CRYPT      &&
+sln /lib/libnsl-lunar.so $NSL          &&
 
 if [ -f "$MVEC" ]; then
-   cp $MVEC /lib/libmvec-lunar.so &&
+   cp -f $MVEC /lib/libmvec-lunar.so &&
    sln /lib/libmvec-lunar.so $MVEC
 fi &&
 
@@ -168,7 +168,7 @@ else
 fi &&
 
 # Touch undetected symlinks
-touch -c -h $LD $GLIBC $DL $M $RT $PTHREAD $NSS $UTIL $NSL $CRYPT $MVEC /lib/lib{BrokenLocale.so.1,anl.so.1,cidn.so.1,nss_compat.so.2,nss_db.so.2,nss_dns.so.2,nss_hesiod.so.2,nss_nis.so.2,nss_nisplus.so.2,resolv.so.2,thread_db.so.1} &&
+touch -c -h $LD $GLIBC $DL $M $RT $PTHREAD $NSL $NSS $UTIL $CRYPT $MVEC /lib/lib{BrokenLocale.so.1,anl.so.1,cidn.so.1,nss_compat.so.2,nss_db.so.2,nss_dns.so.2,nss_hesiod.so.2,nss_nis.so.2,nss_nisplus.so.2,resolv.so.2,thread_db.so.1} &&
 touch -c -h /usr/lib/lib{BrokenLocale,anl,cidn,crypt,dl,m,nsl,nss_compat,nss_db,nss_dns,nss_files,nss_hesiod,nss_nis,nss_nisplus,resolv,rt,thread_db,util}.so &&
 
 ldconfig

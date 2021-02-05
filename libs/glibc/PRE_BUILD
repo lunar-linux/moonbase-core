@@ -4,3 +4,6 @@ sedit 's@^#\s*warning \+_FORTIFY_SOURCE requires compiling with optimization.*$@
 
 # Disable nss_test2
 sedit '/"nss_test1"/s;"nss_test1";& \&\& $name ne "nss_test2";' scripts/test-installation.pl
+
+# Remove the nis build
+sedit 's: nis::g' Makeconfig
