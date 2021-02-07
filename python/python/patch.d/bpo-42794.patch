@@ -1,0 +1,59 @@
+From b20d5e5ce95248e0fa77c5d7bf8f6f5b1231fa53 Mon Sep 17 00:00:00 2001
+From: "Miss Islington (bot)"
+ <31488909+miss-islington@users.noreply.github.com>
+Date: Fri, 1 Jan 2021 06:42:43 -0800
+Subject: [PATCH] bpo-42794: Update test_nntplib to use offical group name for
+ testing (GH-24037)
+
+(cherry picked from commit ec3165320e81ac87edcb85c86c452528ddbaec1c)
+
+Co-authored-by: Dong-hee Na <donghee.na@python.org>
+---
+ Lib/test/test_nntplib.py                               | 10 +++++++---
+ .../Tests/2021-01-01-08-52-36.bpo-42794.-7-XGz.rst     |  2 ++
+ 2 files changed, 9 insertions(+), 3 deletions(-)
+ create mode 100644 Misc/NEWS.d/next/Tests/2021-01-01-08-52-36.bpo-42794.-7-XGz.rst
+
+diff --git a/Lib/test/test_nntplib.py b/Lib/test/test_nntplib.py
+index 1df64fa7c6b00..99386ddbaedfa 100644
+--- a/Lib/test/test_nntplib.py
++++ b/Lib/test/test_nntplib.py
+@@ -82,7 +82,7 @@ def _check_desc(desc):
+         desc = self.server.description(self.GROUP_NAME)
+         _check_desc(desc)
+         # Another sanity check
+-        self.assertIn("Python", desc)
++        self.assertIn(self.DESC, desc)
+         # With a pattern
+         desc = self.server.description(self.GROUP_PAT)
+         _check_desc(desc)
+@@ -309,6 +309,7 @@ class NetworkedNNTPTests(NetworkedNNTPTestsMixin, unittest.TestCase):
+     NNTP_HOST = 'news.trigofacile.com'
+     GROUP_NAME = 'fr.comp.lang.python'
+     GROUP_PAT = 'fr.comp.lang.*'
++    DESC = 'Python'
+ 
+     NNTP_CLASS = NNTP
+ 
+@@ -343,8 +344,11 @@ class NetworkedNNTP_SSLTests(NetworkedNNTPTests):
+     # 400 connections per day are accepted from each IP address."
+ 
+     NNTP_HOST = 'nntp.aioe.org'
+-    GROUP_NAME = 'comp.lang.python'
+-    GROUP_PAT = 'comp.lang.*'
++    # bpo-42794: aioe.test is one of the official groups on this server
++    # used for testing: https://news.aioe.org/manual/aioe-hierarchy/
++    GROUP_NAME = 'aioe.test'
++    GROUP_PAT = 'aioe.*'
++    DESC = 'test'
+ 
+     NNTP_CLASS = getattr(nntplib, 'NNTP_SSL', None)
+ 
+diff --git a/Misc/NEWS.d/next/Tests/2021-01-01-08-52-36.bpo-42794.-7-XGz.rst b/Misc/NEWS.d/next/Tests/2021-01-01-08-52-36.bpo-42794.-7-XGz.rst
+new file mode 100644
+index 0000000000000..577f2259e1f00
+--- /dev/null
++++ b/Misc/NEWS.d/next/Tests/2021-01-01-08-52-36.bpo-42794.-7-XGz.rst
+@@ -0,0 +1,2 @@
++Update test_nntplib to use offical group name of news.aioe.org for testing.
++Patch by Dong-hee Na.
