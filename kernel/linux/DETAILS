@@ -5,10 +5,10 @@
 if [ -n "$(echo $VERSION | cut -d. -f3)" ] ; then
          SOURCE2=patch-$VERSION.xz
 fi
-   SOURCE_URL[0]=$KERNEL_URL/pub/linux/kernel/v5.x
-   SOURCE_URL[1]=https://www.kernel.org/pub/linux/kernel/v5.x
-  SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v5.x
-  SOURCE2_URL[1]=https://www.kernel.org/pub/linux/kernel/v5.
+   SOURCE_URL[0]=$KERNEL_URL/pub/linux/kernel/v5.x/
+   SOURCE_URL[1]=https://www.kernel.org/pub/linux/kernel/v5.x/
+  SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v5.x/
+  SOURCE2_URL[1]=https://www.kernel.org/pub/linux/kernel/v5.x/
       SOURCE_VFY=sha256:dcdf99e43e98330d925016985bfbc7b83c66d367b714b2de0cbbfcbf83d8ca43
      SOURCE2_VFY=sha256:9541437bd4a68d10d1f40f91080683fb6b8d99def258681b2fa74540d4f74082
          WEB_SITE=https://www.kernel.org
