@@ -6,7 +6,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%-*}-$VERSION
       SOURCE_VFY=sha256:80fff9c63d2725834328071c42003c311f77f91caf2285195c587c62f5638329
         WEB_SITE=http://library.gnome.org/devel/glib
          ENTERED=20020313
-         UPDATED=20210205
+         UPDATED=20210208
            SHORT="A library of useful C routines for trees, hashes, and lists"
 
 cat << EOF
