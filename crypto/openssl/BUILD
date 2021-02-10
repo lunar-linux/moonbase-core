@@ -1,12 +1,15 @@
 # make sure the luser has the source for this one!
 WANT_VERSION= download_module wget &&
 
-./config --prefix=/usr         \
+# mark stack as non-executable
+./config --prefix=/usr \
          --openssldir=/etc/ssl \
-         shared                \
-         no-ssl3               \
-         no-ssl3-method        \
-         $OPTS                &&
+         shared \
+         no-ssl3 \
+         no-ssl3-method \
+         enable-ec_nistp_64_gcc_128 \
+         "-Wa,--noexecstack" \
+         $OPTS
 
 sedit "/^CC/d" Makefile &&
 sedit "s/-m486//g" Makefile &&
