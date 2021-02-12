@@ -11,7 +11,7 @@ OPTS+=" --enable-agetty     \
         --enable-write      \
         --disable-kill      \
         --disable-static    \
-        --enable-fs-paths-extra=/usr/bin"
+        --enable-fs-paths-extra=/usr/bin:/usr/sbin"
 
 default_config &&
 make ${MAKES:+-j${MAKES}} &&
