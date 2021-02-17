@@ -7,7 +7,7 @@ WANT_VERSION= download_module wget &&
          shared \
          no-ssl3 \
          no-ssl3-method \
-         enable-ec_nistp_64_gcc_128 \
+         $(arch | grep -q x86_64 && echo enable-ec_nistp_64_gcc_128) \
          "-Wa,--noexecstack" \
          $OPTS
 
