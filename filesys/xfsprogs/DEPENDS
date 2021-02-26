@@ -1,3 +1,4 @@
+depends inih
 depends readline
 depends util-linux
 
