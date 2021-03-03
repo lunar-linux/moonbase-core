@@ -1,12 +1,12 @@
           MODULE=URI
-         VERSION=1.76
+         VERSION=5.08
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=https://cpan.metacpan.org/authors/id/O/OA/OALDERS/
-      SOURCE_VFY=sha256:b2c98e1d50d6f572483ee538a6f4ccc8d9185f91f0073fd8af7390898254413e
+      SOURCE_URL=https://cpan.metacpan.org/authors/id/E/ET/ETHER/
+      SOURCE_VFY=sha256:7e2c6fe3b1d5947da334fa558a96e748aaa619213b85bcdce5b5347d4d26c46e
         WEB_SITE=http://search.cpan.org/dist/URI/
             TYPE=perl
          ENTERED=20020727
-         UPDATED=20190111
+         UPDATED=20210303
            SHORT="A perl module for using Uniform Resource Identifiers"
 
 cat << EOF
