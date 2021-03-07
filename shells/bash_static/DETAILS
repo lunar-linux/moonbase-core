@@ -1,15 +1,15 @@
           MODULE=bash_static
-         VERSION=5.0.18
+         VERSION=5.1.0
     BASE_VERSION=${VERSION%.*}
           SOURCE=bash-$BASE_VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/bash-$BASE_VERSION
    SOURCE_URL[0]=$GNU_URL/${MODULE%_static}
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/${MODULE%_static}
    SOURCE_URL[2]=ftp://ftp.cwru.edu/pub/${MODULE%_static}
-      SOURCE_VFY=sha256:b4a80f2ac66170b2913efbfb9f2594f1f76c7b1afd11f799e22035d63077fb4d
+      SOURCE_VFY=sha256:cc012bc860406dcf42f64431bcd3d2fa7560c02915a601aba9cd597a39329baa
         WEB_SITE=http://tiswww.case.edu/php/chet/bash_static/bashtop.html
          ENTERED=20020615
-         UPDATED=20200811
+         UPDATED=20201221
            SHORT="A static bash build for rescue purposes"
 
 cat << EOF
