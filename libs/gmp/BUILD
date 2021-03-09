@@ -1,4 +1,4 @@
-OPTS="--enable-cxx --enable-fat --disable-static" &&
+OPTS="--enable-cxx --enable-fat --disable-static"
 
 default_config &&
 make &&
