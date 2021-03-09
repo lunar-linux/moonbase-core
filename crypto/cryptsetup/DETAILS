@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:9d16eebb96b53b514778e813019b8dd15fea9fec5aafde9fae5febf59df83773
         WEB_SITE=http://code.google.com/p/cryptsetup
          ENTERED=20050309
-         UPDATED=20200904
+         UPDATED=20210309
            SHORT="Device-mapper crypto userspace setup tool"
 
 cat << EOF
