@@ -5,8 +5,8 @@ elif in_depends $MODULE gnutls; then
   OPTS+=" --with-ssl"
 else
   OPTS+=" --without-ssl"
-fi &&
+fi
 
-OPTS+=" --disable-debug"  &&
+OPTS+=" --disable-debug"
 
 default_build
