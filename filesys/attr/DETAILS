@@ -1,12 +1,12 @@
           MODULE=attr
-         VERSION=2.4.48
+         VERSION=2.5.0
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=https://download.savannah.nongnu.org/releases/$MODULE/
    SOURCE_URL[1]=http://mirror.dknss.com/nongnu/$MODULE
-      SOURCE_VFY=sha256:5ead72b358ec709ed00bbf7a9eaef1654baad937c001c044fe8b74c57f5324e7
+      SOURCE_VFY=sha256:421501c3f7a56ab12e2c34a187bcae44f7d141f965ade18d01e6261d138f163b
         WEB_SITE=http://oss.sgi.com/projects/xfs
          ENTERED=20020531
-         UPDATED=20130619
+         UPDATED=20210312
            SHORT="Extended Attribute (EA) support"
            PSAFE=no
 
