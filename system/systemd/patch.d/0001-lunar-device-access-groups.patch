@@ -1,7 +1,7 @@
 diff -Naur systemd-239.orig/rules.d/50-udev-default.rules.in systemd-239/rules.d/50-udev-default.rules.in
 --- systemd-239.orig/rules.d/50-udev-default.rules.in	2018-06-22 13:11:49.000000000 +0200
 +++ systemd-239/rules.d/50-udev-default.rules.in	2018-08-07 12:34:29.253674225 +0200
-@@ -23,7 +23,7 @@
+@@ -22,7 +22,7 @@
  SUBSYSTEM=="tty", KERNEL=="ttysclp[0-9]*", GROUP="tty", MODE="0620"
  SUBSYSTEM=="tty", KERNEL=="3270/tty[0-9]*", GROUP="tty", MODE="0620"
  SUBSYSTEM=="vc", KERNEL=="vcs*|vcsa*", GROUP="tty"
