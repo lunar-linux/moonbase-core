@@ -1,11 +1,11 @@
           MODULE=curl
-         VERSION=7.74.0
+         VERSION=7.76.0
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://curl.haxx.se/download/
-      SOURCE_VFY=sha256:0f4d63e6681636539dc88fa8e929f934cd3a840c46e0bf28c73be11e521b77a5
+      SOURCE_VFY=sha256:e29bfe3633701590d75b0071bbb649ee5ca4ca73f00649268bd389639531c49a
         WEB_SITE=https://curl.haxx.se/
          ENTERED=20010922
-         UPDATED=20201209
+         UPDATED=20210331
            SHORT="Tool for transferring files using URL syntax"
 
 cat << EOF
