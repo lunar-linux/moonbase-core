@@ -1,12 +1,12 @@
           MODULE=file
-         VERSION=5.39
+         VERSION=5.40
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=ftp://ftp.astron.com/pub/$MODULE
    SOURCE_URL[1]=https://fossies.org/linux/misc/
-      SOURCE_VFY=sha256:f05d286a76d9556243d0cb05814929c2ecf3a5ba07963f8f70bfaaa70517fad1
+      SOURCE_VFY=sha256:167321f43c148a553f68a0ea7f579821ef3b11c27b8cbe158e4df897e4a5dd57
         WEB_SITE=http://www.darwinsys.com/file/
          ENTERED=20010922
-         UPDATED=20200615
+         UPDATED=20210331
            SHORT="File attempts to classify files by their content"
 
 cat << EOF
