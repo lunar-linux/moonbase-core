@@ -1,10 +1,9 @@
 OPTS+=" --disable-rpath \
-        --disable-debug \
-        --disable-static" &&
+        --disable-static"
 
 default_config &&
 
-sedit "s:-1.14::" Makefile &&
+#sedit "s:-1.14::" Makefile &&
 
 default_make &&
 
