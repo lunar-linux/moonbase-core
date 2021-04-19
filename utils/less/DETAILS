@@ -1,13 +1,13 @@
           MODULE=less
-         VERSION=580
+         VERSION=581
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=http://www.greenwoodsoftware.com/$MODULE/
    SOURCE_URL[1]=$GNU_URL/$MODULE
    SOURCE_URL[2]=ftp://ftp.gnu.org/pub/gnu/$MODULE/
-      SOURCE_VFY=sha256:5b5c606e3de2e8d93929342c89e71861a4a6766210f65e1c05a75f8cf62fa287
+      SOURCE_VFY=sha256:1d077f83fe7867e0ecfd278eab3122326b21c22c9161366189c38e09b96a2c65
         WEB_SITE=http://www.greenwoodsoftware.com/less/
          ENTERED=20010922
-         UPDATED=20210318
+         UPDATED=20210419
            SHORT="A terminal based program for viewing text files"
 
 cat << EOF
