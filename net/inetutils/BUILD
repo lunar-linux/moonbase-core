@@ -21,6 +21,6 @@
           --enable-ftp         \
           --enable-telnet      \
           --enable-rcp         \
-          --enable-dnsdomainname" &&
+          --enable-dnsdomainname"
 
   default_build
