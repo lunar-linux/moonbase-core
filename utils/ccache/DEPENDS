@@ -1,1 +1,5 @@
+depends cmake
+depends zstd
 depends zlib
+
+optional_depends asciidoc "" "" "for man page install"
