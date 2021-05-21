@@ -1,11 +1,11 @@
           MODULE=dialog
-         VERSION=1.3-20210319
+         VERSION=1.3-20210509
           SOURCE=$MODULE-$VERSION.tgz
       SOURCE_URL=http://invisible-mirror.net/archives/dialog/
-      SOURCE_VFY=sha256:42c6c2b35dd6d1c6cf231238e3bd6d3b7af53fc279a1af547ab9890044d46652
+      SOURCE_VFY=sha256:ae478fe7d5fca82bcf4b51684641e07d2ee68489d319710fe1e81f41a197bd66
         WEB_SITE=http://invisible-island.net/dialog
          ENTERED=20010922
-         UPDATED=20210320
+         UPDATED=20210521
            SHORT="Allows shell scripts to provide fancy text dialog with users"
 
 cat << EOF
