@@ -1,11 +1,11 @@
           MODULE=expat
-         VERSION=2.4.0
+         VERSION=2.4.1
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:8c59142ef88913bc0a8b6e4c58970c034210ca552e6271f52f6cd6cce3708424
+      SOURCE_VFY=sha256:2f9b6a580b94577b150a7d5617ad4643a4301a6616ff459307df3e225bcfbf40
         WEB_SITE=http://expat.sourceforge.net
          ENTERED=20010928
-         UPDATED=20210524
+         UPDATED=20210526
            SHORT="XML parsing library"
 
 cat << EOF
