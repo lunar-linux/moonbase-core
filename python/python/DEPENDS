@@ -1,3 +1,4 @@
+depends bzip2
 depends %OSSL
 depends libffi
 depends expat
@@ -7,3 +8,9 @@ depends zlib
 optional_depends db     "" "" "for db support"
 optional_depends gdbm   "" "" "for gdbm support"
 optional_depends sqlite "" "" "for sqlite support"
+
+optional_depends mpdecimal \
+                     "--wwith-system-libmpdec"  \
+                    "" \
+                     "for system mpdecimal support" \
+                     "n"
