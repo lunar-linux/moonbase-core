@@ -10,7 +10,7 @@ optional_depends gdbm   "" "" "for gdbm support"
 optional_depends sqlite "" "" "for sqlite support"
 
 optional_depends mpdecimal \
-                     "--wwith-system-libmpdec"  \
+                    "--with-system-libmpdec"  \
                     "" \
-                     "for system mpdecimal support" \
-                     "n"
+                    "for system mpdecimal support" \
+                    "n"
