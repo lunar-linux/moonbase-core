@@ -5,7 +5,7 @@ diff --git c/run_unittests.py i/run_unittests.py
 index 80833425f..43f647d35 100755
 --- ./run_unittests.py
 +++ ./run_unittests.py
-@@ -6699,6 +6699,7 @@ class LinuxlikeTests(BasePlatformTests):
+@@ -6704,6 +6704,7 @@ class LinuxlikeTests(BasePlatformTests):
              raise unittest.SkipTest('asan not available on Cygwin')
          if is_openbsd():
              raise unittest.SkipTest('-fsanitize=address is not supported on OpenBSD')
