@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:2c0f9d75cdbeda928a25a128cd3d0b7120445ec0910c0b29d4c1038ed1be777f
         WEB_SITE=http://www.ibiblio.org/pub/Linux/system/hardware
          ENTERED=20010922
-         UPDATED=20210512
+         UPDATED=20210612
            SHORT="A utility to access/tune Linux's EIDE drivers"
 
 cat << EOF
