@@ -1,6 +1,8 @@
 if ! [[ $(arch) == x86_64 ]]; then
   CFLAGS+=" -fPIE " &&
   LDFLAGS+=" -pie "
+  sedit 's/CLDFLAGS.*-Wl,-z,relro/& -shared/' libdm/make.tmpl.in
+  sedit 's/CLDFLAGS.*-Wl,-z,relro/& -shared/' make.tmpl.in
 fi
 
 if module_installed systemd; then
