@@ -1,0 +1,4 @@
+default_pre_build
+
+OPTS+=" -DENABLE_DOCUMENTATION=OFF \
+        -DUSE_CCACHE=OFF"
