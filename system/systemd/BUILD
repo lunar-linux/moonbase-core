@@ -11,6 +11,11 @@ OPTS+=" -Drootprefix=/usr \
         -Dhomed=false"
 
 add_priv_group systemd-journal &&
+add_priv_group kvm &&
+add_priv_group input &&
+add_priv_group render &&
+add_priv_group sgx &&
+add_priv_group rfkill &&
 
 # a not existing hostname is set to lunar.
 if [[ ! -f /etc/hostname ]]; then
