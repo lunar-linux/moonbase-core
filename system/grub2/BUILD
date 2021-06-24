@@ -6,7 +6,7 @@ if [ "$(arch)" == "x86_64" ]; then
 else
   _EFI_ARCH="i386"
   _EFI_EMU="--disable-efiemu"
-fi &&
+fi
 
 OPTS+=" --prefix=/usr \
         --bindir=/usr/bin \
@@ -22,7 +22,7 @@ OPTS+=" --prefix=/usr \
         --with-bootdir=/boot \
         --with-grubdir=grub \
         --disable-silent-rules \
-        --disable-werror" &&
+        --disable-werror"
 
 GRUB_BIOS=$SOURCE_DIRECTORY/grub-bios &&
 mkdir -p $GRUB_BIOS &&

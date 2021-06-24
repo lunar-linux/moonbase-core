@@ -1,5 +1,7 @@
 default_pre_build &&
 
+sedit 's/-j0 //' Makefile.pre.in &&
+
 sedit 's|{INSTALL} -m 555|{INSTALL} -m 755|' Makefile.pre.in &&
 
 sed -i -e "s|^#.* /usr/local/bin/python|#!/usr/bin/python|" Lib/cgi.py &&

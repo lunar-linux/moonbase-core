@@ -3,12 +3,11 @@
           SOURCE=grub-$VERSION.tar.gz
    SOURCE_URL[0]=https://ftp.gnu.org/gnu/grub
    SOURCE_URL[1]=http://www.funet.fi/pub/gnu/alpha/gnu/grub
-     SOURCE2_URL=$PATCH_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/grub-$VERSION
       SOURCE_VFY=sha256:f10c85ae3e204dbaec39ae22fa3c5e99f0665417e91c2cb49b7e5031658ba6ea
         WEB_SITE=http://www.gnu.org/software/grub
          ENTERED=20100112
-         UPDATED=20190705
+         UPDATED=20210111
       MAINTAINER=dagbrown@lunar-linux.org
            SHORT="GNU GRUB boot loader"
 

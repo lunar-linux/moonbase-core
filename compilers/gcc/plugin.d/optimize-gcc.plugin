@@ -110,7 +110,7 @@ plugin_compiler_gcc_optimize()
       AES)     c_cxx_flags_add "-maes" ;;
       PCLMUL)  c_cxx_flags_add "-mpclmul" ;;
       POPCNT)  c_cxx_flags_add "-mpopcnt" ;;
-      ABM)     c_cxx_flags_add "-mabm" ;;
+      LZCNT)   c_cxx_flags_add "-mlzcnt" ;;
     esac
   done
 
@@ -632,10 +632,11 @@ EOF
                   "AVX" "AVX" $( echo ${XTRA[@]} | grep -q "AVX" && echo "on" || echo "off" ) "AVX - Advanced Vector eXtensions (Extended SSE registers)"
                   )
               fi
+				  # abm consists of popcnt and lzcnt, but we handle popcnt separately and lzcnt does not have its own flag
               if grep -qw abm /proc/cpuinfo; then
                 OPTIONS=(
                   ${OPTIONS[@]}
-                  "ABM" "ABM" $( echo ${XTRA[@]} | grep -q "ABM" && echo "on" || echo "off" ) "AMD Advanced Bit Manipulation"
+                  "LZCNT" "LZCNT" $( echo ${XTRA[@]} | grep -q "LZCNT" && echo "on" || echo "off" ) "leading-zero count (together with popcnt it constitutes ABM)"
                   )
               fi
             ;;
