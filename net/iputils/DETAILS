@@ -1,14 +1,14 @@
          MODULE=iputils
-        VERSION=s20200821
+        VERSION=20210202
          SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=$MODULE-$VERSION-manpages.tar.gz
- SOURCE_URL_FULL=https://github.com/iputils/iputils/archive/${VERSION}.tar.gz
+         SOURCE2=$MODULE-${VERSION}-manpages.tar.gz
+ SOURCE_URL_FULL=https://github.com/iputils/iputils/archive/refs/tags/${VERSION}.tar.gz
      SOURCE2_URL=$MIRROR_URL
         WEB_SITE=http://github.com/iputils/iputils/
-      SOURCE_VFY=sha256:f265da0d02dd2259efd8c57a9c2e0c8bb3361abb14639fcffb26707be5783a5b
-     SOURCE2_VFY=sha256:cacb3ab572942ee61759c1c3368bc384cd5a8e0fae9d29238ceff6409aea39a1  iputils-s20200821-manpages.tar.gz
+      SOURCE_VFY=sha256:3f557ecfd2ace873801231d2c1f42de73ced9fbc1ef3a438d847688b5fb0e8ab
+     SOURCE2_VFY=sha256:aec3919c5837e66c6faab7b39d7b6433ac7942e31b2a8a2cd22ba6a88aeb9f93
          ENTERED=20021106
-         UPDATED=20200907
+         UPDATED=20210428
            SHORT="Essential utilities for IP networks"
 
 cat << EOF
