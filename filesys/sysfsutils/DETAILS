@@ -1,11 +1,11 @@
           MODULE=sysfsutils
-         VERSION=2.1.0
+         VERSION=2.1.1
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=$SFORGE_URL/linux-diag/
-      SOURCE_VFY=sha1:b3cb316c652b09ec66f93f4ea98a93a7a1001678
+ SOURCE_URL_FULL=https://github.com/linux-ras/sysfsutils/archive/v${VERSION}.tar.gz
+      SOURCE_VFY=sha256:f7f669d27c997d3eb3f3e014b4c0aa1aa4d07ce4d6f9e41fa835240f2bf38810
         WEB_SITE=http://linux-diag.sourceforge.net/Sysfsutils.html
          ENTERED=20040103
-         UPDATED=20060906
+         UPDATED=20210306
           SHORT="System utilities based on sysfs"
 
 cat << EOF
