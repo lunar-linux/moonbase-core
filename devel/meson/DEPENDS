@@ -1,2 +1,3 @@
+depends rsync
 depends python-setuptools
 depends ninja
