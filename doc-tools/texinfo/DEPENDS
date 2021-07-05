@@ -1,3 +1,4 @@
+depends perl
 depends findutils
 depends ncurses
 depends gzip
