@@ -1,0 +1,70 @@
+--- ./meson.build.orig	2021-07-07 20:41:29.000000000 +0300
++++ ./meson.build	    2021-07-07 23:15:27.705239576 +0300
+@@ -797,7 +797,6 @@
+ foreach option : ['adm-gid',
+                   'audio-gid',
+                   'cdrom-gid',
+-                  'dialout-gid',
+                   'disk-gid',
+                   'input-gid',
+                   'kmem-gid',
+@@ -809,6 +808,7 @@
+                   'tty-gid',
+                   'users-gid',
+                   'utmp-gid',
++                  'uucp-gid',
+                   'video-gid',
+                   'wheel-gid',
+                   'systemd-journal-gid',
+--- ./meson_options.txt.orig	2021-07-07 20:41:29.000000000 +0300
++++ ./meson_options.txt	        2021-07-07 23:21:47.917216246 +0300
+@@ -237,8 +237,6 @@
+        description : 'soft-static allocation for the "audio" group')
+ option('cdrom-gid', type : 'integer', value : '-1',
+        description : 'soft-static allocation for the "cdrom" group')
+-option('dialout-gid', type : 'integer', value : '-1',
+-       description : 'soft-static allocation for the "dialout" group')
+ option('disk-gid', type : 'integer', value : '-1',
+        description : 'soft-static allocation for the "disk" group')
+ option('input-gid', type : 'integer', value : '-1',
+@@ -261,6 +259,8 @@
+        description : 'soft-static allocation for the "users" group')
+ option('utmp-gid', type : 'integer', value : '-1',
+        description : 'soft-static allocation for the "utmp" group')
++option('uucp-gid', type : 'integer', value : '-1',
++       description : 'soft-static allocation for the "uucp" group')
+ option('video-gid', type : 'integer', value : '-1',
+        description : 'soft-static allocation for the "video" group')
+ option('wheel-gid', type : 'integer', value : '-1',
+--- ./rules.d/50-udev-default.rules.in
++++ ./rules.d/50-udev-default.rules.in
+@@ -22,7 +22,7 @@ SUBSYSTEM=="tty", KERNEL=="sclp_line[0-9]*", GROUP="tty", MODE="0620"
+ SUBSYSTEM=="tty", KERNEL=="ttysclp[0-9]*", GROUP="tty", MODE="0620"
+ SUBSYSTEM=="tty", KERNEL=="3270/tty[0-9]*", GROUP="tty", MODE="0620"
+ SUBSYSTEM=="vc", KERNEL=="vcs*|vcsa*", GROUP="tty"
+-KERNEL=="tty[A-Z]*[0-9]|ttymxc[0-9]*|pppox[0-9]*|ircomm[0-9]*|noz[0-9]*|rfcomm[0-9]*", GROUP="dialout"
++KERNEL=="tty[A-Z]*[0-9]|ttymxc[0-9]*|pppox[0-9]*|ircomm[0-9]*|noz[0-9]*|rfcomm[0-9]*", GROUP="uucp"
+ 
+ SUBSYSTEM=="mem", KERNEL=="mem|kmem|port", GROUP="kmem", MODE="0640"
+ 
+--- ./sysusers.d/basic.conf.in
++++ ./sysusers.d/basic.conf.in
+@@ -22,17 +22,17 @@ g utmp    {{UTMP_GID   }}     -            -
+ 
+ # Physical and virtual hardware access groups
+ g audio   {{AUDIO_GID  }}     -            -
+ g cdrom   {{CDROM_GID  }}     -            -
+-g dialout {{DIALOUT_GID}}     -            -
+ g disk    {{DISK_GID   }}     -            -
+ g input   {{INPUT_GID  }}     -            -
+ g kmem    {{KMEM_GID   }}     -            -
+ g kvm     {{KVM_GID    }}     -            -
+ g lp      {{LP_GID     }}     -            -
+ g render  {{RENDER_GID }}     -            -
+ g sgx     {{SGX_GID    }}     -            -
+ g tape    {{TAPE_GID   }}     -            -
+ g tty     {{TTY_GID    }}     -            -
++g uucp    {{UUCP_GID   }}     -            -
+ g video   {{VIDEO_GID  }}     -            -
+ 
+ # Default group for normal users
