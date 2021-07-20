@@ -24,3 +24,4 @@ optional_depends xz            "-Dxz=true"                            "-Dxz=fals
 optional_depends lz4           "-Dlz4=true"                           "-Dlz4=false"           "for lz4 compression support"         n
 optional_depends quota         "-Dquotacheck=true"                    "-Dquotacheck=false"    "for quota support"                   y
 optional_depends docbook-xsl   "-Dman=true"                           "-Dman=false"           "for man-pages"                       n
+optional_depends rsync         "-Ddoc-sync=true"                      "-Ddoc-sync=false"      "for documentation synchronization"   n
