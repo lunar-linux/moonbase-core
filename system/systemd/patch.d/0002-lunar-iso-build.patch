@@ -1,0 +1,21 @@
+diff -r -C 2 systemd-248.orig/man/meson.build systemd-248/man/meson.build
+*** systemd-248.orig/man/meson.build	2021-03-31 05:59:02.000000000 +0900
+--- systemd-248/man/meson.build	2021-07-20 14:23:01.953186575 +0900
+***************
+*** 188,197 ****
+          'doc-sync',
+          depends : man_pages + html_pages,
+!         command : ['rsync', '-rlv',
+!                    '--delete-excluded',
+!                    '--include=man',
+!                    '--include=*.html',
+!                    '--exclude=*',
+!                    '--omit-dir-times',
+                     meson.current_build_dir(),
+                     get_option('www-target')])
+--- 188,192 ----
+          'doc-sync',
+          depends : man_pages + html_pages,
+!         command : ['cp', '-r',
+                     meson.current_build_dir(),
+                     get_option('www-target')])
