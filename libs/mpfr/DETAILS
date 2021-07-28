@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:0c98a3f1732ff6ca4ea690552079da9c597872d30e96ec28414ee23c95558a7f
         WEB_SITE=http://www.mpfr.org
          ENTERED=20070111
-         UPDATED=20200811
+         UPDATED=20210728
            SHORT="C library for multiple-precision floating-point computations"
 
 cat << EOF
