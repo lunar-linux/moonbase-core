@@ -1,13 +1,13 @@
           MODULE=gcc
-         VERSION=10.2.0
+         VERSION=11.2.0
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/gcc/$MODULE-$VERSION/
    SOURCE_URL[1]=ftp://gcc.gnu.org/pub/gcc/releases/gcc-$VERSION/
    SOURCE_URL[2]=http://www.online-mirror.org/gcc/$MODULE-$VERSION/
-      SOURCE_VFY=sha256:b8dd4368bb9c7f0b98188317ee0254dd8cc99d1e3a18d0ff146c855fe16c1d8c
+      SOURCE_VFY=sha256:d08edc536b54c372a1010ff6619dd274c0f1603aa49212ba20f7aa2cda36fa8b
         WEB_SITE=http://gcc.gnu.org/
          ENTERED=20020628
-         UPDATED=20200930
+         UPDATED=20210728
            SHORT="GNU compiler collection"
 
 cat << EOF
