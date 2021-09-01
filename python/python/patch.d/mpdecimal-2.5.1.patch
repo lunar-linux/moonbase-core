@@ -12,7 +12,7 @@ diff --git a/Modules/_decimal/_decimal.c b/Modules/_decimal/_decimal.c
 index 664d45a90481d..bbd540bc376e2 100644
 --- a/Modules/_decimal/_decimal.c
 +++ b/Modules/_decimal/_decimal.c
-@@ -3280,7 +3280,7 @@ dec_format(PyObject *dec, PyObject *args)
+@@ -3279,7 +3279,7 @@ dec_format(PyObject *dec, PyObject *args)
      }
      else {
          size_t n = strlen(spec.dot);
@@ -21,7 +21,7 @@ index 664d45a90481d..bbd540bc376e2 100644
              /* fix locale dependent non-ascii characters */
              dot = dotsep_as_utf8(spec.dot);
              if (dot == NULL) {
-@@ -3289,7 +3289,7 @@ dec_format(PyObject *dec, PyObject *args)
+@@ -3288,7 +3288,7 @@ dec_format(PyObject *dec, PyObject *args)
              spec.dot = PyBytes_AS_STRING(dot);
          }
          n = strlen(spec.sep);
