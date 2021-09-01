@@ -1,1 +1,4 @@
 depends zlib
+depends zstd
+depends hiredis
+depends cmake
