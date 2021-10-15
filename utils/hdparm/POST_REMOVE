@@ -1,0 +1,3 @@
+if module_installed openrc-hdparm; then
+   lrm openrc-hdparm
+fi

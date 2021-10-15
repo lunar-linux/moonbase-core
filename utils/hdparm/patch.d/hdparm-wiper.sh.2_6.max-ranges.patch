@@ -1,6 +1,6 @@
 --- ./wiper/wiper.sh.orig	2010-03-09 06:17:37.000000000 -0800
 --- ./wiper/wiper.sh		2010-05-15 03:08:02.182856971 -0700
-@@ -29,7 +29,7 @@
+@@ -36,7 +36,7 @@
  function usage_error(){
  	echo >&2
  	echo "Linux tune-up (TRIM) utility for SATA SSDs"
@@ -9,7 +9,7 @@
  	echo "   Eg:  $0 /dev/sda1" >&2
  	echo >&2
  	exit 1
-@@ -44,6 +44,7 @@
+@@ -51,6 +51,7 @@
  
  export verbose=0
  commit=""
@@ -17,7 +17,7 @@
  destroy_me=""
  argc=$#
  arg=""
-@@ -51,6 +52,10 @@
+@@ -62,6 +62,10 @@
  		commit=yes
  	elif [ "$1" = "--verbose" ]; then
  		verbose=$((verbose + 1))
@@ -28,7 +28,7 @@
  	elif [ "$1" = "" ]; then
  		usage_error
  	else
-@@ -499,6 +550,18 @@
+@@ -613,6 +613,18 @@
  	fi
  fi
  
@@ -47,7 +47,7 @@
  ## All ready.  Now let the user know exactly what we intend to do:
  ##
  mountstatus="$fstype non-mounted"
-@@ -608,7 +671,7 @@
+@@ -737,7 +737,7 @@
  		nsectors += count;
  		while (count > 0) {
  			this_count  = (count > 65535) ? 65535 : count
@@ -56,7 +56,7 @@
  			if (verbose > 1)
  				printf "%u:%u ", lba, this_count > "/dev/stderr"
  			lba        += this_count
-@@ -695,6 +758,22 @@
+@@ -877,6 +877,22 @@
  	-v verbose="$verbose"			\
  	-v xfs_blksects="$xfs_blksects"		\
  	-v xfs_agoffsets="$xfs_agoffsets"	\
