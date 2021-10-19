@@ -11,13 +11,18 @@ fi &&
 ../configure --prefix=/usr    \
              --disable-gdb    \
              --disable-werror \
-             --enable-shared  \
-             --enable-threads \
-             --enable-gold    \
+             --enable-cet \
+             --enable-gold \
+             --enable-relro \
              --enable-plugins \
+             --enable-threads \
+             --enable-ld=default \
              --enable-install-libiberty \
+             --with-pic \
              --with-system-zlib \
              $OPTS &&
+
+#             --enable-shared  \
 
 make configure-host &&
 make tooldir=/usr &&
@@ -28,6 +33,6 @@ make tooldir=/usr install &&
 rm /usr/share/man/man1/{dlltool,windres,windmc}*
 
 # No shared linking to these files outside binutils
-rm /usr/lib/lib{bfd,opcodes}.so &&
-echo "INPUT ( /usr/lib/libbfd.a -liberty -lz -ldl )" > /usr/lib/libbfd.so &&
-echo "INPUT ( /usr/lib/libopcodes.a -lbfd )" > /usr/lib/libopcodes.so
+#rm /usr/lib/lib{bfd,opcodes}.so &&
+#echo "INPUT ( /usr/lib/libbfd.a -liberty -lz -ldl )" > /usr/lib/libbfd.so &&
+#echo "INPUT ( /usr/lib/libopcodes.a -lbfd )" > /usr/lib/libopcodes.so
