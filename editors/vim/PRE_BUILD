@@ -1,0 +1,5 @@
+default_pre_build &&
+
+# define the place for the global (g)vimrc file (set to /etc/vimrc)
+sed -E 's|^.*(#define SYS_.*VIMRC_FILE.*").*$|\1|g' -i src/feature.h &&
+sed -E 's|^.*(#define VIMRC_FILE.*").*$|\1|g' -i src/feature.h
