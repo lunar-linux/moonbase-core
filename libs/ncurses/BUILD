@@ -25,7 +25,8 @@ set -x &&
              --with-manpage-format=gzip               \
              --with-terminfo-dirs=/usr/share/terminfo \
              --with-pkg-config-libdir=/usr/lib/pkgconfig \
-             $OPTS                                   &&
+             --without-ada \
+             $OPTS         &&
 
 default_make &&
 
@@ -58,7 +59,8 @@ set -x &&
              --with-manpage-format=gzip               \
              --with-terminfo-dirs=/usr/share/terminfo \
              --with-pkg-config-libdir=/usr/lib/pkgconfig \
-            $OPTS                                    &&
+             --without-ada \
+            $OPTS         &&
 
 set +x &&
 default_make &&
