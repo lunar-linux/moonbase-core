@@ -1,11 +1,15 @@
+
 OPTS+=" --enable-extras     \
         --enable-ntfsprogs  \
+        --enable-posix-acls \
+        --enable-crypto     \
+        --enable-posix-acls \
+        --enable-xattr-mappings \
         --disable-ldconfig  \
         --disable-static    \
-        --sbindir=/usr/bin" &&
-
-sed 's|$(DESTDIR)/sbin|$(DESTDIR)/usr/bin|' -i {ntfsprogs,src}/Makefile.in &&
-sed -e 's:sbin\($\|/\):$(sbindir)\1:g' -i ntfsprogs/Makefile.in src/Makefile.in &&
-sedit "1049,1060d" libntfs-3g/Makefile.in &&
+        --mandir=/usr/share/man \
+        --with-fuse=internal \
+        --without-hd  \
+        --exec-prefix=/usr" &&
 
 default_build

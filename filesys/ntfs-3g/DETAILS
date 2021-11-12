@@ -1,12 +1,12 @@
           MODULE=ntfs-3g
-         VERSION=2017.3.23
+         VERSION=2021.8.22
           SOURCE=${MODULE}_ntfsprogs-$VERSION.tgz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}_ntfsprogs-$VERSION
       SOURCE_URL=http://tuxera.com/opensource
-      SOURCE_VFY=sha256:3e5a021d7b761261836dcb305370af299793eedbded731df3d6943802e1262d5
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}_ntfsprogs-$VERSION
+      SOURCE_VFY=sha256:55b883aa05d94b2ec746ef3966cb41e66bed6db99f22ddd41d1b8b94bb202efb
         WEB_SITE=http://www.tuxera.com/community/ntfs-3g-download
          ENTERED=20070621
-         UPDATED=20170329
+         UPDATED=2021112
            SHORT="NTFS driver for Linux"
 
 cat << EOF
