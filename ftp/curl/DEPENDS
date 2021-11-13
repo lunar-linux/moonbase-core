@@ -26,6 +26,11 @@ optional_depends nghttp2 \
                  "--without-nghttp2" \
                  "for support of HTTP2 protocol"
 
+optional_depends brotli \
+                 "" \
+                 "--without-brotli" \
+                 "for support of brotli compression"
+
 optional_depends openldap \
                  "--enable-ldap --enable-ldaps" \
                  "--disable-ldap --disable-ldaps" \
