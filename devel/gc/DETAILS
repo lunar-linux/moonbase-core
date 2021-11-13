@@ -1,11 +1,11 @@
           MODULE=gc
-         VERSION=8.0.4
+         VERSION=8.2.0
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=https://github.com/ivmai/bdwgc/releases/download/v$VERSION/
-      SOURCE_VFY=sha256:436a0ddc67b1ac0b0405b61a9675bca9e075c8156f4debd1d06f3a56c7cd289d
+      SOURCE_VFY=sha256:2540f7356cb74f6c5b75326c6d38a066edd796361fd7d4ed26e494d9856fed8f
         WEB_SITE=http://www.hboehm.info/gc/
          ENTERED=20020314
-         UPDATED=20190925
+         UPDATED=20211103
            SHORT="A garbage collector"
 
 cat << EOF
