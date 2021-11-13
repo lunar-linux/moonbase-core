@@ -1,12 +1,12 @@
           MODULE=diffutils
-         VERSION=3.7
+         VERSION=3.8
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE/
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:b3a7a6221c3dc916085f0d205abf6b8e1ba443d4dd965118da364a1dc1cb3a26
+      SOURCE_VFY=sha256:a6bdd7d1b31266d11c4f4de6c1b748d4607ab0231af5188fc2533d0ae2438fec
         WEB_SITE=http://www.gnu.org/software/diffutils/diffutils.html
          ENTERED=20010922
-         UPDATED=20190101
+         UPDATED=20210804
            SHORT="Finds differences between and among files"
 
 cat << EOF
