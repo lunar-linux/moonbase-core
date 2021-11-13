@@ -1,4 +1,1 @@
 depends libunistring
-
-# broken
-optional_depends gtk-doc "" "" "for building documentation"
