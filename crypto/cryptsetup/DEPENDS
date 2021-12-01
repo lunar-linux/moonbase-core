@@ -4,7 +4,5 @@ depends util-linux
 depends json-c
 depends %OSSL
 
-optional_depends argon2 \
-                 "--enable-libargon2" \
-                 "--disable-libargon2" \
-                 "for argon2 password-hashing support"
+optional_depends libssh "--disable-ssh-token" "--disable-ssh-token" "for ssh token support"
+optional_depends argon2 "--enable-libargon2"  "--disable-libargon2" "for argon2 password-hashing support"
