@@ -1,0 +1,19 @@
+          MODULE=python-markupsafe
+         VERSION=2.0.1
+          SOURCE=MarkupSafe-${VERSION}.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/MarkupSafe-$VERSION
+      SOURCE_URL=https://files.pythonhosted.org/packages/bf/10/ff66fea6d1788c458663a84d88787bae15d45daa16f6b3ef33322a51fc7e/
+      SOURCE_VFY=sha256:594c67807fb16238b30c44bdf74f36c02cdf22d1c8cda91ef8a0ed8dabf5620a
+        WEB_SITE=https://pypi.python.org/project/MarkupSafe/
+         ENTERED=20211229
+         UPDATED=20211229
+            TYPE=python3
+           SHORT="Safely add untrusted strings to HTML/XML markup"
+
+cat << EOF
+MarkupSafe implements a text object that escapes characters so it is
+safe to use in HTML and XML. Characters that have special meanings are
+replaced so that they display as the actual characters. This mitigates
+injection attacks, meaning untrusted user input can safely be displayed
+on a page.
+EOF
