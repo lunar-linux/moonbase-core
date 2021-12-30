@@ -8,6 +8,9 @@ OPTS+=" -Drootprefix=/usr \
         -Drpmmacrosdir=no \
         -Dsysvinit-path= \
         -Dsysvrcnd-path= \
+        -Dsbat-distro=lunarlinux \
+        -Dsbat-distro-summary=lunarlinux \
+        -Dsbat-distro-url=https://www.lunar-linux.org/
         -Dhomed=false"
 
 add_priv_group systemd-journal &&
