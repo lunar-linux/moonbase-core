@@ -1,0 +1,36 @@
+          MODULE=python-jinja2
+         VERSION=3.0.3
+          SOURCE=Jinja2-${VERSION}.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/Jinja2-$VERSION
+      SOURCE_URL=https://files.pythonhosted.org/packages/91/a5/429efc6246119e1e3fbf562c00187d04e83e54619249eb732bb423efa6c6/
+      SOURCE_VFY=sha256:611bb273cd68f3b993fabdc4064fc858c5b47a973cb5aa7999ec1ba405c87cd7
+        WEB_SITE=https://pypi.python.org/project/Jinja2/
+         ENTERED=20211229
+         UPDATED=20211229
+            TYPE=python3
+           SHORT="a very fast an expressive template engine"
+
+cat << EOF
+Jinja is a fast, expressive, extensible templating engine. Special
+placeholders in the template allow writing code similar to Python
+syntax. Then the template is passed data to render the final document.
+
+It includes:
+
+* Template inheritance and inclusion.
+* Define and import macros within templates.
+* HTML templates can use autoescaping to prevent XSS from untrusted user
+  input.
+* A sandboxed environment can safely render untrusted templates.
+* AsyncIO support for generating templates and calling async functions.
+* I18N support with Babel.
+* Templates are compiled to optimized Python code just-in-time and
+  cached, or can be compiled ahead-of-time.
+* Exceptions point to the correct line in templates to make debugging
+  easier.
+* Extensible filters, tests, functions, and even syntax.
+
+Jinja’s philosophy is that while application logic belongs in Python if
+possible, it shouldn’t make the template designer’s job difficult by
+restricting functionality too much.
+EOF
