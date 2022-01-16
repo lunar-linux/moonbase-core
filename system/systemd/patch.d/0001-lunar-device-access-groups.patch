@@ -1,24 +1,32 @@
-diff -Naur systemd-239.orig/rules.d/50-udev-default.rules.in systemd-239/rules.d/50-udev-default.rules.in
---- systemd-239.orig/rules.d/50-udev-default.rules.in	2018-06-22 13:11:49.000000000 +0200
-+++ systemd-239/rules.d/50-udev-default.rules.in	2018-08-07 12:34:29.253674225 +0200
-@@ -22,7 +22,7 @@
- SUBSYSTEM=="tty", KERNEL=="ttysclp[0-9]*", GROUP="tty", MODE="0620"
- SUBSYSTEM=="tty", KERNEL=="3270/tty[0-9]*", GROUP="tty", MODE="0620"
- SUBSYSTEM=="vc", KERNEL=="vcs*|vcsa*", GROUP="tty"
--KERNEL=="tty[A-Z]*[0-9]|ttymxc[0-9]*|pppox[0-9]*|ircomm[0-9]*|noz[0-9]*|rfcomm[0-9]*", GROUP="dialout"
-+KERNEL=="tty[A-Z]*[0-9]|ttymxc[0-9]*|pppox[0-9]*|ircomm[0-9]*|noz[0-9]*|rfcomm[0-9]*", GROUP="uucp"
- 
- SUBSYSTEM=="mem", KERNEL=="mem|kmem|port", GROUP="kmem", MODE="0640"
- 
-diff -Naur systemd-239.orig/sysusers.d/basic.conf.in systemd-239/sysusers.d/basic.conf.in
---- systemd-239.orig/sysusers.d/basic.conf.in	2018-06-22 13:11:49.000000000 +0200
-+++ systemd-239/sysusers.d/basic.conf.in	2018-08-07 12:34:57.714012087 +0200
-@@ -25,7 +25,7 @@
- # Hardware access groups
- g audio   -     -            -
- g cdrom   -     -            -
--g dialout -     -            -
-+g uucp -     -            -
- g disk    -     -            -
- g input   -     -            -
- g kvm     -     -            -
+diff -r -C 2 systemd-250.orig/rules.d/50-udev-default.rules.in systemd-250/rules.d/50-udev-default.rules.in
+*** systemd-250.orig/rules.d/50-udev-default.rules.in	2021-12-24 05:09:35.000000000 +0900
+--- systemd-250/rules.d/50-udev-default.rules.in	2022-01-16 13:39:04.120868442 +0900
+***************
+*** 24,28 ****
+  SUBSYSTEM=="tty", KERNEL=="3270/tty[0-9]*", GROUP="tty", MODE="0620"
+  SUBSYSTEM=="vc", KERNEL=="vcs*|vcsa*", GROUP="tty"
+! KERNEL=="tty[A-Z]*[0-9]|ttymxc[0-9]*|pppox[0-9]*|ircomm[0-9]*|noz[0-9]*|rfcomm[0-9]*", GROUP="dialout"
+
+  SUBSYSTEM=="mem", KERNEL=="mem|kmem|port", GROUP="kmem", MODE="0640"
+--- 24,28 ----
+  SUBSYSTEM=="tty", KERNEL=="3270/tty[0-9]*", GROUP="tty", MODE="0620"
+  SUBSYSTEM=="vc", KERNEL=="vcs*|vcsa*", GROUP="tty"
+! KERNEL=="tty[A-Z]*[0-9]|ttymxc[0-9]*|pppox[0-9]*|ircomm[0-9]*|noz[0-9]*|rfcomm[0-9]*", GROUP="uucp"
+  
+  SUBSYSTEM=="mem", KERNEL=="mem|kmem|port", GROUP="kmem", MODE="0640"
+diff -r -C 2 systemd-250.orig/sysusers.d/basic.conf.in systemd-250/sysusers.d/basic.conf.in
+*** systemd-250.orig/sysusers.d/basic.conf.in	2021-12-24 05:09:35.000000000 +0900
+--- systemd-250/sysusers.d/basic.conf.in	2022-01-16 13:38:01.505466545 +0900
+***************
+*** 25,29 ****
+  g audio   {{AUDIO_GID  }}     -            -
+  g cdrom   {{CDROM_GID  }}     -            -
+! g dialout {{DIALOUT_GID}}     -            -
+  g disk    {{DISK_GID   }}     -            -
+  g input   {{INPUT_GID  }}     -            -
+--- 25,29 ----
+  g audio   {{AUDIO_GID  }}     -            -
+  g cdrom   {{CDROM_GID  }}     -            -
+! g uucp    {{DIALOUT_GID}}     -            -
+  g disk    {{DISK_GID   }}     -            -
+  g input   {{INPUT_GID  }}     -            -
