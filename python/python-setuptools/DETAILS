@@ -1,12 +1,15 @@
           MODULE=python-setuptools
-         VERSION=60.5.0
+         # DO NOT UPDATE THE VERSION
+         # Due to deprecations later versions tend to be incompatible with the
+         # majority of python modules. Consult Ratler if you are unsure.
+         VERSION=52.0.0
           SOURCE=setuptools-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/setuptools-$VERSION
  SOURCE_URL_FULL=https://github.com/pypa/setuptools/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:f961c48390878c2768c4adb088afa52ad8f6a91cf8ad6963a200f02fb780efb9
+      SOURCE_VFY=sha256:ff0c74d1b905a224d647f99c6135eacbec2620219992186b81aa20012bc7f882
         WEB_SITE=http://packages.python.org/distribute/
          ENTERED=20071221
-         UPDATED=20220110
+         UPDATED=20220119
             TYPE=python3
         REPLACES=setuptools-3
            SHORT="A simplified packaging system for Python 3.x"
