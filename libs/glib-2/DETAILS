@@ -6,7 +6,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%-*}-$VERSION
       SOURCE_VFY=sha256:0551459c85cd3da3d58ddc9016fd28be5af503f5e1615a71ba5b512ac945806f
         WEB_SITE=http://library.gnome.org/devel/glib
          ENTERED=20020313
-         UPDATED=20211230
+         UPDATED=20220117
            SHORT="A library of useful C routines for trees, hashes, and lists"
 
 cat << EOF
@@ -15,4 +15,3 @@ GTK+ and GNOME. It provides data structure handling for C, portability wrappers,
 and interfaces for such runtime functionality as an event loop, threads, dynamic
 loading, and an object system.
 EOF
-
