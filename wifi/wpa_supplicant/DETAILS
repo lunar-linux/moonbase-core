@@ -1,11 +1,11 @@
           MODULE=wpa_supplicant
-         VERSION=2.9
+         VERSION=2.10
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=https://w1.fi/releases/
-    SOURCE_VFY=sha256:fcbdee7b4a64bea8177973299c8c824419c413ec2e3a95db63dd6a5dc3541f17
+    SOURCE_VFY=sha256:20df7ae5154b3830355f8ab4269123a87affdea59fe74fe9292a91d0d7e17b2f
         WEB_SITE=http://hostap.epitest.fi/wpa_supplicant
          ENTERED=20041019
-         UPDATED=20190828
+         UPDATED=20220123
            SHORT="WPA key management for Linux"
 
 cat << EOF

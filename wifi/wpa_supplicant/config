@@ -1,4 +1,3 @@
-# Example wpa_supplicant build time configuration #
 # This file lists the configuration options that are used when building the
 # hostapd binary. All lines starting with # are ignored. Configuration option
 # lines must be commented out complete, if they are not to be included, i.e.,
@@ -512,3 +511,7 @@ CONFIG_IBSS_RSN=y
 # Simple background scan
 CONFIG_BGSCAN_SIMPLE=y
 
+# Disable MESH
+CONFIG_MESH=y
+
+CONFIG_TLDS=y
