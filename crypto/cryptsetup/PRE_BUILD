@@ -1,0 +1,4 @@
+default_pre_build &&
+
+# Silence warnings from libressl
+sedit 's;EVP_DecryptFinal;EVP_DecryptFinal_ex;g;s;EVP_EncryptFinal;EVP_EncryptFinal_ex;g' lib/crypto_backend/crypto_openssl.c
