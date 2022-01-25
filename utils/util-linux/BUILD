@@ -3,7 +3,6 @@ OPTS+=" --enable-agetty     \
         --enable-fsck       \
         --enable-mesg       \
         --enable-partx      \
-        --enable-raw        \
         --enable-rename     \
         --enable-schedutils \
         --enable-vipw       \
