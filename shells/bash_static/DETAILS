@@ -9,7 +9,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/bash-$BASE_VERSION
       SOURCE_VFY=sha256:cc012bc860406dcf42f64431bcd3d2fa7560c02915a601aba9cd597a39329baa
         WEB_SITE=http://tiswww.case.edu/php/chet/bash_static/bashtop.html
          ENTERED=20020615
-         UPDATED=20210512
+         UPDATED=20220117
            SHORT="A static bash build for rescue purposes"
 
 cat << EOF
