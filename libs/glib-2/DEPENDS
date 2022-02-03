@@ -3,8 +3,8 @@ depends zlib
 depends libffi
 depends gettext
 depends elfutils
-depends meson
 depends pcre
+depends meson
 
 optional_depends gtk-doc \
                  "-Dgtk_doc=true" \
