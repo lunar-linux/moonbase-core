@@ -7,7 +7,7 @@
       SOURCE_VFY=sha256:6aadf54be8bf57d0e2999a3c5d67b1de63808bb90deb8f77b028eafae3a08e10
         WEB_SITE=http://www.greenwoodsoftware.com/less/
          ENTERED=20010922
-         UPDATED=20210711
+         UPDATED=20220211
            SHORT="A terminal based program for viewing text files"
 
 cat << EOF
