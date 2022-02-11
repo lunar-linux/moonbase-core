@@ -6,7 +6,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}_ntfsprogs-$VERSION
       SOURCE_VFY=sha256:55b883aa05d94b2ec746ef3966cb41e66bed6db99f22ddd41d1b8b94bb202efb
         WEB_SITE=http://www.tuxera.com/community/ntfs-3g-download
          ENTERED=20070621
-         UPDATED=2021112
+         UPDATED=20211112
            SHORT="NTFS driver for Linux"
 
 cat << EOF
