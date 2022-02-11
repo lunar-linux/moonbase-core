@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:c3342d42e67139c165b8b128d033b5c96893a13ac5f25933190315214e87a948
         WEB_SITE=http://nongnu.askapache.com/lzip/manual/lzip_manual.html
          ENTERED=20091122
-         UPDATED=2010111
+         UPDATED=20101111
            SHORT="lossless data compressor"
 
 cat << EOF
