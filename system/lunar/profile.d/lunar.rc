@@ -17,7 +17,7 @@ _lunar_modules_installed_list()
 
 _lunar_modules_held_list()
 {
-  COMPREPLY=( $( compgen -W "$( awk -F: '/:held:/ { print $1 }' /var/state/lunar/packages )" -- "$cur" ) )
+  COMPREPLY=( $( compgen -W "$( awk -F: '/:installed\+held:/ { print $1 }' /var/state/lunar/packages )" -- "$cur" ) )
 }
 
 _lunar_internal_variable_list()
@@ -27,7 +27,7 @@ _lunar_internal_variable_list()
 
 _lunar_exilable_module_list()
 {
-  COMPREPLY=( $( compgen -W "$( comm -3 <(sort /var/state/lunar/module.index | cut -d: -f1) <(sort /var/state/lunar/packages | cut -d: -f1) )" -- "$cur" ) )
+  COMPREPLY=( $( compgen -W "$( comm -3 <(cut -d: -f1 /var/state/lunar/module.index | sort) <(cut -d: -f1 /var/state/lunar/packages | sort) )" -- "$cur" ) )
 }
 
 _lunar_modules_exiled_list()
