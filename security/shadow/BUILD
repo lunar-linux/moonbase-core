@@ -17,21 +17,25 @@ sedit '/^SUBDIRS/ n; s/etc//' Makefile.in Makefile.am &&
 ./configure --prefix=/usr \
             --bindir=/usr/bin \
             --sbindir=/usr/bin \
+            --libdir=/usr/lib \
+            --sysconfdir=/etc \
             --with-sha-crypt \
             --with-libcrack \
             --without-selinux \
             --without-skey \
-            --without-group-name-max-length \
+            --without-su \
+            --with-group-name-max-length=32 \
             --disable-static \
             $OPTS &&
 make &&
 mkdir -p $SOURCE_DIRECTORY/__shadowdest &&
 make DESTDIR=$SOURCE_DIRECTORY/__shadowdest/ suidperms=4711 install &&
+make DESTDIR=$SOURCE_DIRECTORY/__shadowdest/ -C man install &&
 
 # remove the installed chfn, chsh, login, nologin, su, vigr and vipw apps
 # util-linux install these apps in Lunar
 #cp $SOURCE_DIRECTORY/__shadowdest/usr/bin/login /tmp/ &&
-rm $SOURCE_DIRECTORY/__shadowdest/usr/bin/{login,su,chfn,chsh,nologin} &&
+rm $SOURCE_DIRECTORY/__shadowdest/usr/bin/{login,chfn,chsh,nologin} &&
 rm $SOURCE_DIRECTORY/__shadowdest/usr/sbin/{vigr,vipw,logoutd} &&
 mv $SOURCE_DIRECTORY/__shadowdest/usr/bin/{newgrp,sg} &&
 mv -f $SOURCE_DIRECTORY/__shadowdest/usr/{sbin/*,bin/} &&
@@ -42,7 +46,6 @@ find $SOURCE_DIRECTORY/__shadowdest/usr/share/man \
      '(' -name 'chsh.1'    -o \
          -name 'chfn.1'    -o \
          -name 'login.1'   -o \
-         -name 'su.1'      -o \
          -name 'logoutd.8' -o \
          -name 'nologin.8' -o \
          -name 'vigr.8'    -o \
