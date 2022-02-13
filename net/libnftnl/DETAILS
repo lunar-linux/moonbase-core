@@ -5,7 +5,7 @@
        SOURCE_VFY=sha256:7508a5c414fab13e3cb3ce8262d0ce4f02c1590a8e4f8628ab497b5b4585937c
         WEB_SITE=http://netfilter.org/projects/libnftnl/
          ENTERED=20160321
-         UPDATED=2021205
+         UPDATED=20211205
         SHORT="Netfilter library interface to the nf_tables subsystem"
 
 cat << EOF
