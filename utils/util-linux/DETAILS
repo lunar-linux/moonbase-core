@@ -5,7 +5,7 @@
      SOURCE_VFY=sha256:6a0764c1aae7fb607ef8a6dd2c0f6c47d5e5fd27aa08820abaad9ec14e28e9d9
         WEB_SITE=http://freecode.com/projects/util-linux
          ENTERED=20010922
-         UPDATED=20210816
+         UPDATED=20220215
            SHORT="Essential utilities for any Linux box"
 
 cat << EOF
