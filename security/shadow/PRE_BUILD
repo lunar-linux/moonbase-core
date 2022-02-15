@@ -1,0 +1,4 @@
+default_pre_build &&
+
+sedit '/^sysconf_DATA/s;login.defs;;;/^SUBDIRS/s;pam.d;;' etc/Makefile.in
+
