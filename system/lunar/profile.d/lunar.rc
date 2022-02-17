@@ -108,7 +108,7 @@ complete -F _lunar lunar
 
 _lunar_lvu()
 {
- local cur prev cmd
+  local cur prev cmd
   COMPREPLY=()
   cur=${COMP_WORDS[COMP_CWORD]}
   prev=${COMP_WORDS[COMP_CWORD-1]}
@@ -116,7 +116,11 @@ _lunar_lvu()
   case "$prev" in
     -d|--debug|-v|--verbose|-h|--help)
       ;;
-    leafs|orphans|conflicts|moonalyze|alien|held|exiled|export|moonbase|html|updatelog|activity|pam|expired|new|newer|older|search|service|apropos)
+    activity)
+      COMPREPLY=( $(compgen -W '-f' -- "$cur") )
+      return 0
+      ;;
+    leafs|orphans|conflicts|moonalyze|alien|held|exiled|export|moonbase|html|updatelog|pam|expired|new|newer|older|search|service|apropos)
       # Do nothing because either the options don't take an argument or we can't do completion
       return 0
       ;;
@@ -143,7 +147,9 @@ _lunar_lvu()
       ;;
   esac
 
-  if [[ "$cur" == -* ]]; then
+  if [[ "${COMP_WORDS[COMP_CWORD-2]}" == "activity" && "$prev" == "-f" ]]; then
+    return 0
+  elif [[ "$cur" == -* ]]; then
     COMPREPLY=( $( compgen -W '-d --debug -v --verbose -h --help' -- "$cur") )
   elif [[ $COMP_CWORD -gt 2 && "${COMP_WORDS[COMP_CWORD-2]}" == @(DETAILS|DEPENDS|CONFLICTS|BUILD|PRE_BUILD|POST_BUILD|CONFIGURE|POST_INSTALL|PRE_REMOVE|POST_REMOVE|what|where|cd|from|search|apropos|service|website|install|size|installed|compile|compiler|links|sources|maintainer|version|sum|md5sum|depends|tree|eert|stree|leert|urls|versions|short|info|edit|unedit|diff|new|submit|section) ]]; then
     return 0
