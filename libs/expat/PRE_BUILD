@@ -1,3 +1,5 @@
-default_pre_build &&
+default_pre_build
 
-sedit "s/\/man\/man1/\/share\/man\/man1/g" Makefile.in
+OPTS+=" -DEXPAT_BUILD_DOCS=OFF \
+        -DEXPAT_BUILD_EXAMPLES=OFF \
+        -DEXPAT_BUILD_TESTS=OFF"
