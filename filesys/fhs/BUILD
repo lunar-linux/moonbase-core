@@ -48,9 +48,9 @@ mkdir -p /run/lock &&
 # ld.so.conf and ld.so.conf.d
 mkdir -p /etc/ld.so.conf.d &&
 
-if [ ! -f /etc/ld.so.conf ]; then
+if [ ! -e "/etc/ld.so.conf" ]; then
   install -Dm644 $SCRIPT_DIRECTORY/templates/etc/ld.so.conf /etc/ld.so.conf
-elif ! grep -q '^include /etc/ld.so.conf.d/*.conf' /etc/ld.so.conf; then
+elif ! grep -q '^include /etc/ld\.so\.conf\.d/\*\.conf' /etc/ld.so.conf; then
   # Migration code
   echo "include /etc/ld.so.conf.d/*.conf" >> /etc/ld.so.conf
 fi
