@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:2540f7356cb74f6c5b75326c6d38a066edd796361fd7d4ed26e494d9856fed8f
         WEB_SITE=http://www.hboehm.info/gc/
          ENTERED=20020314
-         UPDATED=20211103
+         UPDATED=20220303
            SHORT="A garbage collector"
 
 cat << EOF
