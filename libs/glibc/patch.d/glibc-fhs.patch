@@ -1,15 +1,7 @@
-Submitted By:            Armin K. <krejzi at email dot com>
-Date:                    2013-02-11
-Initial Package Version: 2.17
-Upstream Status:         Not Applicable
-Origin:                  Self
-Description:             This patch removes references to /var/db directory which is not part
-                         of FHS and replaces them with more suitable directories in /var
-                         hierarchy - /var/cache/nscd for nscd and /var/lib/nss_db for nss_db.
-
---- a/Makeconfig	2012-12-25 04:02:13.000000000 +0100
-+++ b/Makeconfig	2013-02-11 01:32:32.500667439 +0100
-@@ -245,7 +245,7 @@
+diff -Naur glibc-2.35-lunar/Makeconfig glibc-2.35/Makeconfig
+--- glibc-2.35-lunar/Makeconfig	2022-02-03 06:27:54.000000000 +0100
++++ glibc-2.35/Makeconfig	2022-03-04 21:49:36.818651793 +0100
+@@ -246,7 +246,7 @@
  
  # Directory for the database files and Makefile for nss_db.
  ifndef vardbdir
@@ -18,9 +10,10 @@ Description:             This patch removes references to /var/db directory whic
  endif
  inst_vardbdir = $(install_root)$(vardbdir)
  
---- a/nscd/nscd.h	2012-12-25 04:02:13.000000000 +0100
-+++ b/nscd/nscd.h	2013-02-11 01:32:32.500667439 +0100
-@@ -161,11 +161,11 @@
+diff -Naur glibc-2.35-lunar/nscd/nscd.h glibc-2.35/nscd/nscd.h
+--- glibc-2.35-lunar/nscd/nscd.h	2022-02-03 06:27:54.000000000 +0100
++++ glibc-2.35/nscd/nscd.h	2022-03-04 21:49:36.818651793 +0100
+@@ -160,11 +160,11 @@
  
  
  /* Paths of the file for the persistent storage.  */
@@ -37,9 +30,10 @@ Description:             This patch removes references to /var/db directory whic
  
  /* Path used when not using persistent storage.  */
  #define _PATH_NSCD_XYZ_DB_TMP	"/var/run/nscd/dbXXXXXX"
---- a/nss/db-Makefile	2012-12-25 04:02:13.000000000 +0100
-+++ b/nss/db-Makefile	2013-02-11 01:32:32.500667439 +0100
-@@ -22,7 +22,7 @@
+diff -Naur glibc-2.35-lunar/nss/db-Makefile glibc-2.35/nss/db-Makefile
+--- glibc-2.35-lunar/nss/db-Makefile	2022-02-03 06:27:54.000000000 +0100
++++ glibc-2.35/nss/db-Makefile	2022-03-04 21:49:36.818651793 +0100
+@@ -21,7 +21,7 @@
  		       /etc/rpc /etc/services /etc/shadow /etc/gshadow \
  		       /etc/netgroup)
  
@@ -48,8 +42,9 @@ Description:             This patch removes references to /var/db directory whic
  
  AWK = awk
  MAKEDB = makedb --quiet
---- a/sysdeps/generic/paths.h	2012-12-25 04:02:13.000000000 +0100
-+++ b/sysdeps/generic/paths.h	2013-02-11 01:32:32.500667439 +0100
+diff -Naur glibc-2.35-lunar/sysdeps/generic/paths.h glibc-2.35/sysdeps/generic/paths.h
+--- glibc-2.35-lunar/sysdeps/generic/paths.h	2022-02-03 06:27:54.000000000 +0100
++++ glibc-2.35/sysdeps/generic/paths.h	2022-03-04 21:49:36.818651793 +0100
 @@ -68,7 +68,7 @@
  /* Provide trailing slash, since mostly used for building pathnames. */
  #define	_PATH_DEV	"/dev/"
@@ -59,8 +54,9 @@ Description:             This patch removes references to /var/db directory whic
  #define	_PATH_VARRUN	"/var/run/"
  #define	_PATH_VARTMP	"/var/tmp/"
  
---- a/sysdeps/unix/sysv/linux/paths.h	2012-12-25 04:02:13.000000000 +0100
-+++ b/sysdeps/unix/sysv/linux/paths.h	2013-02-11 01:32:32.504000831 +0100
+diff -Naur glibc-2.35-lunar/sysdeps/unix/sysv/linux/paths.h glibc-2.35/sysdeps/unix/sysv/linux/paths.h
+--- glibc-2.35-lunar/sysdeps/unix/sysv/linux/paths.h	2022-02-03 06:27:54.000000000 +0100
++++ glibc-2.35/sysdeps/unix/sysv/linux/paths.h	2022-03-04 21:49:36.821985127 +0100
 @@ -68,7 +68,7 @@
  /* Provide trailing slash, since mostly used for building pathnames. */
  #define	_PATH_DEV	"/dev/"
