@@ -1,5 +1,7 @@
 default_pre_build &&
 
+# Keeping this temporary, it's a bad hack, we need to change how we define our compiler flags
+sedit 's@^#\s*warning \+_FORTIFY_SOURCE requires compiling with optimization.*$@/* Disabled by lunar as there is no better solution: \0*/@' include/features.h &&
 
 # Pre flight check for glibc upgrade
 while read line path; do
