@@ -1,15 +1,24 @@
 #
 # GNU ld linker optimizations plugin
 #
+sh_join() {
+  local delimiter=${1} input=${2}
+
+  if shift 2; then
+    printf "%s" "$input" "${@/#/$delimiter}"
+  fi
+}
 
 gnu_ld_optimize_defaults()
 {
   # default optimizations
-  LDF=( Strip Relro Now )
+  LDF=( Strip Relro Now SortCommon )
 }
 
 plugin_gnu_ld_optimize()
 {
+  local wlflags=()
+
   gnu_ld_optimize_defaults
 
   if [ -f /etc/lunar/local/optimizations.GNU_LD ]; then
@@ -20,31 +29,34 @@ plugin_gnu_ld_optimize()
     case $LD in
       Strip)
         LDFLAGS="$LDFLAGS -s"
-      ;;
+        ;;
       StripDebug)
         LDFLAGS="$LDFLAGS -S"
-      ;;
+        ;;
       Optimize)
-        LDFLAGS="$LDFLAGS -Wl,-O1"
-      ;;
+        wlflags+=("-O1")
+        ;;
       Reduce)
-        if echo $LDFLAGS | grep -q 'Wl,-O1'; then
-          LDFLAGS="$LDFLAGS -Wl,-O1,--as-needed"
-        else
-          LDFLAGS="$LDFLAGS -Wl,--as-needed"
-        fi
-      ;;
+        wlflags+=("--as-needed")
+        ;;
       Combreloc)
-        LDFLAGS="$LDFLAGS -z combreloc"
-      ;;
+        wlflags+=("-z,combreloc")
+        ;;
       Relro)
-        LDFLAGS="$LDFLAGS -Wl,-z,relro"
-      ;;
+        wlflags+=("-z,relro")
+        ;;
       Now)
-        LDFLAGS="$LDFLAGS -Wl,-z,now"
-      ;;
+        wlflags+=("-z,now")
+        ;;
+      SortCommon)
+        wlflags+=("--sort-common")
+        ;;
     esac
   done
+
+  if [ -n "$wlflags" ]; then
+    LDFLAGS+=" $(sh_join , "-Wl" ${wlflags[@]})"
+  fi
 
   export LDFLAGS
   verbose_msg "LDFLAGS=\"$LDFLAGS\""
@@ -94,8 +106,9 @@ EOF
     "Combreloc" "-z combreloc" $( echo ${LDF[@]} | grep -qw "Combreloc" && echo "on" || echo "off" ) "Combreloc"
     "Relro" "-Wl,-z,relro" $( echo ${LDF[@]} | grep -qw "Relro" && echo "on" || echo "off" ) "Randomize ELF segments (security)"
     "Now" "-Wl,-z,now" $( echo ${LDF[@]} | grep -qw "Now" && echo "on" || echo "off" ) "Make ELF segments R/O at dl load time (slow, security)"
+    "SortCommon" "-Wl,--sort-common" $( echo ${LDF[@]} | grep -qw "SortCommon" && echo "on" || echo "off" ) "Sorts the common symbols by size"
   )
-  RESULT=`$DIALOG --item-help --separate-output --checklist "Select linker optimizations. These options only apply to the link stage of binaries." 0 0 0 "${OPTIONS[@]}"`
+  RESULT=$($DIALOG --item-help --separate-output --checklist "Select linker optimizations. These options only apply to the link stage of binaries." 0 0 0 "${OPTIONS[@]}")
   if [ $? == 0 ]; then
     LDF=($RESULT)
     save_optimizations
