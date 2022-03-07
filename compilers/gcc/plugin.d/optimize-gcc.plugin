@@ -6,7 +6,8 @@ compiler_gcc_optimize_defaults()
 {
   # default optimizations
   BOPT=Faster
-  CC_OPTS=( Pipe Fortify )
+  SPD=( Noplt Exceptions )
+  CC_OPTS=( Pipe Fortify ClashProtection )
   CPU=$(arch | sed 's;_;-;')
 }
 
@@ -64,33 +65,29 @@ plugin_compiler_gcc_optimize()
   # GCC specific extra optimizations
   for SP in ${SPD[@]}; do
     case $SP in
-      Speedy)   c_cxx_flags_add "-funroll-loops" ;;
-      Regparm)  c_cxx_flags_add "-mregparm=3" ;;
-      Risky)    c_cxx_flags_add "-ffast-math" ;;
-      Pointers) c_cxx_flags_add "-fomit-frame-pointer" ;;
-      Siblings) c_cxx_flags_add "-foptimize-sibling-calls" ;;
+      Speedy)     c_cxx_flags_add "-funroll-loops" ;;
+      Regparm)    c_cxx_flags_add "-mregparm=3" ;;
+      Risky)      c_cxx_flags_add "-ffast-math" ;;
+      Pointers)   c_cxx_flags_add "-fomit-frame-pointer" ;;
+      Siblings)   c_cxx_flags_add "-foptimize-sibling-calls" ;;
       Profiling)
         c_cxx_flags_add "-fprofile-arcs"
         set_local_config "KEEP_SOURCE" "on"
       ;;
-      Branching) c_cxx_flags_add "-fbranch-probabilities" ;;
-      Aliasing)  c_cxx_flags_add "-fstrict-aliasing" ;;
-      Cprop)     c_cxx_flags_add "-fno-cprop-registers" ;;
-      Float)     c_cxx_flags_add "-ffloat-store" ;;
-      Address)   c_cxx_flags_add "-fforce-addr" ;;
-      Align)     c_cxx_flags_add "-falign-functions -falign-loops -falign-jumps" ;;
-      Expensive) c_cxx_flags_add "-fexpensive-optimizations" ;;
-      Doubles)   c_cxx_flags_add "-malign-double" ;;
-      Tracer)    c_cxx_flags_add "-ftracer" ;;
-      Blocks)    c_cxx_flags_add "-freorder-blocks" ;;
+      Branching)  c_cxx_flags_add "-fbranch-probabilities" ;;
+      Aliasing)   c_cxx_flags_add "-fstrict-aliasing" ;;
+      Cprop)      c_cxx_flags_add "-fno-cprop-registers" ;;
+      Float)      c_cxx_flags_add "-ffloat-store" ;;
+      Address)    c_cxx_flags_add "-fforce-addr" ;;
+      Align)      c_cxx_flags_add "-falign-functions -falign-loops -falign-jumps" ;;
+      Expensive)  c_cxx_flags_add "-fexpensive-optimizations" ;;
+      Doubles)    c_cxx_flags_add "-malign-double" ;;
+      Tracer)     c_cxx_flags_add "-ftracer" ;;
+      Blocks)     c_cxx_flags_add "-freorder-blocks" ;;
+      Noplt)      c_cxx_flags_add "-fno-plt" ;;
+      Exceptions) c_cxx_flags_add "-fexceptions" ;;
     esac
   done
-
-  # STACK - kind of dangerous - shouldn't we just remove this?
-  if (( STACK > 0 )) ; then
-    c_cxx_flags_add "-mpreferred-stack-boundary=$STACK"
-    cppflags_add "-mpreferred-stack-boundary=$STACK"
-  fi
 
   for XTR in ${XTRA[@]}; do
     case $XTR in
@@ -132,10 +129,19 @@ plugin_compiler_gcc_optimize()
         c_cxx_flags_add "-pipe"
         ;;
       Fortify)
-        cppflags_add "-D_FORTIFY_SOURCE=2"
+        c_cxx_flags_add "-Wp,-D_FORTIFY_SOURCE=2"
         ;;
       StackProt)
         c_cxx_flags_add "-fstack-protector"
+        ;;
+      StackProtStrong)
+        c_cxx_flags_add "-fstack-protector-strong"
+        ;;
+      ClashProtection)
+        c_cxx_flags_add "-fstack-clash-protection"
+        ;;
+      ControlFlowProt)
+        c_cxx_flags_add "-fcf-protection"
         ;;
     esac
   done
@@ -145,14 +151,14 @@ plugin_compiler_gcc_optimize()
   CPP=cpp
 
   if [ -n "$MYCFLAGS" ]; then
-  CFLAGS=$MYCFLAGS
-  CXXFLAGS=$MYCFLAGS
+    CFLAGS=$MYCFLAGS
+    CXXFLAGS=$MYCFLAGS
   fi
   if [ -n "$MYCXXFLAGS" ]; then
-  CXXFLAGS=$MYCXXFLAGS
+    CXXFLAGS=$MYCXXFLAGS
   fi
 
-  export CFLAGS CXXFLAGS CPPFLAGS
+  export CFLAGS CXXFLAGS
   export CC CXX CPP
 
   verbose_msg "CC=\"$CC\""
@@ -160,7 +166,6 @@ plugin_compiler_gcc_optimize()
   verbose_msg "CPP=\"$CPP\""
   verbose_msg "CFLAGS=\"$CFLAGS\""
   verbose_msg "CXXFLAGS=\"$CXXFLAGS\""
-  verbose_msg "CPPFLAGS=\"$CPPFLAGS\""
 
   return 2
 }
@@ -188,12 +193,12 @@ plugin_compiler_gcc_menu()
   {
     unset RESULT
     if [ "$1" == "checklist" ]; then
-      RESULT=`$DIALOG --no-cancel --item-help --separate-output --checklist "$2" 0 0 0 "${OPTIONS[@]}"`
+      RESULT=$($DIALOG --no-cancel --item-help --separate-output --checklist "$2" 0 0 0 "${OPTIONS[@]}")
       if [ $? != 0 ]; then
         return 1
       fi
     elif [ "$1" == "radiolist" ]; then
-      RESULT=`$DIALOG --no-cancel --item-help --radiolist "$2" 0 0 0 "${OPTIONS[@]}"`
+      RESULT=$($DIALOG --no-cancel --item-help --radiolist "$2" 0 0 0 "${OPTIONS[@]}")
       if [ $? != 0 ]; then
         return 1
       fi
@@ -213,7 +218,6 @@ SPD=( $(echo ${SPD[@]} ) )
 XTRA=( $(echo ${XTRA[@]}) )
 FPM=$FPM
 CC_OPTS=( $(echo ${CC_OPTS[@]} ) )
-STACK=$STACK
 EOF
   }
 
@@ -232,7 +236,7 @@ EOF
     unset OPTIONS
     IS_DEFAULT=$([ "$(get_local_config LUNAR_COMPILER)" == "GCC" ] && echo DEFAULT || get_local_config LUNAR_COMPILER)
     DEFAULT=${CHOICE:-safe}
-    CHOICE=`$DIALOG --title "$TITLE" --ok-label "Select" --cancel-label "Close" --default-item "$DEFAULT" --item-help --menu "" 0 0 0 $(
+    CHOICE=$($DIALOG --title "$TITLE" --ok-label "Select" --cancel-label "Close" --default-item "$DEFAULT" --item-help --menu "" 0 0 0 $(
       echo "default"
       echo "Set this compiler as default  [$IS_DEFAULT]"
       echo "Enables you to substitute the default C compiler"
@@ -267,12 +271,7 @@ EOF
       echo "enable specific floating point optimizations"
       echo "cc_opt"
       echo "General C/C++ options         [${CC_OPTS[@]}]"
-      echo "Select named pipes, warnings on deprecated symbols"
-      if [ "$SAFE_OPTIMIZATIONS" == "off" ]; then
-        echo "stack"
-        echo "Stack                         [$STACK]"
-        echo "Set the stack size"
-      fi) `
+      echo "Select named pipes, warnings on deprecated symbols"))
       if [ $? != 0 ]; then
         save_optimizations
         set_local_config SAFE_OPTIMIZATIONS $SAFE_OPTIMIZATIONS
@@ -493,6 +492,8 @@ EOF
             "Align" "-falign-functions" $( echo ${SPD[@]} | grep -q "Align" && echo "on" || echo "off" ) "Align functions, loops, and jumps"
             "Expensive" "-fexpensive-optimizations" $( echo ${SPD[@]} | grep -q "Expensive" && echo "on" || echo "off" ) "Perform expensive optimizations"
             "Blocks" "-freorder-blocks" $( echo ${SPD[@]} | grep -q "Blocks" && echo "on" || echo "off" ) "Reorder basic blocks in order to reduce number of taken branches."
+            "Noplt" "-fno-plt" $( echo ${SPD[@]} | grep -q "Noplt" && echo "on" || echo "off" ) "Do not use the PLT for external function calls in position-independent code."
+            "Exceptions" "-fexceptions" $( echo ${SPD[@]} | grep -q "Exceptions" && echo "on" || echo "off" ) "Enable exception handling. Generates extra code needed to propagate exceptions."
           )
           if [ "$SAFE_OPTIMIZATIONS" == "off" ]; then
           OPTIONS+=(
@@ -665,11 +666,14 @@ EOF
             "Deprecated" "-Wno-deprecated for C++" $( echo ${CC_OPTS[@]} | grep -qw "Deprecated" && echo "on" || echo "off" ) "Disable warnings of deprecated symbols in C++"
             "Debug" "-g" $( echo ${CC_OPTS[@]} | grep -qw "Debug" && echo "on" || echo "off" ) "Add debug symbols"
             "Pipe" "-pipe (RECOMMENDED)" $( echo ${CC_OPTS[@]} | grep -qw "Pipe" && echo "on" || echo "off" ) "Enable cc to use named pipes."
-            "Fortify" "-D_FORTIFY_SOURCE=2" $( echo ${CC_OPTS[@]} | grep -qw "Fortify" && echo "on" || echo "off" ) "Gcc Stack protector checking"
+            "Fortify" "-Wp,-D_FORTIFY_SOURCE=2" $( echo ${CC_OPTS[@]} | grep -qw "Fortify" && echo "on" || echo "off" ) "Stack protector checking (run-time buffer overflow detection )"
+            "ClashProtection" "-fstack-clash-protection" $( echo ${CC_OPTS[@]} | grep -q "ClashProtection" && echo "on" || echo "off" ) "Increased reliability of stack overflow detection."
             )
           if [ "$SAFE_OPTIMIZATIONS" == "off" ]; then
           OPTIONS+=(
             "StackProt" "-fstack-protector" $( echo ${CC_OPTS[@]} | grep -qw "StackProt" && echo "on" || echo "off" ) "Gcc Stack protector checking (UNSAFE)"
+            "StackProtStrong" "-fstack-protector-strong" $( echo ${CC_OPTS[@]} | grep -qw "StackProtStrong" && echo "on" || echo "off" ) "Stack smashing protector"
+            "ControlFlowProt" "-fcf-protection" $( echo ${CC_OPTS[@]} | grep -qw "ControlFlowProt" && echo "on" || echo "off" ) "Control flow integrity protection"
             "MindirectBranchThunk" "-mindirect-branch=thunk" $( echo ${CC_OPTS[@]} | grep -qw "MindirectBranchThunk" && echo "on" || echo "off" ) "Spectre V2 mitigation - creates retpoline for indirect calls"
             "MfunctionReturnThunk" "-mfunction-return=thunk" $( echo ${CC_OPTS[@]} | grep -qw "MfunctionReturnThunk" && echo "on" || echo "off" ) "Spectre V2 mitigation - use retpolines for every function return (for CPU that predicts return)"
             "MindirectBranchRegister" "-mindirect-branch-register" $( echo ${CC_OPTS[@]} | grep -qw "MindirectBranchRegister" && echo "on" || echo "off" ) "Spectre V2 mitigation - use register instead of stack to store address of indirect call"
@@ -677,9 +681,6 @@ EOF
           fi
           menu checklist "General C/C++ compiler settings" &&
           CC_OPTS=($RESULT)
-        ;;
-        stack)
-          STACK=`$DIALOG --nocancel --inputbox "Enter the number to set the stack to, leave empty for default. Only used on x86 platform. Not safe" 0 55 $STACK`
         ;;
       esac
   done
