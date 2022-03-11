@@ -64,8 +64,7 @@ make &&
 
 # Re-enable hardening
 sedit '/build-programs=/s;no;yes;' configparms &&
-echo "CC += -D_FORTIFY_SOURCE=2" >> configparms &&
-echo "CXX += -D_FORTIFY_SOURCE=2" >> configparms &&
+echo "CFLAGS += -Wp,-D_FORTIFY_SOURCE=2" >> configparms &&
 make &&
 
 # Preserve the old glibc temporarily
