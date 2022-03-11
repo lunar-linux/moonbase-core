@@ -2,7 +2,7 @@
 CFLAGS+=" -O2" &&
 
 # The fortify compiler option cause the build to fail
-bad_flags -D_FORTIFY_SOURCE=2 &&
+bad_flags "-Wp,-D_FORTIFY_SOURCE=2" "-fno-plt" &&
 
 mkdir -p $SOURCE_DIRECTORY/tmp &&
 
