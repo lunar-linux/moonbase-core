@@ -2,7 +2,7 @@
          VERSION=2.3
         WEB_SITE=http://refspecs.linuxfoundation.org/fhs.shtml
          ENTERED=20130829
-         UPDATED=20200217
+         UPDATED=20220314
            SHORT="Filesystem Hierarchy Standard"
 
 cat << EOF

@@ -48,9 +48,10 @@ mkdir -p /run/lock &&
 # ld.so.conf and ld.so.conf.d
 mkdir -p /etc/ld.so.conf.d &&
 
-if [ ! -e "/etc/ld.so.conf" ]; then
-  install -Dm644 $SCRIPT_DIRECTORY/templates/etc/ld.so.conf /etc/ld.so.conf
-elif ! grep -q '^include /etc/ld\.so\.conf\.d/\*\.conf' /etc/ld.so.conf; then
-  # Migration code
-  echo "include /etc/ld.so.conf.d/*.conf" >> /etc/ld.so.conf
+# Always overwrite ld.so.conf with our version
+install -Dm644 $SCRIPT_DIRECTORY/templates/etc/ld.so.conf /etc/ld.so.conf &&
+
+# Migration code
+if [ ! -e "/etc/nsswitch.conf" ] || [ "$(md5sum /etc/nsswitch.conf | cut -d' ' -f1)" == "3579b33b39600875ee113b4b63e895c5" ]; then
+  install -Dm644 $SCRIPT_DIRECTORY/templates/etc/nsswitch.conf /etc/nsswitch.conf
 fi
