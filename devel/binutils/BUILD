@@ -25,7 +25,7 @@ prepare_install &&
 make tooldir=/usr install &&
 
 # Remove unwanted files
-rm /usr/share/man/man1/{dlltool,windres,windmc}*
+rm /usr/share/man/man1/{dlltool,windres,windmc}* &&
 
 # No shared linking to these files outside binutils
 rm /usr/lib/lib{bfd,opcodes}.so &&
