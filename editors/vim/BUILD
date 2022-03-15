@@ -1,5 +1,7 @@
 OPTS+=" --with-features=huge --enable-cscope --enable-fail-if-missing" &&
 
+bad_flags "-Wp,-D_FORTIFY_SOURCE=2" &&
+
 # otherwise it defaults to auto/x+gtk
 if ! in_depends $MODULE gtk+-3 && ! in_depends $MODULE gtk+-2; then
   OPTS+=" --enable-gui=no --without-x"
