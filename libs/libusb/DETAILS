@@ -1,15 +1,15 @@
           MODULE=libusb
-         VERSION=1.0.24
+         VERSION=1.0.25
           SOURCE=$MODULE-$VERSION.tar.bz2
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
       SOURCE_URL=http://github.com/libusb/libusb/releases/download/v$VERSION/
-      SOURCE_VFY=sha256:7efd2685f7b327326dcfb85cee426d9b871fd70e22caa15bb68d595ce2a2b12a
+      SOURCE_VFY=sha256:8a28ef197a797ebac2702f095e81975e2b02b2eeff2774fa909c78a74ef50849
         WEB_SITE=http://libusb.org/
          ENTERED=20140106
-         UPDATED=20210111
+         UPDATED=20220316
            SHORT="Library that provides generic access to USB devices"
            PSAFE=no
 
-cat <<EOF
+cat << EOF
 Library that provides generic access to USB devices.
 EOF
