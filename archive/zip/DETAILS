@@ -3,10 +3,10 @@
           SOURCE=$MODULE$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/infozip/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE$VERSION
-      SOURCE_VFY=sha1:c9f4099ecf2772b53c2dd4a8e508064ce015d182
+      SOURCE_VFY=sha256:f0e8bb1f9b7eb0b01285495a2699df3a4b766784c1765a8f1aeedf63c0806369
         WEB_SITE=http://www.info-zip.org/Zip.html
          ENTERED=20010922
-         UPDATED=20090525
+         UPDATED=20220322
            SHORT="PKWARE compatible compressor"
 
 cat << EOF
