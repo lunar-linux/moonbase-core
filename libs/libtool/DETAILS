@@ -1,12 +1,12 @@
           MODULE=libtool
-         VERSION=2.4.6
+         VERSION=2.4.7
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
-   SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:e3bd4d5d3d025a36c21dd6af7ea818a2afcd4dfc1ea5a17b39d7854bcd0c06e3
+   SOURCE_URL[1]=https://ftp.gnu.org/pub/gnu/$MODULE
+      SOURCE_VFY=sha256:04e96c2404ea70c590c546eba4202a4e12722c640016c12b9b2f1ce3d481e9a8
         WEB_SITE=http://www.gnu.org/software/libtool
          ENTERED=20010922
-         UPDATED=20150216
+         UPDATED=20220328
            SHORT="A generic library support script"
 
 cat << EOF
