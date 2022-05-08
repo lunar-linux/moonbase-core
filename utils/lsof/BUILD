@@ -1,6 +1,6 @@
 yes | ./Configure -n linux &&
 
-make &&
+make CC="cc ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}" &&
 
 prepare_install &&
 
