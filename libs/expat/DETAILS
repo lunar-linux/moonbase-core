@@ -2,6 +2,7 @@
          VERSION=2.4.8
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$SFORGE_URL/$MODULE
+ SOURCE_URL_FULL=https://github.com/libexpat/libexpat/releases/download/R_2_4_8/$MODULE-$VERSION.tar.bz2
       SOURCE_VFY=sha256:a247a7f6bbb21cf2ca81ea4cbb916bfb9717ca523631675f99b3d4a5678dcd16
         WEB_SITE=http://expat.sourceforge.net
          ENTERED=20010928
