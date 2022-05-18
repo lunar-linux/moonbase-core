@@ -1,5 +1,5 @@
             MODULE=kernel-headers
-           VERSION=5.16.9
+           VERSION=5.17.9
             SOURCE=kernel-headers-$VERSION.tar.bz2
   SOURCE_DIRECTORY=${BUILD_DIRECTORY}/kernel-headers-$VERSION
         SOURCE_URL=$MIRROR_URL
