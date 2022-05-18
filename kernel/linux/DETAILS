@@ -1,5 +1,5 @@
           MODULE=linux
-         VERSION=5.16.13
+         VERSION=5.17.9
             BASE=$(echo $VERSION | cut -d. -f1,2)
           SOURCE=$MODULE-$BASE.tar.xz
 if [ -n "$(echo $VERSION | cut -d. -f3)" ] ; then
