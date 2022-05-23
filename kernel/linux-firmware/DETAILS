@@ -2,7 +2,7 @@
 # git clone git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
 # git archive --format=tar --prefix linux-firmware-$(date +%Y%m%d)/ main | xz -9 > linux-firmware-$(date +%Y%m%d).tar.xz
           MODULE=linux-firmware
-         VERSION=20220518
+         VERSION=20220509
           SOURCE=${MODULE}-${VERSION}.tar.xz
 # This is a temporary fix until the kernel.org folks get things squared away
       SOURCE_URL=$MIRROR_URL
