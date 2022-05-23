@@ -1,11 +1,11 @@
           MODULE=systemd
-         VERSION=250
+         VERSION=251
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/systemd/systemd/archive/v$VERSION.tar.gz
       SOURCE_VFY=sha256:389935dea020caf6e2e81a4e90e556bd5599a2086861045efdc06197776e94e1
         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
          ENTERED=20100919
-         UPDATED=20211230
+         UPDATED=20220523
            SHORT="A system and program management daemon"
 
 cat << EOF
