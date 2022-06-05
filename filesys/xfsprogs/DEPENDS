@@ -1,8 +1,10 @@
 depends inih
 depends readline
 depends util-linux
+depends userspace-rcu
 
 optional_depends gettext \
                  "--enable-gettext=yes" \
                  "--enable-gettext=no" \
-                 "for alternate language support"
+                 "for alternate language support" \
+                 "y"
