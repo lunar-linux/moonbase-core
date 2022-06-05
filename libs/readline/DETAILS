@@ -9,7 +9,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$BASE_VERSION
       SOURCE_VFY=sha256:f8ceb4ee131e3232226a17f51b164afc46cd0b9e6cef344be87c65962cb82b02
         WEB_SITE=http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
          ENTERED=20010922
-         UPDATED=20210203
+         UPDATED=20220605
            SHORT="Lets users edit command lines as they are typed in"
 
 cat << EOF
