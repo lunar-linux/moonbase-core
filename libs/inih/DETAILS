@@ -1,11 +1,11 @@
           MODULE=inih
-         VERSION=r52
+         VERSION=r55
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/benhoyt/inih/archive/${VERSION}.tar.gz
-      SOURCE_VFY=sha256:439cff9ce9a8afc52d08772ac3e93b3cecd79c7707f871fb4534fb3a48201880
+      SOURCE_VFY=sha256:ba55f8ae2a8caf0653f30f48567241e14ea916acfc13481f502d8a9c8f507f68
         WEB_SITE=https://github.com/benhoyt/inih/
          ENTERED=20201212
-         UPDATED=20201212
+         UPDATED=20220606
            SHORT="A simple .INI file parser written in C"
            PSAFE=no
 
