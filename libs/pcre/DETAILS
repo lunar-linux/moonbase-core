@@ -1,12 +1,12 @@
           MODULE=pcre
-         VERSION=8.44
+         VERSION=8.45
           SOURCE=$MODULE-$VERSION.tar.bz2
    SOURCE_URL[0]=https://ftp.pcre.org/pub/$MODULE/
    SOURCE_URL[1]=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:19108658b23b3ec5058edc9f66ac545ea19f9537234be1ec62b714c84399366d
-        WEB_SITE=http://www.pcre.org
+      SOURCE_VFY=sha256:4dae6fdcd2bb0bb6c37b5f97c33c2be954da743985369cddac3546e3218bffb8
+        WEB_SITE=https://www.pcre.org
          ENTERED=20010922
-         UPDATED=20200312
+         UPDATED=20220606
            SHORT="Perl compatible regular expression library"
 
 cat << EOF
