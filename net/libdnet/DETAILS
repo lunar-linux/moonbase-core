@@ -3,7 +3,7 @@
           SOURCE=$MODULE-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-$VERSION
       SOURCE_URL_FULL=https://github.com/ofalk/libdnet/archive/refs/tags/libdnet-1.16.1.tar.gz
-      SOURCE_VFY=sha256:b6360659c93fa2e3cde9e0a1fc9c07bc4111f3448c5de856e095eb98315dd424
+      SOURCE_VFY=sha256:b151c4913758ef80daf4558361b4f2680a37b01d59272625bb78c77183062c63
         WEB_SITE=https://github.com/dugsong/libdnet/
          ENTERED=20060314
          UPDATED=20220606
