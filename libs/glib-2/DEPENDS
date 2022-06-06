@@ -3,11 +3,10 @@ depends zlib
 depends libffi
 depends gettext
 depends elfutils
-depends pcre
 depends meson
 
 optional_depends gtk-doc \
-                 "-Dgtk_doc=true" \
-                 "-Dgtk_doc=false" \
-                 "for building documentation" \
+                 "-D gtk_doc=true" \
+        		 "-D gtk_doc=false" \
+                 "for building the documentation" \
                  "n"
