@@ -1,5 +1,6 @@
 depends python
 depends lunar-tools
+depends python-cryptography
 depends %OSSL
 
 optional_depends cron-common "" "" "for adding/updating new certificates"
