@@ -1,11 +1,11 @@
           MODULE=efivar
-         VERSION=37
+         VERSION=38
           SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=http://github.com/rhinstaller/efivar/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:74c52b4f479120fb6639e753e71163ba3f557a7a67c0be225593f9f05b253f36
+ SOURCE_URL_FULL=http://github.com/rhboot/efivar/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:e3bbde37238bd47af1fcf270dc0ef1f4be030d86364c917b93669222ec52bbea
         WEB_SITE=http://github.com/rhinstaller/efivar/
          ENTERED=20160717
-         UPDATED=20191011
+         UPDATED=20220607
            SHORT="Tools and library to manipulate EFI variables"
 
 cat << EOF
