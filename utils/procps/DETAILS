@@ -1,7 +1,7 @@
           MODULE=procps
          VERSION=ng-4.0.0
           SOURCE=$MODULE-$VERSION.tar.xz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION//ng-}
+#SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION//ng-}
       SOURCE_URL=https://downloads.sourceforge.net/project/$MODULE-ng/Production/
       SOURCE_VFY=sha256:0f4d92794edb7a1c95bb3b8c1f823de62be5d0043459c2155fd07fa859c16513
         WEB_SITE=https://gitlab.com/procps-ng/procps/
