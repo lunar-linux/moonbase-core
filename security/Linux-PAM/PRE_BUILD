@@ -4,7 +4,7 @@ mk_source_dir $SOURCE_DIRECTORY         &&
 unpack $SOURCE                          &&
 
 cd $SOURCE_DIRECTORY                        &&
-unpack $SOURCE2                                &&
+#unpack $SOURCE2                                &&
 
 # Unpack redhat specific modules
 tar -jxf ${MODULE}-patches-${PVERSION}/pam-redhat-${RHVERSION}.tar.bz2 \
