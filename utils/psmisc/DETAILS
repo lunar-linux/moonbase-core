@@ -2,7 +2,7 @@
          VERSION=23.5
           SOURCE=$MODULE-v$VERSION.tar.gz
       SOURCE_URL=https://gitlab.com/psmisc/psmisc/-/archive/v$VERSION/
-      SOURCE_VFY=sha256:7f0cceeace2050c525f3ebb35f3ba01d618b8d690620580bdb8cd8269a0c1679
+      SOURCE_VFY=sha256:ae3912523c588fae4f3695df925fdb0a5046a050c9f2c7068561f33bafbc4bda
         WEB_SITE=https://gitlab.com/psmisc/psmisc
          ENTERED=20010922
          UPDATED=20220607
