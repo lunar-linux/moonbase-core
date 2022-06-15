@@ -1,15 +1,15 @@
           MODULE=ethtool
-         VERSION=5.16
+         VERSION=5.18
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KERNEL_URL/pub/software/network/$MODULE
-      SOURCE_VFY=sha256:aa2fef1936dd4a11755dfa0bdb93f0ec5bea45208d27c9754bc3abe1aa42c1cb
+      SOURCE_VFY=sha256:9577b2ffbce710b659fb239598ec92bced1ca400ca0f1286762bfa44e4784270
         WEB_SITE=http://www.kernel.org/pub/software/network/ethtool
          ENTERED=20031026
-         UPDATED=20220121
+         UPDATED=20220615
            SHORT="Ethernet diagnostic and tuning tool"
 
 cat << EOF
-Ethtool is a Linux net driver diagnostic and tuning tool for the Linux kernels.
-It obtains information and diagnostics related to media, link status, driver
-version, PCI (or other) bus location, and more. Ethtool obsoletes mii-tool.
+Ethtool is a Linux net driver diagnostic and tuning tool for the Linux series of
+kernels. It obtains information and diagnostics related to media, link status,
+driver version, PCI (or other) bus location, and more. Ethtool obsoletes mii-tool.
 EOF
