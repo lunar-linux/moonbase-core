@@ -2,7 +2,7 @@
          VERSION=3.1.2
           SOURCE=Jinja2-${VERSION}.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/Jinja2-$VERSION
-      SOURCE_URL=https://files.pythonhosted.org/packages/7a/ff/75c28576a1d900e87eb6335b063fab47a8ef3c8b4d88524c4bf78f670cce/
+      SOURCE_URL=https://pypi.python.org/packages/source/J/Jinja2
       SOURCE_VFY=sha256:31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852
         WEB_SITE=https://pypi.python.org/project/Jinja2/
          ENTERED=20211229
