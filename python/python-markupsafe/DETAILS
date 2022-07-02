@@ -2,7 +2,7 @@
          VERSION=2.1.1
           SOURCE=MarkupSafe-${VERSION}.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/MarkupSafe-$VERSION
-      SOURCE_URL=https://files.pythonhosted.org/packages/1d/97/2288fe498044284f39ab8950703e88abbac2abbdf65524d576157af70556/
+      SOURCE_URL=https://pypi.python.org/packages/source/M/MarkupSafe
       SOURCE_VFY=sha256:7f91197cc9e48f989d12e4e6fbc46495c446636dfc81b9ccf50bb0ec74b91d4b
         WEB_SITE=https://pypi.python.org/project/MarkupSafe/
          ENTERED=20211229
