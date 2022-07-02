@@ -1,8 +1,8 @@
           MODULE=libffi
          VERSION=3.4.2
           SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=https://github.com/libffi/libffi/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:0acbca9fd9c0eeed7e5d9460ae2ea945d3f1f3d48e13a4c54da12c7e0d23c313
+      SOURCE_URL=https://github.com/libffi/libffi/releases/download/v$VERSION
+      SOURCE_VFY=sha256:540fb721619a6aba3bdeef7d940d8e9e0e6d2c193595bc243241b77ff9e93620
         WEB_SITE=http://sourceware.org/libffi
          ENTERED=20091102
          UPDATED=20220616
