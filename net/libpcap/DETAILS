@@ -1,14 +1,14 @@
           MODULE=libpcap
-         VERSION=1.10.0
+         VERSION=1.10.1
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=libpcap-1.7.4-enable_bluetooth-1.patch
       SOURCE_URL=http://www.tcpdump.org/release
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:8d12b42623eeefee872f123bd0dc85d535b00df4d42e865f993c40f7bfc92b1e
+      SOURCE_VFY=sha256:ed285f4accaf05344f90975757b3dbfe772ba41d1c401c2648b7fa45b711bdd4
      SOURCE2_VFY=sha256:5000de2daec00fb31ccc949f7e265bfb621635c8e2daf9bb17770d75997195b5
         WEB_SITE=http://www.tcpdump.org/
          ENTERED=20011004
-         UPDATED=20210108
+         UPDATED=20220607
            SHORT="A capturing library used by tcpdump"
 
 cat << EOF
