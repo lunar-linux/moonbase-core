@@ -1,12 +1,12 @@
           MODULE=python-jinja2
-         VERSION=3.0.3
+         VERSION=3.1.2
           SOURCE=Jinja2-${VERSION}.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/Jinja2-$VERSION
-      SOURCE_URL=https://files.pythonhosted.org/packages/91/a5/429efc6246119e1e3fbf562c00187d04e83e54619249eb732bb423efa6c6/
-      SOURCE_VFY=sha256:611bb273cd68f3b993fabdc4064fc858c5b47a973cb5aa7999ec1ba405c87cd7
+      SOURCE_URL=https://pypi.python.org/packages/source/J/Jinja2
+      SOURCE_VFY=sha256:31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852
         WEB_SITE=https://pypi.python.org/project/Jinja2/
          ENTERED=20211229
-         UPDATED=20211229
+         UPDATED=20220607
             TYPE=python3
            SHORT="a very fast an expressive template engine"
 
