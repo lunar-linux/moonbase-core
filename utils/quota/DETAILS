@@ -1,7 +1,6 @@
           MODULE=quota
          VERSION=4.06
           SOURCE=$MODULE-$VERSION.tar.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-tools
       SOURCE_URL=$SFORGE_URL/linuxquota
       SOURCE_VFY=sha256:2f3e03039f378d4f0d97acdb49daf581dcaad64d2e1ddf129495fd579fbd268d
         WEB_SITE=https://sourceforge.net/projects/linuxquota
