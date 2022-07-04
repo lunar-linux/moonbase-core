@@ -1,7 +1,6 @@
           MODULE=ccache
          VERSION=4.6.1
           SOURCE=$MODULE-$VERSION.tar.xz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/src
       SOURCE_URL=https://github.com/ccache/ccache/releases/download/v$VERSION/
       SOURCE_VFY=sha256:e5d47bd3cbb504ada864124690e7c0d28ecb1f9aeac22a9976025aed9633f3d1
         WEB_SITE=http://ccache.samba.org
