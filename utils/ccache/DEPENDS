@@ -1,1 +1,3 @@
-depends zlib
+depends zstd
+depends perl
+depends cmake
