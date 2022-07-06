@@ -1,5 +1,4 @@
 depends %OSSL
 depends libnl3
 depends readline
-
-optional_depends dbus "--dbus-yes" "--dbus-no" "for new dbus interface"
+depends dbus
