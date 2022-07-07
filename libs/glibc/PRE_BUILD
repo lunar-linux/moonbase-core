@@ -1,8 +1,5 @@
 default_pre_build &&
 
-# Keeping this temporary, it's a bad hack, we need to change how we define our compiler flags
-sedit 's@^#\s*warning \+_FORTIFY_SOURCE requires compiling with optimization.*$@/* Disabled by lunar as there is no better solution: \0*/@' include/features.h &&
-
 # Requires lunar v42 or later
 if [[ $(installed_version lunar) < 42 ]]; then
   message "${PROBLEM_COLOR}ERROR: ${MESSAGE_COLOR}Please update the 'lunar' module, v42 or later is required to upgrade glibc.${DEFAULT_COLOR}"
@@ -33,8 +30,6 @@ include /etc/ld.so.conf.d/*.conf
 EOF
     exit 1
   fi &&
-
-#sedit 's@^#\s*warning \+_FORTIFY_SOURCE requires compiling with optimization.*$@/* Disabled by lunar as there is no better solution: \0*/@' include/features.h &&
 
 # Disable nss_test2
 sedit 's/$name ne "nss_test1"/& \&\& $name ne "nss_test2" \&\& $name ne "nsl"/' scripts/test-installation.pl
