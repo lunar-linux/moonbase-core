@@ -1,27 +1,23 @@
 depends ncurses
+depends gawk
+depends pcre
+depends libgcrypt
+depends zlib
+depends acl
 
-optional_depends acl "--enable-acl" "--disable-acl"  "for Access Control List support"
 optional_depends gpm "--enable-gpm" "--disable-gpm" "for GPM mouse support"
-
-optional_depends python2   "--enable-pythoninterp"  "--disable-pythoninterp" "for Python 2 interpreter support"
-optional_depends python   "--enable-python3interp" "--disable-python3interp" "for Python 3 interpreter support"
-optional_depends tcl      "--enable-tclinterp"     "--disable-tclinterp"     "for Tcl interpreter support"
 
 optional_depends gtk+-3 \
                  "--enable-gui=gtk3 --with-x=yes" "" \
                  "for GTK 3.x Graphical User Interface support"
-
-optional_depends gtk+-2 \
-                 "--enable-gui=gtk2 --with-x=yes" "" \
-                 "for GTK 2.x Graphical User Interface support"
 
 optional_depends libcanberra \
                  "--enable-canberra" \
                  "--disable-canberra" \
                  "for XDG-compatible sound generation"
 
-# broken due to API changes
-# these might work again with the upcoming releases
-optional_depends "perl" "--enable-perlinterp=yes" "--disable-perlinterp" "for Perl interpreter support"
-optional_depends "lua"  "--enable-luainterp"  "--disable-luainterp"  "for Lua interpreter support"
-optional_depends "ruby" "--enable-rubyinterp" "--disable-rubyinterp" "for Ruby interpreter support"
+optional_depends python "--enable-python3interp=dynamic" "--disable-python3interp" "for Python 3 interpreter support"
+optional_depends tcl    "--enable-tclinterp=dynamic"     "--disable-tclinterp"     "for Tcl interpreter support"
+optional_depends perl   "--enable-perlinterp=dynamic"    "--disable-perlinterp"    "for Perl interpreter support"
+optional_depends lua    "--enable-luainterp=dynamic"     "--disable-luainterp"     "for Lua interpreter support"
+optional_depends ruby   "--enable-rubyinterp=dynamic"    "--disable-rubyinterp"    "for Ruby interpreter support"
