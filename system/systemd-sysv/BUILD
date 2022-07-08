@@ -1,5 +1,8 @@
 prepare_install &&
 
+mkdir -p /usr/share/doc/systemd-sysv &&
+touch /usr/share/doc/systemd-sysv/systemd-sysv &&
+
 # installwatch is broken: it makes us account for the link TARGET and not just the link, so, for now:
 devoke_installwatch &&
 mkdir -p /sbin &&

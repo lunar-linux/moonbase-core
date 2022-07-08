@@ -1,0 +1,7 @@
+
+
+for i in init halt poweroff reboot runlevel shutdown telinit; do
+  if [ -L "/sbin/$i" ] && [ "$(readlink /sbin/$i)" == "/usr/bin/systemctl" ]; then
+    rm -f "/sbin/$i"
+  fi
+done
