@@ -6,7 +6,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-$VERSION
       SOURCE_VFY=sha256:b151c4913758ef80daf4558361b4f2680a37b01d59272625bb78c77183062c63
         WEB_SITE=https://github.com/ofalk/libdnet/
          ENTERED=20060314
-         UPDATED=20220607
+         UPDATED=2022008
            SHORT="A interface to several low-level networking routines"
 
 cat << EOF
