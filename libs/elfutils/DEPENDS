@@ -1,5 +1,5 @@
-optional_depends zlib  "-with-zlib"   "-without-zlib"   "for zlib compression support" "y"
+depends zlib
+
 optional_depends bzip2 "--with-bzlib" "--without-bzlib" "for bzlib compression support" "y"
 optional_depends xz    "--with-lzma"  "--without-lzma"  "for lzma/xz compression support" "y"
-
-optional_depends valgrind "-with-valgrind" "-without-valgrind" "for valgrind support" "n"
+optional_depends zstd  "--with-zstd"  "--without-zstd"  "for zstd compression support"
