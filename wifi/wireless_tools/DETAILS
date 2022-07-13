@@ -2,9 +2,9 @@
          VERSION=29
           SOURCE=$MODULE.$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE.$VERSION
-      SOURCE_URL=http://hpl.hp.com/personal/Jean_Tourrilhes/Linux
+      SOURCE_URL=https://hewlettpackard.github.io/wireless-tools
       SOURCE_VFY=sha256:6fb80935fe208538131ce2c4178221bab1078a1656306bce8909c19887e2e5a1
-        WEB_SITE=http://hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html
+        WEB_SITE=https://hewlettpackard.github.io/wireless-tools/
          ENTERED=20020219
          UPDATED=20100317
            SHORT="Tools for wireless networking"
