@@ -1,6 +1,9 @@
 depends zlib
+depends zstd
 depends lzo
 depends e2fsprogs
+depends systemd
+
 
 optional_depends python \
                  "--enable-python" \
@@ -15,8 +18,6 @@ optional_depends libsodium \
                  "--with-crypto=libsodium" ""\
                  "to use libsodium for encryption" \
                  "n"
-
-optional_depends zstd "" "--disable-zstd" "for zstd compression support" "n"
 
 optional_depends xmlto    "" "" "for documentation (also requires asciidoc)" "n"
 optional_depends asciidoc "" "" "for documentation (also requires xmlto)" "n"
