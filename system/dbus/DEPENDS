@@ -1,7 +1,6 @@
 depends expat
 depends pkgconf
-
-optional_depends libX11 "--with-x" "--without-x" "for X support"
+depends python
 
 optional_depends libxslt "" "" "for XSL support" n
 
