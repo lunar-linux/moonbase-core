@@ -1,6 +1,36 @@
 default_pre_build &&
 
-sedit 's@^#\s*warning \+_FORTIFY_SOURCE requires compiling with optimization.*$@/* Disabled by lunar as there is no better solution: \0*/@' include/features.h &&
+# Requires lunar v42 or later
+if [[ $(installed_version lunar) < 42 ]]; then
+  message "${PROBLEM_COLOR}ERROR: ${MESSAGE_COLOR}Please update the 'lunar' module, v42 or later is required to upgrade glibc.${DEFAULT_COLOR}"
+  exit 1
+fi
+
+# Pre flight check for glibc upgrade
+while read line path; do
+  if [[ "$path" == "/lib" ]]; then
+    liborder=$line
+  elif [[ "$path" == "/usr/lib" ]]; then
+    usrliborder=$line
+  elif [[ "$path" =~ ^include.* ]]; then
+    includeorder=$line
+  fi
+done < <(awk -v OFS=" " '/(lib|include)/ { print NR-1, $0 }' /etc/ld.so.conf)
+  if [[ -z "$liborder" ]] || [[ -z "$usrliborder" ]] || [[ -z "$includeorder" ]] || [[ "$liborder" > "$usrliborder" ]] || [[ "$usrliborder" > "$includeorder" ]]; then
+    echo " babb $usrliborder"
+    message "${PROBLEM_COLOR}ERROR: ${MESSAGE_COLOR}The /etc/ld.so.conf file is incorrect which will cause the glibc upgrade to fail."
+    message "Please update /etc/ld.so.conf to include the following, the order is IMPORTANT! Then run ldconfig:${DEFAULT_COLOR}"
+
+cat <<EOF
+
+/lib
+/usr/lib
+include /etc/ld.so.conf.d/*.conf
+
+EOF
+    exit 1
+  fi &&
 
 # Disable nss_test2
-sedit '/"nss_test1"/s;"nss_test1";& \&\& $name ne "nss_test2";' scripts/test-installation.pl
+sedit 's/$name ne "nss_test1"/& \&\& $name ne "nss_test2" \&\& $name ne "nsl"/' scripts/test-installation.pl
+

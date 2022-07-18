@@ -1,173 +1,108 @@
-# optimize -O2
-CFLAGS+=" -O2" &&
+export CC=gcc
+CFLAGS+=" -O2 "
 
-# The fortify compiler option cause the build to fail
 bad_flags "-Wp,-D_FORTIFY_SOURCE=2" "-fno-plt" &&
 
-# 32bit build fails with -Os due to a ebp inline assembly problem
-# (note: This problem might be obsolete)
-bad_flags -Os &&
-
-mkdir -p $SOURCE_DIRECTORY/tmp &&
-
-export CC_OPTS=( Pipe ) &&
-
-if [ -n "$MAKES" ] && [ "$MAKES" -gt 1 ] ; then
-   sedit "s/# PARALLELMFLAGS = -j 4/PARALLELMFLAGS = -j $MAKES/" Makefile.in
+if [ -n "$MAKES" ] && [ "$MAKES" -gt 1 ]; then
+  sedit "s/# PARALLELMFLAGS = -j 4/PARALLELMFLAGS = -j $MAKES/" Makefile.in
 fi &&
-
-export CC=gcc  &&
 
 # Don't fully strip libc
-if [[ "$LDFLAGS" == *-s* ]] ; then
-   STRIP=y
+if [[ "$LDFLAGS" == *-s* ]]; then
+  STRIP=y
 fi &&
-unset LDFLAGS &&
 
-INSTALL_ROOT=$SOURCE_DIRECTORY/glibcroot &&
-mkdir -p $INSTALL_ROOT &&
-cd $INSTALL_ROOT &&
+mkdir -p $SOURCE_DIRECTORY/glibc-build &&
+cd $SOURCE_DIRECTORY/glibc-build &&
+
+echo "slibdir=/usr/lib" >> configparms &&
+echo "rtlddir=/lib" >> configparms &&
+echo "sbindir=/usr/bin" >> configparms &&
 
 ../configure --prefix=/usr             \
              --infodir=/usr/share/info \
              --mandir=/usr/share/man   \
-             --host=$BUILD             \
-             --build=$BUILD            \
-             --with-elf                \
-             --with-tls                \
-             --with-__thread           \
+             --host=$BUILD   \
+             --build=$BUILD  \
              --with-headers=/usr/include \
              --with-bugurl=https://github.com/lunar-linux/moonbase-core/issues \
-             --without-gd             \
-             --without-cvs            \
-             --enable-cet             \
-             --enable-shared          \
-             --enable-add-ons         \
-             --enable-bind-now        \
-             --enable-obsolete-rpc    \
-             --enable-obsolete-nsl    \
-             --enable-lock-elision    \
+             --enable-cet          \
+             --enable-shared       \
+             --enable-kernel=4.4   \
+             --enable-add-ons      \
+             --enable-bind-now     \
+             --enable-lock-elision \
              --enable-stack-protector=strong \
+             --enable-stackguard-randomization \
+             --disable-systemtap      \
              --disable-werror         \
              --disable-profile        \
-             --disable-systemtap      \
              --disable-multi-arch     \
              --disable-timezone-tools \
-             --enable-stackguard-randomization \
              $OPTS &&
-
-#             --enable-kernel=3.2        \
 
 # build libraries with hardening disabled
 echo "build-programs=no" >> configparms &&
-make &&
+make -O &&
 
 # Re-enable hardening
-sedit '/build-programs=/s;no;yes;' configparms &&
-echo "CFLAGS += -Wp,-D_FORTIFY_SOURCE=2" >> configparms &&
-make &&
+sedit '/build-programs=/s;no;yes;'   configparms &&
+echo "CFLAGS += -Wp,-D_FORTIFY_SOURCE=2" >> configparms
+make -O &&
+make info &&
 
-# Preserve the old glibc temporarily
-LD=/lib/ld-linux.so.2         &&
-GLIBC=/lib/libc.so.6          &&
-DL=/lib/libdl.so.2            &&
-M=/lib/libm.so.6              &&
-RT=/lib/librt.so.1            &&
-PTHREAD=/lib/libpthread.so.0  &&
-NSS=/lib/libnss_files.so.2    &&
-UTIL=/lib/libutil.so.1        &&
-NSL=/lib/libnsl.so.1          &&
-CRYPT=/lib/libcrypt.so.1      &&
-MVEC=/lib/libmvec.so.1        &&
+_GLIBC_ROOT="$SOURCE_DIRECTORY/__glibcdest" &&
 
-cp $LD /lib/ld-lunar.so               &&
-cp $GLIBC /lib/libc-lunar.so          &&
-cp $DL /lib/libdl-lunar.so            &&
-cp $M /lib/libm-lunar.so              &&
-cp $RT /lib/librt-lunar.so            &&
-cp $PTHREAD /lib/libpthread-lunar.so  &&
-cp $NSS /lib/libnss_files-lunar.so    &&
-cp $UTIL /lib/libutil-lunar.so        &&
-cp $NSL /lib/libnsl-lunar.so          &&
-cp $CRYPT /lib/libcrypt-lunar.so      &&
+mkdir -p $_GLIBC_ROOT/{lib,usr/lib} &&
 
-# Setup links for libraries
-sln /lib/ld-lunar.so $LD               &&
-sln /lib/libc-lunar.so $GLIBC          &&
-sln /lib/libdl-lunar.so $DL            &&
-sln /lib/libm-lunar.so $M              &&
-sln /lib/librt-lunar.so $RT            &&
-sln /lib/libpthread-lunar.so $PTHREAD  &&
-sln /lib/libnss_files-lunar.so $NSS    &&
-sln /lib/libutil-lunar.so $UTIL        &&
-sln /lib/libnsl-lunar.so $NSL          &&
-sln /lib/libcrypt-lunar.so $CRYPT      &&
-
-if [ -f "$MVEC" ]; then
-   cp $MVEC /lib/libmvec-lunar.so &&
-   sln /lib/libmvec-lunar.so $MVEC
+if [ "$(arch)" == "x86_64" ]; then
+  ln -s lib $_GLIBC_ROOT/lib64 &&
+  ln -s lib $_GLIBC_ROOT/usr/lib64
+else
+  ln -s lib $_GLIBC_ROOT/lib32 &&
+  ln -s lib $_GLIBC_ROOT/usr/lib32
 fi &&
 
-# clean hack to make sure gnu/stubs.h gets refreshed
-rm -f /usr/include/gnu/stubs.h &&
+make install_root="$_GLIBC_ROOT" install &&
 
-# This removes the old glibc
-prepare_install &&
-
-# And now we install the new
-make install &&
-
-# Now optionally perform debug symbol stripping only
-if [ "$STRIP" == "y" ] ; then
-   for FN in ld-$MAJOR.so \
-       lib{anl,BrokenLocale,c,crypt,dl,m,nsl,util,pthread,resolv}-$MAJOR.so \
-       libnss_{compat,files,hesiod,nis,nisplus}-$MAJOR.so \
-       lib{memusage,pcprofile,SegFault,thread_db-1.0}.so ; do
-      strip -S /lib/$FN
-   done &&
-  for FN in "/usr/lib/gconv/*.so" ; do
-    strip -S $FN
+# Generate locale info
+if [ -z "$GLIBC_LOCALES" ]; then
+  make install_root="$_GLIBC_ROOT" localedata/install-locales
+else
+  for LOCALE in $GLIBC_LOCALES; do
+    INPUTFILE=$(echo $LOCALE | cut -d/ -f1 | sed -e 's:\..*$::g') &&
+    OUTPUTFILE=$(echo $LOCALE | cut -d/ -f1) &&
+    CHARMAP=$(echo  $LOCALE | cut -d/ -f2)   &&
+    mkdir -p $_GLIBC_ROOT/usr/lib/locale/$OUTPUTFILE     &&
+    echo "localedef -i $INPUTFILE -f $CHARMAP $OUTPUTFILE" &&
+    localedef --prefix=$_GLIBC_ROOT -i $INPUTFILE -f $CHARMAP $OUTPUTFILE
   done
 fi &&
+
+# Now optionally perform safe stripping of binaries and libs
+if [[ "$STRIP" == "y" ]]; then
+  find "$_GLIBC_ROOT"/usr/bin -type f -executable -exec strip $STRIP_BINARIES {} + 2> /dev/null || true &&
+  find "$_GLIBC_ROOT"/usr/lib -name '*.a' -type f -exec strip $STRIP_STATIC {} + 2> /dev/null || true &&
+  find "$_GLIBC_ROOT"/usr/lib "$_GLIBC_ROOT"/lib \
+       -not -name 'ld-*.so*' \
+       -not -name 'libc.so*' \
+       -not -name 'libpthread.so*' \
+       -not -name 'libthread_db.so*' \
+       -name '*.so' -type f -exec strip $STRIP_SHARED {} + 2> /dev/null || true
+fi &&
+
+prepare_install &&
+
+cp -rf --remove-destination $_GLIBC_ROOT/* / &&
 
 # Rebuild the ld cache
 rm -f /etc/ld.so.cache 2>/dev/null &&
 ldconfig &&
 
-# Remove the temporary libc
-rm /lib/{ld,lib{c,dl,m,rt,pthread,nss_files,util,nsl,crypt}}-lunar.so &&
-
-if [ -f /lib/libmvec-lunar.so ]; then
-   rm /lib/libmvec-lunar.so
-fi &&
-
 if [ ! -e /etc/nscd.conf ]; then
-   install -m644 $SOURCE_DIRECTORY/nscd/nscd.conf /etc/nscd.conf
+  install -m644 $SOURCE_DIRECTORY/nscd/nscd.conf /etc/nscd.conf
 fi &&
 
 if [ ! -e /etc/gai.conf ]; then
-    install -m644 $SOURCE_DIRECTORY/posix/gai.conf /etc/gai.conf
-fi &&
-
-# Generate locale info
-if [ -z "$GLIBC_LOCALES" ]; then
-    make localedata/install-locales
-else
-    devoke_installwatch  &&
-    for LOCALE in $GLIBC_LOCALES; do
-      INPUTFILE=$(echo $LOCALE | cut -d/ -f1 | sed -e 's:\..*$::g') &&
-      OUTPUTFILE=$(echo $LOCALE | cut -d/ -f1) &&
-      CHARMAP=$(echo  $LOCALE | cut -d/ -f2)   &&
-      mkdir -p /usr/lib/locale/$OUTPUTFILE     &&
-      echo "localedef -i $INPUTFILE -f $CHARMAP $OUTPUTFILE" &&
-      localedef -i $INPUTFILE -f $CHARMAP $OUTPUTFILE
-    done &&
-    invoke_installwatch &&
-    touch /usr/lib/locale/locale-archive
-fi &&
-
-# Touch undetected symlinks
-touch -c -h $LD $GLIBC $DL $M $RT $PTHREAD $NSS $UTIL $NSL $CRYPT $MVEC /lib/lib{BrokenLocale.so.1,anl.so.1,cidn.so.1,nss_compat.so.2,nss_db.so.2,nss_dns.so.2,nss_hesiod.so.2,nss_nis.so.2,nss_nisplus.so.2,resolv.so.2,thread_db.so.1} &&
-touch -c -h /usr/lib/lib{BrokenLocale,anl,cidn,crypt,dl,m,nsl,nss_compat,nss_db,nss_dns,nss_files,nss_hesiod,nss_nis,nss_nisplus,resolv,rt,thread_db,util}.so &&
-
-ldconfig
+  install -m644 $SOURCE_DIRECTORY/posix/gai.conf /etc/gai.conf
+fi
