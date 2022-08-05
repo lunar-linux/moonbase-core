@@ -10,7 +10,10 @@ fi &&
 
 ../configure --prefix=/usr    \
              --disable-gdb    \
+             --disable-gdbserver \
              --disable-werror \
+             --disable-readline \
+             --disable-sim \
              --enable-cet \
              --enable-gold \
              --enable-relro \
@@ -18,11 +21,10 @@ fi &&
              --enable-threads \
              --enable-ld=default \
              --enable-install-libiberty \
+             --enable-shared \
              --with-pic \
              --with-system-zlib \
              $OPTS &&
-
-#             --enable-shared  \
 
 make configure-host &&
 make tooldir=/usr &&
