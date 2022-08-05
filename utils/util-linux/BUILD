@@ -1,4 +1,5 @@
-OPTS+="-Dstrip=true"
+OPTS+="-Dstrip=true \
+      -Dbuild-kill=disabled"
 
 default_meson_build &&
 prepare_install &&

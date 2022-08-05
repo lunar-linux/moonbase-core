@@ -3,6 +3,7 @@ depends shadow
 depends zlib
 depends findutils
 depends cpio
+depends libcap-ng
 
 optional_depends python  "" "" "for Python 3 support" y
 optional_depends Linux-PAM "" "" "for PAM support"
