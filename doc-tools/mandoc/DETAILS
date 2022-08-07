@@ -1,0 +1,13 @@
+          MODULE=mandoc
+         VERSION=1.14.6
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=https://mdocml.bsd.lv/snapshots
+      SOURCE_VFY=sha256:8bf0d570f01e70a6e124884088870cbed7537f36328d512909eb10cd53179d9c
+        WEB_SITE=https://mdocml.bsd.lv/
+         ENTERED=20220807
+         UPDATED=20220807
+           SHORT="Suite of tools compiling mdoc and man"
+
+cat << EOF
+Suite of tools compiling mdoc and man.
+EOF
