@@ -1,0 +1,4 @@
+default_pre_build &&
+
+# Warnings are not fatal
+sedit 's/-Werror //' Make.defaults
