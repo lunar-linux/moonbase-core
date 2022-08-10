@@ -1,5 +1,5 @@
 default_pre_build &&
-unpack ${SOURCE2} &&
+#unpack ${SOURCE2} &&
 
 # remove the doc directory
 rm -fR doc &&
