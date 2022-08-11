@@ -1,0 +1,7 @@
+mquery FM_NFP "Install firmware for Netronome Flow Processors" n
+mquery FW_MELLANOX "Install firmware for Mellanox Spectrum switches" n
+mquery FW_MARVELL "Install firmware for Marvell devices" y
+mquery FW_QCOM "Install firmware for Qualcomm SoCs" n
+mquery FW_LIQUIDIO "Install firmware for Cavium LiquidIO server adapters" n
+mquery FW_QLOGIC "Install firmware for QLogic devices" n
+mquery FW_BNX2X "Install firmware for Broadcom NetXtreme II 10Gb ethernet adapters" n

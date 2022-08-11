@@ -1,0 +1,8 @@
+# Check that the kernel support compressed firmware
+if ! kernel_option_present CONFIG_FW_LOADER_COMPRESS; then
+  message "${MESSAGE_COLOR}The kernel option ${PROBLEM_COLOR}CONFIG_FW_LOADER_COMPRESS${MESSAGE_COLOR} is not enabled.${DEFAULT_COLOR}"
+  message "${MESSAGE_COLOR}Please reconfigure and rebuild your kernel. Then try installing linux-firmware again.${DEFAULT_COLOR}"
+  exit 1
+fi
+
+default_pre_build
