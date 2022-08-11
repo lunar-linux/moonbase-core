@@ -6,4 +6,7 @@ sedit 's|GNU/Linux|Linux|' util/grub.d/10_linux.in &&
 # Remove not working langs which need LC_ALL=C.UTF-8
 sedit 's#en@cyrillic en@greek##g' po/LINGUAS &&
 
+# Enable grub to detect other OSes installed
+sedit 's:xtrue":xfalse":' util/grub.d/30_os-prober.in &&
+
 ./autogen.sh
