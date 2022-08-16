@@ -1,4 +1,4 @@
-bad_flags -malign-double -s
+bad_flags -malign-double "-s "
 
 OPTS+=" --bindir=/usr/bin \
         --with-curses \
