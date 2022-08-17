@@ -1,7 +1,13 @@
 default_pre_build &&
 
+# Patch gcc to 12.1.1
+patch_it $SOURCE2 1 &&
+
 # installwatch fails to track files installed using tar
 sedit 's;^\(build_install_headers_dir=\).*;\1install-headers-cp;' gcc/config.build &&
+
+# Disable fix includes
+sedit 's;\./fixinc\.sh;-c true;' gcc/Makefile.in &&
 
 # store old version for POST_INSTALL
 set_module_config OLD_GCC_VERSION "$(installed_version $MODULE)"

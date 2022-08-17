@@ -1,14 +1,18 @@
-          MODULE=gcc
-         VERSION=12.1.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-   SOURCE_URL[0]=$GNU_URL/gcc/$MODULE-$VERSION/
-   SOURCE_URL[1]=ftp://gcc.gnu.org/pub/gcc/releases/gcc-$VERSION/
-   SOURCE_URL[2]=http://www.online-mirror.org/gcc/$MODULE-$VERSION/
-      SOURCE_VFY=sha256:62fd634889f31c02b64af2c468f064b47ad1ca78411c45abe6ac4b5f8dd19c7b
-        WEB_SITE=http://gcc.gnu.org/
-         ENTERED=20020628
-         UPDATED=20220720
-           SHORT="GNU compiler collection"
+             MODULE=gcc
+            VERSION=12.1.1
+             SOURCE=$MODULE-12.1.0.tar.xz
+            SOURCE2=gcc-12.1.1-changes.patch.xz
+      SOURCE_URL[0]=$GNU_URL/gcc/$MODULE-$VERSION/
+      SOURCE_URL[1]=ftp://gcc.gnu.org/pub/gcc/releases/gcc-$VERSION/
+      SOURCE_URL[2]=http://www.online-mirror.org/gcc/$MODULE-$VERSION/
+        SOURCE2_URL=$PATCH_URL
+   SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-12.1.0
+         SOURCE_VFY=sha256:62fd634889f31c02b64af2c468f064b47ad1ca78411c45abe6ac4b5f8dd19c7b
+        SOURCE2_VFY=sha256:3aca2adf1efd93c986b72102e775b8408912535dc9fe74d74d7c8b276dda8a17
+           WEB_SITE=http://gcc.gnu.org/
+            ENTERED=20020628
+            UPDATED=20220817
+              SHORT="GNU compiler collection"
 
 cat << EOF
 gcc - GNU Compiler Collection.
