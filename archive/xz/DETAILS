@@ -1,11 +1,11 @@
          MODULE=xz
-        VERSION=5.2.5
+        VERSION=5.2.6
          SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=http://tukaani.org/$MODULE
-      SOURCE_VFY=sha256:5117f930900b341493827d63aa910ff5e011e0b994197c3b71c08a20228a42df
-        WEB_SITE=http://tukaani.org/xz
+      SOURCE_URL=https//tukaani.org/$MODULE
+      SOURCE_VFY=sha256:13e3402e301b6018f6a71ef0e497f714c6d11e214ae82dab156b81c2a64acb25
+        WEB_SITE=https://tukaani.org/xz
          ENTERED=20090224
-         UPDATED=20220506
+         UPDATED=20220819
            SHORT="Utils for XZ archive format"
 
 cat << EOF
