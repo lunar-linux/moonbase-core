@@ -1,12 +1,13 @@
-          MODULE=systemd
-         VERSION=250
-          SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=https://github.com/systemd/systemd/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:389935dea020caf6e2e81a4e90e556bd5599a2086861045efdc06197776e94e1
-        WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
-         ENTERED=20100919
-         UPDATED=20211230
-           SHORT="A system and program management daemon"
+           MODULE=systemd
+          VERSION=251.4
+           SOURCE=$MODULE-$VERSION.tar.gz
+  SOURCE_URL_FULL=https://github.com/systemd/systemd-stable/archive/v$VERSION.tar.gz
+ SOURCE_DIRECTORY=$BUILD_DIRECTORY/systemd-stable-$VERSION
+       SOURCE_VFY=sha256:3459239979f52b8c4ace33734d31c2fb69fa13cf81d04b1b982f7d8d4651e015
+         WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
+          ENTERED=20100919
+          UPDATED=20220817
+            SHORT="A system and program management daemon"
 
 cat << EOF
 systemd is a system and session manager for Linux, compatible with SysV and LSB
