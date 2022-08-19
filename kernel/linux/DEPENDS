@@ -1,4 +1,4 @@
 depends  autoconf
-depends  %KMOD
+depends  kmod
 depends  linux-firmware
 depends  bc

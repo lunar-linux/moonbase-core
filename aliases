@@ -1,4 +1,3 @@
-%KMOD:kmod module-init-tools
 %SSL:openssl libressl gnutls
 %OSSL:openssl libressl
 %XMLRENDERER:libxml2 expat
