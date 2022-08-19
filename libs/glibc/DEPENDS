@@ -2,6 +2,6 @@ depends gawk
 depends sed
 depends texinfo
 depends python
-depends %KERNEL_HEADERS
+depends kernel-headers
 
 optional_depends perl "" "" "for testing the installation"
