@@ -2,7 +2,7 @@ depends pkgconf
 depends libaio
 
 # optional circular depend with systemd->cryptsetup
-depends %UDEV
+depends systemd
 
 optional_depends readline \
                  "--enable-readline" "" \
