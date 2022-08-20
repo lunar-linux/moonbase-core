@@ -1,3 +1,4 @@
-default_pre_build &&
-
-sedit "s:c_rehash \.:( \0 || openssl certhash . ):;/run-parts/s: -- : :" sbin/update-ca-certificates
+validate_source_dir $SOURCE_DIRECTORY &&
+mk_source_dir $SOURCE_DIRECTORY &&
+cd $SOURCE_DIRECTORY &&
+tar --strip-component=1 -xf $SOURCE_CACHE/$SOURCE -C $SOURCE_DIRECTORY/
