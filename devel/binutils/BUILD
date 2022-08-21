@@ -11,6 +11,7 @@ if [[ "$(arch)" == "i686" ]]; then
 fi &&
 
 ../configure --prefix=/usr    \
+             --sysconfdir=/etc   \
              --disable-gdb    \
              --disable-gdbserver \
              --disable-werror \
