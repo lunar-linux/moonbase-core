@@ -5,8 +5,8 @@
          VERSION=52.0.0
           SOURCE=setuptools-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/setuptools-$VERSION
- SOURCE_URL_FULL=https://github.com/pypa/setuptools/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:ff0c74d1b905a224d647f99c6135eacbec2620219992186b81aa20012bc7f882
+      SOURCE_URL=https://files.pythonhosted.org/packages/84/48/5c99d8770fd0a9eb0f82654c3294aad6d0ba9f8600638c2e2ad74f2c5d52/
+      SOURCE_VFY=sha256:fb3a1ee622509550dbf1d419f241296169d7f09cb1eb5b1736f2f10965932b96
         WEB_SITE=http://packages.python.org/distribute/
          ENTERED=20071221
          UPDATED=20220119
