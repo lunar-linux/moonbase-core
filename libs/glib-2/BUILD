@@ -1,5 +1,4 @@
 OPTS+=" -D installed_tests=false \
-        -D fam=false \
         -D selinux=disabled"
 
 # Do not install gdbus-codegen, it's part of gdbus-codegen module
