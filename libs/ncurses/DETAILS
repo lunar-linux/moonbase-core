@@ -2,7 +2,7 @@
          VERSION=snapshots-6_3_20220827
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/ThomasDickey/ncurses-snapshots/archive/refs/tags/v6_3_20220827.tar.gz
-      SOURCE_VFY=sha256:97fc51ac2b085d4cde31ef4d2c3122c21abc217e9090a43a30fc5ec21684e059
+      SOURCE_VFY=sha256:31f69ea7f09e0aac56facb76c87e63e687545f745420d500698c16bf39b6d5ba
         WEB_SITE=http://www.gnu.org/software/ncurses/ncurses.html
          ENTERED=20010922
          UPDATED=20220829
