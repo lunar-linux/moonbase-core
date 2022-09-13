@@ -1,8 +1,9 @@
           MODULE=file
          VERSION=5.42
           SOURCE=$MODULE-$VERSION.tar.gz
-   SOURCE_URL[0]=ftp://ftp.astron.com/pub/$MODULE
-   SOURCE_URL[1]=https://fossies.org/linux/misc/
+   SOURCE_URL[0]=http://ftp.astron.com/pub/$MODULE
+   SOURCE_URL[1]=ftp://ftp.astron.com/pub/$MODULE
+   SOURCE_URL[2]=https://fossies.org/linux/misc/
       SOURCE_VFY=sha256:c076fb4d029c74073f15c43361ef572cfb868407d347190ba834af3b1639b0e4
         WEB_SITE=http://www.darwinsys.com/file/
          ENTERED=20010922
