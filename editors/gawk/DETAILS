@@ -1,12 +1,12 @@
           MODULE=gawk
-         VERSION=5.1.1
+         VERSION=5.2.0
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
-   SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:d87629386e894bbea11a5e00515fc909dc9b7249529dad9e6a3a2c77085f7ea2
-        WEB_SITE=http://www.gnu.org/software/gawk/gawk.html
+   SOURCE_URL[1]=https://ftp.gnu.org/pub/gnu/$MODULE
+      SOURCE_VFY=sha256:e4ddbad1c2ef10e8e815ca80208d0162d4c983e6cca16f925e8418632d639018
+        WEB_SITE=https://www.gnu.org/software/gawk/gawk.html
          ENTERED=20010922
-         UPDATED=20211030
+         UPDATED=20220916
            SHORT="A free version of awk"
 
 cat << EOF
