@@ -11,7 +11,7 @@
      SOURCE2_VFY=sha256:3e7ce1f3620cc0481907c7e074d69910793285bffe0ca331ef1a6d1ae3ea90cc
         WEB_SITE=ftp://munnari.oz.au/pub
          ENTERED=20070203
-         UPDATED=20220607
+         UPDATED=20220916
            SHORT="Timezone data and utilities"
 
 cat << EOF
