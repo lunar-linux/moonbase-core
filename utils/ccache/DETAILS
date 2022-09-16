@@ -1,11 +1,11 @@
           MODULE=ccache
-         VERSION=4.6.1
+         VERSION=4.6.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://github.com/ccache/ccache/releases/download/v$VERSION/
-      SOURCE_VFY=sha256:e5d47bd3cbb504ada864124690e7c0d28ecb1f9aeac22a9976025aed9633f3d1
+      SOURCE_VFY=sha256:1e3a251bb112632553b8255a78661fe526c3a16598496d51128c32b218fd8b22
         WEB_SITE=http://ccache.samba.org
          ENTERED=20020701
-         UPDATED=20220607
+         UPDATED=20220916
            SHORT="A compiler cache"
 
 cat << EOF
