@@ -1,11 +1,11 @@
           MODULE=ninja
-         VERSION=1.11.0
+         VERSION=1.11.1
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/ninja-build/ninja/archive/refs/tags/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:3c6ba2e66400fe3f1ae83deb4b235faf3137ec20bd5b08c29bfc368db143e4c6
+      SOURCE_VFY=sha256:31747ae633213f1eda3842686f83c2aa1412e0f5691d1c14dbbcc67fe7400cea
         WEB_SITE=https://ninja-build.org/
          ENTERED=20141002
-         UPDATED=20220606
+         UPDATED=20220916
            SHORT="A small build system with a focus on speed"
 
 cat << EOF
