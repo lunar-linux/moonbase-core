@@ -1,9 +1,3 @@
-if [ "$USE_PERL" == "y" ]; then
-  OPTS=$OPTS" --enable-perl-regexp"
-else
-  OPTS=$OPTS" --disable-perl-regexp"
-fi &&
-
 if [ "$USE_LARGEFILE" == "y" ]; then
   OPTS=$OPTS" --enable-largefile"
 else

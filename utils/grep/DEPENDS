@@ -1,2 +1,5 @@
-depends pcre
-depends pcre2
+optional_depends pcre2 \
+    "--enable-perl-regexp" \
+    "--disable-perl-regexp" \
+    "For Perl regular expression support" \
+    "n"
