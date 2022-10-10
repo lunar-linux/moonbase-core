@@ -1,12 +1,12 @@
           MODULE=dmidecode
-         VERSION=3.3
+         VERSION=3.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://download.savannah.nongnu.org/releases/$MODULE/
-      SOURCE_VFY=sha256:82c737a780614c38a783e8055340d295e332fb12c7f418b5d21a0797d3fb1455
+      SOURCE_VFY=sha256:43cba851d8467c9979ccdbeab192eb6638c7d3a697eba5ddb779da8837542212
         WEB_SITE=https://www.nongnu.org/dmidecode/
       MAINTAINER=ratler@lunar-linux.org
          ENTERED=20040629
-         UPDATED=20201015
+         UPDATED=20220916
            SHORT="Tool for dumping a computer's DMI (SMBIOS) in a human-readable format"
 
 cat << EOF
