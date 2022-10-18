@@ -1,11 +1,11 @@
           MODULE=expat
-         VERSION=2.4.8
+         VERSION=2.4.9
           SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:a247a7f6bbb21cf2ca81ea4cbb916bfb9717ca523631675f99b3d4a5678dcd16
-        WEB_SITE=http://expat.sourceforge.net
+      SOURCE_URL=https://github.com/libexpat/libexpat/releases/download/R_2_4_9/
+      SOURCE_VFY=sha256:7f44d1469b110773a94b0d5abeeeffaef79f8bd6406b07e52394bcf48126437a
+        WEB_SITE=https://libexpat.github.io/
          ENTERED=20010928
-         UPDATED=20220410
+         UPDATED=20221018
            SHORT="XML parsing library"
 
 cat << EOF
