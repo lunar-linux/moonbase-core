@@ -15,6 +15,10 @@ OPTS+=" -Drootprefix=/usr \
 
 add_priv_group systemd-journal &&
 
+if in_depends $MODULE docbook-xsl; then
+ export XML_CATALOG_FILES=/etc/xml/catalog
+fi &&
+
 # a not existing hostname is set to lunar.
 if [[ ! -f /etc/hostname ]]; then
   install -m 0644 -o root -g root $SCRIPT_DIRECTORY/files/hostname /etc/hostname
