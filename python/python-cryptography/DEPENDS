@@ -4,3 +4,4 @@ depends python-idna
 depends python-cffi
 depends python-pyasn1
 depends python-six
+depends python-semantic-version
