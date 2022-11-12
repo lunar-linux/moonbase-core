@@ -1,0 +1,26 @@
+diff -r -C 2 work/mozilla/certdata2pem.py work.new/mozilla/certdata2pem.py
+*** work/mozilla/certdata2pem.py	2021-10-17 01:09:43.000000000 +0900
+--- work.new/mozilla/certdata2pem.py	2022-10-29 16:36:57.272711665 +0900
+***************
+*** 29,35 ****
+  import io
+  
+- from cryptography import x509
+- 
+- 
+  objects = []
+  
+--- 29,32 ----
+***************
+*** 123,132 ****
+              continue
+  
+-         cert = x509.load_der_x509_certificate(obj['CKA_VALUE'])
+-         if cert.not_valid_after < datetime.datetime.now():
+-             print('!'*74)
+-             print('Trusted but expired certificate found: %s' % obj['CKA_LABEL'])
+-             print('!'*74)
+- 
+          bname = obj['CKA_LABEL'][1:-1].replace('/', '_')\
+                                        .replace(' ', '_')\
+--- 120,123 ----
