@@ -1,11 +1,11 @@
           MODULE=texinfo
-         VERSION=7.0
+         VERSION=7.0.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNU_URL/$MODULE/
-      SOURCE_VFY=sha256:20744b82531ce7a04d8cee34b07143ad59777612c3695d5855f29fba40fbe3e0
+      SOURCE_VFY=sha256:bcd221fdb2d807a8a09938a0f8d5e010ebd2b58fca16075483d6fcb78db2c6b2
         WEB_SITE=http://www.gnu.org/software/texinfo/
          ENTERED=20010922
-         UPDATED=20221121
+         UPDATED=20221210
            SHORT="Contain utilities to work with and produce manuals"
 
 cat << EOF
