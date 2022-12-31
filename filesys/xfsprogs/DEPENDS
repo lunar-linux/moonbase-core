@@ -1,6 +1,7 @@
 depends inih
 depends readline
 depends util-linux
+depends userspace-rcu
 
 optional_depends gettext \
                  "--enable-gettext=yes" \
