@@ -4,6 +4,7 @@ depends libffi
 depends gettext
 depends elfutils
 depends meson
+depends pcre2
 
 optional_depends gtk-doc \
                  "-D gtk_doc=true" \
