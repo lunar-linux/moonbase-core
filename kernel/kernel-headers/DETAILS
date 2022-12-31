@@ -1,12 +1,12 @@
             MODULE=kernel-headers
-           VERSION=5.19.2
+           VERSION=6.0.11
             SOURCE=kernel-headers-$VERSION.tar.bz2
   SOURCE_DIRECTORY=${BUILD_DIRECTORY}/kernel-headers-$VERSION
         SOURCE_URL=$MIRROR_URL
-        SOURCE_VFY=sha256:02a3b1a19fa95d16fe454671ed9cb7b7b9265e52f4dc54b7c5e3e42a09828212
+        SOURCE_VFY=sha256:4c6636641f38d187d6185396a6e423cc628b8dcbd5dd1a42b9f66ad48e4d100c
           WEB_SITE=http://www.lunar-linux.org/
            ENTERED=20040226
-           UPDATED=20220823
+           UPDATED=20221222
             SHORT="Sanitized kernel headers for userspace"
 
 cat << EOF
