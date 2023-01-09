@@ -8,7 +8,6 @@ OPTS+=" --enable-threaded-resolver \
         --without-libpsl \
         --without-librtmp \
         --with-zlib \
-        --with-libidn \
         --with-random=/dev/urandom"
 
 default_build &&
