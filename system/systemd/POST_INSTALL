@@ -73,4 +73,6 @@ systemd-sysusers
 udevadm hwdb --update
 journalctl --update-catalog
 
+lunar fix python
+
 lin -c dbus

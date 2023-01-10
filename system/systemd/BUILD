@@ -1,3 +1,5 @@
+export PYTHONDONTWRITEBYTECODE=1 &&
+
 OPTS+=" -Drootprefix=/usr \
         -Daudit=false \
         -Dgnu-efi=true \
