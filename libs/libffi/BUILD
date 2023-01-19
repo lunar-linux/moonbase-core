@@ -1,5 +1,4 @@
-OPTS+=" --disable-static
-        --disable-multi-os-directory \
+OPTS+=" --disable-multi-os-directory \
         --disable-exec-static-tramp \
         --enable-pax_emutramp"
 
