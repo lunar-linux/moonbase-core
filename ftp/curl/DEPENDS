@@ -1,5 +1,8 @@
 depends zlib
-depends libidn
+
+optional_depends libidn2 "--with-libidn2" \
+                 "--without-libidn2" \
+                 "for libidn2 support"
 
 optional_depends %OSSL \
                  "--with-ssl" \
