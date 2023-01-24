@@ -8,4 +8,9 @@ sedit "s/\$(PREFIX)\/man/\$(PREFIX)\/share\/man/g" Makefile &&
 sedit "s/all: libbz2.a/all:/g" Makefile &&
 sedit "s/bzip2: libbz2.a/bzip2:/g" Makefile &&
 sedit "/cp -f libbz2.a/d" Makefile &&
-sedit "/chmod a+r \$(PREFIX)\/lib\/libbz2.a/d" Makefile
+sedit "/chmod a+r \$(PREFIX)\/lib\/libbz2.a/d" Makefile &&
+
+#Lets give it a bzip2.pc. Noticed fiddling with a thunderbird bump it
+#couldn't fine this file.
+cp $SCRIPT_DIRECTORY/bzip2.pc . &&
+sed "s|@VERSION|$VERSION|" -i bzip2.pc
