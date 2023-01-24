@@ -19,4 +19,6 @@ ln -sf /usr/lib/libbz2.so.$VERSION /usr/lib/libbz2.so.1.0 &&
 ln -sf /usr/lib/libbz2.so.1.0 /usr/lib/libbz2.so.1 &&
 ln -sf /usr/lib/libbz2.so.1 /usr/lib/libbz2.so &&
 
-strip /usr/bin/bzip2 /usr/bin/bzip2recover /usr/bin/bzcat /usr/bin/bunzip2
+strip /usr/bin/bzip2 /usr/bin/bzip2recover /usr/bin/bzcat /usr/bin/bunzip2 &&
+
+install -Dm644 bzip2.pc -t /usr/lib/pkgconfig
