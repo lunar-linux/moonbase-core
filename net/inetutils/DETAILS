@@ -1,11 +1,11 @@
           MODULE=inetutils
-         VERSION=2.3
+         VERSION=2.4
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$GNU_URL/$MODULE
-      SOURCE_VFY=sha256:1ced899fe07c60d68541db1686af84354024fa503e16c43aec2ef3e03b8d44b6
+      SOURCE_VFY=sha256:76aee0c2f0954728600d510955d697a4ec29324318e784848db606ee3c09e365
         WEB_SITE=https://www.gnu.org/software/inetutils
          ENTERED=20080429
-         UPDATED=20220916
+         UPDATED=20230206
            SHORT="A collection of common network programs"
 
 cat << EOF
