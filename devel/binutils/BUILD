@@ -6,7 +6,7 @@ cd build-binutils &&
 mkdir -p $dstdir &&
 
 # Enable 64bit bfd for x86
-if [[ "$(arch)" == "i686" ]]; then
+if [[ "$(uname -m)" == "i686" ]]; then
   OPTS+=" --enable-64-bit-bfd"
 fi &&
 
@@ -41,8 +41,11 @@ rm $dstdir/usr/lib/lib{bfd,opcodes}.so &&
 echo "INPUT ( /usr/lib/libbfd.a -liberty -lz -ldl )" > $dstdir/usr/lib/libbfd.so &&
 echo "INPUT ( /usr/lib/libopcodes.a -lbfd )" > $dstdir/usr/lib/libopcodes.so
 
-mv $dstdir/usr/lib64/* $dstdir/usr/lib/ &&
-rmdir $dstdir/usr/lib64 &&
+# This part fails on i686, so check the arch
+if [[ "$(uname -m)" == "x86_64" ]]; then
+	mv $dstdir/usr/lib64/* $dstdir/usr/lib/ &&
+	rmdir $dstdir/usr/lib64
+fi &&
 
 prepare_install &&
 
