@@ -6,23 +6,24 @@ cd glibc-build &&
 
 echo "slibdir=/lib" > configparms &&
 
-OPTS=" --host=$HOST" \
-    " --build=$BUILD" \
-    " --prefix=/usr" \
-    " --libdir=/usr/lib" \
-    " --infodir=/usr/share/info" \
-    " --mandir=/usr/share/man" \
-    " --sysconfdir=/etc" \
-    " --with-elf" \
-    " --enable-shared" \
-    " --disable-profile" \
-    " --with-headers=/usr/include" \
-    " --disable-multiarch" \
-    " --enable-obsolete-rpc" &&
-    " --enable-bind-now" \
-    " --enable-stack-protector=strong" \
-    " --enable-stackguard-randomization" \
-    " --disable-cet" \
+OPTS=" --host=$HOST \
+    --build=$BUILD \
+    --prefix=/usr \
+    --libdir=/usr/lib \
+    --infodir=/usr/share/info \
+    --mandir=/usr/share/man \
+    --sysconfdir=/etc \
+    --with-elf \
+    --disable-werror \
+    --enable-shared \
+    --disable-profile \
+    --with-headers=/usr/include \
+    --disable-multiarch \
+    --enable-obsolete-rpc \
+    --enable-bind-now \
+    --enable-stack-protector=strong \
+    --enable-stackguard-randomization \
+    --disable-cet" &&
 
 ../configure $OPTS &&
 

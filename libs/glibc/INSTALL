@@ -1,5 +1,6 @@
-mkdir $SOURCE_DIRECTORY/glibc-build/old.libs  &&
+prepare_install &&
 
+mkdir $SOURCE_DIRECTORY/glibc-build/old.libs  &&
 message "${MESSAGE_COLOR}Copying old libraries${DEFAULT_COLOR}" &&
 for file in /lib; do
     if [ -f "$file" ]; then

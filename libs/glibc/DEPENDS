@@ -1,7 +1,7 @@
-autoconf
-binutils
-fhs
-gcc
-gettext
-perl
-python
+depends autoconf
+depends binutils
+depends fhs
+depends gcc
+depends gettext
+depends perl
+depends python
