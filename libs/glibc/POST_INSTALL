@@ -1,4 +1,0 @@
-# Update fixed headers
-/usr/libexec/gcc/$(arch)-pc-linux-gnu/$(installed_version gcc)/install-tools/mkheaders
-
-lin -c timezone-data
