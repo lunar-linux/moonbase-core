@@ -39,23 +39,23 @@ for file in /lib; do
     fi
 done &&
 
-message "${MESSAGE_COLOR}Running ldconfig${DEFAULT_COLOR}" &&
-ldconfig $SOURCE_DIRECTORY/glibc-build/old.libs &&
-export_ld $SOURCE_DIRECTORY/glibc-build/old.libs &&
+#message "${MESSAGE_COLOR}Running ldconfig${DEFAULT_COLOR}" &&
+#ldconfig $SOURCE_DIRECTORY/glibc-build/old.libs &&
+#export_ld $SOURCE_DIRECTORY/glibc-build/old.libs &&
 
-message "${MESSAGE_COLOR}Changing ld-linux${DEFAULT_COLOR}" &&
-for each in /lib/ld-linux*; do
-    if [ -f "$each" ]; then
-        LD=$(readlink "$each")
-	LDB=${LD##*/}
-	ln -sfv $SOURCE_DIRECTORY/glibc-build/old.libs/$LDB "$each"
-    fi
-done &&
+#message "${MESSAGE_COLOR}Changing ld-linux${DEFAULT_COLOR}" &&
+#for each in /lib/ld-linux*; do
+#    if [ -f "$each" ]; then
+#        LD=$(readlink "$each")
+#	LDB=${LD##*/}
+#	ln -sfv $SOURCE_DIRECTORY/glibc-build/old.libs/$LDB "$each"
+#    fi
+#done &&
 
 cd $SOURCE_DIRECTORY/glibc-build &&
 
 message "${MESSAGE_COLOR}Removing glibc${DEFAULT_COLOR}" &&
-lrm --no-sustain glibc &&
+#lrm --no-sustain glibc &&
 
 # glibc only installs those if the file differs
 for file in ${INSTALL_ROOT}/usr/include/bits/syscall.h \
@@ -67,4 +67,6 @@ for file in ${INSTALL_ROOT}/usr/include/bits/syscall.h \
     fi
 done &&
 
+message "${MESSAGE_COLOR}Running 'make install'${DEFAULT_COLOR}" &&
 make install install_root="${INSTALL_ROOT}"
+message "${MESSAGE_COLOR}Done installing${DEFAULT_COLOR}"

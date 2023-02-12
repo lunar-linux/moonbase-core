@@ -1,12 +1,12 @@
           MODULE=glibc
-         VERSION=2.31
+         VERSION=2.32
           SOURCE=$MODULE-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
       SOURCE_URL=$GNU_URL/$MODULE
-      SOURCE_VFY=sha256:9246fe44f68feeec8c666bb87973d590ce0137cca145df014c72ec95be9ffd17
+      SOURCE_VFY=sha256:1627ea54f5a1a8467032563393e0901077626dc66f37f10ee6363bb722222836
         WEB_SITE=http://www.gnu.org/software/libc
          ENTERED=20010922
-         UPDATED=20230208
+         UPDATED=20230211
            SHORT="C library for use with GNU/Hurd and GNU/Linux"
 cat << EOF
 glibc - Library for use with GNU/Hurd and GNU/Linux.
