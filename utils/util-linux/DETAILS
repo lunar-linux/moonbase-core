@@ -1,12 +1,13 @@
           MODULE=util-linux
-         VERSION=2.37.2
+         VERSION=2.38
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KERNEL_URL/pub/linux/utils/$MODULE/v${VERSION::4}
-     SOURCE_VFY=sha256:6a0764c1aae7fb607ef8a6dd2c0f6c47d5e5fd27aa08820abaad9ec14e28e9d9
+     SOURCE_VFY=sha256:6d111cbe4d55b336db2f1fbeffbc65b89908704c01136371d32aa9bec373eb64
         WEB_SITE=http://freecode.com/projects/util-linux
          ENTERED=20010922
-         UPDATED=20220215
+         UPDATED=20220803
            SHORT="Essential utilities for any Linux box"
+	    TYPE=meson
 
 cat << EOF
 Util-linux is a suite of essential utilities for any Linux system. Its primary
