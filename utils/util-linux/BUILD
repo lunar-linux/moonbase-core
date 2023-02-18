@@ -2,7 +2,6 @@ OPTS+="-Dstrip=true \
       -Dbuild-kill=disabled"
 
 default_meson_build &&
-prepare_install &&
 chmod 700 /usr/bin/wall &&
 chmod 4711 /usr/bin/{newgrp,ch{sh,fn}} &&
 if [ -f /usr/lib/systemd/system/uidd.socket ]
