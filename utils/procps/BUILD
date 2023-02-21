@@ -1,3 +1,5 @@
+./autogen.sh &&
+
 OPTS+=" --exec-prefix=/usr \
         --sysconfdir=/etc  \
         --sbindir=/usr/bin \
