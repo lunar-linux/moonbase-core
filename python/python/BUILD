@@ -33,4 +33,4 @@ prepare_install &&
 cp -rfv --remove-destination "$_PYDESTDIR"/* / &&
 
 # Remove tests
-rm -r "/usr/lib/python${_BASEVER}"/{test,ctypes/test,distutils/tests,idlelib/idle_test,lib2to3/tests,sqlite3/test,tkinter/test,unittest/test}
+rm -rf "/usr/lib/python${_BASEVER}"/{test,ctypes/test,distutils/tests,idlelib/idle_test,lib2to3/tests,sqlite3/test,tkinter/test,unittest/test}
