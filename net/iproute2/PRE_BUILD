@@ -2,7 +2,4 @@ default_pre_build &&
 
 if ! in_depends $MODULE db; then
   sedit 's/arpd//' misc/Makefile
-fi &&
-
-# do not treat warnings as errors
-sed -i 's/-Werror//' Makefile
+fi
