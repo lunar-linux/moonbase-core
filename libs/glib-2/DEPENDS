@@ -1,6 +1,7 @@
 depends automake
 depends zlib
 depends libffi
+depends pcre2
 depends gettext
 depends elfutils
 depends meson
