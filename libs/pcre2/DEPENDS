@@ -1,0 +1,3 @@
+depends readline
+depends bzip2
+depends zlib
