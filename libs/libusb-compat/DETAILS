@@ -1,11 +1,11 @@
           MODULE=libusb-compat
-         VERSION=0.1.7
+         VERSION=0.1.8
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://github.com/libusb/libusb-compat-0.1/releases/download/v$VERSION/
-      SOURCE_VFY=sha256:8259f8d5b084fe43c47823a939e955e0ba21942b8d112266c39d228cc14764d6
+      SOURCE_VFY=sha256:698c76484f3dec1e0175067cbd1556c3021e94e7f2313ae3ea6a66d900e00827
         WEB_SITE=http://www.libusb.org/wiki/LibusbCompat0.1
          ENTERED=20090812
-         UPDATED=20200210
+         UPDATED=20230315
            SHORT="A compatibility layer for the old libusb"
 
 cat << EOF
