@@ -4,12 +4,8 @@ depends libffi
 depends expat
 depends pkgconf
 depends zlib
+depends mpdecimal
 
 optional_depends db     "" "" "for db support"
 optional_depends gdbm   "" "" "for gdbm support"
 optional_depends sqlite "" "" "for sqlite support"
-
-optional_depends mpdecimal \
-                    "--with-system-libmpdec"  "" \
-                    "for system mpdecimal support" \
-                    "n"
