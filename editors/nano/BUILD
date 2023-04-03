@@ -13,6 +13,5 @@ fi
 default_build &&
 
 if [[ "$NANORC" == "y" && ! -f "/etc/nanorc" ]]; then
-  bzcat $SOURCE_CACHE/$SOURCE2 > nanorc &&
-  install -m 0644 nanorc /etc/
+  install -m 0644 $SCRIPT_DIRECTORY/nanorc /etc/
 fi
