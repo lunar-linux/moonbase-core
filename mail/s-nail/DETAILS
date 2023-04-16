@@ -1,0 +1,21 @@
+# http://ftp.debian.org/debian/pool/main/s/s-nail/s-nail_14.9.24.orig.tar.xz
+          MODULE=s-nail
+         VERSION=14.9.24
+          SOURCE=${MODULE}_${VERSION}.orig.tar.xz
+      SOURCE_URL=http://ftp.debian.org/debian/pool/main/${MODULE::1}/${MODULE}
+      SOURCE_VFY=sha256:4c93f73032702a18cf00830b4faa606c262db65fbfc08266c33510cfb3125934
+        WEB_SITE=https://salsa.debian.org/debian/s-nail
+         ENTERED=20230416
+         UPDATED=20230416
+        REPLACES=heirloom-mailx
+           SHORT="A plain command line mail program"
+PSAFE=no
+
+cat << EOF
+The S-Nail (formerly known as heirloom-mailx) package contains mailx, a
+command-line Mail User Agent derived from Berkeley Mail which is
+intended to provide the functionality of the POSIX mailx command with
+additional support for MIME messages, IMAP (including caching), POP3,
+SMTP, S/MIME, message threading/sorting, scoring, and filtering.  S-Nail
+is especially useful for writing scripts and batch processing.
+EOF
