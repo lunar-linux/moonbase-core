@@ -1,0 +1,2 @@
+conflicts mailutils
+conflicts heirloom-mailx
