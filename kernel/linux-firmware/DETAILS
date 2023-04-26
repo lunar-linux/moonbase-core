@@ -2,15 +2,15 @@
 # git clone git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
 # git archive --format=tar --prefix linux-firmware-$(date +%Y%m%d)/ main | xz -9 > linux-firmware-$(date +%Y%m%d).tar.xz
           MODULE=linux-firmware
-         VERSION=20220809
+         VERSION=20230426
           SOURCE=${MODULE}-${VERSION}.tar.xz
 # This is a temporary fix until the kernel.org folks get things squared away
       SOURCE_URL=$MIRROR_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
-      SOURCE_VFY=sha256:6869241c0182f8ba6e7e42b2274e0e53c5ac3e03cdc710f4e4f7e5b1070e2dd7
+      SOURCE_VFY=sha256:ff8b0e5b2ba09ca935193d7e22967e7c771e29a1889a69b58f6afc4e6593fa46
         WEB_SITE="http://www.kernel.org/pub/linux/kernel/people/dwmw2/firmware/"
          ENTERED=20100925
-         UPDATED=20220809
+         UPDATED=20230426
            SHORT="Kernel firmware for various hardware"
 PSAFE=no
 
