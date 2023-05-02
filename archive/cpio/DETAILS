@@ -1,12 +1,12 @@
           MODULE=cpio
-         VERSION=2.13
+         VERSION=2.14
           SOURCE=$MODULE-$VERSION.tar.bz2
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:eab5bdc5ae1df285c59f2a4f140a98fc33678a0bf61bdba67d9436ae26b46f6d
+      SOURCE_VFY=sha256:fcdc15d60f7267a6fc7efcd6b9db7b6c8966c4f2fbbb964c24d41336fd3f2c12
         WEB_SITE=http://www.gnu.org/software/cpio/
          ENTERED=20011004
-         UPDATED=20200524
+         UPDATED=20230502
            SHORT="A tool to copy files into or out of a cpio or tar archive"
 
 cat << EOF
