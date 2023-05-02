@@ -1,11 +1,11 @@
           MODULE=zstd
-         VERSION=1.5.2
+         VERSION=1.5.5
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/facebook/zstd/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:f7de13462f7a82c29ab865820149e778cbfe01087b3a55b5332707abf9db4a6e
-        WEB_SITE=http://www.zstd.net/
+      SOURCE_VFY=sha256:98e9c3d949d1b924e28e01eccb7deed865eefebf25c2f21c702e5cd5b63b85e1
+        WEB_SITE=https://github.com/facebook/zstd
          ENTERED=20180122
-         UPDATED=20220123
+         UPDATED=20230502
            SHORT="Zstandard - Fast real-time compression algorithm"
 
 cat << EOF
