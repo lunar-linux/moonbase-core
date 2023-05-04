@@ -1,11 +1,11 @@
           MODULE=ca-certificates
-         VERSION=20211016
+         VERSION=20230311
           SOURCE=${MODULE}_$VERSION.tar.xz
       SOURCE_URL=https://cdn-fastly.deb.debian.org/debian/pool/main/c/$MODULE
-      SOURCE_VFY=sha256:2ae9b6dc5f40c25d6d7fe55e07b54f12a8967d1955d3b7b2f42ee46266eeef88
+      SOURCE_VFY=sha256:83de934afa186e279d1ed08ea0d73f5cf43a6fbfb5f00874b6db3711c64576f3
         WEB_SITE=https://packages.qa.debian.org/c/ca-certificates.html
          ENTERED=20100405
-         UPDATED=20220607
+         UPDATED=20230504
            SHORT="Common CA certificates"
 
 cat << EOF
