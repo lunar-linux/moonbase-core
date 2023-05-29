@@ -37,7 +37,7 @@ if [[ ! -f /etc/locale.conf ]]; then
 fi &&
 
 default_meson_config &&
-ninja -C build/ &&
+ninja -C $MODULE-$VERSION/ &&
 prepare_install &&
 
 # Needed to migrate from udev module
@@ -45,7 +45,7 @@ if module_installed udev; then
   lrm --upgrade udev
 fi &&
 
-ninja -C build/ install &&
+ninja -C $MODULE-$VERSION/ install &&
 
 # Disable new naming scheme
 if [[ "$NEW_NAME_SCHEME" == "n" && ! -e /etc/udev/rules.d/80-net-setup-link.rules ]]; then
