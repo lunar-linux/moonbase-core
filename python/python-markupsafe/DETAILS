@@ -1,13 +1,13 @@
           MODULE=python-markupsafe
-         VERSION=2.1.2
+         VERSION=2.1.3
           SOURCE=MarkupSafe-${VERSION}.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/MarkupSafe-$VERSION
       SOURCE_URL=https://pypi.python.org/packages/source/M/MarkupSafe
-      SOURCE_VFY=sha256:abcabc8c2b26036d62d4c746381a6f7cf60aafcc653198ad678306986b09450d
+      SOURCE_VFY=sha256:af598ed32d6ae86f1b747b82783958b1a4ab8f617b06fe68795c7f026abbdcad
         WEB_SITE=https://pypi.python.org/project/MarkupSafe/
             TYPE=python3
          ENTERED=20211229
-         UPDATED=20230508
+         UPDATED=20230625
            SHORT="Safely add untrusted strings to HTML/XML markup"
 
 cat << EOF
