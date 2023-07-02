@@ -6,7 +6,7 @@
         WEB_SITE=http://mesonbuild.com/
             TYPE=python3
          ENTERED=20160429
-         UPDATED=20220916
+         UPDATED=20230702
            SHORT="The meson build system"
 
 cat << EOF
