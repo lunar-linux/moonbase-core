@@ -1,8 +1,5 @@
 default_pre_build &&
 
-# Patch gcc to 12.1.1
-patch_it $SOURCE2 1 &&
-
 # installwatch fails to track files installed using tar
 sedit 's;^\(build_install_headers_dir=\).*;\1install-headers-cp;' gcc/config.build &&
 
