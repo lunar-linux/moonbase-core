@@ -1,12 +1,12 @@
           MODULE=parted
-         VERSION=3.5
+         VERSION=3.6
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=https://ftp.gnu.org/gnu/$MODULE
-      SOURCE_VFY=sha256:4938dd5c1c125f6c78b1f4b3e297526f18ee74aa43d45c248578b1d2470c05a2
+      SOURCE_VFY=sha256:3b43dbe33cca0f9a18601ebab56b7852b128ec1a3df3a9b30ccde5e73359e612
         WEB_SITE=https://www.gnu.org/software/parted
          ENTERED=20010922
-         UPDATED=20220606
+         UPDATED=20230717
            SHORT="create, destroy, resize, and copy partitions"
 
 cat << EOF
