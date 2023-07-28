@@ -1,8 +1,8 @@
           MODULE=curl
          VERSION=8.2.1
-          SOURCE=$MODULE-$VERSION.tar.bz2
+          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://curl.haxx.se/download/
-      SOURCE_VFY=sha256:0f1e31ebe336c09ec66381f1532f8350e466e1d02ffe10c4ac44a867f1b9d343
+      SOURCE_VFY=sha256:dd322f6bd0a20e6cebdfd388f69e98c3d183bed792cf4713c8a7ef498cba4894
         WEB_SITE=https://curl.haxx.se/
          ENTERED=20010922
          UPDATED=20230728
