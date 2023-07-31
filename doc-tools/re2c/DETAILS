@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:0ac299ad359e3f512b06a99397d025cfff81d3be34464ded0656f8a96676c029
         WEB_SITE=http://re2c.sourceforge.net/
          ENTERED=20091001
-         UPDATED=20220916
+         UPDATED=20230731
            SHORT="A toolfor writing fast and flexible scanners"
 
 cat << EOF
