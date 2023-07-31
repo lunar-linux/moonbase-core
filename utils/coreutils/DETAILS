@@ -1,12 +1,12 @@
           MODULE=coreutils
-         VERSION=9.1
+         VERSION=9.3
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
-   SOURCE_URL[1]=ftp://ftp.gnu.org/gnu/$MODULE
-      SOURCE_VFY=sha256:61a1f410d78ba7e7f37a5a4f50e6d1320aca33375484a3255eddf17a38580423
+   SOURCE_URL[1]=https://ftp.gnu.org/gnu/$MODULE
+      SOURCE_VFY=sha256:adbcfcfe899235b71e8768dcf07cd532520b7f54f9a8064843f8d199a904bbaa
         WEB_SITE=http://www.gnu.org/software/coreutils
          ENTERED=20030217
-         UPDATED=20220605
+         UPDATED=20230731
            SHORT="Contains latest sh-utils, textutils and fileutils"
 PSAFE=no
 
