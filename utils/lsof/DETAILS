@@ -1,11 +1,11 @@
           MODULE=lsof
-         VERSION=4.95.0
+         VERSION=4.98.0
            SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/lsof-org/lsof/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:8ff4c77736cc7d9556da9e2c7614cc4292a12f1979f20bd520d3c6f64b66a4d7
+      SOURCE_VFY=sha256:80308a614508814ac70eb2ae1ed2c4344dcf6076fa60afc7734d6b1a79e62b16
         WEB_SITE=ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/README
          ENTERED=20011005
-         UPDATED=20220607
+         UPDATED=20230731
            SHORT="Lists open files for running processes"
 
 cat << EOF
