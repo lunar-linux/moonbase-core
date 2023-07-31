@@ -1,12 +1,12 @@
           MODULE=make
-         VERSION=4.3
+         VERSION=4.4.1
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=https://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:e05fdde47c5f7ca45cb697e973894ff4f5d79e13b750ed57d7b66d8defc78e19
+      SOURCE_VFY=sha256:dd16fb1d67bfab79a72f5e8390735c49e3e8e70b4945a15ab1f81ddb78658fb3
         WEB_SITE=http://make.paulandlesley.org
          ENTERED=20010922
-         UPDATED=20200120
+         UPDATED=20230731
            SHORT="make generates executables and other non-source programs"
 
 cat << EOF
