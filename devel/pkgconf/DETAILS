@@ -1,13 +1,13 @@
           MODULE=pkgconf
-         VERSION=1.9.3
+         VERSION=1.9.5
           SOURCE=$MODULE-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-$VERSION
      SOURCE_URL=https://github.com/pkgconf/pkgconf/archive/
-      SOURCE_VFY=sha256:e8b637c0dd8ae1decbcc95b24b64795cba81a8e3064fddb4424cacef411e59f9
+      SOURCE_VFY=sha256:3fd0ace7d4398d75f0c566759f9beb4f8b3984fee7ed9804d41c52b193d9745a
         WEB_SITE=https://git.dereferenced.org/pkgconf/pkgconf/
         REPLACES=pkgconfig
          ENTERED=20180619
-         UPDATED=20220916
+         UPDATED=20230731
            SHORT="Package compiler and linker metadata toolkit"
 
 cat << EOF
