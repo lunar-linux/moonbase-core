@@ -2,7 +2,7 @@
          VERSION=5.19
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=https://cpan.metacpan.org/authors/id/S/SI/SIMBABQUE/
-      SOURCE_VFY=sha256:5f7e42b769cb27499113cfae4b786c37d49e7c7d32dbb469602cd808308568f8
+      SOURCE_VFY=sha256:8fed5f819905c8a8e18f4447034322d042c3536b43c13ac1f09ba92e1a50a394
         WEB_SITE=https://search.cpan.org/dist/URI/
             TYPE=perl
          ENTERED=20020727
