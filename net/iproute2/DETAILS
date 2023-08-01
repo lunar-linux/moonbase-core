@@ -1,11 +1,11 @@
           MODULE=iproute2
-         VERSION=6.1.0
+         VERSION=6.4.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://mirrors.kernel.org/pub/linux/utils/net/$MODULE/
-      SOURCE_VFY=sha256:5ce12a0fec6b212725ef218735941b2dab76244db7e72646a76021b0537b43ab
+      SOURCE_VFY=sha256:4c51b8decbc7e4da159ffb066f590cfb93dbf9af7ff86b1647ce42b7c179a272
         WEB_SITE=http://www.linuxfoundation.org/collaborate/workgroups/networking/$MODULE/
          ENTERED=20021106
-         UPDATED=20230317
+         UPDATED=20230801
            SHORT="Professional tools to control networking in Linux kernels"
 
 cat << EOF
