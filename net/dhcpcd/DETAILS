@@ -1,17 +1,11 @@
           MODULE=dhcpcd
-         VERSION=9.4.1
+         VERSION=10.0.2
           SOURCE=$MODULE-$VERSION.tar.xz
-   SOURCE_URL[0]=http://roy.marples.name/downloads/dhcpcd
-   SOURCE_URL[1]=ftp://gentoo.arcticnetwork.ca/pub/gentoo/distfiles
-   SOURCE_URL[2]=http://mirrors.ludost.net/gentoo/distfiles
-   SOURCE_URL[3]=http://open-systems.ufl.edu/mirrors/gentoo/distfiles
-   SOURCE_URL[4]=http://mirror.datapipe.net/gentoo/distfiles
-   SOURCE_URL[5]=http://gentoo.chem.wisc.edu/gentoo/distfiles
-   SOURCE_URL[6]=http://mirror.internode.on.net/pub/gentoo/distfiles
-      SOURCE_VFY=sha256:819357634efed1ea5cf44ec01b24d3d3f8852fec8b4249925dcc5667c54e376c
+ SOURCE_URL_FULL=https://github.com/NetworkConfiguration/dhcpcd/releases/download/v$VERSION/$MODULE-$VERSION.tar.xz
+      SOURCE_VFY=sha256:3aa15c50be86d9595467f21dd9dc66f7115e3de1f5ab0b704b753684062b8541
         WEB_SITE=http://roy.marples.name/projects/dhcpcd
          ENTERED=20011126
-         UPDATED=20211207
+         UPDATED=20230801
            SHORT="DHCP client/daemon that works with @home"
 
 cat << EOF
