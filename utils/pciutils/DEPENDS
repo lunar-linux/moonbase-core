@@ -1,2 +1,3 @@
 depends kmod
 depends zlib
+depends wget
