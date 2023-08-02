@@ -1,4 +1,5 @@
 depends %SSL
+depends pcre2
 
 optional_depends gettext "--enable-nls" "--disable-nls" "for NLS support"
 optional_depends libidn  "--enable-iri" "--disable-iri" "for IDN/IRIs support"
