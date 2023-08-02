@@ -7,7 +7,7 @@
       SOURCE_VFY=sha256:238a2e27166730e53a17fe07bfad229e07fa39b618117e5944b6d7eda9fbb0e9
         WEB_SITE=http://mfj.ucw.cz/pciutils.html
          ENTERED=20020125
-         UPDATED=20230501
+         UPDATED=20230802
            PSAFE=no
            SHORT="The setpci and lspci utils"
 
