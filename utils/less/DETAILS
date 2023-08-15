@@ -1,10 +1,10 @@
           MODULE=less
-         VERSION=633
+         VERSION=643
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=https://www.greenwoodsoftware.com/$MODULE/
    SOURCE_URL[1]=$GNU_URL/$MODULE
    SOURCE_URL[2]=https://ftp.gnu.org/pub/gnu/$MODULE/
-      SOURCE_VFY=sha256:2f201d64b828b88af36dfe6cfdba3e0819ece2e446ebe6224813209aaefed04f
+      SOURCE_VFY=sha256:2911b5432c836fa084c8a2e68f6cd6312372c026a58faaa98862731c8b6052e8
         WEB_SITE=https://www.greenwoodsoftware.com/less/
          ENTERED=20010922
          UPDATED=20230531
