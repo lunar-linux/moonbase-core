@@ -4,6 +4,8 @@ sedit 's/#PermitRootLogin yes/PermitRootLogin no/' sshd_config &&
 add_priv_user sshd:sshd &&
 
 OPTS=$OPTS" --sysconfdir=/etc/ssh --with-md5-passwords" &&
+# Temporarily fix configure failure with the new zlib 1.3
+OPTS=$OPTS" --without-zlib-version-check" &&
 default_build  &&
 
 # create /var/empty
