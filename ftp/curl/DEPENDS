@@ -29,4 +29,4 @@ optional_depends openldap \
                  "--disable-ldap --disable-ldaps" \
                  "for LDAP support ${PROBLEM_COLOR}Saying yes here can cause weird problems with gnutls, defaulting to no${DEFAULT_COLOR}" n
 
-optional_depends krb5 "--with-gssapi" "" "for Kerberos support" n
+optional_depends %KERBEROS "--with-gssapi" "" "for Kerberos support" n
