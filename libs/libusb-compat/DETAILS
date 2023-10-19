@@ -2,7 +2,7 @@
          VERSION=0.1.8
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://github.com/libusb/libusb-compat-0.1/releases/download/v$VERSION/
-      SOURCE_VFY=sha256:698c76484f3dec1e0175067cbd1556c3021e94e7f2313ae3ea6a66d900e00827
+      SOURCE_VFY=sha256:b692dcf674c070c8c0bee3c8230ce4ee5903f926d77dc8b968a4dd1b70f9b05c
         WEB_SITE=http://www.libusb.org/wiki/LibusbCompat0.1
          ENTERED=20090812
          UPDATED=20230315
