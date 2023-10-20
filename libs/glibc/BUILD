@@ -39,6 +39,7 @@ echo "sbindir=/usr/bin" >> configparms &&
              --disable-profile        \
              --disable-multi-arch     \
              --disable-timezone-tools \
+             --disable-build-nscd     \
              $OPTS &&
 
 # build libraries with hardening disabled
