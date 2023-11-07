@@ -10,7 +10,9 @@ prepare_install  &&
 make LIBDIR=/usr/lib BINDIR=/usr/bin install &&
 
 install -d -m755 /etc/wpa_supplicant &&
-install -m644 wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf &&
+# Don't overwrite existing config
+[ -e /etc/wpa_supplicant/wpa_supplicant.conf ] ||
+  install -m644 wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf &&
 
 if module_installed systemd; then
   install -d -m755 /etc/dbus-1/system.d/ &&
