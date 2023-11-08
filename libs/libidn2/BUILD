@@ -1,3 +1,4 @@
-OPTS+=" --disable-gtk-doc"
+OPTS+=" --disable-gtk-doc \
+        --disable-static"
 
 default_build
