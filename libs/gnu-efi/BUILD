@@ -3,6 +3,8 @@ bad_flags -mfpmath=sse -mfpmath=both &&
 
 if [[ "$(arch)" == "x86_64" ]]; then
   EFI_ARCH=x86_64
+elif [[ "$(arch)" == "aarch64" ]]; then
+  EFI_ARCH=aarch64
 else
   EFI_ARCH=ia32
 fi &&
