@@ -18,6 +18,7 @@ optional_depends libcanberra \
 
 optional_depends python "--enable-python3interp=dynamic" "--disable-python3interp" "for Python 3 interpreter support"
 optional_depends tcl    "--enable-tclinterp=dynamic"     "--disable-tclinterp"     "for Tcl interpreter support"
-optional_depends perl   "--enable-perlinterp=dynamic"    "--disable-perlinterp"    "for Perl interpreter support"
+# This is temporary until vim is fixed to work with Perl 5.38
+# optional_depends perl   "--enable-perlinterp=dynamic"    "--disable-perlinterp"    "for Perl interpreter support"
 optional_depends lua    "--enable-luainterp=dynamic"     "--disable-luainterp"     "for Lua interpreter support"
 optional_depends ruby   "--enable-rubyinterp=dynamic"    "--disable-rubyinterp"    "for Ruby interpreter support"
