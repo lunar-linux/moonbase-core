@@ -1,4 +1,4 @@
 default_pre_build
 
-sed -i 's|/\* #define\tHASSECURITY\t1 \*/|#define\tHASSECURITY\t1|' dialects/linux/machine.h
+sed -i 's|/\* #define\tHASSECURITY\t1 \*/|#define\tHASSECURITY\t1|' lib/dialects/linux/machine.h
 sed -i "s|.so ./version|.ds VN ${pkgver}|" -i Lsof.8
