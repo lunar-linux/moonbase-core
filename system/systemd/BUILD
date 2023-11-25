@@ -2,7 +2,6 @@ export PYTHONDONTWRITEBYTECODE=1 &&
 
 OPTS+=" -Drootprefix=/usr \
         -Daudit=false \
-        -Dgnu-efi=true \
         -Dima=false \
         -Dlibidn2=true \
         -Dsplit-usr=true \

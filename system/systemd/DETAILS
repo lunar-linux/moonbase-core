@@ -6,7 +6,7 @@
        SOURCE_VFY=sha256:18db69c8fc33afebf95a40cfa3769df5f0e4a07bccdebd33b2fd81c8b75e7a02
          WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
           ENTERED=20100919
-          UPDATED=20230731
+          UPDATED=20231125
             SHORT="A system and program management daemon"
 
 cat << EOF
