@@ -1,3 +1,4 @@
+depends autoconf-archive
 depends expat
 depends pkgconf
 depends python
