@@ -1,0 +1,16 @@
+          MODULE=python-pyelftools
+         VERSION=0.30
+          SOURCE=pyelftools-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/pyelftools-$VERSION
+      SOURCE_URL=https://files.pythonhosted.org/packages/84/05/fd41cd647de044d1ffec90ce5aaae935126ac217f8ecb302186655284fc8/
+      SOURCE_VFY=sha256:2fc92b0d534f8b081f58c7c370967379123d8e00984deb53c209364efd575b40
+        WEB_SITE=https://pypi.python.org/pypi/six/
+         ENTERED=20231126
+         UPDATED=20231126
+            TYPE=python3
+           SHORT="Library and utilities to parse ELF and DWARF files"
+
+cat << EOF
+pyelftools is a pure-Python library for parsing and analyzing ELF files
+and DWARF debugging information.
+EOF
