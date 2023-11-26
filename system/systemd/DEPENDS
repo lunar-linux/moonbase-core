@@ -12,6 +12,7 @@ depends iptables
 depends shadow
 depends gnu-efi
 depends python-jinja2
+depends python-pyelftools
 
 optional_depends acl           "-Dacl=true"                           "-Dacl=false"           "for ACL support"                     y
 optional_depends cryptsetup    "-Dlibcryptsetup=true"                 "-Dlibcryptsetup=false" "for device-mapper crypto encryption"
