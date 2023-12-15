@@ -1,11 +1,11 @@
           MODULE=kbd
-         VERSION=2.6.3
+         VERSION=2.6.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://www.kernel.org/pub/linux/utils/$MODULE/
-      SOURCE_VFY=sha256:04996c08d7d1c460966fb244a3d3883352c2674b7ad522003d9f4ecb8ab48deb
+      SOURCE_VFY=sha256:519f8d087aecca7e0a33cd084bef92c066eb19731666653dcc70c9d71aa40926
         WEB_SITE=https://kbd-project.org
          ENTERED=20040217
-         UPDATED=20230920
+         UPDATED=20231213
            SHORT="kbd allows you to configure and manipulate Linux consoles"
 
 cat << EOF
