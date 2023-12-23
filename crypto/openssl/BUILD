@@ -12,9 +12,7 @@ WANT_VERSION= download_module wget &&
          $OPTS
 
 sedit "/^CC/d" Makefile &&
-sedit "s/-m486//g" Makefile &&
 sedit "s/-O3/-Os/" Makefile &&
-sedit "s/^CFLAG=/CFLAG=$CFLAGS /g" Makefile &&
 
 make &&
 prepare_install &&
