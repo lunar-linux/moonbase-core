@@ -1,9 +1,6 @@
-# don't allow root login by default
-sedit 's/#PermitRootLogin yes/PermitRootLogin no/' sshd_config &&
-
 add_priv_user sshd:sshd &&
 
-OPTS=$OPTS" --sysconfdir=/etc/ssh --with-md5-passwords" &&
+OPTS=$OPTS" --sysconfdir=/etc/ssh" &&
 default_build  &&
 
 # create /var/empty
