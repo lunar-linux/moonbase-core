@@ -3,7 +3,7 @@
          SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=https://github.com/tukaani-project/xz/releases/download/v${VERSION}/
       SOURCE_VFY=sha256:aeba3e03bf8140ddedf62a0a367158340520f6b384f75ca6045ccc6c0d43fd5c
-        WEB_SITE=https://tukaani.org/xz
+        WEB_SITE=https://xz.tukaani.org/xz-utils/
          ENTERED=20090224
          UPDATED=20240126
            SHORT="Utils for XZ archive format"
