@@ -1,14 +1,14 @@
          MODULE=iputils
-        VERSION=20231222
+        VERSION=20240117
          SOURCE=$MODULE-$VERSION.tar.gz
          #SOURCE2=$MODULE-${VERSION}-manpages.tar.gz
  SOURCE_URL_FULL=https://github.com/iputils/iputils/archive/refs/tags/${VERSION}.tar.gz
      #SOURCE2_URL=$MIRROR_URL
         WEB_SITE=https://github.com/iputils/iputils/
-      SOURCE_VFY=sha256:18d51e7b416da0ecbc0ae18a2cba76407ca0b5b3f32c356034f258a0cb56793f
+      SOURCE_VFY=sha256:a5d66e2997945b2541b8f780a7f5a5ec895d53a517ae1dc4f3ab762573edea9a
      #SOURCE2_VFY=sha256:aec3919c5837e66c6faab7b39d7b6433ac7942e31b2a8a2cd22ba6a88aeb9f93
          ENTERED=20021106
-         UPDATED=20240105
+         UPDATED=20240121
            SHORT="Essential utilities for IP networks"
 
 cat << EOF
