@@ -8,7 +8,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/Jinja2-$VERSION
             TYPE=python3
          ENTERED=20211229
          UPDATED=20240118
-        REPALCES=python-jinja
+        REPLACES=python-jinja
            SHORT="a very fast an expressive template engine"
 
 cat << EOF
