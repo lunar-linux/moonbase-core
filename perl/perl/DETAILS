@@ -1,13 +1,13 @@
 ### YOU MUST ALSO UPDATE SGMLSpm !!!
           MODULE=perl
-         VERSION=5.38.0
+         VERSION=5.38.2
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=https://www.cpan.org/src/5.0
    SOURCE_URL[1]=https://mirrors.kernel.org/cpan/src
-      SOURCE_VFY=sha256:213ef58089d2f2c972ea353517dc60ec3656f050dcc027666e118b508423e517
+      SOURCE_VFY=sha256:a0a31534451eb7b83c7d6594a497543a54d488bc90ca00f5e34762577f40655e
         WEB_SITE=http://www.perl.org
          ENTERED=20010922
-         UPDATED=20230801
+         UPDATED=20240204
            SHORT="A highly capable, feature-rich programming language"
 
 cat << EOF
