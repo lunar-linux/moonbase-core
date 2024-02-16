@@ -6,7 +6,7 @@
         WEB_SITE=https://metacpan.org/pod/XML::Parser
             TYPE=perl
          ENTERED=20030529
-         UPDATED=20250206
+         UPDATED=20240206
            SHORT="PERL module for parsing XML documents"
 cat << EOF
 PERL modules for parsing XML documents
