@@ -1,11 +1,11 @@
           MODULE=libunistring
-         VERSION=1.1
+         VERSION=1.2
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://ftp.gnu.org/gnu/$MODULE
-      SOURCE_VFY=sha256:a2252beeec830ac444b9f68d6b38ad883db19919db35b52222cf827c385bdb6a
+      SOURCE_VFY=sha256:fd6d5662fa706487c48349a758b57bc149ce94ec6c30624ec9fdc473ceabbc8e
         WEB_SITE=http://www.gnu.org/software/libunistring
          ENTERED=20120711
-         UPDATED=20230731
+         UPDATED=20240225
            SHORT="A library for manipulating Unicode strings and C strings"
 
 cat << EOF
