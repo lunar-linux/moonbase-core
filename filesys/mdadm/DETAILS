@@ -1,12 +1,12 @@
           MODULE=mdadm
-         VERSION=4.2
+         VERSION=4.3
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$KERNEL_URL/pub/linux/utils/raid/mdadm/
    SOURCE_URL[1]=http://www.cse.unsw.edu.au/~neilb/source/mdadm
-      SOURCE_VFY=sha256:461c215670864bb74a4d1a3620684aa2b2f8296dffa06743f26dda5557acf01d
+      SOURCE_VFY=sha256:416727ae1f1080ea6e3090cea36dd076826fc369151e36ab736557ba92196f9f
         WEB_SITE=http://www.cse.unsw.edu.au/~neilb/source/mdadm
          ENTERED=20030212
-         UPDATED=20220117
+         UPDATED=20240302
            SHORT="Software raid tools"
 
 cat << EOF
