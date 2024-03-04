@@ -1,3 +1,5 @@
+./autogen.sh &&
+
 default_config &&
 
 if [ -f /usr/bin/pstree.x11 ]; then
