@@ -1,11 +1,11 @@
           MODULE=psmisc
-         VERSION=23.6
+         VERSION=23.7
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:257dde06159a4c49223d06f1cccbeb68933a4514fc8f1d77c64b54f0d108822a
+      SOURCE_VFY=sha256:58c55d9c1402474065adae669511c191de374b0871eec781239ab400b907c327
         WEB_SITE=https://gitlab.com/psmisc/psmisc
          ENTERED=20010922
-         UPDATED=20230516
+         UPDATED=20240308
            SHORT="A set of useful utilities that use /proc"
 
 cat << EOF
