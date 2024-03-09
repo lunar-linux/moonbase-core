@@ -2,7 +2,7 @@
          VERSION=32
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KERNEL_URL/pub/linux/utils/kernel/$MODULE
-      SOURCE_VFY=sha256:415ed9997376ea58ccea64bf86b1d63acd31524a6baab09a9c11de6bed667a05
+      SOURCE_VFY=sha256:630ed0d92275a88cb9a7bf68f5700e911fdadaf02e051cf2e4680ff8480bd492
         WEB_SITE=http://www.politreco.com/2011/12/announce-kmod-1
          ENTERED=20120115
          UPDATED=20240308
