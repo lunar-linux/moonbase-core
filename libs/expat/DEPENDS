@@ -1,4 +1,1 @@
 depends cmake
-
-optional_depends libbsd "--with-libbsd" "--without-libbsd" \
-        "for libbsd support (for arc4random_buf)"
