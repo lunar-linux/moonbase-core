@@ -7,7 +7,7 @@
 # This is a temporary fix until the kernel.org folks get things squared away
       SOURCE_URL=$MIRROR_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
-      SOURCE_VFY=sha256:b2327a54ad1897c828008caf63af5ee15469ba723a5016be58f2b44f07bd4b94
+      SOURCE_VFY=sha256:b1cd80cda7ccfe1b61f4864d1f9efe44787829dec90c8207ca82165644a72e66
         WEB_SITE="http://www.kernel.org/pub/linux/kernel/people/dwmw2/firmware/"
          ENTERED=20100925
          UPDATED=20240313
