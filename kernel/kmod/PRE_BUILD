@@ -1,5 +1,8 @@
 default_pre_build &&
 
+# Prevents installing to /lib/pkgconfig
+sedit '/^pkgconfigdir = /s@$(libdir)@/usr/lib@' Makefile.am &&
+
 # regenerate Makefile.in since patch.d/ modifies it
 aclocal &&
 autoconf &&
