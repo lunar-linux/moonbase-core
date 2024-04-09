@@ -1,13 +1,13 @@
           MODULE=pciutils
-         VERSION=3.11.1
+         VERSION=3.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
          SOURCE2=pci.ids.bz2
       SOURCE_URL=$KERNEL_URL/pub/software/utils/$MODULE/
       SOURCE2_URL=http://pci-ids.ucw.cz/v2.2/
-      SOURCE_VFY=sha256:3f472ad864473de5ba17f765cc96ef5f33e1b730918d3adda6f945a2a9290df4
+      SOURCE_VFY=sha256:f185d116d5ff99b797497efce8f19f1ee8ccc5a668b97a159e3d13472f674154
         WEB_SITE=http://mfj.ucw.cz/pciutils.html
          ENTERED=20020125
-         UPDATED=20240227
+         UPDATED=20240409
            PSAFE=no
            SHORT="The setpci and lspci utils"
 
