@@ -1,6 +1,8 @@
 _DESTDIR=$SOURCE_DIRECTORY/__destdir
+FIRMWAREDIR=/lib/firmware
 
-make DESTDIR="${_DESTDIR}" FIRMWAREDIR=/lib/firmware installcompress &&
+install -d ${_DESTDIR}${FIRMWAREDIR} &&
+./copy-firmware.sh --zstd --ignore-duplicates ${_DESTDIR}${FIRMWAREDIR} &&
 
 if [[ "$FW_NFP" != "y" ]]; then
   rm -rf "$_DESTDIR/lib/firmware/netronome" &&
