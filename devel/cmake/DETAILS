@@ -1,12 +1,12 @@
           MODULE=cmake
-         VERSION=3.28.3
+         VERSION=3.29.1
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=https://fossies.org/linux/misc/
    SOURCE_URL[1]=https://cmake.org/files/v${VERSION%.*}/
-      SOURCE_VFY=sha256:72b7570e5c8593de6ac4ab433b73eab18c5fb328880460c86ce32608141ad5c1
+      SOURCE_VFY=sha256:7fb02e8f57b62b39aa6b4cf71e820148ba1a23724888494735021e32ab0eefcc
         WEB_SITE=http://cmake.org/
          ENTERED=20060725
-         UPDATED=20240211
+         UPDATED=20240409
            SHORT="Cross-platform make system"
 cat << EOF
 Welcome to CMake, the cross-platform, open-source make system. CMake is used to
