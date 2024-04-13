@@ -1,13 +1,13 @@
           MODULE=grub2
-         VERSION=2.06
+         VERSION=2.12
           SOURCE=grub-$VERSION.tar.gz
    SOURCE_URL[0]=https://ftp.gnu.org/gnu/grub
    SOURCE_URL[1]=http://www.funet.fi/pub/gnu/alpha/gnu/grub
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/grub-$VERSION
-      SOURCE_VFY=sha256:23b64b4c741569f9426ed2e3d0e6780796fca081bee4c99f62aa3f53ae803f5f
+      SOURCE_VFY=sha256:b30919fa5be280417c17ac561bb1650f60cfb80cc6237fa1e2b6f56154cb9c91
         WEB_SITE=http://www.gnu.org/software/grub
          ENTERED=20100112
-         UPDATED=20220810
+         UPDATED=20240407
       MAINTAINER=dagbrown@lunar-linux.org
            SHORT="GNU GRUB boot loader"
 
