@@ -23,4 +23,4 @@ default_build &&
 # I've encountered. The issue is with this lin in fgrep;
 # echo "$cmd: warning: $cmd is obsolescent; using grep -F" >&2
 # So we'll just comment that out.
-sed -i 's/^echo/\\#echo/' /usr/bin/fgrep
+sed -i 's/^echo/#echo/' /usr/bin/fgrep
