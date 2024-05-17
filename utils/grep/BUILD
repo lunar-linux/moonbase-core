@@ -17,4 +17,10 @@ else
 fi &&
 
 sedit "s/SYMLINK=\"ln -s\"/SYMLINK=\"ln -sf\"/" configure &&
-default_build
+default_build &&
+
+# NOTE: current fgrep causes atlas build to fail. So far its the only module
+# I've encountered. The issue is with this lin in fgrep;
+# echo "$cmd: warning: $cmd is obsolescent; using grep -F" >&2
+# So we'll just comment that out.
+sed -i 's/^echo/\\#echo/' /usr/bin/fgrep

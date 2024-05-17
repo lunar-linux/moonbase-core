@@ -6,7 +6,7 @@
       SOURCE_VFY=sha256:1db2aedde89d0dea42b16d9528f894c8d15dae4e190b59aecc78f5a951276eab
         WEB_SITE=http://www.gnu.org/software/grep/grep.html
          ENTERED=20010922
-         UPDATED=20240204
+         UPDATED=20240517
            SHORT="grep finds lines that match specified patterns"
 
 cat << EOF
