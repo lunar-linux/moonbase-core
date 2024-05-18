@@ -24,6 +24,9 @@ OPTS+=" --prefix=/usr \
         --disable-silent-rules \
         --disable-werror"
 
+# HACK - not sure who's actually supposed to make this file, but...
+touch $SOURCE_DIRECTORY/grub-core/extra_deps.lst &&
+
 GRUB_BIOS=$SOURCE_DIRECTORY/grub-bios &&
 mkdir -p $GRUB_BIOS &&
 cd $GRUB_BIOS  &&
