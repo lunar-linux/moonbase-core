@@ -15,6 +15,9 @@ make SHLIB_LIBS=-lncurses &&
 prepare_install &&
 make install &&
 
+ln -sf /lib/pkgconfig/readline.pc /usr/lib/pkgconfig/ &&
+ln -sf /lib/pkgconfig/history.pc /usr/lib/pkgconfig/ &&
+
 if [ ! -e /etc/inputrc ]; then
   install $SCRIPT_DIRECTORY/inputrc /etc/
 fi
