@@ -1,12 +1,12 @@
            MODULE=ed
-         VERSION=1.20.1
+         VERSION=1.20.2
           SOURCE=$MODULE-$VERSION.tar.lz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=http://fossies.org/linux/privat/
-     SOURCE_VFY=sha256:b1a463b297a141f9876c4b1fcd01477f645cded92168090e9a35db2af4babbca
+     SOURCE_VFY=sha256:65fec7318f48c2ca17f334ac0f4703defe62037bb13cc23920de077b5fa24523
         WEB_SITE=http://www.gnu.org/software/ed/ed.html
          ENTERED=20010922
-         UPDATED=20240222
+         UPDATED=20240530
            SHORT="A line-oriented text editor"
 
 cat << EOF
