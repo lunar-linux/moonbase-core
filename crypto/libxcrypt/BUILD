@@ -5,8 +5,8 @@ OPTS+=" --enable-hashes=strong,glibc \
         --disable-failure-tokens \
         --disable-static \
         --disable-werror \
-        --libdir=/usr/lib/$MODULE \
-        --includedir=/usr/include/$MODULE \
+        --libdir=/usr/lib \
+        --includedir=/usr/include \
         " &&
 
 default_build
