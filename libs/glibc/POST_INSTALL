@@ -8,6 +8,7 @@ lunar fix libxcrypt
 
 # and then everything in core it links with because we're going from
 # libcrypt.so.1 to libcrypt.so.2
+lunar fix perl
 lunar fix shadow Linux-PAM util-linux openssh systemd
 
 lin -c timezone-data
