@@ -21,3 +21,4 @@ optional_depends libsodium \
 
 optional_depends xmlto    "" "" "for documentation (also requires asciidoc)" "n"
 optional_depends asciidoc "" "" "for documentation (also requires xmlto)" "n"
+optional_depends sphinxcontrib-jquery "" "" "for documentation (requires both xmlto and asciidoc)" "n"
