@@ -2,7 +2,6 @@ OPTS+=" --enable-shared \
         --enable-ipv6 \
         --with-system-ffi \
         --with-system-expat \
-        --with-system-libmpdec \
         --with-computed-gotos \
         --without-ensurepip"
 

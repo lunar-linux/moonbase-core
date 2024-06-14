@@ -1,3 +1,6 @@
 default_pre_build &&
 
-./autogen.sh
+#./autogen.sh &&
+
+OPTS+=" --enable-shared"
+

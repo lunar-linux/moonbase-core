@@ -9,4 +9,3 @@ sed -i -e "s|^#.* /usr/local/bin/python|#!/usr/bin/python|" Lib/cgi.py &&
 # Ensure that we link against system libraries
 rm -rf Modules/{expat,zlib} &&
 rm -rf Modules/_ctypes/{darwin,libffi}*
-rm -r Modules/_decimal/libmpdec
