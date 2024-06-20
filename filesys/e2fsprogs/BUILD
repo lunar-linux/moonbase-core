@@ -12,6 +12,8 @@ OPTS+=" --build=$BUILD      \
         --disable-libblkid  \
         --disable-fsck"    &&
 
+export CFLAGS="$CFLAGS -D_FILE_OFFSET_BITS=64"
+
 default_build &&
 
 make install-libs || exit 1
