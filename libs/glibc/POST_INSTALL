@@ -1,4 +1,14 @@
 # Update fixed headers
 /usr/libexec/gcc/$(arch)-pc-linux-gnu/$(installed_version gcc)/install-tools/mkheaders
 
+# If upgrading from an earlier version, probably need to fix libxcrypt
+# because /usr/lib/libcrypt.so and /usr/include/crypt.so stand a good
+# chance of disappearing
+lunar fix perl
+lunar fix libxcrypt
+
+# and then everything in core it links with because we're going from
+# libcrypt.so.1 to libcrypt.so.2
+lunar fix shadow Linux-PAM util-linux openssh systemd
+
 lin -c timezone-data

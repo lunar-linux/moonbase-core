@@ -1,13 +1,13 @@
           MODULE=glibc
-         VERSION=2.37
+         VERSION=2.39
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/glibc
-      SOURCE_VFY=sha256:2257eff111a1815d74f46856daaf40b019c1e553156c69d48ba0cbfc1bb91a43
+      SOURCE_VFY=sha256:f77bd47cf8170c57365ae7bf86696c118adb3b120d3259c64c502d3dc1e2d926
         WEB_SITE=http://www.gnu.org/software/libc
          ENTERED=20010922
-         UPDATED=20230209
+         UPDATED=20240602
            SHORT="C library for use with GNU/Hurd and GNU/Linux"
 
 DESTDIR_BUILD=on
