@@ -1,5 +1,7 @@
+sed 's|$(DESTDIR)/sbin|$(DESTDIR)/usr/bin|' -i {ntfsprogs,src}/Makefile.in &&
 
 OPTS+=" --enable-extras     \
+        --sbin=/usr/bin     \
         --enable-ntfsprogs  \
         --disable-ldconfig  \
         --disable-static    \
