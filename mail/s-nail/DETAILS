@@ -1,12 +1,11 @@
-# http://ftp.debian.org/debian/pool/main/s/s-nail/s-nail_14.9.24.orig.tar.xz
           MODULE=s-nail
-         VERSION=14.9.24
-          SOURCE=${MODULE}_${VERSION}.orig.tar.xz
-      SOURCE_URL=http://ftp.debian.org/debian/pool/main/${MODULE::1}/${MODULE}
-      SOURCE_VFY=sha256:4c93f73032702a18cf00830b4faa606c262db65fbfc08266c33510cfb3125934
-        WEB_SITE=https://salsa.debian.org/debian/s-nail
+         VERSION=14.9.25
+          SOURCE=${MODULE}-${VERSION}.tar.xz
+      SOURCE_URL=https://ftp.sdaoden.eu/
+      SOURCE_VFY=sha256:20ff055be9829b69d46ebc400dfe516a40d287d7ce810c74355d6bdc1a28d8a9
+        WEB_SITE=https://www.sdaoden.eu/code.html
          ENTERED=20230416
-         UPDATED=20230416
+         UPDATED=20240629
         REPLACES=heirloom-mailx
            SHORT="A plain command line mail program"
 PSAFE=no
