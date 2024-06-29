@@ -5,6 +5,7 @@ sedit 's/-j0 //' Makefile.pre.in &&
 sedit 's|{INSTALL} -m 555|{INSTALL} -m 755|' Makefile.pre.in &&
 
 sed -i -e "s|^#.* /usr/local/bin/python|#!/usr/bin/python|" Lib/cgi.py &&
+sed -i -e "s/OPENSSL_VERSION_NUMBER < 0x30300000L/!defined(LIBRESSL_VERSION_NUMBER) \&\& &/" Modules/_ssl.c &&
 
 # Ensure that we link against system libraries
 rm -rf Modules/{expat,zlib} &&
