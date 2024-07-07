@@ -42,7 +42,7 @@ echo "INPUT ( /usr/lib/libbfd.a -liberty -lz -ldl )" > $dstdir/usr/lib/libbfd.so
 echo "INPUT ( /usr/lib/libopcodes.a -lbfd )" > $dstdir/usr/lib/libopcodes.so
 
 # This part fails on i686, so check the arch
-if [[ "$(uname -m)" == "x86_64" ]]; then
+if [[ "$(uname -m)" == "x86_64" || "$(uname -m)" == "aarch64" ]]; then
 	mv $dstdir/usr/lib64/* $dstdir/usr/lib/ &&
 	rmdir $dstdir/usr/lib64
 fi &&
