@@ -3,7 +3,7 @@ depends zstd
 depends lzo
 depends e2fsprogs
 depends systemd
-
+depends python-setuptools
 
 optional_depends python \
                  "--enable-python" \
