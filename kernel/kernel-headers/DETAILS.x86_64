@@ -6,7 +6,7 @@
         SOURCE_VFY=sha256:a924053237a117b4d50c1a06a7f9fd0e22fa13cfa5e0ad73c5f9e497c4e2856e
           WEB_SITE=http://www.lunar-linux.org/
            ENTERED=20040226
-           UPDATED=20240707
+           UPDATED=20240713
             SHORT="Sanitized kernel headers for userspace"
 
 cat << EOF
