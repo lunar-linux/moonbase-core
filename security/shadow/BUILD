@@ -20,7 +20,6 @@ sedit '/^SUBDIRS/ n; s/etc//' Makefile.in Makefile.am &&
             --libdir=/usr/lib \
             --sysconfdir=/etc \
             --with-sha-crypt \
-            --with-libcrack \
             --without-selinux \
             --without-skey \
             --without-su \
@@ -59,7 +58,6 @@ cp -rf --remove-destination $SOURCE_DIRECTORY/__shadowdest/* / &&
 
 # We only need these files without PAM
 if ! module_installed Linux-PAM; then
-  set_login_opts CRACKLIB_DICTPATH /lib/cracklib/pw_dict
   set_login_opts ENCRYPT_METHOD SHA512
   set_login_opts LOGON_RETRIES 3
 

@@ -1,4 +1,4 @@
-depends cracklib
+depends libbsd
 
 optional_depends acl       "--with-acl"    "--without-acl"    "for ACL support"
 optional_depends Linux-PAM "--with-libpam" "--without-libpam" "for PAM support"
