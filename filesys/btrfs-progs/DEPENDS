@@ -4,7 +4,6 @@ depends lzo
 depends e2fsprogs
 depends systemd
 
-
 optional_depends python \
                  "--enable-python" \
                  "--disable-python" \
