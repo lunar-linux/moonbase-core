@@ -10,6 +10,7 @@ optional_depends libuv      "--system-libuv"      "--no-system-libuv"      "Use 
 optional_depends libarchive "--system-libarchive" "--no-system-libarchive" "Use system provided libarchive"
 optional_depends nghttp2    "--system-nghttp2"    "--no-system-nghttp2"    "Use system provided nghttp2"
 optional_depends zstd       "--system-zstd"       "--no-system-zstd"       "Use system provided zstd"
+optional_depends xz         "--system-liblzma"    "--no-system-liblzma"    "Use system provided lzma"
 
 optional_depends RHash "--system-librhash" "--no-system-librhash" "For files hash sums verifying support"
 
