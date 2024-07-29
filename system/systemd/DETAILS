@@ -1,12 +1,12 @@
            MODULE=systemd
-          VERSION=254
+          VERSION=254.16
            SOURCE=$MODULE-$VERSION.tar.gz
   SOURCE_URL_FULL=https://github.com/systemd/systemd-stable/archive/v$VERSION.tar.gz
  SOURCE_DIRECTORY=$BUILD_DIRECTORY/systemd-stable-$VERSION
-       SOURCE_VFY=sha256:18db69c8fc33afebf95a40cfa3769df5f0e4a07bccdebd33b2fd81c8b75e7a02
+       SOURCE_VFY=sha256:f069a874614cb044a4a239ff8b6d265d38f76ff9f4ae2e43b9f616a0c5e94f35
          WEB_SITE=http://www.freedesktop.org/wiki/Software/systemd
           ENTERED=20100919
-          UPDATED=20231125
+          UPDATED=20240729
             SHORT="A system and program management daemon"
 
 cat << EOF
