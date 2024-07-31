@@ -1,11 +1,11 @@
           MODULE=lz4
-         VERSION=1.9.4
+         VERSION=1.10.0
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/lz4/lz4/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b
-        WEB_SITE=http://www.lz4.org/
+      SOURCE_VFY=sha256:537512904744b35e232912055ccf8ec66d768639ff3abe5788d90d792ec5f48b
+        WEB_SITE=https://lz4.org/
          ENTERED=20140619
-         UPDATED=20220916
+         UPDATED=20240731
            SHORT="Very fast lossless compression algorithm"
 
 cat << EOF
