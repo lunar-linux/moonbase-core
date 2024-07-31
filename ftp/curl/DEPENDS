@@ -1,5 +1,9 @@
 depends zlib
 
+optional_depends c-ares "--enable-ares" \
+                 "--disable-ares" \
+                 "for using c-ares for DNS lookups"
+
 optional_depends libidn2 "--with-libidn2" \
                  "--without-libidn2" \
                  "for libidn2 support"
