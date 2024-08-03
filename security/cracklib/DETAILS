@@ -1,14 +1,14 @@
           MODULE=cracklib
-         VERSION=2.9.11
+         VERSION=2.10.1
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=https://github.com/cracklib/cracklib/releases/download/v$VERSION/
-      SOURCE_VFY=sha256:6213b986a5209fc0d4ca93734e349b8f66b36bfe9a3fae6eead14a15d82a68dc
+      SOURCE_VFY=sha256:9d5052e32625d65f2c3a9f9e3087d2edf6f592d40367b6eb3cae135d84ca064d
         WEB_SITE=https://github.com/cracklib/cracklib/
          ENTERED=20020313
-         UPDATED=20230512
+         UPDATED=20240803
            SHORT="A library which may be used in a passwd-like program"
-           PSAFE=no
 
+PSAFE=no
 cat << EOF
 Cracklib is a library which may be used in a passwd-like program.
 CrackLib is a library containing a C function (well, lots of functions really,
