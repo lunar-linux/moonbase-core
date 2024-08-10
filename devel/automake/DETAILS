@@ -1,13 +1,13 @@
           MODULE=automake
-         VERSION=1.16.5
+         VERSION=1.17
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=ftp://sources.redhat.com/pub/$MODULE
-      SOURCE_VFY=sha256:f01d58cd6d9d77fbdca9eb4bbd5ead1988228fdb73d6f7a201f5f8d6b118b469
+      SOURCE_VFY=sha256:8920c1fc411e13b90bf704ef9db6f29d540e76d232cb3b2c9f4dc4cc599bd990
         WEB_SITE=http://www.gnu.org/software/automake
          ENTERED=20010922
-         UPDATED=20211012
+         UPDATED=20240715
            SHORT="Generate GNU coding standards compliant Makefiles"
 
 cat << EOF
