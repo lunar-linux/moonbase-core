@@ -9,7 +9,6 @@ if ! in_depends $MODULE gtk+-3; then
   OPTS+=" --enable-gui=no --without-x"
 fi &&
 
-
 cd src &&
 
 default_config &&

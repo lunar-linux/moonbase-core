@@ -16,6 +16,7 @@ optional_depends libcanberra \
                  "--disable-canberra" \
                  "for XDG-compatible sound generation"
 
+optional_depends libsodium "--enable-libsodium"          "--disable-libsodium"     "for libsodium support"
 optional_depends python "--enable-python3interp=dynamic" "--disable-python3interp" "for Python 3 interpreter support"
 optional_depends tcl    "--enable-tclinterp=dynamic"     "--disable-tclinterp"     "for Tcl interpreter support"
 optional_depends perl   "--enable-perlinterp=dynamic"    "--disable-perlinterp"    "for Perl interpreter support"
