@@ -22,6 +22,8 @@ AT_M4DIR="m4" autoreconf -i &&
              --disable-audit                          \
              --enable-isadir=../../lib/security       \
              --enable-nls                             \
+             --enable-openssl                         \
+             --enable-lastlog                         \
              --disable-regenerate-docu                \
              $OPTS &&
 
@@ -55,7 +57,8 @@ done &&
 # Makefile no longer setsuid on unix_chkpwd and pam_timestamp_check
 chmod 4711 /sbin/unix_chkpwd &&
 chmod 4711 /sbin/pam_timestamp_check &&
-chmod 0700 /sbin/unix_update &&
+
+install -Dm644 modules/pam_namespace/pam_namespace.service $(pkg-config systemd --variable=systemdsystemunitdir)/pam_namespace.service &&
 
 # Module documents are nice
 if [ ! -d /usr/share/doc/Linux-PAM/txt ]; then

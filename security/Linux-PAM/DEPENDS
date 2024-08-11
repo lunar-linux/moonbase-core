@@ -4,5 +4,6 @@ depends cracklib
 depends libtool
 depends bison
 depends flex
+depends libxcrypt
 
 optional_depends  "gettext"  ""  ""  "for i18n internationalization support"
