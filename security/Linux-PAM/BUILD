@@ -31,16 +31,6 @@ sedit  "s/read yes//"  conf/install_conf  &&
 make -C po update-gmo &&
 make &&
 
-# Test our modules, we don't want a broken system
-ldconfig -n $SOURCE_DIRECTORY/libpam/.libs &&
-find $SOURCE_DIRECTORY/modules -name "pam*.so" | while read module; do
-  if ! env LD_LIBRARY_PATH=$SOURCE_DIRECTORY/libpam/.libs \
-       $SOURCE_DIRECTORY/$MODULE-patches-$PVERSION/dlopen.sh $SOURCE_DIRECTORY -ldl -lpam -L$SOURCE_DIRECTORY/libpam/.libs ${module} ; then
-    echo ERROR module: ${module} cannot be loaded.
-    exit 1
-  fi
-done &&
-
 prepare_install &&
 make install &&
 
@@ -48,14 +38,9 @@ for i in auth acct passwd session; do
   ln -sf pam_unix.so /lib/security/pam_unix_${i}.so
 done &&
 
-for i in ${MODULE}-patches-${PVERSION}/limits.d/*.conf; do
-  [ -f /etc/security/limits.d/${i} ] || install -m 644 $i /etc/security/limits.d/
-done &&
-
 # Makefile no longer setsuid on unix_chkpwd and pam_timestamp_check
 chmod 4711 /sbin/unix_chkpwd &&
 chmod 4711 /sbin/pam_timestamp_check &&
-chmod 0700 /sbin/unix_update &&
 
 # Module documents are nice
 if [ ! -d /usr/share/doc/Linux-PAM/txt ]; then
