@@ -1,0 +1,14 @@
+diff -C 3 -r syslinux-6.03/com32/lib/syslinux/debug.c syslinux-6.03.patched/com32/lib/syslinux/debug.c
+*** syslinux-6.03/com32/lib/syslinux/debug.c    2014-10-07 01:27:44.000000000 +0900
+--- syslinux-6.03.patched/com32/lib/syslinux/debug.c    2024-08-12 07:18:49.379513849 +0900
+***************
+*** 1,6 ****
+--- 1,7 ----
+  #include <linux/list.h>
+  #include <string.h>
+  #include <stdbool.h>
++ #include <stdio.h>
+
+  #ifdef DYNAMIC_DEBUG
+
+
