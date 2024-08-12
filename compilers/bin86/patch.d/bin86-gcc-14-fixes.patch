@@ -1,0 +1,187 @@
+diff -C 3 -r bin86-0.16.21/ld/catimage.c bin86-0.16.21.patched/ld/catimage.c
+*** bin86-0.16.21/ld/catimage.c	2013-10-30 00:44:51.000000000 +0900
+--- bin86-0.16.21.patched/ld/catimage.c	2024-08-12 11:30:31.363643108 +0900
+***************
+*** 31,36 ****
+--- 31,38 ----
+  #error "Compile error: struct exec invalid (long not 32 bit ?)"
+  #endif
+  
++ #include <string.h>
++ 
+  unsigned long text_offt[10];	/* Locations to patch (0=don't) */
+  unsigned long data_offt[10];
+  
+***************
+*** 39,45 ****
+  FILE * ifd = 0;
+  struct exec header;
+  
+! main(argc, argv)
+  int argc;
+  char ** argv;
+  {
+--- 41,54 ----
+  FILE * ifd = 0;
+  struct exec header;
+  
+! /* It's 1989 now, so we should probably include function prototypes */
+! void fatal(char *str);
+! int open_obj(char *fname);
+! int read_symtable();
+! void copy_segment(long out_offset, long in_offset, long length);
+! void patch_bin(long file_off, int value);
+! 
+! int main(argc, argv)
+  int argc;
+  char ** argv;
+  {
+***************
+*** 100,106 ****
+     exit(0);
+  }
+  
+! open_obj(fname)
+  char * fname;
+  {
+     input_file = fname;
+--- 109,115 ----
+     exit(0);
+  }
+  
+! int open_obj(fname)
+  char * fname;
+  {
+     input_file = fname;
+***************
+*** 117,123 ****
+        fatal("Input file has bad magic number");
+  }
+  
+! copy_segment(out_offset, in_offset, length)
+  long out_offset, in_offset, length;
+  {
+     char buffer[1024];
+--- 126,132 ----
+        fatal("Input file has bad magic number");
+  }
+  
+! void copy_segment(out_offset, in_offset, length)
+  long out_offset, in_offset, length;
+  {
+     char buffer[1024];
+***************
+*** 143,149 ****
+     }
+  }
+  
+! patch_bin(file_off, value)
+  long file_off;
+  int value;
+  {
+--- 152,158 ----
+     }
+  }
+  
+! void patch_bin(file_off, value)
+  long file_off;
+  int value;
+  {
+***************
+*** 163,169 ****
+     }
+  }
+  
+! read_symtable()
+  {
+     struct nlist item;
+     int nitems;
+--- 172,178 ----
+     }
+  }
+  
+! int read_symtable()
+  {
+     struct nlist item;
+     int nitems;
+***************
+*** 234,240 ****
+     }
+  }
+  
+! fatal(str)
+  char * str;
+  {
+     fprintf(stderr, "catimage:%s: %s\n", input_file, str);
+--- 243,249 ----
+     }
+  }
+  
+! void fatal(str)
+  char * str;
+  {
+     fprintf(stderr, "catimage:%s: %s\n", input_file, str);
+diff -C 3 -r bin86-0.16.21/ld/objchop.c bin86-0.16.21.patched/ld/objchop.c
+*** bin86-0.16.21/ld/objchop.c	2013-10-30 00:44:51.000000000 +0900
+--- bin86-0.16.21.patched/ld/objchop.c	2024-08-12 11:25:46.468626918 +0900
+***************
+*** 16,25 ****
+  
+  #else
+  
+  FILE * ifd;
+  struct exec header;
+  
+! main(argc, argv)
+  int argc;
+  char ** argv;
+  {
+--- 16,28 ----
+  
+  #else
+  
++ int fatal(char *str);
++ int write_file(char *fname, long bsize);
++ 
+  FILE * ifd;
+  struct exec header;
+  
+! int main(argc, argv)
+  int argc;
+  char ** argv;
+  {
+***************
+*** 56,62 ****
+     exit(0);
+  }
+  
+! write_file(fname, bsize)
+  char * fname;
+  long bsize;
+  {
+--- 59,65 ----
+     exit(0);
+  }
+  
+! int write_file(fname, bsize)
+  char * fname;
+  long bsize;
+  {
+***************
+*** 81,87 ****
+     fclose(ofd);
+  }
+  
+! fatal(str)
+  char * str;
+  {
+     fprintf(stderr, "objchop: %s\n", str);
+--- 84,90 ----
+     fclose(ofd);
+  }
+  
+! int fatal(str)
+  char * str;
+  {
+     fprintf(stderr, "objchop: %s\n", str);
+Only in bin86-0.16.21.patched/: tags
