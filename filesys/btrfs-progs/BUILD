@@ -4,8 +4,9 @@ fi
 
 default_build &&
 
-# remove the static lib
+# remove the static libs
 rm /usr/lib/libbtrfs.a &&
+rm /usr/lib/libbtrfsutil.a &&
 
 if module_installed bash-completion ; then
    # install bash completion
