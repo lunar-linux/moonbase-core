@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:b9c56468b927d9691ab168c0b1e9f8f1f835694a35ff898c549d383bd8d09bd4
         WEB_SITE=https://lsof.readthedocs.io/en/latest/
          ENTERED=20011005
-         UPDATED=20240817
+         UPDATED=20240818
            SHORT="Lists open files for running processes"
 
 cat << EOF
