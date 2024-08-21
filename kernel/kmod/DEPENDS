@@ -12,7 +12,7 @@ optional_depends zstd \
 
 optional_depends scdoc \
                  "--enable-manpages" \
-                 "--diisable-manpages" \
+                 "--disable-manpages" \
                  "for building man pages"
 
 optional_depends gtk-doc \
