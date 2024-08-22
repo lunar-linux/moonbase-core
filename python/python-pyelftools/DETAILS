@@ -1,13 +1,13 @@
           MODULE=python-pyelftools
-         VERSION=0.30
+         VERSION=0.31
           SOURCE=pyelftools-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/pyelftools-$VERSION
-      SOURCE_URL=https://files.pythonhosted.org/packages/84/05/fd41cd647de044d1ffec90ce5aaae935126ac217f8ecb302186655284fc8/
-      SOURCE_VFY=sha256:2fc92b0d534f8b081f58c7c370967379123d8e00984deb53c209364efd575b40
-        WEB_SITE=https://pypi.python.org/pypi/six/
-         ENTERED=20231126
-         UPDATED=20231126
+      SOURCE_URL=https://pypi.python.org/packages/source/p/pyelftools/
+      SOURCE_VFY=sha256:c774416b10310156879443b81187d182d8d9ee499660380e645918b50bc88f99
+        WEB_SITE=https://pypi.org/project/pyelftools/
             TYPE=python3
+         ENTERED=20231126
+         UPDATED=20240822
            SHORT="Library and utilities to parse ELF and DWARF files"
 
 cat << EOF
