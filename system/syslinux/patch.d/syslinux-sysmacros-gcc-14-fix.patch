@@ -1,0 +1,26 @@
+diff -C 3 -r syslinux-6.03/extlinux/main.c syslinux-6.03.patched/extlinux/main.c
+*** syslinux-6.03/extlinux/main.c	2024-08-11 20:06:58.042794253 +0900
+--- syslinux-6.03.patched/extlinux/main.c	2024-08-11 20:14:39.291126568 +0900
+***************
+*** 38,47 ****
+  #include <sysexits.h>
+  #include <sys/ioctl.h>
+  #include <sys/stat.h>
+- #include <sys/sysmacros.h>
+  #include <sys/types.h>
+  #include <sys/mount.h>
+  #include <sys/vfs.h>
+  
+  #include "linuxioctl.h"
+  
+--- 38,47 ----
+  #include <sysexits.h>
+  #include <sys/ioctl.h>
+  #include <sys/stat.h>
+  #include <sys/types.h>
+  #include <sys/mount.h>
+  #include <sys/vfs.h>
++ #include <sys/sysmacros.h>
+  
+  #include "linuxioctl.h"
+  
