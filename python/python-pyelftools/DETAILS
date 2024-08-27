@@ -7,7 +7,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/pyelftools-$VERSION
         WEB_SITE=https://pypi.org/project/pyelftools/
             TYPE=python3
          ENTERED=20231126
-         UPDATED=20240822
+         UPDATED=20240827
            SHORT="Library and utilities to parse ELF and DWARF files"
 
 cat << EOF
