@@ -1,14 +1,14 @@
           MODULE=usbutils
-         VERSION=016
+         VERSION=017
           SOURCE=$MODULE-$VERSION.tar.xz
          SOURCE2=usb.ids.gz
    SOURCE_URL[0]=$KERNEL_URL/pub/linux/utils/usb/$MODULE
    SOURCE_URL[1]=http://mirror.anl.gov/pub/linux/utils/usb/$MODULE
      SOURCE2_URL=http://www.linux-usb.org
-      SOURCE_VFY=sha256:75050b3a113a3d07b9e822fb367b8c7ef3524027d33aea7c9febfab038511e43
+      SOURCE_VFY=sha256:a6a25ffdcf9103e38d7a44732aca17073f4e602b92e4ae55625231a82702e05b
         WEB_SITE=http://kerneltrap.org/node/4649
          ENTERED=20030108
-         UPDATED=20231022
+         UPDATED=20240823
            SHORT="The pciutils of usb"
 
 cat << EOF

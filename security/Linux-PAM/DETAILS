@@ -1,17 +1,17 @@
           MODULE=Linux-PAM
-         VERSION=1.3.1
-        PVERSION=2.8
-       RHVERSION=0.99.11
+         VERSION=1.6.1
+        PVERSION=2.9
+       RHVERSION=1.2.0
           SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=$MODULE-patches-$PVERSION.tar.bz2
+         SOURCE2=$MODULE-patches-$PVERSION.tar.xz
       SOURCE_URL=https://github.com/linux-pam/linux-pam/releases/download/v$VERSION/
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:eff47a4ecd833fbf18de9686632a70ee8d0794b79aecb217ebd0ce11db4cd0db
-     SOURCE2_VFY=sha256:5267d5c4469c1d314c6050b53bbf296807c66b5375da3e0c94a7fc67a222cd83
-        WEB_SITE=http://linux-pam.org/
+      SOURCE_VFY=sha256:f8923c740159052d719dbfc2a2f81942d68dd34fcaf61c706a02c9b80feeef8e
+     SOURCE2_VFY=sha256:80d96a6f5b37dacff0e6607669b46ab45909ad0af5f823716057d5ce023e7285
+        WEB_SITE=https://github.com/linux-pam/linux-pam
       MAINTAINER=ratler@lunar-linux.org
          ENTERED=20010922
-         UPDATED=20180623
+         UPDATED=20240811
            SHORT="Pluggable Authentication Modules"
 PSAFE=no
 

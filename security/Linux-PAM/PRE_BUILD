@@ -7,7 +7,7 @@ cd $SOURCE_DIRECTORY                        &&
 unpack $SOURCE2                                &&
 
 # Unpack redhat specific modules
-tar -jxf ${MODULE}-patches-${PVERSION}/pam-redhat-${RHVERSION}.tar.bz2 \
+tar -xf ${MODULE}-patches-${PVERSION}/pam-redhat-${RHVERSION}.tar.xz \
 --strip-components=1 -C modules &&
 
 # Apply our patches
@@ -17,11 +17,4 @@ do
     do
       patch_it ${MODULE}-patches-${PVERSION}/${i}-patches/${fname} 1 || exit 1
     done
-done &&
-
-# Lex compile fix (drop static), might be a better way to do this
-sedit '/define YY_DECL/d' modules/pam_console/sed-static
-
-
-# Copy fresh install-sh from automake
-#cp /usr/share/automake/install-sh $SOURCE_DIRECTORY
+done

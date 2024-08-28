@@ -10,6 +10,11 @@ optional_depends zstd \
                  "for zstd compression support" \
                  "n"
 
+optional_depends scdoc \
+                 "--enable-manpages" \
+                 "--disable-manpages" \
+                 "for building man pages"
+
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
                  "--disable-gtk-doc" \

@@ -20,15 +20,19 @@ sedit '/^SUBDIRS/ n; s/etc//' Makefile.in Makefile.am &&
             --libdir=/usr/lib \
             --sysconfdir=/etc \
             --with-sha-crypt \
+            --with-yescrypt \
+            --with-fcaps \
             --without-selinux \
+            --without-bcrypt \
             --without-skey \
             --without-su \
             --with-group-name-max-length=32 \
             --disable-static \
+            --disable-account-tools-setuid \
             $OPTS &&
 make &&
 mkdir -p $SOURCE_DIRECTORY/__shadowdest &&
-make DESTDIR=$SOURCE_DIRECTORY/__shadowdest/ suidperms=4711 install &&
+make DESTDIR=$SOURCE_DIRECTORY/__shadowdest/ install &&
 make DESTDIR=$SOURCE_DIRECTORY/__shadowdest/ -C man install &&
 
 # remove the installed chfn, chsh, login, nologin, su, vigr and vipw apps
@@ -53,8 +57,11 @@ find $SOURCE_DIRECTORY/__shadowdest/usr/share/man \
 
 # Now install the cleaned up files from DESTDIR
 
+# Manually set setuid for a couple of files
+chmod 4711 $SOURCE_DIRECTORY/__shadowdest/usr/bin/{chage,gpasswd,sg,passwd} &&
+
 prepare_install &&
-cp -rf --remove-destination $SOURCE_DIRECTORY/__shadowdest/* / &&
+cp -a --remove-destination $SOURCE_DIRECTORY/__shadowdest/* / &&
 
 # We only need these files without PAM
 if ! module_installed Linux-PAM; then

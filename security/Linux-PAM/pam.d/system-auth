@@ -5,9 +5,10 @@ auth        required      pam_deny.so
 
 account     required      pam_unix.so
 
-password    required      pam_cracklib.so try_first_pass local_users_only retry=3 type=
-password    sufficient    pam_unix.so try_first_pass use_authtok nullok sha512 shadow
-password    required      pam_deny.so
+# TODO: add pam_pwquality
+password    required      pam_unix.so yescrypt nullok shadow
+password    optional      pam_permit.so
+#password    required      pam_deny.so
 
 session     optional      pam_keyinit.so revoke
 session     required      pam_limits.so
