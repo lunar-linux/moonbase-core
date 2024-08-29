@@ -1,6 +1,10 @@
 export DEBUG=-DNDEBUG &&
 
-OPTS+=" --prefix=/usr" &&
+# This honors CFLAGS but needs an empty value to avoid 
+# default flags.
+export OPTIMIZER=" "
+
+OPTS+=" --prefix=/usr --disable-lto" &&
 
 default_config &&
 make &&
