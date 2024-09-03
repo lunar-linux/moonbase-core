@@ -14,7 +14,7 @@ WANT_VERSION= download_module wget &&
 sedit "/^CC/d" Makefile &&
 sedit "s/-O3/-Os/" Makefile &&
 
-make &&
+make LIBDIR=lib &&
 prepare_install &&
-make MANDIR=/usr/share/man install &&
+make LIBDIR=lib MANDIR=/usr/share/man install &&
 cp $SOURCE_CACHE/$SOURCE2 /etc/ssl/certs/Makefile
