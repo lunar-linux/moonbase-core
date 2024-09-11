@@ -1,2 +1,3 @@
+depends bash-completion
 depends python
 depends re2c
