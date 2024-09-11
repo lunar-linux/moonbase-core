@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:a16e7caa5d8fea1c9652f1a45c8e5f2acc13fc632cf2066fe364ab13bd9df82d
         WEB_SITE=http://oss.sgi.com/projects/xfs
          ENTERED=20020110
-         UPDATED=20240829
+         UPDATED=20240911
            SHORT="Required utilities for the XFS file system"
 PSAFE=no
 cat << EOF
