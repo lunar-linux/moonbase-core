@@ -7,7 +7,7 @@
       SOURCE_VFY=sha256:c740348f357396327a9795d3e8323bafd0fe8a5c7835fc1cbaba0cc8dfe7161f
         WEB_SITE=http://www.perl.org
          ENTERED=20010922
-         UPDATED=20240827
+         UPDATED=20240918
            SHORT="A highly capable, feature-rich programming language"
 
 cat << EOF
