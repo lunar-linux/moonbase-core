@@ -1,2 +1,2 @@
-mquery DISABLE_DSA "Disable DSA key support?" n \
+mquery DISABLE_DSA "Disable DSA key support?" y \
         "--disable-dsa-keys" "--enable-dsa-keys"
