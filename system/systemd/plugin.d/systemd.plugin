@@ -23,14 +23,14 @@ plugin_systemd_configure()
     SERVICES="$SERVICES $(ls $SCRIPT_DIRECTORY/systemd.d/)"
   fi
   if [[ -f $SCRIPT_DIRECTORY/systemd_units ]]; then
-    SERVICES="$SERVICES $(fgrep ':' $SCRIPT_DIRECTORY/systemd_units | awk -F': ' '{ print $1 }')"
+    SERVICES="$SERVICES $(grep -F ':' $SCRIPT_DIRECTORY/systemd_units | awk -F': ' '{ print $1 }')"
   fi
 
   if [[ -n "$SERVICES" ]]; then
     for SERVICE in $SERVICES; do
       # don't ask for '@' services - these should always be installed but
       # never linked directly. Also ask for new or renamed services.
-      if echo $SERVICE | grep -q @ || echo $SYSTEMD_SERVICES | egrep -q "(^| )-?$SERVICE( |$)"; then
+      if echo $SERVICE | grep -q @ || echo $SYSTEMD_SERVICES | grep -E -q "(^| )-?$SERVICE( |$)"; then
         if systemctl -q is-enabled $SERVICE &> /dev/null ; then
           SYSTEMD_SERVICES=$(echo $SYSTEMD_SERVICES | sed -r "s;(^| )-?($SERVICE)( |$);\1\2\3;")
         else
@@ -61,7 +61,7 @@ plugin_systemd_configure()
   # processes left behind after a successful install
   for SERVICE_FLAGGED in $SYSTEMD_SERVICES; do
     SERVICE=$(echo $SERVICE_FLAGGED | sed "s;^-;;")
-    if ! echo $SERVICES | egrep -q "(^| )$SERVICE( |$)"; then
+    if ! echo $SERVICES | grep -E -q "(^| )$SERVICE( |$)"; then
       verbose_msg "Stopping removed service ($SERVICE)"
       systemctl stop $SERVICE &> /dev/null
       systemctl disable $SERVICE &> /dev/null
