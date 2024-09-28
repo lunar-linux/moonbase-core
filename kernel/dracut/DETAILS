@@ -4,7 +4,7 @@
   SOURCE_URL_FULL=https://github.com/dracut-ng/dracut-ng/archive/$VERSION.tar.gz
   SOURCE_URL_FULL=https://github.com/dracut-ng/dracut-ng/archive/refs/tags/$VERSION.tar.gz
        SOURCE_VFY=sha256:9a92b4f0643926a65162171d68b9525fc93e6e82f455a4b3938db385a841bda8
- SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-ng-$VERSION
          WEB_SITE=https://dracut.wiki.kernel.org/index.php/Main_Page
           ENTERED=20120715
           UPDATED=20240928
