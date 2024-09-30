@@ -1,3 +1,6 @@
+#Unknown group 'rfkill', lets make one
+add_priv_group rfkill &&
+
 OPTS+=" --enable-agetty     \
         --enable-chfn-chsh  \
         --enable-fsck       \
