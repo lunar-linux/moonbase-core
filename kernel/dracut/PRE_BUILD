@@ -16,4 +16,13 @@ fi
 
 default_pre_build &&
 
-sedit 's:dash:bash:' Makefile
+sedit 's:dash:bash:' Makefile &&
+
+if in_depends dracut asciidoc
+then
+    DOCBOOK_XSL_MAN=$(lvu install docbook-xsl | grep "manpages/docbook.xsl$")
+    DOCBOOK_XSL_HTML=$(lvu install docbook-xsl | grep "xhtml/docbook.xsl$")
+
+    sedit "s|http://docbook.*manpages/docbook.xsl|$DOCBOOK_XSL_MAN|" Makefile &&
+    sedit "s|http://docbook.*xhtml/docbook.xsl|$DOCBOOK_XSL_HTML|" Makefile
+fi
