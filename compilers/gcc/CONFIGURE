@@ -11,7 +11,7 @@ if [ -n "$RECONFIGURE" ]; then
       "go"      "Go"            "off"
       "objc"    "Objective C"   "off"
       "obj-c++" "Objective C++" "off"
-      "fortran" "Fortran"       "off"
+      "fortran" "Fortran"       "on"
       "lto"     "Link-Time Optimizer"  "on"
     ) &&
     RESULT=`dialog --title "Select additional compiler languages" \
