@@ -9,8 +9,8 @@ else
   EFI_ARCH=ia32
 fi &&
 
-# build uses LDFLAGS with `ld` binary, so trim lunar's options
-export LDFLAGS="$(echo $LDFLAGS | sed 's/-Wl,//g; s/-O1,//g')" &&
+# Lunar's LDFLAGS don't get along well with gnu-efi, so clear them out
+unset LDFLAGS &&
 
 make lib gnuefi inc apps &&
 prepare_install &&
