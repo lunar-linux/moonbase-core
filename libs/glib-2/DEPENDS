@@ -8,6 +8,6 @@ depends meson
 
 optional_depends gtk-doc \
                  "-D gtk_doc=true" \
-        		 "-D gtk_doc=false" \
+                 "-D gtk_doc=false" \
                  "for building the documentation" \
                  "n"
