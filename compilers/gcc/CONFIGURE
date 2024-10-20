@@ -2,7 +2,7 @@
 if [ -n "$RECONFIGURE" ]; then
   LANGUAGES=$(get_module_config LANGUAGES) &&
   if [ -z "$LANGUAGES" ]; then
-    LANGUAGES=${LANGUAGES:=c++}
+    LANGUAGES=${LANGUAGES:=c++,fortran}
   fi &&
 
   if query "Do you want to select additional compiler languages ? " n; then
@@ -11,7 +11,6 @@ if [ -n "$RECONFIGURE" ]; then
       "go"      "Go"            "off"
       "objc"    "Objective C"   "off"
       "obj-c++" "Objective C++" "off"
-      "fortran" "Fortran"       "off"
       "lto"     "Link-Time Optimizer"  "on"
     ) &&
     RESULT=`dialog --title "Select additional compiler languages" \
@@ -21,12 +20,12 @@ if [ -n "$RECONFIGURE" ]; then
                     0 0 0                                         \
                    "${OPTIONS[@]}"` &&
 
-    LANGUAGES="c++,$(echo $RESULT | sed 's/ /,/g')" &&
+    LANGUAGES="c++,fortran,$(echo $RESULT | sed 's/ /,/g')" &&
     set_module_config LANGUAGES "$LANGUAGES"
   else
     LANGUAGES=$(get_module_config LANGUAGES) &&
     if [ -z "$LANGUAGES" ]; then
-      LANGUAGES=${LANGUAGES:=c++}
+      LANGUAGES=${LANGUAGES:=c++,fortran}
     fi &&
     set_module_config LANGUAGES "$LANGUAGES"
   fi
