@@ -1,11 +1,11 @@
           MODULE=autoconf-archive
-         VERSION=2023.02.20
+         VERSION=2024.10.16
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNU_URL/$MODULE
-      SOURCE_VFY=sha256:71d4048479ae28f1f5794619c3d72df9c01df49b1c628ef85fde37596dc31a33
+      SOURCE_VFY=sha256:7bcd5d001916f3a50ed7436f4f700e3d2b1bade3ed803219c592d62502a57363
         WEB_SITE=https://www.gnu.org/software/autoconf
          ENTERED=20171128
-         UPDATED=20230309
+         UPDATED=20241021
            SHORT="A collection of useful autoconf macros"
 
 PSAFE=no
