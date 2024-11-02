@@ -4,7 +4,7 @@ bad_flags -pipe &&
 mkdir BUILD &&
 cd BUILD &&
 
-LANGUAGES="${LANGUAGES:=c++}" &&
+LANGUAGES="${LANGUAGES:=c++,fortran}" &&
 
 OPTS+=" --build=$BUILD                \
         --host=$BUILD                 \
