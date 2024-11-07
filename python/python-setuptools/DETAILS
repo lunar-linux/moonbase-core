@@ -1,12 +1,12 @@
           MODULE=python-setuptools
-         VERSION=69.5.1
+         VERSION=75.3.0
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://pypi.org/packages/source/s/setuptools/setuptools-$VERSION.tar.gz
-      SOURCE_VFY=sha256:6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987
+      SOURCE_VFY=sha256:fba5dd4d766e97be1b1681d98712680ae8f2f26d7881245f2ce9e40714f1a686
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/setuptools-$VERSION
         WEB_SITE=https://pypi.org/project/setuptools/
          ENTERED=20071221
-         UPDATED=20240418
+         UPDATED=20241107
             TYPE=python3
         REPLACES=setuptools-3
            SHORT="A simplified packaging system for Python 3.x"
