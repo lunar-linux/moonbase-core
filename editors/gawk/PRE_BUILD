@@ -1,6 +1,0 @@
-default_pre_build &&
-
-# disable libsigsegv dependency
-# as lunar does not support transitions and
-# a bump of that library already broke lunar's awk once
-sedit 's/^osf1)/*)/' configure
