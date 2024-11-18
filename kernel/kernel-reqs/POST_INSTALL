@@ -1,4 +1,5 @@
 kreqs="fuse \
+       fuse-3 \
        iptables \
        NVIDIA \
        openafs-driver \
