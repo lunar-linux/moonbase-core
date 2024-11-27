@@ -1,6 +1,3 @@
-(
+sedit "s:/usr/local:/usr:" Make.rules  &&
 
-  sedit "s:/usr/local:/usr:" Make.rules  &&
-  default_build
-
-) > $C_FIFO 2>&1
+default_build
