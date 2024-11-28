@@ -1,3 +1,5 @@
+export PYTHONDONTWRITEBYTECODE=1 &&
+
 #Unknown group 'rfkill', lets make one
 add_priv_group rfkill &&
 
