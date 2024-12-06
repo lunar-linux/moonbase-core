@@ -4,15 +4,10 @@ export DEBUG=-DNDEBUG &&
 # default flags.
 export OPTIMIZER=" "
 
-OPTS+=" --prefix=/usr --disable-lto" &&
+OPTS+=" --prefix=/usr --enable-lib64=no --disable-static --disable-lto" &&
 
 default_config &&
 make &&
 prepare_install &&
 
-make PKG_ROOT_SBIN_DIR=/usr/sbin PKG_ROOT_LIB_DIR=/usr/lib install install-dev &&
-
-# cleanup static libs
-if [ -f "/usr/lib/libhandle.a" ]; then
-  rm /usr/lib/libhandle.a
-fi
+make PKG_ROOT_SBIN_DIR=/usr/sbin PKG_ROOT_LIB_DIR=/usr/lib install install-dev
