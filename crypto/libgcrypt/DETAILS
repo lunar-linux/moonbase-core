@@ -3,7 +3,7 @@
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://www.gnupg.org/ftp/gcrypt/libgcrypt/
       SOURCE_VFY=sha256:09120c9867ce7f2081d6aaa1775386b98c2f2f246135761aae47d81f58685b9c
-        WEB_SITE=http://www.gnu.org/directory/security/libgcrypt.html
+        WEB_SITE=https://directory.fsf.org/wiki/Security/libgcrypt
          ENTERED=20020212
          UPDATED=20241217
            SHORT="General purpose crypto library"
