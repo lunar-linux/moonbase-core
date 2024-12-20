@@ -1,12 +1,12 @@
           MODULE=procps
-         VERSION=4.0.4
+         VERSION=4.0.5
           SOURCE=$MODULE-v$VERSION.tar.bz2
-      SOURCE_URL=https://gitlab.com/procps-ng/procps/-/archive/v4.0.4/
-      SOURCE_VFY=sha256:08dbaaaae6afe8d5fbeee8aa3f8b460b01c5e09ce4706b161846f067103a2cf2
+      SOURCE_URL=https://gitlab.com/procps-ng/procps/-/archive/v$VERSION
+      SOURCE_VFY=sha256:7e4b385e8f3e426089f3bb04e3bf150c710b875bd005474f034486b2379ce221
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-v$VERSION
         WEB_SITE=https://gitlab.com/procps-ng/procps/
          ENTERED=20010922
-         UPDATED=20230923
+         UPDATED=20241219
            SHORT="Utilities for monitoring your system and its processes"
 
 cat << EOF
