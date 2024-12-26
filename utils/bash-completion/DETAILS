@@ -1,11 +1,11 @@
           MODULE=bash-completion
-         VERSION=2.15.0
+         VERSION=2.16.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://github.com/scop/bash-completion/releases/download/$VERSION/
-      SOURCE_VFY=sha256:976a62ee6226970283cda85ecb9c7a4a88f62574c0a6f9e856126976decf1a06
+      SOURCE_VFY=sha256:3369bd5e418a75fb990863925aed5b420398acebb320ec4c0306b3eae23f107a
         WEB_SITE=http://github.com/scop/bash-completion/
          ENTERED=20120406
-         UPDATED=20241202
+         UPDATED=20241226
            SHORT="Completion for the bash shell"
 
 cat << EOF
