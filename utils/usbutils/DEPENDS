@@ -1,2 +1,4 @@
+depends pkgconf
+depends systemd
 depends zlib
 depends libusb
