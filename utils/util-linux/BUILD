@@ -13,7 +13,6 @@ OPTS+=" --enable-agetty       \
         --enable-write        \
         --disable-kill        \
         --disable-static      \
-        --disable-liblastlog2 \
         --enable-fs-paths-extra=/usr/bin:/usr/sbin"
 
 default_config &&
