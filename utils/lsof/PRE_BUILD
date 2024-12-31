@@ -1,5 +1,5 @@
 default_pre_build &&
 
 sedit 's|/\* #define\tHASSECURITY\t1 \*/|#define\tHASSECURITY\t1|' lib/dialects/linux/machine.h &&
-sedit "s|.so ./version|.ds VN ${pkgver}|" Lsof.8 &&
-sedit "s|Revision-|&$VERSION|" Lsof.8
+sedit "s|\.so \./version|.ds VN $VERSION|" Lsof.8 &&
+sedit "s|\(Revision-\).*|\1$VERSION|" Lsof.8
