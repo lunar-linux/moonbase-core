@@ -4,7 +4,6 @@
       SOURCE_URL=https://cpan.metacpan.org/authors/id/T/TO/TODDR/
       SOURCE_VFY=sha256:ad4aae643ec784f489b956abe952432871a622d4e2b5c619e8855accbfc4d1d8
         WEB_SITE=https://metacpan.org/pod/XML::Parser
-            TYPE=perl
          ENTERED=20030529
          UPDATED=20240206
            SHORT="PERL module for parsing XML documents"
