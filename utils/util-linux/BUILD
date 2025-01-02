@@ -1,18 +1,20 @@
+export PYTHONDONTWRITEBYTECODE=1 &&
+
 #Unknown group 'rfkill', lets make one
 add_priv_group rfkill &&
 
-OPTS+=" --enable-agetty     \
-        --enable-chfn-chsh  \
-        --enable-fsck       \
-        --enable-mesg       \
-        --enable-partx      \
-        --enable-rename     \
-        --enable-schedutils \
-        --enable-vipw       \
-        --enable-newgrp     \
-        --enable-write      \
-        --disable-kill      \
-        --disable-static    \
+OPTS+=" --enable-agetty       \
+        --enable-chfn-chsh    \
+        --enable-fsck         \
+        --enable-mesg         \
+        --enable-partx        \
+        --enable-rename       \
+        --enable-schedutils   \
+        --enable-vipw         \
+        --enable-newgrp       \
+        --enable-write        \
+        --disable-kill        \
+        --disable-static      \
         --enable-fs-paths-extra=/usr/bin:/usr/sbin"
 
 default_config &&
