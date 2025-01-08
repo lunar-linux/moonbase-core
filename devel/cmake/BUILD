@@ -1,6 +1,6 @@
-if in_depends $MODULE qt5; then
-  . /etc/profile.d/qt5.rc &&
-  OPTS+=" --qt-qmake=/usr/lib/qt5/bin/qmake"
+if in_depends $MODULE qt6-base; then
+  . /etc/profile.d/qt6.rc &&
+  OPTS+=" --qt-qmake=/usr/lib/qt6/bin/qmake"
 fi
 
 if module_installed jsoncpp; then
