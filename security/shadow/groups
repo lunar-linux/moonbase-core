@@ -1,0 +1,7 @@
+#!/bin/sh
+# Script to retrieve the current user groups.
+# The groups command was removed of the shadow source in version 4.17.0
+# Written by Stephane Fontaine 20250114
+
+# Yeah, that simple to replace... temporary fix just for existing scripts
+id -Gn

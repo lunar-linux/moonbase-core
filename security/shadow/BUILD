@@ -88,4 +88,5 @@ fi &&
 
 [ -e /etc/securetty ] || install -m 0644 $SCRIPT_DIRECTORY/securetty /etc/ &&
 install $SCRIPT_DIRECTORY/adduser /usr/bin/ &&
-install $SCRIPT_DIRECTORY/deluser /usr/bin/
+install $SCRIPT_DIRECTORY/deluser /usr/bin/ &&
+install $SCRIPT_DIRECTORY/groups /usr/bin/
