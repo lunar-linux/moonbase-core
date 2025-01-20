@@ -1,12 +1,12 @@
           MODULE=coreutils
-         VERSION=9.5
+         VERSION=9.6
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=https://ftp.gnu.org/gnu/$MODULE
-      SOURCE_VFY=sha256:cd328edeac92f6a665de9f323c93b712af1858bc2e0d88f3f7100469470a1b8a
+      SOURCE_VFY=sha256:7a0124327b398fd9eb1a6abde583389821422c744ffa10734b24f557610d3283
         WEB_SITE=http://www.gnu.org/software/coreutils
          ENTERED=20030217
-         UPDATED=20240401
+         UPDATED=20250117
            SHORT="Contains latest sh-utils, textutils and fileutils"
 PSAFE=no
 
@@ -38,6 +38,7 @@ Tools included perform the following file operations:
   false    -- returns an unsuccessful exit status
   fmt      -- simple optimal text formatter
   fold     -- wrap each input line to fit in specified width
+  groups   -- print the groups an user is in
   head     -- output the first part of files
   hostid   -- print the numeric id (in hex) for the current host
   id       -- print real/effective/uid/gid

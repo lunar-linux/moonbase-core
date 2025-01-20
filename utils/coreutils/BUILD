@@ -12,7 +12,7 @@ else
 fi &&
 
 # This option resolves conflicts with shadow/heimdal, net-tools and procps
-OPTS+=" --enable-no-install-program=hostname,su,groups,kill,uptime" &&
+OPTS+=" --enable-no-install-program=hostname,su,kill,uptime" &&
 OPTS+=" --enable-install-program=arch" &&
 
 DEFAULT_POSIX2_VERSION=199209 &&
