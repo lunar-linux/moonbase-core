@@ -18,7 +18,6 @@ fi &&
              --disable-readline \
              --disable-sim \
              --enable-cet \
-             --enable-gold \
              --enable-relro \
              --enable-plugins \
              --enable-threads \
