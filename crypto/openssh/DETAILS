@@ -1,13 +1,13 @@
           MODULE=openssh
-         VERSION=9.9p1
+         VERSION=9.9p2
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=http://ftp3.usa.openbsd.org/pub/OpenBSD/OpenSSH/portable
    SOURCE_URL[1]=ftp://ftp5.usa.openbsd.org/pub/OpenBSD/OpenSSH/portable
    SOURCE_URL[2]=ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable
-      SOURCE_VFY=sha256:b343fbcdbff87f15b1986e6e15d6d4fc9a7d36066be6b7fb507087ba8f966c02
+      SOURCE_VFY=sha256:91aadb603e08cc285eddf965e1199d02585fa94d994d6cae5b41e1721e215673
         WEB_SITE=http://www.openssh.com/
          ENTERED=20010922
-         UPDATED=20240923
+         UPDATED=20250218
            SHORT="Client and server for encrypted remote logins and file transfers"
 
 cat << EOF
