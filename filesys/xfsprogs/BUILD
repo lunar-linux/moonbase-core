@@ -7,6 +7,11 @@ export OPTIMIZER=" "
 OPTS+=" --prefix=/usr --enable-lib64=no --disable-static --disable-lto" &&
 
 default_config &&
+make config &&
+
+# fix the build for the new icu4c version
+sed -r -i 's/\$\(LIBICU_LIBS\)/\0 -licuuc/' scrub/Makefile
+
 make &&
 prepare_install &&
 
