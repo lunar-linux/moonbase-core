@@ -2,6 +2,7 @@ depends zlib
 depends bzip2
 depends ncurses
 depends libidn
+depends libunistring
 depends %OSSL
 
 optional_depends curl       "--system-curl"       "--no-system-curl"       "Use system provided curl"
