@@ -1,5 +1,5 @@
 export DEBUG=-DNDEBUG &&
-
+sed -r -i 's/\$\(LIBICU_LIBS\)/\0 -licuuc/' scrub/Makefile &&
 # This honors CFLAGS but needs an empty value to avoid 
 # default flags.
 export OPTIMIZER=" "
