@@ -34,4 +34,8 @@ find . -depth -print0 | cpio -0pdmuv / &&
 
 install -g0 -o0 -m755 $SCRIPT_DIRECTORY/make-issue /usr/bin/make-issue &&
 install -Dm644 $SCRIPT_DIRECTORY/60-rfkill.rules /usr/lib/udev/rules.d/60-rfkill.rules &&
-ln -sf /usr/bin/last /usr/bin/lastb
+ln -sf /usr/bin/last /usr/bin/lastb &&
+
+#/usr/lib/tmpfiles.d/uuidd-tmpfiles.conf:6: Failed to resolve user 'uuidd': No such process
+add_priv_group uuidd &&
+add_priv_user uuidd -d /var/lib/uuidd -g sddm
