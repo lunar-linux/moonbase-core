@@ -17,4 +17,6 @@ prepare_install &&
 make PREFIX="/usr" LIBDIR="/usr/lib" install &&
 
 install -d "/usr/share/gnu-efi/apps/${EFI_ARCH}/" &&
-install -D -m0644 "${EFI_ARCH}/apps"/*.efi "/usr/share/gnu-efi/apps/${EFI_ARCH}/"
+install -D -m0644 "${EFI_ARCH}/apps"/*.efi "/usr/share/gnu-efi/apps/${EFI_ARCH}/" &&
+
+sedit 's@/local@@g' /usr/lib/pkgconfig/gnu-efi.pc
