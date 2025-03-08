@@ -1,0 +1,38 @@
+From: Stephane Fontaine <esselfe16@gmail.com>
+Date: 2025-03-08 06:31:00 +0000
+
+diff -ur kmod-34.1-orig/configure.ac kmod-34.1-new/configure.ac
+--- kmod-34.1-orig/configure.ac	2025-03-06 00:25:07.000000000 -0500
++++ kmod-34.1-new/configure.ac	2025-03-08 01:03:26.546219184 -0500
+@@ -250,11 +250,6 @@
+ ])
+ AM_CONDITIONAL([ENABLE_COVERAGE], [test "x$enable_coverage" = "xyes"])
+ 
+-m4_ifdef([GTK_DOC_CHECK], [
+-GTK_DOC_CHECK([1.14],[--flavour no-tmpl-flat])
+-], [
+-AM_CONDITIONAL([ENABLE_GTK_DOC], false)])
+-
+ PKG_INSTALLDIR
+ PKG_NOARCH_INSTALLDIR
+ 
+@@ -353,7 +348,6 @@
+ 	compression:		zstd=${with_zstd}  xz=${with_xz}  zlib=${with_zlib}
+ 	debug:			${enable_debug}
+ 	coverage:		${enable_coverage}
+-	doc:			${enable_gtk_doc}
+ 	man:			${enable_manpages}
+ 
+ 	features:               ${with_features}
+diff -ur kmod-34.1-orig/libkmod/docs/Makefile.am kmod-34.1-new/libkmod/docs/Makefile.am
+--- kmod-34.1-orig/libkmod/docs/Makefile.am	2025-03-06 00:25:07.000000000 -0500
++++ kmod-34.1-new/libkmod/docs/Makefile.am	2025-03-08 01:03:53.557663205 -0500
+@@ -27,8 +27,4 @@
+ 
+ EXTRA_DIST =
+ 
+-if ENABLE_GTK_DOC
+-include $(top_srcdir)/libkmod/docs/gtk-doc.make
+-else
+ EXTRA_DIST += libkmod-docs.xml libkmod-sections.txt
+-endif
