@@ -16,16 +16,11 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const { GITHUB_REF, GITHUB_TOKEN } = process.env;
-            const prNumber = GITHUB_REF.split('/')[2]; 
             const labelToRemove = 'iso_ok';
 
             await github.issues.removeLabel({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: prNumber,
+              issue_number: context.issue.number,
               name: labelToRemove,
-              headers: {
-                authorization: `token ${GITHUB_TOKEN}`,
-              },
             });
