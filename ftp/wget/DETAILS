@@ -31,4 +31,7 @@ if it has.
 
 Wget supports proxy servers; this can lighten the network load,
 speed up retrieval, and provide access behind firewalls.
+
+
+BOGUS
 EOF
