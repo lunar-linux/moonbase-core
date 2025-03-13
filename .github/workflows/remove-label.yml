@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Remove iso_ok label from PR
+      - name: Remove iso_broken label from PR
         uses: actions/github-script@v7
         with:
           script: |
-            const labelToRemove = 'iso_ok'
+            const labelToRemove = 'iso_broken'
 
             await github.rest.issues.removeLabel({
               owner: context.repo.owner,
