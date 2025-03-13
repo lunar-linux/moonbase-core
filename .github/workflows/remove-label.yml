@@ -6,7 +6,7 @@ on:
 
 jobs:
   remove-label:
-    if: github.event.label.name == 'iso_ok'
+    if: contains(github.event.pull_request.labels.*.name, 'iso_ok')
     runs-on: ubuntu-latest
 
     steps:
