@@ -18,9 +18,9 @@ jobs:
           script: |
             const labelToRemove = 'iso_ok';
 
-            await github.issues.removeLabel({
+            await github.issues.removeLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              name: labelToRemove,
+              labels: [labelToRemove],
             });
