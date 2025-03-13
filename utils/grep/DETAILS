@@ -19,5 +19,5 @@ a fixed string that eliminates impossible text from being considered by the full
 regexp match without having to look at every chanracter; the result is usually
 many times faster than UNIX 'grep' or 'egrep'.
 
-BOGUS
+BOGUS2
 EOF
