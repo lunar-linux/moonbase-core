@@ -1,12 +1,12 @@
           MODULE=libidn
-         VERSION=1.42
+         VERSION=1.43
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=$GNU_URL/$MODULE/
    SOURCE_URL[1]=https://ftp.gnu.org/gnu/$MODULE/
-      SOURCE_VFY=sha256:d6c199dcd806e4fe279360cb4b08349a0d39560ed548ffd1ccadda8cdecb4723
+      SOURCE_VFY=sha256:bdc662c12d041b2539d0e638f3a6e741130cdb33a644ef3496963a443482d164
         WEB_SITE=http://www.gnu.org/software/libidn
          ENTERED=20041220
-         UPDATED=20240114
+         UPDATED=20250321
            SHORT="Implementation of the Stringprep, Punycode and IDNA specifications"
 
 cat << EOF
