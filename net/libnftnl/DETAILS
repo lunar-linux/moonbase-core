@@ -1,12 +1,12 @@
           MODULE=libnftnl
-         VERSION=1.2.8
+         VERSION=1.2.9
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://netfilter.org/projects/$MODULE/files/
-       SOURCE_VFY=sha256:37fea5d6b5c9b08de7920d298de3cdc942e7ae64b1a3e8b880b2d390ae67ad95
+      SOURCE_VFY=sha256:e8c216255e129f26270639fee7775265665a31b11aa920253c3e5d5d62dfc4b8
         WEB_SITE=https://netfilter.org/projects/libnftnl/
          ENTERED=20160321
-         UPDATED=20241018
-        SHORT="Netfilter library interface to the nf_tables subsystem"
+         UPDATED=20250414
+           SHORT="Netfilter library interface to the nf_tables subsystem"
 
 cat << EOF
 libnftnl is a userspace library providing a low-level netlink API to the
