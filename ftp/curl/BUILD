@@ -1,5 +1,9 @@
 echo '/* not used */' > include/curl/types.h &&
 
+if in_depends $MODULE c-ares; then
+        OPTS+=" --enable-httpsrr"
+fi &&
+
 OPTS+=" --enable-threaded-resolver \
         --enable-versioned-symbols \
         --disable-curldebug \
