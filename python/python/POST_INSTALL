@@ -9,4 +9,6 @@ if query "Do you want lunar to attempt to upgrade your Python modules?" ${ASK_FO
   for PYTHONMOD in $(sort_by_dependency $PYTHONMODS); do
     lin -c $PYTHONMOD || true
   done
+else
+  true # don't prevent the next lin from running
 fi
