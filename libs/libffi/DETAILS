@@ -1,11 +1,11 @@
           MODULE=libffi
-         VERSION=3.4.7
+         VERSION=3.5.0
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=https://github.com/libffi/libffi/releases/download/v$VERSION
-      SOURCE_VFY=sha256:138607dee268bdecf374adf9144c00e839e38541f75f24a1fcf18b78fda48b2d
+      SOURCE_VFY=sha256:8c72678628a5dd8782f08ad421d5a441e42c1c5c1b33e0bc211cbfcf1f3b3978
         WEB_SITE=http://sourceware.org/libffi
          ENTERED=20091102
-         UPDATED=20250307
+         UPDATED=20250611
            SHORT="A high level programming interface library"
 
 cat << EOF
