@@ -1,15 +1,12 @@
           MODULE=intltool
          VERSION=0.51.0
           SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=intltool-perl-5.26.patch
    SOURCE_URL[0]=https://launchpad.net/$MODULE/trunk/$VERSION/+download
    SOURCE_URL[1]=http://fossies.org/unix/privat
-     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:67c74d94196b153b774ab9f89b2fa6c6ba79352407037c8c14d5aeb334e959cd
-     SOURCE2_VFY=sha256:d55006800c617c97c1c97dd26247eed3bd3d490facfd4cb905f1a074e97a024c
         WEB_SITE=http://freedesktop.org/wiki/Software/intltool
          ENTERED=20010922
-         UPDATED=20170825
+         UPDATED=20250613
            SHORT="xml internationalization tools"
 
 cat << EOF

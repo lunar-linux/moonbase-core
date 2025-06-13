@@ -1,0 +1,69 @@
+diff -r -C 2 intltool-0.51.0/intltool-update.in intltool-0.51.0.fixed/intltool-update.in
+*** intltool-0.51.0/intltool-update.in	2015-03-09 10:39:54.000000000 +0900
+--- intltool-0.51.0.fixed/intltool-update.in	2017-08-25 13:18:13.975006442 +0900
+***************
+*** 1063,1067 ****
+      }
+  
+!     if ($str =~ /^(.*)\${?([A-Z_]+)}?(.*)$/)
+      {
+  	my $rest = $3;
+--- 1063,1067 ----
+      }
+  
+!     if ($str =~ /^(.*)\$\{?([A-Z_]+)}?(.*)$/)
+      {
+  	my $rest = $3;
+***************
+*** 1069,1073 ****
+  	my $sub = "";
+          # Ignore recursive definitions of variables
+!         $sub = $varhash{$2} if defined $varhash{$2} and $varhash{$2} !~ /\${?$2}?/;
+  
+  	return SubstituteVariable ("$untouched$sub$rest");
+--- 1069,1073 ----
+  	my $sub = "";
+          # Ignore recursive definitions of variables
+!         $sub = $varhash{$2} if defined $varhash{$2} and $varhash{$2} !~ /\$\{?$2}?/;
+  
+  	return SubstituteVariable ("$untouched$sub$rest");
+***************
+*** 1191,1198 ****
+  	$version =~ s/\(+$//g;
+  
+! 	$varhash{"PACKAGE_NAME"} = $name if (not $name =~ /\${?AC_PACKAGE_NAME}?/);
+! 	$varhash{"PACKAGE"} = $name if (not $name =~ /\${?PACKAGE}?/);
+! 	$varhash{"PACKAGE_VERSION"} = $version if (not $name =~ /\${?AC_PACKAGE_VERSION}?/);
+! 	$varhash{"VERSION"} = $version if (not $name =~ /\${?VERSION}?/);
+      }
+  
+--- 1191,1198 ----
+  	$version =~ s/\(+$//g;
+  
+! 	$varhash{"PACKAGE_NAME"} = $name if (not $name =~ /\$\{?AC_PACKAGE_NAME}?/);
+! 	$varhash{"PACKAGE"} = $name if (not $name =~ /\$\{?PACKAGE}?/);
+! 	$varhash{"PACKAGE_VERSION"} = $version if (not $name =~ /\$\{?AC_PACKAGE_VERSION}?/);
+! 	$varhash{"VERSION"} = $version if (not $name =~ /\$\{?VERSION}?/);
+      }
+  
+***************
+*** 1220,1228 ****
+          $bugurl  =~ s/\(+$//g if (defined $bugurl);
+  
+! 	$varhash{"PACKAGE_NAME"} = $name if (not $name =~ /\${?AC_PACKAGE_NAME}?/);
+! 	$varhash{"PACKAGE"} = $name if (not $name =~ /\${?PACKAGE}?/);
+! 	$varhash{"PACKAGE_VERSION"} = $version if (not $name =~ /\${?AC_PACKAGE_VERSION}?/);
+! 	$varhash{"VERSION"} = $version if (not $name =~ /\${?VERSION}?/);
+!         $varhash{"PACKAGE_BUGREPORT"} = $bugurl if (defined $bugurl and not $bugurl =~ /\${?\w+}?/);
+      }
+  
+--- 1220,1228 ----
+          $bugurl  =~ s/\(+$//g if (defined $bugurl);
+  
+! 	$varhash{"PACKAGE_NAME"} = $name if (not $name =~ /\$\{?AC_PACKAGE_NAME}?/);
+! 	$varhash{"PACKAGE"} = $name if (not $name =~ /\$\{?PACKAGE}?/);
+! 	$varhash{"PACKAGE_VERSION"} = $version if (not $name =~ /\$\{?AC_PACKAGE_VERSION}?/);
+! 	$varhash{"VERSION"} = $version if (not $name =~ /\$\{?VERSION}?/);
+!         $varhash{"PACKAGE_BUGREPORT"} = $bugurl if (defined $bugurl and not $bugurl =~ /\$\{?\w+}?/);
+      }
+  
