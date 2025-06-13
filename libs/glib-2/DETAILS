@@ -8,7 +8,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%-*}-$VERSION
         REPLACES=gdbus-codegen
          ENTERED=20020313
          UPDATED=20250613
-           SHORT="A library of useful C routines for trees, hashes, and lists"
+          SHORT="A library of useful C routines for trees, hashes, and lists"
 
 cat << EOF
 GLib is the low-level core library that forms the basis for projects such as
