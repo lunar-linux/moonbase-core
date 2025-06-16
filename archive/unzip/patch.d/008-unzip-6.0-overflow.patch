@@ -1,8 +1,8 @@
 diff --git a/extract.c b/extract.c
 index a0a4929..9ef80b3 100644
---- ./extract.c
-+++ ./extract.c
-@@ -2239,6 +2239,7 @@ static int test_compr_eb(__G__ eb, eb_size, compr_offset, test_uc_ebdata)
+--- a/extract.c
++++ b/extract.c
+@@ -2214,6 +2214,7 @@ static int test_compr_eb(__G__ eb, eb_size, compr_offset, test_uc_ebdata)
      ulg eb_ucsize;
      uch *eb_ucptr;
      int r;
@@ -10,7 +10,7 @@ index a0a4929..9ef80b3 100644
  
      if (compr_offset < 4)                /* field is not compressed: */
          return PK_OK;                    /* do nothing and signal OK */
-@@ -2249,6 +2249,12 @@ static int test_compr_eb(__G__ eb, eb_size, compr_offset, test_uc_ebdata)
+@@ -2223,6 +2224,12 @@ static int test_compr_eb(__G__ eb, eb_size, compr_offset, test_uc_ebdata)
           eb_size <= (compr_offset + EB_CMPRHEADLEN)))
          return IZ_EF_TRUNC;               /* no compressed data! */
  
