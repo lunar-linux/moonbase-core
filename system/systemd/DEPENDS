@@ -15,7 +15,7 @@ depends python-jinja2
 depends python-pyelftools
 
 optional_depends acl           "-Dacl=true"                           "-Dacl=false"           "for ACL support"                     y
-optional_depends cryptsetup    "-Dlibcryptsetup=true"                 "-Dlibcryptsetup=false" "for device-mapper crypto encryption"
+optional_depends cryptsetup    "-Dlibcryptsetup=true"                 "-Dlibcryptsetup=false" "for device-mapper crypto encryption" y
 optional_depends Linux-PAM     "-Dpam=true -Dpamlibdir=/lib/security" "-Dpam=false"           "for PAM support"                     y
 optional_depends libgcrypt     "-Dgcrypt=true"                        "-Dgcrypt=false"        "for gcrypt support"                  y
 optional_depends elfutils      "-Delfutils=true"                      "-Delfutils=false"      "for elfutils support"                n
