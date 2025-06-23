@@ -1,7 +1,7 @@
-t a/list.c b/list.c
+diff --git a/list.c b/list.c
 index f7359c3..4c3d703 100644
---- ./list.c
-+++ ./list.c
+--- a/list.c
++++ b/list.c
 @@ -97,7 +97,7 @@ int list_files(__G)    /* return PK-type error code */
  {
      int do_this_file=FALSE, cfactor, error, error_in_archive=PK_COOL;
