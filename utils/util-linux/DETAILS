@@ -1,11 +1,11 @@
           MODULE=util-linux
-         VERSION=2.41
+         VERSION=2.41.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KERNEL_URL/pub/linux/utils/$MODULE/v${VERSION::4}
-     SOURCE_VFY=sha256:81ee93b3cfdfeb7d7c4090cedeba1d7bbce9141fd0b501b686b3fe475ddca4c6
+     SOURCE_VFY=sha256:be9ad9a276f4305ab7dd2f5225c8be1ff54352f565ff4dede9628c1aaa7dec57
         WEB_SITE=https://github.com/util-linux/util-linux
          ENTERED=20010922
-         UPDATED=20250318
+         UPDATED=20250624
            SHORT="Essential utilities for any Linux box"
 
 cat << EOF
