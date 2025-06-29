@@ -1,3 +1,4 @@
+./autogen.sh &&
 sed 's|$(DESTDIR)/sbin|$(DESTDIR)/usr/bin|' -i {ntfsprogs,src}/Makefile.in &&
 autoreconf -fiv &&
 #export LIBGCRYPT_LIBS="-lgcrypt"
