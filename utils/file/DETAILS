@@ -7,7 +7,7 @@
       SOURCE_VFY=sha256:c9cc77c7c560c543135edc555af609d5619dbef011997e988ce40a3d75d86088
         WEB_SITE=http://www.darwinsys.com/file/
          ENTERED=20010922
-         UPDATED=20250325
+         UPDATED=20250702
            SHORT="File attempts to classify files by their content"
 
 cat << EOF
