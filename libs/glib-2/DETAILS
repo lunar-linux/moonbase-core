@@ -1,13 +1,13 @@
           MODULE=glib-2
-         VERSION=2.84.3
+         VERSION=2.85.1
           SOURCE=${MODULE%-*}-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%-*}-$VERSION
       SOURCE_URL=$GNOME_URL/sources/glib/${VERSION%.*}
-      SOURCE_VFY=sha256:aa4f87c3225bf57ca85f320888f7484901a17934ca37023c3bd8435a72db863e
+      SOURCE_VFY=sha256:d3f57bcd4202d93aa547ffa1d2a5dbd380a05dbaac04cc291bd7dfce93b4a8e5
         WEB_SITE=http://library.gnome.org/devel/glib
         REPLACES=gdbus-codegen
          ENTERED=20020313
-         UPDATED=20250613
+         UPDATED=20250704
           SHORT="A library of useful C routines for trees, hashes, and lists"
 
 cat << EOF
