@@ -1,9 +1,18 @@
-make &&
-make zstdmt &&
-make -C contrib/pzstd &&
+cd build/cmake
 
-prepare_install &&
+OPTS+=" -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DZSTD_ZLIB_SUPPORT=ON \
+        -DZSTD_LZ4_SUPPORT=ON \
+        -DZSTD_BUILD_CONTRIB=ON \
+        -DZSTD_BUILD_STATIC=OFF \
+        -DZSTD_BUILD_TESTS=OFF \
+        -DZSTD_PROGRAMS_LINK_SHARED=ON \
+        -Wno-dev"
 
-make PREFIX=/usr install &&
-ln -f /usr/bin/zstd /usr/bin/zstdmt &&
-install -Dm755 contrib/pzstd/pzstd /usr/bin/pzstd
+cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
+cmake --build $MODULE-$VERSION &&
+
+prepare_install
+cmake --install $MODULE-$VERSION
