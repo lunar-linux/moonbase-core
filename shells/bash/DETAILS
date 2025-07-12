@@ -1,15 +1,15 @@
           MODULE=bash
-         VERSION=5.1.0
+         VERSION=5.3.0
     BASE_VERSION=${VERSION%.*}
           SOURCE=$MODULE-$BASE_VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$BASE_VERSION
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
    SOURCE_URL[2]=ftp://ftp.cwru.edu/pub/$MODULE
-      SOURCE_VFY=sha256:cc012bc860406dcf42f64431bcd3d2fa7560c02915a601aba9cd597a39329baa
+      SOURCE_VFY=sha256:62dd49c44c399ed1b3f7f731e87a782334d834f08e098a35f2c87547d5dbb269
         WEB_SITE=http://www.gnu.org/software/bash
          ENTERED=20010922
-         UPDATED=20220117
+         UPDATED=20250712
            SHORT="A shell of the GNU operating system"
 
 cat << EOF
