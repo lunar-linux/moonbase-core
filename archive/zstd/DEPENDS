@@ -1,3 +1,6 @@
 depends xz
 depends lz4
 depends zlib
+depends cmake
+
+optional_depends lzma-sdk "-DZSTD_LZMA_SUPPORT=ON" "-DZSTD_LZMA_SUPPORT=OFF" "for lzma archiving support"
