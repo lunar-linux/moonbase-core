@@ -16,7 +16,7 @@ if query "Do you want lunar to attempt to rebuild all affected modules?" ${ASK_F
   do
     lvu install "$mod" | grep '.*\.so$\|/bin/\|/sbin/\|/games/' | while read modfile
     do
-      ldd "$modfile" 2>/dev/null | fgrep -q "libstdc++.so.6" &&
+      ldd "$modfile" 2>/dev/null | grep -F -q "libstdc++.so.6" &&
       echo "$mod" &&
       break
     done
