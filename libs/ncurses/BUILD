@@ -67,7 +67,8 @@ set -x &&
 set +x &&
 default_make &&
 
-# Do not break some essential apps like gawk
+# Do not break some essential apps like gawk, dialog
+ln -sf libncursesw.so.6 libncurses.so.6 &&
 ln -sf libncurses.so.6 /lib/libncurses.so.5 &&
 
 gather_docs ANNOUNCE TODO
