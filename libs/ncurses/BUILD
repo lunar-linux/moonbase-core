@@ -19,6 +19,7 @@ set -x &&
              --enable-pc-files                        \
              --enable-colorfgbg                       \
              --without-ada                            \
+             --without-cxx                            \
              --without-debug                          \
              --with-normal                            \
              --with-shared                            \
@@ -53,6 +54,7 @@ set -x &&
              --enable-widec                           \
              --enable-pc-files                        \
              --without-ada                            \
+             --without-cxx                            \
              --without-debug                          \
              --with-normal                            \
              --with-shared                            \
