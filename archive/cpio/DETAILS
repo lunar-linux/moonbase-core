@@ -6,7 +6,7 @@
       SOURCE_VFY=sha256:937610b97c329a1ec9268553fb780037bcfff0dcffe9725ebc4fd9c1aa9075db
         WEB_SITE=http://www.gnu.org/software/cpio/
          ENTERED=20011004
-         UPDATED=20240122
+         UPDATED=20250812
            SHORT="A tool to copy files into or out of a cpio or tar archive"
 
 cat << EOF
