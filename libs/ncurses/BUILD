@@ -10,6 +10,7 @@ rm -rf /usr/share/terminfo &&
 # system!
 unset CC CXX &&
 
+# build without wide-char support first
 set -x &&
 ./configure  --build=$BUILD                           \
              --prefix=/usr                            \
@@ -18,6 +19,7 @@ set -x &&
              --disable-termcap                        \
              --enable-pc-files                        \
              --enable-colorfgbg                       \
+             --disable-widec                          \
              --without-ada                            \
              --without-cxx                            \
              --without-debug                          \
@@ -32,6 +34,7 @@ set -x &&
 default_make &&
 
 # Do not break some essential apps like gawk
+# (hmm, 20250820 - do we still need to worry about this? --dagbrown)
 ln -sf libncurses.so.6 /lib/libncurses.so.5 &&
 
 devoke_installwatch &&
@@ -68,7 +71,7 @@ set +x &&
 default_make &&
 
 # Do not break some essential apps like gawk, dialog
-ln -sf libncursesw.so.6 libncurses.so.6 &&
+# (hmm, 20250820 - do we still need to worry about this? --dagbrown)
 ln -sf libncurses.so.6 /lib/libncurses.so.5 &&
 
 gather_docs ANNOUNCE TODO
