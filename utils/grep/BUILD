@@ -16,5 +16,4 @@ else
   OPTS=$OPTS" --disable-nls"
 fi &&
 
-sedit "s/SYMLINK=\"ln -s\"/SYMLINK=\"ln -sf\"/" configure &&
 default_build
