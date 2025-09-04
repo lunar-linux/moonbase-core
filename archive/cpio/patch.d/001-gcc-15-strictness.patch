@@ -1,0 +1,32 @@
+diff -r -C 2 cpio-2.15.orig/src/extern.h cpio-2.15/src/extern.h
+*** cpio-2.15.orig/src/extern.h	2024-01-14 20:42:18.000000000 +0900
+--- cpio-2.15/src/extern.h	2025-08-12 13:38:13.556032097 +0900
+***************
+*** 98,102 ****
+  extern char input_is_seekable;
+  extern char output_is_seekable;
+! extern int (*xstat) ();
+  extern void (*copy_function) ();
+  extern char *change_directory_option;
+--- 98,102 ----
+  extern char input_is_seekable;
+  extern char output_is_seekable;
+! extern int (*xstat) (const char *pathname, struct stat *statbuf);
+  extern void (*copy_function) ();
+  extern char *change_directory_option;
+diff -r -C 2 cpio-2.15.orig/src/global.c cpio-2.15/src/global.c
+*** cpio-2.15.orig/src/global.c	2024-01-14 20:42:18.000000000 +0900
+--- cpio-2.15/src/global.c	2025-08-12 13:38:25.209520528 +0900
+***************
+*** 186,190 ****
+  /* A pointer to either lstat or stat, depending on whether
+     dereferencing of symlinks is done for input files.  */
+! int (*xstat) ();
+  
+  /* Which copy operation to perform. (-i, -o, -p) */
+--- 186,190 ----
+  /* A pointer to either lstat or stat, depending on whether
+     dereferencing of symlinks is done for input files.  */
+! int (*xstat) (const char *pathname, struct stat *statbuf);
+  
+  /* Which copy operation to perform. (-i, -o, -p) */
