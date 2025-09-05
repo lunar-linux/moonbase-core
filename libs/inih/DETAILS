@@ -1,13 +1,13 @@
           MODULE=inih
-         VERSION=r60
+         VERSION=r61
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/benhoyt/inih/archive/${VERSION}.tar.gz
-      SOURCE_VFY=sha256:706aa05c888b53bd170e5d8aa8f8a9d9ccf5449dfed262d5103d1f292af26774
+      SOURCE_VFY=sha256:7caf26a2202a4ca689df3fe4175dfa74e0faa18fcca07331bba934fd0ecb8f12
         WEB_SITE=https://github.com/benhoyt/inih/
          ENTERED=20201212
-         UPDATED=20250421
+         UPDATED=20250814
            SHORT="A simple .INI file parser written in C"
-           PSAFE=no
+PSAFE=no
 
 cat << EOF
 xfsprogs - The XFS file system utilities and libraries.

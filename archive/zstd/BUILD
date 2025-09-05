@@ -1,18 +1,5 @@
-cd build/cmake
+cd build/meson
 
-OPTS+=" -DCMAKE_BUILD_TYPE=Release \
-        -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_INSTALL_LIBDIR=lib \
-        -DZSTD_ZLIB_SUPPORT=ON \
-        -DZSTD_LZ4_SUPPORT=ON \
-        -DZSTD_BUILD_CONTRIB=ON \
-        -DZSTD_BUILD_STATIC=OFF \
-        -DZSTD_BUILD_TESTS=OFF \
-        -DZSTD_PROGRAMS_LINK_SHARED=ON \
-        -Wno-dev"
+OPTS+=" -Dbin_contrib=true -Dbin_contrib=true"
 
-cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
-cmake --build $MODULE-$VERSION &&
-
-prepare_install
-cmake --install $MODULE-$VERSION
+default_meson_build
