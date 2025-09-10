@@ -1,12 +1,12 @@
           MODULE=btrfs-progs
-         VERSION=6.16
+         VERSION=6.16.1
           SOURCE=$MODULE-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
  SOURCE_URL_FULL=https://github.com/kdave/btrfs-progs/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:8a53bcad0bba676d0e095fe498e1fb94a2757d07b1ed7e459a84357d4064c138
+      SOURCE_VFY=sha256:4b449d402f1a636b57ebf537fede7e3ae04f24d273f79df79b0f333702e439db
         WEB_SITE=https://btrfs.readthedocs.io/en/latest/
          ENTERED=20090819
-         UPDATED=20250822
+         UPDATED=20250910
            SHORT="btrfs userspace tools"
 
 cat << EOF
