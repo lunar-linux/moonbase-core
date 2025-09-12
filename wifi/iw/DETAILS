@@ -1,11 +1,11 @@
           MODULE=iw
-         VERSION=6.9
+         VERSION=6.17
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KERNEL_URL/pub/software/network/iw
-      SOURCE_VFY=sha256:3f2db22ad41c675242b98ae3942dbf3112548c60a42ff739210f2de4e98e4894
+      SOURCE_VFY=sha256:7d182e498289ab39b257da6780d562e415377107f50358ee5b55b8cfe40b1e33
         WEB_SITE=http://wireless.kernel.org/en/users/Documentation/iw
          ENTERED=20110121
-         UPDATED=20241224
+         UPDATED=20250912
            SHORT="nl80211-based CLI configuration utility for wireless devices"
 
 cat << EOF
