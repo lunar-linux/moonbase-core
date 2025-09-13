@@ -2,5 +2,5 @@ default_pre_build &&
 
 #./autogen.sh &&
 
-OPTS+=" --enable-shared"
+OPTS+=" --enable-shared --disable-static"
 
