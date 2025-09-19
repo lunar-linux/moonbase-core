@@ -1,5 +1,5 @@
           MODULE=linux
-         VERSION=6.16.7
+         VERSION=6.16.8
             BASE=$(echo $VERSION | cut -d. -f1,2)
           SOURCE=$MODULE-$BASE.tar.xz
 if [ -n "$(echo $VERSION | cut -d. -f3)" ] ; then
@@ -10,10 +10,10 @@ fi
   SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v6.x/
   SOURCE2_URL[1]=https://www.kernel.org/pub/linux/kernel/v6.x/
       SOURCE_VFY=sha256:1a4be2fe6b5246aa4ac8987a8a4af34c42a8dd7d08b46ab48516bcc1befbcd83
-     SOURCE2_VFY=sha256:44817159762a9b337461824d79082f8d3bef22283ebc555c207334b5b3e7f050
+     SOURCE2_VFY=sha256:b27835c7d685efc3ab770eead7d686a1d8cae4c2cec1a6c1efeb3c6d18bbc7b3
         WEB_SITE=https://www.kernel.org/
          ENTERED=20111121
-         UPDATED=20250911
+         UPDATED=20250919
            SHORT="The core of a Linux GNU Operating System"
      KEEP_SOURCE=on
            TMPFS=off
