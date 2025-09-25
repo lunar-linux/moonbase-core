@@ -1,12 +1,12 @@
           MODULE=meson
-         VERSION=1.8.4
+         VERSION=1.9.1
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/mesonbuild/meson/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:57dfa56ead471eec31d624d76c819e743a4dd0f6e8b4cd503e63d97604d11c2c
+      SOURCE_VFY=sha256:febaa8f7c1916521c53eb5fd11c0641b5eb4741c2c6e9b42c288ed62d9e4fd2c
         WEB_SITE=http://mesonbuild.com/
             TYPE=python3
          ENTERED=20160429
-         UPDATED=20250822
+         UPDATED=20250925
            SHORT="The meson build system"
 
 cat << EOF
