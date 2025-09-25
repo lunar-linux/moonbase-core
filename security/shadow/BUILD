@@ -51,6 +51,7 @@ find $SOURCE_DIRECTORY/__shadowdest/usr/share/man \
          -name 'login.1'   -o \
          -name 'logoutd.8' -o \
          -name 'nologin.8' -o \
+         -name 'su.1'      -o \
          -name 'vigr.8'    -o \
          -name 'vipw.8'   ')' \
       -delete &&
