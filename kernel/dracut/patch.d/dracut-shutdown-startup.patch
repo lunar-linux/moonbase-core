@@ -1,0 +1,16 @@
+diff -C 3 -r a/dracut-ng-106/modules.d/98dracut-systemd/dracut-shutdown.service b/dracut-ng-106/modules.d/98dracut-systemd/dracut-shutdown.service
+*** dracut-ng-106/modules.d/98dracut-systemd/dracut-shutdown.service	2025-02-01 10:20:41.000000000 +0900
+--- dracut-ng-106/modules.d/98dracut-systemd/dracut-shutdown.service	2025-09-21 16:34:14.968689352 +0900
+***************
+*** 11,15 ****
+  [Service]
+  RemainAfterExit=yes
+  Type=oneshot
+! ExecStart=/bin/true
+  ExecStop=/usr/lib/dracut/dracut-initramfs-restore
+--- 11,15 ----
+  [Service]
+  RemainAfterExit=yes
+  Type=oneshot
+! ExecStart=/usr/bin/true
+  ExecStop=/usr/lib/dracut/dracut-initramfs-restore
