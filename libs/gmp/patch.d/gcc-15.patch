@@ -1,0 +1,16 @@
+diff -C 2 -r gmp-6.3.0.orig/acinclude.m4 gmp-6.3.0/acinclude.m4
+*** gmp-6.3.0.orig/acinclude.m4	2023-07-29 22:42:16.000000000 +0900
+--- gmp-6.3.0/acinclude.m4	2025-08-21 16:16:36.115376807 +0900
+***************
+*** 610,614 ****
+  #if defined (__GNUC__) && ! defined (__cplusplus)
+  typedef unsigned long long t1;typedef t1*t2;
+! void g(){}
+  void h(){}
+  static __inline__ t1 e(t2 rp,t2 up,int n,t1 v0)
+--- 610,614 ----
+  #if defined (__GNUC__) && ! defined (__cplusplus)
+  typedef unsigned long long t1;typedef t1*t2;
+! void g(int a,const t1 *b,const t1 c,const t1 *d,const t1 *e,int f){}
+  void h(){}
+  static __inline__ t1 e(t2 rp,t2 up,int n,t1 v0)
