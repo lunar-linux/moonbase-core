@@ -1,10 +1,8 @@
 export PYTHONDONTWRITEBYTECODE=1 &&
 
-OPTS+=" -Drootprefix=/usr \
-        -Daudit=false \
+OPTS+=" -Daudit=false \
         -Dima=false \
         -Dlibidn2=true \
-        -Dsplit-usr=true \
         -Dfallback-hostname=lunarlinux \
         -Drpmmacrosdir=no \
         -Dsysvinit-path= \
