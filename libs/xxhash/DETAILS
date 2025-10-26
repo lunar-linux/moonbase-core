@@ -1,0 +1,26 @@
+          MODULE=xxhash
+         VERSION=0.8.3
+          SOURCE=xxHash-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/Cyan4973/xxHash/archive/v$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/xxHash-$VERSION
+      SOURCE_VFY=sha256:aae608dfe8213dfd05d909a57718ef82f30722c392344583d3f39050c7f29a80
+        WEB_SITE=https://cyan4973.github.io/xxHash/
+         ENTERED=20251026
+         UPDATED=20251026
+           SHORT="Extremely fast non-cryptographic hash algorithm"
+
+cat << EOF
+xxHash is an extremely fast, non-cryptographic hashing library that processes
+data at RAM speed limits. It offers three algorithms: XXH32 (32-bit), XXH64
+(64-bit), and XXH3/XXH128 (64 or 128-bit with vectorization).
+
+The library generates hash values with excellent dispersion and randomness
+properties, making it ideal for hash tables, bloom filters, and checksums.
+All variants pass the SMHasher test suite for quality assurance.
+
+Performance: XXH3 achieves 31.5 GB/s bandwidth on SSE2, significantly
+outperforming cryptographic alternatives.
+
+Provides: libxxhash.so library and xxhsum command-line utility
+License: Library (BSD), xxhsum utility (GPL2)
+EOF
