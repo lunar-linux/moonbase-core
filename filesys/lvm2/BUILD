@@ -1,10 +1,5 @@
-if module_installed systemd; then
-  OPTS+=" --with-udev_prefix=/usr \
-          --with-systemdsystemunitdir=$(pkg-config systemd --variable=systemdsystemunitdir)"
-else
-  OPTS+=" --with-udev_prefix=/ \
-          --with-systemdsystemunitdir=no"
-fi &&
+OPTS+=" --with-udev_prefix=/usr \
+        --with-systemdsystemunitdir=$(pkg-config systemd --variable=systemdsystemunitdir)"
 
 OPTS+=" --libdir=/usr/lib  \
         --enable-fsadm     \

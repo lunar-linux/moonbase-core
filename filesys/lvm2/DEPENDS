@@ -4,6 +4,14 @@ depends libaio
 # optional circular depend with systemd->cryptsetup
 depends systemd
 
+optional_depends libnvme \
+        "--with-libnvme" "--without-libnvme" \
+        "for the NVME library support"
+
+optional_depends libedit \
+        "--enable-editline" "--disable-editline" \
+        "for line edit thru libedit instead of readline (next option)" n
+
 optional_depends readline \
-                 "--enable-readline" "" \
-                 "for line edit thru readline support"
+        "--enable-readline" "--disable-readline" \
+        "for line edit thru readline support"
