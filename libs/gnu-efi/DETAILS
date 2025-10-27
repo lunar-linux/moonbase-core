@@ -1,11 +1,12 @@
           MODULE=gnu-efi
-         VERSION=3.0.18
-          SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:7f212c96ee66547eeefb531267b641e5473d7d8529f0bd8ccdefd33cf7413f5c
-        WEB_SITE=http://sourceforge.net/projects/gnu-efi/
+         VERSION=4.0.2
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/ncroxon/gnu-efi/archive/refs/tags/$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+      SOURCE_VFY=sha256:f31488c3fc7d64257ec8fcad470ec75a936a4db77350fabaf043c52a7acbae72
+        WEB_SITE=https://github.com/ncroxon/gnu-efi/
          ENTERED=20150705
-         UPDATED=20250307
+         UPDATED=20251027
            SHORT="Library for building EFI applications"
            PSAFE=no
 
