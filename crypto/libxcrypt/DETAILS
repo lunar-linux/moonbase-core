@@ -1,11 +1,11 @@
           MODULE=libxcrypt
-         VERSION=4.4.38
+         VERSION=4.5.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://github.com/besser82/libxcrypt/releases/download/v$VERSION
-      SOURCE_VFY=sha256:80304b9c306ea799327f01d9a7549bdb28317789182631f1b54f4511b4206dd6
+      SOURCE_VFY=sha256:825e764e4ff2e6304adb814cda297074b222d54a04edbd8ebc7cf58fc3af857d
         WEB_SITE=https://github.com/besser82/libxcrypt/
          ENTERED=20201025
-         UPDATED=20250114
+         UPDATED=20251106
            SHORT="Modern library for one-way hashing of passwords"
 
 cat << EOF
