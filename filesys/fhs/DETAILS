@@ -1,8 +1,8 @@
           MODULE=fhs
-         VERSION=2.3
-        WEB_SITE=http://refspecs.linuxfoundation.org/fhs.shtml
+         VERSION=3.0
+        WEB_SITE=https://specifications.freedesktop.org/fhs/latest/
          ENTERED=20130829
-         UPDATED=20220314
+         UPDATED=20251106
            SHORT="Filesystem Hierarchy Standard"
 
 cat << EOF
