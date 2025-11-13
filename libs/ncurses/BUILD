@@ -10,6 +10,8 @@ rm -rf /usr/share/terminfo &&
 # system!
 unset CC CXX &&
 
+CXXFLAGS+=' -std=c++17 '
+
 # build without wide-char support first
 set -x &&
 ./configure  --build=$BUILD                           \
@@ -21,14 +23,14 @@ set -x &&
              --enable-colorfgbg                       \
              --disable-widec                          \
              --without-ada                            \
-             --without-cxx                            \
              --without-debug                          \
              --with-normal                            \
              --with-shared                            \
              --with-manpage-format=gzip               \
              --with-terminfo-dirs=/usr/share/terminfo \
              --with-pkg-config-libdir=/usr/lib/pkgconfig \
-             --without-ada \
+             --without-ada                            \
+             CXXFLAGS="$CXXFLAGS"                     \
              $OPTS         &&
 
 default_make &&
@@ -57,14 +59,14 @@ set -x &&
              --enable-widec                           \
              --enable-pc-files                        \
              --without-ada                            \
-             --without-cxx                            \
              --without-debug                          \
              --with-normal                            \
              --with-shared                            \
              --with-manpage-format=gzip               \
              --with-terminfo-dirs=/usr/share/terminfo \
              --with-pkg-config-libdir=/usr/lib/pkgconfig \
-             --without-ada \
+             --without-ada                            \
+             CXXFLAGS="$CXXFLAGS"                     \
             $OPTS         &&
 
 set +x &&
