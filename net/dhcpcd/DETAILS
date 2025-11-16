@@ -1,11 +1,11 @@
           MODULE=dhcpcd
-         VERSION=10.2.4
+         VERSION=10.3.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://github.com/NetworkConfiguration/dhcpcd/releases/download/v$VERSION
-      SOURCE_VFY=sha256:6721e606609226dbf4d864a78802a9e96beec0ee034a1bd84138b3e037bba7d9
+      SOURCE_VFY=sha256:06e4c1aaf958523f3fd1c57258c613c6c7ae56b8f1d678fa7943495d5ea6aeb5
         WEB_SITE=http://roy.marples.name/projects/dhcpcd
          ENTERED=20011126
-         UPDATED=20250928
+         UPDATED=20251116
            SHORT="DHCP client/daemon that works with @home"
 
 cat << EOF
