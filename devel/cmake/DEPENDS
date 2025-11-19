@@ -15,11 +15,7 @@ optional_depends xz         "--system-liblzma"    "--no-system-liblzma"    "Use 
 
 optional_depends RHash "--system-librhash" "--no-system-librhash" "For files hash sums verifying support"
 
-optional_depends qt5 \
-                 "--qt-gui" \
-                 "--no-qt-gui" \
-                 "For qt gui support" \
-                 "n"
+optional_depends qt6-base "--qt-gui" "--no-qt-gui" "For qt gui support" "n"
 
 # avoid circular depend on jsoncpp
 # optional_depends jsoncpp "--system-jsoncpp" "" "Use system provided jsoncpp"
