@@ -1,12 +1,12 @@
           MODULE=cmake
-         VERSION=4.1.2
+         VERSION=4.1.3
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=https://fossies.org/linux/misc/
    SOURCE_URL[1]=https://cmake.org/files/v${VERSION%.*}/
-      SOURCE_VFY=sha256:643f04182b7ba323ab31f526f785134fb79cba3188a852206ef0473fee282a15
+      SOURCE_VFY=sha256:765879a53d178bf1e1509768de4c9a672dabaa20047a9f3809571558e783be88
         WEB_SITE=https://cmake.org/
          ENTERED=20060725
-         UPDATED=20251004
+         UPDATED=20251120
            SHORT="Cross-platform make system"
 
 cat << EOF
