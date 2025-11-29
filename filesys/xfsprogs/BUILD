@@ -1,3 +1,9 @@
+# journalctl reports: system-xfs_scrub.slice:15: Support for option CPUAccounting= has been removed and it is ignored
+sedit 's:CPUAccounting=true::' scrub/system-xfs_scrub.slice \
+                               scrub xfs_scrub@.service.in \
+                               scrub/xfs_scrub_all.service.in \
+                               xfs_scrub_media@.service.in &&
+
 export DEBUG=-DNDEBUG &&
 
 # /usr/bin/ld: /usr/lib64/libicuuc.so.76: error adding symbols: DSO missing from command line
