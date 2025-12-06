@@ -1,11 +1,11 @@
           MODULE=nftables
-         VERSION=1.1.5
+         VERSION=1.1.6
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://netfilter.org/projects/nftables/files/
-      SOURCE_VFY=sha256:1daf10f322e14fd90a017538aaf2c034d7cc1eb1cc418ded47445d714ea168d4
+      SOURCE_VFY=sha256:372931bda8556b310636a2f9020adc710f9bab66f47efe0ce90bff800ac2530c
         WEB_SITE=https://netfilter.org/projects/nftables/
          ENTERED=20241019
-         UPDATED=20251024
+         UPDATED=20251206
            SHORT="A NetFilter-based replacement for iptables"
 
 cat << EOF
