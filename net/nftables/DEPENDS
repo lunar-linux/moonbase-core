@@ -1,1 +1,6 @@
 depends libedit
+depends libmnl
+depends libnftnl
+
+optional_depends jansson "--with-json" "--without-json" \
+        "for JSON output support"
