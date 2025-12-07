@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:372931bda8556b310636a2f9020adc710f9bab66f47efe0ce90bff800ac2530c
         WEB_SITE=https://netfilter.org/projects/nftables/
          ENTERED=20241019
-         UPDATED=20251206
+         UPDATED=20251207
            SHORT="A NetFilter-based replacement for iptables"
 
 cat << EOF
