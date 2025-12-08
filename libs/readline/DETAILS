@@ -1,15 +1,15 @@
           MODULE=readline
-         VERSION=8.2.0
+         VERSION=8.3.0
     BASE_VERSION=${VERSION%.*}
           SOURCE=$MODULE-$BASE_VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$BASE_VERSION
    SOURCE_URL[0]=$GNU_URL/$MODULE
    SOURCE_URL[1]=ftp://ftp.cwru.edu/pub/bash
    SOURCE_URL[2]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:3feb7171f16a84ee82ca18a36d7b9be109a52c04f492a053331d7d1095007c35
+      SOURCE_VFY=sha256:fe5383204467828cd495ee8d1d3c037a7eba1389c22bc6a041f627976f9061cc
         WEB_SITE=http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
          ENTERED=20010922
-         UPDATED=20221028
+         UPDATED=20251208
            SHORT="Lets users edit command lines as they are typed in"
 
 cat << EOF
