@@ -1,11 +1,11 @@
       MODULE=userspace-rcu
-     VERSION=0.14.0
+     VERSION=0.15.5
       SOURCE=$MODULE-$VERSION.tar.bz2
   SOURCE_URL=https://lttng.org/files/urcu/
-  SOURCE_VFY=sha256:ca43bf261d4d392cff20dfae440836603bf009fce24fdc9b2697d837a2239d4f
+  SOURCE_VFY=sha256:b2f787a8a83512c32599e71cdabcc5131464947b82014896bd11413b2d782de1
     WEB_SITE=https://lttng.org/urcu/
      ENTERED=20150626
-     UPDATED=20230308
+     UPDATED=20251208
        SHORT="Userspace RCU (read-copy-update) library"
 
 cat << EOF
