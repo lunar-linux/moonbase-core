@@ -5,6 +5,8 @@ WANT_VERSION= download_module wget &&
 ./config --prefix=/usr \
          --openssldir=/etc/ssl \
          shared \
+         no-brotli \
+         no-brotli-dynamic \
          no-ssl3 \
          no-ssl3-method \
          $(arch | grep -q x86_64 && echo enable-ec_nistp_64_gcc_128) \
