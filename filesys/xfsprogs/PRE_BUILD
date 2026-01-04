@@ -1,0 +1,5 @@
+default_pre_build &&
+
+sedit '/^CPUAccounting=/d' scrub/{xfs_*.service.in,system-xfs_scrub.slice} &&
+sedit '/^Environment=/i Environment=PATH=\/bin:\/sbin:\/usr\/bin:\/usr\/sbin:\/usr\/local\/bin:\/usr\/local\/sbin' scrub/xfs_*.service.in
+
