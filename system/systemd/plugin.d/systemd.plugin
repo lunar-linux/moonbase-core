@@ -172,7 +172,7 @@ plugin_systemd_disable_services_pre_remove() {
   return 2
 }
 
-plugin_systemd_sysusersd_post_build() {
+plugin_systemd_sysusersd_pre_build() {
   local FILE SYSTEMDUSERSDIR
   debug_msg "plugin_systemd_sysusersd_post_build ($@)"
 
@@ -202,6 +202,6 @@ plugin_systemd_sysusersd_post_build() {
 plugin_register BUILD_CONFIGURE plugin_systemd_configure
 plugin_register BUILD_POST_BUILD plugin_systemd_post_build
 plugin_register BUILD_POST_BUILD plugin_systemd_tmpfilesd_post_build
-plugin_register BUILD_POST_BUILD plugin_systemd_sysusersd_post_build
+plugin_register BUILD_PRE_BUILD plugin_systemd_sysusersd_pre_build
 plugin_register BUILD_POST_INSTALL plugin_systemd_restart_services
 plugin_register BUILD_PRE_REMOVE plugin_systemd_disable_services_pre_remove
