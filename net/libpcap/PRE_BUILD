@@ -1,6 +1,7 @@
 default_pre_build &&
 
-sedit "s/all: libpcap.a shared pcap-config/all: shared pcap-config/g" Makefile.in &&
-sedit "s/install: install-shared install-archive pcap-config/install: install-shared pcap-config/g" Makefile.in &&
+# Disable the static library
+sedit "s/all: libpcap.a /all: /g" Makefile.in &&
+sedit '/^install:/s/install-archive //' Makefile.in &&
 
 patch_it $SOURCE2 1
