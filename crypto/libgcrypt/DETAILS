@@ -1,11 +1,11 @@
           MODULE=libgcrypt
-         VERSION=1.11.0
+         VERSION=1.11.2
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://www.gnupg.org/ftp/gcrypt/libgcrypt/
-      SOURCE_VFY=sha256:09120c9867ce7f2081d6aaa1775386b98c2f2f246135761aae47d81f58685b9c
+      SOURCE_VFY=sha256:6ba59dd192270e8c1d22ddb41a07d95dcdbc1f0fb02d03c4b54b235814330aac
         WEB_SITE=https://directory.fsf.org/wiki/Security/libgcrypt
          ENTERED=20020212
-         UPDATED=20241217
+         UPDATED=20260107
            SHORT="General purpose crypto library"
 
 cat << EOF
