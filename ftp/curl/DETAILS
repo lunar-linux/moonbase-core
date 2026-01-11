@@ -1,11 +1,11 @@
           MODULE=curl
-         VERSION=8.17.0
+         VERSION=8.18.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://curl.se/download/
-      SOURCE_VFY=sha256:955f6e729ad6b3566260e8fef68620e76ba3c31acf0a18524416a185acf77992
+      SOURCE_VFY=sha256:40df79166e74aa20149365e11ee4c798a46ad57c34e4f68fd13100e2c9a91946
         WEB_SITE=https://curl.se/
          ENTERED=20010922
-         UPDATED=20251105
+         UPDATED=20260111
            SHORT="Tool for transferring files using URL syntax"
 
 cat << EOF
