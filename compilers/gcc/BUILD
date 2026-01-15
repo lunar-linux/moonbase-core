@@ -14,7 +14,7 @@ OPTS+=" --build=$BUILD                \
         --mandir=/usr/share/man       \
         --enable-languages=$LANGUAGES \
         --enable-gnu-unique-object    \
-        --enable-ckecking=release     \
+        --enable-checking=release     \
         --enable-target-optspace      \
         --enable-linker-build-id      \
         --enable-threads=posix        \
