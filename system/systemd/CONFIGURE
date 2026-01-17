@@ -1,5 +1,5 @@
 NSCHEME=$(get_module_config NEW_NAME_SCHEME)
-if [ -z "$NSCHEME" ] && ip link | egrep -q '^[0-9]*: (eth|wlan|ath|ra|usb)[0-9]+[^>]*[<,]UP[,>]'; then
+if [ -z "$NSCHEME" ] && ip link | grep -E -q '^[0-9]*: (eth|wlan|ath|ra|usb)[0-9]+[^>]*[<,]UP[,>]'; then
   message "${PROBLEM_COLOR}WARNING:${MESSAGE_COLOR} You are still using the old network interface naming scheme."
   message "It is recommended to switch to the new naming scheme. Please note"
   message "that reconfiguration of your network interfaces using the new"
