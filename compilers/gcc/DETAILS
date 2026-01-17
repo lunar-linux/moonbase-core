@@ -1,14 +1,14 @@
              MODULE=gcc
-            VERSION=14.2.0
+            VERSION=14.3.0
              SOURCE=$MODULE-${VERSION}.tar.xz
       SOURCE_URL[0]=$GNU_URL/gcc/$MODULE-${VERSION}/
       SOURCE_URL[1]=ftp://gcc.gnu.org/pub/gcc/releases/gcc-${VERSION}/
       SOURCE_URL[2]=http://www.online-mirror.org/gcc/$MODULE-${VERSION}/
    SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
-         SOURCE_VFY=sha256:a7b39bc69cbf9e25826c5a60ab26477001f7c08d85cec04bc0e29cabed6f3cc9
+         SOURCE_VFY=sha256:e0dc77297625631ac8e50fa92fffefe899a4eb702592da5c32ef04e2293aca3a
            WEB_SITE=http://gcc.gnu.org/
             ENTERED=20020628
-            UPDATED=20240813
+            UPDATED=20260117
               SHORT="GNU compiler collection"
 
 cat << EOF
