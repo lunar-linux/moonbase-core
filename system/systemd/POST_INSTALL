@@ -37,7 +37,7 @@ if [ ! -L /var/lock ]; then
   fi
 fi
 
-if egrep -q '^(proc|none|devpts|usbfs|tmpfs)' /etc/fstab; then
+if grep -E -q '^(proc|none|devpts|usbfs|tmpfs)' /etc/fstab; then
   SYSTEMD_ERROR=1
   message "\n${PROBLEM_COLOR}WARNING: ${MESSAGE_COLOR}Incompatible systemd mountpoints found in ${FILE_COLOR}/etc/fstab${MESSAGE_COLOR}."
   message "${MESSAGE_COLOR}Please comment out or remove all lines except your file system and swap mountpoints from ${FILE_COLOR}/etc/fstab${MESSAGE_COLOR}."
