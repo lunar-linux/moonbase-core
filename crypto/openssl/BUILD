@@ -10,6 +10,7 @@ WANT_VERSION= download_module wget &&
          no-ssl3 \
          no-ssl3-method \
          $(arch | grep -q x86_64 && echo enable-ec_nistp_64_gcc_128) \
+         $([[ "$DOCS" == "n" ]] && echo no-docs) \
          "-Wa,--noexecstack" \
          $OPTS
 
