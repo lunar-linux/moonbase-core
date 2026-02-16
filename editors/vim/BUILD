@@ -24,4 +24,5 @@ make -j1 install &&
 install -Dm644 $SOURCE_DIRECTORY/runtime/ftplugin/logtalk.dict /usr/share/vim/vim${MAJOR}/ftplugin/logtalk.dict &&
 
 ln -sf /usr/bin/vim /usr/bin/vi &&
-cp -f $SCRIPT_DIRECTORY/vimrc /usr/share/vim/vim${MAJOR}/sample.vimrc
+cp -f $SCRIPT_DIRECTORY/vimrc /usr/share/vim/vim${MAJOR}/sample.vimrc &&
+[ -f /etc/vimrc ] || cp -f $SCRIPT_DIRECTORY/vimrc /etc/
