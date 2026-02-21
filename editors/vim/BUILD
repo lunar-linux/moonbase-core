@@ -25,4 +25,7 @@ install -Dm644 $SOURCE_DIRECTORY/runtime/ftplugin/logtalk.dict /usr/share/vim/vi
 
 ln -sf /usr/bin/vim /usr/bin/vi &&
 install -Dm644 $SCRIPT_DIRECTORY/vimrc /usr/share/vim/vim${MAJOR}/sample.vimrc &&
-[ -f /etc/vimrc ] || install -Dm644 $SCRIPT_DIRECTORY/vimrc /etc/
+[ -f /etc/vimrc ] || install -Dm644 $SCRIPT_DIRECTORY/vimrc /etc/ &&
+
+# $SCRIPT_DIRECTORY/skel/.config doesn't get installed by lunar, so do this here
+install -Dm644 $SCRIPT_DIRECTORY/skel/.config/vim/vimrc /etc/skel/.config/vim/vimrc
