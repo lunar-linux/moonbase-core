@@ -1,12 +1,12 @@
           MODULE=lunar
-         VERSION=50
+         VERSION=50p190
           SOURCE=$MODULE-$VERSION.tar.bz2
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
     SOURCE_URL=https://lunar.lart.ca/testing/
-      SOURCE_VFY=sha256:d5c0f3f267aeb4db4b27f81c052961887c8b5b5a3254d976e9218aaca9fe4757
+      SOURCE_VFY=sha256:260ea193cce239a9b4c250eeae077ec32eb004adaae3d914d4a79c96f7d142cc
         WEB_SITE=http://lunar-linux.org/
          ENTERED=20020218
-         UPDATED=20260218
+         UPDATED=20260222
            SHORT="lunar contains the package management tools for Lunar-Linux."
 USE_WRAPPERS=off
 
