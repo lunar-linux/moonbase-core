@@ -34,6 +34,8 @@ cd $GRUB_BIOS  &&
              --target="i386" \
              ${_EFI_EMU} \
              $OPTS &&
+# HACK - not sure who's actually supposed to make this file, but...
+touch $GRUB_BIOS/grub-core/extra_deps.lst &&
 make &&
 
 GRUB_EFI=$SOURCE_DIRECTORY/grub-efi &&
@@ -43,6 +45,8 @@ cd $GRUB_EFI &&
              --target="${_EFI_ARCH}" \
              --disable-efiemu \
              $OPTS &&
+# HACK - not sure who's actually supposed to make this file, but...
+touch $GRUB_EFI/grub-core/extra_deps.lst &&
 make &&
 
 prepare_install &&
