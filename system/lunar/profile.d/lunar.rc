@@ -198,7 +198,7 @@ _lunar_lin()
   local cur
   cur=${COMP_WORDS[COMP_CWORD]}
   if [[ "$cur" == -* ]]; then
-    COMPREPLY=( $( compgen -W '-c --compile -d --debug --deps -f --from -h --help --opts -p --probe -r --reconfigure -R --resurrect -s --silent -v --verbose -w --want -4 --ipv4 -6 --ipv6' -- "$cur") )
+    COMPREPLY=( $( compgen -W '-c --compile -d --debug --deps -f --from -h --help --opts -p --probe -r --reconfigure -R --resurrect -s --silent -v --verbose -w --want -4 --ipv4 -6 --ipv6 --catalyst-immediate' -- "$cur") )
   else
     _lunar_modules_list
   fi
@@ -236,3 +236,29 @@ _lunar_lrm ()
 }
 
 complete -F _lunar_lrm lrm
+
+_lunar_llint ()
+{
+  local cur prev
+  cur=${COMP_WORDS[COMP_CWORD]}
+  prev=${COMP_WORDS[COMP_CWORD-1]}
+
+  case "$prev" in
+    -path)
+      compopt -o filenames -o nospace
+      COMPREPLY=( $(compgen -d -- "$cur") )
+      return 0
+      ;;
+    -max-line-length)
+      return 0
+      ;;
+  esac
+
+  if [[ "$cur" == -* ]]; then
+    COMPREPLY=( $( compgen -W '-fix -max-line-length -path -verbose' -- "$cur" ) )
+  else
+    _lunar_modules_list
+  fi
+}
+
+complete -F _lunar_llint llint
