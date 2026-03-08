@@ -1,8 +1,8 @@
           MODULE=lunar-tools
          VERSION=2026.2
-          SOURCE=$MODULE-$VERSION-i686.tar.xz
+          SOURCE=$MODULE-$VERSION-amd64.tar.xz
       SOURCE_URL=https://github.com/lunar-linux/lunar-tools/releases/download/$VERSION
-      SOURCE_VFY=sha256:387070199aa4f065300d21124638df72e5f3702fe4340bcf57fb3159a456d291
+      SOURCE_VFY=sha256:546449802806d9bbc9575c16380a3ea85ef07588425c6db96310142321840a2f
         WEB_SITE=http://lunar-linux.org/
          ENTERED=20041029
          UPDATED=20260308
