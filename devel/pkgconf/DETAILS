@@ -2,9 +2,8 @@
          VERSION=2.5.1
           SOURCE=$MODULE-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}-${MODULE}-${VERSION}
-     SOURCE_URL=https://github.com/pkgconf/pkgconf/archive/
+      SOURCE_URL=https://github.com/pkgconf/pkgconf/archive/
       SOURCE_VFY=sha256:79721badcad1987dead9c3609eb4877ab9b58821c06bdacb824f2c8897c11f2a
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-$VERSION
         WEB_SITE=https://git.dereferenced.org/pkgconf/pkgconf/
         REPLACES=pkgconfig
          ENTERED=20180619
@@ -12,9 +11,9 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-$VERSION
            SHORT="Package compiler and linker metadata toolkit"
 
 cat << EOF
-pkgconf is a program which helps to configure compiler and linker flags for
-development libraries. It is similar to pkg-config from freedesktop.org.
-libpkgconf is a library which provides access to most of pkgconf's functionality
-to allow other tooling such as compilers and IDEs to discover and use libraries
-configured by pkgconf.
+pkgconf is a program which helps to configure compiler and linker
+flags for development libraries. It is similar to pkg-config from
+freedesktop.org.  libpkgconf is a library which provides access
+to most of pkgconf's functionality to allow other tooling such as
+compilers and IDEs to discover and use libraries configured by pkgconf.
 EOF
