@@ -1,14 +1,14 @@
           MODULE=gnu-efi
-         VERSION=4.0.2
+         VERSION=4.0.4
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/ncroxon/gnu-efi/archive/refs/tags/$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
-      SOURCE_VFY=sha256:f31488c3fc7d64257ec8fcad470ec75a936a4db77350fabaf043c52a7acbae72
+      SOURCE_VFY=sha256:40b61e842a4efcbf80f3e53b2f220c044e8cfe46eb4dd6396c83b751240b1c0d
         WEB_SITE=https://github.com/ncroxon/gnu-efi/
          ENTERED=20150705
-         UPDATED=20251027
+         UPDATED=20260312
            SHORT="Library for building EFI applications"
-           PSAFE=no
+PSAFE=no
 
 cat << EOF
 Develop EFI applications for ARM-64, ARM-32, x86_64, IA-64 (IPF), and
