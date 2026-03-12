@@ -1,16 +1,16 @@
           MODULE=ccache
-         VERSION=4.12.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=https://github.com/ccache/ccache/releases/download/v$VERSION/
-      SOURCE_VFY=sha256:c8e3ef79531966ecfa05bd1666c483b473df9af00896935cc468cb5ed573c16e
-        WEB_SITE=https://ccache.dev/
+         VERSION=0.14.0
+          SOURCE=sccache-v$VERSION-aarch64-pc-windows-msvc.tar.gz
+      SOURCE_URL=https://github.com/mozilla/sccache/releases/download/v$VERSION/
+      SOURCE_VFY=sha256:b416e81f946c607467c5383022842649569d73f468a8e42b4536998e3d784224
+        WEB_SITE=https://github.com/mozilla/sccache
          ENTERED=20020701
-         UPDATED=20260216
-           SHORT="A compiler cache"
+         UPDATED=20260312
+           SHORT="Distributed compiler cache written in Rust"
 
 cat << EOF
-ccache is a compiler cache. It acts as a caching pre-processor to C/C++
-compilers, using the -E compiler switch and a hash to detect when a
-compilation can be satisfied from cache.
-This often results in a 5 to 10 times speedup in common compilations.
+sccache is a ccache-like compiler caching tool. It is used as a compiler
+wrapper and avoids compilation when possible, storing cached results either
+locally or in a remote storage backend. sccache is written in Rust and supports
+compilation caching for C/C++ code and can significantly speed up rebuilds.
 EOF
