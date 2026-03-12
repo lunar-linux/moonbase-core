@@ -1,12 +1,13 @@
           MODULE=lunar-tools
-         VERSION=2026.3
+         VERSION=2026.4
           SOURCE=$MODULE-$VERSION-i686.tar.xz
       SOURCE_URL=https://github.com/lunar-linux/lunar-tools/releases/download/$VERSION
-      SOURCE_VFY=sha256:28756f18248849cc44d6a69dcd6aab21770233a9701045e4c321f5d4d6efcf40
+      SOURCE_VFY=sha256:ddf9de271bafdfb5efa0b92e29bb526565252c8d1f50468ae5f877d29e8ac568
         WEB_SITE=http://lunar-linux.org/
          ENTERED=20041029
-         UPDATED=20260309
+         UPDATED=20260312
            SHORT="A collection of lunar tools"
+
 cat << EOF
 Lunar-tools is a package with non-vital tools that help you perform
 certain system tasks. Currently it lists the following tools:
