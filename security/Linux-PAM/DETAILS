@@ -1,18 +1,18 @@
-          MODULE=Linux-PAM
-         VERSION=1.6.1
-        PVERSION=2.9
-       RHVERSION=1.2.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=$MODULE-patches-$PVERSION.tar.xz
-      SOURCE_URL=https://github.com/linux-pam/linux-pam/releases/download/v$VERSION/
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:f8923c740159052d719dbfc2a2f81942d68dd34fcaf61c706a02c9b80feeef8e
-     SOURCE2_VFY=sha256:80d96a6f5b37dacff0e6607669b46ab45909ad0af5f823716057d5ce023e7285
-        WEB_SITE=https://github.com/linux-pam/linux-pam
-      MAINTAINER=ratler@lunar-linux.org
-         ENTERED=20010922
-         UPDATED=20240811
-           SHORT="Pluggable Authentication Modules"
+     MODULE=Linux-PAM
+    VERSION=1.7.2
+   PVERSION=2.9
+  RHVERSION=1.2.0
+     SOURCE=$MODULE-$VERSION.tar.xz
+    SOURCE2=$MODULE-patches-$PVERSION.tar.xz
+ SOURCE_URL=https://github.com/linux-pam/linux-pam/releases/download/v$VERSION/
+SOURCE2_URL=$PATCH_URL
+ SOURCE_VFY=sha256:3d86b6383fb5fd9eb9578d2cd47d92801191f4bf3f9bc61419bfefc8aa1e531a
+SOURCE2_VFY=sha256:80d96a6f5b37dacff0e6607669b46ab45909ad0af5f823716057d5ce023e7285
+   WEB_SITE=https://github.com/linux-pam/linux-pam
+ MAINTAINER=ratler@lunar-linux.org
+    ENTERED=20010922
+    UPDATED=20260313
+      SHORT="Pluggable Authentication Modules"
 PSAFE=no
 
 cat << EOF
