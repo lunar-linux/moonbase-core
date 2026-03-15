@@ -1,13 +1,13 @@
-          MODULE=meson
-         VERSION=1.10.1
-          SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=https://github.com/mesonbuild/meson/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:3d4768a76fc63dc4c562edc7892de17b54dfaa7309d148e805b0d763bc085e00
-        WEB_SITE=http://mesonbuild.com/
-            TYPE=python3
-         ENTERED=20160429
-         UPDATED=20260120
-           SHORT="The meson build system"
+         MODULE=meson
+        VERSION=1.10.2
+         SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL_FULL=https://github.com/mesonbuild/meson/archive/$VERSION.tar.gz
+     SOURCE_VFY=sha256:4f3c6fe1d163fb6d5b52094035fc29d14cf4a254c3ac29544ba0a3d5a739c7ba
+       WEB_SITE=http://mesonbuild.com/
+           TYPE=python3
+        ENTERED=20160429
+        UPDATED=20260315
+          SHORT="The meson build system"
 
 cat << EOF
 Meson is a project to create the best possible next-generation build system.
