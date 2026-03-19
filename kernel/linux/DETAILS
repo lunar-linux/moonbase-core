@@ -1,20 +1,20 @@
-          MODULE=linux
-         VERSION=6.19.8
-            BASE=$(echo $VERSION | cut -d. -f1,2)
-          SOURCE=$MODULE-$BASE.tar.xz
+        MODULE=linux
+       VERSION=6.19.9
+          BASE=$(echo $VERSION | cut -d. -f1,2)
+        SOURCE=$MODULE-$BASE.tar.xz
 if [ -n "$(echo $VERSION | cut -d. -f3)" ] ; then
-         SOURCE2=patch-$VERSION.xz
+       SOURCE2=patch-$VERSION.xz
 fi
-   SOURCE_URL[0]=$KERNEL_URL/pub/linux/kernel/v6.x/
-   SOURCE_URL[1]=https://www.kernel.org/pub/linux/kernel/v6.x/
-  SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v6.x/
-  SOURCE2_URL[1]=https://www.kernel.org/pub/linux/kernel/v6.x/
-      SOURCE_VFY=sha256:303079a8250b8f381f82b03f90463d12ac98d4f6b149b761ea75af1323521357
-     SOURCE2_VFY=sha256:024f91a1e7c96b3e206ea2781922abc57b936c1bdb01cdcc51299fd1ab3f7587
-        WEB_SITE=https://www.kernel.org/
-         ENTERED=20111121
-         UPDATED=20260314
-           SHORT="The core of a Linux GNU Operating System"
+ SOURCE_URL[0]=$KERNEL_URL/pub/linux/kernel/v6.x/
+ SOURCE_URL[1]=https://www.kernel.org/pub/linux/kernel/v6.x/
+SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v6.x/
+SOURCE2_URL[1]=https://www.kernel.org/pub/linux/kernel/v6.x/
+    SOURCE_VFY=sha256:303079a8250b8f381f82b03f90463d12ac98d4f6b149b761ea75af1323521357
+   SOURCE2_VFY=sha256:191b18a693c0cb1794d792f087d0e47c0b3d41ac49f0d1b57bbaa9e9e27efca6
+      WEB_SITE=https://www.kernel.org/
+       ENTERED=20111121
+       UPDATED=20260319
+         SHORT="The core of a Linux GNU Operating System"
 TMPFS=off
 KEEP_SOURCE=on
 
