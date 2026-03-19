@@ -1,12 +1,12 @@
-          MODULE=ccache
-         VERSION=4.12.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=https://github.com/ccache/ccache/releases/download/v$VERSION/
-      SOURCE_VFY=sha256:c8e3ef79531966ecfa05bd1666c483b473df9af00896935cc468cb5ed573c16e
-        WEB_SITE=https://ccache.dev/
-         ENTERED=20020701
-         UPDATED=20260216
-           SHORT="A compiler cache"
+    MODULE=ccache
+   VERSION=4.13.1
+    SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL=https://github.com/ccache/ccache/releases/download/v$VERSION/
+SOURCE_VFY=sha256:e822547b0344c567c6f748f75d4da056c360e2196da12d213ec0caf39d72896d
+  WEB_SITE=https://ccache.dev/
+   ENTERED=20020701
+   UPDATED=20260312
+     SHORT="A compiler cache"
 
 cat << EOF
 ccache is a compiler cache. It acts as a caching pre-processor to C/C++
