@@ -1,12 +1,12 @@
-          MODULE=lsof
-         VERSION=4.99.5
-          SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=https://github.com/lsof-org/lsof/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:3c591556c665196e0aada5982ff43c75e248187bad78bb1368d8fb9c1c527e6e
-        WEB_SITE=https://lsof.readthedocs.io/en/latest/
-         ENTERED=20011005
-         UPDATED=20250701
-           SHORT="Lists open files for running processes"
+         MODULE=lsof
+        VERSION=4.99.6
+         SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL_FULL=https://github.com/lsof-org/lsof/releases/download/$VERSION/$MODULE-$VERSION.tar.gz
+     SOURCE_VFY=sha256:6081dedf841cd61f8a022ff7cbe04ed78918a47dea3c39528c8571474167aa0f
+       WEB_SITE=https://lsof.readthedocs.io/en/latest/
+        ENTERED=20011005
+        UPDATED=20260312
+          SHORT="Lists open files for running processes"
 
 cat << EOF
 Lsof is a Unix-specific diagnostic tool. Its name stands for LiSt Open Files,
