@@ -1,12 +1,12 @@
-          MODULE=e2fsprogs
-         VERSION=1.47.3
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:2f5164e64dd7d91eadd1e0e8a77d92c06dd7837bb19f1d9189ce1939b363d2b4
-        WEB_SITE=http://e2fsprogs.sourceforge.net
-         ENTERED=20010922
-         UPDATED=20250709
-           SHORT="Utilities for the EXT2 file system"
+    MODULE=e2fsprogs
+   VERSION=1.47.4
+    SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL=$SFORGE_URL/$MODULE
+SOURCE_VFY=sha256:2cec05f39c20ee621f14926195664e66e6017190ac8e4bbdb16d86082e43c5da
+  WEB_SITE=http://e2fsprogs.sourceforge.net
+   ENTERED=20010922
+   UPDATED=20260316
+     SHORT="Utilities for the EXT2 file system"
 
 cat << EOF
 e2fsprogs - The EXT file system utilities and libraries. EXT stands for
