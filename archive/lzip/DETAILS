@@ -1,12 +1,12 @@
-          MODULE=lzip
-         VERSION=1.25
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://download.savannah.nongnu.org/releases/lzip/
-      SOURCE_VFY=sha256:09418a6d8fb83f5113f5bd856e09703df5d37bae0308c668d0f346e3d3f0a56f
-        WEB_SITE=http://nongnu.askapache.com/lzip/manual/lzip_manual.html
-         ENTERED=20091122
-         UPDATED=20250118
-           SHORT="lossless data compressor"
+    MODULE=lzip
+   VERSION=1.26
+    SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL=http://download.savannah.nongnu.org/releases/lzip/
+SOURCE_VFY=sha256:641cf30961525cbe3b340cc883436c8854e9f5032f459f444de4782b621e6572
+  WEB_SITE=http://nongnu.askapache.com/lzip/manual/lzip_manual.html
+   ENTERED=20091122
+   UPDATED=20260322
+     SHORT="lossless data compressor"
 
 cat << EOF
 Lzip is a lossless data compressor based on the LZMA algorithm, with very safe
