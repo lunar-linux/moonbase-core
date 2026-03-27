@@ -1,12 +1,12 @@
-          MODULE=re2c
-         VERSION=4.4
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=https://github.com/skvadrik/re2c/releases/download/$VERSION
-      SOURCE_VFY=sha256:6b6b865924447ef992d5db4e52fb9307e5f65f26edd43efa91395da810f4280a
-        WEB_SITE=https://re2c.org
-         ENTERED=20091001
-         UPDATED=20251222
-           SHORT="A toolfor writing fast and flexible scanners"
+    MODULE=re2c
+   VERSION=4.5.1
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=https://github.com/skvadrik/re2c/releases/download/$VERSION
+SOURCE_VFY=sha256:ffea067c11aa668bcb42885be6e6cd000302000b7747d2bb213299ec66b7864e
+  WEB_SITE=https://re2c.org
+   ENTERED=20091001
+   UPDATED=20260327
+     SHORT="A toolfor writing fast and flexible scanners"
 
 cat << EOF
 re2c is a tool for writing very fast and very flexible scanners. Unlike any
