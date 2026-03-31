@@ -1,12 +1,12 @@
-         MODULE=xz
-        VERSION=5.8.2
-         SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=https://github.com/tukaani-project/xz/releases/download/v${VERSION}/
-      SOURCE_VFY=sha256:ce09c50a5962786b83e5da389c90dd2c15ecd0980a258dd01f70f9e7ce58a8f1
-        WEB_SITE=https://tukaani.org/xz/
-         ENTERED=20090224
-         UPDATED=20251218
-           SHORT="Utils for XZ archive format"
+    MODULE=xz
+   VERSION=5.8.3
+    SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL=https://github.com/tukaani-project/xz/releases/download/v${VERSION}/
+SOURCE_VFY=sha256:3d3a1b973af218114f4f889bbaa2f4c037deaae0c8e815eec381c3d546b974a0
+  WEB_SITE=https://tukaani.org/xz/
+   ENTERED=20090224
+   UPDATED=20260401
+     SHORT="Utils for XZ archive format"
 
 cat << EOF
 XZ Utils (new name for the improved format/tools) is the successor to lzma.
