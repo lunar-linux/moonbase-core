@@ -1,12 +1,13 @@
-          MODULE=XML-Parser
-         VERSION=2.47
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=https://cpan.metacpan.org/authors/id/T/TO/TODDR/
-      SOURCE_VFY=sha256:ad4aae643ec784f489b956abe952432871a622d4e2b5c619e8855accbfc4d1d8
-        WEB_SITE=https://metacpan.org/pod/XML::Parser
-         ENTERED=20030529
-         UPDATED=20240206
-           SHORT="PERL module for parsing XML documents"
+    MODULE=XML-Parser
+   VERSION=2.49
+    SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL=https://cpan.metacpan.org/authors/id/T/TO/TODDR/
+SOURCE_VFY=sha256:aed2c498f7a2a78f926b95cf8ea9ce4ba13c9d8938f66cd2691cdc9f992733d0
+  WEB_SITE=https://metacpan.org/pod/XML::Parser
+   ENTERED=20030529
+   UPDATED=20260401
+     SHORT="PERL module for parsing XML documents"
+
 cat << EOF
 PERL modules for parsing XML documents
 EOF
