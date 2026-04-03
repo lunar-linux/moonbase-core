@@ -1,12 +1,12 @@
-          MODULE=cryptsetup
-         VERSION=2.8.4
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=https://mirrors.kernel.org/pub/linux/utils/cryptsetup/v${VERSION%.*}
-      SOURCE_VFY=sha256:443e46f8964c9acc780f455afbb8e23aa0e8ed7ec504cfc59e04f406fa1e8a83
-        WEB_SITE=https://gitlab.com/cryptsetup/cryptsetup
-         ENTERED=20050309
-         UPDATED=20260127
-           SHORT="Device-mapper crypto userspace setup tool"
+    MODULE=cryptsetup
+   VERSION=2.8.6
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=https://mirrors.kernel.org/pub/linux/utils/cryptsetup/v${VERSION%.*}
+SOURCE_VFY=sha256:8004265fd993885d08f7b633dbe056851de1a210307613a4ebddc743fccefe5a
+  WEB_SITE=https://gitlab.com/cryptsetup/cryptsetup
+   ENTERED=20050309
+   UPDATED=20260403
+     SHORT="Device-mapper crypto userspace setup tool"
 
 cat << EOF
 Using device-mapper's dmsetup directly is too complicated for most people.
