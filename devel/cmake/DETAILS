@@ -1,12 +1,12 @@
           MODULE=cmake
-         VERSION=4.3.0
+         VERSION=4.3.1
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/Kitware/CMake/archive/refs/tags/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:4e8cc897c348afe213004af2cda5589272f6ee9408199c5bfe200bfe9ad43326
+      SOURCE_VFY=sha256:d602411de1cfeee3bdeea2e6722cf0b47e740280503b70d15e3c99812904beea
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/CMake-$VERSION
         WEB_SITE=https://cmake.org/
          ENTERED=20060725
-         UPDATED=20260317
+         UPDATED=20260406
            SHORT="Cross-platform make system"
 
 cat << EOF
