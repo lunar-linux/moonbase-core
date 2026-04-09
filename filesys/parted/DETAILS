@@ -1,13 +1,13 @@
-          MODULE=parted
-         VERSION=3.6
-          SOURCE=$MODULE-$VERSION.tar.xz
-   SOURCE_URL[0]=$GNU_URL/$MODULE
-   SOURCE_URL[1]=https://ftp.gnu.org/gnu/$MODULE
-      SOURCE_VFY=sha256:3b43dbe33cca0f9a18601ebab56b7852b128ec1a3df3a9b30ccde5e73359e612
-        WEB_SITE=https://www.gnu.org/software/parted
-         ENTERED=20010922
-         UPDATED=20230717
-           SHORT="create, destroy, resize, and copy partitions"
+       MODULE=parted
+      VERSION=3.7
+       SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL[0]=$GNU_URL/$MODULE
+SOURCE_URL[1]=https://ftp.gnu.org/gnu/$MODULE
+   SOURCE_VFY=sha256:008de57561a4f3c25a0648e66ed11e7b30be493889b64334a6d70f2c1951ef7b
+     WEB_SITE=https://www.gnu.org/software/parted
+      ENTERED=20010922
+      UPDATED=20260409
+        SHORT="create, destroy, resize, and copy partitions"
 
 cat << EOF
 GNU Parted allows you to create, destroy, resize, and copy partitions.
