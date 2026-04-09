@@ -1,12 +1,12 @@
-          MODULE=libcap
-         VERSION=2.77
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/
-      SOURCE_VFY=sha256:897bc18b44afc26c70e78cead3dbb31e154acc24bee085a5a09079a88dbf6f52
-        WEB_SITE=http://www.kernel.org/pub/linux/libs/security/linux-privs
-         ENTERED=20040906
-         UPDATED=20251101
-           SHORT="POSIX 1003.1e capabilities"
+    MODULE=libcap
+   VERSION=2.78
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/
+SOURCE_VFY=sha256:0d621e562fd932ccf67b9660fb018e468a683d7b827541df27813228c996bb11
+  WEB_SITE=http://www.kernel.org/pub/linux/libs/security/linux-privs
+   ENTERED=20040906
+   UPDATED=20260409
+     SHORT="POSIX 1003.1e capabilities"
 
 cat << EOF
 POSIX 1003.1e capabilities
