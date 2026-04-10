@@ -1,14 +1,14 @@
 ### YOU MUST ALSO UPDATE SGMLSpm !!!
-          MODULE=perl
-         VERSION=5.42.0
-          SOURCE=$MODULE-$VERSION.tar.gz
-   SOURCE_URL[0]=https://www.cpan.org/src/5.0
-   SOURCE_URL[1]=https://mirrors.kernel.org/cpan/src
-      SOURCE_VFY=sha256:e093ef184d7f9a1b9797e2465296f55510adb6dab8842b0c3ed53329663096dc
-        WEB_SITE=http://www.perl.org
-         ENTERED=20010922
-         UPDATED=20250922
-           SHORT="A highly capable, feature-rich programming language"
+       MODULE=perl
+      VERSION=5.42.2
+       SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL[0]=https://www.cpan.org/src/5.0
+SOURCE_URL[1]=https://mirrors.kernel.org/cpan/src
+   SOURCE_VFY=sha256:9384e8deb75b7b1695e5637971b752281aaecd025a3d5d4734d33c1d0adfee47
+     WEB_SITE=http://www.perl.org
+      ENTERED=20010922
+      UPDATED=20260410
+        SHORT="A highly capable, feature-rich programming language"
 
 cat << EOF
 Perl is a high-level, general-purpose programming language that makes easy
