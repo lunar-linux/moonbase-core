@@ -84,7 +84,8 @@ plugin_systemd_post_build()
   local SERVICES SERVICE SYSTEMDUNITDIR TOUCHME
   debug_msg "plugin_systemd_post_install ($@)"
 
-  local SYSTEMDUNITDIR=$(pkg-config systemd --variable=systemdsystemunitdir)
+  SYSTEMDUNITDIR=$(pkg-config systemd --variable=systemdsystemunitdir)
+  : "${SYSTEMDUNITDIR:=/usr/lib/systemd/system}"
 
   if [[ -d $SCRIPT_DIRECTORY/systemd.d ]]; then
     invoke_installwatch
@@ -142,6 +143,7 @@ plugin_systemd_tmpfilesd_post_build() {
   debug_msg "plugin_systemd_tmpfilesd_post_build ($@)"
 
   SYSTEMDTEMPFILES=$(pkg-config systemd --variable=prefix)/lib/tmpfiles.d
+  : "${SYSTEMDTEMPFILES:=/usr/lib/tmpfiles.d}"
 
   if [[ -d $SCRIPT_DIRECTORY/tmpfiles.d ]]; then
     verbose_msg "handling systemd tmpfiles.d files"
@@ -177,6 +179,7 @@ plugin_systemd_sysusersd_pre_build() {
   debug_msg "plugin_systemd_sysusersd_post_build ($@)"
 
   SYSTEMDUSERSDIR=$(pkg-config systemd --variable=prefix)/lib/sysusers.d
+  : "${SYSTEMDUSERSDIR:=/usr/lib/sysusers.d}"
 
   for FILE in $(parse_iw | grep "^$SYSTEMDUSERSDIR/.*\.conf"); do
     if [ -f "$FILE" ]; then
