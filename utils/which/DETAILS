@@ -1,9 +1,8 @@
           MODULE=which
          VERSION=2.23
           SOURCE=$MODULE-$VERSION.tar.gz
-   SOURCE_URL[0]=http://www.xs4all.nl/~carlo17/$MODULE/
-   SOURCE_URL[1]=$GNU_URL/$MODULE/
-   SOURCE_URL[2]=ftp://ftp.gnu.org/pub/gnu/$MODULE/
+   SOURCE_URL[0]=$GNU_URL/$MODULE/
+   SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE/
       SOURCE_VFY=sha256:a2c558226fc4d9e4ce331bd2fd3c3f17f955115d2c00e447618a4ef9978a2a73
         WEB_SITE=http://directory.fsf.org/which.html
          ENTERED=20011101
