@@ -1,7 +1,7 @@
 depends zlib
 depends bzip2
 depends ncurses
-depends libidn
+depends libidn2
 depends libunistring
 depends %OSSL
 
