@@ -1,20 +1,20 @@
-          MODULE=openssl
-         VERSION=3.6.0
-          SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=Makefile.openssl-certs
-   SOURCE_URL[0]=https://github.com/$MODULE/$MODULE/releases/download/${MODULE}-${VERSION}/
-   SOURCE_URL[1]=ftp://opensores.thebunker.net/pub/mirrors/openssl/source
-   SOURCE_URL[2]=http://www.dentarthurdent.com/transfer/openssl
-   SOURCE_URL[3]=ftp://ftp.infoscience.co.jp/pub/Crypto/SSL/openssl/source
-   SOURCE_URL[4]=ftp://ftp.duth.gr/pub/OpenSSL/source
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:b6a5f44b7eb69e3fa35dbf15524405b44837a481d43d81daddde3ff21fcbb8e9
-     SOURCE2_VFY=sha256:9b44b0bfac91672a3249e70484d036924ca528b4f704ff7ef2a9b46413d2afab
-        WEB_SITE=http://www.openssl.org
-         ENTERED=20010922
-         UPDATED=20251212
-           PSAFE="no"
-           SHORT="A library for providing encrypted transport layers"
+       MODULE=openssl
+      VERSION=3.6.2
+       SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE2=Makefile.openssl-certs
+SOURCE_URL[0]=https://github.com/$MODULE/$MODULE/releases/download/${MODULE}-${VERSION}/
+SOURCE_URL[1]=ftp://opensores.thebunker.net/pub/mirrors/openssl/source
+SOURCE_URL[2]=http://www.dentarthurdent.com/transfer/openssl
+SOURCE_URL[3]=ftp://ftp.infoscience.co.jp/pub/Crypto/SSL/openssl/source
+SOURCE_URL[4]=ftp://ftp.duth.gr/pub/OpenSSL/source
+  SOURCE2_URL=$PATCH_URL
+   SOURCE_VFY=sha256:aaf51a1fe064384f811daeaeb4ec4dce7340ec8bd893027eee676af31e83a04f
+  SOURCE2_VFY=sha256:9b44b0bfac91672a3249e70484d036924ca528b4f704ff7ef2a9b46413d2afab
+     WEB_SITE=http://www.openssl.org
+      ENTERED=20010922
+      UPDATED=20260409
+        SHORT="A library for providing encrypted transport layers"
+PSAFE="no"
 
 cat << EOF
 The OpenSSL Project is a collaborative effort to develop a robust, commercial-
