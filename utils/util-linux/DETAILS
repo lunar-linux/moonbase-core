@@ -1,12 +1,12 @@
-          MODULE=util-linux
-         VERSION=2.41.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KERNEL_URL/pub/linux/utils/$MODULE/v${VERSION::4}
-     SOURCE_VFY=sha256:3330d873f0fceb5560b89a7dc14e4f3288bbd880e96903ed9b50ec2b5799e58b
-        WEB_SITE=https://github.com/util-linux/util-linux
-         ENTERED=20010922
-         UPDATED=20251222
-           SHORT="Essential utilities for any Linux box"
+    MODULE=util-linux
+   VERSION=2.42
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=$KERNEL_URL/pub/linux/utils/$MODULE/v${VERSION::4}
+SOURCE_VFY=sha256:3452b260bbaa775d6e749ac3bb22111785003fc1f444970025c8da26dfa758e9
+  WEB_SITE=https://github.com/util-linux/util-linux
+   ENTERED=20010922
+   UPDATED=20260403
+     SHORT="Essential utilities for any Linux box"
 
 cat << EOF
 Util-linux is a suite of essential utilities for any Linux system. Its primary
