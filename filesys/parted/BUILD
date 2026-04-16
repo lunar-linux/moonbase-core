@@ -1,7 +1,7 @@
 OPTS+=" --disable-rpath \
         --disable-static"
 
-sedit '/am__api_version/s/17/18/' configure &&
+sedit '/^am__api_version=/s/17/18/' configure &&
 
 default_config &&
 
