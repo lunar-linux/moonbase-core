@@ -1,9 +1,9 @@
 OPTS+=" --disable-rpath \
         --disable-static"
 
-default_config &&
+sedit '/am__api_version/s/17/18/' configure &&
 
-#sedit "s:-1.14::" Makefile &&
+default_config &&
 
 default_make &&
 
