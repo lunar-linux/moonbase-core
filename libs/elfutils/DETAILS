@@ -1,13 +1,13 @@
-          MODULE=elfutils
-         VERSION=0.194
-          SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=https://sourceware.org/elfutils/ftp/$VERSION/
-      SOURCE_VFY=sha256:09e2ff033d39baa8b388a2d7fbc5390bfde99ae3b7c67c7daaf7433fbcf0f01e
-        WEB_SITE=https://sourceware.org/elfutils/
-         ENTERED=20021102
-         UPDATED=20251027
-           SHORT="Utilities related to ELF (UNIX binaries) objects"
-    USE_WRAPPERS=no
+    MODULE=elfutils
+   VERSION=0.195
+    SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_URL=https://sourceware.org/elfutils/ftp/$VERSION/
+SOURCE_VFY=sha256:37629fdf7f1f3dc2818e138fca2b8094177d6c2d0f701d3bb650a561218dc026
+  WEB_SITE=https://sourceware.org/elfutils/
+   ENTERED=20021102
+   UPDATED=20260418
+     SHORT="Utilities related to ELF (UNIX binaries) objects"
+USE_WRAPPERS=no
 
 cat << EOF
 Elfutils is a collection of utilities, including ld (a linker), nm (for
