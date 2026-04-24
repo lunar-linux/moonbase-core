@@ -1,12 +1,12 @@
-          MODULE=libunistring
-         VERSION=1.3
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=$GNU_URL/$MODULE
-      SOURCE_VFY=sha256:8ea8ccf86c09dd801c8cac19878e804e54f707cf69884371130d20bde68386b7
-        WEB_SITE=http://www.gnu.org/software/libunistring
-         ENTERED=20120711
-         UPDATED=20241105
-           SHORT="A library for manipulating Unicode strings and C strings"
+    MODULE=libunistring
+   VERSION=1.4.2
+    SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL=$GNU_URL/$MODULE
+SOURCE_VFY=sha256:e82664b170064e62331962126b259d452d53b227bb4a93ab20040d846fec01d8
+  WEB_SITE=http://www.gnu.org/software/libunistring
+   ENTERED=20120711
+   UPDATED=20260414
+     SHORT="A library for manipulating Unicode strings and C strings"
 
 cat << EOF
 This library provides functions for manipulating Unicode strings and
