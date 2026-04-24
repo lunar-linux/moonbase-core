@@ -17,6 +17,6 @@ optional_depends scdoc \
 
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "" \
                  "for building documentation" \
                  "n"

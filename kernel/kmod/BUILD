@@ -2,18 +2,12 @@ OPTS+=" --with-zlib \
         --with-xz \
         --with-openssl"
 
-./configure --prefix=     \
-            --libdir=/lib \
-            --datarootdir=/usr/share \
-            --includedir=/usr/include \
-            $OPTS  &&
-
-default_make &&
+default_build &&
 
 install -dm755 /{etc,usr/lib}/{depmod,modprobe}.d &&
 
 # add symlinks to kmod
-ln -sf /bin/kmod "/bin/lsmod"  &&
+ln -sf /usr/bin/kmod "/usr/bin/lsmod"  &&
 for tool in {ins,rm,dep}mod mod{info,probe}; do
-  ln -sf /bin/kmod "/sbin/$tool"
+  ln -sf /usr/bin/kmod "/usr/sbin/$tool"
 done
