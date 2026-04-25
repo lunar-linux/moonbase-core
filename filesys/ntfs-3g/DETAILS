@@ -1,12 +1,12 @@
-          MODULE=ntfs-3g
-         VERSION=2022.10.3
-          SOURCE=${MODULE}-$VERSION.tar.gz
-      SOURCE_URL=https://github.com/tuxera/ntfs-3g/archive/$VERSION/
-      SOURCE_VFY=sha256:8bd7749ea9d8534c9f0664d48b576e90b96d45ec8803c9427f6ffaa2f0dde299
-        WEB_SITE=http://www.tuxera.com/community/ntfs-3g-download
-         ENTERED=20070621
-         UPDATED=20250629
-           SHORT="NTFS driver for Linux"
+    MODULE=ntfs-3g
+   VERSION=2026.2.25
+    SOURCE=${MODULE}-$VERSION.tar.gz
+SOURCE_URL=https://github.com/tuxera/ntfs-3g/archive/$VERSION/
+SOURCE_VFY=sha256:47de1260fa3fb1aa27d239a637f1178d29a04dd6add6ddff4ea5e47b806731f8
+  WEB_SITE=http://www.tuxera.com/community/ntfs-3g-download
+   ENTERED=20070621
+   UPDATED=20260425
+     SHORT="NTFS driver for Linux"
 
 cat << EOF
 The NTFS-3G driver is an open source, freely available read/write NTFS driver
@@ -20,11 +20,12 @@ Usage:
  already been mounted, replace /dev/hda1 and /mnt/windows, if needed
     mount -t ntfs-3g /dev/hda1 /mnt/windows
 
- You may also need to set the 'locale' option to make all file names with national
- characters visible. Replace the below hu_HU.utf8 with the  appropriate setting
+ You may also need to set the 'locale' option to make all file names with
+ national characters visible. Replace the below hu_HU.utf8 with the appropriate
+ setting
     mount -t ntfs-3g /dev/hda1 /mnt/windows -o locale=hu_HU.utf8
 
- You can also make NTFS to be mounted during boot by adding the following line to
- the end of the /etc/fstab file:
+ You can also make NTFS to be mounted during boot by adding the following line
+ to the end of the /etc/fstab file:
     /dev/hda1 /mnt/windows ntfs-3g defaults 0 0
 EOF
