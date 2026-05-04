@@ -8,7 +8,8 @@ install -dm755 /{etc,usr/lib}/{depmod,modprobe}.d &&
 
 # add symlinks to kmod
 ln -sf /usr/bin/kmod "/usr/bin/lsmod"  &&
-for tool in {ins,rm,dep}mod mod{info,probe}; do
+ln -sf /usr/bin/kmod "/usr/bin/modinfo"  &&
+for tool in {ins,rm,dep}mod modprobe; do
   ln -sf /usr/bin/kmod "/usr/sbin/$tool"
 done &&
 
