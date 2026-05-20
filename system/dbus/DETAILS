@@ -1,12 +1,12 @@
-          MODULE=dbus
-         VERSION=1.15.8
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=https://dbus.freedesktop.org/releases/dbus/
-      SOURCE_VFY=sha256:84fc597e6ec82f05dc18a7d12c17046f95bad7be99fc03c15bc254c4701ed204
-        WEB_SITE=http://dbus.freedesktop.org
-         ENTERED=20031219
-         UPDATED=20231125
-           SHORT="A message bus system for applications"
+    MODULE=dbus
+   VERSION=1.16.2
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=https://dbus.freedesktop.org/releases/dbus/
+SOURCE_VFY=sha256:0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+  WEB_SITE=http://dbus.freedesktop.org
+   ENTERED=20031219
+   UPDATED=20260520
+     SHORT="A message bus system for applications"
 LUNAR_RESTART_SERVICES=off
 
 cat << EOF
