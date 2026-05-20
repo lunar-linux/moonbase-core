@@ -1,16 +1,6 @@
-depends autoconf-archive
+depends meson
 depends expat
 depends pkgconf
 depends python
 
-optional_depends libxslt "" "" "for XSL support" n
-
-optional_depends doxygen \
-                 "--enable-doxygen-docs" \
-                 "--disable-doxygen-docs" \
-                 "for Doxygen documentation support" n
-
-optional_depends xmlto \
-                 "--enable-xml-docs" \
-                 "--disable-xml-docs" \
-                 "for XML documentation support" n
+optional_depends libcap-ng "" "" "for additional posix cababilites support"
