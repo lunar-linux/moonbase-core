@@ -1,6 +1,5 @@
 depends bash
 depends coreutils
-depends cpio
 # Making this systemd only for now (includes udev)
 depends systemd
 depends systemd-sysv
@@ -19,4 +18,4 @@ optional_depends open-iscsi "" "" "for iSCSI support"
 optional_depends lvm2 "" "" "for Linux Volume Management support"
 optional_depends mdadm "" "" "for software raid support"
 optional_depends rsyslog "" "" "for syslog support"
-optional_depends asciidoc "" "--disable-documentation" "for man pages"
+optional_depends asciidoc "" "--disable-documentation" "for man pages" "n"
