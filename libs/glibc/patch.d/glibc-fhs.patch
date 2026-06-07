@@ -1,7 +1,7 @@
 diff -Naur glibc-2.35-lunar/Makeconfig glibc-2.35/Makeconfig
 --- glibc-2.35-lunar/Makeconfig	2022-02-03 06:27:54.000000000 +0100
 +++ glibc-2.35/Makeconfig	2022-03-04 21:49:36.818651793 +0100
-@@ -246,7 +246,7 @@
+@@ -262,7 +262,7 @@
  
  # Directory for the database files and Makefile for nss_db.
  ifndef vardbdir
