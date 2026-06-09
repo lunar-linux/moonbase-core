@@ -1,11 +1,12 @@
-          MODULE=m4
-         VERSION=1.4.20
-          SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=$GNU_URL/$MODULE
-      SOURCE_VFY=sha256:ac6989ee5d2aed81739780630cc2ce097e2a6546feb96a4a54db37d46a1452e4
-         ENTERED=20010922
-         UPDATED=20250822
-           SHORT="GNU m4 macro processor"
+    MODULE=m4
+   VERSION=1.4.21
+    SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_URL=$GNU_URL/$MODULE
+SOURCE_VFY=sha256:dc487e11d2f0c9e01555bb1af26be4eae983ec8f0726746505b4327186eb21fc
+  WEB_SITE=https://www.gnu.org/software/m4/
+   ENTERED=20010922
+   UPDATED=20260609
+     SHORT="GNU m4 macro processor"
 
 cat << EOF
 GNU m4 is an implementation of the traditional UNIX macro processor in
