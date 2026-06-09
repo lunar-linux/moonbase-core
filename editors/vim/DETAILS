@@ -1,13 +1,13 @@
-           MODULE=vim
-          VERSION=9.1.1740
-            MAJOR=91
-           SOURCE=$MODULE-$VERSION.tar.gz
-  SOURCE_URL_FULL=https://github.com/vim/vim/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:b565d7bbeb7b3ead470b4a2b3d08b9b40e578dffa2265fb3c3c2ff62e71928db
-         WEB_SITE=https://github.com/vim/vim/
-          ENTERED=20010922
-          UPDATED=20250908
-            SHORT="Improved version of vi"
+         MODULE=vim
+        VERSION=9.2.0600
+          MAJOR=92
+         SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL_FULL=https://github.com/vim/vim/archive/v$VERSION.tar.gz
+     SOURCE_VFY=sha256:9bbfe0be244dbd57d2b0f9a3749e3504d215185376bbddfc3ad6420c113b4be1
+       WEB_SITE=https://github.com/vim/vim/
+        ENTERED=20010922
+        UPDATED=20260609
+          SHORT="Improved version of vi"
 
 cat << EOF
 VIM is an improved version of the editor vi, one of the standard text editors
