@@ -1,12 +1,12 @@
-          MODULE=libedit
-         VERSION=20251016-3.1
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=https://thrysoee.dk/editline/
-      SOURCE_VFY=sha256:21362b00653bbfc1c71f71a7578da66b5b5203559d43134d2dd7719e313ce041
-        WEB_SITE=http://thrysoee.dk/editline/
-         ENTERED=20090203
-         UPDATED=20251129
-           SHORT="A generic line editing functions similar to readline"
+    MODULE=libedit
+   VERSION=20260512-3.1
+    SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL=https://thrysoee.dk/editline/
+SOURCE_VFY=sha256:432d5e7ea8b0116dd39f2eca7bc11d0eed77faa6b77ea526ace89907c23ea4a0
+  WEB_SITE=http://thrysoee.dk/editline/
+   ENTERED=20090203
+   UPDATED=20260609
+     SHORT="A generic line editing functions similar to readline"
 
 cat << EOF
 editline library (libedit) is an autotool and libtoolized port of the NetBSD
