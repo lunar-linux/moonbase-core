@@ -1,15 +1,16 @@
-          MODULE=pciutils
-         VERSION=3.14.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=pci.ids.bz2
-      SOURCE_URL=$KERNEL_URL/pub/software/utils/$MODULE/
-     SOURCE2_URL=http://pci-ids.ucw.cz/v2.2/
-      SOURCE_VFY=sha256:e7713409882813991d2269d125e40dad1f54a019a52b78b3962941c1d4a6f86f
-        WEB_SITE=http://mfj.ucw.cz/pciutils.html
-         ENTERED=20020125
-         UPDATED=20250623
-           PSAFE=no
-           SHORT="The setpci and lspci utils"
+     MODULE=pciutils
+    VERSION=3.15.0
+     SOURCE=$MODULE-$VERSION.tar.xz
+    SOURCE2=pci.ids.bz2
+ SOURCE_URL=$KERNEL_URL/pub/software/utils/$MODULE/
+SOURCE2_URL=http://pci-ids.ucw.cz/v2.2/
+ SOURCE_VFY=sha256:c02940f430841ecf158d5d9a50007afc4d5353c8678a2455003ca0b2c4e9f5ff
+SOURCE2_VFY=sha256:ce11b5351c200f613d74698896b454981fb17b17db688a448fce74f8b1f029ff
+   WEB_SITE=http://mfj.ucw.cz/pciutils.html
+    ENTERED=20020125
+    UPDATED=20260609
+      SHORT="The setpci and lspci utils"
+PSAFE=no
 
 cat << EOF
 The PCI Utilities package contains a library for portable access to PCI
