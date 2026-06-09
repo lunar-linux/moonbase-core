@@ -1,13 +1,14 @@
-          MODULE=xfsprogs
-         VERSION=6.18.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/
-      SOURCE_VFY=sha256:3a6dc7b1245ce9bccd197bab00691f1b190bd3694d3ccc301d21b83afc133199
-        WEB_SITE=https://xfs.wiki.kernel.org
-         ENTERED=20020110
-         UPDATED=20260104
-           SHORT="Required utilities for the XFS file system"
+    MODULE=xfsprogs
+   VERSION=7.0.1
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/
+SOURCE_VFY=sha256:4a8ca83a7acb8cd92c997d63b69ae64f170056b366a2924a753e47d4bb4b8b06
+  WEB_SITE=https://xfs.wiki.kernel.org
+   ENTERED=20020110
+   UPDATED=20260609
+     SHORT="Required utilities for the XFS file system"
 PSAFE=no
+
 cat << EOF
 xfsprogs - The XFS file system utilities and libraries.
 EOF
