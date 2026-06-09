@@ -1,14 +1,14 @@
-          MODULE=groff
-         VERSION=1.23.0
-          SOURCE=$MODULE-$VERSION.tar.gz
-   SOURCE_URL[0]=$GNU_URL/$MODULE
-   SOURCE_URL[1]=$MIRRORS_URL
-      SOURCE_VFY=sha256:6b9757f592b7518b4902eb6af7e54570bdccba37a871fddb2d30ae3863511c13
-        WEB_SITE=http://www.gnu.org/software/groff/groff.html
-         ENTERED=20010922
-         UPDATED=20230731
-           SHORT="A device-independent document processor/formatter"
-           PSAFE=no
+       MODULE=groff
+      VERSION=1.24.1
+       SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL[0]=$GNU_URL/$MODULE
+SOURCE_URL[1]=$MIRRORS_URL
+   SOURCE_VFY=sha256:74e2819795b6aff431aeac983d63a9c8968eeaba2a2eba7df8ba4c7b41e7cfd8
+     WEB_SITE=http://www.gnu.org/software/groff/groff.html
+      ENTERED=20010922
+      UPDATED=20260609
+        SHORT="A device-independent document processor/formatter"
+PSAFE=no
 
 cat << EOF
 groff - Document formatting system
