@@ -1,11 +1,11 @@
     MODULE=ccache
-   VERSION=4.13.5
+   VERSION=4.13.6
     SOURCE=$MODULE-$VERSION.tar.gz
 SOURCE_URL=https://github.com/ccache/ccache/releases/download/v$VERSION/
-SOURCE_VFY=sha256:2fb4896269a1ef15da99ba940ac1478b38f2c4b720797205860bf40364f37d37
+SOURCE_VFY=sha256:d42ace95dec14583fb8af19ed117919995bd910376f52d9b6f546046b792dfb7
   WEB_SITE=https://ccache.dev/
    ENTERED=20020701
-   UPDATED=20260426
+   UPDATED=20260609
      SHORT="A compiler cache"
 
 cat << EOF
