@@ -1,12 +1,12 @@
-          MODULE=expat
-         VERSION=2.8.0
-          SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=https://github.com/libexpat/libexpat/releases/download/R_${VERSION//./_}/
-      SOURCE_VFY=sha256:586494499ac3ad46d87f3beda7b1f770c1c8026a9b60e151593f8b29089a52ca
-        WEB_SITE=https://libexpat.github.io/
-         ENTERED=20010928
-         UPDATED=20260424
-           SHORT="XML parsing library"
+    MODULE=expat
+   VERSION=2.8.1
+    SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_URL=https://github.com/libexpat/libexpat/releases/download/R_${VERSION//./_}/
+SOURCE_VFY=sha256:f5833dd2e1cd7739ec9182804a1a29c4f0cc7c2f26b633d3a2188b7766a88ecb
+  WEB_SITE=https://libexpat.github.io/
+   ENTERED=20010928
+   UPDATED=20260609
+     SHORT="XML parsing library"
 
 cat << EOF
 Expat is a fast, non-validating, stream-oriented XML parsing library.
