@@ -1,5 +1,5 @@
           MODULE=linux
-         VERSION=7.0.12
+         VERSION=7.1.1
             BASE=$(echo $VERSION | cut -d. -f1,2)
           SOURCE=$MODULE-$BASE.tar.xz
 if [ -n "$(echo $VERSION | cut -d. -f3)" ] ; then
@@ -9,11 +9,11 @@ fi
    SOURCE_URL[1]=https://www.kernel.org/pub/linux/kernel/v7.x/
   SOURCE2_URL[0]=$KERNEL_URL/pub/linux/kernel/v7.x/
   SOURCE2_URL[1]=https://www.kernel.org/pub/linux/kernel/v7.x/
-      SOURCE_VFY=sha256:bb7f6d80b387c757b7d14bb93028fcb90f793c5c0d367736ee815a100b3891f0
-     SOURCE2_VFY=sha256:2462447390339b14f8f65b6b2878d2e04fe8f0f65242aec3a00a77c11666ce51
+      SOURCE_VFY=sha256:691f44797fbe790dc8a321604c927087526ad27b6d649925d60f8eed0a2564a0
+     SOURCE2_VFY=sha256:64b04b49393f63b168b5be4b4820c8a78c33e1403c1d13d13c3f023c6ecff725
         WEB_SITE=https://www.kernel.org/
          ENTERED=20111121
-         UPDATED=20260609
+         UPDATED=20260619
            SHORT="The core of a Linux GNU Operating System"
 TMPFS=off
 KEEP_SOURCE=on
