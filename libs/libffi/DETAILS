@@ -1,12 +1,12 @@
-          MODULE=libffi
-         VERSION=3.5.2
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=https://github.com/libffi/libffi/releases/download/v$VERSION
-      SOURCE_VFY=sha256:f3a3082a23b37c293a4fcd1053147b371f2ff91fa7ea1b2a52e335676bac82dc
-        WEB_SITE=http://sourceware.org/libffi
-         ENTERED=20091102
-         UPDATED=20250909
-           SHORT="A high level programming interface library"
+    MODULE=libffi
+   VERSION=3.6.0
+    SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL=https://github.com/libffi/libffi/releases/download/v$VERSION
+SOURCE_VFY=sha256:31ff1fe32deaebfbb388727f32677bb254bf2a41382c51464c0b1837c9ee9828
+  WEB_SITE=http://sourceware.org/libffi
+   ENTERED=20091102
+   UPDATED=20260623
+     SHORT="A high level programming interface library"
 
 cat << EOF
 The libffi library provides a portable, high level programming
