@@ -1,13 +1,13 @@
-           MODULE=patch
-         VERSION=2.7.6
-          SOURCE=$MODULE-$VERSION.tar.gz
-   SOURCE_URL[0]=$GNU_URL/$MODULE
-   SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:8cf86e00ad3aaa6d26aca30640e86b0e3e1f395ed99f189b06d4c9f74bc58a4e
-        WEB_SITE=http://www.gnu.org/software/patch/patch.html
-         ENTERED=20010922
-         UPDATED=20181019
-           SHORT="Patch applies a patch to a file"
+       MODULE=patch
+      VERSION=2.8
+       SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL[0]=$GNU_URL/$MODULE
+SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
+   SOURCE_VFY=sha256:308a4983ff324521b9b21310bfc2398ca861798f02307c79eb99bb0e0d2bf980
+     WEB_SITE=http://www.gnu.org/software/patch/patch.html
+      ENTERED=20010922
+      UPDATED=20260609
+        SHORT="Patch applies a patch to a file"
 
 cat << EOF
 patch - Applies a patch to a file
