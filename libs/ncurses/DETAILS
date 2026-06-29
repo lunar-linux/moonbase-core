@@ -1,14 +1,14 @@
-          MODULE=ncurses
-         VERSION=6.5
-          SOURCE=$MODULE-$VERSION.tar.gz
-   SOURCE_URL[0]=$GNU_URL/$MODULE
-   SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
-      SOURCE_VFY=sha256:136d91bc269a9a5785e5f9e980bc76ab57428f604ce3e5a5a90cebc767971cc6
-        WEB_SITE=http://www.gnu.org/software/ncurses/ncurses.html
-         ENTERED=20010922
-         UPDATED=20250811
-           SHORT="Displays and updates text on text-only terminals"
-           PSAFE=no
+       MODULE=ncurses
+      VERSION=6.6
+       SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL[0]=$GNU_URL/$MODULE
+SOURCE_URL[1]=ftp://ftp.gnu.org/pub/gnu/$MODULE
+   SOURCE_VFY=sha256:355b4cbbed880b0381a04c46617b7656e362585d52e9cf84a67e2009b749ff11
+     WEB_SITE=http://www.gnu.org/software/ncurses/ncurses.html
+      ENTERED=20010922
+      UPDATED=20260609
+        SHORT="Displays and updates text on text-only terminals"
+PSAFE=no
 
 cat << EOF
 ncurses - Displays and updates text on text-only terminals.
