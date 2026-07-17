@@ -1,0 +1,26 @@
+          MODULE=python-pefile
+         VERSION=2024.8.26
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://pypi.org/packages/source/p/pefile/pefile-$VERSION.tar.gz
+      SOURCE_VFY=sha256:3ff6c5d8b43e8c37bb6e6dd5085658d658a7a0bdcd20b6a07b1fcfc1c4e9d632
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/pefile-$VERSION
+        WEB_SITE=https://pypi.org/project/pefile/
+            TYPE=python3
+         ENTERED=20260717
+         UPDATED=20260717
+           SHORT="portable executable reader module"
+
+cat << EOF
+pefile is a multi-platform Python module to parse and work with
+Portable Executable (PE) files. Most of the information contained in the
+PE file headers is accessible, as well as all the sections' details and data.
+
+The structures defined in the Windows header files will be accessible as
+attributes in the PE instance. The naming of fields/attributes will try to
+adhere to the naming scheme in those headers. Only shortcuts added for
+convenience will depart from that convention.
+
+pefile requires some basic understanding of the layout of a PE file — with
+it, it is possible to explore nearly every single feature of the PE file
+format.
+EOF
