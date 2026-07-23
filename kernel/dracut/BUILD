@@ -1,3 +1,6 @@
+# fix location of "true" executable (!)
+sedit '/ExecStart/s,/bin/true,/usr/bin/true,' modules.d/77dracut-systemd/dracut-shutdown.service &&
+
 default_build &&
 
 # Removing modules we don't support
