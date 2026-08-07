@@ -1,7 +1,7 @@
 [Unit]
 Description=OpenSSH Daemon - daemon version
 Wants=sshd-keys.service
-After=sshd-keys.service network.target
+After=sshd-keys.service network.target network-online.target
 
 [Service]
 ExecStart=/usr/sbin/sshd -D
