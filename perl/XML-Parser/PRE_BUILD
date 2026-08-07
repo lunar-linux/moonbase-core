@@ -1,4 +1,0 @@
-default_pre_build &&
-
-# The bundled CheckLib.pm will break detection of expat
-rm inc/Devel/CheckLib.pm || exit
