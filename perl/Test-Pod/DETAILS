@@ -8,6 +8,7 @@
          ENTERED=20070607
          UPDATED=20181018
            SHORT="check for POD errors in files"
+
 cat << EOF
 check for POD errors in files.
 EOF
