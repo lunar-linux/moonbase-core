@@ -8,6 +8,7 @@
          ENTERED=20100606
          UPDATED=20150705
            SHORT="Check for pod coverage in your distribution"
+
 cat << EOF
 Checks for POD coverage in files for your distribution.
 EOF
