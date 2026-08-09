@@ -1,0 +1,24 @@
+diff -r -C4 man-1.6g/src/glob.c man-1.6g/src/glob.c
+*** man-1.6g/src/glob.c	2005-08-21 08:26:06.000000000 +0900
+--- man-1.6g/src/glob.c	2026-08-09 08:22:58.402999192 +0900
+***************
+*** 110,118 ****
+  
+  /* Nonzero if '*' and '?' do not match an initial '.' for glob_filename.  */
+  int noglob_dot_filenames = 1;
+  
+! static int glob_match_after_star ();
+  
+  /* Return nonzero if PATTERN has any special globbing chars in it.  */
+  
+  int
+--- 110,118 ----
+  
+  /* Nonzero if '*' and '?' do not match an initial '.' for glob_filename.  */
+  int noglob_dot_filenames = 1;
+  
+! static int glob_match_after_star (char *pattern, char *text);
+  
+  /* Return nonzero if PATTERN has any special globbing chars in it.  */
+  
+  int
