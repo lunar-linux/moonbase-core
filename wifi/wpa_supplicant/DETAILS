@@ -1,12 +1,12 @@
-          MODULE=wpa_supplicant
-         VERSION=2.12
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=https://w1.fi/releases/
-    SOURCE_VFY=sha256:08e23937e16d0155e55cab2b51f51fbe10d80a1aa91c4e15442645059b737ef6
-        WEB_SITE=http://hostap.epitest.fi/wpa_supplicant
-         ENTERED=20041019
-         UPDATED=20260809
-           SHORT="WPA key management for Linux"
+    MODULE=wpa_supplicant
+   VERSION=2.12
+    SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL=https://w1.fi/releases/
+SOURCE_VFY=sha256:08e23937e16d0155e55cab2b51f51fbe10d80a1aa91c4e15442645059b737ef6
+  WEB_SITE=http://hostap.epitest.fi/wpa_supplicant
+   ENTERED=20041019
+   UPDATED=20260809
+     SHORT="WPA key management for Linux"
 
 cat << EOF
 wpa_supplicant is a WPA Supplicant for Linux with support for WPA and WPA2 (IEEE
@@ -19,4 +19,3 @@ and acts as the backend component controlling the wireless connection.
 wpa_supplicant supports separate frontend programs and an example text-based
 frontend, wpa_cli, is included with wpa_supplicant.
 EOF
-
