@@ -8,6 +8,7 @@
          ENTERED=20111009
          UPDATED=20201212
            SHORT="Get information about a class and its structure"
+
 cat << EOF
 Get information about a class and its structure.
 EOF
