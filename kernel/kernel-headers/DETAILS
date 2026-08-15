@@ -7,7 +7,7 @@
           WEB_SITE=http://www.lunar-linux.org/
            ENTERED=20040226
            UPDATED=20231231
-            SHORT="Sanitized kernel headers for userspace"
+             SHORT="Sanitized kernel headers for userspace"
 
 cat << EOF
 Sanitized kernel headers for userspace. The 32 bits version.
