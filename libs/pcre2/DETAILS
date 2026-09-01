@@ -1,11 +1,11 @@
           MODULE=pcre2
-         VERSION=10.47
+         VERSION=10.48
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://github.com/PCRE2Project/pcre2/releases/download/$MODULE-$VERSION/
-      SOURCE_VFY=sha256:47fe8c99461250d42f89e6e8fdaeba9da057855d06eb7fc08d9ca03fd08d7bc7
-        WEB_SITE=http://www.pcre.org
+      SOURCE_VFY=sha256:b6c68fdf6f3ac31388b50aa89ff0fc49c00c987c16e7b5146491d12003f2c8ed
+        WEB_SITE=https://www.pcre.org
          ENTERED=20180206
-         UPDATED=20251023
+         UPDATED=20260901
            SHORT="Perl compatible regular expression library 2nd version"
 
 cat << EOF
