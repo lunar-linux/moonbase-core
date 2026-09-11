@@ -7,6 +7,7 @@ OPTS+=" -Daudit=false \
         -Drpmmacrosdir=no \
         -Dsysvinit-path= \
         -Dsysvrcnd-path= \
+        -Dsplit-bin=auto \
         -Dsbat-distro=lunarlinux \
         -Dsbat-distro-summary=lunarlinux \
         -Dsbat-distro-url=https://www.lunar-linux.org/
