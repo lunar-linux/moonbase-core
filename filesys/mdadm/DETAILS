@@ -5,7 +5,7 @@ SOURCE_URL=https://git.kernel.org/pub/scm/utils/mdadm/mdadm.git/snapshot/
 SOURCE_VFY=sha256:168eef5bca90639d1d1b4ba6e11ab4e3739b43977a255e2ca15fc4be9a285b76
   WEB_SITE=https://git.kernel.org/pub/scm/utils/mdadm/mdadm.git/
    ENTERED=20030212
-   UPDATED=20260318
+   UPDATED=20260905
      SHORT="Software raid tools"
 
 cat << EOF
