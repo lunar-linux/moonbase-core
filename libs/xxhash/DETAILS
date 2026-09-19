@@ -1,13 +1,13 @@
           MODULE=xxhash
         REPLACES=xxHash
-         VERSION=0.8.3
+         VERSION=0.8.4
           SOURCE=xxHash-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/Cyan4973/xxHash/archive/v$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/xxHash-$VERSION
-      SOURCE_VFY=sha256:aae608dfe8213dfd05d909a57718ef82f30722c392344583d3f39050c7f29a80
+      SOURCE_VFY=sha256:5738270935e7c3d38a79b3adf7c9692566ce7895a25f67de43ad52ab504acd32
         WEB_SITE=https://cyan4973.github.io/xxHash/
          ENTERED=20251026
-         UPDATED=20251026
+         UPDATED=20260919
            SHORT="Extremely fast non-cryptographic hash algorithm"
 
 cat << EOF
