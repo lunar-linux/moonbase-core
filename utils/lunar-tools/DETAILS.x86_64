@@ -1,11 +1,11 @@
           MODULE=lunar-tools
-         VERSION=2026.9
+         VERSION=2026.10
           SOURCE=$MODULE-$VERSION-amd64.tar.xz
       SOURCE_URL=https://github.com/lunar-linux/lunar-tools/releases/download/$VERSION
-      SOURCE_VFY=sha256:b264342a29f49455678f581e9c11d246897377fde236e80773156f77ae59cfa5
+      SOURCE_VFY=sha256:ed345bcac7041e70bbc400321dd83f55fa9995aa77c13ebc382ae62762306d47
         WEB_SITE=http://lunar-linux.org/
          ENTERED=20041029
-         UPDATED=20260929
+         UPDATED=20261006
            SHORT="A collection of lunar tools"
 cat << EOF
 Lunar-tools is a package with non-vital tools that help you perform
@@ -21,4 +21,5 @@ ltime          set your timezone
 installkernel  installs kernels using the kernel 'make install'
 llint          module linting tool
 EOF
+
 
