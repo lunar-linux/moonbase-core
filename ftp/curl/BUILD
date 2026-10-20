@@ -6,11 +6,9 @@ fi &&
 
 OPTS+=" --enable-threaded-resolver \
         --enable-versioned-symbols \
-        --disable-curldebug \
         --disable-manual \
         --disable-static \
         --without-libpsl \
-        --without-librtmp \
         --with-zlib"
 
 default_build &&
