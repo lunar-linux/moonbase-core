@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:33b44ef78653ecd3f0f2f13e5bba6be466be2e7da72182f737912b81798ba5d2
         WEB_SITE=https://packages.qa.debian.org/c/ca-certificates.html
          ENTERED=20100405
-         UPDATED=20250221
+         UPDATED=20261020
            SHORT="Common CA certificates"
 
 cat << EOF
