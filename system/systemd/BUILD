@@ -1,16 +1,14 @@
 export PYTHONDONTWRITEBYTECODE=1 &&
 
-OPTS+=" -Daudit=false \
+OPTS+=" -Daudit=disabled \
         -Dima=false \
-        -Dlibidn2=true \
+        -Dlibidn2=enabled \
         -Dfallback-hostname=lunarlinux \
         -Drpmmacrosdir=no \
-        -Dsysvinit-path= \
-        -Dsysvrcnd-path= \
         -Dsbat-distro=lunarlinux \
         -Dsbat-distro-summary=lunarlinux \
         -Dsbat-distro-url=https://www.lunar-linux.org/
-        -Dhomed=false"
+        -Dhomed=disabled"
 
 add_priv_group systemd-journal &&
 
