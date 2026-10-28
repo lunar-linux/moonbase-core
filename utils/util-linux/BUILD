@@ -36,6 +36,17 @@ if module_installed systemd; then
   sedit '/ListenStream/ aRuntimeDirectory=uuidd' _pkg/usr/lib/systemd/system/uuidd.socket
 fi &&
 
+# On merged /usr, merge staging /bin, /sbin, /lib into their /usr
+# counterparts so cp does not try to overwrite the root symlinks.
+if [ -L /lib ] && [ "$(readlink /lib)" = "usr/lib" ]; then
+  for _dir in bin sbin lib; do
+    if [ -d _pkg/$_dir ] && [ ! -L _pkg/$_dir ]; then
+      cp -a _pkg/$_dir/* _pkg/usr/$_dir/ 2>/dev/null || true
+      rm -rf _pkg/$_dir
+    fi
+  done
+fi &&
+
 cd _pkg &&
 prepare_install &&
 find . -depth -print0 | cpio -0pdmuv / &&
