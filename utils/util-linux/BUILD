@@ -23,6 +23,13 @@ mkdir _pkg &&
 make install DESTDIR=$(cd _pkg && pwd) &&
 mv _pkg/sbin/sulogin _pkg/usr/sbin &&
 mv _pkg/bin/lsblk _pkg/usr/bin &&
+# temporary hack for transition between systemd 258 and >=260
+cp -l _pkg/bin/mount _pkg/usr/bin &&
+cp -l _pkg/sbin/agetty _pkg/usr/sbin &&
+cp -l _pkg/sbin/swapon _pkg/usr/sbin &&
+# end temporary hack
+# TODO: implement full /bin -> /usr/bin and /sbin -> /usr/sbin merge
+# TODO: then also implement /usr/sbin -> /usr/bin merge
 chmod 700 _pkg/usr/bin/wall &&
 chmod 4711 _pkg/usr/bin/{newgrp,ch{sh,fn}} &&
 if module_installed systemd; then
