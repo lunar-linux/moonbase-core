@@ -1,14 +1,15 @@
-          MODULE=inih
-         VERSION=r62
-          SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=https://github.com/benhoyt/inih/archive/${VERSION}.tar.gz
-      SOURCE_VFY=sha256:9c15fa751bb8093d042dae1b9f125eb45198c32c6704cd5481ccde460d4f8151
-        WEB_SITE=https://github.com/benhoyt/inih/
-         ENTERED=20201212
-         UPDATED=20250914
-           SHORT="A simple .INI file parser written in C"
+         MODULE=inih
+        VERSION=r63
+         SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL_FULL=https://github.com/benhoyt/inih/archive/${VERSION}.tar.gz
+     SOURCE_VFY=sha256:5d7967de62c5bfdc4f9f5ab06ce44c9e498bae021c7dac5792c0696e76aa9963
+       WEB_SITE=https://github.com/benhoyt/inih/
+        ENTERED=20201212
+        UPDATED=20261103
+          SHORT="A simple .INI file parser written in C"
 PSAFE=no
 
 cat << EOF
-xfsprogs - The XFS file system utilities and libraries.
+A simple .INI file parser written in C, used to parse simple .ini
+configuration files; inspired by Python's configparser.
 EOF
