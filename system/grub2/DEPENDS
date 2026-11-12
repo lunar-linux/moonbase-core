@@ -2,6 +2,7 @@ depends ncurses
 depends gettext
 depends bison
 depends xz
+depends autoconf-archive
 
 optional_depends os-prober "" "" "for OS auto-detection on other partitions" y
 optional_depends lvm2 "--enable-device-mapper" "--disable-device-mapper" "enable Linux device-mapper support" y
