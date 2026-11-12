@@ -32,7 +32,7 @@ cd $GRUB_BIOS  &&
              ${_EFI_EMU} \
              $OPTS &&
 # KLUDGE - not sure who's actually supposed to make this file
-mkdir grub-core && touch grub-core/extra_deps.lst &&
+mkdir -p grub-core && touch grub-core/extra_deps.lst &&
 make &&
 
 GRUB_EFI=$SOURCE_DIRECTORY/grub-efi &&
@@ -43,7 +43,7 @@ cd $GRUB_EFI &&
              --disable-efiemu \
              $OPTS &&
 # KLUDGE - once again, for the EFI version
-mkdir grub-core && touch grub-core/extra_deps.lst &&
+mkdir -p grub-core && touch grub-core/extra_deps.lst &&
 make &&
 
 prepare_install &&
