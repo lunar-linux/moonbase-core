@@ -24,9 +24,6 @@ OPTS+=" --prefix=/usr \
         --disable-silent-rules \
         --disable-werror"
 
-# HACK - not sure who's actually supposed to make this file, but...
-touch $SOURCE_DIRECTORY/grub-core/extra_deps.lst &&
-
 GRUB_BIOS=$SOURCE_DIRECTORY/grub-bios &&
 mkdir -p $GRUB_BIOS &&
 cd $GRUB_BIOS  &&
@@ -34,6 +31,8 @@ cd $GRUB_BIOS  &&
              --target="i386" \
              ${_EFI_EMU} \
              $OPTS &&
+# KLUDGE - not sure who's actually supposed to make this file
+mkdir -p grub-core && touch grub-core/extra_deps.lst &&
 make &&
 
 GRUB_EFI=$SOURCE_DIRECTORY/grub-efi &&
@@ -43,6 +42,8 @@ cd $GRUB_EFI &&
              --target="${_EFI_ARCH}" \
              --disable-efiemu \
              $OPTS &&
+# KLUDGE - once again, for the EFI version
+mkdir -p grub-core && touch grub-core/extra_deps.lst &&
 make &&
 
 prepare_install &&
