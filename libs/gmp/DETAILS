@@ -1,8 +1,8 @@
           MODULE=gmp
          VERSION=6.3.0
           SOURCE=$MODULE-${VERSION}.tar.xz
-   SOURCE_URL[0]=https://gmplib.org/download/$MODULE/
-   SOURCE_URL[1]=$GNU_URL/$MODULE
+   SOURCE_URL[0]=$GNU_URL/$MODULE
+   SOURCE_URL[1]=https://gmplib.org/download/$MODULE/
       SOURCE_VFY=sha256:a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898
         WEB_SITE=https://gmplib.org
          ENTERED=20010922
