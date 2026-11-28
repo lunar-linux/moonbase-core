@@ -65,6 +65,10 @@ fi &&
 
 make install_root="$_GLIBC_ROOT" install &&
 
+# systemd 262 no longer looks in /sbin for bare command names, so
+# ldconfig.service (ExecStart=ldconfig -X) fails; sbindir is /usr/bin
+ln -sf ../../sbin/ldconfig $_GLIBC_ROOT/usr/bin/ldconfig &&
+
 # Generate locale info
 if [ -z "$GLIBC_LOCALES" ]; then
   make install_root="$_GLIBC_ROOT" localedata/install-locales

@@ -7,7 +7,7 @@
       SOURCE_VFY=sha256:37f600f2bef3c5e8300147059568b2a2e40a7ad6ccc65ce942556d49429cc667
         WEB_SITE=http://www.gnu.org/software/libc
          ENTERED=20010922
-         UPDATED=20260820
+         UPDATED=20261128
            SHORT="C library for use with GNU/Hurd and GNU/Linux"
 
 cat << EOF
